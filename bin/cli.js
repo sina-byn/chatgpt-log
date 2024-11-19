@@ -8,6 +8,9 @@ const prompts = require('prompts');
 // * commander
 const { program } = require('commander');
 
+// * utils
+const log = require('../src/utils/log');
+
 program
   .name('loggpt')
   .argument('[url]', "chat-gpt's share URL")
@@ -24,5 +27,9 @@ program
 
     logGPT(url);
   });
+
+process.on('uncaughtException', error => {
+  log.error(error);
+});
 
 program.parse();

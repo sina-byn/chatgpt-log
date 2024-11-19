@@ -15,17 +15,27 @@ converter.setFlavor('github');
 
 // * utils
 const { GET } = require('./utils');
+const log = require('./utils/log');
 const filter = require('./utils/filter');
 
+const notFoundRegex = /404 Not Found/gi;
 const remixContextRegex = /window\.__remixContext\s*=\s*({[\s\S]*?});/g;
 
 const logGPT = async url => {
+  log.info('Extracting chat data...');
+
   const gptHtml = await GET(url);
+  if (notFoundRegex.test(gptHtml)) throw new Error('404 Not Found');
+
+  log.success('Chat data extracted successfully!!!');
+
   const remixContext = JSON.parse(remixContextRegex.exec(gptHtml)[1]);
   const data = remixContext.state.loaderData['routes/share.$shareId.($action)'].serverResponse.data;
   const { title, linear_conversation } = data;
   const conversation = linear_conversation.slice(2);
   let html = '';
+
+  log.warn('Chat Title:', title);
 
   const header = document.querySelector('header');
   const heading = document.createElement('h1');
