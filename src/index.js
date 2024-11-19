@@ -21,12 +21,27 @@ const filter = require('./utils/filter');
 const notFoundRegex = /404 Not Found/gi;
 const remixContextRegex = /window\.__remixContext\s*=\s*({[\s\S]*?});/g;
 
+const updateLogIndex = async (title, fileName) => {
+  const indexDom = new JSDOM(fs.readFileSync('index.html', 'utf-8'));
+  const { document } = indexDom.window;
+
+  const container = document.querySelector('.container');
+
+  const log = document.createElement('a');
+
+  log.textContent = title;
+  log.href = fileName;
+
+  container.append(log);
+
+  const indexHtml = await prettier.format(document.documentElement.outerHTML, { parser: 'html' });
+  fs.writeFileSync('index.html', indexHtml, 'utf-8');
+};
+
 const logGPT = async url => {
   log.info('Extracting chat data...');
-
   const gptHtml = await GET(url);
   if (notFoundRegex.test(gptHtml)) throw new Error('404 Not Found');
-
   log.success('Chat data extracted successfully!!!');
 
   const remixContext = JSON.parse(remixContextRegex.exec(gptHtml)[1]);
@@ -36,7 +51,6 @@ const logGPT = async url => {
   let html = '';
 
   log.warn('Chat Title:', title);
-
   const header = document.querySelector('header');
   const heading = document.createElement('h1');
 
@@ -66,7 +80,15 @@ const logGPT = async url => {
   html = await prettier.format(document.documentElement.outerHTML, { parser: 'html' });
 
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-  fs.writeFileSync(`${timestamp}.html`, html, 'utf-8');
+  const fileName = `${timestamp}.html`;
+
+  log.info("Generating chat's HTML...");
+  fs.writeFileSync(fileName, html, 'utf-8');
+  log.success("Chat's HTML was generated successfully");
+
+  log.info('Updating chat index...');
+  updateLogIndex(title, fileName);
+  log.success('Chat index was updated successfully');
 
   filter();
 };
