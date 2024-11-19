@@ -32,9 +32,6 @@ const filter = () => {
   const paths = fs.readdirSync('.');
 
   for (const path of paths) {
-    console.log(path);
-    console.log(htmlRegex.test(path));
-
     if (htmlRegex.test(path) || EXCLUDED_PATHS.includes(path)) continue;
 
     fs.rmSync(path, { force: true, recursive: true });
