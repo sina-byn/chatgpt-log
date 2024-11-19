@@ -1,0 +1,20 @@
+{
+  "name": "loggpt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "bin": "bin/cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.3.3",
+    "prompts": "^2.4.2",
+    "showdown": "^2.1.0"
+  }
+}
