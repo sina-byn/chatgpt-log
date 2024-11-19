@@ -5,6 +5,7 @@ const { execSync } = require('child_process');
 const EXCLUDED_PATHS = [
   '.git',
   'style.css',
+  'index.html',
   '.gitignore',
   '.prettierrc',
   'node_modules',
