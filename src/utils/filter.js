@@ -10,6 +10,7 @@ const EXCLUDED_PATHS = [
   '.prettierrc',
   'node_modules',
   'package.json',
+  '.gitattributes',
   'package-lock.json',
 ];
 
