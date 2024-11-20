@@ -25,7 +25,7 @@ program
       url = resp.url;
     }
 
-    logGPT(url);
+    if (url.trim()) logGPT(url);
   });
 
 process.on('uncaughtException', error => {
