@@ -27,14 +27,14 @@ const updateLogIndex = async (title, fileName) => {
   const indexDom = new JSDOM(fs.readFileSync('index.html', 'utf-8'));
   const { document } = indexDom.window;
 
-  const container = document.querySelector('.container');
+  const logs = document.querySelector('.logs');
 
   const logLink = document.createElement('a');
 
   logLink.textContent = title;
   logLink.href = fileName;
 
-  container.append(logLink);
+  logs.append(logLink);
 
   const indexHtml = await prettier.format(document.documentElement.outerHTML, { parser: 'html' });
   fs.writeFileSync('index.html', indexHtml, 'utf-8');
