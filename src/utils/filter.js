@@ -46,6 +46,7 @@ const filter = async onBeforeCommit => {
 
   execSync('git add .');
   execSync(`git commit -m "deploy - ${timestamp}"`);
+  execSync('git push -u origin gh-pages');
   execSync('git switch main');
   execSync('git restore index.html');
 };
