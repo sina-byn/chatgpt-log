@@ -1,0 +1,2 @@
+# Force LF endings for JavaScript files
+*.js text eol=lf
