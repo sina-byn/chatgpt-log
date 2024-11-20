@@ -26,7 +26,7 @@ const isBranchActive = () => {
   return !!/\s*\*\s*gh-pages\s*/g.exec(stdout);
 };
 
-const filter = onBeforeCommit => {
+const filter = async onBeforeCommit => {
   createBranch();
   if (!isBranchActive()) throw new Error("Failed switching to branch 'gh-pages'");
 
@@ -39,13 +39,14 @@ const filter = onBeforeCommit => {
     fs.rmSync(path, { force: true, recursive: true });
   }
 
-  if (onBeforeCommit) onBeforeCommit();
+  if (onBeforeCommit) await onBeforeCommit();
 
   const timestamp = new Date().toISOString();
 
   execSync('git add .');
   execSync(`git commit -m "deploy - ${timestamp}"`);
   execSync('git switch main');
+  execSync('git restore index.html');
 };
 
 module.exports = filter;

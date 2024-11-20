@@ -22,20 +22,24 @@ const notFoundRegex = /404 Not Found/gi;
 const remixContextRegex = /window\.__remixContext\s*=\s*({[\s\S]*?});/g;
 
 const updateLogIndex = async (title, fileName) => {
+  log.info('Updating chat index...');
+
   const indexDom = new JSDOM(fs.readFileSync('index.html', 'utf-8'));
   const { document } = indexDom.window;
 
   const container = document.querySelector('.container');
 
-  const log = document.createElement('a');
+  const logLink = document.createElement('a');
 
-  log.textContent = title;
-  log.href = fileName;
+  logLink.textContent = title;
+  logLink.href = fileName;
 
-  container.append(log);
+  container.append(logLink);
 
   const indexHtml = await prettier.format(document.documentElement.outerHTML, { parser: 'html' });
   fs.writeFileSync('index.html', indexHtml, 'utf-8');
+
+  log.success('Chat index was updated successfully');
 };
 
 const logGPT = async url => {
@@ -86,9 +90,7 @@ const logGPT = async url => {
   fs.writeFileSync(fileName, html, 'utf-8');
   log.success("Chat's HTML was generated successfully");
 
-  log.info('Updating chat index...');
-  filter(() => updateLogIndex(title, fileName));
-  log.success('Chat index was updated successfully');
+  filter(updateLogIndex.bind(null, title, fileName));
 };
 
 module.exports = logGPT;
