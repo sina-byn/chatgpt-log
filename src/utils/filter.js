@@ -4,6 +4,7 @@ const { execSync } = require('child_process');
 // * constants
 const EXCLUDED_PATHS = [
   '.git',
+  'app.js',
   'style.css',
   'index.html',
   '.gitignore',
