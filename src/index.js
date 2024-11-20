@@ -90,7 +90,9 @@ const logGPT = async url => {
   fs.writeFileSync(fileName, html, 'utf-8');
   log.success("Chat's HTML was generated successfully");
 
-  filter(updateLogIndex.bind(null, title, fileName));
+  await filter(updateLogIndex.bind(null, title, fileName));
+
+  log.success('Chat log was generated successfully');
 };
 
 module.exports = logGPT;
