@@ -4,11 +4,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChatGpt Logs</title>
     <link rel="stylesheet" href="./style.css" />
+    <script defer src="./app.js"></script>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+      }
+
+      label {
+        display: block;
+        font-size: 0.8rem;
+        margin-bottom: 0.2rem;
+      }
+
+      input {
+        font-size: 0.9rem !important;
+        border: 1px solid #3d444d;
+        border-radius: 40px;
+        padding: 4px 15px;
+      }
+
+      .logs {
+        margin-top: 1rem;
       }
 
       .logs > a {
@@ -25,6 +43,11 @@
     <div class="markdown-body">
       <div class="container">
         <h1>ChatGpt Logs</h1>
+
+        <div class="search-box">
+          <label for="search">Search:</label>
+          <input type="text" id="search" />
+        </div>
 
         <div class="logs">
           <!-- * logs * -->
