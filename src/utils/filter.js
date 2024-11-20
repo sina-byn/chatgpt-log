@@ -25,7 +25,7 @@ const isBranchActive = () => {
   return !!/\s*\*\s*gh-pages\s*/g.exec(stdout);
 };
 
-const filter = () => {
+const filter = onBeforeCommit => {
   createBranch();
   if (!isBranchActive()) throw new Error("Failed switching to branch 'gh-pages'");
 
@@ -37,6 +37,8 @@ const filter = () => {
 
     fs.rmSync(path, { force: true, recursive: true });
   }
+
+  if (onBeforeCommit) onBeforeCommit();
 
   const timestamp = new Date().toISOString();
 
