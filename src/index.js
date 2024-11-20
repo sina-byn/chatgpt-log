@@ -87,10 +87,8 @@ const logGPT = async url => {
   log.success("Chat's HTML was generated successfully");
 
   log.info('Updating chat index...');
-  updateLogIndex(title, fileName);
+  filter(() => updateLogIndex(title, fileName));
   log.success('Chat index was updated successfully');
-
-  filter();
 };
 
 module.exports = logGPT;
