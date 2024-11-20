@@ -1,0 +1,114 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Fix Git LF CRLF</h1>
+    </header>
+
+    <div class="content container">
+      <div class="bubble user">
+        <p>
+          this is my cli written in node js executing it using npx
+          <cli_name> &lt;…args&gt; makes git to detect changes in it</cli_name>
+        </p>
+        <p>
+          warning: in the working copy of 'bin/cli.js', LF will be replaced by
+          CRLF the next time Git touches it
+        </p>
+        <p>how to fix this ?</p>
+      </div>
+      <div class="bubble">
+        <p>
+          This issue arises because of line-ending differences between your
+          development environment (likely Unix-based, using LF line endings) and
+          a Windows environment (which defaults to CRLF line endings). Git tries
+          to handle these differences automatically, but sometimes it creates
+          issues, like the warning you see.
+        </p>
+        <p>Here’s how to fix it:</p>
+        <h3 id="1-set-a-gitattributes-file">
+          1. <strong>Set a <code>.gitattributes</code> File</strong>
+        </h3>
+        <p>
+          Create a <code>.gitattributes</code> file in the root of your
+          repository if it doesn’t already exist. Add the following line to
+          enforce consistent line endings for your CLI file (or all JavaScript
+          files):
+        </p>
+        <pre><code class="plaintext language-plaintext"># Force LF endings for JavaScript files
+*.js text eol=lf</code></pre>
+        <p>
+          This tells Git to always use LF line endings for JavaScript files,
+          ensuring consistency across platforms.
+        </p>
+        <h3 id="2-reconvert-the-line-endings">
+          2. <strong>Reconvert the Line Endings</strong>
+        </h3>
+        <p>
+          Run the following commands to normalize line endings in your
+          repository:
+        </p>
+        <pre><code class="bash language-bash"># Remove the file from the Git index
+git rm --cached bin/cli.js
+
+# Add the file back to the index with correct line endings
+git add bin/cli.js
+
+# Commit the changes
+git commit -m "Normalize line endings for bin/cli.js"</code></pre>
+        <h3 id="3-configure-git-settings-locally">
+          3. <strong>Configure Git Settings Locally</strong>
+        </h3>
+        <p>Ensure your Git configuration handles line endings correctly:</p>
+        <ul>
+          <li>
+            If you’re on a Unix-based system (Linux, macOS), you can disable
+            automatic conversion:
+          </li>
+        </ul>
+        <pre><code class="bash language-bash">  git config --global core.autocrlf false</code></pre>
+        <ul>
+          <li>
+            If you’re on Windows, set Git to convert line endings to LF when
+            committing and CRLF when checking out:
+          </li>
+        </ul>
+        <pre><code class="bash language-bash">  git config --global core.autocrlf true</code></pre>
+        <h3 id="4-check-and-fix-line-endings">
+          4. <strong>Check and Fix Line Endings</strong>
+        </h3>
+        <p>
+          You can manually convert line endings for the file using a tool like
+          <code>dos2unix</code> or with a simple <code>sed</code> command.
+        </p>
+        <h4 id="example-using-sed">Example using <code>sed</code>:</h4>
+        <pre><code class="bash language-bash">sed -i 's/\r$//' bin/cli.js</code></pre>
+        <h4 id="example-using-dos2unix">
+          Example using <code>dos2unix</code>:
+        </h4>
+        <p>Install <code>dos2unix</code> if not already installed, and then:</p>
+        <pre><code class="bash language-bash">dos2unix bin/cli.js</code></pre>
+        <h3 id="5-verify">5. <strong>Verify</strong></h3>
+        <p>
+          To verify the file’s line endings are correct, you can check with:
+        </p>
+        <pre><code class="bash language-bash">file bin/cli.js</code></pre>
+        <p>
+          It should report something like <code>ASCII text</code> without
+          <code>CRLF</code> for LF line endings.
+        </p>
+        <p>
+          Once you apply these changes, Git should stop showing the warning
+          about replacing LF with CRLF.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
