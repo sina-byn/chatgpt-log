@@ -1,0 +1,143 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Clone gh-pages branch</h1>
+    </header>
+
+    <div class="content container">
+      <div class="bubble user">
+        <p>
+          ] have two remote branches on my github repo one called main the other
+          called gh-pages.<br />
+          When I clone my repo I get the main branch locally, but I don't get
+          the gh-pages branch locally how to fix this?
+        </p>
+      </div>
+      <div class="bubble">
+        <p>
+          When you clone a repository, by default, Git only checks out the
+          default branch (typically <code>main</code> or <code>master</code>).
+          If you want to fetch other branches like <code>gh-pages</code>, you
+          need to either explicitly check out that branch or fetch it after
+          cloning.
+        </p>
+        <p>Here’s how you can fix this:</p>
+        <h3 id="step-1-clone-the-repository-as-usual">
+          Step 1: Clone the repository as usual
+        </h3>
+        <pre><code class="bash language-bash">git clone https://github.com/yourusername/yourrepository.git</code></pre>
+        <h3 id="step-2-fetch-all-remote-branches">
+          Step 2: Fetch all remote branches
+        </h3>
+        <p>After cloning, you'll want to fetch the other remote branches:</p>
+        <pre><code class="bash language-bash">cd yourrepository
+git fetch --all</code></pre>
+        <h3 id="step-3-check-out-the-gh-pages-branch">
+          Step 3: Check out the <code>gh-pages</code> branch
+        </h3>
+        <p>
+          Now that you've fetched all the remote branches, you can check out the
+          <code>gh-pages</code> branch locally:
+        </p>
+        <pre><code class="bash language-bash">git checkout gh-pages</code></pre>
+        <p>
+          Alternatively, if you just want to create a local branch that tracks
+          the remote <code>gh-pages</code> branch, you can run:
+        </p>
+        <pre><code class="bash language-bash">git checkout -b gh-pages origin/gh-pages</code></pre>
+        <p>
+          Now, you should have both <code>main</code> and
+          <code>gh-pages</code> branches available locally.
+        </p>
+        <h3 id="summary">Summary:</h3>
+        <ol>
+          <li>Clone the repo.</li>
+          <li>Run <code>git fetch --all</code> to get all remote branches.</li>
+          <li>
+            Checkout the <code>gh-pages</code> branch using
+            <code>git checkout gh-pages</code>.
+          </li>
+        </ol>
+        <p>Let me know if that works!</p>
+      </div>
+      <div class="bubble user">
+        <p>how about fetch origin gh-pages:gh-pages?</p>
+      </div>
+      <div class="bubble">
+        <p>
+          Yes, the command <code>git fetch origin gh-pages:gh-pages</code> is
+          another valid approach, and it’s a bit more specific.
+        </p>
+        <h3 id="heres-what-this-command-does">
+          Here's what this command does:
+        </h3>
+        <ul>
+          <li>
+            <code>git fetch</code>: Fetches changes from a remote repository.
+          </li>
+          <li>
+            <code>origin</code>: Specifies the remote repository (in most cases,
+            it's named <code>origin</code> by default).
+          </li>
+          <li>
+            <code>gh-pages:gh-pages</code>: This fetches the
+            <code>gh-pages</code> branch from the remote and stores it locally
+            as a branch named <code>gh-pages</code>.
+          </li>
+        </ul>
+        <p>
+          So, if you use this command, it directly fetches the
+          <code>gh-pages</code> branch from the remote and creates (or updates)
+          the <code>gh-pages</code> branch locally.
+        </p>
+        <h3 id="how-to-do-it">How to do it:</h3>
+        <ol>
+          <li>Clone the repository as usual:</li>
+        </ol>
+        <pre><code class="bash language-bash">   git clone https://github.com/yourusername/yourrepository.git</code></pre>
+        <ol start="2">
+          <li>After cloning, run:</li>
+        </ol>
+        <pre><code class="bash language-bash">   git fetch origin gh-pages:gh-pages</code></pre>
+        <p>This will:</p>
+        <ul>
+          <li>
+            Fetch the <code>gh-pages</code> branch from the remote repository
+            (<code>origin</code>).
+          </li>
+          <li>
+            Create a local <code>gh-pages</code> branch if it doesn't already
+            exist, or update the existing one.
+          </li>
+        </ul>
+        <ol>
+          <li>Finally, switch to the <code>gh-pages</code> branch:</li>
+        </ol>
+        <pre><code class="bash language-bash">   git checkout gh-pages</code></pre>
+        <h3 id="summary">Summary:</h3>
+        <ul>
+          <li>
+            <code>git fetch origin gh-pages:gh-pages</code> is a concise way to
+            fetch and track the remote <code>gh-pages</code> branch.
+          </li>
+          <li>
+            After that, you can switch to it using
+            <code>git checkout gh-pages</code>.
+          </li>
+        </ul>
+        <p>
+          This should also work well for your case. Let me know if you need
+          further clarification!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
