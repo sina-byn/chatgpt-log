@@ -16,8 +16,17 @@ const EXCLUDED_PATHS = [
 ];
 
 const createBranch = () => {
-  const hasBranch = execSync('git branch').toString().includes('gh-pages');
-  const flag = !hasBranch ? '-c' : '';
+  const branchLog = execSync('git branch -a')
+    .toString()
+    .split('\n')
+    .map(l => l.trim().replace(/\*|\s/g, ''))
+    .filter(Boolean);
+
+  const hasLocalBranch = branchLog.includes('gh-pages');
+  const hasRemoteBranch = branchLog.includes('remotes/origin/gh-pages');
+  const flag = hasLocalBranch || hasRemoteBranch ? '' : '-c';
+
+  if (!hasLocalBranch && hasRemoteBranch) execSync('git fetch origin gh-pages:gh-pages');
 
   execSync(`git switch ${flag} gh-pages`);
 };
