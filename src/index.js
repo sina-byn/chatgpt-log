@@ -19,7 +19,7 @@ const log = require('./utils/log');
 const filter = require('./utils/filter');
 
 const notFoundRegex = /404 Not Found/gi;
-const remixContextRegex = /window\.__remixContext\s*=\s*({[\s\S]*?});/g;
+const remixContextRegex = /window\.__remixContext\s*=\s*({[\s\S]*?});__remixContext.p/g;
 
 const updateLogIndex = async (title, fileName) => {
   log.info('Updating chat index...');
@@ -48,7 +48,9 @@ const logGPT = async url => {
   if (notFoundRegex.test(gptHtml)) throw new Error('404 Not Found');
   log.success('Chat data extracted successfully!!!');
 
-  const remixContext = JSON.parse(remixContextRegex.exec(gptHtml)[1]);
+  const __html = remixContextRegex.exec(gptHtml)[1];
+
+  const remixContext = JSON.parse(__html);
   const data = remixContext.state.loaderData['routes/share.$shareId.($action)'].serverResponse.data;
   const { title, linear_conversation } = data;
   const conversation = linear_conversation.slice(2);
