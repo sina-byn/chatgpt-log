@@ -38,13 +38,16 @@ const isBranchActive = () => {
 };
 
 const filter = async onBeforeCommit => {
+  const _cwd = process.cwd();
+  process.chdir(ROOT);
+
   createBranch();
   if (!isBranchActive()) throw new Error("Failed switching to branch 'gh-pages'");
 
   execSync('git pull origin gh-pages');
 
   const htmlRegex = /\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}-\d{3}Z\.html/;
-  const paths = fs.readdirSync(path.join(__dirname, '..', '..'));
+  const paths = fs.readdirSync(ROOT);
 
   for (const path of paths) {
     if (htmlRegex.test(path) || EXCLUDED_PATHS.includes(path)) continue;
@@ -61,6 +64,8 @@ const filter = async onBeforeCommit => {
   execSync('git push -u origin gh-pages');
   execSync('git switch main');
   execSync('git restore index.html');
+
+  process.chdir(_cwd);
 };
 
 module.exports = filter;
