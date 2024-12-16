@@ -74,10 +74,16 @@ const logGPT = async url => {
     const bubble = document.createElement('div');
     bubble.className = 'bubble';
 
-    if (role === 'user') bubble.classList.add('user');
+    const isUser = role === 'user';
 
-    const bubbleHtml = converter.makeHtml(parts.join(''));
-    bubble.innerHTML = bubbleHtml;
+    if (isUser) {
+      bubble.classList.add('user');
+      const bubbleText = parts.join('');
+      bubble.textContent = bubbleText;
+    } else {
+      const bubbleHtml = converter.makeHtml(parts.join(''));
+      bubble.innerHTML = bubbleHtml;
+    }
 
     html += bubble.outerHTML;
   }
