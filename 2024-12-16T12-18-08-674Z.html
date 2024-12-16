@@ -1,0 +1,1349 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Figma-like Zoom Implementation</h1>
+    </header>
+
+    <div class="content container">
+      <div class="bubble user">
+        implement figma like zoom system for this import { useEffect, useRef }
+        from 'react'; const App = () =&gt; { const canvasRef = useRef(null); let
+        scale = 1; let translateX = 0; let translateY = 0; useEffect(() =&gt; {
+        const canvas = canvasRef.current; if (!canvas) return; const
+        wheelHandler = e =&gt; { const canvas = e.currentTarget; const
+        hasModifier = e.ctrlKey || e.metaKey || e.shiftKey; if (!canvas ||
+        !hasModifier) return; e.preventDefault(); const { top, left } =
+        canvas.getBoundingClientRect(); const mouseX = e.clientX - left; const
+        mouseY = e.clientY - top; scale = scale + scale * 0.1;
+        console.log(scale); canvas.style.transform = `scale(${scale})`;
+        canvas.style.transformOrigin = `${mouseX}px ${mouseY}px`; };
+        canvas.addEventListener('wheel', wheelHandler, { passive: false });
+        return () =&gt; canvas.removeEventListener('wheel', wheelHandler, {
+        passive: false }); }, []); return ( &lt;div style={{ display: 'flex',
+        alignItems: 'center', justifyContent: 'center', width: '100vw', height:
+        '100dvh', background: 'skyblue', transformOrigin: 'center', // Set the
+        transform origin to the top-left for proper calculation }} &gt; &lt;div
+        ref={canvasRef} style={{ display: 'flex', alignItems: 'center',
+        justifyContent: 'center', width: '100vw', height: '100dvh', background:
+        'violet', transformOrigin: 'center', // Set the transform origin to the
+        top-left for proper calculation }} &gt; &lt;span style={{ background:
+        'red', color: 'black' }}&gt;this is the text&lt;/span&gt; &lt;/div&gt;
+        &lt;/div&gt; ); }; export default App;
+      </div>
+      <div class="bubble">
+        <p>
+          To implement a Figma-like zoom system for your canvas, you need to
+          handle the following:
+        </p>
+        <ol>
+          <li>
+            <strong>Zooming with Mouse Wheel</strong>: This includes calculating
+            the zoom factor and using the cursor's position as the zoom origin.
+          </li>
+          <li>
+            <strong>Panning with Drag</strong>: Enable the ability to pan around
+            the canvas while zoomed in.
+          </li>
+          <li>
+            <strong>Proper Transformations</strong>: Use <code>scale</code> and
+            <code>translate</code> together to achieve a smooth experience.
+          </li>
+        </ol>
+        <p>Here's an updated implementation:</p>
+        <h3 id="implementation">Implementation</h3>
+        <pre><code class="javascript language-javascript">import { useEffect, useRef, useState } from 'react';
+
+const App = () =&gt; {
+  const canvasRef = useRef(null);
+  const containerRef = useRef(null);
+
+  const [transform, setTransform] = useState({
+    scale: 1,
+    translateX: 0,
+    translateY: 0,
+  });
+
+  const handleWheel = (e) =&gt; {
+    e.preventDefault();
+    const canvas = canvasRef.current;
+    if (!canvas || (!e.ctrlKey &amp;&amp; !e.metaKey)) return;
+
+    const { scale, translateX, translateY } = transform;
+
+    // Determine the cursor position relative to the canvas
+    const { left, top } = canvas.getBoundingClientRect();
+    const mouseX = e.clientX - left;
+    const mouseY = e.clientY - top;
+
+    // Zoom in or out
+    const zoomFactor = 0.1;
+    const newScale = e.deltaY &lt; 0 ? scale * (1 + zoomFactor) : scale * (1 - zoomFactor);
+
+    // Clamp the scale to prevent excessive zoom
+    const clampedScale = Math.max(0.2, Math.min(newScale, 5));
+
+    // Adjust translations to zoom around the mouse position
+    const deltaScale = clampedScale / scale;
+    const newTranslateX = translateX - (mouseX * (deltaScale - 1));
+    const newTranslateY = translateY - (mouseY * (deltaScale - 1));
+
+    setTransform({
+      scale: clampedScale,
+      translateX: newTranslateX,
+      translateY: newTranslateY,
+    });
+  };
+
+  const handleMouseDown = (e) =&gt; {
+    if (e.button !== 0) return; // Left mouse button only
+    const startX = e.clientX;
+    const startY = e.clientY;
+
+    const { translateX, translateY } = transform;
+
+    const handleMouseMove = (e) =&gt; {
+      const deltaX = e.clientX - startX;
+      const deltaY = e.clientY - startY;
+
+      setTransform({
+        ...transform,
+        translateX: translateX + deltaX,
+        translateY: translateY + deltaY,
+      });
+    };
+
+    const handleMouseUp = () =&gt; {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+  };
+
+  useEffect(() =&gt; {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    canvas.addEventListener('wheel', handleWheel, { passive: false });
+    canvas.addEventListener('mousedown', handleMouseDown);
+
+    return () =&gt; {
+      canvas.removeEventListener('wheel', handleWheel);
+      canvas.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, [transform]);
+
+  const { scale, translateX, translateY } = transform;
+
+  return (
+    &lt;div
+      ref={containerRef}
+      style={{
+        width: '100vw',
+        height: '100vh',
+        overflow: 'hidden',
+        background: 'skyblue',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    &gt;
+      &lt;div
+        ref={canvasRef}
+        style={{
+          width: '100vw',
+          height: '100vh',
+          background: 'violet',
+          transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
+          transformOrigin: '0 0',
+          cursor: 'grab',
+        }}
+      &gt;
+        &lt;span style={{ background: 'red', color: 'black' }}&gt;this is the text&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default App;</code></pre>
+        <hr />
+        <h3 id="key-features">Key Features</h3>
+        <ol>
+          <li>
+            <p><strong>Zoom Around Cursor</strong>:</p>
+            <ul>
+              <li>
+                The <code>transformOrigin</code> is always <code>0 0</code>, and
+                <code>translate</code> values are adjusted based on the cursor
+                position.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Panning</strong>:</p>
+            <ul>
+              <li>
+                Implemented with <code>mousedown</code>, <code>mousemove</code>,
+                and <code>mouseup</code> to drag the canvas.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Transform Management</strong>:</p>
+            <ul>
+              <li>
+                The <code>transform</code> state tracks the
+                <code>scale</code> and <code>translateX/translateY</code> for
+                proper rendering.
+              </li>
+              <li>Clamped scale prevents excessive zoom in or out.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Keyboard Modifiers</strong>:</p>
+            <ul>
+              <li>
+                Zooming is enabled only when the <code>ctrlKey</code> or
+                <code>metaKey</code> is pressed during a wheel event.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="improvements--extensions">Improvements &amp; Extensions</h3>
+        <ul>
+          <li>Add inertia or easing for smoother panning.</li>
+          <li>Implement reset zoom/pan functionality.</li>
+          <li>Allow touch gestures for zoom and pan on mobile devices.</li>
+        </ul>
+        <p>Let me know if you need further adjustments!</p>
+      </div>
+      <div class="bubble user">explain the formula to me</div>
+      <div class="bubble">
+        <p>
+          Sure! Let's break down the formula used to calculate the new
+          translation values when zooming in or out, specifically this part:
+        </p>
+        <pre><code class="javascript language-javascript">const deltaScale = clampedScale / scale;
+const newTranslateX = translateX - (mouseX * (deltaScale - 1));
+const newTranslateY = translateY - (mouseY * (deltaScale - 1));</code></pre>
+        <hr />
+        <h3 id="context"><strong>Context</strong></h3>
+        <p>
+          When zooming, the canvas is scaled using <code>scale()</code>.
+          However, scaling always happens relative to the
+          <code>transformOrigin</code>, which we set to
+          <code>0 0</code> (top-left of the canvas). To ensure the zoom
+          "centers" around the cursor (the point where the user is pointing with
+          the mouse), we need to adjust the canvas's position (<code
+            >translateX</code
+          >
+          and <code>translateY</code>) accordingly.
+        </p>
+        <p>
+          The goal is to "shift" the canvas so that the cursor stays fixed at
+          the same spot in the viewport after the zoom.
+        </p>
+        <hr />
+        <h3 id="breaking-down-the-formula">
+          <strong>Breaking Down the Formula</strong>
+        </h3>
+        <ol>
+          <li>
+            <p>
+              <strong><code>deltaScale = clampedScale / scale</code></strong>
+            </p>
+            <ul>
+              <li>
+                <p>
+                  <code>scale</code>: The current zoom level (before the wheel
+                  event).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <code>clampedScale</code>: The new zoom level (after applying
+                  the zoom factor and clamping).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <code>deltaScale</code>: The ratio between the new scale and
+                  the current scale.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <code>deltaScale &gt; 1</code>, we are zooming in (scale
+                  increases).
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <code>deltaScale &lt; 1</code>, we are zooming out (scale
+                  decreases).
+                </p>
+              </li>
+            </ul>
+            <p>This tells us by how much the scale is changing.</p>
+          </li>
+        </ol>
+        <hr />
+        <ol start="2">
+          <li>
+            <p><strong>Adjusting Translations</strong></p>
+            <p>
+              To ensure that the canvas zooms around the cursor position, we
+              calculate how much to adjust the translations (<code
+                >translateX</code
+              >
+              and <code>translateY</code>):
+            </p>
+            <ul>
+              <li>
+                <strong
+                  >Horizontal adjustment (<code>newTranslateX</code>):</strong
+                >
+              </li>
+            </ul>
+            <pre><code class="javascript language-javascript"> newTranslateX = translateX - (mouseX * (deltaScale - 1));</code></pre>
+            <ul>
+              <li>
+                <p>
+                  <code>translateX</code>: The current horizontal translation.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <code>mouseX</code>: The cursor's X-coordinate relative to the
+                  canvas's top-left corner.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <code>deltaScale - 1</code>: The amount of change in scale.
+                  For example:
+                </p>
+                <ul>
+                  <li>
+                    If <code>deltaScale = 1.1</code> (zoom in),
+                    <code>deltaScale - 1 = 0.1</code> (10% increase).
+                  </li>
+                  <li>
+                    If <code>deltaScale = 0.9</code> (zoom out),
+                    <code>deltaScale - 1 = -0.1</code> (10% decrease).
+                  </li>
+                </ul>
+                <p>When zooming:</p>
+              </li>
+              <li>
+                <p>
+                  The <code>mouseX</code> is multiplied by this scale change
+                  (<code>deltaScale - 1</code>) to calculate how much of the
+                  canvas's width needs to shift to keep the cursor's position
+                  consistent.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Subtracting this value from <code>translateX</code> adjusts
+                  the canvas's position so that the cursor remains fixed.
+                </p>
+                <ul>
+                  <li>
+                    <strong
+                      >Vertical adjustment (<code>newTranslateY</code>):</strong
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <pre><code class="javascript language-javascript"> newTranslateY = translateY - (mouseY * (deltaScale - 1));</code></pre>
+            <ul>
+              <li>
+                This works exactly the same way as the horizontal adjustment,
+                but for the vertical axis (<code>translateY</code> and
+                <code>mouseY</code>).
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="why-this-works"><strong>Why This Works</strong></h3>
+        <p>
+          When you zoom in or out, without adjusting the translations, the
+          canvas would scale uniformly outward from the top-left corner (the
+          <code>transformOrigin</code>). This would cause the point under the
+          cursor to move on the screen.
+        </p>
+        <p>To counteract this movement, the formula:</p>
+        <ul>
+          <li>
+            Calculates how much the scaling is affecting the position of the
+            point under the cursor.
+          </li>
+          <li>
+            Offsets the canvas by that same amount, in the opposite direction
+            (<code>-</code>), to "cancel out" the movement and keep the cursor
+            fixed.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="example"><strong>Example</strong></h3>
+        <p>Let's walk through an example:</p>
+        <h4 id="initial-state">Initial State:</h4>
+        <ul>
+          <li><code>scale = 1</code></li>
+          <li><code>translateX = 0</code>, <code>translateY = 0</code></li>
+          <li>
+            Cursor position relative to the canvas: <code>mouseX = 100</code>,
+            <code>mouseY = 100</code>
+          </li>
+        </ul>
+        <h4 id="zoom-in">Zoom In:</h4>
+        <ul>
+          <li>
+            New scale (<code>clampedScale</code>) = <code>1.2</code> (20% zoom
+            in)
+          </li>
+          <li><code>deltaScale = 1.2 / 1 = 1.2</code></li>
+        </ul>
+        <p>Now calculate the adjustments:</p>
+        <ul>
+          <li><code>deltaScale - 1 = 1.2 - 1 = 0.2</code></li>
+          <li>
+            Adjustments:
+            <ul>
+              <li><code>newTranslateX = 0 - (100 * 0.2) = -20</code></li>
+              <li><code>newTranslateY = 0 - (100 * 0.2) = -20</code></li>
+            </ul>
+          </li>
+        </ul>
+        <p>Result:</p>
+        <ul>
+          <li><code>translateX = -20</code>, <code>translateY = -20</code></li>
+          <li>
+            This shifts the canvas slightly up and left, keeping the cursor in
+            the same relative position after zooming.
+          </li>
+        </ul>
+        <hr />
+        <h4 id="zoom-out">Zoom Out:</h4>
+        <ul>
+          <li>
+            New scale (<code>clampedScale</code>) = <code>0.8</code> (20% zoom
+            out)
+          </li>
+          <li><code>deltaScale = 0.8 / 1 = 0.8</code></li>
+        </ul>
+        <p>Now calculate the adjustments:</p>
+        <ul>
+          <li><code>deltaScale - 1 = 0.8 - 1 = -0.2</code></li>
+          <li>
+            Adjustments:
+            <ul>
+              <li><code>newTranslateX = 0 - (100 * -0.2) = 20</code></li>
+              <li><code>newTranslateY = 0 - (100 * -0.2) = 20</code></li>
+            </ul>
+          </li>
+        </ul>
+        <p>Result:</p>
+        <ul>
+          <li><code>translateX = 20</code>, <code>translateY = 20</code></li>
+          <li>
+            This shifts the canvas slightly down and right, keeping the cursor
+            in the same relative position after zooming out.
+          </li>
+        </ul>
+        <hr />
+        <p>Let me know if you'd like further clarification!</p>
+      </div>
+      <div class="bubble user">
+        Is it possible to implement this for the container whilst its fixed to
+        the viewport. So the scaling happens for the content inside?
+      </div>
+      <div class="bubble">
+        <p>
+          Yes, it is absolutely possible to implement the zoom functionality for
+          the <strong>content inside a fixed container</strong>, rather than the
+          container itself. The scaling and translation can be applied directly
+          to the content inside the container, while keeping the container fixed
+          to the viewport.
+        </p>
+        <p>Here’s how you can achieve this:</p>
+        <hr />
+        <h3 id="key-changes-for-the-implementation">
+          <strong>Key Changes for the Implementation</strong>
+        </h3>
+        <ol>
+          <li>
+            <p><strong>Fixed Container</strong>:</p>
+            <ul>
+              <li>
+                The container (<code>div</code>) will remain fixed to the
+                viewport.
+              </li>
+              <li>
+                It acts as a "viewport" for the zooming and panning content.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Transform Applied to Content</strong>:</p>
+            <ul>
+              <li>
+                Instead of scaling and translating the container itself, the
+                transformations (<code>scale</code> and <code>translate</code>)
+                are applied to the inner content.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Bounding Box Management</strong>:</p>
+            <ul>
+              <li>
+                The fixed container acts like a "window" through which you view
+                the zoomable and pannable content.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="updated-code"><strong>Updated Code</strong></h3>
+        <p>Here’s the modified implementation:</p>
+        <pre><code class="javascript language-javascript">import { useEffect, useRef, useState } from 'react';
+
+const App = () =&gt; {
+  const containerRef = useRef(null);
+  const contentRef = useRef(null);
+
+  const [transform, setTransform] = useState({
+    scale: 1,
+    translateX: 0,
+    translateY: 0,
+  });
+
+  const handleWheel = (e) =&gt; {
+    e.preventDefault();
+
+    const content = contentRef.current;
+    if (!content || (!e.ctrlKey &amp;&amp; !e.metaKey)) return;
+
+    const { scale, translateX, translateY } = transform;
+
+    // Get the cursor position relative to the content
+    const { left, top } = content.getBoundingClientRect();
+    const mouseX = e.clientX - left;
+    const mouseY = e.clientY - top;
+
+    // Zoom in or out
+    const zoomFactor = 0.1;
+    const newScale = e.deltaY &lt; 0 ? scale * (1 + zoomFactor) : scale * (1 - zoomFactor);
+
+    // Clamp scale between 0.5 and 5
+    const clampedScale = Math.max(0.5, Math.min(newScale, 5));
+
+    // Calculate new translation values to zoom around the cursor
+    const deltaScale = clampedScale / scale;
+    const newTranslateX = translateX - (mouseX * (deltaScale - 1));
+    const newTranslateY = translateY - (mouseY * (deltaScale - 1));
+
+    setTransform({
+      scale: clampedScale,
+      translateX: newTranslateX,
+      translateY: newTranslateY,
+    });
+  };
+
+  const handleMouseDown = (e) =&gt; {
+    if (e.button !== 0) return; // Left mouse button only
+    const startX = e.clientX;
+    const startY = e.clientY;
+
+    const { translateX, translateY } = transform;
+
+    const handleMouseMove = (e) =&gt; {
+      const deltaX = e.clientX - startX;
+      const deltaY = e.clientY - startY;
+
+      setTransform((prevTransform) =&gt; ({
+        ...prevTransform,
+        translateX: translateX + deltaX,
+        translateY: translateY + deltaY,
+      }));
+    };
+
+    const handleMouseUp = () =&gt; {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+  };
+
+  useEffect(() =&gt; {
+    const content = contentRef.current;
+    if (!content) return;
+
+    content.addEventListener('wheel', handleWheel, { passive: false });
+    content.addEventListener('mousedown', handleMouseDown);
+
+    return () =&gt; {
+      content.removeEventListener('wheel', handleWheel);
+      content.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, [transform]);
+
+  const { scale, translateX, translateY } = transform;
+
+  return (
+    &lt;div
+      ref={containerRef}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        overflow: 'hidden',
+        background: 'skyblue',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    &gt;
+      &lt;div
+        ref={contentRef}
+        style={{
+          width: '2000px', // Content width (can be larger than the container)
+          height: '2000px', // Content height (can be larger than the container)
+          background: 'violet',
+          transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
+          transformOrigin: '0 0',
+          cursor: 'grab',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      &gt;
+        &lt;span style={{ background: 'red', color: 'black' }}&gt;this is the text&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default App;</code></pre>
+        <hr />
+        <h3 id="key-changes-explained">
+          <strong>Key Changes Explained</strong>
+        </h3>
+        <ol>
+          <li>
+            <p><strong>Container Setup</strong>:</p>
+            <ul>
+              <li>
+                The outer container (<code>containerRef</code>) is
+                <strong>fixed</strong> to the viewport using
+                <code>position: fixed</code> and <code>overflow: hidden</code>.
+              </li>
+              <li>
+                It serves as the viewport for the inner content, which can scale
+                and move.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Scaling Content</strong>:</p>
+            <ul>
+              <li>
+                The <code>transform</code> (<code>scale</code> and
+                <code>translate</code>) is applied to the
+                <code>contentRef</code> (inner content), leaving the container
+                unaffected.
+              </li>
+              <li>
+                <code>transformOrigin</code> is set to <code>0 0</code> for
+                proper translation calculations.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Cursor Position for Zoom</strong>:</p>
+            <ul>
+              <li>
+                The cursor's position relative to the
+                <strong>content</strong> (not the container) is used to
+                calculate how to adjust <code>translateX</code> and
+                <code>translateY</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Large Content</strong>:</p>
+            <ul>
+              <li>
+                The <code>contentRef</code> dimensions (<code>2000px</code> by
+                <code>2000px</code>) are larger than the viewport, allowing
+                meaningful panning and zooming.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="how-it-works"><strong>How It Works</strong></h3>
+        <ul>
+          <li>
+            <p><strong>Zoom</strong>:</p>
+            <ul>
+              <li>
+                The content scales in place, centered around the cursor, by
+                adjusting the <code>scale</code> and
+                <code>translate</code> values.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Pan</strong>:</p>
+            <ul>
+              <li>
+                Dragging the mouse adjusts <code>translateX</code> and
+                <code>translateY</code> to move the content around within the
+                fixed container.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="result"><strong>Result</strong></h3>
+        <ul>
+          <li>
+            The container stays fixed to the viewport, acting like a "window."
+          </li>
+          <li>The content inside is zoomed and panned as expected.</li>
+        </ul>
+        <hr />
+        <h3 id="enhancements"><strong>Enhancements</strong></h3>
+        <ol>
+          <li>
+            <p><strong>Bounds Check</strong>:</p>
+            <ul>
+              <li>
+                Ensure that the content doesn't pan completely out of the
+                viewport. Clamp <code>translateX</code> and
+                <code>translateY</code> values to prevent this.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Touch Support</strong>:</p>
+            <ul>
+              <li>Add pinch-to-zoom and pan gestures for mobile devices.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Reset Button</strong>:</p>
+            <ul>
+              <li>
+                Add a button to reset <code>scale</code> and
+                <code>translate</code> values to their defaults.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p>Would you like me to implement any of these enhancements?</p>
+      </div>
+      <div class="bubble user">
+        Can you explain to me how does css scale affect element's position
+        relative to viewport and how did you use it to extract the zooming plus
+        transform logic to create this effect
+      </div>
+      <div class="bubble">
+        <h3
+          id="how-css-scale-affects-an-elements-position-relative-to-the-viewport"
+        >
+          <strong
+            >How <code>CSS scale()</code> Affects an Element's Position Relative
+            to the Viewport</strong
+          >
+        </h3>
+        <p>
+          The <code>scale()</code> property in CSS transforms an element by
+          resizing it (making it larger or smaller) relative to its
+          <strong>transform origin</strong>. Here's a detailed explanation:
+        </p>
+        <hr />
+        <h3 id="key-concepts-of-css-scale">
+          <strong>Key Concepts of <code>CSS scale()</code></strong>
+        </h3>
+        <ol>
+          <li>
+            <p><strong>Transform Origin</strong>:</p>
+            <ul>
+              <li>
+                The <code>transform-origin</code> property determines the
+                <strong>pivot point</strong> around which the element scales.
+              </li>
+              <li>
+                By default, this is <code>50% 50%</code> (center of the
+                element), but it can be set to any point (e.g.,
+                <code>0 0</code> for top-left, or a specific pixel position).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Scaling</strong>:</p>
+            <ul>
+              <li>
+                When an element is scaled with <code>scale(sx, sy)</code>:
+                <ul>
+                  <li><code>sx</code>: Horizontal scaling factor.</li>
+                  <li>
+                    <code>sy</code>: Vertical scaling factor (optional; defaults
+                    to <code>sx</code>).
+                  </li>
+                </ul>
+              </li>
+              <li>
+                It modifies the size of the element
+                <strong>without affecting its layout in the DOM</strong>.
+              </li>
+              <li>
+                The element scales visually but retains its original position
+                and size in the document flow.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Viewport Impact</strong>:</p>
+            <ul>
+              <li>
+                The element's position on the viewport changes visually if the
+                <strong>transform origin</strong> isn't the top-left (<code
+                  >0 0</code
+                >).
+              </li>
+              <li>
+                For example, if an element scales with its center (<code
+                  >50% 50%</code
+                >) as the origin, its position relative to the viewport will
+                appear to "move" as it scales outward from the center.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Cumulative Effects</strong>:</p>
+            <ul>
+              <li>
+                The scaling can interact with other transforms (like
+                <code>translate</code>, <code>rotate</code>, etc.).
+              </li>
+              <li>
+                This means when scaling is applied, the element’s visual
+                position is affected
+                <strong>relative to its scaled size</strong>.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="scaling-for-zooming"><strong>Scaling for Zooming</strong></h3>
+        <p>
+          In our case, the goal is to scale the
+          <strong>content inside the fixed container</strong> while maintaining
+          the cursor's relative position as the scaling center. Here's how this
+          was achieved:
+        </p>
+        <hr />
+        <h3 id="logic-behind-zooming-and-transform-in-the-code">
+          <strong>Logic Behind Zooming and Transform in the Code</strong>
+        </h3>
+        <p>To implement zooming and panning logic using <code>scale</code>:</p>
+        <h4 id="1-apply-scaling-to-the-content">
+          1. <strong>Apply Scaling to the Content</strong>
+        </h4>
+        <p>
+          We use the <code>scale</code> property to zoom the inner content
+          (<code>contentRef</code>) while ensuring:
+        </p>
+        <ul>
+          <li>The content scales visually.</li>
+          <li>
+            The scaling occurs around the cursor point, keeping the mouse
+            position consistent during zoom.
+          </li>
+        </ul>
+        <p>The transform:</p>
+        <pre><code class="javascript language-javascript">transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,</code></pre>
+        <p>
+          applies both scaling and translations. Scaling resizes the content,
+          and translations shift it so the cursor remains stable.
+        </p>
+        <hr />
+        <h4 id="2-cursor-as-the-pivot-point">
+          2. <strong>Cursor as the Pivot Point</strong>
+        </h4>
+        <p>
+          When zooming in, the content visually expands outward. To make it
+          appear as though the zoom is centered on the cursor:
+        </p>
+        <ul>
+          <li>
+            The cursor's position relative to the <strong>content</strong> is
+            calculated using:
+          </li>
+        </ul>
+        <pre><code class="javascript language-javascript">  const mouseX = e.clientX - left; // Relative to the content's top-left
+  const mouseY = e.clientY - top;</code></pre>
+        <ul>
+          <li>
+            Since the default transform-origin is <code>0 0</code> (top-left),
+            scaling affects the content uniformly outward from that point. We
+            adjust the <code>translateX</code> and <code>translateY</code> to
+            counteract this shift.
+          </li>
+        </ul>
+        <hr />
+        <h4 id="3-translate-to-cancel-out-the-movement">
+          3. <strong>Translate to Cancel Out the Movement</strong>
+        </h4>
+        <p>When scaling changes:</p>
+        <pre><code class="javascript language-javascript">const deltaScale = clampedScale / scale;
+const newTranslateX = translateX - (mouseX * (deltaScale - 1));
+const newTranslateY = translateY - (mouseY * (deltaScale - 1));</code></pre>
+        <p>Here's what's happening:</p>
+        <ol>
+          <li>
+            <p>
+              <strong><code>deltaScale = clampedScale / scale</code></strong
+              >:
+            </p>
+            <ul>
+              <li>
+                This calculates the relative change in scale (e.g., if
+                <code>scale</code> increases from <code>1</code> to
+                <code>1.2</code>, <code>deltaScale = 1.2</code>).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Calculate the Shift Due to Scale</strong>:</p>
+            <ul>
+              <li>
+                The distance from the transform-origin to the cursor (e.g.,
+                <code>mouseX</code>) is affected by the scale change.
+              </li>
+              <li>
+                <code>(deltaScale - 1)</code> gives the amount of scale change.
+                <ul>
+                  <li>
+                    For zoom in (<code>deltaScale &gt; 1</code>), this is a
+                    positive number.
+                  </li>
+                  <li>
+                    For zoom out (<code>deltaScale &lt; 1</code>), this is
+                    negative.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Compensate for the Shift</strong>:</p>
+            <ul>
+              <li>
+                Multiply the cursor distance (<code>mouseX</code>,
+                <code>mouseY</code>) by the scale change to calculate how much
+                the element would "move."
+              </li>
+              <li>
+                Subtract this shift from the current translation values
+                (<code>translateX</code>, <code>translateY</code>) to cancel out
+                the movement.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p>
+          This ensures that the visual scaling appears centered on the cursor.
+        </p>
+        <hr />
+        <h4 id="4-panning-dragging-the-content">
+          4. <strong>Panning (Dragging the Content)</strong>
+        </h4>
+        <p>To implement panning:</p>
+        <ul>
+          <li>
+            Mouse movement adjusts <code>translateX</code> and
+            <code>translateY</code> directly:
+          </li>
+        </ul>
+        <pre><code class="javascript language-javascript">  const deltaX = e.clientX - startX;
+  const deltaY = e.clientY - startY;
+
+  setTransform((prevTransform) =&gt; ({
+    ...prevTransform,
+    translateX: prevTransform.translateX + deltaX,
+    translateY: prevTransform.translateY + deltaY,
+  }));</code></pre>
+        <p>
+          This shifts the content relative to the drag distance
+          (<code>deltaX</code>, <code>deltaY</code>).
+        </p>
+        <hr />
+        <h3 id="summary-of-key-steps"><strong>Summary of Key Steps</strong></h3>
+        <ol>
+          <li>
+            <p><strong>Scale Logic</strong>:</p>
+            <ul>
+              <li>Use <code>scale</code> to zoom the content.</li>
+              <li>
+                Adjust the translation values to make the zoom appear centered
+                on the cursor.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Translation Logic</strong>:</p>
+            <ul>
+              <li>
+                Combine <code>translateX</code> and <code>translateY</code> with
+                <code>scale</code> to allow independent panning and zooming.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Interaction Between Scale and Translate</strong>:</p>
+            <ul>
+              <li>Scaling expands or contracts the content.</li>
+              <li>
+                Translations correct for the shift caused by scaling, ensuring
+                the viewport remains aligned with the cursor.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p>
+          This combination of <code>scale</code> and
+          <code>translate</code> provides a flexible and intuitive zoom-and-pan
+          effect. Let me know if you need further clarification or enhancements!
+        </p>
+      </div>
+      <div class="bubble user">
+        No I meant what happens when we scale an element that we need to apply
+        translate to cancel it explain for transformOrigin 50% 50% and 0 0
+      </div>
+      <div class="bubble">
+        <p>
+          Great question! Let’s break it down to understand
+          <strong
+            >how scaling affects the position of an element in relation to the
+            viewport</strong
+          >, especially for different values of
+          <code>transform-origin</code> (like <code>50% 50%</code> and
+          <code>0 0</code>), and
+          <strong
+            >why we need to apply translations to cancel the shift caused by
+            scaling</strong
+          >.
+        </p>
+        <hr />
+        <h3 id="how-scaling-affects-element-position">
+          <strong>How Scaling Affects Element Position</strong>
+        </h3>
+        <p>
+          When we apply a <code>scale()</code> transformation to an element, the
+          size of the element changes. However,
+          <strong
+            >the position of the element in the viewport appears to change if
+            the <code>transform-origin</code> is not the top-left corner (<code
+              >0 0</code
+            >)</strong
+          >. Here’s why:
+        </p>
+        <ol>
+          <li>
+            <p><strong>Scaling Around Transform-Origin</strong>:</p>
+            <ul>
+              <li>
+                The <code>scale()</code> operation enlarges or shrinks the
+                element <strong>around the <code>transform-origin</code></strong
+                >, which acts as the pivot point.
+              </li>
+              <li>
+                If the <code>transform-origin</code> is not at the top-left
+                (<code>0 0</code>), the scaling will "pull" or "push" the
+                element away from its original position.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Viewport Perception</strong>:</p>
+            <ul>
+              <li>
+                The element’s <strong>visual position</strong> relative to the
+                viewport changes because the scaling operation modifies the
+                distances between the transform-origin and the element's edges.
+              </li>
+              <li>
+                The transform-origin stays in place, but the edges of the
+                element expand or contract relative to it, creating the
+                perception of movement.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="effect-for-different-transform-origin-values">
+          <strong
+            >Effect for Different <code>transform-origin</code> Values</strong
+          >
+        </h3>
+        <h4 id="case-1-transform-origin-0-0-top-left-corner">
+          Case 1: <code>transform-origin: 0 0</code> (Top-Left Corner)
+        </h4>
+        <ul>
+          <li>
+            The scaling starts from the <strong>top-left corner</strong> of the
+            element.
+          </li>
+          <li>The top-left corner remains fixed (does not move).</li>
+          <li>
+            As a result:
+            <ul>
+              <li>
+                The element grows or shrinks
+                <strong>outward from the top-left corner</strong>.
+              </li>
+              <li>
+                There is <strong>no need for additional translation</strong> to
+                compensate for the shift, because the top-left corner does not
+                change position.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h4 id="case-2-transform-origin-50-50-center-of-the-element">
+          Case 2: <code>transform-origin: 50% 50%</code> (Center of the Element)
+        </h4>
+        <ul>
+          <li>
+            The scaling starts from the <strong>center</strong> of the element.
+          </li>
+          <li>
+            The center of the element remains fixed (does not move), but the
+            edges expand or contract <strong>symmetrically</strong> outward.
+          </li>
+          <li>
+            As a result:
+            <ul>
+              <li>
+                The element visually appears to "move" in the viewport because
+                its top-left corner is no longer at the same position after
+                scaling.
+              </li>
+              <li>
+                To cancel this perceived movement, we need to apply a
+                translation to
+                <strong>reposition the element’s top-left corner</strong> to its
+                original position.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="why-we-need-translation-for-transform-origin-50-50">
+          <strong
+            >Why We Need Translation for
+            <code>transform-origin: 50% 50%</code></strong
+          >
+        </h3>
+        <p>
+          When scaling an element with <code>transform-origin: 50% 50%</code>,
+          the following happens:
+        </p>
+        <ol>
+          <li>
+            The element scales outward or inward
+            <strong>symmetrically</strong> around its center.
+          </li>
+          <li>
+            The top-left corner of the element moves relative to the viewport
+            because the center of the element remains fixed, but the size
+            changes:
+            <ul>
+              <li>
+                If scaling up (e.g., <code>scale(2)</code>), the top-left corner
+                "moves"
+                <strong>half the amount of the element's growth</strong>
+                outward.
+              </li>
+              <li>
+                If scaling down (e.g., <code>scale(0.5)</code>), the top-left
+                corner "moves"
+                <strong>half the amount of the element's shrinkage</strong>
+                inward.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p>
+          This movement is proportional to the size change and needs to be
+          corrected by translation.
+        </p>
+        <hr />
+        <h3 id="translation-adjustment-formula">
+          <strong>Translation Adjustment Formula</strong>
+        </h3>
+        <p>
+          To cancel the shift caused by scaling for any
+          <code>transform-origin</code>, we calculate the translation required.
+        </p>
+        <h4 id="general-case">General Case:</h4>
+        <ol>
+          <li>
+            <p><strong>Delta Scale</strong>:</p>
+            <ul>
+              <li>
+                The change in scale is the factor by which the element grows or
+                shrinks. This is represented as:
+              </li>
+            </ul>
+            <pre><code class="plaintext language-plaintext"> deltaScale = newScale - 1</code></pre>
+            <p>
+              (e.g., for <code>scale(2)</code>,
+              <code>deltaScale = 1</code> because the element doubles in size.)
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong
+                >Translation for <code>transform-origin: 50% 50%</code></strong
+              >:
+            </p>
+            <ul>
+              <li>
+                The movement of the element's top-left corner is equal to
+                <strong>half the change in size</strong> in both the horizontal
+                and vertical directions:
+              </li>
+            </ul>
+            <pre><code class="plaintext language-plaintext"> translateX = elementWidth * deltaScale * 0.5
+ translateY = elementHeight * deltaScale * 0.5</code></pre>
+          </li>
+          <li>
+            <p>
+              <strong>Translation for <code>transform-origin: 0 0</code></strong
+              >:
+            </p>
+            <ul>
+              <li>
+                No translation is needed because the top-left corner remains
+                fixed.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="example-walkthrough"><strong>Example Walkthrough</strong></h3>
+        <h4 id="example-1-transform-origin-0-0-with-scale2">
+          Example 1: <code>transform-origin: 0 0</code> with
+          <code>scale(2)</code>
+        </h4>
+        <ul>
+          <li>Initial size: <code>100px x 100px</code></li>
+          <li>New size after scaling: <code>200px x 200px</code></li>
+          <li>Top-left corner remains fixed.</li>
+          <li>No translation is needed.</li>
+        </ul>
+        <hr />
+        <h4 id="example-2-transform-origin-50-50-with-scale2">
+          Example 2: <code>transform-origin: 50% 50%</code> with
+          <code>scale(2)</code>
+        </h4>
+        <ul>
+          <li>Initial size: <code>100px x 100px</code></li>
+          <li>New size after scaling: <code>200px x 200px</code></li>
+          <li>
+            Top-left corner shifts because the center of the element (which is
+            fixed) moves:
+            <ul>
+              <li>
+                Horizontal shift:<br />
+                <code>plaintext translateX = 100 * (2 - 1) * 0.5 = 50px </code>
+              </li>
+              <li>
+                Vertical shift:<br />
+                <code>plaintext translateY = 100 * (2 - 1) * 0.5 = 50px </code>
+              </li>
+            </ul>
+          </li>
+          <li>To cancel this, apply:</li>
+        </ul>
+        <pre><code class="css language-css">  transform: translate(-50px, -50px) scale(2);</code></pre>
+        <hr />
+        <h4 id="example-3-transform-origin-25-25-with-scale2">
+          Example 3: <code>transform-origin: 25% 25%</code> with
+          <code>scale(2)</code>
+        </h4>
+        <ul>
+          <li>Initial size: <code>100px x 100px</code></li>
+          <li>New size after scaling: <code>200px x 200px</code></li>
+          <li>
+            The top-left corner moves because the pivot is at
+            <code>25% 25%</code>:
+            <ul>
+              <li>
+                Horizontal shift:<br />
+                <code>plaintext translateX = 100 * (2 - 1) * 0.25 = 25px </code>
+              </li>
+              <li>
+                Vertical shift:<br />
+                <code>plaintext translateY = 100 * (2 - 1) * 0.25 = 25px </code>
+              </li>
+            </ul>
+          </li>
+          <li>To cancel this, apply:</li>
+        </ul>
+        <pre><code class="css language-css">  transform: translate(-25px, -25px) scale(2);</code></pre>
+        <hr />
+        <h3 id="how-this-works-in-your-code">
+          <strong>How This Works in Your Code</strong>
+        </h3>
+        <p>In your implementation:</p>
+        <ol>
+          <li>
+            You calculate how much the element "shifts" due to scaling by
+            measuring the distance from the cursor to the
+            <code>transform-origin</code> (in this case, <code>0 0</code> or the
+            cursor itself).
+          </li>
+          <li>The formula:</li>
+        </ol>
+        <pre><code class="javascript language-javascript">   translateX = translateX - (mouseX * (deltaScale - 1));
+   translateY = translateY - (mouseY * (deltaScale - 1));</code></pre>
+        <p>
+          adjusts the translation to cancel out the perceived movement caused by
+          scaling.
+        </p>
+        <ol start="3">
+          <li>
+            This ensures that the element visually appears to scale
+            <strong>around the cursor</strong> without jumping or shifting in
+            the viewport.
+          </li>
+        </ol>
+        <p>Would you like to dive deeper into any part of this? Let me know!</p>
+      </div>
+    </div>
+  </body>
+</html>
