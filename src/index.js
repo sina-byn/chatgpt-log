@@ -1,11 +1,12 @@
 const fs = require('fs');
+const path = require('path');
 
 // * prettier
 const prettier = require('prettier');
 
 // * jsdom
 const { JSDOM } = require('jsdom');
-const dom = new JSDOM(fs.readFileSync('template.html', 'utf-8'));
+const dom = new JSDOM(fs.readFileSync(path.join(__dirname, '..', 'template.html'), 'utf-8'));
 const { document } = dom.window;
 
 // * showdown
@@ -24,7 +25,7 @@ const remixContextRegex = /window\.__remixContext\s*=\s*({[\s\S]*?});__remixCont
 const updateLogIndex = async (title, fileName) => {
   log.info('Updating chat index...');
 
-  const indexDom = new JSDOM(fs.readFileSync('index.html', 'utf-8'));
+  const indexDom = new JSDOM(fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf-8'));
   const { document } = indexDom.window;
 
   const logs = document.querySelector('.logs');

@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const { execSync } = require('child_process');
 
 // * constants
@@ -43,7 +44,7 @@ const filter = async onBeforeCommit => {
   execSync('git pull origin gh-pages');
 
   const htmlRegex = /\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}-\d{3}Z\.html/;
-  const paths = fs.readdirSync('.');
+  const paths = fs.readdirSync(path.join(__dirname, '..', '..'));
 
   for (const path of paths) {
     if (htmlRegex.test(path) || EXCLUDED_PATHS.includes(path)) continue;
