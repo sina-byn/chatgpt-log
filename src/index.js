@@ -102,9 +102,14 @@ const logGPT = async url => {
   fs.writeFileSync(fileName, html, 'utf-8');
   log.success("Chat's HTML was generated successfully");
 
-  await filter(updateLogIndex.bind(null, title, fileName));
+  const [repo, account] = await filter(updateLogIndex.bind(null, title, fileName));
 
   log.success('Chat log was generated successfully');
+
+  if (repo && account) {
+    const logURL = `https://${account}.github.io/${repo}/${fileName}`;
+    log.info('Visit your log at:', logURL);
+  }
 };
 
 module.exports = logGPT;

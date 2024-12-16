@@ -16,6 +16,26 @@ const EXCLUDED_PATHS = [
   'package-lock.json',
 ];
 
+const getRepoInfo = remote => {
+  const remoteURL = execSync(`git remote get-url ${remote}`).toString().trim();
+  if (!remoteURL) return;
+
+  const urlChunks = remoteURL.split('/');
+  const remoteRepo = urlChunks.at(-1);
+  const repo = remoteRepo.slice(0, remoteRepo.lastIndexOf('.'));
+
+  const isHttps = remoteURL.startsWith('https');
+  let account;
+
+  if (isHttps) {
+    account = urlChunks.at(-2);
+    return [repo, account];
+  }
+
+  account = urlChunks[0].slice(urlChunks[0].lastIndexOf(':') + 1);
+  return [repo, account];
+};
+
 const createBranch = () => {
   const branchLog = execSync('git branch -a')
     .toString()
@@ -65,7 +85,10 @@ const filter = async onBeforeCommit => {
   execSync('git switch main');
   execSync('git restore index.html');
 
+  const repoInfo = getRepoInfo('origin');
   process.chdir(_cwd);
+
+  return repoInfo;
 };
 
 module.exports = filter;
