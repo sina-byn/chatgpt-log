@@ -110,6 +110,8 @@ const logGPT = async url => {
   if (repo && account) {
     const logURL = `https://${account}.github.io/${repo}/${fileName}`;
     log.info('Visit your log at:', logURL);
+    log.warn('You may need to wait for a few seconds before your github pages is re-deployed');
+    require('openurl').open(logURL);
   }
 };
 
