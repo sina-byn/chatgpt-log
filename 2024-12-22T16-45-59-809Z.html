@@ -1,0 +1,950 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Advanced Node.js Backend Guide</h1>
+    </header>
+
+    <div class="content container">
+      <div class="bubble user">
+        I have learned how to develop REST APIs using express in node.js. I also
+        know high level concepts of node such as the cluster module and etc.
+        what are some next steps to become an advanced backend developer in node
+        js
+      </div>
+      <div class="bubble"><p>This code was redacted.</p></div>
+      <div class="bubble"><p>The output of this plugin was redacted.</p></div>
+      <div class="bubble">
+        <p>
+          To become an advanced backend developer in Node.js, here are some
+          structured next steps:
+        </p>
+        <h3 id="1-deepen-your-nodejs-knowledge">
+          1. <strong>Deepen Your Node.js Knowledge</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Asynchronous Programming</strong>: Master patterns like
+            callbacks, Promises, async/await, and event-driven programming.
+          </li>
+          <li>
+            <strong>Streams and Buffers</strong>: Understand how to work with
+            streams for handling large files and optimizing I/O operations.
+          </li>
+          <li>
+            <strong>Error Handling</strong>: Learn advanced techniques for
+            catching and managing errors effectively.
+          </li>
+          <li>
+            <strong>Cluster and Worker Threads</strong>: Dive deeper into
+            scaling Node.js applications using the cluster module and worker
+            threads.
+          </li>
+        </ul>
+        <h3 id="2-master-database-integration">
+          2. <strong>Master Database Integration</strong>
+        </h3>
+        <ul>
+          <li>
+            Work with relational databases (e.g., PostgreSQL, MySQL) using ORMs
+            like Sequelize or query builders like Knex.js.
+          </li>
+          <li>
+            Learn about NoSQL databases like MongoDB and tools such as Mongoose.
+          </li>
+          <li>
+            Understand database design, indexing, and performance optimization.
+          </li>
+        </ul>
+        <h3 id="3-develop-robust-apis">
+          3. <strong>Develop Robust APIs</strong>
+        </h3>
+        <ul>
+          <li>
+            Implement <strong>GraphQL APIs</strong> using libraries like Apollo
+            Server.
+          </li>
+          <li>
+            Understand API authentication and authorization techniques (OAuth,
+            JWT, sessions).
+          </li>
+          <li>
+            Work with advanced validation using libraries like Joi or Yup.
+          </li>
+        </ul>
+        <h3 id="4-understand-and-implement-best-practices">
+          4. <strong>Understand and Implement Best Practices</strong>
+        </h3>
+        <ul>
+          <li>
+            Apply clean code principles and design patterns like Singleton,
+            Factory, and Dependency Injection.
+          </li>
+          <li>
+            Implement logging and monitoring using tools like Winston, Morgan,
+            or Elastic Stack.
+          </li>
+          <li>Write unit and integration tests using Mocha, Chai, or Jest.</li>
+        </ul>
+        <h3 id="5-scalability-and-performance">
+          5. <strong>Scalability and Performance</strong>
+        </h3>
+        <ul>
+          <li>Use caching mechanisms with Redis or Memcached.</li>
+          <li>Implement rate limiting and request throttling for APIs.</li>
+          <li>Learn load balancing and horizontal scaling techniques.</li>
+        </ul>
+        <h3 id="6-security-best-practices">
+          6. <strong>Security Best Practices</strong>
+        </h3>
+        <ul>
+          <li>
+            Protect your application against common vulnerabilities (OWASP Top
+            10).
+          </li>
+          <li>Use libraries like Helmet for securing HTTP headers.</li>
+          <li>Validate and sanitize input to prevent SQL Injection and XSS.</li>
+        </ul>
+        <h3 id="7-real-time-applications">
+          7. <strong>Real-Time Applications</strong>
+        </h3>
+        <ul>
+          <li>
+            Build real-time features using WebSockets or libraries like
+            Socket.IO.
+          </li>
+          <li>Learn about server-sent events (SSE) and their use cases.</li>
+        </ul>
+        <h3 id="8-devops-and-deployment">
+          8. <strong>DevOps and Deployment</strong>
+        </h3>
+        <ul>
+          <li>Learn how to containerize applications using Docker.</li>
+          <li>Use CI/CD pipelines for automated testing and deployment.</li>
+          <li>
+            Deploy applications on cloud platforms like AWS, GCP, or Azure.
+          </li>
+        </ul>
+        <h3 id="9-microservices-architecture">
+          9. <strong>Microservices Architecture</strong>
+        </h3>
+        <ul>
+          <li>
+            Design and implement microservices using frameworks like Nest.js or
+            Moleculer.
+          </li>
+          <li>
+            Learn service communication patterns (REST, RPC, message brokers
+            like RabbitMQ or Kafka).
+          </li>
+          <li>
+            Implement service discovery, API gateways, and distributed tracing.
+          </li>
+        </ul>
+        <h3 id="10-contribute-to-open-source">
+          10. <strong>Contribute to Open Source</strong>
+        </h3>
+        <ul>
+          <li>
+            Contribute to Node.js libraries or frameworks to deepen your
+            understanding and gain community experience.
+          </li>
+        </ul>
+        <p>
+          Would you like detailed guidance or resources on any of these steps?
+        </p>
+      </div>
+      <div class="bubble user">
+        In the section of developing robust APIs what are the next steps?
+      </div>
+      <div class="bubble">
+        <p>
+          In the "Developing Robust APIs" section, here’s how you can level up
+          step by step:
+        </p>
+        <hr />
+        <h3 id="1-advanced-api-design">
+          <strong>1. Advanced API Design</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>REST API Design Best Practices</strong>:
+            <ul>
+              <li>
+                Follow <strong>RESTful principles</strong>: Use proper HTTP
+                methods (GET, POST, PUT, DELETE).
+              </li>
+              <li>
+                Use meaningful and consistent endpoints
+                (<code>/users/{id}/orders</code>).
+              </li>
+              <li>Implement versioning (<code>/api/v1</code>).</li>
+              <li>
+                Utilize HATEOAS (Hypermedia as the Engine of Application State)
+                for discoverable APIs.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>GraphQL</strong>:
+            <ul>
+              <li>
+                Learn how to implement GraphQL APIs with libraries like
+                <a href="https://www.apollographql.com/docs/apollo-server/"
+                  >Apollo Server</a
+                >
+                or
+                <a href="https://graphql.org/graphql-js/express-graphql/"
+                  >Express-GraphQL</a
+                >.
+              </li>
+              <li>
+                Understand GraphQL schema design, queries, mutations, and
+                subscriptions.
+              </li>
+              <li>
+                Optimize GraphQL resolvers for complex queries (e.g., using
+                DataLoader for batching).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>gRPC</strong>:
+            <ul>
+              <li>
+                Explore building APIs with <strong>gRPC</strong> for
+                high-performance and language-agnostic APIs.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="2-api-authentication-and-authorization">
+          <strong>2. API Authentication and Authorization</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Authentication</strong>:
+            <ul>
+              <li>
+                Implement <strong>JWT</strong> (JSON Web Tokens) for stateless
+                authentication.
+              </li>
+              <li>
+                Use OAuth 2.0 for third-party authentication (e.g., Google,
+                Facebook).
+              </li>
+              <li>Explore passwordless authentication (magic links, OTPs).</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Authorization</strong>:
+            <ul>
+              <li>
+                Implement Role-Based Access Control (RBAC) and Attribute-Based
+                Access Control (ABAC).
+              </li>
+              <li>
+                Understand and use middleware to enforce route-level access.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="3-input-validation-and-error-handling">
+          <strong>3. Input Validation and Error Handling</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Input Validation</strong>:
+            <ul>
+              <li>
+                Use libraries like <a href="https://joi.dev/">Joi</a>,
+                <a href="https://github.com/jquense/yup">Yup</a>, or
+                <a href="https://github.com/validatorjs/validator.js"
+                  >Validator.js</a
+                >.
+              </li>
+              <li>
+                Validate incoming requests to prevent invalid or malicious data.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Error Handling</strong>:
+            <ul>
+              <li>Create a centralized error-handling middleware.</li>
+              <li>
+                Use consistent error response structures (e.g., error codes,
+                messages, details).
+              </li>
+              <li>
+                Implement proper HTTP status codes (e.g., 400 for bad requests,
+                500 for server errors).
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="4-pagination-sorting-and-filtering">
+          <strong>4. Pagination, Sorting, and Filtering</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Pagination</strong>:
+            <ul>
+              <li>
+                Implement offset-based or cursor-based pagination for large
+                datasets.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Sorting</strong>:
+            <ul>
+              <li>
+                Allow dynamic sorting of resources
+                (<code>?sort=price,asc</code>).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Filtering</strong>:
+            <ul>
+              <li>
+                Enable flexible filtering using query parameters
+                (<code>?status=active&amp;category=electronics</code>).
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="5-performance-optimization">
+          <strong>5. Performance Optimization</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Caching</strong>:
+            <ul>
+              <li>Implement server-side caching (e.g., Redis).</li>
+              <li>Use HTTP caching headers (e.g., ETag, Cache-Control).</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Rate Limiting and Throttling</strong>:
+            <ul>
+              <li>
+                Use libraries like
+                <a href="https://www.npmjs.com/package/express-rate-limit"
+                  >Express Rate Limit</a
+                >
+                to protect against abuse.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Lazy Loading and Data Projection</strong>:
+            <ul>
+              <li>
+                Fetch only the required data fields to minimize response
+                payloads.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="6-documentation"><strong>6. Documentation</strong></h3>
+        <ul>
+          <li>
+            <strong>API Documentation</strong>:
+            <ul>
+              <li>Use tools like Swagger/OpenAPI to document APIs.</li>
+              <li>
+                Implement interactive documentation with Swagger UI or Redoc.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Postman Collections</strong>:
+            <ul>
+              <li>Share API collections for easy testing by teams.</li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="7-testing"><strong>7. Testing</strong></h3>
+        <ul>
+          <li>
+            Write <strong>unit tests</strong> for controllers and middleware.
+          </li>
+          <li>
+            Write <strong>integration tests</strong> for end-to-end API
+            functionality.
+          </li>
+          <li>
+            Use testing frameworks like
+            <a href="https://mochajs.org/">Mocha</a>,
+            <a href="https://jestjs.io/">Jest</a>, or
+            <a href="https://github.com/visionmedia/supertest">Supertest</a>.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="8-monitoring-and-logging">
+          <strong>8. Monitoring and Logging</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Monitoring</strong>:
+            <ul>
+              <li>
+                Use tools like Prometheus or New Relic to monitor API
+                performance and uptime.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Logging</strong>:
+            <ul>
+              <li>
+                Implement structured logging using libraries like Winston or
+                Pino.
+              </li>
+              <li>Log important events, errors, and response times.</li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="9-webhooks"><strong>9. Webhooks</strong></h3>
+        <ul>
+          <li>Learn how to create and consume webhooks.</li>
+          <li>Handle retries and idempotency for robust webhook processing.</li>
+        </ul>
+        <hr />
+        <h3 id="10-advanced-middleware">
+          <strong>10. Advanced Middleware</strong>
+        </h3>
+        <ul>
+          <li>
+            Build custom middleware for reusable logic (e.g., logging,
+            analytics).
+          </li>
+          <li>
+            Use middleware to implement request transformation, response
+            compression, or localization.
+          </li>
+        </ul>
+        <hr />
+        <p>Would you like further details on any of these steps or tools?</p>
+      </div>
+      <div class="bubble user">What is gRPC</div>
+      <div class="bubble">
+        <p>
+          gRPC is an open-source, high-performance Remote Procedure Call (RPC)
+          framework developed by Google. It enables applications to communicate
+          with each other as if they were local methods, even if they are
+          running on different machines or written in different programming
+          languages.
+        </p>
+        <h3 id="key-features-of-grpc">Key Features of gRPC:</h3>
+        <ol>
+          <li>
+            <p><strong>Protocol Buffers (Protobuf)</strong>:</p>
+            <ul>
+              <li>
+                gRPC uses Protocol Buffers (protobuf) for defining data
+                structures and service contracts.
+              </li>
+              <li>
+                Protobuf is a highly efficient binary serialization format,
+                making gRPC faster and more compact compared to JSON or
+                XML-based communication.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Language Agnostic</strong>:</p>
+            <ul>
+              <li>
+                gRPC supports multiple programming languages (e.g., Node.js,
+                Python, Java, Go, etc.), making it ideal for polyglot systems.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Streaming</strong>:</p>
+            <ul>
+              <li>
+                Supports various streaming modes:
+                <ul>
+                  <li><strong>Unary</strong>: One request, one response.</li>
+                  <li>
+                    <strong>Server Streaming</strong>: Client sends a request,
+                    server sends multiple responses.
+                  </li>
+                  <li>
+                    <strong>Client Streaming</strong>: Client sends multiple
+                    requests, server sends one response.
+                  </li>
+                  <li>
+                    <strong>Bidirectional Streaming</strong>: Both client and
+                    server can send multiple messages in both directions.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Built-in Support for Authentication</strong>:</p>
+            <ul>
+              <li>
+                gRPC integrates well with authentication mechanisms like OAuth,
+                Google Auth, and TLS for secure communication.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Performance</strong>:</p>
+            <ul>
+              <li>
+                gRPC is designed for low latency and high throughput, making it
+                suitable for real-time and high-performance systems.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Built-in Code Generation</strong>:</p>
+            <ul>
+              <li>
+                Developers write <code>.proto</code> files to define service
+                contracts and messages.
+              </li>
+              <li>
+                gRPC automatically generates server-side and client-side code
+                for multiple languages.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="how-grpc-works">How gRPC Works:</h3>
+        <ol>
+          <li>
+            <p>
+              <strong>Define Service in <code>.proto</code> File</strong>:
+            </p>
+            <ul>
+              <li>
+                You define the service methods and message types in a
+                <code>.proto</code> file.
+              </li>
+            </ul>
+            <p>Example <code>.proto</code> file:</p>
+          </li>
+        </ol>
+        <pre><code class="proto language-proto">   syntax = "proto3";
+
+   service UserService {
+       rpc GetUser (UserRequest) returns (UserResponse);
+   }
+
+   message UserRequest {
+       string user_id = 1;
+   }
+
+   message UserResponse {
+       string name = 1;
+       int32 age = 2;
+   }</code></pre>
+        <ol start="2">
+          <li>
+            <p><strong>Generate Code</strong>:</p>
+            <ul>
+              <li>
+                Use the <code>protoc</code> compiler to generate code for the
+                client and server in your desired language.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Implement Service</strong>:</p>
+            <ul>
+              <li>
+                On the server side, implement the service logic defined in the
+                <code>.proto</code> file.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Call the Service</strong>:</p>
+            <ul>
+              <li>
+                On the client side, use the generated client code to call the
+                service methods.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="use-cases-for-grpc">Use Cases for gRPC:</h3>
+        <ol>
+          <li>
+            <p><strong>Microservices Communication</strong>:</p>
+            <ul>
+              <li>
+                Ideal for internal communication between microservices due to
+                its low latency and efficient data serialization.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Real-Time Streaming</strong>:</p>
+            <ul>
+              <li>
+                Perfect for scenarios requiring real-time data streaming, such
+                as chat applications or live data feeds.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Multi-language Systems</strong>:</p>
+            <ul>
+              <li>
+                Useful in environments where different components are written in
+                different languages.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>IoT and Edge Computing</strong>:</p>
+            <ul>
+              <li>
+                Efficient for communication in resource-constrained
+                environments.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="comparison-with-rest">Comparison with REST:</h3>
+        <table>
+          <thead>
+            <tr>
+              <th id="**feature**"><strong>Feature</strong></th>
+              <th id="**grpc**"><strong>gRPC</strong></th>
+              <th id="**rest**"><strong>REST</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Serialization Format</td>
+              <td>Binary (Protobuf)</td>
+              <td>Text-based (JSON/XML)</td>
+            </tr>
+            <tr>
+              <td>Performance</td>
+              <td>High (Compact, low latency)</td>
+              <td>Moderate (Heavier payloads)</td>
+            </tr>
+            <tr>
+              <td>Streaming Support</td>
+              <td>Built-in (bidirectional)</td>
+              <td>Limited (server-sent events)</td>
+            </tr>
+            <tr>
+              <td>Language Support</td>
+              <td>Multi-language</td>
+              <td>Multi-language</td>
+            </tr>
+            <tr>
+              <td>Ease of Debugging</td>
+              <td>Harder (binary data)</td>
+              <td>Easier (human-readable data)</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr />
+        <p>Would you like a hands-on guide to implementing gRPC in Node.js?</p>
+      </div>
+      <div class="bubble user">yes</div>
+      <div class="bubble">
+        <p>Here’s a hands-on guide to implementing gRPC in Node.js:</p>
+        <hr />
+        <h3 id="step-1-install-prerequisites">
+          <strong>Step 1: Install Prerequisites</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Install Node.js</strong>: Ensure Node.js is installed on
+            your machine.
+          </li>
+          <li>
+            <strong>Install Protocol Buffers Compiler (protoc)</strong>:
+            <ul>
+              <li>
+                Download the correct version for your OS from the
+                <a href="https://github.com/protocolbuffers/protobuf/releases"
+                  >Protocol Buffers GitHub releases page</a
+                >.
+              </li>
+              <li>Add the <code>protoc</code> binary to your system's PATH.</li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="step-2-set-up-your-nodejs-project">
+          <strong>Step 2: Set Up Your Node.js Project</strong>
+        </h3>
+        <ol>
+          <li>Create a new directory for your project:</li>
+        </ol>
+        <pre><code class="bash language-bash">   mkdir grpc-example
+   cd grpc-example
+   npm init -y</code></pre>
+        <ol start="2">
+          <li>Install gRPC and Protobuf libraries:</li>
+        </ol>
+        <pre><code class="bash language-bash">   npm install @grpc/grpc-js @grpc/proto-loader</code></pre>
+        <hr />
+        <h3 id="step-3-define-a-proto-file">
+          <strong>Step 3: Define a <code>.proto</code> File</strong>
+        </h3>
+        <p>Create a file named <code>user.proto</code>:</p>
+        <pre><code class="proto language-proto">syntax = "proto3";
+
+service UserService {
+    rpc GetUser (UserRequest) returns (UserResponse);
+}
+
+message UserRequest {
+    string user_id = 1;
+}
+
+message UserResponse {
+    string name = 1;
+    int32 age = 2;
+}</code></pre>
+        <hr />
+        <h3 id="step-4-implement-the-grpc-server">
+          <strong>Step 4: Implement the gRPC Server</strong>
+        </h3>
+        <p>Create a file named <code>server.js</code>:</p>
+        <pre><code class="javascript language-javascript">const grpc = require('@grpc/grpc-js');
+const protoLoader = require('@grpc/proto-loader');
+const path = require('path');
+
+// Load the protobuf definition
+const packageDefinition = protoLoader.loadSync(
+    path.join(__dirname, 'user.proto'),
+    {
+        keepCase: true,
+        longs: String,
+        enums: String,
+        defaults: true,
+        oneofs: true,
+    }
+);
+const proto = grpc.loadPackageDefinition(packageDefinition);
+
+// Implement the GetUser RPC method
+function getUser(call, callback) {
+    const userId = call.request.user_id;
+    console.log(`Fetching user with ID: ${userId}`);
+
+    // Mocked response
+    const user = { name: "John Doe", age: 30 };
+    callback(null, user);
+}
+
+// Start the gRPC server
+function main() {
+    const server = new grpc.Server();
+    server.addService(proto.UserService.service, { GetUser: getUser });
+    const PORT = "50051";
+    server.bindAsync(`0.0.0.0:${PORT}`, grpc.ServerCredentials.createInsecure(), () =&gt; {
+        console.log(`gRPC server running on port ${PORT}`);
+        server.start();
+    });
+}
+
+main();</code></pre>
+        <hr />
+        <h3 id="step-5-implement-the-grpc-client">
+          <strong>Step 5: Implement the gRPC Client</strong>
+        </h3>
+        <p>Create a file named <code>client.js</code>:</p>
+        <pre><code class="javascript language-javascript">const grpc = require('@grpc/grpc-js');
+const protoLoader = require('@grpc/proto-loader');
+const path = require('path');
+
+// Load the protobuf definition
+const packageDefinition = protoLoader.loadSync(
+    path.join(__dirname, 'user.proto'),
+    {
+        keepCase: true,
+        longs: String,
+        enums: String,
+        defaults: true,
+        oneofs: true,
+    }
+);
+const proto = grpc.loadPackageDefinition(packageDefinition);
+
+// Create the gRPC client
+function main() {
+    const client = new proto.UserService(
+        "localhost:50051",
+        grpc.credentials.createInsecure()
+    );
+
+    // Call the GetUser RPC
+    client.GetUser({ user_id: "12345" }, (error, response) =&gt; {
+        if (error) {
+            console.error("Error:", error);
+        } else {
+            console.log("User Details:", response);
+        }
+    });
+}
+
+main();</code></pre>
+        <hr />
+        <h3 id="step-6-run-the-application">
+          <strong>Step 6: Run the Application</strong>
+        </h3>
+        <ol>
+          <li>Start the server:</li>
+        </ol>
+        <pre><code class="bash language-bash">   node server.js</code></pre>
+        <ol start="2">
+          <li>In a separate terminal, run the client:</li>
+        </ol>
+        <pre><code class="bash language-bash">   node client.js</code></pre>
+        <ol start="3">
+          <li>
+            You should see output in both terminals:
+            <ul>
+              <li><strong>Server</strong>: Logs the received user ID.</li>
+              <li><strong>Client</strong>: Logs the mocked user details.</li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="optional-enhancements">
+          <strong>Optional Enhancements</strong>
+        </h3>
+        <ol>
+          <li>
+            <strong>Add Error Handling</strong>:
+            <ul>
+              <li>
+                Return detailed error messages from the server using
+                <code>grpc.status</code>.
+              </li>
+              <li>Handle client-side connection errors.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Secure Communication</strong>:
+            <ul>
+              <li>Use TLS certificates to secure gRPC communication.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Streaming</strong>:
+            <ul>
+              <li>
+                Implement server-side, client-side, or bidirectional streaming.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Advanced Features</strong>:
+            <ul>
+              <li>Explore interceptors for logging and metrics.</li>
+            </ul>
+          </li>
+        </ol>
+        <p>
+          Would you like to extend this with streaming or other advanced gRPC
+          features?
+        </p>
+      </div>
+      <div class="bubble user">
+        I am looking for learning resources specially online courses
+      </div>
+      <div class="bubble"><p>The output of this plugin was redacted.</p></div>
+      <div class="bubble">
+        <p>
+          To advance your backend development skills in Node.js, consider the
+          following online courses tailored for intermediate to advanced
+          learners:
+        </p>
+        <p>
+          :::contextList<br />
+          【{"image_fetch": "Node JS Advanced Concepts Udemy"}】<br />
+          <strong>Node JS: Advanced Concepts</strong> <br />
+          This Udemy course delves into advanced topics such as caching with
+          Redis, performance optimization through clustering, and scalable image
+          uploads using AWS S3. It's ideal for developers aiming to deepen
+          their understanding of Node.js internals and enhance application
+          performance. citeturn0search8<br />
+          :::
+        </p>
+        <p>
+          :::contextList<br />
+          【{"image_fetch": "Node.js Unleashed Coursera"}】<br />
+          <strong>Node.js Unleashed: Mastering Backend Development</strong>
+          <br />
+          Offered by Coursera, this course covers advanced aspects of Node.js,
+          including WebSocket communication for real-time interactions, building
+          chat applications with Socket.io, and strategies for scalability and
+          performance optimization. citeturn0search3<br />
+          :::
+        </p>
+        <p>
+          :::contextList<br />
+          【{"image_fetch": "Complete Node.js Developer Zero To Mastery"}】<br />
+          <strong>Complete Node.js Developer in 2025</strong> <br />
+          This comprehensive program from Zero To Mastery guides you through
+          building enterprise-level Node applications, deploying to the cloud
+          (AWS), and mastering the latest backend development tools. It
+          emphasizes practical, real-world projects to solidify your skills.
+          citeturn0search6<br />
+          :::
+        </p>
+        <p>
+          :::contextList<br />
+          【{"image_fetch": "Advanced Node.js TutorialsPoint"}】<br />
+          <strong>Advanced Node.js</strong> <br />
+          This course from TutorialsPoint focuses on advanced Node.js concepts,
+          including performance optimization, security best practices, and clean
+          coding principles. It's designed to empower developers with the
+          skills needed to excel in backend development using Node.js.
+          citeturn0search9<br />
+          :::
+        </p>
+        <p>
+          :::contextList<br />
+          【{"image_fetch": "Node.js Backend Engineer Mastering Backend"}】<br />
+          <strong>Become A Node.js Backend Engineer</strong> <br />
+          Offered by Mastering Backend, this course teaches advanced backend
+          engineering concepts in Node.js, helping you build enterprise and
+          production-ready systems. It includes modules on testing, security,
+          and performance optimization. citeturn0search11<br />
+          :::
+        </p>
+        <p>
+          Before enrolling, review each course's prerequisites to ensure they
+          align with your current knowledge and learning objectives.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
