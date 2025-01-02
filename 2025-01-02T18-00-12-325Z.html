@@ -1,0 +1,883 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Vite Dev Server Overview</h1>
+    </header>
+
+    <div class="content container">
+      <div class="bubble user">
+        How does vite dev server show project output without creating any files?
+      </div>
+      <div class="bubble">
+        <p>
+          The Vite development server delivers your project output dynamically
+          without writing files to the disk by leveraging an
+          <strong>in-memory module bundler</strong> and
+          <strong>modern browser capabilities</strong>. Here’s how it works:
+        </p>
+        <h3 id="1-serving-from-memory">
+          1. <strong>Serving from Memory</strong>
+        </h3>
+        <ul>
+          <li>
+            When you run the Vite dev server, it does not create physical files
+            on disk for your code. Instead, it builds and serves files directly
+            from memory. This makes it extremely fast because there is no
+            overhead for writing and reading files from the disk.
+          </li>
+        </ul>
+        <h3 id="2-es-modules-and-http-requests">
+          2. <strong>ES Modules and HTTP Requests</strong>
+        </h3>
+        <ul>
+          <li>
+            Vite uses the <strong>native ES module support</strong> in modern
+            browsers. Instead of bundling all the files together (like
+            traditional tools such as Webpack), Vite serves each JavaScript
+            module as a separate HTTP resource. The browser requests the modules
+            it needs, and Vite responds dynamically.
+          </li>
+        </ul>
+        <h3 id="3-hot-module-replacement-hmr">
+          3. <strong>Hot Module Replacement (HMR)</strong>
+        </h3>
+        <ul>
+          <li>
+            Vite also integrates <strong>Hot Module Replacement (HMR)</strong>,
+            which means only the modules that have changed are recompiled and
+            reloaded in the browser. This avoids a full-page reload and provides
+            a fast development experience.
+          </li>
+        </ul>
+        <h3 id="4-on-the-fly-transformations">
+          4. <strong>On-the-Fly Transformations</strong>
+        </h3>
+        <ul>
+          <li>
+            During development, Vite transforms modern JavaScript (or other file
+            types like TypeScript, Vue, or React JSX) into browser-compatible
+            code on-the-fly. These transformations are cached in memory, so they
+            are fast on subsequent requests.
+          </li>
+        </ul>
+        <h3 id="5-dynamic-asset-handling">
+          5. <strong>Dynamic Asset Handling</strong>
+        </h3>
+        <ul>
+          <li>
+            Static assets like CSS, images, and other resources are served
+            directly from their original locations or transformed dynamically
+            when requested by the browser.
+          </li>
+        </ul>
+        <h3 id="why-is-no-file-created">Why is No File Created?</h3>
+        <ul>
+          <li>
+            The dev server is not meant for production; it only serves the files
+            temporarily for development purposes. Since there’s no bundling or
+            writing to disk involved, the process remains lightweight and fast,
+            ensuring a smooth developer experience.
+          </li>
+        </ul>
+        <p>
+          In production builds (<code>vite build</code>), Vite generates actual
+          files (like a <code>dist</code> directory) optimized for deployment.
+        </p>
+      </div>
+      <div class="bubble user">How to serve files from memory in node js</div>
+      <div class="bubble">
+        <p>
+          Serving files from memory in Node.js is achieved by loading the file
+          content into memory (e.g., using buffers) and serving it directly to
+          HTTP requests. Here's how you can implement it:
+        </p>
+        <hr />
+        <h3 id="1-basic-example-serving-a-static-file-from-memory">
+          <strong>1. Basic Example: Serving a Static File from Memory</strong>
+        </h3>
+        <p>This example demonstrates serving a single file:</p>
+        <pre><code class="javascript language-javascript">const http = require('http');
+const fs = require('fs');
+
+const filePath = './index.html'; // Path to the file
+let fileContent;
+
+// Read the file into memory
+fs.readFile(filePath, (err, data) =&gt; {
+  if (err) {
+    console.error('Error reading the file:', err);
+    return;
+  }
+  fileContent = data; // Store the file content in memory
+  console.log('File loaded into memory');
+});
+
+// Create an HTTP server
+const server = http.createServer((req, res) =&gt; {
+  if (req.url === '/') {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end(fileContent); // Serve the file from memory
+  } else {
+    res.writeHead(404);
+    res.end('Not Found');
+  }
+});
+
+// Start the server
+server.listen(3000, () =&gt; {
+  console.log('Server is running at http://localhost:3000');
+});</code></pre>
+        <hr />
+        <h3 id="2-serve-multiple-files-from-memory">
+          <strong>2. Serve Multiple Files from Memory</strong>
+        </h3>
+        <p>
+          For serving multiple files, you can use an in-memory map of files:
+        </p>
+        <pre><code class="javascript language-javascript">const http = require('http');
+const fs = require('fs');
+const path = require('path');
+
+const filesToServe = {
+  '/index.html': './index.html',
+  '/style.css': './style.css',
+};
+
+const memoryCache = {};
+
+// Load all files into memory
+Object.entries(filesToServe).forEach(([urlPath, filePath]) =&gt; {
+  fs.readFile(filePath, (err, data) =&gt; {
+    if (err) {
+      console.error(`Error reading ${filePath}:`, err);
+      return;
+    }
+    memoryCache[urlPath] = data; // Store content in memory
+    console.log(`${filePath} loaded into memory`);
+  });
+});
+
+// Create an HTTP server
+const server = http.createServer((req, res) =&gt; {
+  if (memoryCache[req.url]) {
+    const ext = path.extname(req.url);
+    const mimeType = ext === '.html' ? 'text/html' : 'text/css';
+    res.writeHead(200, { 'Content-Type': mimeType });
+    res.end(memoryCache[req.url]); // Serve from memory
+  } else {
+    res.writeHead(404);
+    res.end('Not Found');
+  }
+});
+
+// Start the server
+server.listen(3000, () =&gt; {
+  console.log('Server is running at http://localhost:3000');
+});</code></pre>
+        <hr />
+        <h3 id="3-using-middleware-express-example">
+          <strong>3. Using Middleware (Express Example)</strong>
+        </h3>
+        <p>
+          If you’re using a framework like Express, you can still serve files
+          from memory:
+        </p>
+        <pre><code class="javascript language-javascript">const express = require('express');
+const fs = require('fs');
+
+const app = express();
+const memoryCache = {};
+
+// Load files into memory
+fs.readFile('./index.html', (err, data) =&gt; {
+  if (err) {
+    console.error('Error reading file:', err);
+    return;
+  }
+  memoryCache['/index.html'] = data;
+  console.log('File loaded into memory');
+});
+
+// Serve files from memory
+app.get('/', (req, res) =&gt; {
+  res.set('Content-Type', 'text/html');
+  res.send(memoryCache['/index.html']); // Serve file from memory
+});
+
+// Start the server
+app.listen(3000, () =&gt; {
+  console.log('Server is running at http://localhost:3000');
+});</code></pre>
+        <hr />
+        <h3 id="key-points">Key Points</h3>
+        <ol>
+          <li>
+            <strong>Memory Cache:</strong> Store file content in memory for fast
+            access.
+          </li>
+          <li>
+            <strong>MIME Types:</strong> Set the appropriate MIME types when
+            serving files.
+          </li>
+          <li>
+            <strong>Reloading Files:</strong> For development, consider
+            reloading files into memory when changes occur (using
+            <code>fs.watch</code> or similar tools).
+          </li>
+          <li>
+            <strong>Efficient Memory Usage:</strong> Be cautious about memory
+            usage, especially with large files or a high number of files.
+          </li>
+        </ol>
+      </div>
+      <div class="bubble user">How does hmr work</div>
+      <div class="bubble">
+        <p>
+          Hot Module Replacement (HMR) is a feature in modern development tools
+          (like Vite, Webpack, or Parcel) that allows you to update code in a
+          running application without requiring a full page reload. This
+          provides faster feedback loops and preserves the application's state,
+          such as the data in forms or the state of components.
+        </p>
+        <p>Here’s a detailed breakdown of how HMR works:</p>
+        <hr />
+        <h3 id="1-key-components-of-hmr">
+          <strong>1. Key Components of HMR</strong>
+        </h3>
+        <h4 id="a-dev-server"><strong>a. Dev Server</strong></h4>
+        <ul>
+          <li>
+            The development server monitors your files for changes (e.g., using
+            file watchers like <code>chokidar</code>).
+          </li>
+          <li>
+            When a file changes, the server identifies what needs to be updated
+            and sends this information to the browser.
+          </li>
+        </ul>
+        <h4 id="b-websocket-connection">
+          <strong>b. WebSocket Connection</strong>
+        </h4>
+        <ul>
+          <li>
+            The browser establishes a WebSocket connection with the development
+            server.
+          </li>
+          <li>
+            This connection allows the server to notify the browser when a
+            module needs to be replaced.
+          </li>
+        </ul>
+        <h4 id="c-module-system"><strong>c. Module System</strong></h4>
+        <ul>
+          <li>
+            Modern tools bundle your code into modules using technologies like
+            ES Modules or CommonJS.
+          </li>
+          <li>
+            HMR uses this modular structure to reload only the affected modules
+            instead of the entire application.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="2-workflow-of-hmr"><strong>2. Workflow of HMR</strong></h3>
+        <h4 id="step-by-step-process">
+          <strong>Step-by-Step Process:</strong>
+        </h4>
+        <ol>
+          <li>
+            <p><strong>File Change Detection:</strong></p>
+            <ul>
+              <li>
+                The dev server detects a change in the source code (e.g., when
+                you save a file).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Dependency Analysis:</strong></p>
+            <ul>
+              <li>
+                The server identifies the module that changed and its
+                dependencies.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Update Generation:</strong></p>
+            <ul>
+              <li>
+                A "hot update" is generated for the changed module. This
+                includes the new code and metadata.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Notification via WebSocket:</strong></p>
+            <ul>
+              <li>
+                The server sends a message over the WebSocket connection to the
+                browser, informing it about the updated module.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Browser Action:</strong></p>
+            <ul>
+              <li>
+                The browser receives the update and:
+                <ul>
+                  <li>
+                    Fetches the updated module code (often through an HTTP
+                    request).
+                  </li>
+                  <li>
+                    Replaces the old module with the new one in the module
+                    graph.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Runtime Update:</strong></p>
+            <ul>
+              <li>
+                The HMR runtime (injected into the app by the dev server)
+                executes the module replacement logic:
+                <ul>
+                  <li>It disposes of the old module.</li>
+                  <li>It applies the new module.</li>
+                  <li>
+                    If needed, it runs any custom HMR handlers defined in the
+                    application (e.g., React's state-preserving mechanisms).
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="3-preserving-state"><strong>3. Preserving State</strong></h3>
+        <ul>
+          <li>
+            <p><strong>React Example:</strong></p>
+            <ul>
+              <li>
+                React components integrate well with HMR because the component's
+                state is managed separately.
+              </li>
+              <li>
+                When a module updates, only the specific component logic
+                changes, while the state remains intact.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Custom Handlers:</strong></p>
+            <ul>
+              <li>
+                Tools like Webpack allow you to define
+                <code>module.hot.accept</code> and
+                <code>module.hot.dispose</code> handlers for custom behavior
+                during updates.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="4-advantages-of-hmr"><strong>4. Advantages of HMR</strong></h3>
+        <ol>
+          <li>
+            <strong>Faster Development:</strong>
+            <ul>
+              <li>
+                Only the updated module is replaced, which is faster than
+                rebuilding the entire app or reloading the page.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Preserved State:</strong>
+            <ul>
+              <li>
+                State like form inputs, scroll position, or component states is
+                maintained.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Improved Developer Experience:</strong>
+            <ul>
+              <li>
+                You see changes in real-time without losing context in the app.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="5-limitations-of-hmr">
+          <strong>5. Limitations of HMR</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Complex Dependencies:</strong>
+            <ul>
+              <li>
+                If a module heavily depends on others, the changes might
+                cascade, requiring additional updates or reloads.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Non-HMR-Compatible Libraries:</strong>
+            <ul>
+              <li>
+                Some libraries or custom codebases might not support HMR
+                properly, requiring a full page reload.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Performance Overhead:</strong>
+            <ul>
+              <li>
+                For very large projects, the HMR runtime and file watching can
+                introduce slight performance overhead.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="6-example-webpack-hmr-integration">
+          <strong>6. Example (Webpack HMR Integration)</strong>
+        </h3>
+        <pre><code class="javascript language-javascript">if (module.hot) {
+  module.hot.accept('./moduleA.js', function () {
+    console.log('Module A updated!');
+    // Custom logic to handle the module update
+  });
+
+  module.hot.dispose(function () {
+    console.log('Cleaning up before the module is replaced...');
+  });
+}</code></pre>
+        <hr />
+        <h3 id="7-how-hmr-works-in-vite">
+          <strong>7. How HMR Works in Vite</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>ES Modules:</strong>
+            <ul>
+              <li>
+                Vite uses native ES module imports, making HMR simpler and
+                faster compared to older bundlers like Webpack.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>File-Based HMR:</strong>
+            <ul>
+              <li>
+                Instead of recompiling the entire app, Vite serves the updated
+                file dynamically, leveraging the browser's ability to load
+                individual modules.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <p>
+          HMR is a cornerstone of modern web development tools, enabling rapid
+          iteration and making the development process smoother and more
+          enjoyable!
+        </p>
+      </div>
+      <div class="bubble user">Implement this for me in node js</div>
+      <div class="bubble">
+        <p>
+          Here’s a simple implementation of Hot Module Replacement (HMR) in
+          Node.js for a web application. This example uses the
+          <code>http</code> module with a WebSocket server for HMR and a file
+          watcher to detect changes.
+        </p>
+        <hr />
+        <h3 id="step-by-step-implementation">
+          <strong>Step-by-Step Implementation</strong>
+        </h3>
+        <h4 id="1-set-up-file-watching-and-websocket-server">
+          <strong>1. Set Up File Watching and WebSocket Server</strong>
+        </h4>
+        <p>
+          We'll use <code>chokidar</code> to watch files and <code>ws</code> for
+          WebSocket communication.
+        </p>
+        <h4 id="install-dependencies"><strong>Install Dependencies</strong></h4>
+        <pre><code class="bash language-bash">npm install chokidar ws</code></pre>
+        <hr />
+        <h4 id="2-nodejs-hmr-server-code">
+          <strong>2. Node.js HMR Server Code</strong>
+        </h4>
+        <p>Here’s the complete server code:</p>
+        <pre><code class="javascript language-javascript">const http = require('http');
+const fs = require('fs');
+const path = require('path');
+const chokidar = require('chokidar');
+const WebSocket = require('ws');
+
+// File to serve
+const FILE_PATH = path.join(__dirname, 'index.html');
+
+// Create an HTTP server
+const server = http.createServer((req, res) =&gt; {
+  if (req.url === '/') {
+    fs.readFile(FILE_PATH, (err, data) =&gt; {
+      if (err) {
+        res.writeHead(500, { 'Content-Type': 'text/plain' });
+        res.end('Error reading file');
+        return;
+      }
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(data);
+    });
+  } else {
+    res.writeHead(404);
+    res.end('Not Found');
+  }
+});
+
+// Set up WebSocket server
+const wss = new WebSocket.Server({ server });
+
+let sockets = []; // Store active WebSocket connections
+wss.on('connection', (ws) =&gt; {
+  console.log('Client connected');
+  sockets.push(ws);
+
+  ws.on('close', () =&gt; {
+    sockets = sockets.filter((socket) =&gt; socket !== ws);
+    console.log('Client disconnected');
+  });
+});
+
+// Watch for file changes
+const watcher = chokidar.watch(FILE_PATH);
+watcher.on('change', (filePath) =&gt; {
+  console.log(`${filePath} has changed`);
+  // Notify all connected clients
+  sockets.forEach((socket) =&gt; {
+    if (socket.readyState === WebSocket.OPEN) {
+      socket.send(JSON.stringify({ type: 'reload' }));
+    }
+  });
+});
+
+// Start the server
+server.listen(3000, () =&gt; {
+  console.log('Server running at http://localhost:3000');
+});</code></pre>
+        <hr />
+        <h4 id="3-create-an-html-file">
+          <strong>3. Create an HTML File</strong>
+        </h4>
+        <p>
+          Create an <code>index.html</code> file in the same directory as the
+          server script:
+        </p>
+        <pre><code class="html language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;HMR Example&lt;/title&gt;
+  &lt;script&gt;
+    const socket = new WebSocket('ws://localhost:3000');
+    socket.addEventListener('message', (event) =&gt; {
+      const data = JSON.parse(event.data);
+      if (data.type === 'reload') {
+        console.log('File changed, reloading...');
+        location.reload();
+      }
+    });
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hot Module Replacement (HMR)&lt;/h1&gt;
+  &lt;p&gt;Edit the HTML file and save to see the changes without refreshing the page manually.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <hr />
+        <h3 id="how-it-works"><strong>How It Works</strong></h3>
+        <ol>
+          <li>
+            <p><strong>HTTP Server:</strong></p>
+            <ul>
+              <li>Serves the <code>index.html</code> file.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>WebSocket Server:</strong></p>
+            <ul>
+              <li>
+                Sends a message to the browser when the watched file changes.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>File Watcher:</strong></p>
+            <ul>
+              <li>
+                Monitors the <code>index.html</code> file using
+                <code>chokidar</code> for changes.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Client-Side Script:</strong></p>
+            <ul>
+              <li>
+                Listens for WebSocket messages and reloads the page when a
+                "reload" message is received.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="run-the-application"><strong>Run the Application</strong></h3>
+        <p>Start the server:</p>
+        <pre><code class="bash language-bash">node server.js</code></pre>
+        <p>
+          Open <code>http://localhost:3000</code> in your browser, edit the
+          <code>index.html</code> file, and watch the browser automatically
+          reload when you save the file.
+        </p>
+        <hr />
+        <h3 id="extending-this-example">
+          <strong>Extending This Example</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Support Multiple Files:</strong> Modify the watcher to
+            monitor a directory.
+          </li>
+          <li>
+            <strong>Module Updates:</strong> Instead of reloading the page, send
+            specific updates to replace parts of the DOM or code.
+          </li>
+          <li>
+            <strong>React Integration:</strong> Use libraries like
+            <code>react-refresh</code> for component-level HMR.
+          </li>
+        </ul>
+      </div>
+      <div class="bubble user">It does a full page reload</div>
+      <div class="bubble">
+        <p>
+          To implement <strong>true Hot Module Replacement (HMR)</strong> in
+          Node.js without a full page reload, you need to go beyond reloading
+          the entire page and only update the affected modules or components
+          dynamically. Here’s how to enhance the previous implementation:
+        </p>
+        <hr />
+        <h3 id="steps-for-true-hmr"><strong>Steps for True HMR</strong></h3>
+        <h4 id="1-websocket-communication">
+          <strong>1. WebSocket Communication</strong>
+        </h4>
+        <p>
+          Instead of instructing the client to reload the page, send details
+          about which part of the application has changed. The client will then
+          dynamically update the content or re-import the affected module.
+        </p>
+        <hr />
+        <h4 id="2-enhanced-server-code">
+          <strong>2. Enhanced Server Code</strong>
+        </h4>
+        <p>
+          Here’s how you can modify the server to send specific module updates:
+        </p>
+        <pre><code class="javascript language-javascript">const http = require('http');
+const fs = require('fs');
+const path = require('path');
+const chokidar = require('chokidar');
+const WebSocket = require('ws');
+
+const PORT = 3000;
+const STATIC_FILES = path.join(__dirname, 'static'); // Directory to serve
+const MODULES_DIR = path.join(__dirname, 'modules'); // Directory for modules
+
+// Create HTTP server
+const server = http.createServer((req, res) =&gt; {
+  const filePath = path.join(__dirname, req.url === '/' ? '/static/index.html' : req.url);
+
+  fs.readFile(filePath, (err, data) =&gt; {
+    if (err) {
+      res.writeHead(404);
+      res.end('File not found');
+      return;
+    }
+
+    const ext = path.extname(filePath);
+    const contentType = {
+      '.html': 'text/html',
+      '.js': 'application/javascript',
+      '.css': 'text/css',
+    }[ext] || 'text/plain';
+
+    res.writeHead(200, { 'Content-Type': contentType });
+    res.end(data);
+  });
+});
+
+// Create WebSocket server
+const wss = new WebSocket.Server({ server });
+
+let sockets = [];
+wss.on('connection', (ws) =&gt; {
+  sockets.push(ws);
+
+  ws.on('close', () =&gt; {
+    sockets = sockets.filter((socket) =&gt; socket !== ws);
+  });
+});
+
+// Watch files in the modules directory
+chokidar.watch(MODULES_DIR).on('change', (filePath) =&gt; {
+  const moduleName = path.relative(MODULES_DIR, filePath);
+  console.log(`Module changed: ${moduleName}`);
+
+  // Send HMR update to clients
+  sockets.forEach((socket) =&gt; {
+    if (socket.readyState === WebSocket.OPEN) {
+      socket.send(JSON.stringify({ type: 'update', module: `/modules/${moduleName}` }));
+    }
+  });
+});
+
+// Start the server
+server.listen(PORT, () =&gt; {
+  console.log(`Server is running at http://localhost:${PORT}`);
+});</code></pre>
+        <hr />
+        <h4 id="3-client-code"><strong>3. Client Code</strong></h4>
+        <p>
+          In the <code>index.html</code> file, modify the client-side WebSocket
+          handling logic to dynamically re-import the updated module.
+        </p>
+        <pre><code class="html language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;HMR Example&lt;/title&gt;
+  &lt;script type="module"&gt;
+    const socket = new WebSocket('ws://localhost:3000');
+
+    socket.addEventListener('message', async (event) =&gt; {
+      const data = JSON.parse(event.data);
+
+      if (data.type === 'update') {
+        console.log(`Updating module: ${data.module}`);
+        try {
+          // Dynamically import the updated module
+          const updatedModule = await import(`${data.module}?t=${Date.now()}`);
+          if (updatedModule &amp;&amp; updatedModule.update) {
+            updatedModule.update();
+          } else {
+            console.warn('Module does not export an update function.');
+          }
+        } catch (error) {
+          console.error('Error updating module:', error);
+        }
+      }
+    });
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hot Module Replacement (HMR) Example&lt;/h1&gt;
+  &lt;div id="app"&gt;&lt;/div&gt;
+  &lt;script type="module" src="/modules/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <hr />
+        <h4 id="4-example-module-appjs">
+          <strong>4. Example Module (<code>app.js</code>)</strong>
+        </h4>
+        <p>
+          Your JavaScript module needs to export an <code>update</code> function
+          to handle HMR updates.
+        </p>
+        <pre><code class="javascript language-javascript">// modules/app.js
+export function update() {
+  const appDiv = document.getElementById('app');
+  appDiv.textContent = `Module updated at ${new Date().toLocaleTimeString()}`;
+}
+
+update(); // Initial rendering</code></pre>
+        <hr />
+        <h3 id="how-this-works"><strong>How This Works</strong></h3>
+        <ol>
+          <li>
+            <p><strong>Server</strong>:</p>
+            <ul>
+              <li>
+                Watches the module files (<code>modules/</code> directory).
+              </li>
+              <li>
+                Sends an update message with the module path when a file
+                changes.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Client</strong>:</p>
+            <ul>
+              <li>Listens for HMR messages via WebSocket.</li>
+              <li>
+                Dynamically re-imports the updated module and calls its
+                <code>update</code> function.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Dynamic Module Replacement</strong>:</p>
+            <ul>
+              <li>
+                Instead of refreshing the entire page, the updated module is
+                dynamically loaded, and only the specific part of the
+                application is updated.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="benefits"><strong>Benefits</strong></h3>
+        <ul>
+          <li>No full-page reloads.</li>
+          <li>
+            Retains application state (e.g., form inputs, scroll position).
+          </li>
+          <li>Dynamically updates only the affected modules.</li>
+        </ul>
+        <hr />
+        <h3 id="extending-this"><strong>Extending This</strong></h3>
+        <ul>
+          <li>Handle styles dynamically (e.g., reloading CSS files).</li>
+          <li>
+            Add support for frameworks like React or Vue by integrating their
+            HMR utilities.
+          </li>
+          <li>Provide fallbacks for non-compliant modules.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
