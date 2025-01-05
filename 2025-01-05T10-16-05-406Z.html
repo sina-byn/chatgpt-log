@@ -1,0 +1,857 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>How QR Codes Work</h1>
+    </header>
+
+    <div class="content container">
+      <div class="bubble user">How does qr-codes work?</div>
+      <div class="bubble">
+        <p>
+          QR codes (Quick Response codes) are a type of two-dimensional barcode
+          that can store a variety of data, such as URLs, contact information,
+          or plain text. They are designed to be scanned and interpreted by
+          devices such as smartphones, QR code scanners, or cameras. Here's how
+          they work:
+        </p>
+        <hr />
+        <h3 id="1-structure-of-a-qr-code">
+          <strong>1. Structure of a QR Code</strong>
+        </h3>
+        <p>
+          A QR code is made up of black and white squares arranged on a grid. It
+          includes several key components:
+        </p>
+        <ul>
+          <li>
+            <strong>Finder patterns</strong>: Large squares in three corners
+            help the scanner identify and align the QR code.
+          </li>
+          <li>
+            <strong>Alignment patterns</strong>: Small patterns that help the
+            scanner correct for distortions or angles.
+          </li>
+          <li>
+            <strong>Timing patterns</strong>: Lines of alternating black and
+            white modules for data cell alignment.
+          </li>
+          <li>
+            <strong>Data and error correction</strong>: Encoded information with
+            redundancy to allow accurate reading even if part of the code is
+            damaged.
+          </li>
+          <li>
+            <strong>Quiet zone</strong>: A margin of white space around the QR
+            code to isolate it from its surroundings.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="2-how-qr-codes-store-data">
+          <strong>2. How QR Codes Store Data</strong>
+        </h3>
+        <p>QR codes encode data using:</p>
+        <ul>
+          <li>
+            <strong>Modules</strong>: Black and white squares represent binary
+            values (1s and 0s). These binary values are then converted into
+            characters based on the QR code's encoding scheme.
+          </li>
+          <li>
+            <strong>Encoding modes</strong>: QR codes can use different encoding
+            methods such as numeric, alphanumeric, byte (binary), or Kanji (for
+            Japanese characters) to store data efficiently.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="3-scanning-and-decoding">
+          <strong>3. Scanning and Decoding</strong>
+        </h3>
+        <p>When a scanner or smartphone camera captures a QR code:</p>
+        <ol>
+          <li>
+            <strong>Detection</strong>: The device identifies the finder
+            patterns to locate and align the QR code.
+          </li>
+          <li>
+            <strong>Decoding</strong>: The scanner reads the data modules and
+            reconstructs the binary data.
+          </li>
+          <li>
+            <strong>Error correction</strong>: If parts of the code are damaged,
+            the error correction algorithm (Reed-Solomon) fills in the missing
+            pieces.
+          </li>
+          <li>
+            <strong>Output</strong>: The binary data is translated back into its
+            original format (e.g., URL, text, etc.) and displayed to the user.
+          </li>
+        </ol>
+        <hr />
+        <h3 id="4-applications-of-qr-codes">
+          <strong>4. Applications of QR Codes</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Marketing and advertising</strong>: Linking to websites or
+            promotional content.
+          </li>
+          <li>
+            <strong>Payments</strong>: Mobile payment systems like Apple Pay,
+            Google Pay, and WeChat Pay.
+          </li>
+          <li>
+            <strong>Contactless sharing</strong>: Sharing Wi-Fi credentials,
+            contact information, or app downloads.
+          </li>
+          <li>
+            <strong>Inventory management</strong>: Tracking products in supply
+            chains.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="5-advantages-of-qr-codes">
+          <strong>5. Advantages of QR Codes</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>High storage capacity</strong>: Can store up to 4,296
+            alphanumeric characters.
+          </li>
+          <li>
+            <strong>Fast scanning</strong>: Easily scanned with most modern
+            devices.
+          </li>
+          <li>
+            <strong>Error tolerance</strong>: Can still be read even if up to
+            30% of the code is damaged.
+          </li>
+          <li><strong>Versatile</strong>: Can encode various types of data.</li>
+        </ul>
+        <p>
+          Would you like to create or use QR codes in any specific context? Let
+          me know if you'd like to explore further!
+        </p>
+      </div>
+      <div class="bubble user">
+        How to create a simple qr-code in js from scratch
+      </div>
+      <div class="bubble">
+        <p>
+          Creating a QR code from scratch in JavaScript involves generating the
+          data for the QR code and then rendering it in an appropriate format,
+          such as HTML, Canvas, or SVG. Here’s a simple guide:
+        </p>
+        <hr />
+        <h3 id="1-basic-steps-to-generate-a-qr-code">
+          <strong>1. Basic Steps to Generate a QR Code</strong>
+        </h3>
+        <ol>
+          <li>
+            <strong>Understand QR Code Encoding</strong>: QR codes use binary
+            patterns to encode data. Libraries like <code>qrcode</code> make
+            this process much easier by handling the encoding and error
+            correction.
+          </li>
+          <li>
+            <strong>Choose Rendering Method</strong>: QR codes can be rendered
+            in HTML, on a Canvas element, or as an SVG.
+          </li>
+          <li>
+            <strong>Implement Logic</strong>: If you want to create a QR code
+            manually, you would need to implement QR encoding rules, which is
+            quite complex. Alternatively, use a library to simplify the process.
+          </li>
+        </ol>
+        <hr />
+        <h3 id="2-using-a-library-simpler-approach">
+          <strong>2. Using a Library (Simpler Approach)</strong>
+        </h3>
+        <p>
+          Here's how you can generate a QR code using a popular JavaScript
+          library like <code>qrcode.js</code>.
+        </p>
+        <h4 id="installation"><strong>Installation</strong></h4>
+        <p>
+          First, include the library. You can either download it or include it
+          via CDN:
+        </p>
+        <pre><code class="html language-html">&lt;script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"&gt;&lt;/script&gt;</code></pre>
+        <h4 id="code-example"><strong>Code Example</strong></h4>
+        <p>Generate and display a QR code in an HTML page:</p>
+        <pre><code class="html language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;QR Code Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Generate a QR Code&lt;/h1&gt;
+  &lt;div id="qrcode"&gt;&lt;/div&gt;
+  &lt;script&gt;
+    // Generate QR Code
+    QRCode.toCanvas(document.getElementById('qrcode'), 'Hello, World!', function (error) {
+      if (error) console.error(error);
+      console.log('QR Code generated!');
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <hr />
+        <h3 id="3-creating-a-qr-code-without-libraries">
+          <strong>3. Creating a QR Code Without Libraries</strong>
+        </h3>
+        <p>
+          If you prefer not to use libraries, you can create a QR code manually,
+          but this involves:
+        </p>
+        <ol>
+          <li>
+            <strong>Encoding Data</strong>: Convert your input into binary data
+            based on QR code encoding rules.
+          </li>
+          <li>
+            <strong>Adding Error Correction</strong>: Use Reed-Solomon
+            algorithms.
+          </li>
+          <li>
+            <strong>Rendering the QR Code</strong>: Use an HTML Canvas to draw
+            the binary pattern.
+          </li>
+        </ol>
+        <p>
+          Here’s a very basic example of rendering binary data as a grid (this
+          won’t have true QR encoding):
+        </p>
+        <pre><code class="html language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Simple QR Grid&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Simple QR Code Grid&lt;/h1&gt;
+  &lt;canvas id="qrcode" width="200" height="200"&gt;&lt;/canvas&gt;
+  &lt;script&gt;
+    const canvas = document.getElementById('qrcode');
+    const ctx = canvas.getContext('2d');
+
+    const qrData = [
+      [1, 0, 1, 0, 1],
+      [0, 1, 0, 1, 0],
+      [1, 0, 1, 0, 1],
+      [0, 1, 0, 1, 0],
+      [1, 0, 1, 0, 1],
+    ];
+
+    const cellSize = 40;
+
+    qrData.forEach((row, y) =&gt; {
+      row.forEach((cell, x) =&gt; {
+        ctx.fillStyle = cell ? 'black' : 'white';
+        ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+      });
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <hr />
+        <h3 id="4-when-to-use-libraries">
+          <strong>4. When to Use Libraries</strong>
+        </h3>
+        <p>
+          For most cases, using a library like <code>qrcode.js</code> is far
+          more efficient and accurate, as it handles all the encoding and error
+          correction for you. However, understanding the basics of how QR codes
+          work is valuable if you want to dive deeper.
+        </p>
+        <p>
+          Let me know if you'd like to explore creating more advanced QR codes
+          or customizing them!
+        </p>
+      </div>
+      <div class="bubble user">
+        What is the data stored in the one built from scratch?
+      </div>
+      <div class="bubble">
+        <p>
+          The manually created QR code example I provided (the simple grid in
+          the <code>qrData</code> array) does not store any meaningful or
+          encoded data. It is merely a visual representation of a
+          black-and-white grid pattern, intended to demonstrate how to draw a
+          grid-like structure on an HTML canvas. This means:
+        </p>
+        <ul>
+          <li>
+            The <strong>grid values (1 and 0)</strong> represent black and white
+            cells, respectively.
+          </li>
+          <li>
+            It does <strong>not follow QR code standards</strong> for data
+            encoding, error correction, or alignment.
+          </li>
+        </ul>
+        <h3 id="how-qr-codes-store-data">
+          <strong>How QR Codes Store Data</strong>
+        </h3>
+        <p>A real QR code encodes data using:</p>
+        <ol>
+          <li>
+            <strong>Encoding Modes</strong>: Determines the type of data
+            (numeric, alphanumeric, byte, or Kanji).
+          </li>
+          <li>
+            <strong>Data Bits</strong>: Encodes the actual information in
+            binary.
+          </li>
+          <li>
+            <strong>Error Correction</strong>: Adds redundancy to recover data
+            if the QR code is partially damaged.
+          </li>
+          <li>
+            <strong>Structural Elements</strong>: Patterns (finder, alignment,
+            timing, etc.) allow scanners to interpret and locate the QR code.
+          </li>
+        </ol>
+        <h3 id="what-data-would-be-stored">
+          <strong>What Data Would Be Stored?</strong>
+        </h3>
+        <p>If the manually created grid were converted to a real QR code:</p>
+        <ul>
+          <li>
+            The data stored would be determined by what you encode (e.g., a URL,
+            text like "Hello, World!", etc.).
+          </li>
+          <li>
+            You’d need to use proper encoding rules, which involve converting
+            the input data to binary, adding error correction, and placing it
+            within the QR code grid according to QR code standards.
+          </li>
+        </ul>
+        <p>
+          For meaningful QR code creation, using a library or understanding QR
+          code specifications (like ISO/IEC 18004) is essential.
+        </p>
+        <p>
+          Let me know if you’d like to expand on this, such as adding proper
+          data encoding logic!
+        </p>
+      </div>
+      <div class="bubble user">Implement a simple one for me</div>
+      <div class="bubble">
+        <p>
+          Here’s a <strong>simple QR code generator implementation</strong> in
+          JavaScript that can encode data and render it as a grid using the HTML
+          <code>canvas</code>. While this implementation won’t have advanced
+          features like error correction or strict QR code standards, it
+          demonstrates how to encode basic binary data and visualize it.
+        </p>
+        <hr />
+        <h3 id="html-and-javascript-implementation">
+          <strong>HTML and JavaScript Implementation</strong>
+        </h3>
+        <pre><code class="html language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Simple QR Code Generator&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Simple QR Code Generator&lt;/h1&gt;
+  &lt;label for="inputData"&gt;Enter Text:&lt;/label&gt;
+  &lt;input type="text" id="inputData" placeholder="Type something..." /&gt;
+  &lt;button onclick="generateQRCode()"&gt;Generate QR Code&lt;/button&gt;
+  &lt;canvas id="qrcodeCanvas" width="200" height="200"&gt;&lt;/canvas&gt;
+
+  &lt;script&gt;
+    function generateQRCode() {
+      const input = document.getElementById("inputData").value;
+      const canvas = document.getElementById("qrcodeCanvas");
+      const ctx = canvas.getContext("2d");
+
+      if (!input) {
+        alert("Please enter text to encode!");
+        return;
+      }
+
+      // Step 1: Convert input text to binary
+      const binaryData = Array.from(input).map((char) =&gt; {
+        return char.charCodeAt(0).toString(2).padStart(8, "0");
+      }).join("");
+
+      // Step 2: Generate a simple grid based on binary data
+      const size = 200; // Canvas size
+      const cellSize = 10; // Size of each square cell
+      const cols = size / cellSize;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      binaryData.split("").forEach((bit, index) =&gt; {
+        const x = (index % cols) * cellSize;
+        const y = Math.floor(index / cols) * cellSize;
+
+        ctx.fillStyle = bit === "1" ? "black" : "white";
+        ctx.fillRect(x, y, cellSize, cellSize);
+      });
+
+      console.log("QR Code generated with data:", binaryData);
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <hr />
+        <h3 id="how-it-works"><strong>How It Works</strong></h3>
+        <ol>
+          <li>
+            <p><strong>Input Text to Binary</strong>:</p>
+            <ul>
+              <li>
+                Converts each character in the input text into an 8-bit binary
+                representation (using <code>charCodeAt()</code>).
+              </li>
+              <li>
+                Example: <code>"A"</code> becomes <code>"01000001"</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Rendering Binary Data</strong>:</p>
+            <ul>
+              <li>
+                The binary string is split into individual bits (<code>0</code>
+                or <code>1</code>).
+              </li>
+              <li>
+                A black square is drawn for <code>1</code> and a white square
+                for <code>0</code> on an HTML canvas.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Grid Structure</strong>:</p>
+            <ul>
+              <li>
+                The canvas size (<code>200px</code>) is divided into square
+                cells (<code>10px</code>), creating a 20x20 grid.
+              </li>
+              <li>Each binary bit is placed sequentially into the grid.</li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="limitations"><strong>Limitations</strong></h3>
+        <ul>
+          <li>
+            This example encodes text directly to binary without adhering to QR
+            code standards (e.g., alignment patterns, error correction).
+          </li>
+          <li>
+            The grid size is fixed, so larger inputs may overflow the canvas.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="how-to-use"><strong>How to Use</strong></h3>
+        <ol>
+          <li>Copy and paste the code into an <code>.html</code> file.</li>
+          <li>Open it in a browser.</li>
+          <li>Enter text in the input box and click "Generate QR Code."</li>
+          <li>
+            Observe a simple black-and-white grid representation of your
+            binary-encoded text.
+          </li>
+        </ol>
+        <hr />
+        <p>
+          If you'd like a more advanced version or improvements (e.g., adding
+          error correction or compatibility with QR code scanners), let me know!
+        </p>
+      </div>
+      <div class="bubble user">Give me more advanced versions</div>
+      <div class="bubble">
+        <p>
+          To generate a <strong>more advanced QR code</strong>, we need to
+          implement proper encoding, error correction, and structural patterns
+          that adhere to QR code standards. However, manually implementing all
+          of this is highly complex and time-consuming. Instead, we can use
+          <strong>libraries</strong> to simplify the process.
+        </p>
+        <p>
+          Here’s an advanced version that uses a popular library like
+          <code>qrcode.js</code> to generate fully compliant QR codes.
+        </p>
+        <hr />
+        <h3 id="advanced-qr-code-generator">
+          <strong>Advanced QR Code Generator</strong>
+        </h3>
+        <p>This example allows you to:</p>
+        <ol>
+          <li>Generate a QR code from text input.</li>
+          <li>Display it as a Canvas or an SVG.</li>
+          <li>Adjust the size and error correction level.</li>
+        </ol>
+        <hr />
+        <h3 id="html-and-javascript-code">
+          <strong>HTML and JavaScript Code</strong>
+        </h3>
+        <pre><code class="html language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Advanced QR Code Generator&lt;/title&gt;
+  &lt;script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"&gt;&lt;/script&gt;
+  &lt;style&gt;
+    #qrcodeCanvas, #qrcodeSvg {
+      margin: 20px 0;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Advanced QR Code Generator&lt;/h1&gt;
+
+  &lt;label for="text"&gt;Enter Text or URL:&lt;/label&gt;
+  &lt;input type="text" id="text" placeholder="Type something..." /&gt;
+
+  &lt;label for="errorCorrection"&gt;Error Correction:&lt;/label&gt;
+  &lt;select id="errorCorrection"&gt;
+    &lt;option value="L"&gt;Low (7% damage recoverable)&lt;/option&gt;
+    &lt;option value="M"&gt;Medium (15% damage recoverable)&lt;/option&gt;
+    &lt;option value="Q"&gt;Quartile (25% damage recoverable)&lt;/option&gt;
+    &lt;option value="H"&gt;High (30% damage recoverable)&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;label for="size"&gt;QR Code Size (px):&lt;/label&gt;
+  &lt;input type="number" id="size" value="200" /&gt;
+
+  &lt;button onclick="generateQRCode()"&gt;Generate QR Code&lt;/button&gt;
+
+  &lt;h2&gt;Canvas Output:&lt;/h2&gt;
+  &lt;canvas id="qrcodeCanvas"&gt;&lt;/canvas&gt;
+
+  &lt;h2&gt;SVG Output:&lt;/h2&gt;
+  &lt;div id="qrcodeSvg"&gt;&lt;/div&gt;
+
+  &lt;script&gt;
+    function generateQRCode() {
+      const text = document.getElementById('text').value;
+      const errorCorrection = document.getElementById('errorCorrection').value;
+      const size = parseInt(document.getElementById('size').value, 10);
+
+      if (!text) {
+        alert('Please enter text to generate a QR code!');
+        return;
+      }
+
+      // Clear existing outputs
+      const canvas = document.getElementById('qrcodeCanvas');
+      const svgContainer = document.getElementById('qrcodeSvg');
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      svgContainer.innerHTML = '';
+
+      // Generate QR Code on Canvas
+      QRCode.toCanvas(canvas, text, {
+        errorCorrectionLevel: errorCorrection,
+        width: size,
+      }, (err) =&gt; {
+        if (err) {
+          console.error(err);
+          alert('Error generating QR Code!');
+        } else {
+          console.log('QR Code generated on Canvas.');
+        }
+      });
+
+      // Generate QR Code as SVG
+      QRCode.toString(text, {
+        errorCorrectionLevel: errorCorrection,
+        type: 'svg',
+        width: size,
+      }, (err, svgString) =&gt; {
+        if (err) {
+          console.error(err);
+          alert('Error generating QR Code!');
+        } else {
+          svgContainer.innerHTML = svgString;
+          console.log('QR Code generated as SVG.');
+        }
+      });
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <hr />
+        <h3 id="features"><strong>Features</strong></h3>
+        <ol>
+          <li>
+            <strong>Error Correction Levels</strong>:
+            <ul>
+              <li><strong>L</strong> (Low): Recovers up to 7% of data.</li>
+              <li><strong>M</strong> (Medium): Recovers up to 15% of data.</li>
+              <li>
+                <strong>Q</strong> (Quartile): Recovers up to 25% of data.
+              </li>
+              <li><strong>H</strong> (High): Recovers up to 30% of data.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Output Formats</strong>:
+            <ul>
+              <li>
+                Canvas: Dynamically renders the QR code in a
+                <code>canvas</code> element.
+              </li>
+              <li>SVG: Generates a scalable vector graphic.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Customizable Size</strong>:
+            <ul>
+              <li>Adjust the QR code size by specifying pixel dimensions.</li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="how-to-use"><strong>How to Use</strong></h3>
+        <ol>
+          <li>
+            Save the code to an <code>.html</code> file and open it in a
+            browser.
+          </li>
+          <li>Enter the text or URL you want to encode.</li>
+          <li>Choose the desired error correction level and size.</li>
+          <li>Click <strong>Generate QR Code</strong> to see the output.</li>
+        </ol>
+        <hr />
+        <h3 id="what’s-happening-here">
+          <strong>What’s Happening Here?</strong>
+        </h3>
+        <ol>
+          <li>
+            <strong>Library Use</strong>:
+            <ul>
+              <li>
+                The <code>QRCode.toCanvas()</code> and
+                <code>QRCode.toString()</code> methods handle all the heavy
+                lifting, including encoding, error correction, and rendering.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Canvas Rendering</strong>:
+            <ul>
+              <li>
+                The QR code is rendered directly on an HTML canvas for a
+                pixel-perfect image.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>SVG Rendering</strong>:
+            <ul>
+              <li>
+                The QR code is also rendered as a scalable SVG, which is ideal
+                for high-resolution printing.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="advantages"><strong>Advantages</strong></h3>
+        <ul>
+          <li>Fully compliant with QR code standards.</li>
+          <li>Supports customizations like error correction and size.</li>
+          <li>Generates QR codes in multiple formats (Canvas and SVG).</li>
+        </ul>
+        <p>
+          If you want even more advanced features like adding logos or custom
+          colors, let me know!
+        </p>
+      </div>
+      <div class="bubble user">
+        Why wouldn't I always set error correction to HIGH
+      </div>
+      <div class="bubble">
+        <p>
+          Setting error correction to <strong>HIGH (H)</strong> in QR codes has
+          advantages, but it also comes with trade-offs. Here’s why you might
+          not always want to use <strong>HIGH</strong> error correction:
+        </p>
+        <hr />
+        <h3 id="1-trade-offs-of-higher-error-correction">
+          <strong>1. Trade-Offs of Higher Error Correction</strong>
+        </h3>
+        <h4 id="reduced-data-capacity">
+          <strong>Reduced Data Capacity</strong>
+        </h4>
+        <ul>
+          <li>
+            Error correction adds redundancy to the data, taking up more space
+            in the QR code.
+          </li>
+          <li>
+            Higher error correction levels reduce the amount of actual data you
+            can encode in a given QR code size.
+            <ul>
+              <li>For example:</li>
+              <li>
+                At <strong>Low (L)</strong> error correction, you can encode
+                more data.
+              </li>
+              <li>
+                At <strong>High (H)</strong> error correction, the same QR code
+                can store significantly less data.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h4 id="larger-qr-code"><strong>Larger QR Code</strong></h4>
+        <ul>
+          <li>
+            To maintain the same data capacity with higher error correction, the
+            QR code will need to be larger (more modules, i.e., black-and-white
+            squares).
+          </li>
+          <li>
+            Larger QR codes may:
+            <ul>
+              <li>Be harder to scan from a distance.</li>
+              <li>Require higher-resolution printing.</li>
+              <li>Be aesthetically less appealing.</li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="2-when-to-use-lower-error-correction-levels">
+          <strong>2. When to Use Lower Error Correction Levels</strong>
+        </h3>
+        <h4 id="scenarios-where-damage-is-unlikely">
+          <strong>Scenarios Where Damage Is Unlikely</strong>
+        </h4>
+        <ul>
+          <li>
+            If the QR code will be displayed digitally (e.g., on a website or
+            app), there's little risk of damage or distortion.
+          </li>
+          <li>
+            <strong>Low (L)</strong> or <strong>Medium (M)</strong> error
+            correction suffices in these cases, maximizing data capacity.
+          </li>
+        </ul>
+        <h4 id="short-term-use"><strong>Short-Term Use</strong></h4>
+        <ul>
+          <li>
+            For temporary QR codes (e.g., event tickets, marketing campaigns),
+            the likelihood of damage is low.
+          </li>
+          <li>
+            Lower error correction levels are efficient and reduce unnecessary
+            redundancy.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="3-when-to-use-higher-error-correction-levels">
+          <strong>3. When to Use Higher Error Correction Levels</strong>
+        </h3>
+        <h4 id="physical-printing"><strong>Physical Printing</strong></h4>
+        <ul>
+          <li>Printed QR codes are prone to wear, scratches, or smudging.</li>
+          <li>
+            <strong>High (H)</strong> error correction ensures they remain
+            scannable even if partially damaged.
+          </li>
+        </ul>
+        <h4 id="harsh-environments"><strong>Harsh Environments</strong></h4>
+        <ul>
+          <li>
+            QR codes exposed to dirt, water, or rough handling (e.g., packaging,
+            industrial settings) benefit from higher error correction.
+          </li>
+        </ul>
+        <h4 id="branding-or-aesthetics">
+          <strong>Branding or Aesthetics</strong>
+        </h4>
+        <ul>
+          <li>
+            If you add logos, colors, or design elements inside the QR code,
+            <strong>High (H)</strong> error correction allows the code to
+            tolerate these customizations without affecting scannability.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="practical-guidelines"><strong>Practical Guidelines</strong></h3>
+        <table>
+          <thead>
+            <tr>
+              <th id="**error_correction_level**">
+                <strong>Error Correction Level</strong>
+              </th>
+              <th id="**best_use_case**"><strong>Best Use Case</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Low (L)</strong></td>
+              <td>
+                Digital displays, temporary campaigns, or when encoding the
+                maximum data amount.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Medium (M)</strong></td>
+              <td>
+                General-purpose use, such as marketing and printed materials in
+                moderate conditions.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Quartile (Q)</strong></td>
+              <td>
+                Printed materials with some risk of damage or when using light
+                design customizations.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>High (H)</strong></td>
+              <td>
+                Long-term use, harsh environments, heavy design customizations,
+                or industrial applications.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <hr />
+        <h3 id="conclusion"><strong>Conclusion</strong></h3>
+        <p>
+          While <strong>High (H)</strong> error correction offers maximum
+          durability, it comes at the cost of capacity and compactness. Choose
+          the level based on your specific use case:
+        </p>
+        <ul>
+          <li>
+            Use <strong>Low (L)</strong> or <strong>Medium (M)</strong> for most
+            digital or lightweight use cases.
+          </li>
+          <li>
+            Opt for <strong>High (H)</strong> only when durability is critical
+            or if you’re adding heavy customizations.
+          </li>
+        </ul>
+        <p>
+          Let me know if you’d like examples of customizing QR codes with
+          different error correction levels!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
