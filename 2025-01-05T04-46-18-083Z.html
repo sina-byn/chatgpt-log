@@ -1,0 +1,777 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Version Range Modifiers</h1>
+    </header>
+
+    <div class="content container">
+      <div class="bubble user">
+        Explain all the version range modifiers for a package.json file with one
+        example for each one
+      </div>
+      <div class="bubble">
+        <p>
+          In a <code>package.json</code> file, version range modifiers define
+          how npm resolves the versions of a dependency to install. These
+          modifiers allow flexibility in specifying the range of acceptable
+          versions. Here's a detailed explanation of each modifier, along with
+          examples:
+        </p>
+        <hr />
+        <h3 id="1-exact-version">1. <strong>Exact Version</strong></h3>
+        <ul>
+          <li>
+            <strong>Modifier</strong>: No modifier (or <code>=</code> in some
+            contexts, though rarely used in <code>package.json</code>).
+          </li>
+          <li>
+            <strong>Description</strong>: Installs the exact version specified.
+            No newer or older versions are allowed.
+          </li>
+          <li><strong>Example</strong>:</li>
+        </ul>
+        <pre><code class="json language-json">  {
+    "dependencies": {
+      "lodash": "4.17.21"
+    }
+  }</code></pre>
+        <ul>
+          <li>
+            Only <code>4.17.21</code> of <code>lodash</code> will be installed.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="2-caret-">2. <strong>Caret (<code>^</code>)</strong></h3>
+        <ul>
+          <li>
+            <strong>Description</strong>: Allows updates to newer versions that
+            do not break the <strong>major version</strong> (follows semver
+            rules). For <code>0.x.x</code> or <code>x.x.x</code>, rules differ
+            slightly:
+            <ul>
+              <li><code>0.x.x</code>: Only patch updates are allowed.</li>
+              <li><code>x.x.x</code>: Any version is allowed.</li>
+            </ul>
+          </li>
+          <li><strong>Example</strong>:</li>
+        </ul>
+        <pre><code class="json language-json">  {
+    "dependencies": {
+      "lodash": "^4.17.0"
+    }
+  }</code></pre>
+        <ul>
+          <li>
+            Compatible versions: <code>4.17.0</code>, <code>4.17.1</code>,
+            <code>4.18.0</code>, but <strong>not</strong> <code>5.0.0</code>.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="3-tilde-">3. <strong>Tilde (<code>~</code>)</strong></h3>
+        <ul>
+          <li>
+            <strong>Description</strong>: Allows updates to newer versions that
+            do not break the <strong>minor version</strong>.
+          </li>
+          <li><strong>Example</strong>:</li>
+        </ul>
+        <pre><code class="json language-json">  {
+    "dependencies": {
+      "lodash": "~4.17.0"
+    }
+  }</code></pre>
+        <ul>
+          <li>
+            Compatible versions: <code>4.17.0</code>, <code>4.17.1</code>, but
+            <strong>not</strong> <code>4.18.0</code> or <code>5.0.0</code>.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="4-greater-than-">
+          4. <strong>Greater Than (<code>&gt;</code>)</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Description</strong>: Installs versions greater than the
+            specified version, excluding the specified version itself.
+          </li>
+          <li><strong>Example</strong>:</li>
+        </ul>
+        <pre><code class="json language-json">  {
+    "dependencies": {
+      "lodash": "&gt;4.17.0"
+    }
+  }</code></pre>
+        <ul>
+          <li>
+            Compatible versions: <code>4.17.1</code>, <code>4.18.0</code>,
+            <code>5.0.0</code>, etc.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="5-greater-than-or-equal-to-">
+          5. <strong>Greater Than or Equal To (<code>&gt;=</code>)</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Description</strong>: Installs versions greater than or
+            equal to the specified version.
+          </li>
+          <li><strong>Example</strong>:</li>
+        </ul>
+        <pre><code class="json language-json">  {
+    "dependencies": {
+      "lodash": "&gt;=4.17.0"
+    }
+  }</code></pre>
+        <ul>
+          <li>
+            Compatible versions: <code>4.17.0</code>, <code>4.17.1</code>,
+            <code>4.18.0</code>, <code>5.0.0</code>, etc.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="6-less-than-">
+          6. <strong>Less Than (<code>&lt;</code>)</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Description</strong>: Installs versions less than the
+            specified version, excluding the specified version itself.
+          </li>
+          <li><strong>Example</strong>:</li>
+        </ul>
+        <pre><code class="json language-json">  {
+    "dependencies": {
+      "lodash": "&lt;4.17.0"
+    }
+  }</code></pre>
+        <ul>
+          <li>
+            Compatible versions: <code>4.16.0</code>, <code>4.15.0</code>, etc.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="7-less-than-or-equal-to-">
+          7. <strong>Less Than or Equal To (<code>&lt;=</code>)</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Description</strong>: Installs versions less than or equal
+            to the specified version.
+          </li>
+          <li><strong>Example</strong>:</li>
+        </ul>
+        <pre><code class="json language-json">  {
+    "dependencies": {
+      "lodash": "&lt;=4.17.0"
+    }
+  }</code></pre>
+        <ul>
+          <li>
+            Compatible versions: <code>4.17.0</code>, <code>4.16.0</code>, etc.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="8-wildcard-">8. <strong>Wildcard (<code>*</code>)</strong></h3>
+        <ul>
+          <li>
+            <strong>Description</strong>: Matches any version of the package.
+          </li>
+          <li><strong>Example</strong>:</li>
+        </ul>
+        <pre><code class="json language-json">  {
+    "dependencies": {
+      "lodash": "*"
+    }
+  }</code></pre>
+        <ul>
+          <li>Compatible versions: Any version of <code>lodash</code>.</li>
+        </ul>
+        <hr />
+        <h3 id="9-hyphen-range--">
+          9. <strong>Hyphen Range (<code>-</code>)</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Description</strong>: Specifies a range of versions
+            inclusively.
+          </li>
+          <li><strong>Example</strong>:</li>
+        </ul>
+        <pre><code class="json language-json">  {
+    "dependencies": {
+      "lodash": "4.16.0 - 4.17.0"
+    }
+  }</code></pre>
+        <ul>
+          <li>
+            Compatible versions: <code>4.16.0</code>, <code>4.16.1</code>, …,
+            <code>4.17.0</code>.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="10-x-range-x-or-">
+          10. <strong>X-Range (<code>x</code> or <code>.*</code>)</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Description</strong>: Matches any version within the
+            specified major or minor version.
+          </li>
+          <li><strong>Example</strong>:</li>
+        </ul>
+        <pre><code class="json language-json">  {
+    "dependencies": {
+      "lodash": "4.x"
+    }
+  }</code></pre>
+        <ul>
+          <li>
+            Compatible versions: <code>4.0.0</code>, <code>4.1.0</code>, …, but
+            <strong>not</strong> <code>5.0.0</code>.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="11-logical-and--">
+          11. <strong>Logical AND (<code></code>)</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Description</strong>: Combines multiple conditions that must
+            all be satisfied.
+          </li>
+          <li><strong>Example</strong>:</li>
+        </ul>
+        <pre><code class="json language-json">  {
+    "dependencies": {
+      "lodash": "&gt;=4.16.0 &lt;4.18.0"
+    }
+  }</code></pre>
+        <ul>
+          <li>
+            Compatible versions: <code>4.16.0</code> to <code>4.17.x</code>, but
+            <strong>not</strong> <code>4.18.0</code>.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="12-logical-or-">
+          12. <strong>Logical OR (<code>||</code>)</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Description</strong>: Specifies multiple acceptable ranges;
+            versions matching any of the ranges are valid.
+          </li>
+          <li><strong>Example</strong>:</li>
+        </ul>
+        <pre><code class="json language-json">  {
+    "dependencies": {
+      "lodash": "&lt;4.16.0 || &gt;=4.17.0"
+    }
+  }</code></pre>
+        <ul>
+          <li>
+            Compatible versions: Below <code>4.16.0</code> or
+            <code>4.17.0</code> and above.
+          </li>
+        </ul>
+        <hr />
+        <p>
+          These range modifiers provide flexibility and control, allowing
+          developers to define dependencies in a way that balances stability and
+          the ability to receive updates.
+        </p>
+      </div>
+      <div class="bubble user">What is logical and operator?</div>
+      <div class="bubble">
+        <p>
+          The <strong>logical AND (<code>&amp;&amp;</code>) operator</strong> in
+          the context of version ranges in <code>package.json</code> specifies
+          that <strong>all conditions must be satisfied</strong> for a package
+          version to be considered valid.
+        </p>
+        <p>
+          In the <strong>Semantic Versioning (semver)</strong> specification, it
+          is <strong>not explicitly supported</strong> to use
+          <code>&amp;&amp;</code> as a range operator directly in
+          <code>package.json</code>. Instead, semver uses
+          <strong>space-separated ranges</strong>, which function like a logical
+          AND. This means both conditions need to be true.
+        </p>
+        <h3 id="how-logical-and-works-in-version-ranges">
+          How Logical AND Works in Version Ranges
+        </h3>
+        <p>
+          When you specify multiple conditions separated by a space, only
+          versions that satisfy all conditions are allowed.
+        </p>
+        <h3 id="example">Example</h3>
+        <pre><code class="json language-json">{
+  "dependencies": {
+    "lodash": "&gt;=4.16.0 &lt;4.18.0"
+  }
+}</code></pre>
+        <p>This means:</p>
+        <ul>
+          <li>
+            <code>lodash</code> versions must be
+            <code>&gt;=4.16.0</code> (greater than or equal to
+            <code>4.16.0</code>) <strong>AND</strong>
+          </li>
+          <li>
+            <code>lodash</code> versions must be <code>&lt;4.18.0</code> (less
+            than <code>4.18.0</code>).
+          </li>
+        </ul>
+        <h4 id="valid-versions">Valid Versions:</h4>
+        <ul>
+          <li><code>4.16.0</code></li>
+          <li><code>4.17.5</code></li>
+          <li><code>4.17.9</code></li>
+        </ul>
+        <h4 id="invalid-versions">Invalid Versions:</h4>
+        <ul>
+          <li><code>4.15.0</code> (fails <code>&gt;=4.16.0</code>)</li>
+          <li><code>4.18.0</code> (fails <code>&lt;4.18.0</code>)</li>
+          <li><code>5.0.0</code> (fails <code>&lt;4.18.0</code>)</li>
+        </ul>
+        <h3 id="logical-and-in-programming-vs-version-ranges">
+          Logical AND in Programming vs Version Ranges
+        </h3>
+        <p>
+          In most programming languages, <code>&amp;&amp;</code> is the explicit
+          logical AND operator. While semver doesn't use
+          <code>&amp;&amp;</code> directly, its
+          <strong>space-separated ranges</strong> effectively implement the same
+          behavior.
+        </p>
+        <h4 id="example-comparison">Example Comparison</h4>
+        <p><strong>Programming Logical AND</strong>:</p>
+        <pre><code class="javascript language-javascript">if (x &gt;= 10 &amp;&amp; x &lt; 20) {
+  console.log("x is valid");
+}</code></pre>
+        <p><strong>Semver Logical AND</strong>:</p>
+        <pre><code class="json language-json">{
+  "dependencies": {
+    "package-name": "&gt;=10 &lt;20"
+  }
+}</code></pre>
+        <p>
+          Both mean "x must be greater than or equal to 10 AND less than 20."
+        </p>
+      </div>
+      <div class="bubble user">Explain the semantic versioning to me</div>
+      <div class="bubble">
+        <h3 id="what-is-semantic-versioning">
+          What is <strong>Semantic Versioning</strong>?
+        </h3>
+        <p>
+          <strong>Semantic Versioning</strong> (often abbreviated as
+          <strong>SemVer</strong>) is a versioning system for software that
+          conveys meaning about the underlying code and its changes. It follows
+          a <strong><code>MAJOR.MINOR.PATCH</code></strong> format, where each
+          segment has a specific purpose:
+        </p>
+        <pre><code>MAJOR.MINOR.PATCH</code></pre>
+        <hr />
+        <h3 id="structure-of-semver">Structure of SemVer</h3>
+        <h4 id="1-major-version">1. <strong>MAJOR Version</strong></h4>
+        <ul>
+          <li>
+            <strong>Purpose</strong>: Indicates incompatible changes that may
+            break existing functionality.
+          </li>
+          <li>
+            <strong>When to Increment</strong>:
+            <ul>
+              <li>
+                You make significant changes to the API or software that break
+                backward compatibility.
+              </li>
+              <li>
+                For example, removing or altering a function/method in a way
+                that existing users need to modify their code to adapt.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p><strong>Example</strong>:</p>
+        <ul>
+          <li>
+            <code>1.0.0</code> → <code>2.0.0</code> (breaking changes
+            introduced)
+          </li>
+        </ul>
+        <hr />
+        <h4 id="2-minor-version">2. <strong>MINOR Version</strong></h4>
+        <ul>
+          <li>
+            <strong>Purpose</strong>: Adds new features or functionality in a
+            backward-compatible manner.
+          </li>
+          <li>
+            <strong>When to Increment</strong>:
+            <ul>
+              <li>
+                You add new features or improvements that do not break existing
+                functionality.
+              </li>
+              <li>Enhancements that don't affect current users.</li>
+            </ul>
+          </li>
+        </ul>
+        <p><strong>Example</strong>:</p>
+        <ul>
+          <li><code>1.0.0</code> → <code>1.1.0</code> (added a new feature)</li>
+        </ul>
+        <hr />
+        <h4 id="3-patch-version">3. <strong>PATCH Version</strong></h4>
+        <ul>
+          <li>
+            <strong>Purpose</strong>: Fixes bugs or issues in a
+            backward-compatible manner.
+          </li>
+          <li>
+            <strong>When to Increment</strong>:
+            <ul>
+              <li>
+                You fix a bug or make a small internal improvement that does not
+                change the external interface.
+              </li>
+              <li>No new features or breaking changes are introduced.</li>
+            </ul>
+          </li>
+        </ul>
+        <p><strong>Example</strong>:</p>
+        <ul>
+          <li>
+            <code>1.0.0</code> → <code>1.0.1</code> (bug fix or small change)
+          </li>
+        </ul>
+        <hr />
+        <h3 id="rules-of-semantic-versioning">Rules of Semantic Versioning</h3>
+        <ol>
+          <li>
+            <p><strong>Initial Development (<code>0.x.x</code>)</strong>:</p>
+            <ul>
+              <li>
+                During initial development, the API is considered unstable.
+              </li>
+              <li>
+                Changes may occur at any time, and <code>MAJOR</code> is often
+                set to <code>0</code>.
+              </li>
+              <li>For example: <code>0.1.0</code>, <code>0.2.3</code>.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Backward Compatibility</strong>:</p>
+            <ul>
+              <li>
+                <strong>MINOR</strong> and <strong>PATCH</strong> updates must
+                be backward-compatible, meaning existing functionality remains
+                unchanged.
+              </li>
+              <li><strong>MAJOR</strong> updates may break compatibility.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Pre-release Versions</strong>:</p>
+            <ul>
+              <li>
+                For alpha, beta, or other pre-release versions, use a
+                <strong>hyphen</strong> followed by the label (e.g.,
+                <code>1.0.0-alpha.1</code> or <code>1.0.0-beta</code>).
+              </li>
+              <li>
+                Indicates an unstable version that may not include all features.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p><strong>Example</strong>:</p>
+        <ul>
+          <li>
+            <code>1.0.0-alpha</code> → <code>1.0.0-beta</code> →
+            <code>1.0.0</code>
+          </li>
+        </ul>
+        <ol>
+          <li>
+            <strong>Build Metadata</strong>:
+            <ul>
+              <li>
+                Add metadata for build information using a
+                <strong>plus sign</strong> (e.g., <code>1.0.0+build.001</code>).
+              </li>
+              <li>
+                Build metadata is ignored when determining version precedence.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="practical-examples">Practical Examples</h3>
+        <h4 id="example-1-introducing-breaking-changes">
+          Example 1: Introducing Breaking Changes
+        </h4>
+        <table>
+          <thead>
+            <tr>
+              <th id="version">Version</th>
+              <th id="description">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>1.0.0</code></td>
+              <td>Initial stable release.</td>
+            </tr>
+            <tr>
+              <td><code>2.0.0</code></td>
+              <td>Removed a key feature, breaking compatibility.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4 id="example-2-adding-new-features">
+          Example 2: Adding New Features
+        </h4>
+        <table>
+          <thead>
+            <tr>
+              <th id="version">Version</th>
+              <th id="description">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>1.0.0</code></td>
+              <td>Initial stable release.</td>
+            </tr>
+            <tr>
+              <td><code>1.1.0</code></td>
+              <td>Added new functionality, no breaking changes.</td>
+            </tr>
+            <tr>
+              <td><code>1.2.0</code></td>
+              <td>Added more features.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4 id="example-3-fixing-bugs">Example 3: Fixing Bugs</h4>
+        <table>
+          <thead>
+            <tr>
+              <th id="version">Version</th>
+              <th id="description">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>1.0.0</code></td>
+              <td>Initial stable release.</td>
+            </tr>
+            <tr>
+              <td><code>1.0.1</code></td>
+              <td>Fixed a minor bug.</td>
+            </tr>
+            <tr>
+              <td><code>1.0.2</code></td>
+              <td>Fixed another bug.</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr />
+        <h3 id="why-use-semantic-versioning">Why Use Semantic Versioning?</h3>
+        <ul>
+          <li>
+            <strong>Clarity</strong>: Communicates the type of changes made to
+            the software.
+          </li>
+          <li>
+            <strong>Predictability</strong>: Helps developers and users
+            understand what to expect when updating versions.
+          </li>
+          <li>
+            <strong>Compatibility</strong>: Ensures smoother integration with
+            dependencies by respecting version constraints.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="summary">Summary</h3>
+        <ul>
+          <li>
+            <strong>MAJOR</strong>: Breaking changes (incompatible updates).
+          </li>
+          <li><strong>MINOR</strong>: New features (backward-compatible).</li>
+          <li><strong>PATCH</strong>: Bug fixes (backward-compatible).</li>
+        </ul>
+        <p>
+          With Semantic Versioning, managing dependencies and upgrades becomes
+          more systematic and predictable.
+        </p>
+      </div>
+      <div class="bubble user">
+        How to add labels for installation inside npm? For example some packages
+        have differenet release channels like canary and the installation
+        command therefore is npm i &lt;package&gt;@canary
+      </div>
+      <div class="bubble">
+        <p>
+          To create and manage different release channels for an npm package
+          (like <code>@canary</code>, <code>@beta</code>, or
+          <code>@stable</code>), you can use <strong>dist-tags</strong> in npm.
+          These tags allow you to label specific versions of your package,
+          making it easy for users to install different versions based on their
+          stability or purpose.
+        </p>
+        <p>Here’s a step-by-step guide:</p>
+        <hr />
+        <h3 id="1-publish-a-version-with-a-specific-tag">
+          1. <strong>Publish a Version with a Specific Tag</strong>
+        </h3>
+        <p>
+          When publishing a package, you can specify a tag using the
+          <code>--tag</code> option:
+        </p>
+        <pre><code class="bash language-bash">npm publish --tag &lt;tag&gt;</code></pre>
+        <p><strong>Example:</strong></p>
+        <ul>
+          <li>To publish a "canary" version:</li>
+        </ul>
+        <pre><code class="bash language-bash">  npm publish --tag canary</code></pre>
+        <ul>
+          <li>To publish a "beta" version:</li>
+        </ul>
+        <pre><code class="bash language-bash">  npm publish --tag beta</code></pre>
+        <hr />
+        <h3 id="2-how-users-install-versions-with-tags">
+          2. <strong>How Users Install Versions with Tags</strong>
+        </h3>
+        <p>
+          Users can install specific versions by appending
+          <code>@&lt;tag&gt;</code> to the package name:
+        </p>
+        <pre><code class="bash language-bash">npm install &lt;package-name&gt;@&lt;tag&gt;</code></pre>
+        <p><strong>Example:</strong></p>
+        <ul>
+          <li>For the <code>canary</code> version:</li>
+        </ul>
+        <pre><code class="bash language-bash">  npm install my-package@canary</code></pre>
+        <ul>
+          <li>For the <code>beta</code> version:</li>
+        </ul>
+        <pre><code class="bash language-bash">  npm install my-package@beta</code></pre>
+        <hr />
+        <h3 id="3-managing-dist-tags">
+          3. <strong>Managing Dist-Tags</strong>
+        </h3>
+        <p>
+          You can view, add, update, or remove tags using the
+          <code>npm dist-tag</code> command.
+        </p>
+        <h4 id="view-current-tags"><strong>View Current Tags</strong></h4>
+        <p>To see all the dist-tags for a package:</p>
+        <pre><code class="bash language-bash">npm dist-tag ls &lt;package-name&gt;</code></pre>
+        <h4 id="add-or-update-a-tag"><strong>Add or Update a Tag</strong></h4>
+        <p>To associate a specific version with a tag:</p>
+        <pre><code class="bash language-bash">npm dist-tag add &lt;package-name&gt;@&lt;version&gt; &lt;tag&gt;</code></pre>
+        <p><strong>Example:</strong></p>
+        <ul>
+          <li>Tag version <code>1.2.3</code> as <code>canary</code>:</li>
+        </ul>
+        <pre><code class="bash language-bash">  npm dist-tag add my-package@1.2.3 canary</code></pre>
+        <h4 id="remove-a-tag"><strong>Remove a Tag</strong></h4>
+        <p>To delete a tag:</p>
+        <pre><code class="bash language-bash">npm dist-tag rm &lt;package-name&gt; &lt;tag&gt;</code></pre>
+        <p><strong>Example:</strong></p>
+        <pre><code class="bash language-bash">npm dist-tag rm my-package canary</code></pre>
+        <hr />
+        <h3 id="4-default-tags">4. <strong>Default Tags</strong></h3>
+        <p>
+          When you publish a package without specifying a tag, it is tagged as
+          <code>latest</code> by default. You can also manually set the
+          <code>latest</code> tag to point to a specific version:
+        </p>
+        <pre><code class="bash language-bash">npm dist-tag add &lt;package-name&gt;@&lt;version&gt; latest</code></pre>
+        <hr />
+        <h3 id="5-using-pre-release-versions">
+          5. <strong>Using <code>pre-release</code> Versions</strong>
+        </h3>
+        <p>
+          For pre-release versions (e.g., <code>1.0.0-beta.1</code>), you can
+          use <strong>Semantic Versioning</strong> with hyphen-separated
+          pre-release identifiers. These are often combined with dist-tags for
+          better version management.
+        </p>
+        <p><strong>Example Workflow:</strong></p>
+        <ol>
+          <li>Publish a beta version:</li>
+        </ol>
+        <pre><code class="bash language-bash">   npm publish --tag beta</code></pre>
+        <p>This might create a version like <code>1.0.0-beta.1</code>.</p>
+        <ol start="2">
+          <li>Publish a stable version:</li>
+        </ol>
+        <pre><code class="bash language-bash">   npm publish</code></pre>
+        <p>This might create a version like <code>1.0.0</code>.</p>
+        <hr />
+        <h3 id="example-scenario">Example Scenario</h3>
+        <p>
+          Let’s say you maintain <code>my-package</code> with these versions:
+        </p>
+        <ul>
+          <li>Stable: <code>2.0.0</code> (tagged as <code>latest</code>)</li>
+          <li>
+            Canary: <code>2.1.0-canary.3</code> (tagged as <code>canary</code>)
+          </li>
+          <li>Beta: <code>2.1.0-beta.2</code> (tagged as <code>beta</code>)</li>
+        </ul>
+        <p><strong>Commands to Manage Tags:</strong></p>
+        <ul>
+          <li>Publish the stable version:</li>
+        </ul>
+        <pre><code class="bash language-bash">  npm publish</code></pre>
+        <ul>
+          <li>Publish the beta version:</li>
+        </ul>
+        <pre><code class="bash language-bash">  npm publish --tag beta</code></pre>
+        <ul>
+          <li>Publish the canary version:</li>
+        </ul>
+        <pre><code class="bash language-bash">  npm publish --tag canary</code></pre>
+        <p><strong>How Users Install:</strong></p>
+        <ul>
+          <li>Install the stable version:</li>
+        </ul>
+        <pre><code class="bash language-bash">  npm install my-package</code></pre>
+        <ul>
+          <li>Install the beta version:</li>
+        </ul>
+        <pre><code class="bash language-bash">  npm install my-package@beta</code></pre>
+        <ul>
+          <li>Install the canary version:</li>
+        </ul>
+        <pre><code class="bash language-bash">  npm install my-package@canary</code></pre>
+        <hr />
+        <h3 id="summary">Summary</h3>
+        <p>
+          By using <strong>dist-tags</strong>, you can manage multiple release
+          channels (e.g., <code>latest</code>, <code>beta</code>,
+          <code>canary</code>). This is particularly useful for providing
+          cutting-edge features for early adopters while maintaining stable
+          versions for general users.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
