@@ -1,0 +1,338 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Dependency Types in package.json</h1>
+    </header>
+
+    <div class="content container">
+      <div class="bubble user">
+        What are all the dependency types available inside a package.json file?
+        Just name them
+      </div>
+      <div class="bubble">
+        <p>
+          Here are the main dependency types in a
+          <code>package.json</code> file:
+        </p>
+        <ol>
+          <li><strong>dependencies</strong></li>
+          <li><strong>devDependencies</strong></li>
+          <li><strong>peerDependencies</strong></li>
+          <li><strong>optionalDependencies</strong></li>
+          <li>
+            <strong>bundledDependencies</strong> (or
+            <strong>bundleDependencies</strong>)
+          </li>
+        </ol>
+        <p>Let me know if you need a detailed explanation of any!</p>
+      </div>
+      <div class="bubble user">
+        Explaing them to me in details and then compare them to one another
+      </div>
+      <div class="bubble">
+        <p>
+          Here’s a detailed explanation of the dependency types in a
+          <code>package.json</code> file, followed by a comparison:
+        </p>
+        <hr />
+        <h3 id="1-dependencies"><strong>1. dependencies</strong></h3>
+        <ul>
+          <li>
+            <strong>Purpose:</strong> These are the packages required for your
+            application to run in production. They are essential for the core
+            functionality of your app.
+          </li>
+          <li>
+            <strong>Installed With:</strong> <code>npm install</code> or
+            <code>npm install &lt;package&gt;</code>
+          </li>
+          <li><strong>Example:</strong> <code>"express": "^4.18.2"</code></li>
+          <li>
+            <strong>Use Case:</strong> Packages your app depends on to function,
+            such as frameworks, libraries, or utilities (e.g.,
+            <code>react</code>, <code>express</code>).
+          </li>
+        </ul>
+        <hr />
+        <h3 id="2-devdependencies"><strong>2. devDependencies</strong></h3>
+        <ul>
+          <li>
+            <strong>Purpose:</strong> These are the packages used only during
+            development, testing, or building your app. They are not included in
+            the production deployment.
+          </li>
+          <li>
+            <strong>Installed With:</strong>
+            <code>npm install --save-dev</code> or <code>npm i -D</code>
+          </li>
+          <li><strong>Example:</strong> <code>"eslint": "^8.50.0"</code></li>
+          <li>
+            <strong>Use Case:</strong> Tools like linters, test frameworks,
+            bundlers, or transpilers (e.g., <code>jest</code>,
+            <code>webpack</code>, <code>eslint</code>).
+          </li>
+        </ul>
+        <hr />
+        <h3 id="3-peerdependencies"><strong>3. peerDependencies</strong></h3>
+        <ul>
+          <li>
+            <strong>Purpose:</strong> These specify that your package is
+            compatible with a specific version of another package but does not
+            install it automatically. They let the consuming app ensure
+            compatibility with its own dependencies.
+          </li>
+          <li>
+            <strong>Installed With:</strong> Must be installed explicitly by the
+            user.
+          </li>
+          <li><strong>Example:</strong> <code>"react": "&gt;=17.0.0"</code></li>
+          <li>
+            <strong>Use Case:</strong> Libraries or plugins that work with a
+            specific host framework or library (e.g., a React plugin requiring
+            <code>react</code>).
+          </li>
+        </ul>
+        <hr />
+        <h3 id="4-optionaldependencies">
+          <strong>4. optionalDependencies</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Purpose:</strong> These are dependencies that your app can
+            function without, but they enhance functionality if present. If
+            installation fails, the error is ignored.
+          </li>
+          <li>
+            <strong>Installed With:</strong> <code>npm install</code> (like
+            <code>dependencies</code>)
+          </li>
+          <li><strong>Example:</strong> <code>"fsevents": "^2.3.2"</code></li>
+          <li>
+            <strong>Use Case:</strong> Packages for additional features that may
+            not work on all platforms (e.g., <code>fsevents</code> for file
+            watching on macOS).
+          </li>
+        </ul>
+        <hr />
+        <h3 id="5-bundleddependencies-or-bundledependencies">
+          <strong>5. bundledDependencies</strong> (or
+          <strong>bundleDependencies</strong>)
+        </h3>
+        <ul>
+          <li>
+            <strong>Purpose:</strong> These are dependencies that are included
+            in the package itself when it is published. This ensures consumers
+            of your package don’t need to install them separately.
+          </li>
+          <li>
+            <strong>Installed With:</strong> They are bundled during
+            <code>npm pack</code> or <code>npm publish</code>.
+          </li>
+          <li><strong>Example:</strong> <code>[ "lodash", "axios" ]</code></li>
+          <li>
+            <strong>Use Case:</strong> Ensuring specific versions of
+            dependencies are always included, regardless of the user's
+            environment.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="comparison-of-dependency-types">
+          <strong>Comparison of Dependency Types</strong>
+        </h3>
+        <table>
+          <thead>
+            <tr>
+              <th id="**type**"><strong>Type</strong></th>
+              <th id="**installed_in_production?**">
+                <strong>Installed in Production?</strong>
+              </th>
+              <th id="**installed_in_development?**">
+                <strong>Installed in Development?</strong>
+              </th>
+              <th id="**managed_automatically?**">
+                <strong>Managed Automatically?</strong>
+              </th>
+              <th id="**purpose**"><strong>Purpose</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>dependencies</strong></td>
+              <td>✅ Yes</td>
+              <td>✅ Yes</td>
+              <td>✅ Yes</td>
+              <td>Core functionality for production.</td>
+            </tr>
+            <tr>
+              <td><strong>devDependencies</strong></td>
+              <td>❌ No</td>
+              <td>✅ Yes</td>
+              <td>✅ Yes</td>
+              <td>Tools for development/testing.</td>
+            </tr>
+            <tr>
+              <td><strong>peerDependencies</strong></td>
+              <td>⚠️ No (manual install)</td>
+              <td>⚠️ No (manual install)</td>
+              <td>❌ No</td>
+              <td>Compatibility with a host package.</td>
+            </tr>
+            <tr>
+              <td><strong>optionalDependencies</strong></td>
+              <td>✅ Yes</td>
+              <td>✅ Yes</td>
+              <td>✅ Yes</td>
+              <td>Enhance functionality; safe to fail install.</td>
+            </tr>
+            <tr>
+              <td><strong>bundledDependencies</strong></td>
+              <td>✅ Yes</td>
+              <td>✅ Yes</td>
+              <td>✅ Yes (when published)</td>
+              <td>Guarantee specific packages are bundled.</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr />
+        <h3 id="key-differences">Key Differences:</h3>
+        <ol>
+          <li>
+            <p><strong>Production vs. Development:</strong></p>
+            <ul>
+              <li>
+                <code>dependencies</code> are for production;
+                <code>devDependencies</code> are for development only.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Compatibility:</strong></p>
+            <ul>
+              <li>
+                <code>peerDependencies</code> don’t install automatically and
+                are used to specify compatibility, unlike
+                <code>dependencies</code>.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Fault Tolerance:</strong></p>
+            <ul>
+              <li>
+                <code>optionalDependencies</code> ignore installation errors,
+                unlike others.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Bundling:</strong></p>
+            <ul>
+              <li>
+                <code>bundledDependencies</code> are packaged directly with your
+                app, whereas others are fetched from the registry during
+                installation.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <p>Let me know if you want real-world examples or best practices!</p>
+      </div>
+      <div class="bubble user">
+        How can I change a dependency that I have already installed into a dev
+        dependency?
+      </div>
+      <div class="bubble">
+        <p>
+          To change an already installed dependency into a
+          <code>devDependency</code> in a Node.js project, follow these steps:
+        </p>
+        <hr />
+        <h3 id="method-1-reinstall-the-dependency-as-a-dev-dependency">
+          <strong
+            >Method 1: Reinstall the Dependency as a Dev Dependency</strong
+          >
+        </h3>
+        <ol>
+          <li><strong>Uninstall the Dependency:</strong></li>
+        </ol>
+        <pre><code class="bash language-bash">   npm uninstall &lt;package-name&gt;</code></pre>
+        <p>
+          This removes the dependency from both <code>node_modules</code> and
+          your <code>package.json</code> file.
+        </p>
+        <ol start="2">
+          <li><strong>Reinstall it as a Dev Dependency:</strong></li>
+        </ol>
+        <pre><code class="bash language-bash">   npm install --save-dev &lt;package-name&gt;</code></pre>
+        <p>
+          This will add the dependency under the
+          <code>devDependencies</code> section in your
+          <code>package.json</code>.
+        </p>
+        <hr />
+        <h3 id="method-2-edit-the-packagejson-directly">
+          <strong>Method 2: Edit the <code>package.json</code> Directly</strong>
+        </h3>
+        <ol>
+          <li>Open the <code>package.json</code> file in a text editor.</li>
+          <li>
+            Locate the dependency under the <code>dependencies</code> section.
+          </li>
+          <li>
+            Cut the dependency entry (e.g., <code>"eslint": "^8.50.0"</code>)
+            and paste it under the <code>devDependencies</code> section.
+          </li>
+          <li>Save the file.</li>
+          <li>
+            Run the following command to sync your
+            <code>package.json</code> with the <code>node_modules</code>:
+          </li>
+        </ol>
+        <pre><code class="bash language-bash">   npm install</code></pre>
+        <hr />
+        <h3 id="method-3-use-npm-install-with---save-dev-flag">
+          <strong
+            >Method 3: Use <code>npm install</code> with --save-dev Flag</strong
+          >
+        </h3>
+        <p>
+          You can install the same dependency with the
+          <code>--save-dev</code> flag, and it will automatically move to
+          <code>devDependencies</code>. For example:
+        </p>
+        <pre><code class="bash language-bash">   npm install --save-dev &lt;package-name&gt;</code></pre>
+        <p>
+          This ensures the dependency is placed in the correct section, even if
+          it was already installed.
+        </p>
+        <hr />
+        <h3 id="verify-changes"><strong>Verify Changes</strong></h3>
+        <p>
+          After making changes, confirm the dependency has been moved to
+          <code>devDependencies</code>:
+        </p>
+        <ol>
+          <li>
+            Check the <code>package.json</code> file to ensure the dependency is
+            listed under <code>devDependencies</code>.
+          </li>
+          <li>
+            Run <code>npm ls &lt;package-name&gt;</code> to verify the package
+            is still installed.
+          </li>
+        </ol>
+        <hr />
+        <p>Let me know if you need help with any of these steps!</p>
+      </div>
+    </div>
+  </body>
+</html>
