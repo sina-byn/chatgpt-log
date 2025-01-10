@@ -1,0 +1,724 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>HTML file search index</h1>
+    </header>
+
+    <div class="content container">
+      <div class="bubble user">
+        how to create findpage file from simple html files and then search
+        inside the documents?
+      </div>
+      <div class="bubble">
+        <p>
+          To create a <strong>findpage</strong> feature that searches HTML files
+          and retrieves relevant content, you can follow these steps. This
+          involves reading the content of HTML files, indexing them, and
+          implementing a search functionality.
+        </p>
+        <h3 id="step-1-collect-html-files">Step 1: Collect HTML Files</h3>
+        <p>
+          Ensure you have a directory containing all the HTML files you want to
+          search. These files should be well-organized with meaningful content.
+        </p>
+        <h3 id="step-2-parse-html-files">Step 2: Parse HTML Files</h3>
+        <p>
+          Use a library like <code>BeautifulSoup</code> in Python to parse the
+          HTML and extract text content.
+        </p>
+        <h3 id="step-3-index-the-files">Step 3: Index the Files</h3>
+        <p>
+          Indexing involves creating a searchable structure for the text in your
+          HTML files. You can use a library like <code>Whoosh</code>,
+          <code>elasticsearch</code>, or even plain text with Python
+          dictionaries if the dataset is small.
+        </p>
+        <h3 id="step-4-search-functionality">Step 4: Search Functionality</h3>
+        <p>
+          Implement a function to search your indexed content and retrieve
+          matching results.
+        </p>
+        <p>Here’s a simple example using Python:</p>
+        <hr />
+        <h4 id="example-code">Example Code</h4>
+        <ol>
+          <li><strong>Install Required Libraries</strong></li>
+        </ol>
+        <pre><code class="bash language-bash">   pip install beautifulsoup4 whoosh</code></pre>
+        <ol start="2">
+          <li><strong>Create the Index</strong></li>
+        </ol>
+        <pre><code class="python language-python">   from bs4 import BeautifulSoup
+   from whoosh.fields import Schema, TEXT, ID
+   from whoosh.index import create_in
+   import os
+
+   def create_index(directory, index_dir):
+       # Define the schema
+       schema = Schema(title=TEXT(stored=True), path=ID(stored=True), content=TEXT)
+
+       # Create the index directory
+       if not os.path.exists(index_dir):
+           os.makedirs(index_dir)
+       ix = create_in(index_dir, schema)
+
+       writer = ix.writer()
+
+       for filename in os.listdir(directory):
+           if filename.endswith(".html"):
+               filepath = os.path.join(directory, filename)
+               with open(filepath, 'r', encoding='utf-8') as file:
+                   soup = BeautifulSoup(file, 'html.parser')
+                   content = soup.get_text()  # Extract plain text
+                   writer.add_document(title=filename, path=filepath, content=content)
+
+       writer.commit()
+       print("Indexing complete!")
+
+   # Example usage
+   create_index("path_to_html_files", "path_to_index_directory")</code></pre>
+        <ol start="3">
+          <li><strong>Search the Index</strong></li>
+        </ol>
+        <pre><code class="python language-python">   from whoosh.index import open_dir
+   from whoosh.qparser import QueryParser
+
+   def search_index(query, index_dir):
+       ix = open_dir(index_dir)
+       with ix.searcher() as searcher:
+           query_parser = QueryParser("content", ix.schema)
+           parsed_query = query_parser.parse(query)
+           results = searcher.search(parsed_query)
+           for result in results:
+               print(f"Title: {result['title']}")
+               print(f"Path: {result['path']}")
+               print()
+
+   # Example usage
+   search_index("your search term", "path_to_index_directory")</code></pre>
+        <hr />
+        <h3 id="explanation-of-steps">Explanation of Steps</h3>
+        <ol>
+          <li>
+            <strong>Parse HTML Files</strong>:
+            <code>BeautifulSoup</code> extracts the plain text from your HTML
+            files, ensuring the searchable content is clean.
+          </li>
+          <li>
+            <strong>Indexing</strong>: The <code>Whoosh</code> library indexes
+            the text, creating a structure optimized for search queries.
+          </li>
+          <li>
+            <strong>Search</strong>: When a user searches,
+            <code>Whoosh</code> retrieves the most relevant matches based on
+            your query.
+          </li>
+        </ol>
+        <h3 id="step-5-optional---web-interface">
+          Step 5: Optional - Web Interface
+        </h3>
+        <p>
+          You can create a simple web interface using Flask or Django to make
+          the search functionality more accessible. This will allow users to
+          type search queries in a browser and view results in real-time.
+        </p>
+        <hr />
+        <p>Let me know if you want to extend this to a web app!</p>
+      </div>
+      <div class="bubble user">I want to implement this in node.js</div>
+      <div class="bubble">
+        <p>
+          To implement a <strong>findpage</strong> feature in
+          <strong>Node.js</strong> that indexes and searches HTML files, you can
+          use libraries like <strong><code>cheerio</code></strong> (to parse
+          HTML) and <strong><code>flexsearch</code></strong> (to handle the
+          indexing and searching). Below is a step-by-step guide to achieve
+          this:
+        </p>
+        <hr />
+        <h3 id="step-1-install-required-libraries">
+          Step 1: Install Required Libraries
+        </h3>
+        <p>Install the necessary npm packages:</p>
+        <pre><code class="bash language-bash">npm install cheerio flexsearch fs path</code></pre>
+        <hr />
+        <h3 id="step-2-parse-and-index-html-files">
+          Step 2: Parse and Index HTML Files
+        </h3>
+        <p>
+          You will need a directory containing the HTML files. The script will
+          parse these files and index their contents.
+        </p>
+        <h4 id="indexjs"><code>index.js</code></h4>
+        <pre><code class="javascript language-javascript">const fs = require('fs');
+const path = require('path');
+const cheerio = require('cheerio');
+const FlexSearch = require('flexsearch');
+
+// Initialize FlexSearch
+const index = new FlexSearch.Index({
+    tokenize: "forward",
+    cache: true,
+    optimize: true,
+});
+
+// Function to read and parse HTML files
+const parseHTMLFiles = (directory) =&gt; {
+    const files = fs.readdirSync(directory);
+    files.forEach((file) =&gt; {
+        if (file.endsWith('.html')) {
+            const filePath = path.join(directory, file);
+            const content = fs.readFileSync(filePath, 'utf-8');
+
+            // Use Cheerio to parse the HTML
+            const $ = cheerio.load(content);
+            const textContent = $('body').text(); // Extract plain text from the body
+
+            // Add the file to the index
+            index.add(filePath, textContent);
+            console.log(`Indexed: ${file}`);
+        }
+    });
+};
+
+// Specify the directory containing HTML files
+const htmlDirectory = path.join(__dirname, 'html_files');
+parseHTMLFiles(htmlDirectory);</code></pre>
+        <hr />
+        <h3 id="step-3-search-the-index">Step 3: Search the Index</h3>
+        <p>Create a function to query the index and retrieve matching files.</p>
+        <h4 id="add-to-indexjs">Add to <code>index.js</code>:</h4>
+        <pre><code class="javascript language-javascript">const searchIndex = (query) =&gt; {
+    const results = index.search(query, { limit: 10 });
+    console.log(`Search Results for "${query}":`);
+    results.forEach((result, idx) =&gt; {
+        console.log(`${idx + 1}. ${result}`);
+    });
+};
+
+// Example search
+searchIndex("your search term");</code></pre>
+        <hr />
+        <h3 id="step-4-run-the-script">Step 4: Run the Script</h3>
+        <p>Run the script to index your files and perform a search:</p>
+        <pre><code class="bash language-bash">node index.js</code></pre>
+        <hr />
+        <h3 id="optional-build-a-web-interface-with-express">
+          Optional: Build a Web Interface with Express
+        </h3>
+        <p>
+          You can add a simple web interface to make the search feature
+          accessible via a browser.
+        </p>
+        <h4 id="install-express">Install Express</h4>
+        <pre><code class="bash language-bash">npm install express</code></pre>
+        <h4 id="update-indexjs">Update <code>index.js</code>:</h4>
+        <pre><code class="javascript language-javascript">const express = require('express');
+const app = express();
+const PORT = 3000;
+
+// Serve a basic HTML search page
+app.get('/', (req, res) =&gt; {
+    res.send(`
+        &lt;form method="GET" action="/search"&gt;
+            &lt;input type="text" name="query" placeholder="Search..." required&gt;
+            &lt;button type="submit"&gt;Search&lt;/button&gt;
+        &lt;/form&gt;
+    `);
+});
+
+// Search API
+app.get('/search', (req, res) =&gt; {
+    const query = req.query.query;
+    const results = index.search(query, { limit: 10 });
+    res.send(`
+        &lt;h1&gt;Search Results for "${query}"&lt;/h1&gt;
+        &lt;ul&gt;
+            ${results.map(result =&gt; `&lt;li&gt;${result}&lt;/li&gt;`).join('')}
+        &lt;/ul&gt;
+        &lt;a href="/"&gt;Go Back&lt;/a&gt;
+    `);
+});
+
+// Start the server
+app.listen(PORT, () =&gt; {
+    console.log(`Server running at http://localhost:${PORT}`);
+});</code></pre>
+        <hr />
+        <h3 id="step-5-run-the-web-app">Step 5: Run the Web App</h3>
+        <p>Start the server:</p>
+        <pre><code class="bash language-bash">node index.js</code></pre>
+        <p>
+          Go to <a href="http://localhost:3000">http://localhost:3000</a> and
+          use the search form to search the HTML files.
+        </p>
+        <hr />
+        <h3 id="explanation">Explanation</h3>
+        <ol>
+          <li>
+            <strong><code>cheerio</code></strong
+            >: Parses the HTML files and extracts text content.
+          </li>
+          <li>
+            <strong><code>flexsearch</code></strong
+            >: Handles indexing and fast searching of the extracted content.
+          </li>
+          <li>
+            <strong><code>express</code></strong
+            >: Serves a web interface to perform searches.
+          </li>
+        </ol>
+        <p>
+          This setup is lightweight and effective for searching through a set of
+          local HTML files. Let me know if you need help with any part of this!
+        </p>
+      </div>
+      <div class="bubble user">Is it possible to do this on the frontend?</div>
+      <div class="bubble">
+        <p>
+          Yes, you can implement a <strong>findpage</strong> feature entirely on
+          the frontend. However, there are some considerations, such as handling
+          large datasets in the browser and ensuring the HTML files are
+          accessible from the client side. Here's how you can approach it:
+        </p>
+        <hr />
+        <h3 id="step-1-use-a-javascript-search-library">
+          Step 1: Use a JavaScript Search Library
+        </h3>
+        <p>
+          For the frontend, libraries like <strong>FlexSearch</strong> or
+          <strong>Lunr.js</strong> are excellent for indexing and searching
+          data.
+        </p>
+        <h3 id="step-2-structure-your-html-files">
+          Step 2: Structure Your HTML Files
+        </h3>
+        <p>
+          Make your HTML files accessible via a public directory or bundle their
+          content into a JavaScript file that can be fetched dynamically.
+        </p>
+        <h3 id="step-3-create-the-frontend-search">
+          Step 3: Create the Frontend Search
+        </h3>
+        <h4 id="example-implementation">Example Implementation</h4>
+        <pre><code class="html language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;FindPage Search&lt;/title&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.31"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        .result {
+            margin-bottom: 10px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Search HTML Files&lt;/h1&gt;
+    &lt;input type="text" id="searchBox" placeholder="Type to search..." oninput="performSearch()" style="width: 100%; padding: 10px;"&gt;
+    &lt;div id="results"&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        // Initialize FlexSearch
+        const index = new FlexSearch.Index({
+            tokenize: "forward",
+            cache: true,
+            optimize: true
+        });
+
+        // Data to index (You can fetch this dynamically or include it in the file)
+        const htmlFiles = [
+            { path: "file1.html", content: "This is the content of file 1." },
+            { path: "file2.html", content: "This is another file with searchable content." },
+            { path: "file3.html", content: "Yet another example of HTML content." }
+        ];
+
+        // Index the content
+        htmlFiles.forEach(file =&gt; {
+            index.add(file.path, file.content);
+        });
+
+        // Perform search
+        function performSearch() {
+            const query = document.getElementById("searchBox").value;
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = ""; // Clear previous results
+
+            if (query) {
+                const results = index.search(query, { limit: 10 });
+                if (results.length &gt; 0) {
+                    results.forEach(result =&gt; {
+                        const file = htmlFiles.find(file =&gt; file.path === result);
+                        const resultDiv = document.createElement("div");
+                        resultDiv.className = "result";
+                        resultDiv.innerHTML = `&lt;strong&gt;${file.path}&lt;/strong&gt;: ${file.content}`;
+                        resultsDiv.appendChild(resultDiv);
+                    });
+                } else {
+                    resultsDiv.innerHTML = "&lt;p&gt;No results found.&lt;/p&gt;";
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <hr />
+        <h3 id="explanation-of-the-code">Explanation of the Code</h3>
+        <ol>
+          <li>
+            <strong>Library</strong>:
+            <ul>
+              <li>
+                <code>FlexSearch</code> is loaded via a CDN for indexing and
+                searching.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>HTML File Data</strong>:
+            <ul>
+              <li>
+                The <code>htmlFiles</code> array contains file paths and their
+                corresponding content.
+              </li>
+              <li>
+                In a real-world app, you could fetch this data dynamically from
+                a server or generate it during the build process.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Indexing</strong>:
+            <ul>
+              <li>
+                Each file's content is added to the
+                <code>FlexSearch</code> index.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Search Functionality</strong>:
+            <ul>
+              <li>
+                The <code>performSearch</code> function listens for input and
+                queries the index.
+              </li>
+              <li>Results are displayed dynamically below the search box.</li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="step-4-dynamically-load-html-files-optional">
+          Step 4: Dynamically Load HTML Files (Optional)
+        </h3>
+        <p>
+          If you prefer to load the HTML files dynamically rather than bundling
+          their content, you can fetch them using JavaScript:
+        </p>
+        <pre><code class="javascript language-javascript">async function loadHTMLFiles() {
+    const filePaths = ["file1.html", "file2.html", "file3.html"];
+    for (const path of filePaths) {
+        const response = await fetch(path);
+        const text = await response.text();
+        index.add(path, text);
+    }
+}
+loadHTMLFiles();</code></pre>
+        <hr />
+        <h3 id="pros-and-cons-of-frontend-implementation">
+          Pros and Cons of Frontend Implementation
+        </h3>
+        <h4 id="pros">Pros:</h4>
+        <ol>
+          <li>
+            No backend required – simpler deployment (e.g., host on a CDN or
+            static file server).
+          </li>
+          <li>
+            Fast for small datasets since the processing is done in the browser.
+          </li>
+          <li>Completely client-side, making it secure for static content.</li>
+        </ol>
+        <h4 id="cons">Cons:</h4>
+        <ol>
+          <li>
+            Large datasets may lead to performance issues or excessive memory
+            use in the browser.
+          </li>
+          <li>
+            Fetching multiple HTML files dynamically can cause delays or
+            bandwidth issues.
+          </li>
+          <li>
+            No advanced search features like stemming or fuzzy matching unless
+            you use a more sophisticated library.
+          </li>
+        </ol>
+        <hr />
+        <p>
+          This approach is ideal for lightweight search functionality on small
+          to medium datasets. Let me know if you need help integrating this into
+          your specific use case!
+        </p>
+      </div>
+      <div class="bubble user">
+        So, Can I just create the index and write it to a file inside the public
+        directory during built time and then fetching it from the public
+        directory and executing search using index.search?
+      </div>
+      <div class="bubble">
+        <p>
+          Yes, absolutely! This is a very efficient and practical way to
+          implement the search functionality in a frontend application. By
+          precomputing the index at build time and saving it as a file in the
+          public directory, you reduce runtime overhead and make your
+          application more performant. Here's how you can do it:
+        </p>
+        <hr />
+        <h3 id="steps-to-precompute-the-index-and-use-it">
+          Steps to Precompute the Index and Use It
+        </h3>
+        <h4 id="1-precompute-the-index-during-build-time">
+          1. Precompute the Index During Build Time
+        </h4>
+        <p>
+          Create the search index from your HTML files during the build process
+          and write it to a file (e.g., <code>search-index.json</code>).
+        </p>
+        <h5 id="example-script-nodejs">Example Script (Node.js):</h5>
+        <pre><code class="javascript language-javascript">const fs = require('fs');
+const path = require('path');
+const cheerio = require('cheerio');
+const FlexSearch = require('flexsearch');
+
+// Initialize FlexSearch
+const index = new FlexSearch.Index({
+    tokenize: "forward",
+    cache: true,
+    optimize: true,
+});
+
+// Directory containing HTML files
+const htmlDir = path.join(__dirname, 'html_files');
+const outputPath = path.join(__dirname, 'public', 'search-index.json');
+
+// Create an indexable object
+const indexData = [];
+
+fs.readdirSync(htmlDir).forEach(file =&gt; {
+    if (file.endsWith('.html')) {
+        const filePath = path.join(htmlDir, file);
+        const content = fs.readFileSync(filePath, 'utf-8');
+
+        // Parse HTML with Cheerio
+        const $ = cheerio.load(content);
+        const textContent = $('body').text(); // Extract plain text from &lt;body&gt;
+
+        // Add to index
+        index.add(file, textContent);
+        indexData.push({ path: file, content: textContent });
+    }
+});
+
+// Write the serialized index to a JSON file
+const serializedIndex = index.export();
+fs.writeFileSync(outputPath, JSON.stringify({ index: serializedIndex, data: indexData }));
+console.log('Index created and saved to public/search-index.json');</code></pre>
+        <p>This script:</p>
+        <ol>
+          <li>Parses all HTML files in the specified directory.</li>
+          <li>
+            Extracts the text content and indexes it using
+            <code>FlexSearch</code>.
+          </li>
+          <li>
+            Exports the serialized index and associated file data (path and
+            content).
+          </li>
+          <li>
+            Saves the index to <code>search-index.json</code> in the
+            <code>public</code> directory.
+          </li>
+        </ol>
+        <hr />
+        <h4 id="2-fetch-and-load-the-index-on-the-frontend">
+          2. Fetch and Load the Index on the Frontend
+        </h4>
+        <p>
+          In your frontend application, fetch the precomputed index and use it
+          for searching.
+        </p>
+        <h5 id="example-frontend-code">Example Frontend Code:</h5>
+        <pre><code class="html language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Precomputed Search&lt;/title&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.31"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #results { margin-top: 20px; }
+        .result { margin-bottom: 10px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Search HTML Files&lt;/h1&gt;
+    &lt;input type="text" id="searchBox" placeholder="Type to search..." oninput="performSearch()" style="width: 100%; padding: 10px;"&gt;
+    &lt;div id="results"&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        let index, data;
+
+        // Load the index and data
+        async function loadIndex() {
+            const response = await fetch('/search-index.json');
+            const { index: serializedIndex, data: indexData } = await response.json();
+
+            // Import the serialized index
+            index = new FlexSearch.Index();
+            index.import(serializedIndex);
+
+            // Store the additional data
+            data = indexData;
+        }
+
+        // Perform search
+        async function performSearch() {
+            const query = document.getElementById("searchBox").value;
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = ""; // Clear previous results
+
+            if (query &amp;&amp; index) {
+                const results = index.search(query, { limit: 10 });
+                if (results.length &gt; 0) {
+                    results.forEach(resultPath =&gt; {
+                        const file = data.find(file =&gt; file.path === resultPath);
+                        const resultDiv = document.createElement("div");
+                        resultDiv.className = "result";
+                        resultDiv.innerHTML = `&lt;strong&gt;${file.path}&lt;/strong&gt;: ${file.content.slice(0, 100)}...`;
+                        resultsDiv.appendChild(resultDiv);
+                    });
+                } else {
+                    resultsDiv.innerHTML = "&lt;p&gt;No results found.&lt;/p&gt;";
+                }
+            }
+        }
+
+        // Load index on page load
+        loadIndex();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <hr />
+        <h3 id="explanation">Explanation</h3>
+        <ol>
+          <li>
+            <p><strong>Build-Time Indexing</strong>:</p>
+            <ul>
+              <li>
+                The script indexes your HTML files and generates a
+                <code>search-index.json</code> file.
+              </li>
+              <li>
+                This JSON file contains:
+                <ul>
+                  <li>A serialized FlexSearch index (<code>index</code>).</li>
+                  <li>Metadata about the files (<code>data</code>).</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Frontend Search</strong>:</p>
+            <ul>
+              <li>
+                The precomputed index is fetched from the
+                <code>public</code> directory.
+              </li>
+              <li>
+                The index is deserialized and used with the
+                <code>FlexSearch</code> library to perform searches.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Results</strong>:</p>
+            <ul>
+              <li>
+                When a search query is entered, the indexed content is queried,
+                and matching results are displayed.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="benefits-of-this-approach">Benefits of This Approach</h3>
+        <ol>
+          <li>
+            <p><strong>Performance</strong>:</p>
+            <ul>
+              <li>
+                Indexing is done once at build time, reducing the load on the
+                client.
+              </li>
+              <li>
+                The client only fetches the prebuilt index, which is fast to
+                load and query.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Scalability</strong>:</p>
+            <ul>
+              <li>
+                Suitable for large datasets since the client doesn’t need to
+                parse and index files dynamically.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Static Hosting</strong>:</p>
+            <ul>
+              <li>
+                Can be deployed on static hosting platforms like Netlify or
+                Vercel.
+              </li>
+              <li>No backend server is required.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Dynamic Loading</strong>:</p>
+            <ul>
+              <li>
+                You can lazy-load or chunk the
+                <code>search-index.json</code> file if the dataset is large.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <p>
+          This setup is efficient and fits well in modern static site
+          architectures. Let me know if you'd like to extend this further!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
