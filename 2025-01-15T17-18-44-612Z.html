@@ -1,0 +1,854 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>HTML &amp; CSS Core</h1>
+    </header>
+
+    <div class="content container">
+      <div class="bubble user">
+        I understand that in order to create a website we need html no matter
+        the framework we use it'll eventually get compiled to html ok or not?
+        just give me a single word
+      </div>
+      <div class="bubble"><p>Yes</p></div>
+      <div class="bubble user">So how does browsers then understand html?</div>
+      <div class="bubble">
+        <p>
+          Browsers understand HTML through a
+          <strong>rendering engine</strong> that parses the HTML document,
+          constructs a Document Object Model (DOM) tree, and renders it visually
+          on the screen.
+        </p>
+      </div>
+      <div class="bubble user">Is this engine open source?</div>
+      <div class="bubble">
+        <p>
+          Some browser engines are open source, while others are not. For
+          example:
+        </p>
+        <ul>
+          <li>
+            <p><strong>Open Source Engines</strong>:</p>
+            <ul>
+              <li>Blink (used by Chrome and Chromium-based browsers)</li>
+              <li>WebKit (used by Safari)</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Closed Source Engines</strong>:</p>
+            <ul>
+              <li>
+                Gecko (used by Firefox) is mostly open-source, but some parts
+                may not be.
+              </li>
+              <li>
+                EdgeHTML (legacy Microsoft Edge engine) was closed-source.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          Most modern browsers rely on open-source engines to foster
+          collaboration and innovation.
+        </p>
+      </div>
+      <div class="bubble user">Where can I find blink?</div>
+      <div class="bubble">
+        <p>
+          You can find Blink, the rendering engine used by Chromium-based
+          browsers (like Google Chrome), in the open-source
+          <strong>Chromium project</strong>. The source code is available at:
+        </p>
+        <p>
+          <strong
+            ><a href="https://chromium.googlesource.com/chromium/src/"
+              >Chromium Git Repository</a
+            ></strong
+          >
+        </p>
+        <p>
+          To explore Blink specifically, you can navigate to its subdirectory
+          within the Chromium project:
+        </p>
+        <p>
+          <strong
+            ><a
+              href="https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/"
+              >Blink Source Code</a
+            ></strong
+          >
+        </p>
+        <p>
+          This repository includes all the necessary code and documentation for
+          Blink.
+        </p>
+      </div>
+      <div class="bubble user">the links are borken</div>
+      <div class="bubble"><p>The output of this plugin was redacted.</p></div>
+      <div class="bubble">
+        <p>
+          Apologies for the earlier confusion. The links I provided were
+          incorrect. You can access Blink's source code through the Chromium
+          project. The correct URL is:
+        </p>
+        <p>
+          -
+          <a href="https://chromium.googlesource.com/chromium/src/"
+            >Chromium Git Repository</a
+          >
+        </p>
+        <p>
+          Within this repository, Blink's source code is located in the
+          <code>third_party/blink/</code> directory.
+        </p>
+        <p>
+          For more information about Blink, you can visit the
+          <a href="https://www.chromium.org/blink">Blink documentation</a>.
+        </p>
+        <p>
+          These resources provide access to Blink's source code and related
+          documentation.
+        </p>
+      </div>
+      <div class="bubble user">Give me an explanation on blink</div>
+      <div class="bubble">
+        <p>
+          <strong>Blink</strong> is an open-source browser rendering engine
+          developed by Google as part of the Chromium project. It is responsible
+          for interpreting and rendering HTML, CSS, and JavaScript to display
+          web pages in a browser.
+        </p>
+        <h3 id="key-features-and-responsibilities-of-blink">
+          Key Features and Responsibilities of Blink:
+        </h3>
+        <ol>
+          <li>
+            <p>
+              <strong>HTML Parsing and DOM Construction</strong>: Blink parses
+              HTML documents to construct the
+              <strong>DOM (Document Object Model)</strong>, a tree-like
+              structure representing the webpage's content and structure.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>CSS Parsing and Style Calculation</strong>: It parses CSS
+              files and inline styles, calculating how elements should be
+              styled, including colors, sizes, fonts, and layout rules.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Layout and Rendering</strong>: Blink determines the layout
+              of each DOM element and renders it to the screen, handling tasks
+              like text placement, images, and animations.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>JavaScript Execution</strong>: While JavaScript execution
+              is primarily handled by <strong>V8</strong>, Google’s JavaScript
+              engine, Blink collaborates closely with it to handle DOM
+              manipulations and browser-specific APIs.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Support for Web Standards</strong>: Blink implements web
+              standards defined by organizations like the W3C (World Wide Web
+              Consortium) and WHATWG (Web Hypertext Application Technology
+              Working Group), ensuring interoperability across browsers.
+            </p>
+          </li>
+        </ol>
+        <h3 id="history-of-blink">History of Blink:</h3>
+        <ul>
+          <li>
+            <p>
+              <strong>Forked from WebKit</strong>: Blink was forked from the
+              WebKit engine in 2013. WebKit was originally developed by Apple
+              and used in Safari. Google decided to create Blink to innovate
+              faster and address architectural concerns specific to
+              Chromium-based browsers.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Part of Chromium</strong>: Blink is integral to Chromium,
+              the open-source project behind Google Chrome, Microsoft Edge,
+              Opera, and other Chromium-based browsers.
+            </p>
+          </li>
+        </ul>
+        <h3 id="supported-browsers">Supported Browsers:</h3>
+        <p>Blink powers several modern web browsers, including:</p>
+        <ul>
+          <li>Google Chrome</li>
+          <li>Microsoft Edge (Chromium version)</li>
+          <li>Opera</li>
+          <li>Brave</li>
+          <li>Vivaldi</li>
+        </ul>
+        <h3 id="contributions-and-open-source-nature">
+          Contributions and Open-Source Nature:
+        </h3>
+        <ul>
+          <li>
+            Blink is open-source, hosted as part of the Chromium project, and
+            contributions from developers worldwide are welcome.
+          </li>
+          <li>
+            Its source code can be found in the
+            <a href="https://chromium.googlesource.com/chromium/src/"
+              >Chromium repository</a
+            >.
+          </li>
+        </ul>
+        <p>
+          Blink is designed to be highly performant, focusing on speed,
+          efficiency, and adherence to modern web standards, making it one of
+          the most widely used rendering engines in the world.
+        </p>
+      </div>
+      <div class="bubble user">
+        Are there any resources specially books on how to learn creating a
+        browser engine?
+      </div>
+      <div class="bubble">
+        <p>
+          Creating a browser engine is a complex task that requires knowledge in
+          multiple domains like parsing, rendering, graphics, and networking.
+          While there aren't many books specifically focused on "how to create a
+          browser engine," there are resources that cover the foundational
+          technologies and concepts you'll need. Here are some recommendations:
+        </p>
+        <hr />
+        <h3 id="books-on-core-concepts">
+          <strong>Books on Core Concepts</strong>
+        </h3>
+        <ol>
+          <li>
+            <p><strong>Parsing and Compilers</strong>:</p>
+            <ul>
+              <li>
+                <em>"Compilers: Principles, Techniques, and Tools"</em> by
+                Alfred V. Aho, Monica S. Lam, Ravi Sethi, and Jeffrey D. Ullman
+                (The "Dragon Book").
+              </li>
+              <li>
+                <em>"Modern Compiler Implementation in C/Java"</em> by Andrew W.
+                Appel.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Rendering and Graphics</strong>:</p>
+            <ul>
+              <li>
+                <em>"Computer Graphics: Principles and Practice"</em> by John F.
+                Hughes, Andries van Dam, et al.
+              </li>
+              <li>
+                <em>"Real-Time Rendering"</em> by Tomas Akenine-Möller, Eric
+                Haines, and Naty Hoffman.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Web Standards and Specifications</strong>:</p>
+            <ul>
+              <li><em>"Web Performance in Action"</em> by Jeremy L. Wagner.</li>
+              <li>
+                W3C and WHATWG specifications (<a
+                  href="https://html.spec.whatwg.org/"
+                  >HTML Standard</a
+                >,
+                <a href="https://www.w3.org/Style/CSS/Overview.en.html"
+                  >CSS Specifications</a
+                >, etc.).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Operating Systems and Networking</strong>:</p>
+            <ul>
+              <li>
+                <em>"Modern Operating Systems"</em> by Andrew S. Tanenbaum.
+              </li>
+              <li>
+                <em>"Computer Networking: A Top-Down Approach"</em> by James F.
+                Kurose and Keith W. Ross.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="online-tutorials-and-resources">
+          <strong>Online Tutorials and Resources</strong>
+        </h3>
+        <ol>
+          <li>
+            <p><strong>Creating a Browser from Scratch</strong>:</p>
+            <ul>
+              <li>
+                <a
+                  href="https://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html"
+                  ><em>Build Your Own Web Browser</em></a
+                >
+                by Matt Brubeck. This is a series of blog posts walking through
+                the creation of a simple browser engine.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Open-Source Browser Projects</strong>:</p>
+            <ul>
+              <li>
+                Study the source code of open-source browsers like Chromium,
+                Servo (Mozilla's experimental engine), or WebKit. These provide
+                real-world implementations of browser engines.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Browser Engineering Course</strong>:</p>
+            <ul>
+              <li>
+                <a href="https://browser.engineering/"
+                  ><em>Browser Engineering</em></a
+                >
+                by Anthon Pang. This is an online textbook that provides a
+                step-by-step guide to building a toy browser engine.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Graphics Programming Tutorials</strong>:</p>
+            <ul>
+              <li>
+                <a href="https://learnopengl.com/">Learn OpenGL</a> for
+                understanding rendering techniques that are often used in
+                browser engines.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="hands-on-practice"><strong>Hands-On Practice</strong></h3>
+        <ol>
+          <li>
+            <p><strong>Start with a Toy Engine</strong>:</p>
+            <ul>
+              <li>
+                Use tutorials like Matt Brubeck's or Browser Engineering to
+                build a simplified version of a browser engine.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Contribute to Open Source</strong>:</p>
+            <ul>
+              <li>
+                Join projects like Chromium, Servo, or WebKit to gain firsthand
+                experience working on a browser engine.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Build Incrementally</strong>:</p>
+            <ul>
+              <li>Start by creating a simple HTML parser.</li>
+              <li>Add CSS parsing and layout calculations.</li>
+              <li>
+                Integrate JavaScript using an existing engine like V8 or
+                SpiderMonkey.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="communities-and-forums">
+          <strong>Communities and Forums</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Web Standards Groups</strong>: Participate in W3C or WHATWG
+            discussions.
+          </li>
+          <li>
+            <strong>GitHub/Reddit</strong>: Communities like r/programming and
+            browser engine project repositories.
+          </li>
+        </ul>
+        <p>
+          With these resources, you can progressively develop the skills and
+          knowledge to build a browser engine. Start small, and as you gain more
+          understanding, tackle the more complex components.
+        </p>
+      </div>
+      <div class="bubble user">
+        What languages are mainly used for these engines?
+      </div>
+      <div class="bubble">
+        <p>
+          Browser engines are typically developed using
+          <strong>low-level, high-performance languages</strong> that allow
+          fine-grained control over memory and CPU usage, as performance is a
+          critical aspect of their functionality. Here are the most commonly
+          used languages in browser engine development:
+        </p>
+        <hr />
+        <h3 id="main-languages"><strong>Main Languages</strong></h3>
+        <ol>
+          <li>
+            <p><strong>C++</strong>:</p>
+            <ul>
+              <li>
+                Widely used in most browser engines due to its performance,
+                portability, and control over system resources.
+              </li>
+              <li>
+                Examples:
+                <ul>
+                  <li>Blink (Chromium-based browsers like Google Chrome)</li>
+                  <li>WebKit (Safari)</li>
+                  <li>Gecko (Firefox)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Rust</strong>:</p>
+            <ul>
+              <li>
+                Gaining popularity for its memory safety features without
+                sacrificing performance.
+              </li>
+              <li>
+                Example:
+                <ul>
+                  <li>
+                    Servo (Mozilla's experimental browser engine, a precursor to
+                    some Rust features used in Gecko)
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>C</strong>:</p>
+            <ul>
+              <li>
+                Used for low-level components and performance-critical parts of
+                some engines.
+              </li>
+              <li>
+                Example:
+                <ul>
+                  <li>Older parts of WebKit and other legacy components.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="supporting-languages"><strong>Supporting Languages</strong></h3>
+        <ol>
+          <li>
+            <p><strong>JavaScript</strong>:</p>
+            <ul>
+              <li>
+                Used for testing, automation, and as the core scripting language
+                interpreted by the engine.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Python</strong>:</p>
+            <ul>
+              <li>
+                Often used in build systems, testing frameworks, and scripts for
+                tasks like code generation.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Objective-C/Swift</strong>:</p>
+            <ul>
+              <li>
+                For integrating browser engines with macOS and iOS applications
+                (e.g., WebKit in Safari).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Java</strong>:</p>
+            <ul>
+              <li>
+                Used in Android's WebView and Chromium implementations for
+                mobile browsers.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>TypeScript/HTML/CSS</strong>:</p>
+            <ul>
+              <li>
+                For testing, UI prototyping, and user interface layers,
+                especially in open-source projects.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="language-usage-by-engine">
+          <strong>Language Usage by Engine</strong>
+        </h3>
+        <table>
+          <thead>
+            <tr>
+              <th id="engine">Engine</th>
+              <th id="primary_language(s)">Primary Language(s)</th>
+              <th id="supporting_language(s)">Supporting Language(s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Blink</strong></td>
+              <td>C++, JavaScript</td>
+              <td>Python, TypeScript</td>
+            </tr>
+            <tr>
+              <td><strong>WebKit</strong></td>
+              <td>C++, Objective-C/Swift</td>
+              <td>Python</td>
+            </tr>
+            <tr>
+              <td><strong>Gecko</strong></td>
+              <td>C++, Rust</td>
+              <td>Python, JavaScript</td>
+            </tr>
+            <tr>
+              <td><strong>Servo</strong></td>
+              <td>Rust</td>
+              <td>Python</td>
+            </tr>
+            <tr>
+              <td><strong>EdgeHTML</strong> (legacy)</td>
+              <td>C++, C</td>
+              <td>Python</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr />
+        <h3 id="why-these-languages"><strong>Why These Languages?</strong></h3>
+        <ul>
+          <li>
+            <strong>C++</strong>: Provides high performance, portability, and
+            mature libraries for graphics and networking.
+          </li>
+          <li>
+            <strong>Rust</strong>: Offers memory safety without a garbage
+            collector, reducing security vulnerabilities like buffer overflows.
+          </li>
+          <li>
+            <strong>C</strong>: Efficient for low-level tasks like networking
+            and graphics integration.
+          </li>
+          <li>
+            <strong>Scripting Languages</strong>: Facilitate rapid testing,
+            automation, and tooling.
+          </li>
+        </ul>
+        <p>
+          The choice of language depends on the goals of the engine, with C++
+          and Rust leading due to their balance of performance and control.
+        </p>
+      </div>
+      <div class="bubble user">
+        What about the css how does browsers understand CSS?
+      </div>
+      <div class="bubble">
+        <p>
+          Browsers understand and process CSS through a series of steps as part
+          of their <strong>rendering pipeline</strong>. Here’s a breakdown of
+          how browsers handle CSS:
+        </p>
+        <hr />
+        <h3 id="1-parsing-css"><strong>1. Parsing CSS</strong></h3>
+        <ul>
+          <li>
+            Browsers parse CSS into a
+            <strong>Stylesheet Object Model (CSSOM)</strong>, which is similar
+            to the DOM for HTML.
+          </li>
+          <li>
+            The CSS text (either inline, in <code>&lt;style&gt;</code> tags, or
+            external stylesheets) is tokenized and transformed into a tree
+            structure of rules and properties.
+          </li>
+        </ul>
+        <p>
+          <strong>Example</strong>:<br />
+          For the CSS:
+        </p>
+        <pre><code class="css language-css">body {
+  background-color: lightblue;
+}
+h1 {
+  color: darkblue;
+}</code></pre>
+        <p>The browser creates a CSSOM tree:</p>
+        <pre><code>Stylesheet
+├── body
+│   └── background-color: lightblue
+└── h1
+    └── color: darkblue</code></pre>
+        <hr />
+        <h3 id="2-matching-css-selectors">
+          <strong>2. Matching CSS Selectors</strong>
+        </h3>
+        <ul>
+          <li>
+            The browser matches CSS selectors (e.g., <code>body</code>,
+            <code>h1</code>, <code>.class</code>, <code>#id</code>) against
+            elements in the DOM.
+          </li>
+          <li>
+            The matched rules are applied based on
+            <strong>specificity</strong> (inline styles &gt; IDs &gt; classes
+            &gt; element selectors) and <strong>cascading order</strong> (later
+            rules overwrite earlier ones if they target the same element).
+          </li>
+        </ul>
+        <hr />
+        <h3 id="3-combining-dom-and-cssom">
+          <strong>3. Combining DOM and CSSOM</strong>
+        </h3>
+        <ul>
+          <li>
+            The browser combines the <strong>DOM</strong> (from HTML) and
+            <strong>CSSOM</strong> (from CSS) into a
+            <strong>Render Tree</strong>.
+          </li>
+          <li>
+            The render tree contains only the visible elements and their
+            computed styles (including dimensions, colors, etc.).
+          </li>
+        </ul>
+        <hr />
+        <h3 id="4-style-calculation"><strong>4. Style Calculation</strong></h3>
+        <ul>
+          <li>
+            The browser calculates the final styles for each element,
+            considering:
+            <ul>
+              <li>
+                Inheritance: Some properties (e.g., <code>color</code>,
+                <code>font-family</code>) are inherited by default, while others
+                (e.g., <code>margin</code>, <code>border</code>) are not.
+              </li>
+              <li>
+                Default styles: If no CSS rule is provided, the browser applies
+                its <strong>user agent stylesheet</strong> (built-in default
+                styles).
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="5-layout-and-painting">
+          <strong>5. Layout and Painting</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Layout</strong>: The browser calculates the size and
+            position of each element in the render tree.
+          </li>
+          <li>
+            <strong>Painting</strong>: Styles (e.g., background color, borders,
+            text color) are painted onto the screen.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="tools-to-explore-css-processing">
+          <strong>Tools to Explore CSS Processing</strong>
+        </h3>
+        <ul>
+          <li>
+            Use browser developer tools (e.g., Chrome DevTools, Firefox
+            Developer Tools) to inspect:
+            <ul>
+              <li>
+                The <strong>Computed Styles</strong> tab: Shows the final styles
+                applied to an element.
+              </li>
+              <li>
+                The <strong>Rules</strong> tab: Displays the source of the
+                applied CSS rules.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+        <h3 id="behind-the-scenes-engines-role">
+          <strong>Behind the Scenes: Engine's Role</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Parsing</strong>: Handled by the browser engine’s CSS
+            parser.
+          </li>
+          <li>
+            <strong>Selector Matching</strong>: Algorithms efficiently match
+            selectors to elements.
+          </li>
+          <li>
+            <strong>Rendering</strong>: The rendering engine (e.g., Blink,
+            Gecko) applies styles during the rendering process.
+          </li>
+        </ul>
+        <p>
+          This process ensures that browsers accurately interpret CSS rules and
+          render web pages as intended.
+        </p>
+      </div>
+      <div class="bubble user">
+        The browser engine handles CSS as well or there's a separate engine for
+        this?
+      </div>
+      <div class="bubble">
+        <p>
+          The <strong>browser engine</strong> handles CSS as part of its overall
+          rendering pipeline. There isn’t a separate engine solely for CSS;
+          instead, CSS processing is a specialized subsystem within the browser
+          engine. Here’s how this integration works:
+        </p>
+        <hr />
+        <h3 id="components-of-a-browser-engine">
+          <strong>Components of a Browser Engine</strong>
+        </h3>
+        <p>
+          A browser engine like Blink, WebKit, or Gecko is divided into multiple
+          subsystems, each responsible for a part of the rendering process.
+          These include:
+        </p>
+        <ol>
+          <li>
+            <strong>HTML Parser</strong>: Handles HTML and constructs the DOM.
+          </li>
+          <li>
+            <strong>CSS Parser</strong>: Processes CSS and constructs the CSSOM.
+          </li>
+          <li>
+            <strong>JavaScript Engine</strong>: Executes JavaScript code and
+            manipulates the DOM and CSSOM.
+          </li>
+          <li>
+            <strong>Layout Engine</strong>: Combines DOM and CSSOM into a render
+            tree and calculates element positions.
+          </li>
+          <li>
+            <strong>Painting and Compositing Engine</strong>: Draws the styled
+            elements on the screen.
+          </li>
+        </ol>
+        <hr />
+        <h3 id="css-handling-as-part-of-the-browser-engine">
+          <strong>CSS Handling as Part of the Browser Engine</strong>
+        </h3>
+        <ul>
+          <li>
+            The CSS subsystem is responsible for parsing and applying CSS rules.
+          </li>
+          <li>
+            It integrates tightly with other subsystems like:
+            <ul>
+              <li>The <strong>DOM</strong> to apply styles to elements.</li>
+              <li>
+                The <strong>layout and painting engine</strong> to calculate
+                visual representation and render the page.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h3 id="how-css-integrates"><strong>How CSS Integrates</strong></h3>
+        <ol>
+          <li>
+            <strong>Parsing CSS</strong>: The browser engine's CSS parser turns
+            raw CSS into a CSSOM.
+          </li>
+          <li>
+            <strong>Selector Matching</strong>: The CSS subsystem matches styles
+            to DOM elements.
+          </li>
+          <li>
+            <strong>Style Computation</strong>: The CSS subsystem calculates the
+            final style for each element.
+          </li>
+          <li>
+            <strong>Interaction with JavaScript</strong>: JavaScript can
+            dynamically modify CSS or DOM elements, and the CSS subsystem
+            recalculates styles as needed.
+          </li>
+        </ol>
+        <hr />
+        <h3 id="specialized-libraries-within-engines">
+          <strong>Specialized Libraries within Engines</strong>
+        </h3>
+        <p>
+          While the CSS subsystem is part of the browser engine, it often uses
+          modular components:
+        </p>
+        <ul>
+          <li>
+            <strong>Style Resolver</strong>: Determines which rules apply to
+            which elements.
+          </li>
+          <li>
+            <strong>Layout Manager</strong>: Calculates positions and sizes
+            based on styles.
+          </li>
+          <li>
+            <strong>Graphics Library</strong>: Handles visual rendering (e.g.,
+            Skia in Blink/WebKit).
+          </li>
+        </ul>
+        <hr />
+        <h3 id="advantages-of-an-integrated-system">
+          <strong>Advantages of an Integrated System</strong>
+        </h3>
+        <ul>
+          <li>
+            <strong>Efficiency</strong>: CSS handling is integrated with HTML
+            parsing and rendering, reducing overhead.
+          </li>
+          <li>
+            <strong>Dynamic Updates</strong>: The tight coupling allows
+            immediate style updates in response to JavaScript changes or user
+            interactions.
+          </li>
+          <li>
+            <strong>Cross-Compatibility</strong>: A unified engine ensures
+            consistent rendering across CSS, HTML, and JavaScript.
+          </li>
+        </ul>
+        <hr />
+        <h3 id="conclusion"><strong>Conclusion</strong></h3>
+        <p>
+          The browser engine (e.g., Blink, Gecko) includes a CSS subsystem
+          rather than relying on a separate engine. This integration ensures
+          smooth coordination between styling, layout, and rendering.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
