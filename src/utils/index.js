@@ -1,19 +1,27 @@
-const https = require('https');
+// * puppeteer
+const puppeteer = require('puppeteer').default;
 
-exports.GET = url => {
-  return new Promise((resolve, reject) => {
-    const req = https.get(url, resp => {
-      let data = '';
+// * jsdom
+const { JSDOM } = require('jsdom');
 
-      resp.on('data', chunk => {
-        data += chunk;
-      });
+exports.extractChatData = async url => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
 
-      resp.on('end', () => resolve(data));
+  await page.goto(url);
+  await page.waitForSelector('[role="presentation"] article .markdown', { timeout: 60_000 });
 
-      resp.on('error', error => reject(error));
-    });
+  const outerHTML = await page.evaluate(() => document.documentElement.outerHTML);
+  const dom = new JSDOM(outerHTML);
+  const { document } = dom.window;
 
-    req.on('error', error => reject(error));
-  });
+  document.querySelectorAll('svg, .sr-only').forEach(el => el.remove());
+
+  const title = document.title;
+  const chatBubbles = [...document.querySelectorAll('[role="presentation"] article')];
+  const chatBubblesHTML = chatBubbles.map(bubble => bubble.outerHTML).join('\n');
+
+  await browser.close();
+
+  return [title, chatBubblesHTML];
 };
