@@ -42,6 +42,10 @@
   border-bottom: 2px solid #3d444d;
 }
 
+[aria-label='Copy'] {
+  display: none;
+}
+
 pre {
   margin-block: 1rem 1.5rem !important;
 }
