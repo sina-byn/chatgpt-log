@@ -19,7 +19,7 @@ exports.extractChatData = async url => {
   const dom = new JSDOM(outerHTML);
   const { document } = dom.window;
 
-  document.querySelectorAll('svg, .sr-only').forEach(el => el.remove());
+  document.querySelectorAll('svg, .sr-only, [aria-label="Copy"]').forEach(el => el.remove());
 
   const title = document.title;
   const chatBubbles = [...document.querySelectorAll('[role="presentation"] article')];
