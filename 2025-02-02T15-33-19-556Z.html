@@ -1,0 +1,675 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>CJS in ESM Project</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="61acc2ec-0971-402b-bb6c-7b5c7022924e"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          how to use a cjs package inside an esm project?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="909bf76d-e400-4e8a-b017-5065e8b951be"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p>
+                          Integrating a CommonJS (CJS) package into an
+                          ECMAScript Module (ESM) project can be achieved using
+                          the <code>import</code> statement, with attention to
+                          how the CJS module exports its content. Here's how you
+                          can approach this:
+                        </p>
+                        <ol>
+                          <li>
+                            <p><strong>Default Export Handling</strong>:</p>
+                            <ul>
+                              <li>
+                                If the CJS module assigns a function or object
+                                directly to <code>module.exports</code>, you can
+                                import it as a default import in your ESM code:
+                                <pre
+                                  class="!overflow-visible"
+                                ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>// CJS module (example.cjs)
+module.exports = function exampleFunction() {
+  // function implementation
+};
+</span></code></div></div></pre>
+                                <pre
+                                  class="!overflow-visible"
+                                ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>// ESM module
+import exampleFunction from './example.cjs';
+exampleFunction();
+</span></code></div></div></pre>
+                                In this scenario, the entire module is treated
+                                as the default export.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>Named Exports Handling</strong>:</p>
+                            <ul>
+                              <li>
+                                If the CJS module adds properties to
+                                <code>exports</code> or
+                                <code>module.exports</code>, you can import them
+                                using named imports:
+                                <pre
+                                  class="!overflow-visible"
+                                ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>// CJS module (example.cjs)
+module.exports.namedFunction = function namedFunction() {
+  // function implementation
+};
+</span></code></div></div></pre>
+                                <pre
+                                  class="!overflow-visible"
+                                ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>// ESM module
+import { namedFunction } from './example.cjs';
+namedFunction();
+</span></code></div></div></pre>
+                                Here, each property on the
+                                <code>exports</code> object becomes a named
+                                export.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>Namespace Import</strong>:</p>
+                            <ul>
+                              <li>
+                                Alternatively, you can import the entire module
+                                as a namespace to access all its exports:
+                                <pre
+                                  class="!overflow-visible"
+                                ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>// ESM module
+import * as exampleModule from './example.cjs';
+exampleModule.namedFunction();
+</span></code></div></div></pre>
+                                This approach is useful when you want to access
+                                multiple exports from the CJS module.
+                              </li>
+                            </ul>
+                          </li>
+                        </ol>
+                        <p><strong>Considerations</strong>:</p>
+                        <ul>
+                          <li>
+                            <p>
+                              <strong>File Extensions</strong>: Ensure that the
+                              CJS module file has the appropriate extension
+                              (e.g., <code>.cjs</code>) if your project is
+                              configured to distinguish between module types
+                              based on extensions.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <strong>Asynchronous Imports</strong>: In some
+                              cases, especially when dealing with dynamic
+                              imports or certain module systems, you might need
+                              to use asynchronous <code>import()</code> to load
+                              CJS modules.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <strong>TypeScript Projects</strong>: If you're
+                              using TypeScript, enabling the
+                              <code>esModuleInterop</code> compiler option can
+                              simplify the import process by allowing default
+                              imports from CJS modules.
+                              <span
+                                ><span class="" data-state="closed"></span
+                              ></span>
+                            </p>
+                            <div class="relative inline-flex items-center">
+                              <a
+                                href="https://www.typescriptlang.org/docs/handbook/modules/appendices/esm-cjs-interop.html?utm_source=chatgpt.com"
+                                target="_blank"
+                                rel="noopener"
+                                class="ml-1 inline-flex h-[22px] items-center rounded-xl bg-[#f4f4f4] px-2 text-[0.5em] font-medium text-token-text-secondary dark:bg-token-main-surface-secondary relative top-[-0.094rem] !text-token-text-secondary uppercase hover:bg-token-text-primary hover:!text-token-main-surface-secondary dark:hover:bg-token-text-primary group"
+                                ><span class="truncate"
+                                  >typescriptlang.org</span
+                                ></a
+                              >
+                            </div>
+                            <p></p>
+                          </li>
+                        </ul>
+                        <p>
+                          By following these methods, you can effectively
+                          incorporate CJS packages into your ESM project.
+                        </p>
+                        <div class="absolute h-[60px]">
+                          <button
+                            class="not-prose group/footnote mb-2 mt-3 flex w-fit items-center gap-1.5 rounded-xl border border-token-border-light bg-token-main-surface-primary py-2 hover:bg-token-main-surface-secondary pl-3 pr-2.5"
+                          >
+                            <div
+                              class="flex items-center gap-0.5 text-sm font-medium"
+                            >
+                              Sources
+                            </div>
+                            <div class="flex flex-row-reverse">
+                              <div
+                                class="flex items-center overflow-hidden rounded-full border-token-main-surface-primary bg-token-main-surface-primary -mr-1.5 first:mr-0 border-2 group-hover/footnote:border-token-main-surface-secondary relative"
+                              >
+                                <div class="icon-md"></div>
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="h-[60px]"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="7eb08cd1-51b7-4672-8a98-970fb710babe"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How to use an esm module inside a cjs project?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="0fa5a088-f239-4836-a879-ac722675122a"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p>
+                          Integrating an ECMAScript Module (ESM) into a CommonJS
+                          (CJS) project requires the use of dynamic
+                          <code>import()</code> statements, as the static
+                          <code>require()</code> function is not compatible with
+                          ESM's asynchronous nature. Here's how you can achieve
+                          this:
+                        </p>
+                        <ol>
+                          <li>
+                            <p><strong>Dynamic Import in CommonJS</strong>:</p>
+                            <ul>
+                              <li>
+                                Within your CommonJS module, utilize the dynamic
+                                <code>import()</code> function to load the ESM
+                                module asynchronously:
+                                <pre
+                                  class="!overflow-visible"
+                                ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>// CommonJS module (example.cjs)
+(async () =&gt; {
+  const { default: esmFunction, namedExport } = await import('./example.mjs');
+  esmFunction();
+  console.log(namedExport);
+})();
+</span></code></div></div></pre>
+                                In this example, <code>esmFunction</code> is the
+                                default export from the ESM module, and
+                                <code>namedExport</code> is a named export.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p>
+                              <strong>Handling Default and Named Exports</strong
+                              >:
+                            </p>
+                            <ul>
+                              <li>
+                                When importing an ESM module dynamically, the
+                                returned module object contains a
+                                <code>default</code> property for the default
+                                export and properties corresponding to named
+                                exports:
+                                <pre
+                                  class="!overflow-visible"
+                                ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>// ESM module (example.mjs)
+export const namedExport = 'This is a named export';
+export default function esmFunction() {
+  console.log('This is the default export');
+}
+</span></code></div></div></pre>
+                                The CommonJS module can access these exports as
+                                shown in the previous example.
+                              </li>
+                            </ul>
+                          </li>
+                        </ol>
+                        <p><strong>Considerations</strong>:</p>
+                        <ul>
+                          <li>
+                            <p>
+                              <strong>Asynchronous Nature</strong>: Dynamic
+                              imports return a promise, so ensure that your
+                              CommonJS code handles this asynchronous behavior
+                              appropriately, often using async functions and the
+                              <code>await</code> keyword.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <strong>File Extensions</strong>: Use the
+                              <code>.mjs</code> extension for ESM files and
+                              <code>.cjs</code> for CommonJS files to clearly
+                              distinguish between the two module types.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <strong>Node.js Version</strong>: Ensure you're
+                              using Node.js version 12 or later, as earlier
+                              versions do not support ESM.
+                            </p>
+                          </li>
+                        </ul>
+                        <p>
+                          By following these steps, you can effectively
+                          incorporate ESM modules into your CommonJS project.
+                        </p>
+                        <div class="absolute h-[60px]">
+                          <button
+                            class="not-prose group/footnote mb-2 mt-3 flex w-fit items-center gap-1.5 rounded-xl border border-token-border-light bg-token-main-surface-primary py-2 hover:bg-token-main-surface-secondary pl-3 pr-2.5"
+                          >
+                            <div
+                              class="flex items-center gap-0.5 text-sm font-medium"
+                            >
+                              Sources
+                            </div>
+                          </button>
+                        </div>
+                        <div class="h-[60px]"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="8709c75a-171a-4e42-a2bf-ed9757701c5f"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          What about the createRequire?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="true"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="abf1baf4-8b78-463e-98c6-81e15ba64ad5"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p>
+                          In Node.js, the <code>createRequire</code> function
+                          from the <code>module</code> module allows you to use
+                          CommonJS <code>require</code> functionality within
+                          ECMAScript Modules (ESM). This is particularly useful
+                          when you need to import CommonJS modules into an ESM
+                          context. Here's how you can use it:
+                        </p>
+                        <ol>
+                          <li>
+                            <p>
+                              <strong>Import <code>createRequire</code></strong
+                              >:
+                            </p>
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>import { createRequire } from 'module';
+</span></code></div></div></pre>
+                          </li>
+                          <li>
+                            <p>
+                              <strong
+                                >Create a <code>require</code> Function</strong
+                              >:
+                            </p>
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>const require = createRequire(import.meta.url);
+</span></code></div></div></pre>
+                            <p>
+                              Here, <code>import.meta.url</code> provides the
+                              URL of the current module, ensuring that the
+                              <code>require</code> function behaves as if it
+                              were called in a CommonJS module at the same
+                              location.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <strong
+                                >Use the <code>require</code> Function</strong
+                              >:
+                            </p>
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>const commonjsModule = require('./commonjs-module');
+</span></code></div></div></pre>
+                            <p>
+                              This allows you to import CommonJS modules using
+                              the <code>require</code> function within an ESM
+                              module.
+                            </p>
+                          </li>
+                        </ol>
+                        <p><strong>Example</strong>:</p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy code</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>// ESM module (example.mjs)
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
+// Import a CommonJS module
+const fs = require('fs');
+
+fs.readFile('./example.txt', 'utf8', (err, data) =&gt; {
+  if (err) throw err;
+  console.log(data);
+});
+</span></code></div></div></pre>
+                        <p><strong>Considerations</strong>:</p>
+                        <ul>
+                          <li>
+                            <p>
+                              <strong>Node.js Version Compatibility</strong>:
+                              The <code>createRequire</code> function was
+                              introduced in Node.js v12.2.0. If you're working
+                              with an earlier version, you can use the
+                              <code>create-require</code> package as a polyfill.
+                              <span
+                                ><span class="" data-state="closed"></span
+                              ></span>
+                            </p>
+                            <div class="relative inline-flex items-center">
+                              <a
+                                href="https://github.com/unjs/create-require?utm_source=chatgpt.com"
+                                target="_blank"
+                                rel="noopener"
+                                class="ml-1 inline-flex h-[22px] items-center rounded-xl bg-[#f4f4f4] px-2 text-[0.5em] font-medium text-token-text-secondary dark:bg-token-main-surface-secondary relative top-[-0.094rem] !text-token-text-secondary uppercase hover:bg-token-text-primary hover:!text-token-main-surface-secondary dark:hover:bg-token-text-primary group"
+                                ><span class="truncate">github.com</span></a
+                              >
+                            </div>
+                            <p></p>
+                          </li>
+                          <li>
+                            <p>
+                              <strong>Dynamic Imports</strong>: While
+                              <code>createRequire</code> is useful for
+                              synchronously importing CommonJS modules into ESM,
+                              you can also use dynamic
+                              <code>import()</code> statements to asynchronously
+                              load modules. However,
+                              <code>createRequire</code> provides a synchronous
+                              alternative that can be more straightforward in
+                              certain scenarios.
+                            </p>
+                          </li>
+                        </ul>
+                        <p>
+                          By using <code>createRequire</code>, you can
+                          seamlessly integrate CommonJS modules into your ESM
+                          projects, maintaining compatibility across different
+                          module systems.
+                        </p>
+                        <div class="absolute h-[60px]">
+                          <button
+                            class="not-prose group/footnote mb-2 mt-3 flex w-fit items-center gap-1.5 rounded-xl border border-token-border-light bg-token-main-surface-primary py-2 hover:bg-token-main-surface-secondary pl-3 pr-2.5"
+                          >
+                            <div
+                              class="flex items-center gap-0.5 text-sm font-medium"
+                            >
+                              Sources
+                            </div>
+                            <div class="flex flex-row-reverse">
+                              <div
+                                class="flex items-center overflow-hidden rounded-full border-token-main-surface-primary bg-token-main-surface-primary -mr-1.5 first:mr-0 border-2 group-hover/footnote:border-token-main-surface-secondary relative"
+                              >
+                                <div class="icon-md"></div>
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="h-[60px]"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
