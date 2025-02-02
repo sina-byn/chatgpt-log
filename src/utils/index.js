@@ -9,6 +9,10 @@ exports.extractChatData = async url => {
   const page = await browser.newPage();
 
   await page.goto(url);
+
+  const notFound = (await page.evaluate(() => document.body.outerHTML)).includes('404 Not Found');
+  if (notFound) return ['404', null];
+
   await page.waitForSelector('[role="presentation"] article .markdown', { timeout: 60_000 });
 
   const outerHTML = await page.evaluate(() => document.documentElement.outerHTML);
