@@ -21,7 +21,8 @@
   margin-top: 1.5rem;
 }
 
-.bubble.user {
+.bubble.user,
+[data-message-author-role='user'] {
   width: fit-content;
   max-width: calc(100% - 140px);
   background: #3d444d;
@@ -30,13 +31,19 @@
   margin-inline: auto 0;
 }
 
-.bubble.user > * {
+.bubble.user > *,
+[data-message-author-role='user'] > * {
   margin: 0;
   padding: 0;
 }
 
-.bubble:not(.user) {
+.bubble:not(.user),
+[data-message-author-role='assistant'] {
   border-bottom: 2px solid #3d444d;
+}
+
+[aria-label='Copy'] {
+  display: none;
 }
 
 pre {
