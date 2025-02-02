@@ -30,6 +30,7 @@ program
 
 process.on('uncaughtException', error => {
   log.error(error);
+  process.exit();
 });
 
 program.parse();
