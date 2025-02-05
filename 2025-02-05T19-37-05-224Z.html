@@ -1,0 +1,871 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Serverless Functions Overview</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="8a579ccc-7ee0-45cd-b770-58b781838865"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          what are serverless functions?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="217f262f-b8a1-4a6e-89dc-5a1c425d15cd"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <h3><strong>What Are Serverless Functions?</strong></h3>
+                        <p>
+                          Serverless functions are a cloud computing execution
+                          model where developers write and deploy small,
+                          single-purpose functions without managing the
+                          underlying infrastructure. These functions run
+                          on-demand in stateless containers and automatically
+                          scale based on usage.
+                        </p>
+                        <h3>
+                          <strong
+                            >Key Characteristics of Serverless
+                            Functions:</strong
+                          >
+                        </h3>
+                        <ol>
+                          <li>
+                            <strong>Event-Driven</strong> – Functions execute in
+                            response to events, such as HTTP requests, file
+                            uploads, or database changes.
+                          </li>
+                          <li>
+                            <strong>Auto-Scaling</strong> – They scale
+                            automatically based on demand, without manual
+                            intervention.
+                          </li>
+                          <li>
+                            <strong>Stateless</strong> – Each function
+                            invocation is independent, meaning no persistent
+                            state is maintained.
+                          </li>
+                          <li>
+                            <strong>Pay-as-You-Go Pricing</strong> – You only
+                            pay for the execution time, not for idle server
+                            resources.
+                          </li>
+                          <li>
+                            <strong>Fully Managed Infrastructure</strong> – The
+                            cloud provider manages all infrastructure concerns,
+                            such as provisioning, scaling, and maintenance.
+                          </li>
+                        </ol>
+                        <h3><strong>How Serverless Functions Work</strong></h3>
+                        <ol>
+                          <li>
+                            A trigger (e.g., HTTP request, database change,
+                            message queue) invokes the function.
+                          </li>
+                          <li>
+                            The cloud provider allocates resources dynamically
+                            and executes the function.
+                          </li>
+                          <li>
+                            After execution, the function scales down or
+                            terminates until the next invocation.
+                          </li>
+                        </ol>
+                        <h3><strong>Popular Serverless Platforms</strong></h3>
+                        <ul>
+                          <li>
+                            <strong>AWS Lambda</strong> (Amazon Web Services)
+                          </li>
+                          <li><strong>Google Cloud Functions</strong></li>
+                          <li><strong>Azure Functions</strong> (Microsoft)</li>
+                          <li><strong>Vercel Functions</strong></li>
+                          <li><strong>Netlify Functions</strong></li>
+                          <li><strong>Cloudflare Workers</strong></li>
+                        </ul>
+                        <h3>
+                          <strong>Use Cases for Serverless Functions</strong>
+                        </h3>
+                        <ul>
+                          <li>API backends</li>
+                          <li>Image and video processing</li>
+                          <li>Real-time data transformation</li>
+                          <li>Automated workflows (e.g., cron jobs)</li>
+                          <li>IoT applications</li>
+                          <li>Chatbots and AI integrations</li>
+                        </ul>
+                        <p>
+                          Would you like a hands-on example of how to write a
+                          serverless function? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="58de3afa-bf86-467a-a202-2492ffb5791a"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          give me a sample for vercel
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="de1f5cc0-a4a8-4d79-8c33-2ccc71fda954"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p>
+                          Sure! Here’s a simple
+                          <strong>serverless function</strong> for
+                          <strong>Vercel</strong> using
+                          <strong>Node.js</strong> that responds with "Hello,
+                          World!" when accessed.
+                        </p>
+                        <h3>
+                          <strong>Step 1: Create a Vercel Project</strong>
+                        </h3>
+                        <ol>
+                          <li>
+                            Install <strong>Vercel CLI</strong> (if not already
+                            installed):
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>npm install -g vercel
+</span></code></div></div></pre>
+                          </li>
+                          <li>
+                            Initialize a new project:
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>vercel init
+</span></code></div></div></pre>
+                          </li>
+                        </ol>
+                        <hr />
+                        <h3>
+                          <strong>Step 2: Create a Serverless API Route</strong>
+                        </h3>
+                        <p>
+                          Inside your Vercel project, create an
+                          <code>api</code> directory (if it doesn’t exist) and
+                          add a file called <code>hello.js</code>:
+                        </p>
+                        <h4>
+                          <strong><code>api/hello.js</code></strong>
+                        </h4>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>export default function handler(req, res) {
+  res.status(200).json({ message: "Hello, World! 🚀" });
+}
+</span></code></div></div></pre>
+                        <hr />
+                        <h3><strong>Step 3: Deploy to Vercel</strong></h3>
+                        <ol>
+                          <li>
+                            Run the following command in your project directory:
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>vercel deploy
+</span></code></div></div></pre>
+                          </li>
+                          <li>
+                            Vercel will deploy your function and provide a
+                            <strong>URL</strong> like:
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none"></div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre"><span>https://your-project.vercel.app/api/hello
+</span></code></div></div></pre>
+                          </li>
+                          <li>
+                            Open that URL in your browser or use
+                            <strong>cURL</strong>:
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>curl https://your-project.vercel.app/api/hello
+</span></code></div></div></pre>
+                            <strong>Response:</strong>
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">json</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-json"><span>{ "message": "Hello, World! 🚀" }
+</span></code></div></div></pre>
+                          </li>
+                        </ol>
+                        <hr />
+                        <h3><strong>Bonus: Handling POST Requests</strong></h3>
+                        <p>
+                          If you want to handle <strong>POST requests</strong>,
+                          modify <code>hello.js</code> like this:
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>export default function handler(req, res) {
+  if (req.method === "POST") {
+    res.status(200).json({ message: `Hello, ${req.body.name || "Guest"}!` });
+  } else {
+    res.status(405).json({ error: "Method Not Allowed" });
+  }
+}
+</span></code></div></div></pre>
+                        <p>
+                          Now, you can <strong>send a POST request</strong> with
+                          JSON data:
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>curl -X POST https://your-project.vercel.app/api/hello -H "Content-Type: application/json" -d '{"name": "Mehdi"}'
+</span></code></div></div></pre>
+                        <p><strong>Response:</strong></p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">json</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-json"><span>{ "message": "Hello, Mehdi!" }
+</span></code></div></div></pre>
+                        <p>Let me know if you need more customizations! 🚀</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="77e1c4f9-3b87-4744-a2dc-c593c2333845"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          What are these functions used for?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="051c78ed-651e-479a-9e84-55274519f6e7"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <h3>
+                          <strong
+                            >What Are Serverless Functions Used For?</strong
+                          >
+                        </h3>
+                        <p>
+                          Serverless functions, like those deployed on
+                          <strong
+                            >Vercel, AWS Lambda, or Cloudflare Workers</strong
+                          >, are ideal for executing small,
+                          <strong>event-driven</strong> tasks without managing
+                          servers. They are particularly useful for
+                          <strong>backend logic</strong>, handling API requests,
+                          and automating workflows.
+                        </p>
+                        <hr />
+                        <h3>
+                          <strong
+                            >💡 Common Use Cases for Serverless
+                            Functions</strong
+                          >
+                        </h3>
+                        <h4>
+                          <strong>1. Backend APIs (REST &amp; GraphQL)</strong>
+                        </h4>
+                        <ul>
+                          <li>
+                            You can create lightweight APIs for your front-end
+                            apps.
+                          </li>
+                          <li>
+                            Example: A <strong>serverless function</strong> that
+                            returns user profile data.
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>https://your-app.vercel.app/api/user?id=123
+</span></code></div></div></pre>
+                          </li>
+                          <li>No need to maintain a full backend server.</li>
+                        </ul>
+                        <h4><strong>2. Form Handling</strong></h4>
+                        <ul>
+                          <li>
+                            Instead of using a dedicated backend, serverless
+                            functions can handle form submissions.
+                          </li>
+                          <li>
+                            Example: A contact form sends data to a function
+                            that emails it to you.
+                          </li>
+                        </ul>
+                        <h4><strong>3. Webhooks (Automation)</strong></h4>
+                        <ul>
+                          <li>
+                            <strong>Webhook endpoints</strong> receive real-time
+                            data from services like Stripe, GitHub, or Slack.
+                          </li>
+                          <li>
+                            Example: A function listens for a Stripe payment
+                            event and sends a confirmation email.
+                          </li>
+                        </ul>
+                        <h4><strong>4. Image &amp; File Processing</strong></h4>
+                        <ul>
+                          <li>
+                            Resize, optimize, or apply filters to images
+                            <strong>on-the-fly</strong>.
+                          </li>
+                          <li>
+                            Example: A user uploads an image, and the function
+                            resizes it for different devices.
+                          </li>
+                        </ul>
+                        <h4>
+                          <strong>5. Authentication &amp; Authorization</strong>
+                        </h4>
+                        <ul>
+                          <li>
+                            Authenticate users without exposing sensitive logic
+                            to the frontend.
+                          </li>
+                          <li>
+                            Example: A function validates a JWT token before
+                            granting access to private content.
+                          </li>
+                        </ul>
+                        <h4>
+                          <strong
+                            >6. Server-Side Rendering (SSR) &amp; Dynamic
+                            Content</strong
+                          >
+                        </h4>
+                        <ul>
+                          <li>
+                            Used in frameworks like <strong>Next.js</strong> for
+                            rendering dynamic pages on demand.
+                          </li>
+                          <li>
+                            Example: Fetching user data and rendering a
+                            <strong>personalized dashboard</strong>.
+                          </li>
+                        </ul>
+                        <h4><strong>7. Scheduled Jobs (Cron Jobs)</strong></h4>
+                        <ul>
+                          <li>
+                            Automate periodic tasks
+                            <strong>without a dedicated server</strong>.
+                          </li>
+                          <li>
+                            Example: A function runs every midnight to clean up
+                            old database records.
+                          </li>
+                        </ul>
+                        <h4>
+                          <strong
+                            >8. IoT &amp; Real-Time Event Processing</strong
+                          >
+                        </h4>
+                        <ul>
+                          <li>
+                            Handle real-time sensor data, like temperature or
+                            motion alerts.
+                          </li>
+                          <li>
+                            Example: A function triggers an alert when a smart
+                            home sensor detects motion.
+                          </li>
+                        </ul>
+                        <h4>
+                          <strong>9. Data Fetching &amp; Aggregation</strong>
+                        </h4>
+                        <ul>
+                          <li>
+                            Query multiple APIs or databases and return combined
+                            results.
+                          </li>
+                          <li>
+                            Example: A function fetches weather and stock market
+                            data for a user’s dashboard.
+                          </li>
+                        </ul>
+                        <h4><strong>10. Custom Business Logic</strong></h4>
+                        <ul>
+                          <li>
+                            Any <strong>small, event-driven</strong> function
+                            that needs to run in response to an action.
+                          </li>
+                          <li>
+                            Example: Generating a
+                            <strong>PDF invoice</strong> when a user completes a
+                            purchase.
+                          </li>
+                        </ul>
+                        <hr />
+                        <h3>
+                          <strong>🚀 Why Use Serverless Functions?</strong>
+                        </h3>
+                        <p>
+                          ✅ <strong>No Server Management</strong> – Focus on
+                          writing code, not maintaining servers.<br />✅
+                          <strong>Auto-Scaling</strong> – Handles high traffic
+                          automatically.<br />✅
+                          <strong>Cost-Effective</strong> – Pay only for what
+                          you use (no idle server costs).<br />✅
+                          <strong>Security</strong> – Limited execution time
+                          reduces attack risks.<br />✅
+                          <strong>Integration-Friendly</strong> – Works with
+                          databases, APIs, and third-party services easily.
+                        </p>
+                        <p>
+                          Would you like a
+                          <strong>real-world example</strong> of a specific use
+                          case? Let me know! 🔥
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="43aa9ef7-7a59-4ebf-a8b8-353716267aa3"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          Give me a simple back-end then as a vercel serverless
+                          function
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-9"
+        data-scroll-anchor="true"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="f133500d-ab3f-49cf-bca8-4df390058a6d"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <h3>
+                          <strong
+                            >Simple Backend with Vercel Serverless
+                            Functions</strong
+                          >
+                        </h3>
+                        <p>
+                          Here's a <strong>basic backend</strong> using
+                          <strong>Vercel serverless functions</strong> that
+                          provides a simple <strong>CRUD API</strong> for
+                          managing a list of tasks (To-Do List).
+                        </p>
+                        <hr />
+                        <h3><strong>1️⃣ Project Setup</strong></h3>
+                        <p>If you haven't already, install the Vercel CLI:</p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>npm install -g vercel
+</span></code></div></div></pre>
+                        <p>Then initialize your project:</p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>vercel init
+</span></code></div></div></pre>
+                        <hr />
+                        <h3><strong>2️⃣ Create API Routes</strong></h3>
+                        <p>
+                          Inside your Vercel project, create an
+                          <code>api</code> folder, and inside it, create a file
+                          named <strong><code>tasks.js</code></strong
+                          >.
+                        </p>
+                        <h4>
+                          <strong
+                            ><code>api/tasks.js</code> - Simple CRUD API</strong
+                          >
+                        </h4>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">javascript</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>let tasks = []; // In-memory storage (resets on every function execution)
+
+export default function handler(req, res) {
+  if (req.method === "GET") {
+    return res.status(200).json(tasks);
+  }
+
+  if (req.method === "POST") {
+    const { task } = req.body;
+    if (!task) {
+      return res.status(400).json({ error: "Task is required" });
+    }
+    const newTask = { id: tasks.length + 1, task };
+    tasks.push(newTask);
+    return res.status(201).json(newTask);
+  }
+
+  if (req.method === "DELETE") {
+    const { id } = req.query;
+    tasks = tasks.filter((t) =&gt; t.id !== parseInt(id));
+    return res.status(200).json({ message: "Task deleted" });
+  }
+
+  return res.status(405).json({ error: "Method Not Allowed" });
+}
+</span></code></div></div></pre>
+                        <hr />
+                        <h3><strong>3️⃣ Deploy to Vercel</strong></h3>
+                        <p>
+                          Run the following command in your project directory:
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>vercel deploy
+</span></code></div></div></pre>
+                        <p>Once deployed, you'll get a URL like:</p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none"></div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre"><span>https://your-project.vercel.app/api/tasks
+</span></code></div></div></pre>
+                        <hr />
+                        <h3><strong>4️⃣ Test the API</strong></h3>
+                        <h4>✅ <strong>Get All Tasks</strong></h4>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>curl -X GET https://your-project.vercel.app/api/tasks
+</span></code></div></div></pre>
+                        <h4>✅ <strong>Add a Task</strong></h4>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>curl -X POST https://your-project.vercel.app/api/tasks -H "Content-Type: application/json" -d '{"task": "Learn Vercel"}'
+</span></code></div></div></pre>
+                        <h4>✅ <strong>Delete a Task</strong></h4>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>curl -X DELETE "https://your-project.vercel.app/api/tasks?id=1"
+</span></code></div></div></pre>
+                        <hr />
+                        <h3><strong>🚀 What's Next?</strong></h3>
+                        <ul>
+                          <li>
+                            Use <strong>a database</strong> (e.g., Firebase,
+                            MongoDB, PostgreSQL) instead of in-memory storage.
+                          </li>
+                          <li>
+                            Add authentication using <strong>JWT</strong>.
+                          </li>
+                          <li>
+                            Create a <strong>frontend</strong> (Next.js, React)
+                            to interact with the API.
+                          </li>
+                        </ul>
+                        <p>
+                          Would you like me to add
+                          <strong>database support</strong> or a
+                          <strong>frontend UI</strong> for this? 🔥
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
