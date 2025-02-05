@@ -1,0 +1,2278 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>What is Vite</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="809e03b1-336d-4fe4-b0a7-cc4a3c032ff1"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">What is vite?</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="87d61842-843d-428b-8d5b-5ee1058f0d17"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p>
+                          Vite is a
+                          <strong>modern front-end build tool</strong> that
+                          provides an
+                          <strong>ultra-fast development environment</strong>
+                          and an <strong>optimized production build</strong> for
+                          JavaScript applications, primarily for frameworks like
+                          <strong>Vue.js</strong>, <strong>React</strong>, and
+                          <strong>Svelte</strong>.
+                        </p>
+                        <h3>🔥 <strong>Why Use Vite?</strong></h3>
+                        <p>
+                          Vite was created to solve the slow build times and
+                          inefficient hot module replacement (HMR) seen in
+                          traditional bundlers like <strong>Webpack</strong>. It
+                          leverages <strong>ES Modules (ESM)</strong> and modern
+                          JavaScript features to improve performance
+                          significantly.
+                        </p>
+                        <h3>🚀 <strong>Key Features of Vite</strong></h3>
+                        <ol>
+                          <li>
+                            <p><strong>Instant Server Start</strong> 🏎️</p>
+                            <ul>
+                              <li>
+                                Uses native <strong>ES Modules</strong> in
+                                development, avoiding the need for bundling
+                                before serving.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p>
+                              <strong
+                                >Lightning-Fast Hot Module Replacement
+                                (HMR)</strong
+                              >
+                              ⚡
+                            </p>
+                            <ul>
+                              <li>
+                                Updates components instantly without a full page
+                                reload.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p>
+                              <strong>Optimized Production Build</strong> 📦
+                            </p>
+                            <ul>
+                              <li>
+                                Uses <strong>Rollup</strong> internally for
+                                highly optimized and tree-shaken production
+                                bundles.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p>
+                              <strong
+                                >Built-in Support for JSX, TypeScript, Vue, and
+                                more</strong
+                              >
+                              🎭
+                            </p>
+                            <ul>
+                              <li>
+                                Automatically handles modern frameworks and
+                                preprocessors.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p>
+                              <strong
+                                >Out-of-the-Box Support for Static
+                                Assets</strong
+                              >
+                              🖼️
+                            </p>
+                            <ul>
+                              <li>
+                                Handles images, CSS, and other static files
+                                efficiently.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p>
+                              <strong
+                                >Plugin System (Based on Rollup Plugins)</strong
+                              >
+                              🔌
+                            </p>
+                            <ul>
+                              <li>
+                                Extend functionality easily using Vite’s plugin
+                                API.
+                              </li>
+                            </ul>
+                          </li>
+                        </ol>
+                        <h3>🛠️ <strong>How to Use Vite?</strong></h3>
+                        <ol>
+                          <li>
+                            <strong>Install Vite</strong>:
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>npm create vite@latest my-project
+cd my-project
+npm install
+npm run dev
+</span></code></div></div></pre>
+                          </li>
+                          <li>
+                            <strong>Open your browser at</strong>
+                            <code>http://localhost:5173/</code> to see your app
+                            running.
+                          </li>
+                        </ol>
+                        <h3>🌍 <strong>Who Should Use Vite?</strong></h3>
+                        <ul>
+                          <li>
+                            Developers working with
+                            <strong
+                              >Vue.js, React, Preact, Svelte, or Vanilla
+                              JavaScript</strong
+                            >.
+                          </li>
+                          <li>
+                            Those frustrated with
+                            <strong>slow Webpack builds</strong> and want
+                            <strong>instant feedback</strong> while coding.
+                          </li>
+                          <li>
+                            Projects that require
+                            <strong
+                              >fast builds and optimized production
+                              outputs</strong
+                            >.
+                          </li>
+                        </ul>
+                        <h3>⚖️ <strong>Vite vs Webpack</strong></h3>
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Feature</th>
+                              <th>Vite 🏆</th>
+                              <th>Webpack ⚡</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Dev Server Startup</td>
+                              <td>🔥 Instant</td>
+                              <td>🐢 Slow (Needs Bundling)</td>
+                            </tr>
+                            <tr>
+                              <td>HMR Speed</td>
+                              <td>⚡ Super Fast</td>
+                              <td>🚶‍♂️ Slower</td>
+                            </tr>
+                            <tr>
+                              <td>Production Build</td>
+                              <td>📦 Optimized (Rollup)</td>
+                              <td>🔄 Optimized (Terser)</td>
+                            </tr>
+                            <tr>
+                              <td>Out-of-the-Box Config</td>
+                              <td>✅ Yes</td>
+                              <td>❌ Needs Configuration</td>
+                            </tr>
+                            <tr>
+                              <td>Framework Support</td>
+                              <td>Vue, React, Svelte, Preact</td>
+                              <td>All (More Flexibility)</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <h3>✅ <strong>Final Thoughts</strong></h3>
+                        <p>
+                          Vite is a <strong>game-changer</strong> for front-end
+                          development, especially when working with modern
+                          frameworks. It makes development
+                          <strong>blazing fast</strong>, production builds
+                          <strong>efficient</strong>, and the overall experience
+                          <strong>smooth and enjoyable</strong>.
+                        </p>
+                        <p>
+                          Would you like to see an example project setup with
+                          Vite? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="d546f8e1-05dc-48c0-b5ec-173cb96b2736"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How does vite's dev server work?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="0159433f-1af8-4ece-8039-96a0f49d35d9"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <h3>🏎 <strong>How Vite’s Dev Server Works</strong></h3>
+                        <p>
+                          Vite’s development server is
+                          <strong>fundamentally different</strong> from
+                          traditional bundlers like Webpack. Instead of bundling
+                          the whole application before serving, it
+                          <strong>leverages native ES Modules (ESM)</strong> and
+                          <strong>on-demand compilation</strong> to deliver
+                          <strong>lightning-fast</strong> performance. Let’s
+                          break it down step by step.
+                        </p>
+                        <hr />
+                        <h2>
+                          🔥
+                          <strong>How Vite Serves Files in Development</strong>
+                        </h2>
+                        <p>
+                          Instead of bundling everything upfront, Vite serves
+                          your source files
+                          <strong>as native ES modules</strong>. Here's how it
+                          works:
+                        </p>
+                        <h3><strong>1️⃣ Starts a Local HTTP Server</strong></h3>
+                        <ul>
+                          <li>
+                            When you run <code>vite</code> or
+                            <code>npm run dev</code>, Vite starts a
+                            <strong>lightweight HTTP server</strong> (default
+                            port <code>5173</code>).
+                          </li>
+                          <li>
+                            The server serves files
+                            <strong>directly from the file system</strong>,
+                            instead of bundling them into a single output.
+                          </li>
+                        </ul>
+                        <h3><strong>2️⃣ Transforms Files on the Fly</strong></h3>
+                        <ul>
+                          <li>
+                            Vite detects the file type and transforms it
+                            <strong>only when needed</strong>:
+                            <ul>
+                              <li>
+                                <strong>JavaScript (ESM) files</strong> → Served
+                                as-is (no bundling needed).
+                              </li>
+                              <li>
+                                <strong>Vue/React/Svelte components</strong> →
+                                Compiled dynamically.
+                              </li>
+                              <li>
+                                <strong>TypeScript</strong> → Transpiled via
+                                <code>esbuild</code> instantly.
+                              </li>
+                              <li>
+                                <strong>CSS, SCSS, LESS</strong> → Processed and
+                                injected dynamically.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            These transformations happen
+                            <strong>only when a file is requested</strong>, not
+                            ahead of time.
+                          </li>
+                        </ul>
+                        <h3>
+                          <strong>3️⃣ Leverages Native ES Module Imports</strong>
+                        </h3>
+                        <ul>
+                          <li>
+                            Vite <strong>does not bundle modules</strong> during
+                            development. Instead, it modifies import paths:
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>import { createApp } from "vue";
+</span></code></div></div></pre>
+                            gets converted to:
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>import { createApp } from "/@modules/vue";
+</span></code></div></div></pre>
+                          </li>
+                          <li>
+                            This allows browsers to handle
+                            <strong>module resolution natively</strong>,
+                            eliminating unnecessary processing.
+                          </li>
+                        </ul>
+                        <hr />
+                        <h2>⚡ <strong>Why is Vite So Fast?</strong></h2>
+                        <h3>
+                          <strong
+                            >1️⃣ Uses <code>esbuild</code> for Super-Fast
+                            Transpilation</strong
+                          >
+                        </h3>
+                        <ul>
+                          <li>
+                            Vite uses <strong>esbuild</strong> (written in Go)
+                            instead of Babel/Webpack, making it
+                            <strong>10-100x faster</strong> in transpiling
+                            dependencies.
+                          </li>
+                        </ul>
+                        <h3><strong>2️⃣ On-Demand Compilation</strong></h3>
+                        <ul>
+                          <li>
+                            Only
+                            <strong>the files that are requested</strong> get
+                            compiled, instead of bundling everything upfront.
+                          </li>
+                        </ul>
+                        <h3><strong>3️⃣ Caches Transformed Files</strong></h3>
+                        <ul>
+                          <li>
+                            Vite caches processed files in memory, so
+                            <strong>subsequent requests</strong> are nearly
+                            <strong>instant</strong>.
+                          </li>
+                        </ul>
+                        <hr />
+                        <h2>
+                          🔄
+                          <strong
+                            >How Vite Handles HMR (Hot Module
+                            Replacement)</strong
+                          >
+                        </h2>
+                        <p>
+                          Vite’s HMR is <strong>extremely fast</strong> compared
+                          to Webpack because:
+                        </p>
+                        <ol>
+                          <li>
+                            <strong
+                              >Only the affected module is reloaded</strong
+                            >
+                            (instead of recompiling the whole app).
+                          </li>
+                          <li>
+                            <strong>It uses native ES module updates</strong>
+                            (via <code>import.meta.hot.accept()</code>).
+                          </li>
+                          <li>
+                            <strong>Dependencies are pre-bundled</strong> and
+                            served from cache.
+                          </li>
+                          <li>
+                            <strong>JSX/TSX/Vue files</strong> are patched
+                            instantly without a full reload.
+                          </li>
+                        </ol>
+                        <h3>
+                          <strong>Example: Updating a Vue Component</strong>
+                        </h3>
+                        <p>If you modify a Vue component:</p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">vue</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-vue"><span>&lt;template&gt;
+  &lt;h1&gt;Hello, Vite! 🚀&lt;/h1&gt;
+&lt;/template&gt;
+</span></code></div></div></pre>
+                        <p>
+                          Vite detects the change, patches the component, and
+                          updates the DOM
+                          <strong>without reloading the page</strong>.
+                        </p>
+                        <hr />
+                        <h2>
+                          🔗 <strong>How Vite Handles Dependencies</strong>
+                        </h2>
+                        <h3>
+                          <strong
+                            >1️⃣ Pre-Bundling with <code>esbuild</code></strong
+                          >
+                        </h3>
+                        <ul>
+                          <li>
+                            Since many npm packages are in
+                            <strong>CommonJS</strong> format, they must be
+                            converted to <strong>ESM</strong>.
+                          </li>
+                          <li>
+                            Vite <strong>pre-bundles</strong> dependencies like
+                            <code>react</code>, <code>vue</code>, etc., using
+                            <code>esbuild</code> the first time you start the
+                            server.
+                          </li>
+                          <li>
+                            This makes subsequent module imports
+                            <strong>much faster</strong>.
+                          </li>
+                        </ul>
+                        <h3><strong>2️⃣ Optimized Caching</strong></h3>
+                        <ul>
+                          <li>
+                            Pre-bundled dependencies are cached in
+                            <code>node_modules/.vite/</code>, and are
+                            <strong
+                              >only recompiled if dependencies change</strong
+                            >.
+                          </li>
+                          <li>This avoids reprocessing on every startup.</li>
+                        </ul>
+                        <hr />
+                        <h2>🛠 <strong>Example Workflow</strong></h2>
+                        <ol>
+                          <li>
+                            <p>
+                              <strong>Start Dev Server</strong> (<code
+                                >vite</code
+                              >
+                              or <code>npm run dev</code>)
+                            </p>
+                            <ul>
+                              <li>Vite starts a fast local server.</li>
+                              <li>
+                                It pre-bundles dependencies only if needed.
+                              </li>
+                              <li>No bundling of the app happens yet.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>Requesting a File</strong></p>
+                            <ul>
+                              <li>
+                                The browser requests <code>main.js</code>.
+                              </li>
+                              <li>
+                                Vite processes it
+                                <strong>only if necessary</strong> and sends
+                                back <strong>ESM-compatible code</strong>.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>Making a Code Change</strong></p>
+                            <ul>
+                              <li>
+                                If you modify a <code>.vue</code> or
+                                <code>.jsx</code> file, Vite patches it
+                                <strong>instantly</strong> using HMR without
+                                refreshing the page.
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>Adding a New Dependency</strong></p>
+                            <ul>
+                              <li>
+                                If you install a new package (<code
+                                  >npm install lodash</code
+                                >), Vite
+                                <strong>automatically detects</strong> and
+                                pre-bundles it.
+                              </li>
+                            </ul>
+                          </li>
+                        </ol>
+                        <hr />
+                        <h2>
+                          📌
+                          <strong
+                            >Comparison: Vite vs Webpack Dev Server</strong
+                          >
+                        </h2>
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Feature</th>
+                              <th>Vite 🏆</th>
+                              <th>Webpack ⚡</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><strong>Dev Server Start</strong></td>
+                              <td>Instant 🚀</td>
+                              <td>Slow 🐢 (bundling needed)</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Module Updates</strong></td>
+                              <td>Native ES Modules</td>
+                              <td>Bundled JS</td>
+                            </tr>
+                            <tr>
+                              <td><strong>HMR Speed</strong></td>
+                              <td>Milliseconds ⚡</td>
+                              <td>Seconds 🐌</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Build Tool</strong></td>
+                              <td><code>esbuild</code> (Go-based)</td>
+                              <td>Babel &amp; Webpack (JS-based)</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Dependency Handling</strong></td>
+                              <td>Pre-bundled with <code>esbuild</code></td>
+                              <td>Transpiled via Babel/Webpack</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Page Reload on Change</strong></td>
+                              <td>No (HMR is optimized)</td>
+                              <td>Sometimes</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <hr />
+                        <h2>✅ <strong>Final Thoughts</strong></h2>
+                        <ul>
+                          <li>
+                            Vite's
+                            <strong>on-demand, ES module-based approach</strong>
+                            makes it significantly <strong>faster</strong> than
+                            traditional bundlers.
+                          </li>
+                          <li>
+                            By <strong>skipping unnecessary work</strong>, it
+                            provides an
+                            <strong>instant feedback loop</strong> for
+                            developers.
+                          </li>
+                          <li>
+                            <strong>HMR is near-instant</strong>, making
+                            development <strong>smooth</strong> and
+                            <strong>efficient</strong>.
+                          </li>
+                        </ul>
+                        <p>
+                          Would you like an example Vite project setup with
+                          React or Vue? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="b88bf11b-5572-41ab-9ecf-6690d195abcf"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How does vite patch a module on change notice?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="02347e03-6e55-4e04-ae4a-2092c5e139f2"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <h3>
+                          🔄
+                          <strong
+                            >How Vite Patches a Module on Change (HMR - Hot
+                            Module Replacement)</strong
+                          >
+                        </h3>
+                        <p>
+                          When you make a change in your source code, Vite
+                          <strong>does not reload the whole page</strong>.
+                          Instead, it intelligently patches the affected module
+                          <strong>without losing the application state</strong>.
+                          Let’s break down how this works.
+                        </p>
+                        <hr />
+                        <h2>
+                          ⚡ <strong>Step-by-Step: How Vite HMR Works</strong>
+                        </h2>
+                        <p>1️⃣ <strong>Vite Watches for File Changes</strong></p>
+                        <ul>
+                          <li>
+                            Vite uses the <strong>chokidar</strong> file watcher
+                            to detect changes in your project files
+                            (<code>.vue</code>, <code>.jsx</code>,
+                            <code>.ts</code>, etc.).
+                          </li>
+                          <li>
+                            When a file is modified, Vite determines which
+                            <strong>module needs to be updated</strong>.
+                          </li>
+                        </ul>
+                        <p>
+                          2️⃣
+                          <strong>Vite Invalidates the Affected Module</strong>
+                        </p>
+                        <ul>
+                          <li>
+                            Instead of rebuilding the entire project, Vite
+                            <strong
+                              >marks only the affected module as "dirty"</strong
+                            >.
+                          </li>
+                          <li>
+                            It then
+                            <strong>recompiles just that module</strong> using
+                            <code>esbuild</code> (super fast).
+                          </li>
+                        </ul>
+                        <p>
+                          3️⃣ <strong>Browser Receives an HMR Update</strong>
+                        </p>
+                        <ul>
+                          <li>
+                            Vite’s
+                            <strong>dev server sends an HMR message</strong>
+                            (<code>update</code> event) to the browser via
+                            WebSocket.
+                          </li>
+                          <li>
+                            The browser then
+                            <strong>requests the updated module</strong> instead
+                            of reloading the page.
+                          </li>
+                        </ul>
+                        <p>
+                          4️⃣
+                          <strong>Vite Patches the Module Dynamically</strong>
+                        </p>
+                        <ul>
+                          <li>
+                            The new module
+                            <strong
+                              >replaces the old one in the dependency
+                              graph</strong
+                            >.
+                          </li>
+                          <li>
+                            If the module supports
+                            <strong
+                              >HMR API
+                              (<code>import.meta.hot.accept()</code>)</strong
+                            >, Vite will execute the
+                            <strong>hot update logic</strong>.
+                          </li>
+                        </ul>
+                        <hr />
+                        <h2>
+                          🔥 <strong>How Vite Applies HMR in Practice</strong>
+                        </h2>
+                        <p>
+                          Different file types require different HMR strategies.
+                          Let’s explore them.
+                        </p>
+                        <h3><strong>1️⃣ JavaScript Modules</strong></h3>
+                        <p>For regular <code>.js</code> files:</p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>if (import.meta.hot) {
+  import.meta.hot.accept(() =&gt; {
+    console.log("Module updated without reloading!");
+  });
+}
+</span></code></div></div></pre>
+                        <p>
+                          When the file is modified, Vite
+                          <strong>sends an update</strong> to the browser, which
+                          <strong>reloads only that module</strong>.
+                        </p>
+                        <hr />
+                        <h3>
+                          <strong>2️⃣ Vue Components (Vue’s Native HMR)</strong>
+                        </h3>
+                        <p>
+                          Vite
+                          <strong>leverages Vue’s built-in HMR API</strong> to
+                          update Vue components dynamically.
+                        </p>
+                        <p>For example, when you change:</p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">vue</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-vue"><span>&lt;template&gt;
+  &lt;h1&gt;Hello Vite! 🚀&lt;/h1&gt;
+&lt;/template&gt;
+</span></code></div></div></pre>
+                        <p>
+                          Vite patches only the
+                          <strong>updated template</strong>, keeping the
+                          component <strong>state intact</strong>.
+                        </p>
+                        <p>
+                          ✔ <strong>No full reload</strong><br />✔
+                          <strong
+                            >Preserves state (e.g., form inputs, UI
+                            interactions)</strong
+                          ><br />✔
+                          <strong>Fast updates without losing context</strong>
+                        </p>
+                        <hr />
+                        <h3>
+                          <strong
+                            >3️⃣ React Components (React Fast Refresh)</strong
+                          >
+                        </h3>
+                        <p>
+                          Vite integrates <strong>React Fast Refresh</strong>,
+                          which updates only the modified components.
+                        </p>
+                        <p>If you change:</p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">jsx</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-jsx"><span>function App() {
+  return &lt;h1&gt;Hello Vite! 🚀&lt;/h1&gt;;
+}
+export default App;
+</span></code></div></div></pre>
+                        <p>
+                          Vite patches only this component, and
+                          <strong
+                            >the rest of the React tree remains
+                            untouched</strong
+                          >.
+                        </p>
+                        <p>
+                          ✔ <strong>Preserves hooks and component state</strong
+                          ><br />✔ <strong>No unnecessary re-renders</strong>
+                        </p>
+                        <hr />
+                        <h3>
+                          <strong
+                            >4️⃣ CSS &amp; Style Files (Instant Updates)</strong
+                          >
+                        </h3>
+                        <p>
+                          For <code>.css</code>, <code>.scss</code>,
+                          <code>.less</code>, and <code>.tailwind.css</code>:
+                        </p>
+                        <ul>
+                          <li>
+                            Vite
+                            <strong>injects the new styles dynamically</strong>
+                            into the page <strong>without a reload</strong>.
+                          </li>
+                          <li>Your page updates <strong>instantly</strong>.</li>
+                        </ul>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">css</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-css"><span>body {
+  background-color: blue; /* Instantly updates without a refresh */
+}
+</span></code></div></div></pre>
+                        <p>
+                          ✔ <strong>No page flickering</strong><br />✔
+                          <strong>Changes reflect instantly</strong>
+                        </p>
+                        <hr />
+                        <h2>🚀 <strong>Example: Vite HMR in Action</strong></h2>
+                        <p>
+                          Let’s say we have a <strong>Vue component</strong>:
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">vue</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-vue"><span>&lt;template&gt;
+  &lt;h1&gt;{{ message }}&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return { message: "Hello, Vite! 🚀" };
+  },
+};
+&lt;/script&gt;
+</span></code></div></div></pre>
+                        <h3>
+                          🔄
+                          <strong>Modify the <code>message</code> state</strong>
+                        </h3>
+                        <ul>
+                          <li>
+                            If we change <code>"Hello, Vite! 🚀"</code> to
+                            <code>"Updated Message"</code>, Vite:
+                            <ul>
+                              <li>Detects the change.</li>
+                              <li>Sends an HMR update to the browser.</li>
+                              <li>
+                                Vue updates the component
+                                <strong>without losing reactivity</strong>.
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <hr />
+                        <h2>⚡ <strong>Why is Vite’s HMR So Fast?</strong></h2>
+                        <p>
+                          1️⃣ <strong>Only reloads changed modules</strong
+                          ><br />2️⃣
+                          <strong>Uses WebSockets for instant updates</strong
+                          ><br />3️⃣
+                          <strong
+                            >Leverages esbuild for fast transpilation</strong
+                          ><br />4️⃣
+                          <strong
+                            >Caches results to avoid redundant
+                            processing</strong
+                          ><br />5️⃣
+                          <strong>Keeps application state intact</strong>
+                        </p>
+                        <hr />
+                        <h2>🛠️ <strong>Final Thoughts</strong></h2>
+                        <ul>
+                          <li>
+                            <strong>Vite’s HMR is insanely fast</strong> because
+                            it <strong>skips full page reloads</strong> and
+                            <strong>updates only the affected modules</strong>.
+                          </li>
+                          <li>
+                            It supports
+                            <strong
+                              >Vue, React, Svelte, and CSS updates
+                              out-of-the-box</strong
+                            >.
+                          </li>
+                          <li>
+                            <strong>State is preserved</strong>, making
+                            development much smoother.
+                          </li>
+                        </ul>
+                        <p>
+                          Would you like to see a
+                          <strong>custom example</strong> of how to use HMR with
+                          a specific framework? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="37602c25-d020-4ff4-94cc-9eab036bf188"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How does vite do this for simple js modules?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-9"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="efbd62ec-1ece-457f-9f89-e4c707cdb006"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <h3>
+                          🔥
+                          <strong
+                            >How Vite Patches Simple JavaScript Modules with
+                            HMR</strong
+                          >
+                        </h3>
+                        <p>
+                          Vite's
+                          <strong>Hot Module Replacement (HMR)</strong>
+                          mechanism for
+                          <strong>simple JavaScript modules</strong> relies on
+                          <strong>native ES Modules (ESM)</strong> and
+                          <strong>WebSockets</strong>. Unlike traditional
+                          bundlers like Webpack, Vite does not bundle files in
+                          development; instead, it serves them directly as ES
+                          modules and replaces only the modified ones when
+                          changes occur.
+                        </p>
+                        <hr />
+                        <h2>
+                          🔄
+                          <strong
+                            >Step-by-Step: How Vite Updates JavaScript
+                            Modules</strong
+                          >
+                        </h2>
+                        <p>1️⃣ <strong>File Change Detection</strong></p>
+                        <ul>
+                          <li>
+                            Vite uses <strong>Chokidar</strong> to watch for
+                            changes in JavaScript (<code>.js</code>,
+                            <code>.ts</code>, <code>.mjs</code>) files.
+                          </li>
+                          <li>
+                            When a file is modified, Vite
+                            <strong
+                              >identifies the exact module(s) that need
+                              updating</strong
+                            >.
+                          </li>
+                        </ul>
+                        <p>2️⃣ <strong>Invalidating the Cache</strong></p>
+                        <ul>
+                          <li>
+                            The affected module is
+                            <strong
+                              >removed from Vite’s in-memory module
+                              graph</strong
+                            >.
+                          </li>
+                          <li>
+                            It marks the module as <strong>dirty</strong>, so
+                            the next request fetches the latest version.
+                          </li>
+                        </ul>
+                        <p>
+                          3️⃣ <strong>WebSocket Notifies the Browser</strong>
+                        </p>
+                        <ul>
+                          <li>
+                            The Vite dev server sends an
+                            <strong>HMR update message</strong> via WebSockets
+                            to the browser.
+                          </li>
+                          <li>
+                            The browser receives a message like:
+                            <pre
+                              class="!overflow-visible"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">json</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-json"><span>{
+  "type": "update",
+  "updates": [
+    {
+      "path": "/src/utils.js",
+      "timestamp": 1700000000000
+    }
+  ]
+}
+</span></code></div></div></pre>
+                          </li>
+                        </ul>
+                        <p>
+                          4️⃣
+                          <strong>Browser Requests the Updated Module</strong>
+                        </p>
+                        <ul>
+                          <li>
+                            Instead of reloading the page, the browser
+                            <strong>re-fetches the updated module</strong> from
+                            the dev server.
+                          </li>
+                          <li>
+                            The new module is re-evaluated
+                            <strong>without restarting the whole app</strong>.
+                          </li>
+                        </ul>
+                        <p>
+                          5️⃣ <strong>Applying the Update Dynamically</strong>
+                        </p>
+                        <ul>
+                          <li>
+                            If the module supports
+                            <strong
+                              >HMR
+                              (<code>import.meta.hot.accept()</code>)</strong
+                            >, Vite runs the custom update logic.
+                          </li>
+                          <li>
+                            If the module <strong>does not support HMR</strong>,
+                            Vite <strong>bubbles the update</strong> to its
+                            parent modules.
+                          </li>
+                        </ul>
+                        <hr />
+                        <h2>
+                          🚀
+                          <strong>Example: HMR in a JavaScript Module</strong>
+                        </h2>
+                        <p>
+                          Let's say we have a simple module called
+                          <code>utils.js</code>:
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>export function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+</span></code></div></div></pre>
+                        <h3>
+                          <strong
+                            >1️⃣ Using the Module in <code>main.js</code></strong
+                          >
+                        </h3>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>import { greet } from "./utils.js";
+greet("Vite");
+</span></code></div></div></pre>
+                        <h3>
+                          <strong
+                            >2️⃣ Enabling HMR in <code>utils.js</code></strong
+                          >
+                        </h3>
+                        <p>
+                          Modify <code>utils.js</code> to support
+                          <strong>HMR updates</strong>:
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>export function greet(name) {
+  console.log(`🔥 Updated: Hello, ${name}!`);
+}
+
+// Accept HMR updates
+if (import.meta.hot) {
+  import.meta.hot.accept(() =&gt; {
+    console.log("✅ utils.js updated!");
+  });
+}
+</span></code></div></div></pre>
+                        <h3><strong>3️⃣ Making a Change</strong></h3>
+                        <p>Now, let's change <code>greet</code>:</p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>export function greet(name) {
+  console.log(`🚀 Hey, ${name}! This is Vite HMR.`);
+}
+</span></code></div></div></pre>
+                        <h3><strong>4️⃣ What Happens Next?</strong></h3>
+                        <ul>
+                          <li>
+                            <strong
+                              >Vite detects the change in
+                              <code>utils.js</code></strong
+                            >.
+                          </li>
+                          <li>
+                            <strong>WebSocket notifies the browser</strong> that
+                            an update is available.
+                          </li>
+                          <li>
+                            <strong
+                              >The browser requests the updated
+                              <code>utils.js</code> file</strong
+                            >.
+                          </li>
+                          <li>
+                            <strong
+                              >Vite replaces the old function with the new
+                              one</strong
+                            >
+                            without a full reload.
+                          </li>
+                        </ul>
+                        <hr />
+                        <h2>
+                          📌 <strong>What If HMR is Not Supported?</strong>
+                        </h2>
+                        <p>
+                          If a module <strong>does not include</strong>
+                          <code>import.meta.hot.accept()</code>, Vite
+                          <strong
+                            >bubbles the update to its parent module</strong
+                          >. If no parent module accepts the update,
+                          <strong>the page is reloaded</strong>.
+                        </p>
+                        <h3><strong>Example: Without HMR Handling</strong></h3>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>export function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+</span></code></div></div></pre>
+                        <p>
+                          If <code>greet()</code> is modified, and there’s no
+                          <code>import.meta.hot.accept()</code>, Vite
+                          <strong>bubbles the change up</strong> to
+                          <code>main.js</code>. If <code>main.js</code> also
+                          doesn't handle HMR, the entire page
+                          <strong>reloads</strong>.
+                        </p>
+                        <hr />
+                        <h2>🛠️ <strong>Final Thoughts</strong></h2>
+                        <ul>
+                          <li>
+                            <strong
+                              >Vite’s HMR for JS modules is ultra-fast</strong
+                            >
+                            because it
+                            <strong>only reloads modified modules</strong>
+                            instead of the whole page.
+                          </li>
+                          <li>
+                            <strong
+                              ><code>import.meta.hot.accept()</code></strong
+                            >
+                            lets you handle updates manually.
+                          </li>
+                          <li>
+                            If a module <strong>doesn’t support HMR</strong>,
+                            <strong>Vite bubbles the update</strong> up to
+                            parent modules.
+                          </li>
+                        </ul>
+                        <p>
+                          Would you like to see an example with
+                          <strong>React, Vue, or another framework</strong>? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-10"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="0ee8e568-529e-4bfa-8a99-e3833287231c"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How does vite invalidates the module and then updates
+                          it?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-11"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="9f27b9cc-4842-4813-8556-9be7e38cfef0"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <h3>
+                          🔥
+                          <strong
+                            >How Vite Invalidates and Updates Modules</strong
+                          >
+                        </h3>
+                        <p>
+                          Vite’s
+                          <strong
+                            >module invalidation and update process</strong
+                          >
+                          is key to its
+                          <strong>fast HMR (Hot Module Replacement)</strong>.
+                          Unlike traditional bundlers that
+                          <strong>bundle all files upfront</strong>, Vite serves
+                          files as <strong>native ES modules</strong> and
+                          <strong>updates only the modified ones</strong>
+                          without full page reloads.
+                        </p>
+                        <hr />
+                        <h2>
+                          🔄
+                          <strong
+                            >Step-by-Step: How Vite Invalidates and Updates a
+                            Module</strong
+                          >
+                        </h2>
+                        <p>
+                          Vite follows a <strong>4-step process</strong> to
+                          invalidate and update modules efficiently.
+                        </p>
+                        <h3><strong>1️⃣ Detecting File Changes</strong></h3>
+                        <ul>
+                          <li>
+                            Vite uses <strong>Chokidar</strong> (a file watcher)
+                            to monitor changes in the file system.
+                          </li>
+                          <li>
+                            When a file (e.g., <code>utils.js</code>) is
+                            modified, Vite
+                            <strong>identifies the exact module</strong> that
+                            has changed.
+                          </li>
+                          <li>
+                            It does
+                            <strong>not bundle anything upfront</strong
+                            >—instead, it marks the module as
+                            <strong>"dirty"</strong>.
+                          </li>
+                        </ul>
+                        <h3>
+                          <strong
+                            >2️⃣ Invalidating the Module (Removing from
+                            Cache)</strong
+                          >
+                        </h3>
+                        <ul>
+                          <li>
+                            Vite maintains an
+                            <strong>in-memory module graph</strong> that tracks
+                            imports and dependencies.
+                          </li>
+                          <li>
+                            When a module changes, Vite
+                            <strong>removes it from the module cache</strong>.
+                          </li>
+                          <li>
+                            The invalidation process:
+                            <ol>
+                              <li>Finds the modified module.</li>
+                              <li>Removes it from the cache.</li>
+                              <li>
+                                Marks it as "dirty" so the next request fetches
+                                the latest version.
+                              </li>
+                            </ol>
+                          </li>
+                        </ul>
+                        <p>
+                          🔹 <strong>Example: Invalidating a module</strong>
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>const moduleCache = new Map();
+
+function invalidateModule(id) {
+  if (moduleCache.has(id)) {
+    console.log(`♻️ Invalidating module: ${id}`);
+    moduleCache.delete(id);
+  }
+}
+</span></code></div></div></pre>
+                        <ul>
+                          <li>
+                            If <code>utils.js</code> changes, Vite removes it
+                            from <code>moduleCache</code>, ensuring the next
+                            import fetches the latest version.
+                          </li>
+                        </ul>
+                        <h3>
+                          <strong
+                            >3️⃣ WebSocket Sends HMR Update to the
+                            Browser</strong
+                          >
+                        </h3>
+                        <ul>
+                          <li>
+                            Once a module is invalidated, Vite
+                            <strong>notifies the browser via WebSockets</strong
+                            >.
+                          </li>
+                          <li>
+                            The message includes:
+                            <ul>
+                              <li>
+                                The affected module’s path
+                                (<code>/src/utils.js</code>)
+                              </li>
+                              <li>A timestamp to track changes</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <p>
+                          🔹
+                          <strong
+                            >Example WebSocket Message Sent to Browser</strong
+                          >
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">json</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-json"><span>{
+  "type": "update",
+  "updates": [
+    {
+      "path": "/src/utils.js",
+      "timestamp": 1700000000000
+    }
+  ]
+}
+</span></code></div></div></pre>
+                        <ul>
+                          <li>
+                            The browser listens for this message and
+                            <strong>requests the updated module</strong>.
+                          </li>
+                        </ul>
+                        <h3>
+                          <strong>4️⃣ Updating the Module in the Browser</strong>
+                        </h3>
+                        <ul>
+                          <li>
+                            When the browser receives the update notification:
+                            <ol>
+                              <li>
+                                It <strong>re-fetches</strong> the new version
+                                of <code>utils.js</code> from Vite's dev server.
+                              </li>
+                              <li>
+                                If <code>import.meta.hot.accept()</code> is
+                                present, the new module
+                                <strong>replaces the old one dynamically</strong
+                                >.
+                              </li>
+                              <li>
+                                If HMR is not handled, Vite
+                                <strong
+                                  >bubbles the update to parent modules</strong
+                                >
+                                or triggers a full reload.
+                              </li>
+                            </ol>
+                          </li>
+                        </ul>
+                        <p>
+                          🔹
+                          <strong>Example: Handling HMR in JavaScript</strong>
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>export function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(() =&gt; {
+    console.log("✅ utils.js updated!");
+  });
+}
+</span></code></div></div></pre>
+                        <ul>
+                          <li>
+                            When <code>utils.js</code> changes, Vite
+                            <strong>replaces it in memory</strong> without a
+                            full page reload.
+                          </li>
+                          <li>
+                            The <code>import.meta.hot.accept()</code> callback
+                            runs to apply the update
+                            <strong>without losing state</strong>.
+                          </li>
+                        </ul>
+                        <hr />
+                        <h2>
+                          📌
+                          <strong
+                            >What If a Module Cannot Be Hot Updated?</strong
+                          >
+                        </h2>
+                        <ul>
+                          <li>
+                            If a module <strong>doesn’t support HMR</strong>,
+                            Vite
+                            <strong
+                              >bubbles the update to its parent module</strong
+                            >.
+                          </li>
+                          <li>
+                            If no parent module can handle the update,
+                            <strong>Vite reloads the entire page</strong>.
+                          </li>
+                        </ul>
+                        <p>🔹 <strong>Example: Bubbling HMR Updates</strong></p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>import { greet } from "./utils.js";
+greet("Vite");
+</span></code></div></div></pre>
+                        <ul>
+                          <li>
+                            If <code>utils.js</code> updates
+                            <strong>but doesn’t handle HMR</strong>, Vite checks
+                            if <code>main.js</code> can accept the update.
+                          </li>
+                          <li>
+                            If <code>main.js</code> doesn’t handle HMR either,
+                            the page <strong>fully reloads</strong>.
+                          </li>
+                        </ul>
+                        <hr />
+                        <h2>⚡ <strong>Why Vite’s HMR is So Fast?</strong></h2>
+                        <p>
+                          ✅
+                          <strong>Only invalidates modified modules</strong>
+                          (not the entire app).<br />✅
+                          <strong>Uses WebSockets for instant updates</strong>
+                          (no polling).<br />✅
+                          <strong
+                            >Leverages ES Modules for quick module
+                            replacement</strong
+                          >.<br />✅
+                          <strong
+                            >Caches dependencies to avoid reloading unchanged
+                            files</strong
+                          >.
+                        </p>
+                        <hr />
+                        <h2>🛠️ <strong>Final Thoughts</strong></h2>
+                        <ul>
+                          <li>
+                            Vite <strong>invalidates a module</strong> by
+                            <strong
+                              >removing it from memory and notifying the
+                              browser</strong
+                            >.
+                          </li>
+                          <li>
+                            The browser
+                            <strong>requests the updated module</strong> and
+                            applies it dynamically.
+                          </li>
+                          <li>
+                            If a module <strong>cannot be patched</strong>, Vite
+                            <strong>bubbles the update</strong> or
+                            <strong>reloads the page</strong>.
+                          </li>
+                        </ul>
+                        <p>
+                          Would you like to see an example with
+                          <strong>React, Vue, or another framework</strong>? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-12"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="53d85707-2689-46a3-9413-a5c28dfb0644"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How does the client side code update the invalidated
+                          module?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-13"
+        data-scroll-anchor="true"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="890047ad-1d20-43da-9138-cb1d94f15c42"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <h3>
+                          🔄
+                          <strong
+                            >How Vite’s Client Side Code Updates an Invalidated
+                            Module</strong
+                          >
+                        </h3>
+                        <p>
+                          When a module is modified in Vite, the
+                          <strong>client-side code</strong> receives a
+                          notification via <strong>WebSockets</strong>,
+                          invalidates the module from the cache, and updates it
+                          without reloading the page.
+                        </p>
+                        <p>
+                          Let’s break down
+                          <strong
+                            >how the client-side updates the invalidated module
+                            step by step</strong
+                          >. 🚀
+                        </p>
+                        <hr />
+                        <h2>
+                          🔥
+                          <strong
+                            >Step-by-Step: How Vite’s Client Handles Module
+                            Updates</strong
+                          >
+                        </h2>
+                        <h3>
+                          <strong>1️⃣ WebSocket Connection for HMR</strong>
+                        </h3>
+                        <ul>
+                          <li>
+                            When the Vite dev server starts, the browser
+                            <strong>automatically connects</strong> to the
+                            server via <strong>WebSockets</strong>.
+                          </li>
+                          <li>
+                            This connection allows the server to send
+                            <strong>HMR updates</strong> in real-time.
+                          </li>
+                        </ul>
+                        <p>
+                          🔹
+                          <strong
+                            >Client-side WebSocket Connection
+                            (<code>vite/client.js</code>)</strong
+                          >
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>const socket = new WebSocket(`ws://${location.host}`, "vite-hmr");
+
+// Listen for messages from Vite's dev server
+socket.addEventListener("message", async ({ data }) =&gt; {
+  const payload = JSON.parse(data);
+  
+  if (payload.type === "update") {
+    console.log("🔄 Module update received:", payload.updates);
+    applyUpdates(payload.updates);
+  }
+});
+</span></code></div></div></pre>
+                        <ul>
+                          <li>The client listens for HMR messages.</li>
+                          <li>
+                            When an <code>update</code> event is received, it
+                            triggers <code>applyUpdates()</code> to handle the
+                            changed modules.
+                          </li>
+                        </ul>
+                        <hr />
+                        <h3>
+                          <strong>2️⃣ Requesting the Updated Module</strong>
+                        </h3>
+                        <ul>
+                          <li>
+                            After receiving an update notification, the client
+                            <strong>requests the latest version</strong> of the
+                            invalidated module.
+                          </li>
+                          <li>
+                            The request includes a
+                            <strong>cache-busting timestamp</strong> to force
+                            the browser to fetch the new version.
+                          </li>
+                        </ul>
+                        <p>🔹 <strong>Fetching the New Module</strong></p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>async function applyUpdates(updates) {
+  for (const update of updates) {
+    const updatedModulePath = `${update.path}?t=${update.timestamp}`;
+    console.log(`📦 Fetching updated module: ${updatedModulePath}`);
+
+    // Fetch and execute the updated module
+    const newModule = await import(updatedModulePath);
+    handleModuleUpdate(update.path, newModule);
+  }
+}
+</span></code></div></div></pre>
+                        <ul>
+                          <li>
+                            The browser fetches the updated module
+                            <strong>without reloading</strong>.
+                          </li>
+                          <li>
+                            The <code>import()</code> statement dynamically
+                            loads the new module.
+                          </li>
+                        </ul>
+                        <hr />
+                        <h3>
+                          <strong>3️⃣ Updating the Module in Memory</strong>
+                        </h3>
+                        <ul>
+                          <li>
+                            Once the new module is loaded,
+                            <strong>Vite replaces it in the module graph</strong
+                            >.
+                          </li>
+                          <li>
+                            If the module supports
+                            <strong
+                              >HMR
+                              (<code>import.meta.hot.accept()</code>)</strong
+                            >, Vite
+                            <strong>calls the module’s update function</strong>.
+                          </li>
+                        </ul>
+                        <p>🔹 <strong>Applying the New Module</strong></p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>const moduleCache = new Map();
+
+function handleModuleUpdate(path, newModule) {
+  if (moduleCache.has(path)) {
+    console.log(`♻️ Applying HMR update for ${path}`);
+    const oldModule = moduleCache.get(path);
+
+    // Call the module’s HMR accept function
+    if (oldModule.hot &amp;&amp; oldModule.hot.acceptCallback) {
+      oldModule.hot.acceptCallback(newModule);
+    }
+
+    // Update module cache
+    moduleCache.set(path, newModule);
+  }
+}
+</span></code></div></div></pre>
+                        <ul>
+                          <li>
+                            If the module is in cache, it
+                            <strong
+                              >replaces the old version with the new one</strong
+                            >.
+                          </li>
+                          <li>
+                            If the module has an
+                            <strong>HMR accept function</strong>, it
+                            <strong>runs that function</strong> to apply the
+                            update.
+                          </li>
+                        </ul>
+                        <hr />
+                        <h3>
+                          <strong>4️⃣ Running the HMR Accept Callback</strong>
+                        </h3>
+                        <ul>
+                          <li>
+                            If a module
+                            <strong>explicitly supports HMR</strong>, it
+                            <strong
+                              >defines an <code>accept</code> callback</strong
+                            >.
+                          </li>
+                          <li>
+                            This callback
+                            <strong>runs when the module updates</strong>.
+                          </li>
+                        </ul>
+                        <p>
+                          🔹
+                          <strong
+                            >Example: HMR Accepting a Module Update</strong
+                          >
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>export function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+// HMR: Accept module updates
+if (import.meta.hot) {
+  import.meta.hot.accept((newModule) =&gt; {
+    console.log("✅ Module updated:", newModule);
+  });
+}
+</span></code></div></div></pre>
+                        <ul>
+                          <li>
+                            When <code>greet()</code> is modified:
+                            <ol>
+                              <li>The new module is fetched.</li>
+                              <li>
+                                The <code>accept()</code> callback
+                                <strong
+                                  >runs with the new module instance</strong
+                                >.
+                              </li>
+                              <li>
+                                The
+                                <strong
+                                  >module updates dynamically without a page
+                                  reload</strong
+                                >.
+                              </li>
+                            </ol>
+                          </li>
+                        </ul>
+                        <hr />
+                        <h3>
+                          <strong
+                            >5️⃣ Bubbling Updates if HMR is Not Supported</strong
+                          >
+                        </h3>
+                        <ul>
+                          <li>
+                            If a module <strong>does not handle HMR</strong>,
+                            Vite <strong>bubbles the update</strong> to its
+                            parent module.
+                          </li>
+                          <li>
+                            If no parent module accepts the update,
+                            <strong>Vite reloads the page</strong>.
+                          </li>
+                        </ul>
+                        <p>🔹 <strong>Example: Bubbling Updates</strong></p>
+                        <pre
+                          class="!overflow-visible"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">js</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-js"><span>import { greet } from "./utils.js";
+greet("Vite");
+
+// No HMR handling in utils.js, so it bubbles up to main.js
+if (import.meta.hot) {
+  import.meta.hot.accept(() =&gt; {
+    console.log("🌍 Main.js updated!");
+  });
+}
+</span></code></div></div></pre>
+                        <hr />
+                        <h2>
+                          🔄
+                          <strong
+                            >Summary: How the Client Updates an Invalidated
+                            Module</strong
+                          >
+                        </h2>
+                        <p>
+                          1️⃣
+                          <strong
+                            >Vite’s WebSocket Server Detects Changes</strong
+                          >
+                        </p>
+                        <ul>
+                          <li>
+                            The dev server
+                            <strong>detects a file change</strong> and
+                            <strong>notifies the browser</strong>.
+                          </li>
+                        </ul>
+                        <p>
+                          2️⃣
+                          <strong>Browser Receives Update Notification</strong>
+                        </p>
+                        <ul>
+                          <li>
+                            The browser
+                            <strong>receives a WebSocket message</strong> with
+                            the list of changed modules.
+                          </li>
+                        </ul>
+                        <p>
+                          3️⃣ <strong>Browser Fetches the Updated Module</strong>
+                        </p>
+                        <ul>
+                          <li>
+                            The client
+                            <strong
+                              >requests the new module with a timestamp</strong
+                            >
+                            to prevent caching.
+                          </li>
+                        </ul>
+                        <p>4️⃣ <strong>Module Cache is Updated</strong></p>
+                        <ul>
+                          <li>
+                            The new module
+                            <strong>replaces the old one in memory</strong>.
+                          </li>
+                        </ul>
+                        <p>
+                          5️⃣ <strong>HMR Callback Runs (If Available)</strong>
+                        </p>
+                        <ul>
+                          <li>
+                            If the module <strong>supports HMR</strong>, Vite
+                            <strong
+                              >runs its <code>accept()</code> function</strong
+                            >.
+                          </li>
+                        </ul>
+                        <p>
+                          6️⃣
+                          <strong
+                            >If HMR is Not Supported, Update Bubbles Up</strong
+                          >
+                        </p>
+                        <ul>
+                          <li>
+                            If no parent module handles the update,
+                            <strong>the page reloads</strong>.
+                          </li>
+                        </ul>
+                        <hr />
+                        <h2>⚡ <strong>Why Vite’s HMR is So Fast?</strong></h2>
+                        <p>
+                          ✅ <strong>Only updates changed modules</strong> (not
+                          the entire app).<br />✅
+                          <strong
+                            >Uses native ES modules
+                            (<code>import()</code>)</strong
+                          >
+                          to fetch updates dynamically.<br />✅
+                          <strong
+                            >Caches unchanged modules for instant
+                            reloads</strong
+                          >.<br />✅
+                          <strong
+                            >WebSockets push updates instantly (no polling
+                            needed).</strong
+                          ><br />✅
+                          <strong
+                            >Preserves app state by replacing only modified
+                            modules.</strong
+                          >
+                        </p>
+                        <hr />
+                        <h2>🛠 <strong>Final Thoughts</strong></h2>
+                        <ul>
+                          <li>
+                            Vite’s client-side HMR
+                            <strong
+                              >uses WebSockets + native ES module
+                              imports</strong
+                            >
+                            for ultra-fast updates.
+                          </li>
+                          <li>
+                            <strong>No bundling is required</strong> in
+                            development, making updates almost
+                            <strong>instant</strong>.
+                          </li>
+                          <li>
+                            If a module does not support HMR,
+                            <strong>Vite bubbles updates</strong> or reloads the
+                            page.
+                          </li>
+                        </ul>
+                        <p>
+                          Would you like a
+                          <strong>real-world example</strong> with React, Vue,
+                          or another framework? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
