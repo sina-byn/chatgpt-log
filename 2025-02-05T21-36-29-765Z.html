@@ -1,0 +1,211 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>What is RTOS</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="3bb5e6b0-2620-4ca3-aaf9-311abbd51555"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          what is a real-time os?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="true"
+      >
+        <div
+          class="m-auto text-base py-[18px] px-3 md:px-4 w-full md:px-5 lg:px-4 xl:px-5"
+        >
+          <div
+            class="mx-auto flex flex-1 gap-4 text-base md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div>
+                <div class="pt-0">
+                  <div
+                    class="gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                  >
+                    <div
+                      class="relative p-1 rounded-sm flex items-center justify-center bg-token-main-surface-primary text-token-text-primary h-8 w-8"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn px-4 @xs/thread:px-0 @sm/thread:px-1.5"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="5977b5b2-3834-4014-9ef6-d0354c49b866"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p>
+                          A
+                          <strong>Real-Time Operating System (RTOS)</strong> is
+                          an operating system designed to process data and
+                          execute tasks within strict time constraints. Unlike
+                          general-purpose operating systems (such as Windows,
+                          Linux, or macOS), which prioritize maximizing
+                          throughput and resource utilization, an RTOS is
+                          optimized for predictability and
+                          <strong>deterministic</strong> behavior.
+                        </p>
+                        <h3>
+                          <strong>Key Characteristics of an RTOS:</strong>
+                        </h3>
+                        <ol>
+                          <li>
+                            <strong>Deterministic Behavior</strong> – Guarantees
+                            task execution within a predefined time frame.
+                          </li>
+                          <li>
+                            <strong>Low Latency</strong> – Responds quickly to
+                            external events, making it ideal for time-sensitive
+                            applications.
+                          </li>
+                          <li>
+                            <strong>Task Prioritization</strong> – Uses
+                            priority-based scheduling to ensure critical tasks
+                            execute first.
+                          </li>
+                          <li>
+                            <strong>Minimal Jitter</strong> – Ensures
+                            consistency in execution time, reducing variability
+                            in response times.
+                          </li>
+                          <li>
+                            <strong>Efficient Resource Management</strong> –
+                            Optimizes CPU, memory, and I/O operations for
+                            real-time performance.
+                          </li>
+                        </ol>
+                        <h3>
+                          <strong>Types of Real-Time Operating Systems:</strong>
+                        </h3>
+                        <ol>
+                          <li>
+                            <strong>Hard Real-Time OS</strong> – Missing a
+                            deadline leads to catastrophic failure (e.g.,
+                            avionics, medical devices, nuclear reactors).
+                          </li>
+                          <li>
+                            <strong>Soft Real-Time OS</strong> – Occasional
+                            deadline misses are tolerable but affect performance
+                            (e.g., video streaming, gaming).
+                          </li>
+                          <li>
+                            <strong>Firm Real-Time OS</strong> – Deadlines are
+                            important but missing them doesn't cause failure,
+                            only a degradation in quality (e.g., industrial
+                            automation).
+                          </li>
+                        </ol>
+                        <h3><strong>Examples of RTOS:</strong></h3>
+                        <ul>
+                          <li>FreeRTOS</li>
+                          <li>VxWorks</li>
+                          <li>QNX</li>
+                          <li>RTEMS</li>
+                          <li>Zephyr</li>
+                          <li>Windows CE (for embedded applications)</li>
+                        </ul>
+                        <h3><strong>Where is RTOS Used?</strong></h3>
+                        <ul>
+                          <li>
+                            <strong>Embedded Systems</strong> (e.g., automotive
+                            ECUs, industrial robots)
+                          </li>
+                          <li>
+                            <strong>Medical Devices</strong> (e.g., pacemakers,
+                            MRI scanners)
+                          </li>
+                          <li>
+                            <strong>Aerospace &amp; Defense</strong> (e.g.,
+                            missile guidance, spacecraft control)
+                          </li>
+                          <li>
+                            <strong>Telecommunications</strong> (e.g., real-time
+                            signal processing)
+                          </li>
+                          <li>
+                            <strong>Consumer Electronics</strong> (e.g., smart
+                            TVs, wearables)
+                          </li>
+                        </ul>
+                        <p>
+                          RTOS ensures that systems operate reliably under
+                          strict timing constraints, making them essential for
+                          <strong
+                            >mission-critical and embedded applications</strong
+                          >.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
