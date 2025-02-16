@@ -60,8 +60,6 @@ const filter = async onBeforeCommit => {
   createBranch();
   if (!isBranchActive()) throw new Error("Failed switching to branch 'gh-pages'");
 
-  execSync('git pull origin gh-pages');
-
   const htmlRegex = /\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}-\d{3}Z\.html/;
   const paths = fs.readdirSync('.');
 
