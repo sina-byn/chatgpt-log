@@ -2,6 +2,8 @@
 
 const logGPT = require('../src');
 
+const { execSync } = require('child_process');
+
 // * prompts
 const prompts = require('prompts');
 
@@ -30,6 +32,11 @@ program
 
 process.on('uncaughtException', error => {
   log.error(error);
+
+  execSync('git restore --staged .');
+  execSync('git restore .');
+  execSync('git switch main');
+
   process.exit();
 });
 
