@@ -1,0 +1,530 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Git Change Commit Messages</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div class="m-auto text-base py-[18px] px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="d6c4d9a0-5501-4a5d-ac89-245eb6fb0547"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How to change commit message for the latest commit?
+                        </div>
+                        <div
+                          class="absolute bottom-0 right-full top-0 -mr-3.5 hidden pr-5 pt-2 [.group\/conversation-turn:hover_&amp;]:flex"
+                        >
+                          <div class="flex">
+                            <span class="" data-state="closed"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div class="m-auto text-base py-[18px] px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="63dca90a-1177-4e91-9422-09cf3242dca6"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="84">
+                          You can change the commit message for the latest
+                          commit using the following command:
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="86"
+                          data-end="138"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-[5px] h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>git commit --amend -m "New commit message"
+</span></code></div></div></pre>
+                        <h3 data-start="140" data-end="160">
+                          Important Notes:
+                        </h3>
+                        <ul data-start="161" data-end="491">
+                          <li data-start="161" data-end="249">
+                            <p data-start="163" data-end="249">
+                              If you have
+                              <strong data-start="175" data-end="189"
+                                >not pushed</strong
+                              >
+                              the commit yet, this will simply update the commit
+                              message.
+                            </p>
+                          </li>
+                          <li data-start="250" data-end="491">
+                            <p data-start="252" data-end="339">
+                              If you have
+                              <strong data-start="264" data-end="282"
+                                >already pushed</strong
+                              >
+                              the commit, you will need to
+                              <strong data-start="312" data-end="326"
+                                >force push</strong
+                              >
+                              the changes:
+                            </p>
+                            <pre
+                              class="!overflow-visible"
+                              data-start="343"
+                              data-end="373"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-[5px] h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>git push --force
+</span></code></div></div></pre>
+                            <p data-start="377" data-end="491">
+                              ⚠
+                              <strong data-start="379" data-end="391"
+                                >Warning:</strong
+                              >
+                              Force pushing can rewrite history, which may cause
+                              issues if others have already pulled the commit.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="493" data-end="564" data-is-last-node="">
+                          Would you like instructions on modifying older commit
+                          messages as well?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div class="m-auto text-base py-[18px] px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="672eb21a-1f07-4eef-9d03-902f39513736"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How to do it for multiple commits?
+                        </div>
+                        <div
+                          class="absolute bottom-0 right-full top-0 -mr-3.5 hidden pr-5 pt-2 [.group\/conversation-turn:hover_&amp;]:flex"
+                        >
+                          <div class="flex">
+                            <span class="" data-state="closed"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div class="m-auto text-base py-[18px] px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="8598d78f-f858-4baa-b0b3-d290380e2c02"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o-mini"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="95">
+                          To change commit messages for multiple commits, you
+                          can use
+                          <strong data-start="60" data-end="82"
+                            >interactive rebase</strong
+                          >. Here's how:
+                        </p>
+                        <ol data-start="97" data-end="1198">
+                          <li data-start="97" data-end="312">
+                            <p data-start="100" data-end="155">
+                              <strong data-start="100" data-end="131"
+                                >Start an interactive rebase</strong
+                              >
+                              for the last N commits:
+                            </p>
+                            <pre
+                              class="!overflow-visible"
+                              data-start="160"
+                              data-end="196"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-[5px] h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>git rebase -i HEAD~N
+</span></code></div></div></pre>
+                            <p data-start="201" data-end="312">
+                              Replace
+                              <code data-start="209" data-end="212">N</code>
+                              with the number of commits you want to edit. For
+                              example, to edit the last 3 commits, use
+                              <code data-start="303" data-end="311">HEAD~3</code
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="314" data-end="511">
+                            <p data-start="317" data-end="400">
+                              This will open an editor showing a list of
+                              commits. You'll see something like this:
+                            </p>
+                            <pre
+                              class="!overflow-visible"
+                              data-start="405"
+                              data-end="511"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-[5px] h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none"></div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre"><span>pick abc123 Commit message 1
+pick def456 Commit message 2
+pick ghi789 Commit message 3
+</span></code></div></div></pre>
+                          </li>
+                          <li data-start="513" data-end="707">
+                            <p data-start="516" data-end="592">
+                              Change
+                              <code data-start="523" data-end="529">pick</code>
+                              to
+                              <code data-start="533" data-end="541"
+                                >reword</code
+                              >
+                              for the commits whose messages you want to change:
+                            </p>
+                            <pre
+                              class="!overflow-visible"
+                              data-start="597"
+                              data-end="707"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-[5px] h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none"></div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre"><span>reword abc123 Commit message 1
+reword def456 Commit message 2
+pick ghi789 Commit message 3
+</span></code></div></div></pre>
+                          </li>
+                          <li data-start="709" data-end="834">
+                            <p data-start="712" data-end="834">
+                              Save and close the editor. Git will now pause at
+                              each commit marked for rewording and open the
+                              commit message for editing.
+                            </p>
+                          </li>
+                          <li data-start="836" data-end="888">
+                            <p data-start="839" data-end="888">
+                              <strong data-start="839" data-end="867"
+                                >Edit each commit message</strong
+                              >
+                              as desired and save.
+                            </p>
+                          </li>
+                          <li data-start="890" data-end="981">
+                            <p data-start="893" data-end="981">
+                              Once you've edited all the messages, Git will
+                              reapply the commits with the new messages.
+                            </p>
+                          </li>
+                          <li data-start="983" data-end="1198">
+                            <p data-start="986" data-end="1056">
+                              If you've already pushed these commits, you'll
+                              need to
+                              <strong data-start="1041" data-end="1055"
+                                >force push</strong
+                              >:
+                            </p>
+                            <pre
+                              class="!overflow-visible"
+                              data-start="1061"
+                              data-end="1093"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-[5px] h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>git push --force
+</span></code></div></div></pre>
+                            <p data-start="1098" data-end="1198">
+                              Again, be cautious when force pushing to avoid
+                              causing issues for others working on the same
+                              branch.
+                            </p>
+                          </li>
+                        </ol>
+                        <p
+                          data-start="1200"
+                          data-end="1260"
+                          data-is-last-node=""
+                        >
+                          Let me know if you need further clarification or
+                          assistance!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div class="m-auto text-base py-[18px] px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="6504bf3d-8fac-4578-b92c-3ac0d1dc2529"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How to use a commit hash inside the rebase -i?
+                        </div>
+                        <div
+                          class="absolute bottom-0 right-full top-0 -mr-3.5 hidden pr-5 pt-2 [.group\/conversation-turn:hover_&amp;]:flex"
+                        >
+                          <div class="flex">
+                            <span class="" data-state="closed"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary focus-visible:outline-2 focus-visible:outline-offset-[-4px]"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="true"
+      >
+        <div class="m-auto text-base py-[18px] px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="02940cee-f94b-47c2-893d-a0317778410f"
+                    dir="auto"
+                    class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o-mini"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="166">
+                          To use a specific commit hash inside an interactive
+                          rebase (<code data-start="60" data-end="75"
+                            >git rebase -i</code
+                          >), you can specify the commit hash directly in place
+                          of
+                          <code data-start="131" data-end="139">HEAD~N</code>.
+                          Here's how you can do it:
+                        </p>
+                        <ol data-start="168" data-end="1015">
+                          <li data-start="168" data-end="609">
+                            <p data-start="171" data-end="226">
+                              <strong data-start="171" data-end="203"
+                                >Start the interactive rebase</strong
+                              >
+                              using the commit hash:
+                            </p>
+                            <pre
+                              class="!overflow-visible"
+                              data-start="231"
+                              data-end="275"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-[5px] h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>git rebase -i &lt;commit-hash&gt;^
+</span></code></div></div></pre>
+                            <ul data-start="280" data-end="503">
+                              <li data-start="280" data-end="357">
+                                Replace
+                                <code data-start="290" data-end="305"
+                                  >&lt;commit-hash&gt;</code
+                                >
+                                with the hash of the commit you want to start
+                                from.
+                              </li>
+                              <li data-start="361" data-end="503">
+                                The
+                                <code data-start="367" data-end="370">^</code>
+                                symbol means "the commit before the one you
+                                specified," so the rebase will include the
+                                commit you specify and all the ones after it.
+                              </li>
+                            </ul>
+                            <p data-start="508" data-end="567">
+                              For example, if the commit hash is
+                              <code data-start="543" data-end="551">abc123</code
+                              >, you would run:
+                            </p>
+                            <pre
+                              class="!overflow-visible"
+                              data-start="572"
+                              data-end="609"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-[5px] h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>git rebase -i abc123^
+</span></code></div></div></pre>
+                          </li>
+                          <li data-start="611" data-end="808">
+                            <p data-start="614" data-end="808">
+                              This opens the interactive rebase editor. It will
+                              show the list of commits starting from the one you
+                              specified, and you can mark them with
+                              <code data-start="753" data-end="759">pick</code>
+                              or
+                              <code data-start="763" data-end="771"
+                                >reword</code
+                              >
+                              to change commit messages as needed.
+                            </p>
+                          </li>
+                          <li data-start="810" data-end="884">
+                            <p data-start="813" data-end="884">
+                              <strong data-start="813" data-end="834"
+                                >Make your changes</strong
+                              >, save, and close the editor as described
+                              earlier.
+                            </p>
+                          </li>
+                          <li data-start="886" data-end="1015">
+                            <p data-start="889" data-end="978">
+                              If you need to force-push after the rebase (if
+                              you've already pushed these commits), use:
+                            </p>
+                            <pre
+                              class="!overflow-visible"
+                              data-start="983"
+                              data-end="1015"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-[5px] h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none">sh</div><div class="sticky top-9 md:top-[5.75rem]"><div class="absolute bottom-0 right-2 flex h-9 items-center"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-sh"><span>git push --force
+</span></code></div></div></pre>
+                          </li>
+                        </ol>
+                        <p
+                          data-start="1017"
+                          data-end="1097"
+                          data-is-last-node=""
+                        >
+                          This way, you're able to rebase from any arbitrary
+                          commit by providing its hash.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
