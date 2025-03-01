@@ -49,6 +49,8 @@ const createBranch = () => {
   if (!hasLocalBranch && hasRemoteBranch) execSync('git fetch origin gh-pages:gh-pages');
 
   execSync(`git switch ${flag} gh-pages`);
+
+  return branchLog;
 };
 
 const isBranchActive = () => {
@@ -57,8 +59,11 @@ const isBranchActive = () => {
 };
 
 const filter = async onBeforeCommit => {
-  createBranch();
+  const branchLog = createBranch();
   if (!isBranchActive()) throw new Error("Failed switching to branch 'gh-pages'");
+
+  const hasRemoteBranch = branchLog.includes('remotes/origin/gh-pages');
+  if (hasRemoteBranch) execSync('git pull origin gh-pages');
 
   const htmlRegex = /\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}-\d{3}Z\.html/;
   const paths = fs.readdirSync('.');
