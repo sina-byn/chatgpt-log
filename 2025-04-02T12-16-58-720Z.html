@@ -1,0 +1,1259 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Blob in JS</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="29bcc643-d779-49cb-9b52-948f21fd8b87"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            Explain the Blob in js to me
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="e0b1c9a7-8ac9-4ba6-9302-b3e05e7f9761"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o-mini"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="352" class="">
+                          In JavaScript, a
+                          <strong data-start="17" data-end="25">Blob</strong>
+                          (short for Binary Large Object) is a data structure
+                          that represents raw binary data. It's an object used
+                          to handle and manipulate binary data, such as files or
+                          media content (images, videos, etc.). Unlike strings
+                          or arrays, Blobs do not contain the data directly but
+                          provide a way to work with data of unknown content or
+                          size.
+                        </p>
+                        <h3 data-start="354" data-end="379" class="">
+                          Key Features of Blob:
+                        </h3>
+                        <ol data-start="380" data-end="929">
+                          <li data-start="380" data-end="559" class="">
+                            <p data-start="383" data-end="559" class="">
+                              <strong data-start="383" data-end="403"
+                                >Raw Data Storage</strong
+                              >: A Blob is primarily used to represent binary
+                              data that might not be in a human-readable format,
+                              such as image files, video files, or other binary
+                              streams.
+                            </p>
+                          </li>
+                          <li data-start="564" data-end="740" class="">
+                            <p data-start="567" data-end="617" class="">
+                              <strong data-start="567" data-end="584"
+                                >Size and Type</strong
+                              >: Blobs have two main properties:
+                            </p>
+                            <ul data-start="621" data-end="740">
+                              <li data-start="621" data-end="661" class="">
+                                <p data-start="623" data-end="661" class="">
+                                  <code data-start="623" data-end="629"
+                                    >size</code
+                                  >: The size of the Blob in bytes.
+                                </p>
+                              </li>
+                              <li data-start="665" data-end="740" class="">
+                                <p data-start="667" data-end="740" class="">
+                                  <code data-start="667" data-end="673"
+                                    >type</code
+                                  >: The MIME type of the Blob (e.g.,
+                                  <code data-start="708" data-end="719"
+                                    >image/png</code
+                                  >,
+                                  <code data-start="721" data-end="738"
+                                    >application/pdf</code
+                                  >).
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="742" data-end="929" class="">
+                            <p data-start="745" data-end="929" class="">
+                              <strong data-start="745" data-end="761"
+                                >Immutability</strong
+                              >: Once created, the data in a Blob is immutable,
+                              meaning you can't modify the Blob directly. You
+                              can only create a new Blob from existing data if
+                              you need to change it.
+                            </p>
+                          </li>
+                        </ol>
+                        <h3 data-start="931" data-end="947" class="">
+                          Common Uses:
+                        </h3>
+                        <ul data-start="948" data-end="1519">
+                          <li data-start="948" data-end="1143" class="">
+                            <p data-start="950" data-end="1143" class="">
+                              <strong data-start="950" data-end="968"
+                                >Handling Files</strong
+                              >: Blobs are often used to work with files
+                              uploaded from the user's device. For example, when
+                              a user selects a file via an
+                              <code data-start="1090" data-end="1111"
+                                >&lt;input type="file"&gt;</code
+                              >, it gets represented as a Blob.
+                            </p>
+                          </li>
+                          <li data-start="1147" data-end="1296" class="">
+                            <p data-start="1149" data-end="1296" class="">
+                              <strong data-start="1149" data-end="1183"
+                                >Uploading and Downloading Data</strong
+                              >: Blobs can be used to send data in binary format
+                              to a server via AJAX or
+                              <code data-start="1257" data-end="1264"
+                                >fetch</code
+                              >, or to download binary content.
+                            </p>
+                          </li>
+                          <li data-start="1298" data-end="1519" class="">
+                            <p data-start="1300" data-end="1519" class="">
+                              <strong data-start="1300" data-end="1324"
+                                >Creating Object URLs</strong
+                              >: You can create an
+                              <strong data-start="1344" data-end="1358"
+                                >object URL</strong
+                              >
+                              from a Blob to represent it as a URL that can be
+                              used in
+                              <code data-start="1416" data-end="1423"
+                                >&lt;img&gt;</code
+                              >,
+                              <code data-start="1425" data-end="1430"
+                                >&lt;a&gt;</code
+                              >, or
+                              <code data-start="1435" data-end="1444"
+                                >&lt;video&gt;</code
+                              >
+                              tags. This is often done to display images or
+                              videos directly from memory.
+                            </p>
+                          </li>
+                        </ul>
+                        <h3 data-start="1521" data-end="1533" class="">
+                          Example:
+                        </h3>
+                        <p data-start="1534" data-end="1589" class="">
+                          Here's a basic example of how to create and use a
+                          Blob:
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="1591"
+                          data-end="1985"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>// Create a Blob from a string
+const blob = new Blob(["Hello, world!"], { type: "text/plain" });
+
+// Get the size of the Blob
+console.log(blob.size);  // Output: 13
+
+// Get the type of the Blob
+console.log(blob.type);  // Output: text/plain
+
+// Create a URL for the Blob (for example, to display it in an image element)
+const url = URL.createObjectURL(blob);
+console.log(url);
+</span></code></div></div></pre>
+                        <h3 data-start="1987" data-end="2009" class="">
+                          Example with File:
+                        </h3>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="2010"
+                          data-end="2338"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>const fileInput = document.querySelector("input[type='file']");
+
+fileInput.addEventListener("change", (event) =&gt; {
+  const file = event.target.files[0];
+  console.log(file instanceof Blob);  // true
+  console.log(file.size);  // Size of the file in bytes
+  console.log(file.type);  // MIME type of the file
+});
+</span></code></div></div></pre>
+                        <p data-start="2340" data-end="2517" class="">
+                          Blobs are a useful tool for working with raw binary
+                          data in JavaScript, especially when dealing with file
+                          uploads, downloads, and working with media content in
+                          web applications.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="764784c9-ca25-4dce-b35a-b3ab587980c4"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            What is it's relation to the FileReader?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="cef480b3-f0f8-4ae2-824f-436efc79e516"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o-mini"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="217" class="">
+                          The
+                          <strong data-start="4" data-end="18"
+                            >FileReader</strong
+                          >
+                          API in JavaScript is closely related to the
+                          <strong data-start="63" data-end="71">Blob</strong>
+                          object, as it provides a way to read the contents of a
+                          <strong data-start="127" data-end="135">Blob</strong>
+                          (or a
+                          <strong data-start="142" data-end="150">File</strong>,
+                          which is a subclass of Blob) and process its data
+                          asynchronously.
+                        </p>
+                        <h3 data-start="219" data-end="282" class="">
+                          Key Points of the Relationship Between Blob and
+                          FileReader:
+                        </h3>
+                        <ol data-start="284" data-end="869">
+                          <li data-start="284" data-end="554" class="">
+                            <p data-start="287" data-end="554" class="">
+                              <strong data-start="287" data-end="308"
+                                >Reading Blob Data</strong
+                              >: The FileReader API allows you to read the
+                              content of a Blob (or a File) and convert it into
+                              a usable format (such as a string, binary data, or
+                              data URL). This is important for scenarios like
+                              displaying image previews or processing file
+                              uploads.
+                            </p>
+                          </li>
+                          <li data-start="556" data-end="869" class="">
+                            <p data-start="559" data-end="869" class="">
+                              <strong data-start="559" data-end="575"
+                                >File vs Blob</strong
+                              >: While
+                              <strong data-start="583" data-end="591"
+                                >File</strong
+                              >
+                              is a type of
+                              <strong data-start="605" data-end="613"
+                                >Blob</strong
+                              >, the FileReader can read both
+                              <strong data-start="644" data-end="652"
+                                >Blob</strong
+                              >
+                              and
+                              <strong data-start="657" data-end="665"
+                                >File</strong
+                              >
+                              objects. The only difference between them is that
+                              a
+                              <strong data-start="718" data-end="726"
+                                >File</strong
+                              >
+                              has additional properties like
+                              <code data-start="758" data-end="764">name</code>
+                              and
+                              <code data-start="769" data-end="783"
+                                >lastModified</code
+                              >
+                              that are useful for dealing with files
+                              specifically (e.g., from file input elements).
+                            </p>
+                          </li>
+                        </ol>
+                        <h3 data-start="871" data-end="915" class="">
+                          Common Methods of FileReader with Blobs:
+                        </h3>
+                        <ul data-start="917" data-end="1261">
+                          <li data-start="917" data-end="1029" class="">
+                            <p data-start="919" data-end="1029" class="">
+                              <strong data-start="919" data-end="940"
+                                ><code data-start="921" data-end="938"
+                                  >readAsDataURL()</code
+                                ></strong
+                              >: Reads the Blob as a base64-encoded data URL
+                              (typically used for images or other media).
+                            </p>
+                          </li>
+                          <li data-start="1033" data-end="1119" class="">
+                            <p data-start="1035" data-end="1119" class="">
+                              <strong data-start="1035" data-end="1053"
+                                ><code data-start="1037" data-end="1051"
+                                  >readAsText()</code
+                                ></strong
+                              >: Reads the Blob as a string (useful for text
+                              files or CSV files).
+                            </p>
+                          </li>
+                          <li data-start="1121" data-end="1261" class="">
+                            <p data-start="1123" data-end="1261" class="">
+                              <strong data-start="1123" data-end="1148"
+                                ><code data-start="1125" data-end="1146"
+                                  >readAsArrayBuffer()</code
+                                ></strong
+                              >: Reads the Blob as an
+                              <code data-start="1171" data-end="1184"
+                                >ArrayBuffer</code
+                              >, which is useful for processing raw binary data
+                              (like audio or video files).
+                            </p>
+                          </li>
+                        </ul>
+                        <h3 data-start="1263" data-end="1275" class="">
+                          Example:
+                        </h3>
+                        <p data-start="1277" data-end="1387" class="">
+                          Let's say you want to read a file that a user uploads
+                          and display it in an
+                          <code data-start="1352" data-end="1359"
+                            >&lt;img&gt;</code
+                          >
+                          element (if it's an image):
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="1389"
+                          data-end="1458"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">html</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-html"><span>&lt;input type="file" id="fileInput" /&gt;
+&lt;img id="preview" /&gt;
+</span></code></div></div></pre>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="1460"
+                          data-end="2012"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>const fileInput = document.querySelector('#fileInput');
+const preview = document.querySelector('#preview');
+const reader = new FileReader();
+
+fileInput.addEventListener('change', function (event) {
+  const file = event.target.files[0];  // The file is a Blob
+
+  if (file) {
+    reader.onload = function (e) {
+      // The result is the Data URL representing the image
+      preview.src = e.target.result;
+    };
+
+    // Read the file as a Data URL (this can be used to display an image preview)
+    reader.readAsDataURL(file);
+  }
+});
+</span></code></div></div></pre>
+                        <h3 data-start="2014" data-end="2031" class="">
+                          How It Works:
+                        </h3>
+                        <ol data-start="2033" data-end="2400">
+                          <li data-start="2033" data-end="2150" class="">
+                            <p data-start="2036" data-end="2150" class="">
+                              <strong data-start="2036" data-end="2044"
+                                >Blob</strong
+                              >: When a user selects a file using an
+                              <code data-start="2082" data-end="2103"
+                                >&lt;input type="file"&gt;</code
+                              >, the file is represented as a
+                              <strong data-start="2134" data-end="2142"
+                                >Blob</strong
+                              >
+                              object.
+                            </p>
+                          </li>
+                          <li data-start="2154" data-end="2400" class="">
+                            <p data-start="2157" data-end="2400" class="">
+                              <strong data-start="2157" data-end="2171"
+                                >FileReader</strong
+                              >: The FileReader is used to read the file (which
+                              is a Blob) asynchronously. In this case, we use
+                              the
+                              <code data-start="2272" data-end="2289"
+                                >readAsDataURL()</code
+                              >
+                              method to convert the Blob into a Data URL, which
+                              can then be used to display an image preview in
+                              the browser.
+                            </p>
+                          </li>
+                        </ol>
+                        <h3 data-start="2402" data-end="2442" class="">
+                          Summary of Methods for Blob Reading:
+                        </h3>
+                        <div class="overflow-x-auto contain-inline-size">
+                          <table
+                            data-start="2444"
+                            data-end="3061"
+                            node="[object Object]"
+                          >
+                            <thead data-start="2444" data-end="2566">
+                              <tr data-start="2444" data-end="2566">
+                                <th data-start="2444" data-end="2472">
+                                  Method
+                                </th>
+                                <th data-start="2472" data-end="2522">
+                                  Result
+                                </th>
+                                <th data-start="2522" data-end="2566">Usage</th>
+                              </tr>
+                            </thead>
+                            <tbody data-start="2690" data-end="3061">
+                              <tr data-start="2690" data-end="2813">
+                                <td>
+                                  <code data-start="2692" data-end="2713"
+                                    >readAsDataURL(blob)</code
+                                  >
+                                </td>
+                                <td>Data URL (Base64-encoded)</td>
+                                <td>Used for images, videos, etc.</td>
+                              </tr>
+                              <tr data-start="2814" data-end="2937">
+                                <td>
+                                  <code data-start="2816" data-end="2834"
+                                    >readAsText(blob)</code
+                                  >
+                                </td>
+                                <td>String (text data)</td>
+                                <td>Used for reading text files</td>
+                              </tr>
+                              <tr data-start="2938" data-end="3061">
+                                <td>
+                                  <code data-start="2940" data-end="2965"
+                                    >readAsArrayBuffer(blob)</code
+                                  >
+                                </td>
+                                <td>ArrayBuffer (binary data)</td>
+                                <td>Used for handling raw binary data</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <p data-start="3063" data-end="3293" class="">
+                          In essence,
+                          <strong data-start="3075" data-end="3083"
+                            >Blob</strong
+                          >
+                          is a raw data object, and
+                          <strong data-start="3110" data-end="3124"
+                            >FileReader</strong
+                          >
+                          provides the mechanism to read and interpret that data
+                          in various formats, making it usable within web
+                          applications (e.g., displaying images, reading text
+                          files, etc.).
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="4073fb37-7bb9-439b-b434-3adc4858010b"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            What is the URL object then?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="cf69de9a-c1c7-4d45-ad8d-b0490180a141"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o-mini"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="256" class="">
+                          The
+                          <strong data-start="4" data-end="11">URL</strong>
+                          object in JavaScript provides a way to handle URLs and
+                          manipulate them in a structured way. It is also used
+                          to create
+                          <strong data-start="130" data-end="145"
+                            >Object URLs</strong
+                          >
+                          for
+                          <strong data-start="150" data-end="158">Blob</strong>
+                          objects and
+                          <strong data-start="171" data-end="179">File</strong>
+                          objects, allowing you to generate temporary URLs for
+                          files stored in memory.
+                        </p>
+                        <h3 data-start="258" data-end="293" class="">
+                          Key Features of the URL Object:
+                        </h3>
+                        <ol data-start="295" data-end="832">
+                          <li data-start="295" data-end="591" class="">
+                            <p data-start="298" data-end="591" class="">
+                              <strong data-start="298" data-end="322"
+                                >Creating Object URLs</strong
+                              >: The
+                              <strong data-start="331" data-end="356"
+                                >URL.createObjectURL()</strong
+                              >
+                              method creates a unique URL that points to a Blob
+                              or File in memory. This is particularly useful
+                              when you need to handle and display files (like
+                              images, videos, or audio) directly from memory
+                              without having to upload them to a server.
+                            </p>
+                          </li>
+                          <li data-start="593" data-end="832" class="">
+                            <p data-start="596" data-end="832" class="">
+                              <strong data-start="596" data-end="613"
+                                >Managing URLs</strong
+                              >: The
+                              <strong data-start="622" data-end="629"
+                                >URL</strong
+                              >
+                              object allows you to parse, manipulate, and
+                              resolve URLs. It provides properties and methods
+                              to easily extract parts of a URL (like the host,
+                              path, query parameters, etc.) or create new URLs
+                              from parts.
+                            </p>
+                          </li>
+                        </ol>
+                        <h3 data-start="834" data-end="870" class="">
+                          Common Use Cases for URL Object:
+                        </h3>
+                        <h4 data-start="872" data-end="916" class="">
+                          1.
+                          <strong data-start="880" data-end="915"
+                            >Creating Object URLs from Blobs</strong
+                          >:
+                        </h4>
+                        <p data-start="917" data-end="1131" class="">
+                          When working with binary data or files,
+                          <strong data-start="957" data-end="982"
+                            >URL.createObjectURL()</strong
+                          >
+                          creates a temporary URL that can be used in various
+                          HTML elements like
+                          <code data-start="1054" data-end="1061"
+                            >&lt;img&gt;</code
+                          >,
+                          <code data-start="1063" data-end="1072"
+                            >&lt;video&gt;</code
+                          >, or
+                          <code data-start="1077" data-end="1082"
+                            >&lt;a&gt;</code
+                          >, without needing to upload the data to a server.
+                        </p>
+                        <h4 data-start="1133" data-end="1146" class="">
+                          Example:
+                        </h4>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="1148"
+                          data-end="1585"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>// Create a Blob (could be a file from an &lt;input&gt; element)
+const blob = new Blob(["Hello, world!"], { type: "text/plain" });
+
+// Create a URL for the Blob
+const objectUrl = URL.createObjectURL(blob);
+
+// Use the object URL to display or download the Blob
+const link = document.createElement("a");
+link.href = objectUrl;
+link.download = "example.txt";
+link.textContent = "Download file";
+document.body.appendChild(link);
+</span></code></div></div></pre>
+                        <p data-start="1587" data-end="1603" class="">
+                          In this example:
+                        </p>
+                        <ul data-start="1604" data-end="1837">
+                          <li data-start="1604" data-end="1655" class="">
+                            <p data-start="1606" data-end="1655" class="">
+                              We create a Blob from a string ("Hello, world!").
+                            </p>
+                          </li>
+                          <li data-start="1656" data-end="1736" class="">
+                            <p data-start="1658" data-end="1736" class="">
+                              Then, we generate a temporary URL for that Blob
+                              using
+                              <code data-start="1712" data-end="1735"
+                                >URL.createObjectURL()</code
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="1737" data-end="1837" class="">
+                            <p data-start="1739" data-end="1837" class="">
+                              Finally, we create a download link that uses this
+                              URL so the user can download the Blob as a file.
+                            </p>
+                          </li>
+                        </ul>
+                        <h4 data-start="1839" data-end="1889" class="">
+                          2.
+                          <strong data-start="1847" data-end="1888"
+                            >Working with Files and Input Elements</strong
+                          >:
+                        </h4>
+                        <p data-start="1890" data-end="2082" class="">
+                          When a user uploads a file via an
+                          <code data-start="1924" data-end="1945"
+                            >&lt;input type="file"&gt;</code
+                          >, the file is a
+                          <strong data-start="1961" data-end="1969"
+                            >Blob</strong
+                          >
+                          (or
+                          <strong data-start="1974" data-end="1982">File</strong
+                          >, which extends Blob). You can use
+                          <code data-start="2017" data-end="2040"
+                            >URL.createObjectURL()</code
+                          >
+                          to display it or provide a download link.
+                        </p>
+                        <p data-start="2084" data-end="2108" class="">
+                          Example with file input:
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="2110"
+                          data-end="2179"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">html</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-html"><span>&lt;input type="file" id="fileInput" /&gt;
+&lt;img id="preview" /&gt;
+</span></code></div></div></pre>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="2181"
+                          data-end="2596"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>const fileInput = document.querySelector("#fileInput");
+const preview = document.querySelector("#preview");
+
+fileInput.addEventListener("change", function (event) {
+  const file = event.target.files[0];  // The file is a Blob
+
+  if (file) {
+    const objectUrl = URL.createObjectURL(file);  // Create a URL for the file
+    preview.src = objectUrl;  // Set the image source to the Blob URL
+  }
+});
+</span></code></div></div></pre>
+                        <p data-start="2598" data-end="2611" class="">
+                          In this case:
+                        </p>
+                        <ul data-start="2612" data-end="2766">
+                          <li data-start="2612" data-end="2700" class="">
+                            <p data-start="2614" data-end="2700" class="">
+                              We use the
+                              <code data-start="2625" data-end="2644"
+                                >createObjectURL()</code
+                              >
+                              method to create a temporary URL for the uploaded
+                              file.
+                            </p>
+                          </li>
+                          <li data-start="2701" data-end="2766" class="">
+                            <p data-start="2703" data-end="2766" class="">
+                              If the file is an image, it is displayed in an
+                              <code data-start="2750" data-end="2757"
+                                >&lt;img&gt;</code
+                              >
+                              element.
+                            </p>
+                          </li>
+                        </ul>
+                        <h4 data-start="2768" data-end="2801" class="">
+                          3.
+                          <strong data-start="2776" data-end="2800"
+                            >Revoking Object URLs</strong
+                          >:
+                        </h4>
+                        <p data-start="2802" data-end="2959" class="">
+                          When you're done with an Object URL (e.g., after using
+                          it in an image or download link), it's a good practice
+                          to
+                          <strong data-start="2915" data-end="2925"
+                            >revoke</strong
+                          >
+                          the Object URL to release memory.
+                        </p>
+                        <p data-start="2961" data-end="2969" class="">
+                          Example:
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="2971"
+                          data-end="3304"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>const objectUrl = URL.createObjectURL(blob);
+
+// Use the Object URL for something (e.g., displaying an image or linking to a file)
+const imgElement = document.createElement("img");
+imgElement.src = objectUrl;
+document.body.appendChild(imgElement);
+
+// Revoke the Object URL when done
+URL.revokeObjectURL(objectUrl);
+</span></code></div></div></pre>
+                        <p data-start="3306" data-end="3322" class="">
+                          In this example:
+                        </p>
+                        <ul data-start="3323" data-end="3521">
+                          <li data-start="3323" data-end="3383" class="">
+                            <p data-start="3325" data-end="3383" class="">
+                              We create an Object URL and assign it to an image
+                              element.
+                            </p>
+                          </li>
+                          <li data-start="3384" data-end="3521" class="">
+                            <p data-start="3386" data-end="3521" class="">
+                              After we're done with the Object URL (e.g., when
+                              the image is displayed), we revoke it using
+                              <code data-start="3479" data-end="3502"
+                                >URL.revokeObjectURL()</code
+                              >
+                              to free up memory.
+                            </p>
+                          </li>
+                        </ul>
+                        <h3 data-start="3523" data-end="3553" class="">
+                          Methods of the URL Object:
+                        </h3>
+                        <ul data-start="3555" data-end="3725">
+                          <li data-start="3555" data-end="3640" class="">
+                            <p data-start="3557" data-end="3640" class="">
+                              <strong data-start="3557" data-end="3584"
+                                ><code data-start="3559" data-end="3582"
+                                  >createObjectURL(blob)</code
+                                ></strong
+                              >: Creates a temporary URL representing the Blob
+                              or File.
+                            </p>
+                          </li>
+                          <li data-start="3644" data-end="3725" class="">
+                            <p data-start="3646" data-end="3725" class="">
+                              <strong data-start="3646" data-end="3672"
+                                ><code data-start="3648" data-end="3670"
+                                  >revokeObjectURL(url)</code
+                                ></strong
+                              >: Releases the memory associated with the Object
+                              URL.
+                            </p>
+                          </li>
+                        </ul>
+                        <h3 data-start="3727" data-end="3764" class="">
+                          URL Object for Manipulating URLs:
+                        </h3>
+                        <p data-start="3765" data-end="3946" class="">
+                          Apart from creating Object URLs for blobs, the
+                          <strong data-start="3812" data-end="3819">URL</strong>
+                          object also allows you to manipulate URL strings. For
+                          example, you can use it to extract parts of a URL or
+                          construct new URLs.
+                        </p>
+                        <p data-start="3948" data-end="3956" class="">
+                          Example:
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="3958"
+                          data-end="4344"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>const url = new URL("https://example.com/path?name=JohnDoe&amp;age=25");
+
+// Extract parts of the URL
+console.log(url.hostname); // "example.com"
+console.log(url.pathname); // "/path"
+console.log(url.searchParams.get("name")); // "JohnDoe"
+
+// Modify the URL
+url.searchParams.set("name", "JaneDoe");
+console.log(url.href); // "https://example.com/path?name=JaneDoe&amp;age=25"
+</span></code></div></div></pre>
+                        <h3 data-start="4346" data-end="4372" class="">
+                          Summary of Key Points:
+                        </h3>
+                        <ul data-start="4373" data-end="4758">
+                          <li data-start="4373" data-end="4482" class="">
+                            <p data-start="4375" data-end="4482" class="">
+                              The
+                              <strong data-start="4379" data-end="4386"
+                                >URL</strong
+                              >
+                              object allows you to work with URLs, including
+                              creating Object URLs for
+                              <strong data-start="4459" data-end="4468"
+                                >Blobs</strong
+                              >
+                              or
+                              <strong data-start="4472" data-end="4481"
+                                >Files</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="4483" data-end="4567" class="">
+                            <p data-start="4485" data-end="4567" class="">
+                              <strong data-start="4485" data-end="4512"
+                                ><code data-start="4487" data-end="4510"
+                                  >URL.createObjectURL()</code
+                                ></strong
+                              >
+                              creates a temporary URL pointing to Blob or File
+                              data.
+                            </p>
+                          </li>
+                          <li data-start="4568" data-end="4672" class="">
+                            <p data-start="4570" data-end="4672" class="">
+                              <strong data-start="4570" data-end="4597"
+                                ><code data-start="4572" data-end="4595"
+                                  >URL.revokeObjectURL()</code
+                                ></strong
+                              >
+                              is used to release the memory of an Object URL
+                              when it's no longer needed.
+                            </p>
+                          </li>
+                          <li data-start="4673" data-end="4758" class="">
+                            <p data-start="4675" data-end="4758" class="">
+                              The
+                              <strong data-start="4679" data-end="4686"
+                                >URL</strong
+                              >
+                              object also provides methods for parsing and
+                              manipulating regular URLs.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="4760" data-end="5005" class="">
+                          In essence, the
+                          <strong data-start="4776" data-end="4783">URL</strong>
+                          object allows you to create, manipulate, and manage
+                          URLs in JavaScript, while the
+                          <strong data-start="4866" data-end="4887"
+                            >createObjectURL()</strong
+                          >
+                          method is a powerful feature for handling in-memory
+                          data, such as Blobs or Files, without uploading them
+                          to a server.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="02e60f0b-60b4-4025-ad16-3a2495d8b4f0"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            What happens if I don't revoke it?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="true"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="42658685-73f9-4d84-bdb8-fa697da5644a"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o-mini"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="153" class="">
+                          If you
+                          <strong data-start="7" data-end="23"
+                            >don’t revoke</strong
+                          >
+                          an Object URL created using
+                          <code data-start="52" data-end="75"
+                            >URL.createObjectURL()</code
+                          >, the browser will keep the URL in memory, which can
+                          lead to potential issues:
+                        </p>
+                        <h3 data-start="155" data-end="179" class="">
+                          1.
+                          <strong data-start="162" data-end="178"
+                            >Memory Leaks</strong
+                          >:
+                        </h3>
+                        <ul data-start="183" data-end="571">
+                          <li data-start="183" data-end="311" class="">
+                            <p data-start="185" data-end="311" class="">
+                              <strong data-start="185" data-end="201"
+                                >Memory leaks</strong
+                              >
+                              occur when the browser retains resources (like the
+                              memory used for the Object URL) that are no longer
+                              needed.
+                            </p>
+                          </li>
+                          <li data-start="315" data-end="571" class="">
+                            <p data-start="317" data-end="571" class="">
+                              As you create more Object URLs without revoking
+                              them, the browser’s memory usage will grow
+                              unnecessarily. This can lead to a slow-down in
+                              performance, especially if you’re handling large
+                              files or generating many Object URLs in a
+                              long-running application.
+                            </p>
+                          </li>
+                        </ul>
+                        <h3 data-start="573" data-end="616" class="">
+                          2.
+                          <strong data-start="580" data-end="615"
+                            >Inefficient Resource Management</strong
+                          >:
+                        </h3>
+                        <ul data-start="620" data-end="977">
+                          <li data-start="620" data-end="785" class="">
+                            <p data-start="622" data-end="785" class="">
+                              Each Object URL points to a Blob or File in
+                              memory. If you don’t revoke it, the browser
+                              continues to hold onto that Blob's data, even if
+                              you’re no longer using it.
+                            </p>
+                          </li>
+                          <li data-start="789" data-end="977" class="">
+                            <p data-start="791" data-end="977" class="">
+                              For web applications that work with a lot of files
+                              (e.g., image galleries, file upload/download
+                              interfaces), failing to revoke Object URLs can
+                              significantly impact performance over time.
+                            </p>
+                          </li>
+                        </ul>
+                        <h3 data-start="979" data-end="1044" class="">
+                          3.
+                          <strong data-start="986" data-end="1043"
+                            >Potential Issues in Mobile or Low-Memory
+                            Environments</strong
+                          >:
+                        </h3>
+                        <ul data-start="1048" data-end="1255">
+                          <li data-start="1048" data-end="1255" class="">
+                            <p data-start="1050" data-end="1255" class="">
+                              In environments with limited resources (such as
+                              mobile devices or older systems), failing to
+                              revoke Object URLs can cause the browser to run
+                              out of memory, leading to crashes, freezes, or
+                              poor performance.
+                            </p>
+                          </li>
+                        </ul>
+                        <h3 data-start="1257" data-end="1278" class="">
+                          Example Scenario:
+                        </h3>
+                        <p data-start="1280" data-end="1583" class="">
+                          Imagine a situation where users upload multiple
+                          images, and you create Object URLs for each image to
+                          display them in the browser. If you don’t revoke these
+                          URLs after the images are displayed, each URL will
+                          continue to consume memory, even if the user navigates
+                          away from the page or removes the images.
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="1585"
+                          data-end="1942"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>const objectUrl = URL.createObjectURL(blob);
+
+// Create an image element and set the source to the object URL
+const imgElement = document.createElement("img");
+imgElement.src = objectUrl;
+document.body.appendChild(imgElement);
+
+// Forget to revoke the URL when done
+// This will keep consuming memory, even if the image is no longer needed
+</span></code></div></div></pre>
+                        <h3 data-start="1944" data-end="1982" class="">
+                          Proper Usage: Revoking Object URLs
+                        </h3>
+                        <p data-start="1984" data-end="2208" class="">
+                          To prevent the potential issues mentioned above, it’s
+                          important to revoke Object URLs once you’re done using
+                          them. This is particularly true when you no longer
+                          need to display the Blob data or when it’s no longer
+                          referenced.
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="2210"
+                          data-end="2302"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>// Revoke the Object URL when done with it
+URL.revokeObjectURL(objectUrl);
+</span></code></div></div></pre>
+                        <h3 data-start="2304" data-end="2316" class="">
+                          Summary:
+                        </h3>
+                        <ul
+                          data-start="2317"
+                          data-end="2678"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          <li data-start="2317" data-end="2435" class="">
+                            <p data-start="2319" data-end="2435" class="">
+                              If you don't revoke an Object URL, it remains in
+                              memory, which can lead to memory leaks and
+                              performance degradation.
+                            </p>
+                          </li>
+                          <li data-start="2436" data-end="2678" class="">
+                            <p data-start="2438" data-end="2678" class="">
+                              Regularly revoking Object URLs ensures that the
+                              browser can free up memory and manage resources
+                              efficiently, preventing unnecessary memory
+                              consumption, especially in applications handling
+                              large amounts of binary data (e.g., images,
+                              videos).
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
