@@ -1,0 +1,986 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>FileReader in JS</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="b094a110-dfc0-478c-8e7c-882eb56f5175"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            What is the FileReader in Js?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="af9730c0-9439-446f-a8cf-c5cff3d67a78"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o-mini"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="323" class="">
+                          The
+                          <code data-start="4" data-end="16">FileReader</code>
+                          in JavaScript is an object that allows web
+                          applications to read the contents of files stored on
+                          the user's computer. It is commonly used for handling
+                          file uploads, allowing users to select files from
+                          their local machine and process or display them in the
+                          browser without needing to upload them to a server.
+                        </p>
+                        <h3 data-start="325" data-end="342" class="">
+                          Key Features:
+                        </h3>
+                        <ul data-start="343" data-end="800">
+                          <li data-start="343" data-end="492" class="">
+                            <p data-start="345" data-end="492" class="">
+                              <strong data-start="345" data-end="374"
+                                >Read Files Asynchronously</strong
+                              >: The
+                              <code data-start="380" data-end="392"
+                                >FileReader</code
+                              >
+                              can read files asynchronously, meaning the
+                              application doesn’t freeze while the file is being
+                              read.
+                            </p>
+                          </li>
+                          <li data-start="493" data-end="630" class="">
+                            <p data-start="495" data-end="630" class="">
+                              <strong data-start="495" data-end="509"
+                                >File Types</strong
+                              >: It can read text, binary data, and images, and
+                              it supports different read modes (e.g., text, data
+                              URL, or ArrayBuffer).
+                            </p>
+                          </li>
+                          <li data-start="631" data-end="800" class="">
+                            <p data-start="633" data-end="800" class="">
+                              <strong data-start="633" data-end="649"
+                                >Event-driven</strong
+                              >: The
+                              <code data-start="655" data-end="667"
+                                >FileReader</code
+                              >
+                              uses events like
+                              <code data-start="685" data-end="691">load</code>,
+                              <code data-start="693" data-end="700">error</code
+                              >, and
+                              <code data-start="706" data-end="716"
+                                >progress</code
+                              >
+                              to notify the application when the file is
+                              successfully read or if an error occurs.
+                            </p>
+                          </li>
+                        </ul>
+                        <h3 data-start="802" data-end="821" class="">
+                          Common Methods:
+                        </h3>
+                        <ol data-start="822" data-end="1173">
+                          <li data-start="822" data-end="931" class="">
+                            <p data-start="825" data-end="931" class="">
+                              <strong data-start="825" data-end="847"
+                                ><code data-start="827" data-end="845"
+                                  >readAsText(file)</code
+                                ></strong
+                              >: Reads the file as a text string (useful for
+                              text files like
+                              <code data-start="909" data-end="915">.txt</code>,
+                              <code data-start="917" data-end="923">.csv</code>,
+                              etc.).
+                            </p>
+                          </li>
+                          <li data-start="932" data-end="1050" class="">
+                            <p data-start="935" data-end="1050" class="">
+                              <strong data-start="935" data-end="960"
+                                ><code data-start="937" data-end="958"
+                                  >readAsDataURL(file)</code
+                                ></strong
+                              >: Reads the file as a Data URL (useful for images
+                              or binary files, like
+                              <code data-start="1032" data-end="1038"
+                                >.png</code
+                              >
+                              or
+                              <code data-start="1042" data-end="1048">.jpg</code
+                              >).
+                            </p>
+                          </li>
+                          <li data-start="1051" data-end="1173" class="">
+                            <p data-start="1054" data-end="1173" class="">
+                              <strong data-start="1054" data-end="1083"
+                                ><code data-start="1056" data-end="1081"
+                                  >readAsArrayBuffer(file)</code
+                                ></strong
+                              >: Reads the file as an ArrayBuffer (useful for
+                              binary data, such as audio or video files).
+                            </p>
+                          </li>
+                        </ol>
+                        <h3 data-start="1175" data-end="1187" class="">
+                          Example:
+                        </h3>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="1189"
+                          data-end="1690"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>const fileInput = document.querySelector('input[type="file"]');
+const fileReader = new FileReader();
+
+fileInput.addEventListener('change', function() {
+  const file = fileInput.files[0];
+
+  if (file) {
+    fileReader.onload = function(event) {
+      console.log('File content:', event.target.result);
+    };
+
+    fileReader.onerror = function(error) {
+      console.error('Error reading file:', error);
+    };
+
+    // Reading the file as text
+    fileReader.readAsText(file);
+  }
+});
+</span></code></div></div></pre>
+                        <p data-start="1692" data-end="1708" class="">
+                          In this example:
+                        </p>
+                        <ul data-start="1709" data-end="1864">
+                          <li data-start="1709" data-end="1788" class="">
+                            <p data-start="1711" data-end="1788" class="">
+                              The
+                              <code data-start="1715" data-end="1727"
+                                >FileReader</code
+                              >
+                              reads a selected file and logs its content once
+                              it's loaded.
+                            </p>
+                          </li>
+                          <li data-start="1789" data-end="1864" class="">
+                            <p data-start="1791" data-end="1864" class="">
+                              The file input element triggers a file read when
+                              the user selects a file.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1866" data-end="2105" class="">
+                          The
+                          <code data-start="1870" data-end="1882"
+                            >FileReader</code
+                          >
+                          API provides a convenient way to handle file data
+                          directly in the browser, making it ideal for
+                          applications that require client-side file processing,
+                          such as image previewing, data visualization, or text
+                          file manipulation.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="3360ff89-c44e-4dcd-8de0-4fbb7007e366"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            Give an example for an image
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="d2d8a308-aa75-4f67-9fe9-bc63f8e0025a"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o-mini"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="136" class="">
+                          Here’s an example of how you can use the
+                          <code data-start="41" data-end="53">FileReader</code>
+                          API to read an image file selected by the user and
+                          display it in an
+                          <code data-start="122" data-end="127">img</code>
+                          element:
+                        </p>
+                        <h3 data-start="138" data-end="150" class="">
+                          Example:
+                        </h3>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="152"
+                          data-end="1330"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">html</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-html"><span>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Image FileReader Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Select an image to preview&lt;/h1&gt;
+  &lt;input type="file" id="fileInput" accept="image/*"&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;img id="imagePreview" alt="Image preview will appear here" style="max-width: 300px;"&gt;
+
+  &lt;script&gt;
+    const fileInput = document.getElementById('fileInput');
+    const imagePreview = document.getElementById('imagePreview');
+    const fileReader = new FileReader();
+
+    fileInput.addEventListener('change', function() {
+      const file = fileInput.files[0];
+
+      if (file &amp;&amp; file.type.startsWith('image/')) {
+        fileReader.onload = function(event) {
+          imagePreview.src = event.target.result;  // Set the image source to the data URL
+        };
+
+        fileReader.onerror = function(error) {
+          console.error('Error reading file:', error);
+        };
+
+        // Read the image file as a Data URL
+        fileReader.readAsDataURL(file);
+      } else {
+        alert('Please select an image file.');
+      }
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</span></code></div></div></pre>
+                        <h3 data-start="1332" data-end="1348" class="">
+                          Explanation:
+                        </h3>
+                        <ul data-start="1349" data-end="1827">
+                          <li data-start="1349" data-end="1440" class="">
+                            <p data-start="1351" data-end="1440" class="">
+                              <strong data-start="1351" data-end="1365"
+                                >File Input</strong
+                              >: The user selects an image file through the
+                              <code data-start="1410" data-end="1431"
+                                >&lt;input type="file"&gt;</code
+                              >
+                              element.
+                            </p>
+                          </li>
+                          <li data-start="1441" data-end="1586" class="">
+                            <p data-start="1443" data-end="1586" class="">
+                              <strong data-start="1443" data-end="1457"
+                                >FileReader</strong
+                              >: The
+                              <code data-start="1463" data-end="1475"
+                                >FileReader</code
+                              >
+                              is used to read the selected file as a
+                              <strong data-start="1515" data-end="1527"
+                                >Data URL</strong
+                              >
+                              (which is a base64-encoded string representing the
+                              image).
+                            </p>
+                          </li>
+                          <li data-start="1587" data-end="1734" class="">
+                            <p data-start="1589" data-end="1734" class="">
+                              <strong data-start="1589" data-end="1606"
+                                >Image Preview</strong
+                              >: The
+                              <code data-start="1612" data-end="1617">img</code>
+                              element's
+                              <code data-start="1628" data-end="1633">src</code>
+                              attribute is set to the Data URL once the image is
+                              loaded, allowing it to be displayed as a preview.
+                            </p>
+                          </li>
+                          <li data-start="1735" data-end="1827" class="">
+                            <p data-start="1737" data-end="1827" class="">
+                              <strong data-start="1737" data-end="1755"
+                                >Error Handling</strong
+                              >: If an error occurs while reading the file, it's
+                              logged in the console.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1829" data-end="1992" class="">
+                          This code allows you to select an image from your
+                          local machine, read it using JavaScript, and display
+                          it directly on the webpage without uploading it to a
+                          server.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="83134dd1-c747-4038-8788-a957f6aa7920"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            Just give me the js code alongside the explanation
+                            do a video as well
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="71d4aa15-348e-4ea8-9b3f-0351a5177ff1"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o-mini"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="58" class="">
+                          Here’s the JavaScript code along with a brief
+                          explanation:
+                        </p>
+                        <h3 data-start="60" data-end="80" class="">
+                          JavaScript Code:
+                        </h3>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="82"
+                          data-end="767"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>const fileInput = document.getElementById('fileInput');
+const imagePreview = document.getElementById('imagePreview');
+const fileReader = new FileReader();
+
+fileInput.addEventListener('change', function() {
+  const file = fileInput.files[0];
+
+  if (file &amp;&amp; file.type.startsWith('image/')) {
+    fileReader.onload = function(event) {
+      imagePreview.src = event.target.result;  // Set the image source to the data URL
+    };
+
+    fileReader.onerror = function(error) {
+      console.error('Error reading file:', error);
+    };
+
+    // Read the image file as a Data URL
+    fileReader.readAsDataURL(file);
+  } else {
+    alert('Please select an image file.');
+  }
+});
+</span></code></div></div></pre>
+                        <h3 data-start="769" data-end="785" class="">
+                          Explanation:
+                        </h3>
+                        <ul data-start="786" data-end="1420">
+                          <li data-start="786" data-end="912" class="">
+                            <p data-start="788" data-end="912" class="">
+                              <strong data-start="788" data-end="802"
+                                >File Input</strong
+                              >: We use
+                              <code data-start="811" data-end="849"
+                                >document.getElementById('fileInput')</code
+                              >
+                              to get the file input element where the user
+                              selects an image.
+                            </p>
+                          </li>
+                          <li data-start="913" data-end="1056" class="">
+                            <p data-start="915" data-end="1056" class="">
+                              <strong data-start="915" data-end="929"
+                                >FileReader</strong
+                              >: The
+                              <code data-start="935" data-end="947"
+                                >FileReader</code
+                              >
+                              object is used to read the file as a Data URL,
+                              which is a base64-encoded string representation of
+                              the image.
+                            </p>
+                          </li>
+                          <li data-start="1057" data-end="1194" class="">
+                            <p data-start="1059" data-end="1194" class="">
+                              <strong data-start="1059" data-end="1076"
+                                >Image Preview</strong
+                              >: The
+                              <code data-start="1082" data-end="1087">img</code>
+                              element's
+                              <code data-start="1098" data-end="1103">src</code>
+                              is updated with the result of the file read
+                              operation, which is the Data URL of the image.
+                            </p>
+                          </li>
+                          <li data-start="1195" data-end="1420" class="">
+                            <p data-start="1197" data-end="1420" class="">
+                              <strong data-start="1197" data-end="1216"
+                                >Event Listeners</strong
+                              >: The
+                              <code data-start="1222" data-end="1230"
+                                >change</code
+                              >
+                              event is triggered when the user selects a file,
+                              and the
+                              <code data-start="1288" data-end="1296"
+                                >onload</code
+                              >
+                              event is used to set the image source once the
+                              file is successfully read. If there's an error,
+                              the
+                              <code data-start="1396" data-end="1405"
+                                >onerror</code
+                              >
+                              event logs it.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1422" data-end="1480" class="">
+                          I’ll now go ahead and create a video explaining this
+                          code.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="d9ddc25b-bc2f-45c7-bf91-eb372cc1ef38"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            No I meant do an example for uploading a video
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="fd477417-b83a-4919-92a7-e4ea0bb96811"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o-mini"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="135" class="">
+                          Ah, got it! Here's an example of how you can use
+                          JavaScript's
+                          <code data-start="62" data-end="74">FileReader</code>
+                          API to upload and preview a video file selected by the
+                          user.
+                        </p>
+                        <h3 data-start="137" data-end="194" class="">
+                          JavaScript Code for Uploading a Video and Previewing:
+                        </h3>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="196"
+                          data-end="880"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-javascript"><span>const fileInput = document.getElementById('fileInput');
+const videoPreview = document.getElementById('videoPreview');
+const fileReader = new FileReader();
+
+fileInput.addEventListener('change', function() {
+  const file = fileInput.files[0];
+
+  if (file &amp;&amp; file.type.startsWith('video/')) {
+    fileReader.onload = function(event) {
+      videoPreview.src = event.target.result;  // Set the video source to the Data URL
+    };
+
+    fileReader.onerror = function(error) {
+      console.error('Error reading file:', error);
+    };
+
+    // Read the video file as a Data URL
+    fileReader.readAsDataURL(file);
+  } else {
+    alert('Please select a video file.');
+  }
+});
+</span></code></div></div></pre>
+                        <h3 data-start="882" data-end="928" class="">
+                          HTML for the File Input and Video Preview:
+                        </h3>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="930"
+                          data-end="2140"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">html</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-html"><span>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Video Upload and Preview&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Select a video to preview&lt;/h1&gt;
+  &lt;input type="file" id="fileInput" accept="video/*"&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;video id="videoPreview" controls style="max-width: 500px;"&gt;
+    Your browser does not support the video tag.
+  &lt;/video&gt;
+
+  &lt;script&gt;
+    const fileInput = document.getElementById('fileInput');
+    const videoPreview = document.getElementById('videoPreview');
+    const fileReader = new FileReader();
+
+    fileInput.addEventListener('change', function() {
+      const file = fileInput.files[0];
+
+      if (file &amp;&amp; file.type.startsWith('video/')) {
+        fileReader.onload = function(event) {
+          videoPreview.src = event.target.result;  // Set the video source to the Data URL
+        };
+
+        fileReader.onerror = function(error) {
+          console.error('Error reading file:', error);
+        };
+
+        // Read the video file as a Data URL
+        fileReader.readAsDataURL(file);
+      } else {
+        alert('Please select a video file.');
+      }
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</span></code></div></div></pre>
+                        <h3 data-start="2142" data-end="2158" class="">
+                          Explanation:
+                        </h3>
+                        <ul data-start="2159" data-end="2683">
+                          <li data-start="2159" data-end="2304" class="">
+                            <p data-start="2161" data-end="2304" class="">
+                              <strong data-start="2161" data-end="2175"
+                                >File Input</strong
+                              >: The file input element allows the user to
+                              select a video file. The
+                              <code data-start="2244" data-end="2262"
+                                >accept="video/*"</code
+                              >
+                              ensures only video files can be selected.
+                            </p>
+                          </li>
+                          <li data-start="2305" data-end="2377" class="">
+                            <p data-start="2307" data-end="2377" class="">
+                              <strong data-start="2307" data-end="2321"
+                                >FileReader</strong
+                              >: This is used to read the video file as a
+                              <strong data-start="2364" data-end="2376"
+                                >Data URL</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="2378" data-end="2532" class="">
+                            <p data-start="2380" data-end="2532" class="">
+                              <strong data-start="2380" data-end="2397"
+                                >Video Preview</strong
+                              >: The
+                              <code data-start="2403" data-end="2410"
+                                >video</code
+                              >
+                              element is used to preview the video. Once the
+                              file is read, the
+                              <code data-start="2476" data-end="2481">src</code>
+                              attribute of the video tag is set to the Data URL.
+                            </p>
+                          </li>
+                          <li data-start="2533" data-end="2683" class="">
+                            <p data-start="2535" data-end="2683" class="">
+                              <strong data-start="2535" data-end="2554"
+                                >Event Listeners</strong
+                              >: The
+                              <code data-start="2560" data-end="2568"
+                                >change</code
+                              >
+                              event triggers when the user selects a file, and
+                              the
+                              <code data-start="2622" data-end="2630"
+                                >onload</code
+                              >
+                              event sets the video source when the file is
+                              loaded.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="2685" data-end="2820" class="">
+                          When a user selects a video, it will automatically
+                          load and play within the
+                          <code data-start="2761" data-end="2770"
+                            >&lt;video&gt;</code
+                          >
+                          element without needing to upload it to a server.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-9"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="f504387b-16b6-4279-bfc6-22023a437961"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            Do a local font display as well
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-10"
+        data-scroll-anchor="true"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="5a192743-ad25-4c90-9321-b53f98823c75"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o-mini"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="178" class="">
+                          To display a local font using JavaScript, you can
+                          follow this example where the user selects a font file
+                          (like
+                          <code data-start="111" data-end="117">.ttf</code> or
+                          <code data-start="121" data-end="127">.otf</code>),
+                          and the font is applied dynamically to the page.
+                        </p>
+                        <h3 data-start="180" data-end="237" class="">
+                          JavaScript and HTML Code for Displaying a Local Font:
+                        </h3>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="239"
+                          data-end="946"
+                          data-is-last-node=""
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">html</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-html"><span>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Local Font Upload&lt;/title&gt;
+  &lt;style&gt;
+    #textPreview {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Select a font file to apply it to the text below&lt;/h1&gt;
+  &lt;input type="file" id="fontInput" accept=".ttf,.otf"&gt;
+  &lt;div id="textPreview"&gt;This is a text preview that will change with your selected font.&lt;/div&gt;
+
+  &lt;script&gt;
+    const fontInput = document.getElementById('fontInput');
+    const textPreview = document.getElementById('textPreview');
+
+    fontInput.addEventListener('change', function() {
+      const file
+</span></code></div></div></pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
