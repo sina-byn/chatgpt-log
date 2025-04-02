@@ -1,0 +1,393 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Display Uploaded Font</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="a99ce85a-92ee-40f5-a0c6-60686bd4a9c1"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            Is it possible to show a font that user uploaded?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="2a37741a-fc52-4d47-90fa-1849c1278707"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="74" class="">
+                          Yes, you can display a font that a user uploaded by
+                          following these steps:
+                        </p>
+                        <ol data-start="76" data-end="369">
+                          <li data-start="76" data-end="179" class="">
+                            <p data-start="79" data-end="179" class="">
+                              <strong data-start="79" data-end="103"
+                                >Upload the Font File</strong
+                              >: The user needs to upload the font file (e.g.,
+                              <code data-start="151" data-end="157">.ttf</code>,
+                              <code data-start="159" data-end="165">.otf</code>,
+                              or
+                              <code data-start="170" data-end="177">.woff</code
+                              >).
+                            </p>
+                          </li>
+                          <li data-start="180" data-end="304" class="">
+                            <p data-start="183" data-end="304" class="">
+                              <strong data-start="183" data-end="208"
+                                >Use @font-face in CSS</strong
+                              >: Reference the uploaded font in a webpage or an
+                              application using the
+                              <code data-start="279" data-end="291"
+                                >@font-face</code
+                              >
+                              rule in CSS.
+                            </p>
+                          </li>
+                          <li data-start="305" data-end="369" class="">
+                            <p data-start="308" data-end="369" class="">
+                              <strong data-start="308" data-end="326"
+                                >Apply the Font</strong
+                              >: Set the font for text elements using CSS.
+                            </p>
+                          </li>
+                        </ol>
+                        <p data-start="371" data-end="389" class="">
+                          Here’s an example:
+                        </p>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="391"
+                          data-end="653"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">css</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-css"><span>@font-face {
+    font-family: 'CustomFont';
+    src: url('uploaded-font.woff2') format('woff2'),
+         url('uploaded-font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'CustomFont', sans-serif;
+}
+</span></code></div></div></pre>
+                        <p data-start="655" data-end="718" class="">
+                          Let me know if you need help with a specific
+                          implementation! 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="0fb9ea84-10e1-452f-9fb0-6e36ae14325c"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] rounded-3xl bg-token-message-surface px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            I meant from a file type input
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="w-full text-token-text-primary"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="true"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-none"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col flex-grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="61a2f6d3-4efe-42ac-8a39-f9b85460dd3a"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o-mini"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose w-full break-words dark:prose-invert dark"
+                      >
+                        <p data-start="0" data-end="160" class="">
+                          Ah, I see! You want to display a font uploaded by the
+                          user through a file input. This can be done with HTML,
+                          JavaScript, and CSS. Here's how you can achieve it:
+                        </p>
+                        <h3 data-start="162" data-end="234" class="">
+                          1.
+                          <strong data-start="169" data-end="177">HTML</strong>:
+                          Create a file input to allow the user to upload a
+                          font.
+                        </h3>
+                        <h3 data-start="235" data-end="311" class="">
+                          2.
+                          <strong data-start="242" data-end="256"
+                            >JavaScript</strong
+                          >: Read the uploaded font file and apply it
+                          dynamically.
+                        </h3>
+                        <h3 data-start="312" data-end="372" class="">
+                          3.
+                          <strong data-start="319" data-end="326">CSS</strong>:
+                          Use the
+                          <code data-start="336" data-end="348"
+                            >@font-face</code
+                          >
+                          rule to apply the font.
+                        </h3>
+                        <h3 data-start="374" data-end="401" class="">
+                          Example Implementation:
+                        </h3>
+                        <pre
+                          class="!overflow-visible"
+                          data-start="403"
+                          data-end="2199"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">html</div><div class="sticky top-9"><div class="absolute bottom-0 right-0 flex h-9 items-center pr-2"><div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-html"><span>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Upload Font Example&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Upload and Use Custom Font&lt;/h1&gt;
+    &lt;input type="file" id="fontUpload" accept=".woff, .woff2, .ttf, .otf" /&gt;
+    &lt;p id="text"&gt;This is some sample text that will use the uploaded font.&lt;/p&gt;
+
+    &lt;script&gt;
+        const fontUpload = document.getElementById('fontUpload');
+        const textElement = document.getElementById('text');
+
+        fontUpload.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const fontData = e.target.result;
+                    const fontName = file.name.split('.')[0]; // Use the font file name as font family
+
+                    // Create a style element for the font-face rule
+                    const style = document.createElement('style');
+                    style.innerHTML = `
+                        @font-face {
+                            font-family: '${fontName}';
+                            src: url('${fontData}') format('woff2');
+                        }
+                        #text {
+                            font-family: '${fontName}', sans-serif;
+                        }
+                    `;
+                    document.head.appendChild(style);
+                };
+
+                // Read the font file as a data URL
+                reader.readAsDataURL(file);
+            }
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</span></code></div></div></pre>
+                        <h3 data-start="2201" data-end="2218" class="">
+                          How it works:
+                        </h3>
+                        <ol data-start="2219" data-end="2617">
+                          <li data-start="2219" data-end="2311" class="">
+                            <p data-start="2222" data-end="2311" class="">
+                              <strong data-start="2222" data-end="2236"
+                                >File Input</strong
+                              >: The user uploads a font file (like
+                              <code data-start="2273" data-end="2280"
+                                >.woff</code
+                              >,
+                              <code data-start="2282" data-end="2290"
+                                >.woff2</code
+                              >,
+                              <code data-start="2292" data-end="2298">.ttf</code
+                              >, or
+                              <code data-start="2303" data-end="2309">.otf</code
+                              >).
+                            </p>
+                          </li>
+                          <li data-start="2312" data-end="2531" class="">
+                            <p data-start="2315" data-end="2331" class="">
+                              <strong data-start="2315" data-end="2329"
+                                >JavaScript</strong
+                              >:
+                            </p>
+                            <ul data-start="2336" data-end="2531">
+                              <li data-start="2336" data-end="2427" class="">
+                                <p data-start="2338" data-end="2427" class="">
+                                  When the file is selected, a
+                                  <code data-start="2367" data-end="2379"
+                                    >FileReader</code
+                                  >
+                                  reads the file and converts it into a data
+                                  URL.
+                                </p>
+                              </li>
+                              <li data-start="2432" data-end="2531" class="">
+                                <p data-start="2434" data-end="2531" class="">
+                                  The
+                                  <code data-start="2438" data-end="2450"
+                                    >@font-face</code
+                                  >
+                                  rule is created dynamically in a
+                                  <code data-start="2484" data-end="2493"
+                                    >&lt;style&gt;</code
+                                  >
+                                  element and appended to the document.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="2532" data-end="2617" class="">
+                            <p data-start="2535" data-end="2617" class="">
+                              <strong data-start="2535" data-end="2551"
+                                >Text Element</strong
+                              >: The font is applied to the text content using
+                              the uploaded font.
+                            </p>
+                          </li>
+                        </ol>
+                        <p data-start="2619" data-end="2741" class="">
+                          With this, the uploaded font will be applied to the
+                          text dynamically. Would you like to dive deeper into
+                          any of the steps?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
