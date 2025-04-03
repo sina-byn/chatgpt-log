@@ -1,0 +1,3138 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Flexbox in Terminal</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="2050809d-0b68-47ba-801e-086627d053b7"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            How to display a flex box in terminal
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="91f07ad3-ef65-4d3a-8088-2ede7700c1da"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="193" class="">
+                          Displaying a
+                          <strong data-start="13" data-end="29"
+                            >flexbox-like</strong
+                          >
+                          layout in a terminal is not as straightforward as in
+                          web development, since terminals don’t support CSS.
+                          However, you can achieve similar effects using tools
+                          like:
+                        </p>
+                        <ol data-start="195" data-end="523">
+                          <li data-start="195" data-end="277" class="">
+                            <p data-start="198" data-end="277" class="">
+                              <strong data-start="198" data-end="221"
+                                >NCurses (for C/C++)</strong
+                              >
+                              – Provides a way to create UI elements in the
+                              terminal.
+                            </p>
+                          </li>
+                          <li data-start="278" data-end="368" class="">
+                            <p data-start="281" data-end="368" class="">
+                              <strong data-start="281" data-end="306"
+                                >Blessed (for Node.js)</strong
+                              >
+                              – A library that allows flexible TUI (Text-based
+                              UI) layouts.
+                            </p>
+                          </li>
+                          <li data-start="369" data-end="433" class="">
+                            <p data-start="372" data-end="433" class="">
+                              <strong data-start="372" data-end="393"
+                                >Rich (for Python)</strong
+                              >
+                              – Supports flexible text-based layouts.
+                            </p>
+                          </li>
+                          <li data-start="434" data-end="523" class="">
+                            <p data-start="437" data-end="523" class="">
+                              <strong data-start="437" data-end="460"
+                                >ASCII Art &amp; Padding</strong
+                              >
+                              – Manually format text using spaces or box-drawing
+                              characters.
+                            </p>
+                          </li>
+                        </ol>
+                        <h3 data-start="525" data-end="570" class="">
+                          <strong data-start="529" data-end="570"
+                            >Example using Python's
+                            <code data-start="554" data-end="560">rich</code>
+                            library</strong
+                          >
+                        </h3>
+                        <p data-start="571" data-end="665" class="">
+                          If you're using Python, the
+                          <code data-start="599" data-end="605">rich</code>
+                          library supports flexible layouts using tables and
+                          columns.
+                        </p>
+                        <h4 data-start="667" data-end="689" class="">
+                          <strong data-start="672" data-end="689"
+                            >Installation:</strong
+                          >
+                        </h4>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="690"
+                          data-end="718"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>pip install rich
+</span></code></div></div></pre>
+                        <h4 data-start="720" data-end="742" class="">
+                          <strong data-start="725" data-end="742"
+                            >Code Example:</strong
+                          >
+                        </h4>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="743"
+                          data-end="1041"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">python</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>from rich.console import Console
+from rich.layout import Layout
+
+console = Console()
+
+layout = Layout()
+layout.split_row(
+    Layout(name="left", size=30),
+    Layout(name="right")
+)
+
+layout["left"].update("Left Content")
+layout["right"].update("Right Content")
+
+console.print(layout)
+</span></code></div></div></pre>
+                        <p data-start="1042" data-end="1168" class="">
+                          This will create a
+                          <strong data-start="1061" data-end="1091"
+                            >two-column flexible layout</strong
+                          >, similar to a flexbox with
+                          <code data-start="1119" data-end="1167"
+                            >display: flex; justify-content:
+                            space-between;</code
+                          >.
+                        </p>
+                        <h3 data-start="1170" data-end="1209" class="">
+                          <strong data-start="1174" data-end="1209"
+                            >Example using Node.js &amp; Blessed</strong
+                          >
+                        </h3>
+                        <p data-start="1210" data-end="1282" class="">
+                          If you're using JavaScript (Node.js), you can use the
+                          <code data-start="1264" data-end="1273">blessed</code>
+                          package.
+                        </p>
+                        <h4 data-start="1284" data-end="1306" class="">
+                          <strong data-start="1289" data-end="1306"
+                            >Installation:</strong
+                          >
+                        </h4>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1307"
+                          data-end="1338"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install blessed
+</span></code></div></div></pre>
+                        <h4 data-start="1340" data-end="1362" class="">
+                          <strong data-start="1345" data-end="1362"
+                            >Code Example:</strong
+                          >
+                        </h4>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1363"
+                          data-end="1807"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const blessed = require('blessed');
+
+const screen = blessed.screen();
+const box1 = blessed.box({
+  top: 'center',
+  left: 'left',
+  width: '50%',
+  height: '100%',
+  content: 'Left Box',
+  border: { type: 'line' }
+});
+
+const box2 = blessed.box({
+  top: 'center',
+  left: '50%',
+  width: '50%',
+  height: '100%',
+  content: 'Right Box',
+  border: { type: 'line' }
+});
+
+screen.append(box1);
+screen.append(box2);
+screen.render();
+</span></code></div></div></pre>
+                        <p data-start="1808" data-end="1888" class="">
+                          This splits the terminal into two flexible sections,
+                          much like a flexbox layout.
+                        </p>
+                        <p data-start="1890" data-end="1972" class="">
+                          Would you like a solution in another language or a
+                          more specific terminal tool? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="8ad49c4d-423a-4468-bcce-efec73030ba8"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            Give me the most useful TUI packages for node.js
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="14501c4f-3d26-46d6-96c6-7ed2e28ccdb8"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="140" class="">
+                          If you're building a
+                          <strong data-start="21" data-end="73"
+                            >TUI (Text User Interface) application in
+                            Node.js</strong
+                          >, here are the
+                          <strong data-start="88" data-end="125"
+                            >most useful and powerful packages</strong
+                          >
+                          you can use:
+                        </p>
+                        <hr data-start="142" data-end="145" class="" />
+                        <h3 data-start="147" data-end="183" class="">
+                          <strong data-start="151" data-end="166"
+                            >1️⃣ Blessed</strong
+                          >
+                          (Most Popular)
+                        </h3>
+                        <p data-start="184" data-end="351" class="">
+                          📌
+                          <strong data-start="187" data-end="198"
+                            >GitHub:</strong
+                          >
+                          <a
+                            data-start="199"
+                            data-end="246"
+                            rel="noopener"
+                            target="_new"
+                            class=""
+                            >chjj/blessed</a
+                          ><br data-start="246" data-end="249" />
+                          ✔️
+                          <strong data-start="252" data-end="265"
+                            >Best for:</strong
+                          >
+                          Creating full-featured terminal UIs with widgets
+                          (buttons, text boxes, lists, etc.)
+                        </p>
+                        <p data-start="353" data-end="371" class="">
+                          🔹
+                          <strong data-start="356" data-end="369"
+                            >Features:</strong
+                          >
+                        </p>
+                        <ul data-start="372" data-end="521">
+                          <li data-start="372" data-end="419" class="">
+                            <p data-start="374" data-end="419" class="">
+                              Supports layouts similar to
+                              <strong data-start="402" data-end="417"
+                                >CSS Flexbox</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="420" data-end="481" class="">
+                            <p data-start="422" data-end="481" class="">
+                              Can create interactive forms, tables, and even
+                              dashboards
+                            </p>
+                          </li>
+                          <li data-start="482" data-end="521" class="">
+                            <p data-start="484" data-end="521" class="">
+                              Works with mouse and keyboard input
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="523" data-end="545" class="">
+                          🔹
+                          <strong data-start="526" data-end="543"
+                            >Installation:</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="546"
+                          data-end="577"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install blessed
+</span></code></div></div></pre>
+                        <p data-start="579" data-end="594" class="">
+                          🔹
+                          <strong data-start="582" data-end="594"
+                            >Example:</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="595"
+                          data-end="876"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const blessed = require('blessed');
+
+const screen = blessed.screen();
+const box = blessed.box({
+  top: 'center',
+  left: 'center',
+  width: '50%',
+  height: '50%',
+  content: 'Hello, Terminal!',
+  border: { type: 'line' }
+});
+
+screen.append(box);
+screen.render();
+</span></code></div></div></pre>
+                        <hr data-start="877" data-end="880" class="" />
+                        <h3 data-start="882" data-end="928" class="">
+                          <strong data-start="886" data-end="909"
+                            >2️⃣ Blessed-Contrib</strong
+                          >
+                          (For Dashboards)
+                        </h3>
+                        <p data-start="929" data-end="1113" class="">
+                          📌
+                          <strong data-start="932" data-end="943"
+                            >GitHub:</strong
+                          >
+                          <a
+                            data-start="944"
+                            data-end="1011"
+                            rel="noopener"
+                            target="_new"
+                            class=""
+                            >yaronn/blessed-contrib</a
+                          ><br data-start="1011" data-end="1014" />
+                          ✔️
+                          <strong data-start="1017" data-end="1030"
+                            >Best for:</strong
+                          >
+                          Creating
+                          <strong data-start="1040" data-end="1064"
+                            >beautiful dashboards</strong
+                          >
+                          in the terminal with charts, grids, and tables
+                        </p>
+                        <p data-start="1115" data-end="1133" class="">
+                          🔹
+                          <strong data-start="1118" data-end="1131"
+                            >Features:</strong
+                          >
+                        </p>
+                        <ul data-start="1134" data-end="1224">
+                          <li data-start="1134" data-end="1192" class="">
+                            <p data-start="1136" data-end="1192" class="">
+                              Supports
+                              <strong data-start="1145" data-end="1190"
+                                >bar charts, line graphs, maps, and
+                                tables</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1193" data-end="1224" class="">
+                            <p data-start="1195" data-end="1224" class="">
+                              Built on top of
+                              <strong data-start="1211" data-end="1222"
+                                >Blessed</strong
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1226" data-end="1248" class="">
+                          🔹
+                          <strong data-start="1229" data-end="1246"
+                            >Installation:</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1249"
+                          data-end="1288"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install blessed-contrib
+</span></code></div></div></pre>
+                        <p data-start="1290" data-end="1326" class="">
+                          🔹
+                          <strong data-start="1293" data-end="1324"
+                            >Example (Simple Dashboard):</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1327"
+                          data-end="1684"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const blessed = require('blessed');
+const contrib = require('blessed-contrib');
+
+const screen = blessed.screen();
+const grid = new contrib.grid({ rows: 2, cols: 2, screen });
+
+const chart = contrib.line({
+  label: 'CPU Usage',
+  style: { line: 'yellow', text: 'green', baseline: 'black' }
+});
+
+grid.set(0, 0, 2, 2, chart);
+screen.render();
+</span></code></div></div></pre>
+                        <hr data-start="1685" data-end="1688" class="" />
+                        <h3 data-start="1690" data-end="1732" class="">
+                          <strong data-start="1694" data-end="1705"
+                            >3️⃣ Ink</strong
+                          >
+                          (React for the Terminal)
+                        </h3>
+                        <p data-start="1733" data-end="1874" class="">
+                          📌
+                          <strong data-start="1736" data-end="1747"
+                            >GitHub:</strong
+                          >
+                          <a
+                            data-start="1748"
+                            data-end="1803"
+                            rel="noopener"
+                            target="_new"
+                            class=""
+                            >vadimdemedes/ink</a
+                          ><br data-start="1803" data-end="1806" />
+                          ✔️
+                          <strong data-start="1809" data-end="1822"
+                            >Best for:</strong
+                          >
+                          Building terminal apps using
+                          <strong data-start="1852" data-end="1872"
+                            >React components</strong
+                          >
+                        </p>
+                        <p data-start="1876" data-end="1894" class="">
+                          🔹
+                          <strong data-start="1879" data-end="1892"
+                            >Features:</strong
+                          >
+                        </p>
+                        <ul data-start="1895" data-end="2041">
+                          <li data-start="1895" data-end="1955" class="">
+                            <p data-start="1897" data-end="1955" class="">
+                              Uses
+                              <strong data-start="1902" data-end="1918"
+                                >React syntax</strong
+                              >
+                              (<code data-start="1920" data-end="1935"
+                                >&lt;Component /&gt;</code
+                              >) for building UIs
+                            </p>
+                          </li>
+                          <li data-start="1956" data-end="2000" class="">
+                            <p data-start="1958" data-end="2000" class="">
+                              Supports hooks (<code
+                                data-start="1974"
+                                data-end="1984"
+                                >useState</code
+                              >,
+                              <code data-start="1986" data-end="1997"
+                                >useEffect</code
+                              >)
+                            </p>
+                          </li>
+                          <li data-start="2001" data-end="2041" class="">
+                            <p data-start="2003" data-end="2041" class="">
+                              Works well with
+                              <strong data-start="2019" data-end="2039"
+                                >CLI applications</strong
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="2043" data-end="2065" class="">
+                          🔹
+                          <strong data-start="2046" data-end="2063"
+                            >Installation:</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2066"
+                          data-end="2093"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install ink
+</span></code></div></div></pre>
+                        <p data-start="2095" data-end="2135" class="">
+                          🔹
+                          <strong data-start="2098" data-end="2133"
+                            >Example (Simple React TUI App):</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2136"
+                          data-end="2294"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const React = require('react');
+const { render, Text } = require('ink');
+
+const App = () =&gt; &lt;Text&gt;Hello, Terminal!&lt;/Text&gt;;
+
+render(&lt;App /&gt;);
+</span></code></div></div></pre>
+                        <hr data-start="2295" data-end="2298" class="" />
+                        <h3 data-start="2300" data-end="2349" class="">
+                          <strong data-start="2304" data-end="2324"
+                            >4️⃣ Terminal-Kit</strong
+                          >
+                          (For Interactive CLIs)
+                        </h3>
+                        <p data-start="2350" data-end="2493" class="">
+                          📌
+                          <strong data-start="2353" data-end="2364"
+                            >GitHub:</strong
+                          >
+                          <a
+                            data-start="2365"
+                            data-end="2428"
+                            rel="noopener"
+                            target="_new"
+                            class=""
+                            >cronvel/terminal-kit</a
+                          ><br data-start="2428" data-end="2431" />
+                          ✔️
+                          <strong data-start="2434" data-end="2447"
+                            >Best for:</strong
+                          >
+                          Creating interactive
+                          <strong data-start="2469" data-end="2491"
+                            >command-line tools</strong
+                          >
+                        </p>
+                        <p data-start="2495" data-end="2513" class="">
+                          🔹
+                          <strong data-start="2498" data-end="2511"
+                            >Features:</strong
+                          >
+                        </p>
+                        <ul data-start="2514" data-end="2621">
+                          <li data-start="2514" data-end="2569" class="">
+                            <p data-start="2516" data-end="2569" class="">
+                              Handles
+                              <strong data-start="2524" data-end="2567"
+                                >colors, menus, input fields, and tables</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="2570" data-end="2621" class="">
+                            <p data-start="2572" data-end="2621" class="">
+                              Supports
+                              <strong data-start="2581" data-end="2597"
+                                >autocomplete</strong
+                              >
+                              and
+                              <strong data-start="2602" data-end="2619"
+                                >progress bars</strong
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="2623" data-end="2645" class="">
+                          🔹
+                          <strong data-start="2626" data-end="2643"
+                            >Installation:</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2646"
+                          data-end="2682"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install terminal-kit
+</span></code></div></div></pre>
+                        <p data-start="2684" data-end="2714" class="">
+                          🔹
+                          <strong data-start="2687" data-end="2712"
+                            >Example (User Input):</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2715"
+                          data-end="2913"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const term = require('terminal-kit').terminal;
+
+term.green('What is your name? ');
+term.inputField({}, (err, input) =&gt; {
+  term.green(`\nHello, ${input}!\n`);
+  process.exit();
+});
+</span></code></div></div></pre>
+                        <hr data-start="2914" data-end="2917" class="" />
+                        <h3 data-start="2919" data-end="2965" class="">
+                          <strong data-start="2923" data-end="2937"
+                            >5️⃣ Cli-Ui</strong
+                          >
+                          (Lightweight UI for CLIs)
+                        </h3>
+                        <p data-start="2966" data-end="3102" class="">
+                          📌
+                          <strong data-start="2969" data-end="2980"
+                            >GitHub:</strong
+                          >
+                          <a
+                            data-start="2981"
+                            data-end="3034"
+                            rel="noopener"
+                            target="_new"
+                            class=""
+                            >nutboltu/cli-ui</a
+                          ><br data-start="3034" data-end="3037" />
+                          ✔️
+                          <strong data-start="3040" data-end="3053"
+                            >Best for:</strong
+                          >
+                          Simple
+                          <strong data-start="3061" data-end="3100"
+                            >interactive prompts and UI elements</strong
+                          >
+                        </p>
+                        <p data-start="3104" data-end="3122" class="">
+                          🔹
+                          <strong data-start="3107" data-end="3120"
+                            >Features:</strong
+                          >
+                        </p>
+                        <ul data-start="3123" data-end="3210">
+                          <li data-start="3123" data-end="3157" class="">
+                            <p data-start="3125" data-end="3157" class="">
+                              Lightweight and
+                              <strong data-start="3141" data-end="3155"
+                                >simple API</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="3158" data-end="3210" class="">
+                            <p data-start="3160" data-end="3210" class="">
+                              Includes
+                              <strong data-start="3169" data-end="3208"
+                                >spinners, progress bars, and colors</strong
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="3212" data-end="3234" class="">
+                          🔹
+                          <strong data-start="3215" data-end="3232"
+                            >Installation:</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="3235"
+                          data-end="3265"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install cli-ui
+</span></code></div></div></pre>
+                        <p data-start="3267" data-end="3284" class="">
+                          🔹
+                          <strong data-start="3270" data-end="3282"
+                            >Example:</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="3285"
+                          data-end="3430"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const cliUi = require('cli-ui');
+
+cliUi.loading.start('Fetching data...');
+setTimeout(() =&gt; cliUi.loading.stop('Done!'), 3000);
+</span></code></div></div></pre>
+                        <hr data-start="3431" data-end="3434" class="" />
+                        <h3 data-start="3436" data-end="3474" class="">
+                          <strong data-start="3440" data-end="3472"
+                            >Which One Should You Choose?</strong
+                          >
+                        </h3>
+                        <div class="overflow-x-auto contain-inline-size">
+                          <table
+                            data-start="3476"
+                            data-end="3865"
+                            node="[object Object]"
+                          >
+                            <thead data-start="3476" data-end="3511">
+                              <tr data-start="3476" data-end="3511">
+                                <th data-start="3476" data-end="3499">
+                                  Package
+                                </th>
+                                <th data-start="3499" data-end="3511">
+                                  Best For
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody data-start="3547" data-end="3865">
+                              <tr data-start="3547" data-end="3611">
+                                <td>
+                                  <strong data-start="3549" data-end="3560"
+                                    >Blessed</strong
+                                  >
+                                </td>
+                                <td>
+                                  Full TUI apps with
+                                  <strong data-start="3590" data-end="3609"
+                                    >flexbox layouts</strong
+                                  >
+                                </td>
+                              </tr>
+                              <tr data-start="3612" data-end="3673">
+                                <td>
+                                  <strong data-start="3614" data-end="3633"
+                                    >Blessed-Contrib</strong
+                                  >
+                                </td>
+                                <td>
+                                  <strong data-start="3636" data-end="3650"
+                                    >Dashboards</strong
+                                  >
+                                  with charts &amp; tables
+                                </td>
+                              </tr>
+                              <tr data-start="3674" data-end="3729">
+                                <td>
+                                  <strong data-start="3676" data-end="3683"
+                                    >Ink</strong
+                                  >
+                                </td>
+                                <td>
+                                  <strong data-start="3698" data-end="3713"
+                                    >React-style</strong
+                                  >
+                                  terminal apps
+                                </td>
+                              </tr>
+                              <tr data-start="3730" data-end="3781">
+                                <td>
+                                  <strong data-start="3732" data-end="3748"
+                                    >Terminal-Kit</strong
+                                  >
+                                </td>
+                                <td>
+                                  <strong data-start="3754" data-end="3779"
+                                    >Interactive CLI tools</strong
+                                  >
+                                </td>
+                              </tr>
+                              <tr data-start="3782" data-end="3865">
+                                <td>
+                                  <strong data-start="3784" data-end="3794"
+                                    >Cli-Ui</strong
+                                  >
+                                </td>
+                                <td>
+                                  Lightweight UI elements like
+                                  <strong data-start="3835" data-end="3863"
+                                    >spinners &amp; progress bars</strong
+                                  >
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <p data-start="3867" data-end="3927" class="">
+                          Do you need help choosing the right one for your
+                          project? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="bcf2debc-5652-435d-a016-4135e0600daa"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            What is the yoga layout?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="333e125c-d1c4-407f-8f34-988ddf4abd39"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <h3 data-start="0" data-end="54" class="">
+                          <strong data-start="4" data-end="52"
+                            >Yoga Layout: A Cross-Platform Flexbox
+                            Engine</strong
+                          >
+                        </h3>
+                        <p data-start="56" data-end="327" class="">
+                          <strong data-start="56" data-end="64">Yoga</strong> is
+                          an open-source
+                          <strong data-start="83" data-end="115"
+                            >cross-platform layout engine</strong
+                          >
+                          that implements
+                          <strong data-start="132" data-end="143"
+                            >Flexbox</strong
+                          >
+                          for UI development. It was created by
+                          <strong data-start="182" data-end="201"
+                            >Meta (Facebook)</strong
+                          >
+                          to provide
+                          <strong data-start="213" data-end="235"
+                            >fast and efficient</strong
+                          >
+                          layout calculations for various platforms, including
+                          mobile, web, and desktop applications.
+                        </p>
+                        <p data-start="329" data-end="510" class="">
+                          🔹
+                          <strong data-start="332" data-end="348"
+                            >GitHub Repo:</strong
+                          >
+                          <a
+                            data-start="349"
+                            data-end="398"
+                            rel="noopener"
+                            target="_new"
+                            class=""
+                            >facebook/yoga</a
+                          ><br data-start="398" data-end="401" />
+                          🔹
+                          <strong data-start="404" data-end="419"
+                            >Written In:</strong
+                          >
+                          C++<br data-start="423" data-end="426" />
+                          🔹
+                          <strong data-start="429" data-end="456"
+                            >Bindings Available For:</strong
+                          >
+                          JavaScript, TypeScript, Python, Rust, Go, and more.
+                        </p>
+                        <hr data-start="512" data-end="515" class="" />
+                        <h2 data-start="517" data-end="540" class="">
+                          <strong data-start="520" data-end="540"
+                            >🔹 Why Use Yoga?</strong
+                          >
+                        </h2>
+                        <ol data-start="541" data-end="979">
+                          <li data-start="541" data-end="632" class="">
+                            <p data-start="544" data-end="632" class="">
+                              <strong data-start="544" data-end="571"
+                                >Implements CSS Flexbox:</strong
+                              >
+                              Brings the power of
+                              <strong data-start="592" data-end="607"
+                                >CSS Flexbox</strong
+                              >
+                              to non-web environments.
+                            </p>
+                          </li>
+                          <li data-start="633" data-end="721" class="">
+                            <p data-start="636" data-end="721" class="">
+                              <strong data-start="636" data-end="659"
+                                >Lightweight &amp; Fast:</strong
+                              >
+                              Designed for
+                              <strong data-start="673" data-end="693"
+                                >high-performance</strong
+                              >
+                              rendering in UI frameworks.
+                            </p>
+                          </li>
+                          <li data-start="722" data-end="808" class="">
+                            <p data-start="725" data-end="808" class="">
+                              <strong data-start="725" data-end="744"
+                                >Cross-Platform:</strong
+                              >
+                              Works on
+                              <strong data-start="754" data-end="807"
+                                >Android, iOS, React Native, WebAssembly, and
+                                more</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="809" data-end="897" class="">
+                            <p data-start="812" data-end="897" class="">
+                              <strong data-start="812" data-end="834"
+                                >Low-Level Control:</strong
+                              >
+                              Can be embedded in game engines, terminal UIs, or
+                              native apps.
+                            </p>
+                          </li>
+                          <li data-start="898" data-end="979" class="">
+                            <p data-start="901" data-end="979" class="">
+                              <strong data-start="901" data-end="926"
+                                >Used in React Native:</strong
+                              >
+                              <strong data-start="927" data-end="978"
+                                >React Native’s layout system is powered by
+                                Yoga</strong
+                              >.
+                            </p>
+                          </li>
+                        </ol>
+                        <hr data-start="981" data-end="984" class="" />
+                        <h2 data-start="986" data-end="1015" class="">
+                          <strong data-start="989" data-end="1015"
+                            >🔹 How Does Yoga Work?</strong
+                          >
+                        </h2>
+                        <p data-start="1016" data-end="1260" class="">
+                          Instead of relying on a browser's CSS engine,
+                          <strong data-start="1062" data-end="1101"
+                            >Yoga computes layouts independently</strong
+                          >
+                          using a
+                          <strong data-start="1110" data-end="1149"
+                            >C++ implementation of Flexbox rules</strong
+                          >. It takes a
+                          <strong data-start="1162" data-end="1179"
+                            >tree of nodes</strong
+                          >
+                          (like a UI structure) and calculates the
+                          sizes/positions based on Flexbox rules.
+                        </p>
+                        <h3 data-start="1262" data-end="1314" class="">
+                          <strong data-start="1266" data-end="1314"
+                            >Example: Creating a Flexbox Layout with
+                            Yoga</strong
+                          >
+                        </h3>
+                        <p data-start="1315" data-end="1371" class="">
+                          Let's use
+                          <strong data-start="1325" data-end="1349"
+                            >JavaScript (Node.js)</strong
+                          >
+                          with
+                          <strong data-start="1355" data-end="1370"
+                            >yoga-layout</strong
+                          >:
+                        </p>
+                        <h3 data-start="1373" data-end="1408" class="">
+                          <strong data-start="1377" data-end="1408"
+                            >🔹 Install Yoga for Node.js</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1409"
+                          data-end="1444"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install yoga-layout
+</span></code></div></div></pre>
+                        <h3 data-start="1446" data-end="1498" class="">
+                          <strong data-start="1450" data-end="1498"
+                            >🔹 Example: Creating a Simple Flexbox
+                            Layout</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1499"
+                          data-end="2161"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const yoga = require('yoga-layout');
+
+// Create a root node
+const root = yoga.Node.create();
+root.setWidth(500);
+root.setHeight(300);
+root.setFlexDirection(yoga.FLEX_DIRECTION_ROW); // Like "display: flex; flex-direction: row;"
+
+// Create a child node
+const child = yoga.Node.create();
+child.setWidth(100);
+child.setHeight(100);
+child.setMargin(yoga.EDGE_ALL, 10); // Add margin
+
+// Attach child to root
+root.insertChild(child, 0);
+
+// Calculate layout
+root.calculateLayout(500, 300, yoga.DIRECTION_LTR);
+
+console.log(root.getComputedLayout()); // Output the calculated positions
+console.log(child.getComputedLayout()); // Output child position
+</span></code></div></div></pre>
+                        <hr data-start="2163" data-end="2166" class="" />
+                        <h2 data-start="2168" data-end="2197" class="">
+                          <strong data-start="2171" data-end="2197"
+                            >🔹 Where is Yoga Used?</strong
+                          >
+                        </h2>
+                        <ul data-start="2198" data-end="2403">
+                          <li data-start="2198" data-end="2250" class="">
+                            <p data-start="2200" data-end="2250" class="">
+                              <strong data-start="2200" data-end="2216"
+                                >React Native</strong
+                              >
+                              (Handles all layout calculations)
+                            </p>
+                          </li>
+                          <li data-start="2251" data-end="2286" class="">
+                            <p data-start="2253" data-end="2286" class="">
+                              <strong data-start="2253" data-end="2286"
+                                >Component-based UI frameworks</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="2287" data-end="2317" class="">
+                            <p data-start="2289" data-end="2317" class="">
+                              <strong data-start="2289" data-end="2317"
+                                >Terminal-based UIs (TUI)</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="2318" data-end="2361" class="">
+                            <p data-start="2320" data-end="2361" class="">
+                              <strong data-start="2320" data-end="2361"
+                                >Game UI layouts (Unity, Unreal, etc.)</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="2362" data-end="2403" class="">
+                            <p data-start="2364" data-end="2403" class="">
+                              <strong data-start="2364" data-end="2403"
+                                >Cross-platform desktop applications</strong
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="2405" data-end="2408" class="" />
+                        <h2 data-start="2410" data-end="2440" class="">
+                          <strong data-start="2413" data-end="2440"
+                            >🔹 Should You Use Yoga?</strong
+                          >
+                        </h2>
+                        <p data-start="2441" data-end="2459" class="">
+                          ✔
+                          <strong data-start="2443" data-end="2458"
+                            >Yes, if you</strong
+                          >:
+                        </p>
+                        <ul data-start="2460" data-end="2625">
+                          <li data-start="2460" data-end="2514" class="">
+                            <p data-start="2462" data-end="2514" class="">
+                              Need
+                              <strong data-start="2467" data-end="2513"
+                                >flexbox-style layouts outside of a
+                                browser</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="2515" data-end="2574" class="">
+                            <p data-start="2517" data-end="2574" class="">
+                              Are working with
+                              <strong data-start="2534" data-end="2573"
+                                >React Native or embedded UI systems</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="2575" data-end="2625" class="">
+                            <p data-start="2577" data-end="2625" class="">
+                              Want
+                              <strong data-start="2582" data-end="2624"
+                                >consistent UI layouts across platforms</strong
+                              >.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="2627" data-end="2644" class="">
+                          ❌
+                          <strong data-start="2629" data-end="2643"
+                            >No, if you</strong
+                          >:
+                        </p>
+                        <ul data-start="2645" data-end="2771">
+                          <li data-start="2645" data-end="2707" class="">
+                            <p data-start="2647" data-end="2707" class="">
+                              Are just building for the
+                              <strong data-start="2673" data-end="2680"
+                                >web</strong
+                              >
+                              (use CSS Flexbox instead).
+                            </p>
+                          </li>
+                          <li data-start="2708" data-end="2771" class="">
+                            <p data-start="2710" data-end="2771" class="">
+                              Don't need
+                              <strong data-start="2721" data-end="2745"
+                                >fine-grained control</strong
+                              >
+                              over layout calculations.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="2773" data-end="2841" class="">
+                          Would you like help integrating
+                          <strong data-start="2805" data-end="2813"
+                            >Yoga</strong
+                          >
+                          into a specific project? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="dec33aa1-d2db-4114-8ee9-007cf417fe25"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            How to use the yoga layout to create a TUI in
+                            node.js?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="1a85adda-3765-49f0-9554-a8d31128abf7"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <h3 data-start="0" data-end="54" class="">
+                          <strong data-start="4" data-end="52"
+                            >Using Yoga Layout to Create a TUI in
+                            Node.js</strong
+                          >
+                        </h3>
+                        <p data-start="55" data-end="230" class="">
+                          You can use
+                          <strong data-start="67" data-end="82"
+                            >Yoga Layout</strong
+                          >
+                          for
+                          <strong data-start="87" data-end="112"
+                            >flexbox-style layouts</strong
+                          >
+                          in a terminal UI (<strong
+                            data-start="131"
+                            data-end="138"
+                            >TUI</strong
+                          >) by combining it with a rendering library like
+                          <strong data-start="186" data-end="197"
+                            >Blessed</strong
+                          >
+                          or
+                          <strong data-start="201" data-end="229"
+                            >Ink (React for terminal)</strong
+                          >.
+                        </p>
+                        <hr data-start="232" data-end="235" class="" />
+                        <h2 data-start="237" data-end="255" class="">
+                          <strong data-start="240" data-end="255"
+                            >🔹 Approach</strong
+                          >
+                        </h2>
+                        <ol data-start="256" data-end="407">
+                          <li data-start="256" data-end="313" class="">
+                            <p data-start="259" data-end="313" class="">
+                              Use
+                              <strong data-start="263" data-end="278"
+                                >Yoga Layout</strong
+                              >
+                              to
+                              <strong data-start="282" data-end="312"
+                                >calculate flexible layouts</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="314" data-end="407" class="">
+                            <p data-start="317" data-end="407" class="">
+                              Render the computed layout
+                              <strong data-start="344" data-end="378"
+                                >inside a terminal UI framework</strong
+                              >
+                              like
+                              <strong data-start="384" data-end="395"
+                                >Blessed</strong
+                              >
+                              or
+                              <strong data-start="399" data-end="406"
+                                >Ink</strong
+                              >.
+                            </p>
+                          </li>
+                        </ol>
+                        <hr data-start="409" data-end="412" class="" />
+                        <h2 data-start="414" data-end="457" class="">
+                          <strong data-start="417" data-end="457"
+                            >🔹 Method 1: Using Yoga with Blessed</strong
+                          >
+                        </h2>
+                        <p data-start="458" data-end="488" class="">
+                          🔹
+                          <strong data-start="461" data-end="486"
+                            >Install Dependencies:</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="489"
+                          data-end="532"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install blessed yoga-layout
+</span></code></div></div></pre>
+                        <p data-start="534" data-end="578" class="">
+                          🔹
+                          <strong data-start="537" data-end="578"
+                            >Code Example (Basic TUI with Flexbox)</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="579"
+                          data-end="1964"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const blessed = require('blessed');
+const yoga = require('yoga-layout');
+
+// Create the root node
+const root = yoga.Node.create();
+root.setWidth(80);
+root.setHeight(24);
+root.setFlexDirection(yoga.FLEX_DIRECTION_ROW);
+
+// Create a left panel
+const leftPanel = yoga.Node.create();
+leftPanel.setWidth(40);
+leftPanel.setHeight(24);
+leftPanel.setMargin(yoga.EDGE_ALL, 1);
+root.insertChild(leftPanel, 0);
+
+// Create a right panel
+const rightPanel = yoga.Node.create();
+rightPanel.setFlexGrow(1);
+rightPanel.setHeight(24);
+rightPanel.setMargin(yoga.EDGE_ALL, 1);
+root.insertChild(rightPanel, 1);
+
+// Calculate layout
+root.calculateLayout(80, 24, yoga.DIRECTION_LTR);
+
+// Create a Blessed screen
+const screen = blessed.screen();
+const box1 = blessed.box({
+  top: root.getComputedTop(),
+  left: root.getComputedLeft(),
+  width: leftPanel.getComputedWidth(),
+  height: leftPanel.getComputedHeight(),
+  content: 'Left Panel',
+  border: { type: 'line' },
+  style: { border: { fg: 'blue' } }
+});
+
+const box2 = blessed.box({
+  top: rightPanel.getComputedTop(),
+  left: rightPanel.getComputedLeft(),
+  width: rightPanel.getComputedWidth(),
+  height: rightPanel.getComputedHeight(),
+  content: 'Right Panel (Flexible)',
+  border: { type: 'line' },
+  style: { border: { fg: 'green' } }
+});
+
+// Append boxes and render screen
+screen.append(box1);
+screen.append(box2);
+screen.render();
+</span></code></div></div></pre>
+                        <h3 data-start="1966" data-end="1986" class="">
+                          <strong data-start="1970" data-end="1986"
+                            >How It Works</strong
+                          >
+                        </h3>
+                        <ul data-start="1987" data-end="2194">
+                          <li data-start="1987" data-end="2029" class="">
+                            <p data-start="1989" data-end="2029" class="">
+                              <strong data-start="1989" data-end="2008"
+                                >Yoga calculates</strong
+                              >
+                              the flexible layout.
+                            </p>
+                          </li>
+                          <li data-start="2030" data-end="2094" class="">
+                            <p data-start="2032" data-end="2094" class="">
+                              <strong data-start="2032" data-end="2051"
+                                >Blessed renders</strong
+                              >
+                              the UI based on Yoga's computed positions.
+                            </p>
+                          </li>
+                          <li data-start="2095" data-end="2134" class="">
+                            <p data-start="2097" data-end="2134" class="">
+                              The
+                              <strong data-start="2101" data-end="2115"
+                                >left panel</strong
+                              >
+                              has a fixed width.
+                            </p>
+                          </li>
+                          <li data-start="2135" data-end="2194" class="">
+                            <p data-start="2137" data-end="2194" class="">
+                              The
+                              <strong data-start="2141" data-end="2156"
+                                >right panel</strong
+                              >
+                              flexes and fills the remaining space.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="2196" data-end="2199" class="" />
+                        <h2 data-start="2201" data-end="2254" class="">
+                          <strong data-start="2204" data-end="2254"
+                            >🔹 Method 2: Using Yoga with Ink
+                            (React-based)</strong
+                          >
+                        </h2>
+                        <p data-start="2255" data-end="2376" class="">
+                          <strong data-start="2255" data-end="2262">Ink</strong>
+                          is a React-based framework for building
+                          <strong data-start="2303" data-end="2315"
+                            >TUI apps</strong
+                          >. You can use
+                          <strong data-start="2329" data-end="2353"
+                            >Yoga’s layout engine</strong
+                          >
+                          inside Ink components.
+                        </p>
+                        <p data-start="2378" data-end="2408" class="">
+                          🔹
+                          <strong data-start="2381" data-end="2406"
+                            >Install Dependencies:</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2409"
+                          data-end="2448"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install ink yoga-layout
+</span></code></div></div></pre>
+                        <p data-start="2450" data-end="2492" class="">
+                          🔹
+                          <strong data-start="2453" data-end="2492"
+                            >Code Example (Basic Flexbox in Ink)</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2493"
+                          data-end="2908"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const React = require('react');
+const { render, Box, Text } = require('ink');
+
+const App = () =&gt; (
+  &lt;Box flexDirection="row"&gt;
+    &lt;Box width={30} borderStyle="round" borderColor="blue" padding={1}&gt;
+      &lt;Text&gt;Left Panel&lt;/Text&gt;
+    &lt;/Box&gt;
+    &lt;Box flexGrow={1} borderStyle="round" borderColor="green" padding={1}&gt;
+      &lt;Text&gt;Right Panel (Flexible)&lt;/Text&gt;
+    &lt;/Box&gt;
+  &lt;/Box&gt;
+);
+
+render(&lt;App /&gt;);
+</span></code></div></div></pre>
+                        <h3 data-start="2910" data-end="2930" class="">
+                          <strong data-start="2914" data-end="2930"
+                            >How It Works</strong
+                          >
+                        </h3>
+                        <ul data-start="2931" data-end="3089">
+                          <li data-start="2931" data-end="2973" class="">
+                            <p data-start="2933" data-end="2973" class="">
+                              Ink
+                              <strong data-start="2937" data-end="2951"
+                                >internally</strong
+                              >
+                              uses
+                              <strong data-start="2957" data-end="2972"
+                                >Yoga Layout</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="2974" data-end="3026" class="">
+                            <p data-start="2976" data-end="3026" class="">
+                              <strong data-start="2976" data-end="2994"
+                                ><code data-start="2978" data-end="2992"
+                                  >flexGrow={1}</code
+                                ></strong
+                              >
+                              makes the right panel flexible.
+                            </p>
+                          </li>
+                          <li data-start="3027" data-end="3089" class="">
+                            <p data-start="3029" data-end="3089" class="">
+                              Ink handles rendering
+                              <strong data-start="3051" data-end="3088"
+                                >without needing direct Yoga calls</strong
+                              >.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="3091" data-end="3094" class="" />
+                        <h2 data-start="3096" data-end="3131" class="">
+                          <strong data-start="3099" data-end="3131"
+                            >🔹 Which One Should You Use?</strong
+                          >
+                        </h2>
+                        <div class="overflow-x-auto contain-inline-size">
+                          <table
+                            data-start="3132"
+                            data-end="3303"
+                            node="[object Object]"
+                          >
+                            <thead data-start="3132" data-end="3157">
+                              <tr data-start="3132" data-end="3157">
+                                <th data-start="3132" data-end="3145">
+                                  Framework
+                                </th>
+                                <th data-start="3145" data-end="3157">
+                                  Best For
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody data-start="3183" data-end="3303">
+                              <tr data-start="3183" data-end="3244">
+                                <td>
+                                  <strong data-start="3185" data-end="3203"
+                                    >Blessed + Yoga</strong
+                                  >
+                                </td>
+                                <td>Low-level TUI with full Yoga control</td>
+                              </tr>
+                              <tr data-start="3245" data-end="3303">
+                                <td>
+                                  <strong data-start="3247" data-end="3254"
+                                    >Ink</strong
+                                  >
+                                  (Built-in Yoga)
+                                </td>
+                                <td>React-style TUI with Flexbox</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <p data-start="3305" data-end="3433" class="">
+                          🔹
+                          <strong data-start="3308" data-end="3319"
+                            >Use Ink</strong
+                          >
+                          if you prefer
+                          <strong data-start="3334" data-end="3361"
+                            >React-style development</strong
+                          >.<br data-start="3362" data-end="3365" />
+                          🔹
+                          <strong data-start="3368" data-end="3390"
+                            >Use Blessed + Yoga</strong
+                          >
+                          if you need
+                          <strong data-start="3403" data-end="3432"
+                            >fine-grained Yoga control</strong
+                          >.
+                        </p>
+                        <p data-start="3435" data-end="3509" class="">
+                          Would you like to extend this into a
+                          <strong data-start="3472" data-end="3505"
+                            >full interactive terminal app</strong
+                          >? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-9"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="3c954ec6-a33d-4f52-8271-6841ed833a7b"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            Do I have to set a specific width and height in
+                            yoga?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-10"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="8cb13c64-ea83-4397-90dd-be2fd36ce31f"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <h3 data-start="0" data-end="65" class="">
+                          <strong data-start="4" data-end="63"
+                            >Do You Have to Set a Specific Width and Height in
+                            Yoga?</strong
+                          >
+                        </h3>
+                        <p data-start="66" data-end="269" class="">
+                          No,
+                          <strong data-start="70" data-end="125"
+                            >you don’t have to explicitly set a width and
+                            height</strong
+                          >
+                          in Yoga. Instead, Yoga provides
+                          <strong data-start="158" data-end="180"
+                            >flexbox properties</strong
+                          >
+                          that allow elements to
+                          <strong data-start="204" data-end="224"
+                            >dynamically size</strong
+                          >
+                          based on their content and parent container.
+                        </p>
+                        <hr data-start="271" data-end="274" class="" />
+                        <h2 data-start="276" data-end="331" class="">
+                          <strong data-start="279" data-end="331"
+                            >🔹 What Happens If You Don’t Set Width &amp;
+                            Height?</strong
+                          >
+                        </h2>
+                        <p data-start="332" data-end="398" class="">
+                          If you don't define
+                          <code data-start="352" data-end="364"
+                            >setWidth()</code
+                          >
+                          and
+                          <code data-start="369" data-end="382"
+                            >setHeight()</code
+                          >, the node will:
+                        </p>
+                        <ol data-start="399" data-end="600">
+                          <li data-start="399" data-end="464" class="">
+                            <p data-start="402" data-end="464" class="">
+                              <strong data-start="402" data-end="431"
+                                >Shrink to fit its content</strong
+                              >
+                              (if no flex properties are set).
+                            </p>
+                          </li>
+                          <li data-start="465" data-end="516" class="">
+                            <p data-start="468" data-end="516" class="">
+                              <strong data-start="468" data-end="490"
+                                >Expand dynamically</strong
+                              >
+                              if
+                              <code data-start="494" data-end="504"
+                                >flexGrow</code
+                              >
+                              is enabled.
+                            </p>
+                          </li>
+                          <li data-start="517" data-end="600" class="">
+                            <p data-start="520" data-end="600" class="">
+                              <strong data-start="520" data-end="561"
+                                >Be constrained by its parent’s layout</strong
+                              >
+                              if a parent node defines width/height.
+                            </p>
+                          </li>
+                        </ol>
+                        <hr data-start="602" data-end="605" class="" />
+                        <h2 data-start="607" data-end="668" class="">
+                          <strong data-start="610" data-end="668"
+                            >🔹 Example: Flexible Layout Without Fixed
+                            Width/Height</strong
+                          >
+                        </h2>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="669"
+                          data-end="1369"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const yoga = require('yoga-layout');
+
+// Root node (container)
+const root = yoga.Node.create();
+root.setFlexDirection(yoga.FLEX_DIRECTION_ROW);
+root.setWidth(500); // Fixed width, height can be dynamic
+
+// Child node 1 (Fixed size)
+const box1 = yoga.Node.create();
+box1.setWidth(100);
+box1.setHeight(100);
+root.insertChild(box1, 0);
+
+// Child node 2 (Flexible size)
+const box2 = yoga.Node.create();
+box2.setFlexGrow(1); // Expands to fill remaining space
+box2.setHeight(100);
+root.insertChild(box2, 1);
+
+// Compute layout
+root.calculateLayout(undefined, undefined, yoga.DIRECTION_LTR);
+
+console.log('Box1:', box1.getComputedLayout());
+console.log('Box2:', box2.getComputedLayout());
+</span></code></div></div></pre>
+                        <hr data-start="1371" data-end="1374" class="" />
+                        <h2 data-start="1376" data-end="1417" class="">
+                          <strong data-start="1379" data-end="1417"
+                            >🔹 How to Make Elements Auto-Size?</strong
+                          >
+                        </h2>
+                        <div class="overflow-x-auto contain-inline-size">
+                          <table
+                            data-start="1418"
+                            data-end="1716"
+                            node="[object Object]"
+                          >
+                            <thead data-start="1418" data-end="1441">
+                              <tr data-start="1418" data-end="1441">
+                                <th data-start="1418" data-end="1429">
+                                  Property
+                                </th>
+                                <th data-start="1429" data-end="1441">
+                                  Behavior
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody data-start="1466" data-end="1716">
+                              <tr data-start="1466" data-end="1523">
+                                <td>
+                                  <strong data-start="1468" data-end="1500"
+                                    ><code data-start="1470" data-end="1482"
+                                      >setWidth()</code
+                                    >
+                                    /
+                                    <code data-start="1485" data-end="1498"
+                                      >setHeight()</code
+                                    ></strong
+                                  >
+                                </td>
+                                <td>Sets a fixed size.</td>
+                              </tr>
+                              <tr data-start="1524" data-end="1583">
+                                <td>
+                                  <strong data-start="1526" data-end="1546"
+                                    ><code data-start="1528" data-end="1544"
+                                      >setFlexGrow(1)</code
+                                    ></strong
+                                  >
+                                </td>
+                                <td>Expands to fill remaining space.</td>
+                              </tr>
+                              <tr data-start="1584" data-end="1636">
+                                <td>
+                                  <strong data-start="1586" data-end="1608"
+                                    ><code data-start="1588" data-end="1606"
+                                      >setFlexShrink(1)</code
+                                    ></strong
+                                  >
+                                </td>
+                                <td>Shrinks when necessary.</td>
+                              </tr>
+                              <tr data-start="1637" data-end="1716">
+                                <td>
+                                  <strong data-start="1639" data-end="1677"
+                                    ><code data-start="1641" data-end="1675"
+                                      >setAlignSelf(yoga.ALIGN_STRETCH)</code
+                                    ></strong
+                                  >
+                                </td>
+                                <td>Stretches to fill parent’s height.</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <hr data-start="1718" data-end="1721" class="" />
+                        <h2 data-start="1723" data-end="1778" class="">
+                          <strong data-start="1726" data-end="1778"
+                            >🔹 Example: Dynamic Height Using
+                            <code data-start="1761" data-end="1776"
+                              >ALIGN_STRETCH</code
+                            ></strong
+                          >
+                        </h2>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1779"
+                          data-end="2265"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const container = yoga.Node.create();
+container.setWidth(300);
+container.setHeight(400);
+container.setFlexDirection(yoga.FLEX_DIRECTION_COLUMN);
+
+const child = yoga.Node.create();
+child.setFlexGrow(1); // Expands to fill available space
+child.setAlignSelf(yoga.ALIGN_STRETCH); // Stretches to parent's height
+container.insertChild(child, 0);
+
+container.calculateLayout(undefined, undefined, yoga.DIRECTION_LTR);
+console.log('Child layout:', child.getComputedLayout());
+</span></code></div></div></pre>
+                        <hr data-start="2267" data-end="2270" class="" />
+                        <h2 data-start="2272" data-end="2292" class="">
+                          <strong data-start="2275" data-end="2292"
+                            >🔹 Conclusion</strong
+                          >
+                        </h2>
+                        <p data-start="2293" data-end="2540" class="">
+                          ✔
+                          <strong data-start="2295" data-end="2347"
+                            >No, you don’t need to set explicit
+                            width/height.</strong
+                          ><br data-start="2347" data-end="2350" />
+                          ✔ Use
+                          <strong data-start="2356" data-end="2378"
+                            >Flexbox properties</strong
+                          >
+                          like
+                          <code data-start="2384" data-end="2394">flexGrow</code
+                          >,
+                          <code data-start="2396" data-end="2408"
+                            >flexShrink</code
+                          >, and
+                          <code data-start="2414" data-end="2425"
+                            >alignSelf</code
+                          >
+                          to create dynamic layouts.<br
+                            data-start="2452"
+                            data-end="2455"
+                          />
+                          ✔ If an element has no content and no explicit size,
+                          it may collapse to
+                          <code data-start="2527" data-end="2532">0x0</code>
+                          size.
+                        </p>
+                        <p data-start="2542" data-end="2594" class="">
+                          Would you like a
+                          <strong data-start="2559" data-end="2581"
+                            >real-world example</strong
+                          >
+                          in a TUI? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-11"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="4d4d61b0-668c-491e-bfe5-6748b5682451"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            If I'm going to use blessed doesn't it have support
+                            for flex out of the box?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-12"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="f7312f04-9b7b-4e4d-98d2-5208f27d5817"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <h3 data-start="0" data-end="54" class="">
+                          <strong data-start="4" data-end="52"
+                            >Does Blessed Support Flexbox Out of the
+                            Box?</strong
+                          >
+                        </h3>
+                        <p data-start="55" data-end="311" class="">
+                          No,
+                          <strong data-start="59" data-end="104"
+                            >Blessed does NOT support Flexbox natively</strong
+                          >. It relies on
+                          <strong data-start="119" data-end="143"
+                            >absolute positioning</strong
+                          >
+                          (<code data-start="145" data-end="150">top</code>,
+                          <code data-start="152" data-end="158">left</code>,
+                          <code data-start="160" data-end="167">width</code>,
+                          <code data-start="169" data-end="177">height</code>)
+                          and
+                          <strong data-start="183" data-end="197"
+                            >box models</strong
+                          >
+                          instead. However, you can
+                          <strong data-start="224" data-end="247"
+                            >combine Yoga Layout</strong
+                          >
+                          with Blessed to achieve
+                          <strong data-start="272" data-end="296"
+                            >Flexbox-like layouts</strong
+                          >
+                          in a terminal.
+                        </p>
+                        <hr data-start="313" data-end="316" class="" />
+                        <h2 data-start="318" data-end="355" class="">
+                          <strong data-start="321" data-end="355"
+                            >🔹 How Layout Works in Blessed</strong
+                          >
+                        </h2>
+                        <p data-start="356" data-end="424" class="">
+                          Blessed has a
+                          <strong data-start="370" data-end="402"
+                            >grid-like positioning system</strong
+                          >
+                          with properties like:
+                        </p>
+                        <ul data-start="425" data-end="620">
+                          <li data-start="425" data-end="486" class="">
+                            <p data-start="427" data-end="486" class="">
+                              <strong data-start="427" data-end="463"
+                                ><code data-start="429" data-end="434">top</code
+                                >,
+                                <code data-start="436" data-end="442">left</code
+                                >,
+                                <code data-start="444" data-end="451"
+                                  >width</code
+                                >,
+                                <code data-start="453" data-end="461"
+                                  >height</code
+                                ></strong
+                              >
+                              (absolute positioning)
+                            </p>
+                          </li>
+                          <li data-start="487" data-end="524" class="">
+                            <p data-start="489" data-end="524" class="">
+                              <strong data-start="489" data-end="501"
+                                ><code data-start="491" data-end="499"
+                                  >shrink</code
+                                ></strong
+                              >
+                              (content-based sizing)
+                            </p>
+                          </li>
+                          <li data-start="525" data-end="578" class="">
+                            <p data-start="527" data-end="578" class="">
+                              <strong data-start="527" data-end="548"
+                                ><code data-start="529" data-end="536"
+                                  >align</code
+                                >,
+                                <code data-start="538" data-end="546"
+                                  >valign</code
+                                ></strong
+                              >
+                              (text alignment, not Flexbox)
+                            </p>
+                          </li>
+                          <li data-start="579" data-end="620" class="">
+                            <p data-start="581" data-end="620" class="">
+                              <strong data-start="581" data-end="604"
+                                ><code data-start="583" data-end="592"
+                                  >padding</code
+                                >,
+                                <code data-start="594" data-end="602"
+                                  >margin</code
+                                ></strong
+                              >
+                              (basic spacing)
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="622" data-end="648" class="">
+                          🚫
+                          <strong data-start="625" data-end="648"
+                            >What Blessed lacks:</strong
+                          >
+                        </p>
+                        <ul data-start="649" data-end="774">
+                          <li data-start="649" data-end="700" class="">
+                            <p data-start="651" data-end="700" class="">
+                              No
+                              <strong data-start="654" data-end="673"
+                                ><code data-start="656" data-end="671"
+                                  >flexDirection</code
+                                ></strong
+                              >
+                              (<code data-start="675" data-end="680">row</code>
+                              /
+                              <code data-start="683" data-end="691"
+                                >column</code
+                              >
+                              layouts)
+                            </p>
+                          </li>
+                          <li data-start="701" data-end="735" class="">
+                            <p data-start="703" data-end="735" class="">
+                              No
+                              <strong data-start="706" data-end="735"
+                                ><code data-start="708" data-end="718"
+                                  >flexGrow</code
+                                >
+                                /
+                                <code data-start="721" data-end="733"
+                                  >flexShrink</code
+                                ></strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="736" data-end="774" class="">
+                            <p data-start="738" data-end="774" class="">
+                              No
+                              <strong data-start="741" data-end="757"
+                                >auto-spacing</strong
+                              >
+                              like CSS Flexbox
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="776" data-end="779" class="" />
+                        <h2 data-start="781" data-end="821" class="">
+                          <strong data-start="784" data-end="821"
+                            >🔹 How to Add Flexbox to Blessed?</strong
+                          >
+                        </h2>
+                        <p data-start="822" data-end="984" class="">
+                          Since Blessed doesn’t have built-in Flexbox, you can
+                          use
+                          <strong data-start="879" data-end="894"
+                            >Yoga Layout</strong
+                          >
+                          to
+                          <strong data-start="898" data-end="933"
+                            >calculate positions dynamically</strong
+                          >, then
+                          <strong data-start="940" data-end="963"
+                            >apply them manually</strong
+                          >
+                          to Blessed elements.
+                        </p>
+                        <h3 data-start="986" data-end="1042" class="">
+                          <strong data-start="990" data-end="1042"
+                            >Example: Using Yoga to Handle Flexbox in
+                            Blessed</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1043"
+                          data-end="2310"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const blessed = require('blessed');
+const yoga = require('yoga-layout');
+
+// Create a root layout node
+const root = yoga.Node.create();
+root.setWidth(80);
+root.setHeight(24);
+root.setFlexDirection(yoga.FLEX_DIRECTION_ROW);
+
+// Left panel (fixed size)
+const leftPanel = yoga.Node.create();
+leftPanel.setWidth(30);
+leftPanel.setHeight(24);
+root.insertChild(leftPanel, 0);
+
+// Right panel (flexible)
+const rightPanel = yoga.Node.create();
+rightPanel.setFlexGrow(1); // Takes remaining space
+rightPanel.setHeight(24);
+root.insertChild(rightPanel, 1);
+
+// Calculate layout
+root.calculateLayout(80, 24, yoga.DIRECTION_LTR);
+
+// Create Blessed screen
+const screen = blessed.screen();
+const box1 = blessed.box({
+  top: 0,
+  left: 0,
+  width: leftPanel.getComputedWidth(),
+  height: leftPanel.getComputedHeight(),
+  content: 'Left Panel (Fixed)',
+  border: { type: 'line' },
+  style: { border: { fg: 'blue' } }
+});
+
+const box2 = blessed.box({
+  top: 0,
+  left: leftPanel.getComputedWidth(),
+  width: rightPanel.getComputedWidth(),
+  height: rightPanel.getComputedHeight(),
+  content: 'Right Panel (Flexbox)',
+  border: { type: 'line' },
+  style: { border: { fg: 'green' } }
+});
+
+// Append and render
+screen.append(box1);
+screen.append(box2);
+screen.render();
+</span></code></div></div></pre>
+                        <hr data-start="2312" data-end="2315" class="" />
+                        <h2 data-start="2317" data-end="2373" class="">
+                          <strong data-start="2320" data-end="2373"
+                            >🔹 Alternative: Use Blessed-Contrib (Grid
+                            System)</strong
+                          >
+                        </h2>
+                        <p data-start="2374" data-end="2516" class="">
+                          If you only need
+                          <strong data-start="2391" data-end="2417"
+                            >basic flexible layouts</strong
+                          >, you can use
+                          <strong data-start="2431" data-end="2450"
+                            >blessed-contrib</strong
+                          >, which provides a
+                          <strong data-start="2469" data-end="2484"
+                            >grid system</strong
+                          >
+                          (though it’s not true Flexbox).
+                        </p>
+                        <p data-start="2518" data-end="2551" class="">
+                          🔹
+                          <strong data-start="2521" data-end="2551"
+                            >Install
+                            <code data-start="2531" data-end="2548"
+                              >blessed-contrib</code
+                            >:</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2552"
+                          data-end="2599"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install blessed blessed-contrib
+</span></code></div></div></pre>
+                        <p data-start="2601" data-end="2645" class="">
+                          🔹
+                          <strong data-start="2604" data-end="2645"
+                            >Example: Using
+                            <code data-start="2621" data-end="2638"
+                              >blessed-contrib</code
+                            >
+                            Grid</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2646"
+                          data-end="3232"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const blessed = require('blessed');
+const contrib = require('blessed-contrib');
+
+// Create screen and grid
+const screen = blessed.screen();
+const grid = new contrib.grid({ rows: 1, cols: 2, screen });
+
+// Left panel (Fixed)
+const box1 = grid.set(0, 0, 1, 1, blessed.box, {
+  content: 'Left Panel',
+  border: { type: 'line' },
+  style: { border: { fg: 'blue' } }
+});
+
+// Right panel (Auto width)
+const box2 = grid.set(0, 1, 1, 1, blessed.box, {
+  content: 'Right Panel (Flex-like)',
+  border: { type: 'line' },
+  style: { border: { fg: 'green' } }
+});
+
+screen.render();
+</span></code></div></div></pre>
+                        <hr data-start="3234" data-end="3237" class="" />
+                        <h2 data-start="3239" data-end="3279" class="">
+                          <strong data-start="3242" data-end="3279"
+                            >🔹 Which Approach Should You Use?</strong
+                          >
+                        </h2>
+                        <div class="overflow-x-auto contain-inline-size">
+                          <table
+                            data-start="3280"
+                            data-end="3554"
+                            node="[object Object]"
+                          >
+                            <thead data-start="3280" data-end="3318">
+                              <tr data-start="3280" data-end="3318">
+                                <th data-start="3280" data-end="3295">
+                                  <strong data-start="3282" data-end="3294"
+                                    >Approach</strong
+                                  >
+                                </th>
+                                <th data-start="3295" data-end="3306">
+                                  <strong data-start="3297" data-end="3305"
+                                    >Pros</strong
+                                  >
+                                </th>
+                                <th data-start="3306" data-end="3318">
+                                  <strong data-start="3308" data-end="3316"
+                                    >Cons</strong
+                                  >
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody data-start="3356" data-end="3554">
+                              <tr data-start="3356" data-end="3432">
+                                <td>
+                                  <strong data-start="3358" data-end="3376"
+                                    >Blessed + Yoga</strong
+                                  >
+                                </td>
+                                <td>True Flexbox behavior</td>
+                                <td>Manual positioning required</td>
+                              </tr>
+                              <tr data-start="3433" data-end="3506">
+                                <td>
+                                  <strong data-start="3435" data-end="3459"
+                                    >Blessed-Contrib Grid</strong
+                                  >
+                                </td>
+                                <td>Simple, built-in</td>
+                                <td>Less flexible than Yoga</td>
+                              </tr>
+                              <tr data-start="3507" data-end="3554">
+                                <td>
+                                  <strong data-start="3509" data-end="3524"
+                                    >Raw Blessed</strong
+                                  >
+                                </td>
+                                <td>More control</td>
+                                <td>No Flexbox</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <p data-start="3556" data-end="3577" class="">
+                          <strong data-start="3556" data-end="3575"
+                            >🔹 Best choice?</strong
+                          >
+                        </p>
+                        <ul data-start="3578" data-end="3701">
+                          <li data-start="3578" data-end="3642" class="">
+                            <p data-start="3580" data-end="3642" class="">
+                              If you want
+                              <strong data-start="3592" data-end="3608"
+                                >real Flexbox</strong
+                              >, use
+                              <strong data-start="3614" data-end="3639"
+                                >Yoga Layout + Blessed</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="3643" data-end="3701" class="">
+                            <p data-start="3645" data-end="3701" class="">
+                              If you want
+                              <strong data-start="3657" data-end="3675"
+                                >easier layouts</strong
+                              >, try
+                              <strong data-start="3681" data-end="3700"
+                                >blessed-contrib</strong
+                              >.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="3703" data-end="3757" class="">
+                          Would you like help with a
+                          <strong data-start="3730" data-end="3753"
+                            >specific TUI layout</strong
+                          >? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-13"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="9f506c9c-2ee8-46ad-abbd-7eb392bd25b9"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            is it possible to map these combinations of yoga
+                            nodes and blessed elements into JSX components?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-14"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="f619b1fb-b157-4089-a63e-b611a0c99926"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <h3 data-start="0" data-end="57" class="">
+                          <strong data-start="4" data-end="55"
+                            >Can You Map Yoga + Blessed into JSX
+                            Components?</strong
+                          >
+                        </h3>
+                        <p data-start="58" data-end="167" class="">
+                          Yes! You can use
+                          <strong data-start="75" data-end="90"
+                            >React + Ink</strong
+                          >
+                          to create a
+                          <strong data-start="103" data-end="128"
+                            >JSX-based terminal UI</strong
+                          >
+                          with
+                          <strong data-start="134" data-end="153"
+                            >Flexbox layouts</strong
+                          >
+                          using Yoga.
+                        </p>
+                        <p data-start="169" data-end="350" class="">
+                          🚀
+                          <strong data-start="172" data-end="179">Ink</strong>
+                          is a React renderer for CLI applications, and it
+                          <strong data-start="229" data-end="260"
+                            >uses Yoga Layout internally</strong
+                          >
+                          for rendering, meaning
+                          <strong data-start="284" data-end="326"
+                            >you get Flexbox support out of the box</strong
+                          >—just like React Native.
+                        </p>
+                        <hr data-start="352" data-end="355" class="" />
+                        <h2 data-start="357" data-end="400" class="">
+                          <strong data-start="360" data-end="400"
+                            >🔹 How to Use Ink for JSX-Based TUI?</strong
+                          >
+                        </h2>
+                        <h3 data-start="401" data-end="424" class="">
+                          <strong data-start="405" data-end="424"
+                            >1️⃣ Install Ink</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="425"
+                          data-end="452"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install ink
+</span></code></div></div></pre>
+                        <h3 data-start="454" data-end="501" class="">
+                          <strong data-start="458" data-end="501"
+                            >2️⃣ Create a JSX-Based TUI with Flexbox</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="502"
+                          data-end="954"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">jsx</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>import React from 'react';
+import { render, Box, Text } from 'ink';
+
+const App = () =&gt; (
+  &lt;Box flexDirection="row"&gt;
+    {/* Left Panel (Fixed width) */}
+    &lt;Box width={30} borderStyle="round" borderColor="blue"&gt;
+      &lt;Text&gt;Left Panel&lt;/Text&gt;
+    &lt;/Box&gt;
+
+    {/* Right Panel (Flexible width) */}
+    &lt;Box flexGrow={1} borderStyle="round" borderColor="green"&gt;
+      &lt;Text&gt;Right Panel (Flexbox)&lt;/Text&gt;
+    &lt;/Box&gt;
+  &lt;/Box&gt;
+);
+
+render(&lt;App /&gt;);
+</span></code></div></div></pre>
+                        <p data-start="955" data-end="1072" class="">
+                          🔹 <code data-start="958" data-end="963">Box</code> in
+                          Ink behaves just like a
+                          <strong data-start="991" data-end="1004"
+                            >Yoga node</strong
+                          >, so you can use
+                          <code data-start="1021" data-end="1036"
+                            >flexDirection</code
+                          >,
+                          <code data-start="1038" data-end="1048">flexGrow</code
+                          >,
+                          <code data-start="1050" data-end="1066"
+                            >justifyContent</code
+                          >, etc.
+                        </p>
+                        <hr data-start="1074" data-end="1077" class="" />
+                        <h2 data-start="1079" data-end="1115" class="">
+                          <strong data-start="1082" data-end="1115"
+                            >🔹 What About Blessed in JSX?</strong
+                          >
+                        </h2>
+                        <p data-start="1116" data-end="1230" class="">
+                          If you want to use
+                          <strong data-start="1135" data-end="1155"
+                            >Blessed with JSX</strong
+                          >, you can use
+                          <strong data-start="1169" data-end="1186"
+                            >React-Blessed</strong
+                          >, but it
+                          <strong data-start="1195" data-end="1227"
+                            >does not support Yoga Layout</strong
+                          >.
+                        </p>
+                        <h3 data-start="1231" data-end="1263" class="">
+                          <strong data-start="1235" data-end="1263"
+                            >🔹 React-Blessed Example</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1264"
+                          data-end="1499"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">jsx</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>import React from 'react';
+import { render } from 'react-blessed';
+
+const App = () =&gt; (
+  &lt;box top="0" left="0" width="50%" height="100%" border={{ type: 'line' }}&gt;
+    Left Panel
+  &lt;/box&gt;
+);
+
+const screen = render(&lt;App /&gt;);
+</span></code></div></div></pre>
+                        <p data-start="1500" data-end="1527" class="">
+                          📌
+                          <strong data-start="1503" data-end="1525"
+                            >Why Ink is Better?</strong
+                          >
+                        </p>
+                        <ul data-start="1528" data-end="1673">
+                          <li data-start="1528" data-end="1573" class="">
+                            <p data-start="1530" data-end="1573" class="">
+                              <strong data-start="1530" data-end="1559"
+                                >Supports Flexbox natively</strong
+                              >
+                              using Yoga.
+                            </p>
+                          </li>
+                          <li data-start="1574" data-end="1623" class="">
+                            <p data-start="1576" data-end="1623" class="">
+                              <strong data-start="1576" data-end="1595"
+                                >More React-like</strong
+                              >
+                              (closer to React Native).
+                            </p>
+                          </li>
+                          <li data-start="1624" data-end="1673" class="">
+                            <p data-start="1626" data-end="1673" class="">
+                              <strong data-start="1626" data-end="1653"
+                                >More active development</strong
+                              >
+                              than React-Blessed.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1675" data-end="1678" class="" />
+                        <h2 data-start="1680" data-end="1700" class="">
+                          <strong data-start="1683" data-end="1700"
+                            >🔹 Conclusion</strong
+                          >
+                        </h2>
+                        <p data-start="1701" data-end="1930" class="">
+                          ✔
+                          <strong data-start="1703" data-end="1729"
+                            >Ink is the best option</strong
+                          >
+                          for JSX-based TUI with Yoga-style Flexbox.<br
+                            data-start="1772"
+                            data-end="1775"
+                          />
+                          ✔ If you still need Blessed,
+                          <strong data-start="1804" data-end="1826"
+                            >use Ink for layout</strong
+                          >
+                          and
+                          <strong data-start="1831" data-end="1854"
+                            >Blessed for widgets</strong
+                          >.<br data-start="1855" data-end="1858" />
+                          ✔
+                          <strong data-start="1860" data-end="1895"
+                            >React-Blessed is an alternative</strong
+                          >, but lacks Yoga's Flexbox support.
+                        </p>
+                        <p data-start="1932" data-end="2009" class="">
+                          Would you like a more
+                          <strong data-start="1954" data-end="1977"
+                            >complex Ink example</strong
+                          >
+                          (e.g., handling user input)? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-15"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="c89c285a-ae49-4669-b534-59d534f6c045"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            No I want to just replace const blessed =
+                            require('blessed'); const yoga =
+                            require('yoga-layout'); // Create a root layout node
+                            const root = yoga.Node.create(); root.setWidth(80);
+                            root.setHeight(24);
+                            root.setFlexDirection(yoga.FLEX_DIRECTION_ROW); //
+                            Left panel (fixed size) const leftPanel =
+                            yoga.Node.create(); leftPanel.setWidth(30);
+                            leftPanel.setHeight(24); root.insertChild(leftPanel,
+                            0); // Right panel (flexible) const rightPanel =
+                            yoga.Node.create(); rightPanel.setFlexGrow(1); //
+                            Takes remaining space rightPanel.setHeight(24);
+                            root.insertChild(rightPanel, 1); // Calculate layout
+                            root.calculateLayout(80, 24, yoga.DIRECTION_LTR); //
+                            Create Blessed screen const screen =
+                            blessed.screen(); const box1 = blessed.box({ top: 0,
+                            left: 0, width: leftPanel.getComputedWidth(),
+                            height: leftPanel.getComputedHeight(), content:
+                            'Left Panel (Fixed)', border: { type: 'line' },
+                            style: { border: { fg: 'blue' } } }); const box2 =
+                            blessed.box({ top: 0, left:
+                            leftPanel.getComputedWidth(), width:
+                            rightPanel.getComputedWidth(), height:
+                            rightPanel.getComputedHeight(), content: 'Right
+                            Panel (Flexbox)', border: { type: 'line' }, style: {
+                            border: { fg: 'green' } } }); // Append and render
+                            screen.append(box1); screen.append(box2);
+                            screen.render(); with jsx elements, for example
+                            using babel
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-16"
+        data-scroll-anchor="true"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="49ee1e78-6ff3-4d29-867a-15c27522d0b4"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="234" class="">
+                          Got it! You want to
+                          <strong data-start="20" data-end="62"
+                            >map Yoga + Blessed into JSX components</strong
+                          >
+                          while still using
+                          <strong data-start="81" data-end="106"
+                            >Blessed for rendering</strong
+                          >. This is possible using
+                          <strong data-start="131" data-end="148"
+                            >React-Blessed</strong
+                          >, which lets you write JSX components that render in
+                          the terminal using
+                          <strong data-start="220" data-end="231"
+                            >Blessed</strong
+                          >.
+                        </p>
+                        <hr data-start="236" data-end="239" class="" />
+                        <h3 data-start="241" data-end="301" class="">
+                          <strong data-start="245" data-end="301"
+                            >🔹 How to Replace Yoga + Blessed with JSX
+                            Components</strong
+                          >
+                        </h3>
+                        <p data-start="302" data-end="312" class="">We will:</p>
+                        <ol data-start="313" data-end="506">
+                          <li data-start="313" data-end="373" class="">
+                            <p data-start="316" data-end="373" class="">
+                              <strong data-start="316" data-end="337"
+                                >Use React-Blessed</strong
+                              >
+                              to handle the terminal UI in JSX.
+                            </p>
+                          </li>
+                          <li data-start="374" data-end="444" class="">
+                            <p data-start="377" data-end="444" class="">
+                              <strong data-start="377" data-end="418"
+                                >Use Yoga Layout inside JSX components</strong
+                              >
+                              to calculate positions.
+                            </p>
+                          </li>
+                          <li data-start="445" data-end="506" class="">
+                            <p data-start="448" data-end="506" class="">
+                              <strong data-start="448" data-end="503"
+                                >Render the result into Blessed elements
+                                dynamically</strong
+                              >.
+                            </p>
+                          </li>
+                        </ol>
+                        <hr data-start="508" data-end="511" class="" />
+                        <h3 data-start="513" data-end="545" class="">
+                          <strong data-start="517" data-end="545"
+                            >1️⃣ Install Dependencies</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="546"
+                          data-end="609"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install react react-blessed yoga-layout blessed
+</span></code></div></div></pre>
+                        <hr data-start="611" data-end="614" class="" />
+                        <h3 data-start="616" data-end="644" class="">
+                          <strong data-start="620" data-end="644"
+                            >2️⃣ Create
+                            <code data-start="633" data-end="642"
+                              >App.jsx</code
+                            ></strong
+                          >
+                        </h3>
+                        <p data-start="645" data-end="722" class="">
+                          Here’s how you can
+                          <strong data-start="664" data-end="721"
+                            >replace your Yoga + Blessed setup with JSX
+                            components</strong
+                          >:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="724"
+                          data-end="2714"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">jsx</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>import React, { useEffect, useState } from "react";
+import { render } from "react-blessed";
+import blessed from "blessed";
+import yoga from "yoga-layout";
+
+// Flexbox component using Yoga Layout
+const FlexContainer = ({ children }) =&gt; {
+  const [layout, setLayout] = useState(null);
+
+  useEffect(() =&gt; {
+    // Root Yoga Node (80x24)
+    const root = yoga.Node.create();
+    root.setWidth(80);
+    root.setHeight(24);
+    root.setFlexDirection(yoga.FLEX_DIRECTION_ROW);
+
+    // Left panel (fixed size)
+    const leftPanel = yoga.Node.create();
+    leftPanel.setWidth(30);
+    leftPanel.setHeight(24);
+    root.insertChild(leftPanel, 0);
+
+    // Right panel (flexible)
+    const rightPanel = yoga.Node.create();
+    rightPanel.setFlexGrow(1);
+    rightPanel.setHeight(24);
+    root.insertChild(rightPanel, 1);
+
+    // Calculate layout
+    root.calculateLayout(80, 24, yoga.DIRECTION_LTR);
+
+    setLayout({
+      leftPanel: {
+        width: leftPanel.getComputedWidth(),
+        height: leftPanel.getComputedHeight(),
+      },
+      rightPanel: {
+        width: rightPanel.getComputedWidth(),
+        height: rightPanel.getComputedHeight(),
+        left: leftPanel.getComputedWidth(),
+      },
+    });
+  }, []);
+
+  if (!layout) return null;
+
+  return (
+    &lt;&gt;
+      &lt;box
+        top={0}
+        left={0}
+        width={layout.leftPanel.width}
+        height={layout.leftPanel.height}
+        border={{ type: "line" }}
+        style={{ border: { fg: "blue" } }}
+      &gt;
+        Left Panel (Fixed)
+      &lt;/box&gt;
+      &lt;box
+        top={0}
+        left={layout.rightPanel.left}
+        width={layout.rightPanel.width}
+        height={layout.rightPanel.height}
+        border={{ type: "line" }}
+        style={{ border: { fg: "green" } }}
+      &gt;
+        Right Panel (Flexbox)
+      &lt;/box&gt;
+    &lt;/&gt;
+  );
+};
+
+// Main App Component
+const App = () =&gt; {
+  return (
+    &lt;FlexContainer /&gt;
+  );
+};
+
+// Create Blessed Screen &amp; Render App
+const screen = blessed.screen();
+render(&lt;App /&gt;, screen);
+</span></code></div></div></pre>
+                        <hr data-start="2716" data-end="2719" class="" />
+                        <h3 data-start="2721" data-end="2746" class="">
+                          <strong data-start="2725" data-end="2746"
+                            >🔹 What This Does</strong
+                          >
+                        </h3>
+                        <p data-start="2747" data-end="2983" class="">
+                          ✅ Uses
+                          <strong data-start="2754" data-end="2772"
+                            >JSX components</strong
+                          >
+                          instead of raw Blessed objects.<br
+                            data-start="2804"
+                            data-end="2807"
+                          />
+                          ✅ Uses
+                          <strong data-start="2814" data-end="2846"
+                            >Yoga for layout calculations</strong
+                          >
+                          inside
+                          <code data-start="2854" data-end="2867"
+                            >useEffect()</code
+                          >.<br data-start="2868" data-end="2871" />
+                          ✅ Dynamically
+                          <strong data-start="2885" data-end="2928"
+                            >maps Yoga nodes to Blessed JSX elements</strong
+                          >.<br data-start="2929" data-end="2932" />
+                          ✅
+                          <strong data-start="2934" data-end="2982"
+                            >Automatically re-renders when layout
+                            updates</strong
+                          >.
+                        </p>
+                        <hr data-start="2985" data-end="2988" class="" />
+                        <h3 data-start="2990" data-end="3020" class="">
+                          <strong data-start="2994" data-end="3020"
+                            >🔹 Why This is Useful?</strong
+                          >
+                        </h3>
+                        <p data-start="3021" data-end="3228" class="">
+                          ✔
+                          <strong data-start="3023" data-end="3051"
+                            >Write Terminal UI in JSX</strong
+                          >, making it easier to structure.<br
+                            data-start="3083"
+                            data-end="3086"
+                          />
+                          ✔
+                          <strong data-start="3088" data-end="3122"
+                            >Keep Flexbox layout using Yoga</strong
+                          >, instead of manual calculations.<br
+                            data-start="3155"
+                            data-end="3158"
+                          />
+                          ✔
+                          <strong data-start="3160" data-end="3195"
+                            >React-Blessed handles rendering</strong
+                          >, just like a normal React app.
+                        </p>
+                        <p data-start="3230" data-end="3313" class="">
+                          Would you like to add
+                          <strong data-start="3252" data-end="3309"
+                            >more features like input handling or dynamic
+                            resizing</strong
+                          >? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
