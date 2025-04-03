@@ -1,0 +1,2412 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Same line log using ANSI escape chars</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="d165187a-83c9-4213-8575-6ebb79550976"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            is it possible to have the second arg of the log to
+                            start from the first line? import chalk from
+                            'chalk'; console.log(chalk.bgRed(' \n '),
+                            chalk.bgYellow(' \n '));
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="3094d254-ca1d-4e9c-8f3a-c4dc29ac9587"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="248" class="">
+                          No, the second argument in
+                          <code data-start="27" data-end="40">console.log</code>
+                          will not start from the first line of the first
+                          argument's output. The
+                          <code data-start="112" data-end="125"
+                            >console.log</code
+                          >
+                          function prints each argument sequentially, but it
+                          does not align the outputs based on newlines within
+                          individual strings.
+                        </p>
+                        <h3 data-start="250" data-end="258" class="">Why?</h3>
+                        <ul data-start="259" data-end="607">
+                          <li data-start="259" data-end="348" class="">
+                            <p data-start="261" data-end="348" class="">
+                              The
+                              <code data-start="265" data-end="290"
+                                >chalk.bgRed(' \n ')</code
+                              >
+                              part prints a red background block with a newline
+                              inside.
+                            </p>
+                          </li>
+                          <li data-start="349" data-end="444" class="">
+                            <p data-start="351" data-end="444" class="">
+                              The
+                              <code data-start="355" data-end="383"
+                                >chalk.bgYellow(' \n ')</code
+                              >
+                              part starts immediately after the first argument
+                              is printed.
+                            </p>
+                          </li>
+                          <li data-start="445" data-end="607" class="">
+                            <p data-start="447" data-end="607" class="">
+                              Since
+                              <code data-start="453" data-end="466"
+                                >console.log</code
+                              >
+                              prints arguments sequentially on the same line
+                              before moving to the next, the second colored
+                              block starts from where the first one left off.
+                            </p>
+                          </li>
+                        </ul>
+                        <h3 data-start="609" data-end="633" class="">
+                          Possible Workarounds
+                        </h3>
+                        <p data-start="634" data-end="694" class="">
+                          To make the second block start from the first line,
+                          you can:
+                        </p>
+                        <ol data-start="695" data-end="1131">
+                          <li data-start="695" data-end="869" class="">
+                            <p data-start="698" data-end="735" class="">
+                              Use
+                              <strong data-start="702" data-end="734"
+                                >separate
+                                <code data-start="713" data-end="726"
+                                  >console.log</code
+                                >
+                                calls</strong
+                              >:
+                            </p>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="739"
+                              data-end="869"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>console.log(chalk.bgRed('   '), chalk.bgYellow('   '));
+console.log(chalk.bgRed('   '), chalk.bgYellow('   '));
+</span></code></div></div></pre>
+                          </li>
+                          <li data-start="870" data-end="1055" class="">
+                            <p data-start="873" data-end="919" class="">
+                              Use
+                              <strong data-start="877" data-end="918"
+                                >string concatenation with line breaks</strong
+                              >:
+                            </p>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="923"
+                              data-end="1055"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>console.log(chalk.bgRed('   ') + chalk.bgYellow('   '));
+console.log(chalk.bgRed('   ') + chalk.bgYellow('   '));
+</span></code></div></div></pre>
+                          </li>
+                          <li data-start="1056" data-end="1131" class="">
+                            <p data-start="1059" data-end="1105" class="">
+                              Use
+                              <strong data-start="1063" data-end="1084"
+                                >template literals</strong
+                              >
+                              to align the blocks:
+                            </p>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="1109"
+                              data-end="1131"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>console.log(`
+</span></code></div></div></pre>
+                          </li>
+                        </ol>
+                        <p data-start="1132" data-end="1230" class="">
+                          ${chalk.bgRed(' ')}${chalk.bgYellow(' ')}
+                          ${chalk.bgRed(' ')}${chalk.bgYellow(' ')} `);
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1234"
+                          data-end="1293"
+                          data-is-last-node=""
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]"></div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>
+This ensures that both colors appear aligned properly.
+</span></code></div></div></pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="70a7af58-f06d-4bfb-bcb0-6a729105de08"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            Are there any other options?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="29d3cd19-aa38-4693-8525-0becf45ec601"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="99" class="">
+                          Yes! Here are a few more ways to achieve the desired
+                          alignment when using
+                          <code data-start="74" data-end="81">chalk</code> in
+                          <code data-start="85" data-end="98">console.log</code
+                          >:
+                        </p>
+                        <hr data-start="101" data-end="104" class="" />
+                        <h3 data-start="106" data-end="163" class="">
+                          <strong data-start="110" data-end="163"
+                            >1. Using Template Literals for Precise
+                            Formatting</strong
+                          >
+                        </h3>
+                        <p data-start="164" data-end="260" class="">
+                          Instead of relying on multiple arguments in
+                          <code data-start="208" data-end="221"
+                            >console.log</code
+                          >, format the output as a single string:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="262"
+                          data-end="419"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>import chalk from 'chalk';
+
+console.log(
+  `${chalk.bgRed('   ')}${chalk.bgYellow('   ')}\n` +
+  `${chalk.bgRed('   ')}${chalk.bgYellow('   ')}`
+);
+</span></code></div></div></pre>
+                        <p data-start="421" data-end="486" class="">
+                          🔹 This method ensures that both colors start from the
+                          same line.
+                        </p>
+                        <hr data-start="488" data-end="491" class="" />
+                        <h3 data-start="493" data-end="546" class="">
+                          <strong data-start="497" data-end="546"
+                            >2. Using ANSI Escape Codes for Cursor
+                            Control</strong
+                          >
+                        </h3>
+                        <p data-start="547" data-end="635" class="">
+                          You can use ANSI escape codes (<code
+                            data-start="578"
+                            data-end="584"
+                            >\x1b</code
+                          >) to move the cursor back to the start of the line:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="637"
+                          data-end="789"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>import chalk from 'chalk';
+
+console.log(
+  chalk.bgRed('   ') + chalk.bgYellow('   ') + '\n' +
+  chalk.bgRed('   ') + chalk.bgYellow('   ')
+);
+</span></code></div></div></pre>
+                        <p data-start="791" data-end="841" class="">
+                          🔹 The
+                          <strong data-start="798" data-end="810"
+                            >newlines</strong
+                          >
+                          ensure proper block alignment.
+                        </p>
+                        <hr data-start="843" data-end="846" class="" />
+                        <h3 data-start="848" data-end="916" class="">
+                          <strong data-start="852" data-end="916"
+                            >3. Using
+                            <code data-start="863" data-end="887"
+                              >process.stdout.write()</code
+                            >
+                            Instead of
+                            <code data-start="899" data-end="914"
+                              >console.log()</code
+                            ></strong
+                          >
+                        </h3>
+                        <p data-start="917" data-end="1044" class="">
+                          <code data-start="917" data-end="932"
+                            >console.log()</code
+                          >
+                          always moves to a new line after execution. Instead,
+                          use
+                          <code data-start="990" data-end="1014"
+                            >process.stdout.write()</code
+                          >
+                          to control exact positioning:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1046"
+                          data-end="1271"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>import chalk from 'chalk';
+
+process.stdout.write(chalk.bgRed('   '));
+process.stdout.write(chalk.bgYellow('   ') + '\n');
+process.stdout.write(chalk.bgRed('   '));
+process.stdout.write(chalk.bgYellow('   ') + '\n');
+</span></code></div></div></pre>
+                        <p data-start="1273" data-end="1331" class="">
+                          🔹 This method gives finer control over how colors
+                          appear.
+                        </p>
+                        <hr data-start="1333" data-end="1336" class="" />
+                        <h3 data-start="1338" data-end="1385" class="">
+                          <strong data-start="1342" data-end="1385"
+                            >4. Using
+                            <code data-start="1353" data-end="1363"
+                              >padEnd()</code
+                            >
+                            for Precise Spacing</strong
+                          >
+                        </h3>
+                        <p data-start="1386" data-end="1452" class="">
+                          If the issue is alignment due to spacing, you can pad
+                          the strings:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1454"
+                          data-end="1635"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>import chalk from 'chalk';
+
+console.log(
+  chalk.bgRed('   ').padEnd(10) + chalk.bgYellow('   ')
+);
+console.log(
+  chalk.bgRed('   ').padEnd(10) + chalk.bgYellow('   ')
+);
+</span></code></div></div></pre>
+                        <p data-start="1637" data-end="1707" class="">
+                          🔹 The
+                          <code data-start="1644" data-end="1654"
+                            >padEnd()</code
+                          >
+                          ensures the second color starts at a fixed position.
+                        </p>
+                        <hr data-start="1709" data-end="1712" class="" />
+                        <h3 data-start="1714" data-end="1732" class="">
+                          <strong data-start="1718" data-end="1732"
+                            >Conclusion</strong
+                          >
+                        </h3>
+                        <p data-start="1733" data-end="1810" class="">
+                          If you want the second block to appear exactly
+                          aligned, the best options are:
+                        </p>
+                        <ul data-start="1811" data-end="1975">
+                          <li data-start="1811" data-end="1856" class="">
+                            <p data-start="1813" data-end="1856" class="">
+                              <strong data-start="1813" data-end="1834"
+                                >Template Literals</strong
+                              >
+                              (simple and readable)
+                            </p>
+                          </li>
+                          <li data-start="1857" data-end="1922" class="">
+                            <p data-start="1859" data-end="1922" class="">
+                              <strong data-start="1859" data-end="1893"
+                                >Using
+                                <code data-start="1867" data-end="1891"
+                                  >process.stdout.write()</code
+                                ></strong
+                              >
+                              (for precise output control)
+                            </p>
+                          </li>
+                          <li data-start="1923" data-end="1975" class="">
+                            <p data-start="1925" data-end="1975" class="">
+                              <strong data-start="1925" data-end="1946"
+                                >ANSI Escape Codes</strong
+                              >
+                              (for advanced customization)
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1977" data-end="2071" class="">
+                          Would you like help optimizing this for a specific use
+                          case, such as logging within a loop? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="a2d12a30-e9a0-4ded-a4ae-c4bc11e92325"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            No I want to be able to write all the chars with the
+                            redBackground and then all the yellow ones next to
+                            it the order of the logs should not change
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="c264c544-e0b9-4993-bb9a-5f75905db075"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="207" class="">
+                          Ah, I see what you mean! You want to
+                          <strong data-start="37" data-end="82"
+                            >first print all the red background spaces</strong
+                          >
+                          and then
+                          <strong data-start="92" data-end="147"
+                            >print all the yellow background spaces next to
+                            them</strong
+                          >, while keeping the order of
+                          <code data-start="176" data-end="189"
+                            >console.log</code
+                          >
+                          calls the same.
+                        </p>
+                        <h3 data-start="209" data-end="237" class="">
+                          <strong data-start="213" data-end="237"
+                            >Why Doesn't It Work?</strong
+                          >
+                        </h3>
+                        <p data-start="238" data-end="250" class="">
+                          When you do:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="251"
+                          data-end="326"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>console.log(chalk.bgRed('   \n   '), chalk.bgYellow('   \n   '));
+</span></code></div></div></pre>
+                        <ul data-start="327" data-end="536">
+                          <li data-start="327" data-end="408" class="">
+                            <p data-start="329" data-end="408" class="">
+                              The first argument (<code
+                                data-start="349"
+                                data-end="374"
+                                >chalk.bgRed(' \n ')</code
+                              >) prints all its characters first.
+                            </p>
+                          </li>
+                          <li data-start="409" data-end="536" class="">
+                            <p data-start="411" data-end="536" class="">
+                              Then the second argument (<code
+                                data-start="437"
+                                data-end="465"
+                                >chalk.bgYellow(' \n ')</code
+                              >) starts
+                              <strong data-start="474" data-end="483"
+                                >after</strong
+                              >
+                              the first one is fully printed, not aligned with
+                              it.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="538" data-end="541" class="" />
+                        <h3 data-start="543" data-end="605" class="">
+                          <strong data-start="547" data-end="605"
+                            >Solution: Use ANSI Escape Sequences to Move the
+                            Cursor</strong
+                          >
+                        </h3>
+                        <p data-start="606" data-end="806" class="">
+                          To achieve your desired effect, you need to
+                          <strong data-start="650" data-end="695"
+                            >write the red background characters first</strong
+                          >, then move the cursor back to the start of the line
+                          and print the yellow ones
+                          <strong data-start="774" data-end="789"
+                            >overlapping</strong
+                          >
+                          the second half.
+                        </p>
+                        <h4 data-start="808" data-end="870" class="">
+                          ✅
+                          <strong data-start="815" data-end="870"
+                            >Corrected Code Using
+                            <code data-start="838" data-end="851"
+                              >\x1b[&lt;num&gt;A</code
+                            >
+                            (Move Cursor Up)</strong
+                          >
+                        </h4>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="871"
+                          data-end="1096"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>import chalk from 'chalk';
+
+console.log(chalk.bgRed('   \n   ')); // Print all red first
+process.stdout.write('\x1b[2A'); // Move cursor up 2 lines
+console.log(chalk.bgYellow('   \n   ')); // Print yellow next to it
+</span></code></div></div></pre>
+                        <p data-start="1098" data-end="1117" class="">
+                          <strong data-start="1098" data-end="1117"
+                            >🔹 Explanation:</strong
+                          >
+                        </p>
+                        <ol data-start="1118" data-end="1352">
+                          <li data-start="1118" data-end="1173" class="">
+                            <p data-start="1121" data-end="1173" class="">
+                              The first
+                              <code data-start="1131" data-end="1146"
+                                >console.log()</code
+                              >
+                              prints the
+                              <strong data-start="1158" data-end="1165"
+                                >red</strong
+                              >
+                              blocks.
+                            </p>
+                          </li>
+                          <li data-start="1174" data-end="1265" class="">
+                            <p data-start="1177" data-end="1265" class="">
+                              <code data-start="1177" data-end="1186"
+                                >\x1b[2A</code
+                              >
+                              moves the cursor
+                              <strong data-start="1204" data-end="1220"
+                                >up two lines</strong
+                              >, so the next print starts from the same row.
+                            </p>
+                          </li>
+                          <li data-start="1266" data-end="1352" class="">
+                            <p data-start="1269" data-end="1352" class="">
+                              The second
+                              <code data-start="1280" data-end="1295"
+                                >console.log()</code
+                              >
+                              prints the
+                              <strong data-start="1307" data-end="1317"
+                                >yellow</strong
+                              >
+                              blocks right next to the red ones.
+                            </p>
+                          </li>
+                        </ol>
+                        <p data-start="1354" data-end="1501" class="">
+                          This way, you
+                          <strong data-start="1368" data-end="1406"
+                            >write all the red background first</strong
+                          >, then
+                          <strong data-start="1413" data-end="1460"
+                            >write the yellow background right beside it</strong
+                          >, without changing the order of the logs.
+                        </p>
+                        <p data-start="1503" data-end="1569" class="">
+                          Would you like to tweak this further for a more
+                          complex layout? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="9fa1e911-353a-46f7-a819-5bf246531a21"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            How do libs virtualize flex in terminal?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="eb18be4d-4f22-454f-8029-806e762f53ea"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="338" class="">
+                          Libraries that virtualize
+                          <strong data-start="26" data-end="45"
+                            >flexbox layouts</strong
+                          >
+                          in the terminal, such as
+                          <a
+                            data-start="71"
+                            data-end="115"
+                            rel="noopener"
+                            target="_new"
+                            class=""
+                            ><code data-start="72" data-end="77">ink</code></a
+                          >
+                          (for React-based terminal UIs) or
+                          <a
+                            data-start="150"
+                            data-end="194"
+                            rel="noopener"
+                            target="_new"
+                            class=""
+                            ><code data-start="151" data-end="160"
+                              >blessed</code
+                            ></a
+                          >
+                          (for general TUI applications), achieve this using
+                          <strong data-start="246" data-end="337"
+                            >a combination of ANSI escape codes, text buffering,
+                            and intelligent layout calculations</strong
+                          >.
+                        </p>
+                        <hr data-start="340" data-end="343" class="" />
+                        <h2 data-start="345" data-end="397" class="">
+                          <strong data-start="348" data-end="397"
+                            >How Virtualized Flexbox Works in the
+                            Terminal</strong
+                          >
+                        </h2>
+                        <p data-start="398" data-end="533" class="">
+                          Unlike browsers, terminals
+                          <strong data-start="425" data-end="442"
+                            >don’t support</strong
+                          >
+                          native flexbox or CSS-style layouts. Instead, these
+                          libraries emulate flex behavior using:
+                        </p>
+                        <ol data-start="535" data-end="1919">
+                          <li data-start="535" data-end="774" class="">
+                            <p data-start="538" data-end="574" class="">
+                              <strong data-start="538" data-end="572"
+                                >String Buffers for Virtual DOM</strong
+                              >
+                            </p>
+                            <ul data-start="578" data-end="774">
+                              <li data-start="578" data-end="666" class="">
+                                <p data-start="580" data-end="666" class="">
+                                  They maintain a
+                                  <strong data-start="596" data-end="622"
+                                    >virtual representation</strong
+                                  >
+                                  of the UI (similar to React’s Virtual DOM).
+                                </p>
+                              </li>
+                              <li data-start="670" data-end="774" class="">
+                                <p data-start="672" data-end="774" class="">
+                                  Instead of directly writing to
+                                  <code data-start="703" data-end="711"
+                                    >stdout</code
+                                  >, they calculate how text should be
+                                  <strong data-start="747" data-end="761"
+                                    >positioned</strong
+                                  >
+                                  in a buffer.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="776" data-end="993" class="">
+                            <p data-start="779" data-end="815" class="">
+                              <strong data-start="779" data-end="813"
+                                >Row &amp; Column Flex Distribution</strong
+                              >
+                            </p>
+                            <ul data-start="819" data-end="993">
+                              <li data-start="819" data-end="993" class="">
+                                <p data-start="821" data-end="849" class="">
+                                  Just like CSS flexbox, they:
+                                </p>
+                                <ul data-start="855" data-end="993">
+                                  <li data-start="855" data-end="880" class="">
+                                    <p data-start="857" data-end="880" class="">
+                                      Measure child elements.
+                                    </p>
+                                  </li>
+                                  <li data-start="886" data-end="927" class="">
+                                    <p data-start="888" data-end="927" class="">
+                                      Distribute available space dynamically.
+                                    </p>
+                                  </li>
+                                  <li data-start="933" data-end="993" class="">
+                                    <p data-start="935" data-end="993" class="">
+                                      Adjust alignment (<code
+                                        data-start="953"
+                                        data-end="970"
+                                        >justify-content</code
+                                      >,
+                                      <code data-start="972" data-end="985"
+                                        >align-items</code
+                                      >, etc.).
+                                    </p>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="995" data-end="1220" class="">
+                            <p data-start="998" data-end="1030" class="">
+                              <strong data-start="998" data-end="1028"
+                                >Width &amp; Height Calculation</strong
+                              >
+                            </p>
+                            <ul data-start="1034" data-end="1220">
+                              <li data-start="1034" data-end="1138" class="">
+                                <p data-start="1036" data-end="1138" class="">
+                                  Since terminals render
+                                  <strong data-start="1059" data-end="1083"
+                                    >monospace characters</strong
+                                  >, width and height are measured in
+                                  <strong data-start="1118" data-end="1137"
+                                    >character units</strong
+                                  >.
+                                </p>
+                              </li>
+                              <li data-start="1142" data-end="1220" class="">
+                                <p data-start="1144" data-end="1220" class="">
+                                  These libraries calculate the available space
+                                  and distribute it accordingly.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="1222" data-end="1643" class="">
+                            <p data-start="1225" data-end="1276" class="">
+                              <strong data-start="1225" data-end="1274"
+                                >ANSI Cursor Positioning (<code
+                                  data-start="1252"
+                                  data-end="1271"
+                                  >\x1b[&lt;row&gt;;&lt;col&gt;H</code
+                                >)</strong
+                              >
+                            </p>
+                            <ul data-start="1280" data-end="1643">
+                              <li data-start="1280" data-end="1422" class="">
+                                <p data-start="1282" data-end="1422" class="">
+                                  Once layout is calculated, they use
+                                  <strong data-start="1318" data-end="1343"
+                                    >ANSI escape sequences</strong
+                                  >
+                                  to move the cursor to the correct row/column
+                                  and render the elements in place.
+                                </p>
+                              </li>
+                              <li data-start="1426" data-end="1568" class="">
+                                <p data-start="1428" data-end="1436" class="">
+                                  Example:
+                                </p>
+                                <pre
+                                  class="overflow-visible!"
+                                  data-start="1442"
+                                  data-end="1568"
+                                ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>process.stdout.write('\x1b[10;5H'); // Move cursor to row 10, column 5
+process.stdout.write('Hello');
+</span></code></div></div></pre>
+                              </li>
+                              <li data-start="1572" data-end="1643" class="">
+                                <p data-start="1574" data-end="1643" class="">
+                                  This is how libraries
+                                  <strong data-start="1596" data-end="1629"
+                                    >position elements dynamically</strong
+                                  >
+                                  like flexbox.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="1645" data-end="1919" class="">
+                            <p data-start="1648" data-end="1674" class="">
+                              <strong data-start="1648" data-end="1672"
+                                >Optimized Re-renders</strong
+                              >
+                            </p>
+                            <ul data-start="1678" data-end="1919">
+                              <li data-start="1678" data-end="1823" class="">
+                                <p data-start="1680" data-end="1823" class="">
+                                  To prevent flickering, they
+                                  <strong data-start="1708" data-end="1752"
+                                    >diff the new layout vs. the previous
+                                    one</strong
+                                  >
+                                  and update only the changed parts (similar to
+                                  React's reconciliation).
+                                </p>
+                              </li>
+                              <li data-start="1827" data-end="1919" class="">
+                                <p data-start="1829" data-end="1919" class="">
+                                  <code data-start="1829" data-end="1834"
+                                    >ink</code
+                                  >
+                                  does this with
+                                  <strong data-start="1850" data-end="1865"
+                                    >React Fiber</strong
+                                  >, and
+                                  <code data-start="1871" data-end="1880"
+                                    >blessed</code
+                                  >
+                                  does it with
+                                  <strong data-start="1894" data-end="1918"
+                                    >node.js render loops</strong
+                                  >.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ol>
+                        <hr data-start="1921" data-end="1924" class="" />
+                        <h2 data-start="1926" data-end="1983" class="">
+                          <strong data-start="1929" data-end="1983"
+                            >Example: Creating a Terminal Flexbox UI with
+                            <code data-start="1976" data-end="1981"
+                              >ink</code
+                            ></strong
+                          >
+                        </h2>
+                        <p data-start="1984" data-end="2085" class="">
+                          If you're using
+                          <strong data-start="2000" data-end="2025"
+                            >React in the terminal</strong
+                          >,
+                          <code data-start="2027" data-end="2032">ink</code>
+                          lets you use
+                          <code data-start="2046" data-end="2053"
+                            >&lt;Box&gt;</code
+                          >
+                          (which mimics
+                          <code data-start="2068" data-end="2083"
+                            >display: flex</code
+                          >):
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2087"
+                          data-end="2412"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">jsx</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>import React from 'react';
+import { render, Box, Text } from 'ink';
+
+const App = () =&gt; (
+  &lt;Box flexDirection="row"&gt;
+    &lt;Box width={10} backgroundColor="red"&gt;
+      &lt;Text&gt;Red Box&lt;/Text&gt;
+    &lt;/Box&gt;
+    &lt;Box width={10} backgroundColor="yellow"&gt;
+      &lt;Text&gt;Yellow Box&lt;/Text&gt;
+    &lt;/Box&gt;
+  &lt;/Box&gt;
+);
+
+render(&lt;App /&gt;);
+</span></code></div></div></pre>
+                        <p data-start="2414" data-end="2524" class="">
+                          🔹 This works similarly to a web flexbox layout but is
+                          internally calculated and rendered with ANSI
+                          sequences.
+                        </p>
+                        <hr data-start="2526" data-end="2529" class="" />
+                        <h2 data-start="2531" data-end="2584" class="">
+                          <strong data-start="2534" data-end="2584"
+                            >Example: Manually Virtualizing Flex in
+                            Node.js</strong
+                          >
+                        </h2>
+                        <p data-start="2585" data-end="2651" class="">
+                          If you want to
+                          <strong data-start="2600" data-end="2622"
+                            >manually implement</strong
+                          >
+                          flex-like behavior, you can:
+                        </p>
+                        <ol data-start="2652" data-end="2761">
+                          <li data-start="2652" data-end="2681" class="">
+                            <p data-start="2655" data-end="2681" class="">
+                              Calculate available space.
+                            </p>
+                          </li>
+                          <li data-start="2682" data-end="2713" class="">
+                            <p data-start="2685" data-end="2713" class="">
+                              Allocate widths dynamically.
+                            </p>
+                          </li>
+                          <li data-start="2714" data-end="2761" class="">
+                            <p data-start="2717" data-end="2761" class="">
+                              Position elements using
+                              <code data-start="2741" data-end="2760"
+                                >\x1b[&lt;row&gt;;&lt;col&gt;H</code
+                              >.
+                            </p>
+                          </li>
+                        </ol>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2763"
+                          data-end="3135"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>import chalk from 'chalk';
+
+// Terminal width (in characters)
+const terminalWidth = process.stdout.columns;
+
+// Divide space equally
+const boxWidth = Math.floor(terminalWidth / 2);
+
+// Print first box
+process.stdout.write(chalk.bgRed(' '.repeat(boxWidth)));
+
+// Print second box on the same line
+process.stdout.write(chalk.bgYellow(' '.repeat(boxWidth)) + '\n');
+</span></code></div></div></pre>
+                        <p data-start="3137" data-end="3177" class="">
+                          🔹 This is a
+                          <strong data-start="3150" data-end="3174"
+                            >basic flex emulation</strong
+                          >:
+                        </p>
+                        <ul data-start="3178" data-end="3381">
+                          <li data-start="3178" data-end="3234" class="">
+                            <p data-start="3180" data-end="3234" class="">
+                              It
+                              <strong data-start="3183" data-end="3215"
+                                >calculates space dynamically</strong
+                              >
+                              (<code data-start="3217" data-end="3232"
+                                >terminalWidth</code
+                              >).
+                            </p>
+                          </li>
+                          <li data-start="3235" data-end="3294" class="">
+                            <p data-start="3237" data-end="3294" class="">
+                              It
+                              <strong data-start="3240" data-end="3273"
+                                >renders elements side-by-side</strong
+                              >
+                              by adjusting widths.
+                            </p>
+                          </li>
+                          <li data-start="3295" data-end="3381" class="">
+                            <p data-start="3297" data-end="3381" class="">
+                              It
+                              <strong data-start="3300" data-end="3322"
+                                >avoids line breaks</strong
+                              >
+                              using
+                              <code data-start="3329" data-end="3353"
+                                >process.stdout.write()</code
+                              >
+                              instead of
+                              <code data-start="3365" data-end="3380"
+                                >console.log()</code
+                              >.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="3383" data-end="3386" class="" />
+                        <h2 data-start="3388" data-end="3405" class="">
+                          <strong data-start="3391" data-end="3405"
+                            >Conclusion</strong
+                          >
+                        </h2>
+                        <p data-start="3406" data-end="3472" class="">
+                          Flexbox in terminal UIs is
+                          <strong data-start="3433" data-end="3447"
+                            >not native</strong
+                          >
+                          but is
+                          <strong data-start="3455" data-end="3468"
+                            >simulated</strong
+                          >
+                          by:
+                        </p>
+                        <ul data-start="3473" data-end="3649">
+                          <li data-start="3473" data-end="3503" class="">
+                            <p data-start="3475" data-end="3503" class="">
+                              <strong data-start="3475" data-end="3503"
+                                >Virtual DOM-like buffers</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="3504" data-end="3543" class="">
+                            <p data-start="3506" data-end="3543" class="">
+                              <strong data-start="3506" data-end="3543"
+                                >Cursor positioning via ANSI codes</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="3544" data-end="3599" class="">
+                            <p data-start="3546" data-end="3599" class="">
+                              <strong data-start="3546" data-end="3599"
+                                >Layout calculations based on character
+                                dimensions</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="3600" data-end="3649" class="">
+                            <p data-start="3602" data-end="3649" class="">
+                              <strong data-start="3602" data-end="3649"
+                                >Optimized re-renders to minimize
+                                flickering</strong
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="3651" data-end="3765" class="">
+                          Libraries like
+                          <code data-start="3666" data-end="3671">ink</code>
+                          make this
+                          <strong data-start="3682" data-end="3704"
+                            >developer-friendly</strong
+                          >, while tools like
+                          <code data-start="3723" data-end="3732">blessed</code>
+                          provide
+                          <strong data-start="3741" data-end="3764"
+                            >lower-level control</strong
+                          >.
+                        </p>
+                        <p data-start="3767" data-end="3828" class="">
+                          Would you like a deep dive into a specific
+                          implementation? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-9"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="c8c6e3c9-7c9e-400d-9217-a8aebfb1f522"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            how to move cursor to left using ANSI chars?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-10"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="ddba4712-0a16-4711-bb22-48579b44766d"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="85" class="">
+                          You can move the cursor to the left in the terminal
+                          using the
+                          <strong data-start="62" data-end="82"
+                            >ANSI escape code</strong
+                          >:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="87"
+                          data-end="104"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]"></div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>\x1b[&lt;n&gt;D
+</span></code></div></div></pre>
+                        <p data-start="105" data-end="109" class="">or</p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="110"
+                          data-end="125"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]"></div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>\e[&lt;n&gt;D
+</span></code></div></div></pre>
+                        <p data-start="126" data-end="179" class="">
+                          where
+                          <code data-start="132" data-end="137">&lt;n&gt;</code>
+                          is the number of characters to move left.
+                        </p>
+                        <hr data-start="181" data-end="184" class="" />
+                        <h2 data-start="186" data-end="224" class="">
+                          <strong data-start="189" data-end="224"
+                            >Example in JavaScript (Node.js)</strong
+                          >
+                        </h2>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="225"
+                          data-end="398"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>process.stdout.write('Hello, World!');
+process.stdout.write('\x1b[6D'); // Move cursor left by 6 characters
+process.stdout.write('A'); // Overwrites 'W' in 'World'
+</span></code></div></div></pre>
+                        <h3 data-start="400" data-end="419" class="">
+                          <strong data-start="404" data-end="419"
+                            >Explanation</strong
+                          >
+                        </h3>
+                        <ol data-start="420" data-end="616">
+                          <li data-start="420" data-end="447" class="">
+                            <p data-start="423" data-end="447" class="">
+                              Prints
+                              <code data-start="430" data-end="447"
+                                >"Hello, World!"</code
+                              >
+                            </p>
+                          </li>
+                          <li data-start="448" data-end="537" class="">
+                            <p data-start="451" data-end="537" class="">
+                              Moves the cursor
+                              <strong data-start="468" data-end="489"
+                                >6 characters left</strong
+                              >
+                              (<code data-start="491" data-end="500"
+                                >\x1b[6D</code
+                              >), landing on the
+                              <code data-start="518" data-end="523">"W"</code>
+                              in
+                              <code data-start="527" data-end="536"
+                                >"World"</code
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="538" data-end="616" class="">
+                            <p data-start="541" data-end="585" class="">
+                              Overwrites
+                              <code data-start="552" data-end="557">"W"</code>
+                              with
+                              <code data-start="563" data-end="568">"A"</code>,
+                              resulting in:
+                            </p>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="589"
+                              data-end="616"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]"></div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>Hello, Aorld!
+</span></code></div></div></pre>
+                          </li>
+                        </ol>
+                        <hr data-start="618" data-end="621" class="" />
+                        <h2 data-start="623" data-end="660" class="">
+                          <strong data-start="626" data-end="660"
+                            >More Cursor Control ANSI Codes</strong
+                          >
+                        </h2>
+                        <div class="overflow-x-auto contain-inline-size">
+                          <table
+                            data-start="661"
+                            data-end="993"
+                            node="[object Object]"
+                          >
+                            <thead data-start="661" data-end="690">
+                              <tr data-start="661" data-end="690">
+                                <th data-start="661" data-end="680">
+                                  Escape Code
+                                </th>
+                                <th data-start="680" data-end="690">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody data-start="720" data-end="993">
+                              <tr data-start="720" data-end="778">
+                                <td>
+                                  <code data-start="722" data-end="733"
+                                    >\x1b[&lt;n&gt;D</code
+                                  >
+                                </td>
+                                <td>
+                                  Move cursor
+                                  <strong data-start="751" data-end="759"
+                                    >left</strong
+                                  >
+                                  <code data-start="760" data-end="765"
+                                    >&lt;n&gt;</code
+                                  >
+                                  characters
+                                </td>
+                              </tr>
+                              <tr data-start="779" data-end="838">
+                                <td>
+                                  <code data-start="781" data-end="792"
+                                    >\x1b[&lt;n&gt;C</code
+                                  >
+                                </td>
+                                <td>
+                                  Move cursor
+                                  <strong data-start="810" data-end="819"
+                                    >right</strong
+                                  >
+                                  <code data-start="820" data-end="825"
+                                    >&lt;n&gt;</code
+                                  >
+                                  characters
+                                </td>
+                              </tr>
+                              <tr data-start="839" data-end="890">
+                                <td>
+                                  <code data-start="841" data-end="852"
+                                    >\x1b[&lt;n&gt;A</code
+                                  >
+                                </td>
+                                <td>
+                                  Move cursor
+                                  <strong data-start="870" data-end="876"
+                                    >up</strong
+                                  >
+                                  <code data-start="877" data-end="882"
+                                    >&lt;n&gt;</code
+                                  >
+                                  lines
+                                </td>
+                              </tr>
+                              <tr data-start="891" data-end="944">
+                                <td>
+                                  <code data-start="893" data-end="904"
+                                    >\x1b[&lt;n&gt;B</code
+                                  >
+                                </td>
+                                <td>
+                                  Move cursor
+                                  <strong data-start="922" data-end="930"
+                                    >down</strong
+                                  >
+                                  <code data-start="931" data-end="936"
+                                    >&lt;n&gt;</code
+                                  >
+                                  lines
+                                </td>
+                              </tr>
+                              <tr data-start="945" data-end="993">
+                                <td>
+                                  <code data-start="947" data-end="955"
+                                    >\x1b[G</code
+                                  >
+                                </td>
+                                <td>
+                                  Move cursor to
+                                  <strong data-start="979" data-end="991"
+                                    >column 1</strong
+                                  >
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <hr data-start="995" data-end="998" class="" />
+                        <h2 data-start="1000" data-end="1043" class="">
+                          <strong data-start="1003" data-end="1043"
+                            >Alternative: Move to Specific Column</strong
+                          >
+                        </h2>
+                        <p data-start="1044" data-end="1124" class="">
+                          If you want to move to a
+                          <strong data-start="1069" data-end="1090"
+                            >specific position</strong
+                          >
+                          instead of just moving left, use:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1125"
+                          data-end="1189"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>process.stdout.write('\x1b[10G'); // Move to column 10
+</span></code></div></div></pre>
+                        <p data-start="1191" data-end="1246" class="">
+                          Would you like a real-time demo using
+                          <code data-start="1229" data-end="1242"
+                            >setInterval</code
+                          >? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-11"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="9300f42b-4d51-4852-a3d8-6c848af8e6c7"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            Where to find a proper reference for ANSI chars
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-12"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="b8af9cc2-3805-4f18-bdc3-d21060864e41"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="147" class="">
+                          A proper reference for ANSI escape codes can be found
+                          in several places, depending on how deep you want to
+                          go. Here are some of the best sources:
+                        </p>
+                        <hr data-start="149" data-end="152" class="" />
+                        <h3 data-start="154" data-end="202" class="">
+                          <strong data-start="158" data-end="202"
+                            >📖 1. Official Documentation &amp;
+                            Standards</strong
+                          >
+                        </h3>
+                        <ul data-start="203" data-end="770">
+                          <li data-start="203" data-end="533" class="">
+                            <p data-start="205" data-end="322" class="">
+                              <strong data-start="205" data-end="322"
+                                ><a
+                                  data-start="207"
+                                  data-end="320"
+                                  rel="noopener"
+                                  target="_new"
+                                  class=""
+                                  >ECMA-48 (ANSI X3.64) Standard</a
+                                ></strong
+                              >
+                            </p>
+                            <ul data-start="325" data-end="533">
+                              <li data-start="325" data-end="392" class="">
+                                <p data-start="327" data-end="392" class="">
+                                  This is the
+                                  <strong data-start="339" data-end="351"
+                                    >official</strong
+                                  >
+                                  specification for ANSI escape sequences.
+                                </p>
+                              </li>
+                              <li data-start="395" data-end="470" class="">
+                                <p data-start="397" data-end="470" class="">
+                                  It defines control sequences like
+                                  <code data-start="431" data-end="449"
+                                    >ESC [ &lt;params&gt; D</code
+                                  >
+                                  for cursor movement.
+                                </p>
+                              </li>
+                              <li data-start="473" data-end="533" class="">
+                                <p data-start="475" data-end="533" class="">
+                                  Might be a bit dense but is the most
+                                  authoritative source.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="535" data-end="770" class="">
+                            <p data-start="537" data-end="618" class="">
+                              <strong data-start="537" data-end="618"
+                                ><a
+                                  data-start="539"
+                                  data-end="616"
+                                  rel="noopener"
+                                  target="_new"
+                                  class=""
+                                  >VT100 Terminal Control Codes</a
+                                ></strong
+                              >
+                            </p>
+                            <ul data-start="621" data-end="770">
+                              <li data-start="621" data-end="703" class="">
+                                <p data-start="623" data-end="703" class="">
+                                  Covers ANSI sequences based on DEC VT100
+                                  terminals, which are still widely used.
+                                </p>
+                              </li>
+                              <li data-start="706" data-end="770" class="">
+                                <p data-start="708" data-end="770" class="">
+                                  Useful for understanding historical context
+                                  and compatibility.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <hr data-start="772" data-end="775" class="" />
+                        <h3 data-start="777" data-end="819" class="">
+                          <strong data-start="781" data-end="819"
+                            >🌐 2. Online Cheat Sheets &amp; Guides</strong
+                          >
+                        </h3>
+                        <ul data-start="820" data-end="1510">
+                          <li data-start="820" data-end="976" class="">
+                            <p data-start="822" data-end="909" class="">
+                              <strong data-start="822" data-end="909"
+                                ><a
+                                  data-start="824"
+                                  data-end="907"
+                                  rel="noopener"
+                                  target="_new"
+                                  class=""
+                                  >ANSI Escape Code Wiki (Wikipedia)</a
+                                ></strong
+                              >
+                            </p>
+                            <ul data-start="912" data-end="976">
+                              <li data-start="912" data-end="976" class="">
+                                <p data-start="914" data-end="976" class="">
+                                  Good overview of color codes, cursor movement,
+                                  and formatting.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="978" data-end="1161" class="">
+                            <p data-start="980" data-end="1061" class="">
+                              <strong data-start="980" data-end="1061"
+                                ><a
+                                  data-start="982"
+                                  data-end="1059"
+                                  rel="noopener"
+                                  target="_new"
+                                  class=""
+                                  >tldp.org: Console Codes</a
+                                ></strong
+                              >
+                            </p>
+                            <ul data-start="1064" data-end="1161">
+                              <li data-start="1064" data-end="1123" class="">
+                                <p data-start="1066" data-end="1123" class="">
+                                  Covers cursor control, colors, and terminal
+                                  manipulation.
+                                </p>
+                              </li>
+                              <li data-start="1126" data-end="1161" class="">
+                                <p data-start="1128" data-end="1161" class="">
+                                  Well-structured and easy to read.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="1163" data-end="1310" class="">
+                            <p data-start="1165" data-end="1238" class="">
+                              <strong data-start="1165" data-end="1238"
+                                ><a
+                                  data-start="1167"
+                                  data-end="1236"
+                                  rel="noopener"
+                                  target="_new"
+                                  class=""
+                                  >AsciiTable.com - ANSI Escape Sequences</a
+                                ></strong
+                              >
+                            </p>
+                            <ul data-start="1241" data-end="1310">
+                              <li data-start="1241" data-end="1273" class="">
+                                <p data-start="1243" data-end="1273" class="">
+                                  Great for
+                                  <strong data-start="1253" data-end="1272"
+                                    >quick reference</strong
+                                  >.
+                                </p>
+                              </li>
+                              <li data-start="1276" data-end="1310" class="">
+                                <p data-start="1278" data-end="1310" class="">
+                                  Includes ASCII + ANSI sequences.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="1312" data-end="1510" class="">
+                            <p data-start="1314" data-end="1440" class="">
+                              <strong data-start="1314" data-end="1440"
+                                ><a
+                                  data-start="1316"
+                                  data-end="1438"
+                                  rel="noopener"
+                                  target="_new"
+                                  class=""
+                                  >IBM’s ANSI Escape Code Reference</a
+                                ></strong
+                              >
+                            </p>
+                            <ul data-start="1443" data-end="1510">
+                              <li data-start="1443" data-end="1510" class="">
+                                <p data-start="1445" data-end="1510" class="">
+                                  Provides clear examples of cursor movement,
+                                  screen clearing, etc.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <hr data-start="1512" data-end="1515" class="" />
+                        <h3 data-start="1517" data-end="1562" class="">
+                          <strong data-start="1521" data-end="1562"
+                            >💻 3. Developer-Friendly Cheat Sheets</strong
+                          >
+                        </h3>
+                        <ul data-start="1563" data-end="2078">
+                          <li data-start="1563" data-end="1715" class="">
+                            <p data-start="1565" data-end="1641" class="">
+                              <strong data-start="1565" data-end="1641"
+                                ><a
+                                  data-start="1567"
+                                  data-end="1639"
+                                  rel="noopener"
+                                  target="_new"
+                                  class=""
+                                  >github.com/termstandard/colors</a
+                                ></strong
+                              >
+                            </p>
+                            <ul data-start="1644" data-end="1715">
+                              <li data-start="1644" data-end="1715" class="">
+                                <p data-start="1646" data-end="1715" class="">
+                                  A modern reference for ANSI color codes,
+                                  supported by many terminals.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="1717" data-end="1834" class="">
+                            <p data-start="1719" data-end="1795" class="">
+                              <strong data-start="1719" data-end="1795"
+                                ><a
+                                  data-start="1721"
+                                  data-end="1793"
+                                  rel="noopener"
+                                  target="_new"
+                                  class=""
+                                  >ShellHacks: ANSI Escape Codes</a
+                                ></strong
+                              >
+                            </p>
+                            <ul data-start="1798" data-end="1834">
+                              <li data-start="1798" data-end="1834" class="">
+                                <p data-start="1800" data-end="1834" class="">
+                                  Simple cheat sheet for Bash users.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="1836" data-end="2078" class="">
+                            <p data-start="1838" data-end="1938" class="">
+                              <strong data-start="1838" data-end="1938"
+                                ><a
+                                  data-start="1840"
+                                  data-end="1936"
+                                  rel="noopener"
+                                  target="_new"
+                                  class=""
+                                  >Modern Terminal Control: Terminfo Database</a
+                                ></strong
+                              >
+                            </p>
+                            <ul data-start="1941" data-end="2078">
+                              <li data-start="1941" data-end="2078" class="">
+                                <p data-start="1943" data-end="2078" class="">
+                                  If you need advanced
+                                  <strong data-start="1964" data-end="1996"
+                                    >cross-terminal compatibility</strong
+                                  >, check out
+                                  <strong data-start="2008" data-end="2020"
+                                    >terminfo</strong
+                                  >, which abstracts ANSI differences between
+                                  terminal types.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <hr data-start="2080" data-end="2083" class="" />
+                        <h3 data-start="2085" data-end="2139" class="">
+                          <strong data-start="2089" data-end="2139"
+                            >📌 Summary: Best Resources for Different
+                            Needs</strong
+                          >
+                        </h3>
+                        <div class="overflow-x-auto contain-inline-size">
+                          <table
+                            data-start="2140"
+                            data-end="2681"
+                            node="[object Object]"
+                          >
+                            <thead data-start="2140" data-end="2159">
+                              <tr data-start="2140" data-end="2159">
+                                <th data-start="2140" data-end="2147">Need</th>
+                                <th data-start="2147" data-end="2159">
+                                  Resource
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody data-start="2180" data-end="2681">
+                              <tr data-start="2180" data-end="2304">
+                                <td>
+                                  <strong data-start="2182" data-end="2208"
+                                    >Official ANSI standard</strong
+                                  >
+                                </td>
+                                <td>
+                                  <a
+                                    data-start="2211"
+                                    data-end="2302"
+                                    rel="noopener"
+                                    target="_new"
+                                    class=""
+                                    >ECMA-48</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr data-start="2305" data-end="2402">
+                                <td>
+                                  <strong data-start="2307" data-end="2339"
+                                    >VT100 terminal compatibility</strong
+                                  >
+                                </td>
+                                <td>
+                                  <a
+                                    data-start="2342"
+                                    data-end="2400"
+                                    rel="noopener"
+                                    target="_new"
+                                    class=""
+                                    >VT100.net</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr data-start="2403" data-end="2495">
+                                <td>
+                                  <strong data-start="2405" data-end="2431"
+                                    >Quick ANSI cheat sheet</strong
+                                  >
+                                </td>
+                                <td>
+                                  <a
+                                    data-start="2434"
+                                    data-end="2493"
+                                    rel="noopener"
+                                    target="_new"
+                                    class=""
+                                    >Wikipedia</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr data-start="2496" data-end="2583">
+                                <td>
+                                  <strong data-start="2498" data-end="2525"
+                                    >Beginner-friendly guide</strong
+                                  >
+                                </td>
+                                <td>
+                                  <a
+                                    data-start="2528"
+                                    data-end="2581"
+                                    rel="noopener"
+                                    target="_new"
+                                    class=""
+                                    >ShellHacks</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr data-start="2584" data-end="2681">
+                                <td>
+                                  <strong data-start="2586" data-end="2613"
+                                    >Terminal color handling</strong
+                                  >
+                                </td>
+                                <td>
+                                  <a
+                                    data-start="2616"
+                                    data-end="2679"
+                                    rel="noopener"
+                                    target="_new"
+                                    class=""
+                                    >GitHub - Termstandard</a
+                                  >
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <p data-start="2683" data-end="2796" class="">
+                          Would you like examples for specific terminal effects
+                          (e.g., blinking text, saving/restoring cursor
+                          position)? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-13"
+        data-scroll-anchor="false"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="81730935-5412-428d-838f-ac6f92c558b1"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            Are ANSI chars supported?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-14"
+        data-scroll-anchor="true"
+      >
+        <div class="text-base my-auto mx-auto py-5 px-6">
+          <div
+            class="mx-auto flex flex-1 text-base gap-4 md:gap-5 lg:gap-6 md:max-w-3xl group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn @xs/thread:px-0 @sm/thread:px-1.5 @md/thread:px-4"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="24f2b10f-71dc-4e08-9cb4-f33a583a47b8"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="125" class="">
+                          Yes,
+                          <strong data-start="5" data-end="26"
+                            >ANSI escape codes</strong
+                          >
+                          (often called "ANSI chars") are
+                          <strong data-start="59" data-end="79"
+                            >widely supported</strong
+                          >
+                          in modern terminals, but with some caveats.
+                        </p>
+                        <hr data-start="127" data-end="130" class="" />
+                        <h2 data-start="132" data-end="178" class="">
+                          ✅
+                          <strong data-start="137" data-end="178"
+                            >Where ANSI Escape Codes Are Supported</strong
+                          >
+                        </h2>
+                        <p data-start="179" data-end="271" class="">
+                          Most modern
+                          <strong data-start="191" data-end="212"
+                            >Unix-like systems</strong
+                          >
+                          and some Windows versions support ANSI codes by
+                          default.
+                        </p>
+                        <h3 data-start="273" data-end="303" class="">
+                          <strong data-start="277" data-end="303"
+                            >🖥 Fully Supported in:</strong
+                          >
+                        </h3>
+                        <ul data-start="304" data-end="697">
+                          <li data-start="304" data-end="383" class="">
+                            <p data-start="306" data-end="383" class="">
+                              <strong data-start="306" data-end="325"
+                                >Linux terminals</strong
+                              >
+                              (e.g.,
+                              <code data-start="333" data-end="340">xterm</code
+                              >,
+                              <code data-start="342" data-end="358"
+                                >gnome-terminal</code
+                              >,
+                              <code data-start="360" data-end="369"
+                                >konsole</code
+                              >,
+                              <code data-start="371" data-end="382"
+                                >alacritty</code
+                              >)
+                            </p>
+                          </li>
+                          <li data-start="384" data-end="413" class="">
+                            <p data-start="386" data-end="413" class="">
+                              <strong data-start="386" data-end="413"
+                                >macOS Terminal &amp; iTerm2</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="414" data-end="571" class="">
+                            <p data-start="416" data-end="476" class="">
+                              <strong data-start="416" data-end="476"
+                                >Windows 10+ Terminal (cmd, PowerShell, Windows
+                                Terminal)</strong
+                              >
+                            </p>
+                            <ul data-start="479" data-end="571">
+                              <li data-start="479" data-end="571" class="">
+                                <p data-start="481" data-end="571" class="">
+                                  <strong data-start="481" data-end="490"
+                                    >Note:</strong
+                                  >
+                                  Windows
+                                  <strong data-start="499" data-end="510"
+                                    >cmd.exe</strong
+                                  >
+                                  only started supporting ANSI properly in
+                                  Windows 10 (2015+).
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="572" data-end="611" class="">
+                            <p data-start="574" data-end="611" class="">
+                              <strong data-start="574" data-end="611"
+                                >WSL (Windows Subsystem for Linux)</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="612" data-end="642" class="">
+                            <p data-start="614" data-end="642" class="">
+                              <strong data-start="614" data-end="642"
+                                >Node.js
+                                <code data-start="624" data-end="640"
+                                  >process.stdout</code
+                                ></strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="643" data-end="697" class="">
+                            <p data-start="645" data-end="697" class="">
+                              <strong data-start="645" data-end="679"
+                                >Most modern shell environments</strong
+                              >
+                              (Bash, Zsh, Fish)
+                            </p>
+                          </li>
+                        </ul>
+                        <h3 data-start="699" data-end="733" class="">
+                          <strong data-start="703" data-end="733"
+                            >🚧 Partially Supported in:</strong
+                          >
+                        </h3>
+                        <ul data-start="734" data-end="919">
+                          <li data-start="734" data-end="830" class="">
+                            <p data-start="736" data-end="830" class="">
+                              <strong data-start="736" data-end="782"
+                                >Older Windows versions (before Windows
+                                10)</strong
+                              >
+                              → Needs
+                              <code data-start="791" data-end="800"
+                                >ANSICON</code
+                              >
+                              or enabling VT100 processing.
+                            </p>
+                          </li>
+                          <li data-start="831" data-end="919" class="">
+                            <p data-start="833" data-end="919" class="">
+                              <strong data-start="833" data-end="888"
+                                >Some minimal terminals (e.g., busybox-based
+                                shells)</strong
+                              >
+                              → Limited colors and movement.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="921" data-end="924" class="" />
+                        <h2 data-start="926" data-end="976" class="">
+                          ❌
+                          <strong data-start="931" data-end="976"
+                            >Where ANSI Escape Codes Are NOT Supported</strong
+                          >
+                        </h2>
+                        <ul data-start="977" data-end="1519">
+                          <li data-start="977" data-end="1150" class="">
+                            <p data-start="979" data-end="1026" class="">
+                              <strong data-start="979" data-end="1024"
+                                >Web Browsers' Dev Console (<code
+                                  data-start="1008"
+                                  data-end="1021"
+                                  >console.log</code
+                                >)</strong
+                              >
+                            </p>
+                            <ul data-start="1029" data-end="1150">
+                              <li data-start="1029" data-end="1150" class="">
+                                <p data-start="1031" data-end="1150" class="">
+                                  Browsers strip ANSI sequences unless you use a
+                                  library like
+                                  <a
+                                    data-start="1091"
+                                    data-end="1132"
+                                    rel="noopener"
+                                    target="_new"
+                                    class=""
+                                    ><code data-start="1092" data-end="1099"
+                                      >chalk</code
+                                    ></a
+                                  >
+                                  with
+                                  <strong data-start="1138" data-end="1149"
+                                    >Node.js</strong
+                                  >.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="1151" data-end="1289" class="">
+                            <p data-start="1153" data-end="1201" class="">
+                              <strong data-start="1153" data-end="1199"
+                                >Text Editors (unless explicitly
+                                supported)</strong
+                              >
+                            </p>
+                            <ul data-start="1204" data-end="1289">
+                              <li data-start="1204" data-end="1289" class="">
+                                <p data-start="1206" data-end="1289" class="">
+                                  VS Code’s built-in terminal supports ANSI
+                                  codes, but the
+                                  <strong data-start="1263" data-end="1280"
+                                    >editor window</strong
+                                  >
+                                  doesn’t.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="1290" data-end="1519" class="">
+                            <p data-start="1292" data-end="1341" class="">
+                              <strong data-start="1292" data-end="1339"
+                                >Basic Windows
+                                <code data-start="1308" data-end="1317"
+                                  >cmd.exe</code
+                                >
+                                (before Windows 10)</strong
+                              >
+                            </p>
+                            <ul data-start="1344" data-end="1519">
+                              <li data-start="1344" data-end="1470" class="">
+                                <p data-start="1346" data-end="1383" class="">
+                                  Needs
+                                  <strong data-start="1352" data-end="1380"
+                                    >VT100 processing enabled</strong
+                                  >:
+                                </p>
+                                <pre
+                                  class="overflow-visible!"
+                                  data-start="1388"
+                                  data-end="1470"
+                                ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">powershell</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-powershell"><span>[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+</span></code></div></div></pre>
+                              </li>
+                              <li data-start="1473" data-end="1519" class="">
+                                <p data-start="1475" data-end="1519" class="">
+                                  Or use Git Bash, Cmder, or Windows Terminal.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <hr data-start="1521" data-end="1524" class="" />
+                        <h2 data-start="1526" data-end="1567" class="">
+                          🎨
+                          <strong data-start="1532" data-end="1567"
+                            >Example of ANSI Codes in Action</strong
+                          >
+                        </h2>
+                        <p data-start="1568" data-end="1605" class="">
+                          Run this in a
+                          <strong data-start="1582" data-end="1604"
+                            >supported terminal</strong
+                          >:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1606"
+                          data-end="1769"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>console.log('\x1b[31mRed Text\x1b[0m Normal Text');
+console.log('\x1b[1;34mBold Blue Text\x1b[0m');
+console.log('\x1b[42m\x1b[30mBlack on Green\x1b[0m');
+</span></code></div></div></pre>
+                        <h3 data-start="1771" data-end="1809" class="">
+                          <strong data-start="1775" data-end="1809"
+                            >Expected Output (if supported)</strong
+                          >
+                        </h3>
+                        <p data-start="1810" data-end="1914" class="">
+                          ✅
+                          <strong data-start="1812" data-end="1824"
+                            >Red Text</strong
+                          >
+                          followed by normal text<br
+                            data-start="1848"
+                            data-end="1851"
+                          />
+                          ✅
+                          <strong data-start="1853" data-end="1871"
+                            >Bold Blue Text</strong
+                          ><br data-start="1871" data-end="1874" />
+                          ✅
+                          <strong data-start="1876" data-end="1912"
+                            >Black text on a Green background</strong
+                          >
+                        </p>
+                        <hr data-start="1916" data-end="1919" class="" />
+                        <h2 data-start="1921" data-end="1970" class="">
+                          🔧
+                          <strong data-start="1927" data-end="1970"
+                            >How to Enable ANSI in Windows
+                            <code data-start="1959" data-end="1968"
+                              >cmd.exe</code
+                            ></strong
+                          >
+                        </h2>
+                        <p data-start="1971" data-end="2044" class="">
+                          If your terminal doesn’t render ANSI colors, enable
+                          <strong data-start="2023" data-end="2043"
+                            >VT100 processing</strong
+                          >:
+                        </p>
+                        <ol data-start="2045" data-end="2215">
+                          <li data-start="2045" data-end="2156" class="">
+                            <p data-start="2048" data-end="2072" class="">
+                              Open PowerShell and run:
+                            </p>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="2076"
+                              data-end="2156"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">powershell</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-powershell"><span>[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+</span></code></div></div></pre>
+                          </li>
+                          <li data-start="2157" data-end="2215" class="">
+                            <p data-start="2160" data-end="2215" class="">
+                              Or, modify the Windows registry to enable ANSI
+                              support.
+                            </p>
+                          </li>
+                        </ol>
+                        <hr data-start="2217" data-end="2220" class="" />
+                        <h2 data-start="2222" data-end="2242" class="">
+                          📌
+                          <strong data-start="2228" data-end="2242"
+                            >Conclusion</strong
+                          >
+                        </h2>
+                        <ul data-start="2243" data-end="2440">
+                          <li data-start="2243" data-end="2306" class="">
+                            <p data-start="2245" data-end="2306" class="">
+                              <strong data-start="2245" data-end="2279"
+                                >Most modern terminal emulators</strong
+                              >
+                              support ANSI escape codes.
+                            </p>
+                          </li>
+                          <li data-start="2307" data-end="2365" class="">
+                            <p data-start="2309" data-end="2365" class="">
+                              <strong data-start="2309" data-end="2332"
+                                >Windows 10+ is fine</strong
+                              >, but older versions need tweaks.
+                            </p>
+                          </li>
+                          <li data-start="2366" data-end="2440" class="">
+                            <p data-start="2368" data-end="2440" class="">
+                              <strong data-start="2368" data-end="2439"
+                                >Web browsers &amp; some basic text editors do
+                                not support ANSI natively</strong
+                              >.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="2442" data-end="2515" class="">
+                          Would you like help checking
+                          <strong data-start="2471" data-end="2511"
+                            >if your terminal supports ANSI codes</strong
+                          >? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
