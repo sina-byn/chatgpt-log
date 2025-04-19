@@ -1,0 +1,270 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>HTTP Stream Handling JS</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="0d4d906a-cffd-4431-8b5f-9c7be73ca8ba"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div class="w-full">
+                      <div
+                        class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                      >
+                        <div
+                          class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                        >
+                          <div class="whitespace-pre-wrap">
+                            how to get http streams in browser-side js
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="true"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="92fc6ade-edd0-42f7-91e7-66f7014893bb"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="279" class="">
+                          To get HTTP
+                          <strong data-start="12" data-end="23">streams</strong>
+                          in
+                          <strong data-start="27" data-end="54"
+                            >browser-side JavaScript</strong
+                          >, you're typically working with the
+                          <strong data-start="90" data-end="103"
+                            >Fetch API</strong
+                          >, which supports
+                          <strong data-start="120" data-end="143"
+                            >streaming responses</strong
+                          >
+                          via
+                          <code data-start="148" data-end="164"
+                            >ReadableStream</code
+                          >. This allows you to
+                          <strong data-start="185" data-end="221"
+                            >read the response body in chunks</strong
+                          >
+                          as they arrive, rather than waiting for the full
+                          payload.
+                        </p>
+                        <p data-start="281" data-end="308" class="">
+                          Here's a practical example:
+                        </p>
+                        <hr data-start="310" data-end="313" class="" />
+                        <h3 data-start="315" data-end="395" class="">
+                          ✅ Fetching and handling HTTP stream (e.g., text
+                          stream or server-sent logs):
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="397"
+                          data-end="1132"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>fetch('https://example.com/stream-endpoint')
+  .then(response =&gt; {
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+
+    return new ReadableStream({
+      start(controller) {
+        function push() {
+          reader.read().then(({ done, value }) =&gt; {
+            if (done) {
+              controller.close();
+              return;
+            }
+
+            // Decode and process the chunk
+            const chunk = decoder.decode(value, { stream: true });
+            console.log('Received chunk:', chunk);
+
+            controller.enqueue(value);
+            push();
+          });
+        }
+
+        push();
+      }
+    });
+  })
+  .catch(error =&gt; console.error('Stream error:', error));
+</span></code></div></div></pre>
+                        <hr data-start="1134" data-end="1137" class="" />
+                        <h3 data-start="1139" data-end="1156" class="">
+                          📦 Use Cases:
+                        </h3>
+                        <ul data-start="1157" data-end="1317">
+                          <li data-start="1157" data-end="1233" class="">
+                            <p data-start="1159" data-end="1233" class="">
+                              Streaming logs or events (e.g. from a backend like
+                              FastAPI, Express, etc.)
+                            </p>
+                          </li>
+                          <li data-start="1234" data-end="1259" class="">
+                            <p data-start="1236" data-end="1259" class="">
+                              Real-time chat messages
+                            </p>
+                          </li>
+                          <li data-start="1260" data-end="1290" class="">
+                            <p data-start="1262" data-end="1290" class="">
+                              Large text/video/audio files
+                            </p>
+                          </li>
+                          <li data-start="1291" data-end="1317" class="">
+                            <p data-start="1293" data-end="1317" class="">
+                              Server-Sent Events (SSE)
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1319" data-end="1322" class="" />
+                        <h3 data-start="1324" data-end="1338" class="">
+                          🛠️ Notes:
+                        </h3>
+                        <ul data-start="1340" data-end="1638">
+                          <li data-start="1340" data-end="1446" class="">
+                            <p data-start="1342" data-end="1446" class="">
+                              <code data-start="1342" data-end="1357"
+                                >response.body</code
+                              >
+                              is a
+                              <code data-start="1363" data-end="1379"
+                                >ReadableStream</code
+                              >
+                              (if the server supports it and doesn't buffer the
+                              whole response).
+                            </p>
+                          </li>
+                          <li data-start="1447" data-end="1523" class="">
+                            <p data-start="1449" data-end="1523" class="">
+                              If you're dealing with
+                              <strong data-start="1472" data-end="1487"
+                                >binary data</strong
+                              >, you can use
+                              <code data-start="1501" data-end="1513"
+                                >Uint8Array</code
+                              >
+                              directly.
+                            </p>
+                          </li>
+                          <li data-start="1524" data-end="1638" class="">
+                            <p data-start="1526" data-end="1638" class="">
+                              The server must support
+                              <strong data-start="1550" data-end="1579"
+                                >chunked transfer encoding</strong
+                              >
+                              (<code data-start="1581" data-end="1609"
+                                >Transfer-Encoding: chunked</code
+                              >) and flush output correctly.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1640" data-end="1643" class="" />
+                        <h3 data-start="1645" data-end="1660" class="">
+                          🚫 Not for:
+                        </h3>
+                        <ul data-start="1661" data-end="1790">
+                          <li data-start="1661" data-end="1703" class="">
+                            <p data-start="1663" data-end="1703" class="">
+                              WebSockets (use
+                              <code data-start="1679" data-end="1690"
+                                >WebSocket</code
+                              >
+                              API instead)
+                            </p>
+                          </li>
+                          <li data-start="1704" data-end="1737" class="">
+                            <p data-start="1706" data-end="1737" class="">
+                              HTTP/1.0 (no streaming support)
+                            </p>
+                          </li>
+                          <li data-start="1738" data-end="1790" class="">
+                            <p data-start="1740" data-end="1790" class="">
+                              Cross-origin endpoints without proper CORS headers
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1792" data-end="1795" class="" />
+                        <p data-start="1797" data-end="1975" class="">
+                          Would you like an example using
+                          <strong data-start="1829" data-end="1855"
+                            >Node.js as the backend</strong
+                          >
+                          to emit streams? Or are you working with an API that
+                          returns a specific kind of stream (like audio, video,
+                          JSON, etc.)?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
