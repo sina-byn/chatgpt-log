@@ -1,0 +1,1112 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Check if Promise JS</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="27476c64-800d-4852-90a0-3bb4e5f7a603"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How to check if a variable is a promise in js?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="38ce576c-80aa-4328-8078-e6947a966541"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="105" class="">
+                          To check if a variable is a
+                          <strong data-start="28" data-end="39">Promise</strong>
+                          in JavaScript, you can use a simple and reliable check
+                          like this:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="107"
+                          data-end="252"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>function isPromise(value) {
+  return Boolean(value &amp;&amp; typeof value.then === 'function' &amp;&amp; typeof value.catch === 'function');
+}
+</span></code></div></div></pre>
+                        <h3 data-start="254" data-end="272" class="">
+                          ✅ Explanation:
+                        </h3>
+                        <ul data-start="273" data-end="564">
+                          <li data-start="273" data-end="336" class="">
+                            <p data-start="275" data-end="336" class="">
+                              <code data-start="275" data-end="285"
+                                >value &amp;&amp;</code
+                              >
+                              makes sure the value is not
+                              <code data-start="314" data-end="320">null</code>
+                              or
+                              <code data-start="324" data-end="335"
+                                >undefined</code
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="337" data-end="410" class="">
+                            <p data-start="339" data-end="410" class="">
+                              <code data-start="339" data-end="373"
+                                >typeof value.then === 'function'</code
+                              >
+                              checks if it has a
+                              <code data-start="393" data-end="402"
+                                >.then()</code
+                              >
+                              method.
+                            </p>
+                          </li>
+                          <li data-start="411" data-end="564" class="">
+                            <p data-start="413" data-end="564" class="">
+                              <code data-start="413" data-end="448"
+                                >typeof value.catch === 'function'</code
+                              >
+                              ensures it's not just a "thenable" (an object with
+                              <code data-start="500" data-end="506">then</code>)
+                              but a proper Promise with both
+                              <code data-start="539" data-end="548"
+                                >.then()</code
+                              >
+                              and
+                              <code data-start="553" data-end="563"
+                                >.catch()</code
+                              >.
+                            </p>
+                          </li>
+                        </ul>
+                        <h3 data-start="566" data-end="587" class="">
+                          💡 Example usage:
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="589"
+                          data-end="855"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const p = new Promise((resolve) =&gt; resolve('done'));
+const notPromise = { then: () =&gt; {} };
+
+console.log(isPromise(p)); // true
+console.log(isPromise(notPromise)); // false
+console.log(isPromise(null)); // false
+console.log(isPromise({})); // false
+</span></code></div></div></pre>
+                        <p data-start="857" data-end="940" class="">
+                          Let me know if you want to distinguish between native
+                          promises and "thenables" too.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="537b745b-76a2-4405-b8ce-2801724ea5fd"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          Why not just use instanceof Promise?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="a477a2f1-5f06-49d7-a6d9-0afd8aca1e67"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="108" class="">
+                          Great question! Using
+                          <code data-start="22" data-end="42"
+                            >instanceof Promise</code
+                          >
+                          <strong data-start="43" data-end="55">can work</strong
+                          >, but it has some limitations you should be aware of:
+                        </p>
+                        <hr data-start="110" data-end="113" class="" />
+                        <h3 data-start="115" data-end="144" class="">
+                          ✅
+                          <code data-start="121" data-end="141"
+                            >instanceof Promise</code
+                          >:
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="145"
+                          data-end="187"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>value instanceof Promise
+</span></code></div></div></pre>
+                        <p data-start="189" data-end="318" class="">
+                          This checks whether
+                          <code data-start="209" data-end="216">value</code> was
+                          created using the
+                          <code data-start="239" data-end="248">Promise</code>
+                          constructor
+                          <strong data-start="261" data-end="295"
+                            >from the same JavaScript realm</strong
+                          >
+                          (same global context).
+                        </p>
+                        <hr data-start="320" data-end="323" class="" />
+                        <h3 data-start="325" data-end="365" class="">
+                          ❗ Drawbacks of
+                          <code data-start="344" data-end="364"
+                            >instanceof Promise</code
+                          >:
+                        </h3>
+                        <ol data-start="367" data-end="925">
+                          <li data-start="367" data-end="723" class="">
+                            <p data-start="370" data-end="393" class="">
+                              <strong data-start="370" data-end="392"
+                                >Cross-Realm Issues</strong
+                              >:
+                            </p>
+                            <ul data-start="397" data-end="556">
+                              <li data-start="397" data-end="556" class="">
+                                <p data-start="399" data-end="556" class="">
+                                  If a Promise comes from another frame or
+                                  window (e.g., in iframes or web workers),
+                                  <code data-start="482" data-end="502"
+                                    >instanceof Promise</code
+                                  >
+                                  will return
+                                  <code data-start="515" data-end="522"
+                                    >false</code
+                                  >, even if it
+                                  <em data-start="535" data-end="539">is</em> a
+                                  valid Promise.
+                                </p>
+                              </li>
+                            </ul>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="561"
+                              data-end="723"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>// In browser:
+const iframePromise = iframe.contentWindow.Promise.resolve();
+console.log(iframePromise instanceof Promise); // false
+</span></code></div></div></pre>
+                          </li>
+                          <li data-start="725" data-end="925" class="">
+                            <p data-start="728" data-end="777" class="">
+                              <strong data-start="728" data-end="776"
+                                >Thenables (non-Promise objects with a
+                                .then)</strong
+                              >:
+                            </p>
+                            <ul data-start="781" data-end="925">
+                              <li data-start="781" data-end="925" class="">
+                                <p data-start="783" data-end="925" class="">
+                                  <code data-start="783" data-end="803"
+                                    >instanceof Promise</code
+                                  >
+                                  does
+                                  <strong data-start="809" data-end="816"
+                                    >not</strong
+                                  >
+                                  detect "thenables" — objects that follow the
+                                  Promise API but aren't instances of the native
+                                  <code data-start="909" data-end="918"
+                                    >Promise</code
+                                  >
+                                  class.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ol>
+                        <hr data-start="927" data-end="930" class="" />
+                        <h3 data-start="932" data-end="996" class="">
+                          ✅ Why
+                          <code data-start="942" data-end="976"
+                            >typeof value.then === 'function'</code
+                          >
+                          is often preferred:
+                        </h3>
+                        <ul data-start="997" data-end="1195">
+                          <li data-start="997" data-end="1078" class="">
+                            <p data-start="999" data-end="1078" class="">
+                              It works with
+                              <strong data-start="1013" data-end="1032"
+                                >native promises</strong
+                              >,
+                              <strong data-start="1034" data-end="1047"
+                                >thenables</strong
+                              >, and
+                              <strong data-start="1053" data-end="1077"
+                                >cross-realm promises</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="1079" data-end="1195" class="">
+                            <p data-start="1081" data-end="1195" class="">
+                              It’s more flexible for environments like testing,
+                              mocking, or interoperating with libraries that
+                              return thenables.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1197" data-end="1200" class="" />
+                        <h3 data-start="1202" data-end="1215" class="">
+                          📌 TL;DR:
+                        </h3>
+                        <ul data-start="1216" data-end="1419">
+                          <li data-start="1216" data-end="1315" class="">
+                            <p data-start="1218" data-end="1315" class="">
+                              Use
+                              <code data-start="1222" data-end="1242"
+                                >instanceof Promise</code
+                              >
+                              if you're
+                              <strong data-start="1253" data-end="1314"
+                                >only dealing with native Promises in the same
+                                environment</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="1316" data-end="1419" class="">
+                            <p data-start="1318" data-end="1419" class="">
+                              Use the
+                              <code data-start="1326" data-end="1340"
+                                >.then/.catch</code
+                              >
+                              check if you want to be
+                              <strong data-start="1365" data-end="1418"
+                                >robust, cross-compatible, and cover thenables
+                                too</strong
+                              >.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1421" data-end="1461" class="">
+                          Want to see a utility that handles both?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="1a1c5195-d04d-4ee4-9fe9-19d032b2e7fc"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          Give me an example of a thenable
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="5c511939-11d5-401d-9c57-0f7689f59932"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="142" class="">
+                          Sure! A
+                          <strong data-start="8" data-end="20">thenable</strong>
+                          is any object that implements a
+                          <code data-start="53" data-end="62">.then()</code>
+                          method, even if it's not a real instance of
+                          <code data-start="107" data-end="116">Promise</code>.
+                          Here's a simple example:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="144"
+                          data-end="288"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const thenable = {
+  then: function (resolve, reject) {
+    setTimeout(() =&gt; resolve('Resolved from thenable!'), 1000);
+  }
+};
+</span></code></div></div></pre>
+                        <p data-start="290" data-end="355" class="">
+                          You can use this
+                          <code data-start="307" data-end="317">thenable</code>
+                          just like a Promise in some contexts:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="357"
+                          data-end="491"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>Promise.resolve(thenable).then((value) =&gt; {
+  console.log(value); // 👉 "Resolved from thenable!" after 1 second
+});
+</span></code></div></div></pre>
+                        <h3 data-start="493" data-end="525" class="">
+                          🧠 Why are thenables useful?
+                        </h3>
+                        <p data-start="527" data-end="762" class="">
+                          They allow you to create "promise-like" behavior
+                          without using the native
+                          <code data-start="601" data-end="610">Promise</code>
+                          constructor. Many libraries (e.g., jQuery's old
+                          Deferred objects or custom async utilities) used this
+                          pattern before native Promises became widespread.
+                        </p>
+                        <hr data-start="764" data-end="767" class="" />
+                        <p data-start="769" data-end="860" class="">
+                          Let me know if you want to build your own mini Promise
+                          using thenables—it’s a fun exercise!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="29f2a04f-2a3c-45c0-943c-a97dc68a1d39"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          What happens if I wait something that is not a
+                          promise?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="ad3e11e1-370a-48f6-b844-5ea1512b5dd0"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="57" class="">
+                          Great question — this comes up a lot in async
+                          JavaScript.
+                        </p>
+                        <h3 data-start="59" data-end="129" class="">
+                          🤔 What happens if you
+                          <code data-start="86" data-end="93">await</code>
+                          something that's
+                          <strong data-start="111" data-end="128"
+                            >not a Promise</strong
+                          >?
+                        </h3>
+                        <p data-start="131" data-end="179" class="">
+                          It still works — but maybe not how you'd expect.
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="181"
+                          data-end="289"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>async function test() {
+  const value = await 42;
+  console.log(value); // 👉 42
+}
+test();
+</span></code></div></div></pre>
+                        <h3 data-start="291" data-end="310" class="">
+                          ✅ How it works:
+                        </h3>
+                        <ul data-start="311" data-end="477">
+                          <li data-start="311" data-end="417" class="">
+                            <p data-start="313" data-end="417" class="">
+                              <code data-start="313" data-end="320">await</code>
+                              <strong data-start="321" data-end="367"
+                                >converts any value into a resolved
+                                Promise</strong
+                              >
+                              behind the scenes using
+                              <code data-start="392" data-end="416"
+                                >Promise.resolve(value)</code
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="418" data-end="477" class="">
+                            <p data-start="420" data-end="477" class="">
+                              So
+                              <code data-start="423" data-end="433"
+                                >await 42</code
+                              >
+                              is the same as
+                              <code data-start="449" data-end="476"
+                                >await Promise.resolve(42)</code
+                              >.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="479" data-end="506" class="">
+                          This means you can
+                          <code data-start="498" data-end="505">await</code>:
+                        </p>
+                        <ul data-start="507" data-end="753">
+                          <li data-start="507" data-end="573" class="">
+                            <p data-start="509" data-end="573" class="">
+                              <strong data-start="509" data-end="523"
+                                >Primitives</strong
+                              >
+                              like numbers, strings → returns them immediately.
+                            </p>
+                          </li>
+                          <li data-start="574" data-end="622" class="">
+                            <p data-start="576" data-end="622" class="">
+                              <strong data-start="576" data-end="593"
+                                >Plain objects</strong
+                              >
+                              → also returned immediately.
+                            </p>
+                          </li>
+                          <li data-start="623" data-end="686" class="">
+                            <p data-start="625" data-end="686" class="">
+                              <strong data-start="625" data-end="638"
+                                >Thenables</strong
+                              >
+                              →
+                              <code data-start="641" data-end="648">await</code>
+                              will follow their
+                              <code data-start="667" data-end="676"
+                                >.then()</code
+                              >
+                              behavior.
+                            </p>
+                          </li>
+                          <li data-start="687" data-end="753" class="">
+                            <p data-start="689" data-end="753" class="">
+                              <strong data-start="689" data-end="706"
+                                >Real Promises</strong
+                              >
+                              →
+                              <code data-start="709" data-end="716">await</code>
+                              waits for them to resolve or reject.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="755" data-end="758" class="" />
+                        <h3 data-start="760" data-end="791" class="">
+                          ❗ What if the value throws?
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="793"
+                          data-end="898"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>async function test() {
+  const value = await (() =&gt; { throw new Error("Oops"); })();
+}
+</span></code></div></div></pre>
+                        <ul data-start="900" data-end="1112">
+                          <li data-start="900" data-end="1004" class="">
+                            <p data-start="902" data-end="1004" class="">
+                              If the expression
+                              <strong data-start="920" data-end="951"
+                                >throws an error immediately</strong
+                              >, it will be caught like any other synchronous
+                              error.
+                            </p>
+                          </li>
+                          <li data-start="1005" data-end="1112" class="">
+                            <p data-start="1007" data-end="1112" class="">
+                              But if it returns a rejected Promise (or a
+                              thenable that rejects), the
+                              <code data-start="1078" data-end="1085"
+                                >await</code
+                              >
+                              will throw that rejection.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1114" data-end="1117" class="" />
+                        <h3 data-start="1119" data-end="1131" class="">
+                          Summary:
+                        </h3>
+                        <div
+                          class="group pointer-events-none relative flex justify-center *:pointer-events-auto"
+                        >
+                          <span
+                            class="pointer-events-none absolute start-full top-4 z-10 hidden h-full w-fit ps-2 md:block"
+                            data-state="closed"
+                            ><button
+                              class="hover:bg-token-main-surface-secondary text-token-text-secondary pointer-events-auto rounded-lg px-1 py-1 opacity-0 transition-opacity duration-200 group-focus-within:opacity-100 group-hover:opacity-100"
+                            ></button
+                          ></span>
+                          <div
+                            class="tableContainer horzScrollShadows relative"
+                          >
+                            <table
+                              class="min-w-full"
+                              data-start="1133"
+                              data-end="1685"
+                            >
+                              <thead data-start="1133" data-end="1202">
+                                <tr data-start="1133" data-end="1202">
+                                  <th data-start="1133" data-end="1165">
+                                    Value passed to
+                                    <code data-start="1151" data-end="1158"
+                                      >await</code
+                                    >
+                                  </th>
+                                  <th data-start="1165" data-end="1202">
+                                    Behavior
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="1272" data-end="1685">
+                                <tr data-start="1272" data-end="1340">
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1272"
+                                    data-end="1303"
+                                  >
+                                    <code data-start="1274" data-end="1294"
+                                      >Promise.resolve(1)</code
+                                    >
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1303"
+                                    data-end="1340"
+                                  >
+                                    waits, then returns
+                                    <code data-start="1325" data-end="1328"
+                                      >1</code
+                                    >
+                                  </td>
+                                </tr>
+                                <tr data-start="1341" data-end="1409">
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1341"
+                                    data-end="1372"
+                                  >
+                                    <code data-start="1343" data-end="1347"
+                                      >42</code
+                                    >
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1372"
+                                    data-end="1409"
+                                  >
+                                    immediately returns
+                                    <code data-start="1394" data-end="1398"
+                                      >42</code
+                                    >
+                                  </td>
+                                </tr>
+                                <tr data-start="1410" data-end="1478">
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1410"
+                                    data-end="1441"
+                                  >
+                                    <code data-start="1412" data-end="1421"
+                                      >"hello"</code
+                                    >
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1441"
+                                    data-end="1478"
+                                  >
+                                    immediately returns
+                                    <code data-start="1463" data-end="1472"
+                                      >"hello"</code
+                                    >
+                                  </td>
+                                </tr>
+                                <tr data-start="1479" data-end="1547">
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1479"
+                                    data-end="1510"
+                                  >
+                                    <code data-start="1481" data-end="1485"
+                                      >{}</code
+                                    >
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1510"
+                                    data-end="1547"
+                                  >
+                                    immediately returns the object
+                                  </td>
+                                </tr>
+                                <tr data-start="1548" data-end="1616">
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1548"
+                                    data-end="1579"
+                                  >
+                                    <code data-start="1550" data-end="1564"
+                                      >{ then: fn }</code
+                                    >
+                                    (thenable)
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1579"
+                                    data-end="1616"
+                                  >
+                                    calls
+                                    <code data-start="1587" data-end="1596"
+                                      >.then()</code
+                                    >
+                                    and follows logic
+                                  </td>
+                                </tr>
+                                <tr data-start="1617" data-end="1685">
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1617"
+                                    data-end="1648"
+                                  >
+                                    <code data-start="1619" data-end="1638"
+                                      >throw new Error()</code
+                                    >
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1648"
+                                    data-end="1685"
+                                  >
+                                    throws immediately
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <p data-start="1687" data-end="1730" class="">
+                          So yeah —
+                          <code data-start="1697" data-end="1704">await</code>
+                          is surprisingly flexible!
+                        </p>
+                        <p data-start="1732" data-end="1776" class="">
+                          Want to test this behavior in code together?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-9"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="eb096132-8928-4ce9-a342-813f5beecbb8"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          Give me a typescript compatible version of the
+                          isPromise func
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-10"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="0cec5c1e-b148-4b45-b49c-7cb09fcccb00"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="108" class="">
+                          Absolutely! Here's a
+                          <strong data-start="21" data-end="46"
+                            >TypeScript-compatible</strong
+                          >
+                          version of the
+                          <code data-start="62" data-end="73">isPromise</code>
+                          function, with proper type guards:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="110"
+                          data-end="337"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>function isPromise&lt;T = unknown&gt;(value: any): value is Promise&lt;T&gt; {
+  return (
+    value !== null &amp;&amp;
+    typeof value === 'object' &amp;&amp;
+    typeof value.then === 'function' &amp;&amp;
+    typeof value.catch === 'function'
+  );
+}
+</span></code></div></div></pre>
+                        <h3 data-start="339" data-end="357" class="">
+                          ✅ Explanation:
+                        </h3>
+                        <ul data-start="358" data-end="684">
+                          <li data-start="358" data-end="508" class="">
+                            <p data-start="360" data-end="508" class="">
+                              <code data-start="360" data-end="381"
+                                >value is Promise&lt;T&gt;</code
+                              >
+                              is a
+                              <strong data-start="387" data-end="412"
+                                >TypeScript type guard</strong
+                              >
+                              — it tells the compiler "if this returns true, you
+                              can safely treat
+                              <code data-start="481" data-end="488">value</code>
+                              as a
+                              <code data-start="494" data-end="506"
+                                >Promise&lt;T&gt;</code
+                              >."
+                            </p>
+                          </li>
+                          <li data-start="509" data-end="579" class="">
+                            <p data-start="511" data-end="579" class="">
+                              <code data-start="511" data-end="523"
+                                >value: any</code
+                              >
+                              keeps the function flexible (you can pass anything
+                              in).
+                            </p>
+                          </li>
+                          <li data-start="580" data-end="684" class="">
+                            <p data-start="582" data-end="684" class="">
+                              You can optionally specify the
+                              <code data-start="613" data-end="616">T</code>
+                              type for stronger inference (e.g.,
+                              <code data-start="652" data-end="682"
+                                >isPromise&lt;string&gt;(someValue)</code
+                              >).
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="686" data-end="689" class="" />
+                        <h3 data-start="691" data-end="712" class="">
+                          🧪 Example usage:
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="714"
+                          data-end="926"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>const maybePromise: unknown = fetch('https://api.example.com');
+
+if (isPromise&lt;Response&gt;(maybePromise)) {
+  maybePromise.then(res =&gt; console.log(res.status));
+} else {
+  console.log('Not a promise!');
+}
+</span></code></div></div></pre>
+                        <p data-start="928" data-end="1006" class="">
+                          Let me know if you want a stricter version or one that
+                          also detects thenables!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
