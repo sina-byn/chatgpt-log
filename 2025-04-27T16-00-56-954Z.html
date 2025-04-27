@@ -1,0 +1,1238 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Async Await Benefits</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="f870e921-9cc8-494b-9b0b-b2049898780c"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          What is the benefit of using async/await in js?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="ab8dddc0-86ec-48dc-9633-86780be0c5ee"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="145" class="">
+                          The benefit of using
+                          <code data-start="21" data-end="34">async/await</code>
+                          in JavaScript is
+                          <strong data-start="52" data-end="114"
+                            >making asynchronous code easier to read, write, and
+                            manage</strong
+                          >, almost like synchronous code.
+                        </p>
+                        <p data-start="147" data-end="190" class="">
+                          Here’s a breakdown of why it’s so valuable:
+                        </p>
+                        <hr data-start="192" data-end="195" class="" />
+                        <h3 data-start="197" data-end="242" class="">
+                          🛠️ 1.
+                          <strong data-start="208" data-end="242"
+                            >Cleaner and more readable code</strong
+                          >
+                        </h3>
+                        <p data-start="243" data-end="443" class="">
+                          Instead of chaining multiple
+                          <code data-start="272" data-end="281">.then()</code>
+                          calls with Promises (which can quickly get messy), you
+                          can just "await" the result line by line.<br
+                            data-start="378"
+                            data-end="381"
+                          />
+                          It looks like normal, sequential code — much easier to
+                          follow.
+                        </p>
+                        <p data-start="445" data-end="457" class="">
+                          <strong data-start="445" data-end="457"
+                            >Example:</strong
+                          >
+                        </p>
+                        <p data-start="459" data-end="500" class="">
+                          Without
+                          <code data-start="467" data-end="480"
+                            >async/await</code
+                          >
+                          (Promise chaining):
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="501"
+                          data-end="647"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>fetchData()
+  .then(data =&gt; processData(data))
+  .then(result =&gt; displayResult(result))
+  .catch(error =&gt; console.error(error));
+</span></code></div></div></pre>
+                        <p data-start="649" data-end="668" class="">
+                          With
+                          <code data-start="654" data-end="667"
+                            >async/await</code
+                          >:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="669"
+                          data-end="883"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>async function handleData() {
+  try {
+    const data = await fetchData();
+    const result = await processData(data);
+    displayResult(result);
+  } catch (error) {
+    console.error(error);
+  }
+}
+</span></code></div></div></pre>
+                        <hr data-start="885" data-end="888" class="" />
+                        <h3 data-start="890" data-end="929" class="">
+                          🚀 2.
+                          <strong data-start="900" data-end="929"
+                            >Error handling is simpler</strong
+                          >
+                        </h3>
+                        <p data-start="930" data-end="1018" class="">
+                          You just use
+                          <code data-start="943" data-end="954">try/catch</code>
+                          blocks — no need for separate
+                          <code data-start="985" data-end="995">.catch()</code>
+                          after every
+                          <code data-start="1008" data-end="1017">.then()</code
+                          >.
+                        </p>
+                        <hr data-start="1020" data-end="1023" class="" />
+                        <h3 data-start="1025" data-end="1059" class="">
+                          ⚡ 3.
+                          <strong data-start="1034" data-end="1059"
+                            >Avoid "callback hell"</strong
+                          >
+                        </h3>
+                        <p data-start="1060" data-end="1220" class="">
+                          Before Promises and async/await, deeply nested
+                          callbacks were a nightmare (<code
+                            data-start="1135"
+                            data-end="1177"
+                            >callback inside callback inside callback</code
+                          >).<br data-start="1179" data-end="1182" />
+                          <code data-start="1182" data-end="1195"
+                            >async/await</code
+                          >
+                          flattens everything out.
+                        </p>
+                        <hr data-start="1222" data-end="1225" class="" />
+                        <h3 data-start="1227" data-end="1278" class="">
+                          🧠 4.
+                          <strong data-start="1237" data-end="1278"
+                            >Better control over asynchronous flow</strong
+                          >
+                        </h3>
+                        <p data-start="1279" data-end="1411" class="">
+                          You can easily decide whether to
+                          <code data-start="1312" data-end="1319">await</code>
+                          things sequentially (one after another) or run them in
+                          parallel (e.g., with
+                          <code data-start="1396" data-end="1409"
+                            >Promise.all</code
+                          >).
+                        </p>
+                        <p data-start="1413" data-end="1434" class="">
+                          Example (sequential):
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1435"
+                          data-end="1521"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const user = await getUser();
+const posts = await getPosts(user.id);
+</span></code></div></div></pre>
+                        <p data-start="1523" data-end="1542" class="">
+                          Example (parallel):
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1543"
+                          data-end="1632"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const [user, posts] = await Promise.all([
+  getUser(),
+  getPosts()
+]);
+</span></code></div></div></pre>
+                        <hr data-start="1634" data-end="1637" class="" />
+                        <h3 data-start="1639" data-end="1669" class="">
+                          🧩 5.
+                          <strong data-start="1649" data-end="1669"
+                            >Easier debugging</strong
+                          >
+                        </h3>
+                        <p data-start="1670" data-end="1830" class="">
+                          Because the code looks synchronous, stack traces are
+                          easier to follow. Debuggers also step through lines
+                          more naturally compared to chained
+                          <code data-start="1810" data-end="1819">.then()</code>
+                          functions.
+                        </p>
+                        <hr data-start="1832" data-end="1835" class="" />
+                        <p data-start="1837" data-end="1944" class="">
+                          In short:<br data-start="1846" data-end="1849" />
+                          ✅
+                          <strong data-start="1851" data-end="1893"
+                            >Looks synchronous, runs asynchronously</strong
+                          ><br data-start="1893" data-end="1896" />
+                          ✅
+                          <strong data-start="1898" data-end="1944"
+                            >Easier to write, read, debug, and maintain</strong
+                          >
+                        </p>
+                        <hr data-start="1946" data-end="1949" class="" />
+                        <p data-start="1951" data-end="2061" class="">
+                          Would you like a quick real-world mini-example too,
+                          like fetching from an API with and without
+                          async/await? 🚀
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="ea4cbbb5-8124-4954-80a5-8cadaac33692"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="42" class="">
+                          Great question! Let’s keep it super clear:
+                        </p>
+                        <hr data-start="44" data-end="47" class="" />
+                        <h3 data-start="49" data-end="94" class="">
+                          📚
+                          <strong data-start="56" data-end="94"
+                            >What is async (asynchronous) code?</strong
+                          >
+                        </h3>
+                        <p data-start="96" data-end="250" class="">
+                          <strong data-start="96" data-end="110"
+                            >Async code</strong
+                          >
+                          is
+                          <strong data-start="114" data-end="203"
+                            >code that
+                            <em data-start="126" data-end="141"
+                              >doesn’t block</em
+                            >
+                            the program while it’s waiting for something slow to
+                            finish</strong
+                          >
+                          — like a network request, file read, or timer.
+                        </p>
+                        <p data-start="252" data-end="399" class="">
+                          Instead of freezing everything until the slow task is
+                          done, JavaScript keeps running other code and
+                          <em data-start="352" data-end="364">comes back</em> to
+                          the async task once it's ready.
+                        </p>
+                        <hr data-start="401" data-end="404" class="" />
+                        <h3 data-start="406" data-end="440" class="">
+                          🏃 Example (Real Life Analogy)
+                        </h3>
+                        <p data-start="442" data-end="717" class="">
+                          Imagine you order a pizza 🍕.<br
+                            data-start="471"
+                            data-end="474"
+                          />
+                          While you wait 30 minutes for it to arrive, you don't
+                          just stand at the door doing nothing — you clean your
+                          room, check Instagram, and maybe call a friend.<br
+                            data-start="629"
+                            data-end="632"
+                          />
+                          <strong data-start="632" data-end="664"
+                            >When the pizza finally comes</strong
+                          >, the delivery guy rings the bell, and you go get it.
+                        </p>
+                        <ul data-start="719" data-end="881">
+                          <li data-start="719" data-end="809" class="">
+                            <p data-start="721" data-end="809" class="">
+                              <strong data-start="721" data-end="736"
+                                >Synchronous</strong
+                              >: You would just stand at the door, doing NOTHING
+                              else for 30 minutes. 😅
+                            </p>
+                          </li>
+                          <li data-start="810" data-end="881" class="">
+                            <p data-start="812" data-end="881" class="">
+                              <strong data-start="812" data-end="828"
+                                >Asynchronous</strong
+                              >: You do other things, and the pizza arrives
+                              <em data-start="873" data-end="880">later</em>.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="883" data-end="886" class="" />
+                        <h3 data-start="888" data-end="913" class="">
+                          🧩
+                          <strong data-start="895" data-end="913"
+                            >In code terms:</strong
+                          >
+                        </h3>
+                        <p data-start="915" data-end="955" class="">
+                          <strong data-start="915" data-end="943"
+                            >Synchronous code example</strong
+                          >
+                          (blocking):
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="956"
+                          data-end="1060"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const data = heavyTask();  // Waits here until heavyTask is done
+console.log('Done!');
+</span></code></div></div></pre>
+                        <p data-start="1062" data-end="1107" class="">
+                          <strong data-start="1062" data-end="1091"
+                            >Asynchronous code example</strong
+                          >
+                          (non-blocking):
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1108"
+                          data-end="1250"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>heavyTaskAsync()
+  .then(data =&gt; {
+    console.log('Got data!');
+  });
+
+console.log('Done! (while waiting for heavy task)');
+</span></code></div></div></pre>
+                        <p data-start="1252" data-end="1363" class="">
+                          Notice:<br data-start="1259" data-end="1262" />
+                          ✅ "Done!" prints
+                          <strong data-start="1279" data-end="1294"
+                            >immediately</strong
+                          >,<br data-start="1295" data-end="1298" />
+                          ✅ and later, when the async work finishes, it prints
+                          "Got data!".
+                        </p>
+                        <hr data-start="1365" data-end="1368" class="" />
+                        <h3 data-start="1370" data-end="1413" class="">
+                          ⏳
+                          <strong data-start="1376" data-end="1413"
+                            >Common async tasks in JavaScript:</strong
+                          >
+                        </h3>
+                        <ul data-start="1414" data-end="1576">
+                          <li data-start="1414" data-end="1459" class="">
+                            <p data-start="1416" data-end="1459" class="">
+                              Fetching data from an API (e.g.,
+                              <code data-start="1449" data-end="1458"
+                                >fetch()</code
+                              >)
+                            </p>
+                          </li>
+                          <li data-start="1460" data-end="1504" class="">
+                            <p data-start="1462" data-end="1504" class="">
+                              Waiting for a timer (e.g.,
+                              <code data-start="1489" data-end="1503"
+                                >setTimeout()</code
+                              >)
+                            </p>
+                          </li>
+                          <li data-start="1505" data-end="1541" class="">
+                            <p data-start="1507" data-end="1541" class="">
+                              Reading/writing files (in Node.js)
+                            </p>
+                          </li>
+                          <li data-start="1542" data-end="1563" class="">
+                            <p data-start="1544" data-end="1563" class="">
+                              Accessing databases
+                            </p>
+                          </li>
+                          <li data-start="1564" data-end="1576" class="">
+                            <p data-start="1566" data-end="1576" class="">
+                              Animations
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1578" data-end="1581" class="" />
+                        <h3 data-start="1583" data-end="1599" class="">
+                          🔥 In short:
+                        </h3>
+                        <div
+                          class="group pointer-events-none relative flex justify-center *:pointer-events-auto"
+                        >
+                          <span
+                            class="pointer-events-none absolute start-full top-4 z-10 hidden h-full w-fit ps-2 md:block"
+                            data-state="closed"
+                            ><button
+                              class="hover:bg-token-main-surface-secondary text-token-text-secondary pointer-events-auto rounded-lg px-1 py-1 opacity-0 transition-opacity duration-200 group-focus-within:opacity-100 group-hover:opacity-100"
+                            ></button
+                          ></span>
+                          <div
+                            class="tableContainer horzScrollShadows relative"
+                          >
+                            <table
+                              class="min-w-full"
+                              data-start="1601"
+                              data-end="1847"
+                            >
+                              <thead data-start="1601" data-end="1659">
+                                <tr data-start="1601" data-end="1659">
+                                  <th data-start="1601" data-end="1614"></th>
+                                  <th data-start="1614" data-end="1635">
+                                    Synchronous (Sync)
+                                  </th>
+                                  <th data-start="1635" data-end="1659">
+                                    Asynchronous (Async)
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="1719" data-end="1847">
+                                <tr data-start="1719" data-end="1747">
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1719"
+                                    data-end="1735"
+                                  >
+                                    <strong data-start="1721" data-end="1734"
+                                      >Blocking?</strong
+                                    >
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1735"
+                                    data-end="1741"
+                                  >
+                                    Yes
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1741"
+                                    data-end="1747"
+                                  >
+                                    No
+                                  </td>
+                                </tr>
+                                <tr data-start="1748" data-end="1798">
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1748"
+                                    data-end="1786"
+                                  >
+                                    <strong data-start="1750" data-end="1785"
+                                      >Other code runs during waiting?</strong
+                                    >
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1786"
+                                    data-end="1791"
+                                  >
+                                    No
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1791"
+                                    data-end="1798"
+                                  >
+                                    Yes
+                                  </td>
+                                </tr>
+                                <tr data-start="1799" data-end="1847">
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1799"
+                                    data-end="1813"
+                                  >
+                                    <strong data-start="1801" data-end="1812"
+                                      >Example</strong
+                                    >
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1813"
+                                    data-end="1826"
+                                  >
+                                    A for-loop
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1826"
+                                    data-end="1847"
+                                  >
+                                    A network request
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <hr data-start="1849" data-end="1852" class="" />
+                        <p data-start="1854" data-end="1969" class="">
+                          Would you like me to also show a simple animation that
+                          explains it visually? 🎥🚀 It can make it even more
+                          obvious!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="30c153ab-f62d-43d2-971f-42c9d690a249"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          Give me real js examples
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="deaa5b2a-6c6a-4c9e-ab00-8e8084d86ead"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="65" class="">
+                          Of course! Let’s go straight into
+                          <strong data-start="34" data-end="62"
+                            >real JavaScript examples</strong
+                          >
+                          🔥
+                        </p>
+                        <hr data-start="67" data-end="70" class="" />
+                        <h2 data-start="72" data-end="117" class="">
+                          1.
+                          <strong data-start="78" data-end="106"
+                            >Synchronous Code Example</strong
+                          >
+                          (blocking)
+                        </h2>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="119"
+                          data-end="402"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>function slowSyncFunction() {
+  // Simulate a slow task
+  const start = Date.now();
+  while (Date.now() - start &lt; 3000) {}  // block for 3 seconds
+  return 'Done!';
+}
+
+console.log('Start');
+const result = slowSyncFunction();
+console.log(result);
+console.log('End');
+</span></code></div></div></pre>
+                        <h3 data-start="404" data-end="415" class="">
+                          Output:
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="416"
+                          data-end="456"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]"></div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>Start
+(wait 3 seconds)
+Done!
+End
+</span></code></div></div></pre>
+                        <blockquote data-start="457" data-end="507">
+                          <p data-start="459" data-end="507" class="">
+                            ❗ Everything is
+                            <strong data-start="475" data-end="485"
+                              >frozen</strong
+                            >
+                            during the slow task.
+                          </p>
+                        </blockquote>
+                        <hr data-start="509" data-end="512" class="" />
+                        <h2 data-start="514" data-end="582" class="">
+                          2.
+                          <strong data-start="520" data-end="549"
+                            >Asynchronous Code Example</strong
+                          >
+                          (non-blocking with
+                          <code data-start="569" data-end="581">setTimeout</code
+                          >)
+                        </h2>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="584"
+                          data-end="865"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>function slowAsyncFunction() {
+  return new Promise((resolve) =&gt; {
+    setTimeout(() =&gt; {
+      resolve('Done!');
+    }, 3000);  // wait 3 seconds
+  });
+}
+
+console.log('Start');
+slowAsyncFunction().then((result) =&gt; {
+  console.log(result);
+});
+console.log('End');
+</span></code></div></div></pre>
+                        <h3 data-start="867" data-end="878" class="">
+                          Output:
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="879"
+                          data-end="919"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]"></div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>Start
+End
+(wait 3 seconds)
+Done!
+</span></code></div></div></pre>
+                        <blockquote data-start="920" data-end="972">
+                          <p data-start="922" data-end="972" class="">
+                            ✅ The program
+                            <strong data-start="936" data-end="957"
+                              >continues running</strong
+                            >
+                            while waiting.
+                          </p>
+                        </blockquote>
+                        <hr data-start="974" data-end="977" class="" />
+                        <h2 data-start="979" data-end="1023" class="">
+                          3.
+                          <strong data-start="985" data-end="1008"
+                            >Using
+                            <code data-start="993" data-end="1006"
+                              >async/await</code
+                            ></strong
+                          >
+                          (much cleaner)
+                        </h2>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1025"
+                          data-end="1357"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>function slowAsyncFunction() {
+  return new Promise((resolve) =&gt; {
+    setTimeout(() =&gt; {
+      resolve('Done!');
+    }, 3000);
+  });
+}
+
+async function run() {
+  console.log('Start');
+  const result = await slowAsyncFunction();  // waits here without blocking
+  console.log(result);
+  console.log('End');
+}
+
+run();
+</span></code></div></div></pre>
+                        <h3 data-start="1359" data-end="1370" class="">
+                          Output:
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1371"
+                          data-end="1411"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]"></div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>Start
+(wait 3 seconds)
+Done!
+End
+</span></code></div></div></pre>
+                        <blockquote data-start="1412" data-end="1474">
+                          <p data-start="1414" data-end="1474" class="">
+                            ✅ Code looks
+                            <strong data-start="1427" data-end="1442"
+                              >synchronous</strong
+                            >, but actually
+                            <strong data-start="1457" data-end="1473"
+                              >non-blocking</strong
+                            >.
+                          </p>
+                        </blockquote>
+                        <hr data-start="1476" data-end="1479" class="" />
+                        <h2 data-start="1481" data-end="1519" class="">
+                          4.
+                          <strong data-start="1487" data-end="1519"
+                            >Real-world API Fetch Example</strong
+                          >
+                        </h2>
+                        <h3 data-start="1521" data-end="1566" class="">
+                          Without
+                          <code data-start="1533" data-end="1546"
+                            >async/await</code
+                          >
+                          (Promise chaining):
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1568"
+                          data-end="1762"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data))
+  .catch(error =&gt; console.error('Error:', error));
+</span></code></div></div></pre>
+                        <hr data-start="1764" data-end="1767" class="" />
+                        <h3 data-start="1769" data-end="1807" class="">
+                          With
+                          <code data-start="1778" data-end="1791"
+                            >async/await</code
+                          >
+                          (much cleaner):
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1809"
+                          data-end="2084"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>async function fetchPost() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+fetchPost();
+</span></code></div></div></pre>
+                        <hr data-start="2086" data-end="2089" class="" />
+                        <h3 data-start="2091" data-end="2115" class="">
+                          💬 Quick comparison:
+                        </h3>
+                        <ul data-start="2116" data-end="2213">
+                          <li data-start="2116" data-end="2147" class="">
+                            <p data-start="2118" data-end="2147" class="">
+                              <strong data-start="2118" data-end="2130"
+                                >Promises</strong
+                              >
+                              (<code data-start="2132" data-end="2139"
+                                >.then</code
+                              >) = good
+                            </p>
+                          </li>
+                          <li data-start="2148" data-end="2213" class="">
+                            <p data-start="2150" data-end="2213" class="">
+                              <strong data-start="2150" data-end="2165"
+                                >async/await</strong
+                              >
+                              =
+                              <strong data-start="2168" data-end="2213"
+                                >better readability, easier error
+                                handling</strong
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="2215" data-end="2218" class="" />
+                        <p data-start="2220" data-end="2371" class="">
+                          Would you also like me to show you a
+                          <strong data-start="2257" data-end="2284"
+                            >bad async/await mistake</strong
+                          >
+                          that many beginners make (and how to fix it)? 🚀 It’s
+                          very common and helpful to know!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="b208e515-1906-481c-8778-d77ed36c7fe7"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          But await does freeze the code doesn't it?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="true"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[70rem]:[--thread-content-margin:--spacing(12)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="6ce63b5f-7cb3-4668-b5c8-abe0d01f8fe0"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="54" class="">
+                          <strong data-start="0" data-end="27"
+                            >Very smart observation!</strong
+                          >
+                          🧠 Let's get very precise:
+                        </p>
+                        <hr data-start="56" data-end="59" class="" />
+                        <p data-start="61" data-end="192" class="">
+                          ✅
+                          <strong data-start="63" data-end="127"
+                            >Yes —
+                            <code data-start="71" data-end="78">await</code>
+                            <em data-start="79" data-end="87">pauses</em> the
+                            execution of the current function</strong
+                          >,<br data-start="128" data-end="131" />
+                          ❌
+                          <strong data-start="133" data-end="192"
+                            >but it does
+                            <em data-start="147" data-end="159">not freeze</em>
+                            the entire JavaScript program.</strong
+                          >
+                        </p>
+                        <hr data-start="194" data-end="197" class="" />
+                        <h3 data-start="199" data-end="231" class="">
+                          Here's exactly what happens:
+                        </h3>
+                        <ul data-start="233" data-end="445">
+                          <li data-start="233" data-end="314" class="">
+                            <p data-start="235" data-end="314" class="">
+                              When JavaScript hits an
+                              <code data-start="259" data-end="266">await</code
+                              >, it
+                              <strong data-start="271" data-end="313"
+                                >pauses only inside that async function</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="315" data-end="445" class="">
+                            <p data-start="317" data-end="445" class="">
+                              Meanwhile,
+                              <strong data-start="328" data-end="378"
+                                >other code outside that function keeps
+                                running</strong
+                              >
+                              — the JavaScript event loop stays alive and
+                              processes other tasks.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="447" data-end="450" class="" />
+                        <h3 data-start="452" data-end="474" class="">
+                          📚 Simple Example:
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="476"
+                          data-end="708"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>async function waitAndPrint() {
+  console.log('Start');
+  await new Promise(resolve =&gt; setTimeout(resolve, 3000)); // waits 3 seconds
+  console.log('End');
+}
+
+waitAndPrint();
+console.log('This prints immediately');
+</span></code></div></div></pre>
+                        <h3 data-start="710" data-end="721" class="">
+                          Output:
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="722"
+                          data-end="780"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]"></div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>Start
+This prints immediately
+(wait 3 seconds)
+End
+</span></code></div></div></pre>
+                        <ul data-start="782" data-end="946">
+                          <li data-start="782" data-end="800" class="">
+                            <p data-start="784" data-end="800" class="">
+                              <code data-start="784" data-end="791">Start</code>
+                              prints ✅
+                            </p>
+                          </li>
+                          <li data-start="801" data-end="850" class="">
+                            <p data-start="803" data-end="850" class="">
+                              <code data-start="803" data-end="810">await</code>
+                              pauses only
+                              <strong data-start="823" data-end="833"
+                                >inside</strong
+                              >
+                              <code data-start="834" data-end="850"
+                                >waitAndPrint()</code
+                              >
+                            </p>
+                          </li>
+                          <li data-start="851" data-end="912" class="">
+                            <p data-start="853" data-end="912" class="">
+                              <code data-start="853" data-end="893"
+                                >console.log('This prints immediately')</code
+                              >
+                              runs immediately ✅
+                            </p>
+                          </li>
+                          <li data-start="913" data-end="946" class="">
+                            <p data-start="915" data-end="946" class="">
+                              After 3 seconds,
+                              <code data-start="932" data-end="937">End</code>
+                              prints ✅
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="948" data-end="951" class="" />
+                        <h3 data-start="953" data-end="974" class="">
+                          🎯
+                          <strong data-start="960" data-end="974"
+                            >Key Point:</strong
+                          >
+                        </h3>
+                        <div
+                          class="group pointer-events-none relative flex justify-center *:pointer-events-auto"
+                        >
+                          <span
+                            class="pointer-events-none absolute start-full top-4 z-10 hidden h-full w-fit ps-2 md:block"
+                            data-state="closed"
+                            ><button
+                              class="hover:bg-token-main-surface-secondary text-token-text-secondary pointer-events-auto rounded-lg px-1 py-1 opacity-0 transition-opacity duration-200 group-focus-within:opacity-100 group-hover:opacity-100"
+                            ></button
+                          ></span>
+                          <div
+                            class="tableContainer horzScrollShadows relative"
+                          >
+                            <table
+                              class="min-w-full"
+                              data-start="976"
+                              data-end="1233"
+                            >
+                              <thead data-start="976" data-end="1017">
+                                <tr data-start="976" data-end="1017">
+                                  <th data-start="976" data-end="994">
+                                    <code data-start="978" data-end="985"
+                                      >await</code
+                                    >
+                                    does...
+                                  </th>
+                                  <th data-start="994" data-end="1017">
+                                    <code data-start="996" data-end="1003"
+                                      >await</code
+                                    >
+                                    does not...
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="1061" data-end="1233">
+                                <tr data-start="1061" data-end="1145">
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1061"
+                                    data-end="1106"
+                                  >
+                                    Pause
+                                    <strong data-start="1069" data-end="1084"
+                                      >only inside</strong
+                                    >
+                                    the
+                                    <code data-start="1089" data-end="1096"
+                                      >async</code
+                                    >
+                                    function
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1106"
+                                    data-end="1145"
+                                  >
+                                    Freeze the entire JavaScript thread
+                                  </td>
+                                </tr>
+                                <tr data-start="1146" data-end="1233">
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)] min-w-[calc(var(--thread-content-max-width)/3)]"
+                                    data-start="1146"
+                                    data-end="1194"
+                                  >
+                                    Let other microtasks, timers, events
+                                    continue
+                                  </td>
+                                  <td
+                                    class="max-w-[calc(var(--thread-content-max-width)*2/3)]"
+                                    data-start="1194"
+                                    data-end="1233"
+                                  >
+                                    Block the whole page or Node server
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <hr data-start="1235" data-end="1238" class="" />
+                        <h3 data-start="1240" data-end="1269" class="">
+                          ⚙️
+                          <strong data-start="1247" data-end="1269"
+                            >Behind the scenes:</strong
+                          >
+                        </h3>
+                        <p data-start="1270" data-end="1291" class="">
+                          When
+                          <code data-start="1275" data-end="1282">await</code>
+                          is used:
+                        </p>
+                        <ol data-start="1292" data-end="1534">
+                          <li data-start="1292" data-end="1331" class="">
+                            <p data-start="1295" data-end="1331" class="">
+                              JavaScript
+                              <em data-start="1306" data-end="1317"
+                                >remembers</em
+                              >
+                              where it was.
+                            </p>
+                          </li>
+                          <li data-start="1332" data-end="1421" class="">
+                            <p data-start="1335" data-end="1421" class="">
+                              It
+                              <em data-start="1338" data-end="1349"
+                                >schedules</em
+                              >
+                              the continuation (the rest of the function) after
+                              the Promise resolves.
+                            </p>
+                          </li>
+                          <li data-start="1422" data-end="1534" class="">
+                            <p data-start="1425" data-end="1534" class="">
+                              Meanwhile, it processes other tasks from the
+                              <strong data-start="1470" data-end="1484"
+                                >event loop</strong
+                              >
+                              (e.g., UI updates, timers, other function calls).
+                            </p>
+                          </li>
+                        </ol>
+                        <hr data-start="1536" data-end="1539" class="" />
+                        <h3 data-start="1541" data-end="1582" class="">
+                          🔥 So a simple way to think about it:
+                        </h3>
+                        <blockquote data-start="1583" data-end="1678">
+                          <p data-start="1585" data-end="1678" class="">
+                            <strong data-start="1585" data-end="1665"
+                              ><code data-start="1587" data-end="1594"
+                                >await</code
+                              >
+                              says: "Hold on here, I'll come back later.
+                              Everyone else, carry on!"</strong
+                            >
+                            🚶‍♂️🚶‍♀️🚶
+                          </p>
+                        </blockquote>
+                        <hr data-start="1680" data-end="1683" class="" />
+                        <p data-start="1685" data-end="1834" class="">
+                          If you want, I can even draw a
+                          <strong data-start="1716" data-end="1734"
+                            >small timeline</strong
+                          >
+                          showing how the event loop treats
+                          <code data-start="1769" data-end="1776">await</code> –
+                          it's super fun to see visually! 🎨 Would you like
+                          that?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
