@@ -1,0 +1,915 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Transactional File System</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="cbf9f9c1-d006-4f78-a8f2-50e8386cf6de"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How to design a transaction system? I've a cli that is
+                          supposed to create a bunch of files inside a given
+                          directory how to make it so that once it fails writing
+                          any file the previosuly written files will be rejected
+                          as well?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="418dad6c-bd96-4c56-aea6-244ea871ced0"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="206" class="">
+                          To implement a
+                          <strong data-start="15" data-end="44"
+                            >transactional file system</strong
+                          >
+                          in your CLI where all writes succeed
+                          <em data-start="82" data-end="100"
+                            >or none are kept</em
+                          >, you need to simulate atomic behavior—like in
+                          databases—since the file system itself isn't
+                          transactional.
+                        </p>
+                        <p data-start="208" data-end="245" class="">
+                          Here's a simple, robust
+                          <strong data-start="232" data-end="244"
+                            >strategy</strong
+                          >:
+                        </p>
+                        <hr data-start="247" data-end="250" class="" />
+                        <h3 data-start="252" data-end="307" class="">
+                          ✅ Approach:
+                          <strong data-start="268" data-end="307"
+                            >Temporary Directory + Atomic Rename</strong
+                          >
+                        </h3>
+                        <ol data-start="309" data-end="643">
+                          <li data-start="309" data-end="373" class="">
+                            <p data-start="312" data-end="373" class="">
+                              <strong data-start="312" data-end="344"
+                                >Create a temporary directory</strong
+                              >
+                              inside the target directory.
+                            </p>
+                          </li>
+                          <li data-start="374" data-end="421" class="">
+                            <p data-start="377" data-end="421" class="">
+                              <strong data-start="377" data-end="396"
+                                >Write all files</strong
+                              >
+                              into the temp directory.
+                            </p>
+                          </li>
+                          <li data-start="422" data-end="512" class="">
+                            <p data-start="425" data-end="512" class="">
+                              If
+                              <em data-start="428" data-end="433">all</em>
+                              writes succeed,
+                              <strong data-start="450" data-end="476"
+                                >atomically move/rename</strong
+                              >
+                              files from temp to the destination.
+                            </p>
+                          </li>
+                          <li data-start="513" data-end="568" class="">
+                            <p data-start="516" data-end="568" class="">
+                              If
+                              <em data-start="519" data-end="524">any</em> write
+                              fails,
+                              <strong data-start="538" data-end="548"
+                                >delete</strong
+                              >
+                              the temp directory.
+                            </p>
+                          </li>
+                          <li data-start="569" data-end="643" class="">
+                            <p data-start="572" data-end="643" class="">
+                              This way, the destination remains unchanged unless
+                              everything succeeds.
+                            </p>
+                          </li>
+                        </ol>
+                        <hr data-start="645" data-end="648" class="" />
+                        <h3 data-start="650" data-end="696" class="">
+                          🛠️ Implementation Sketch (Python Example)
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="698"
+                          data-end="1691"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">python</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>import os
+import shutil
+import tempfile
+
+def write_transactional_files(destination_dir, files_to_write):
+    """
+    files_to_write: List of (filename, content)
+    """
+    try:
+        temp_dir = tempfile.mkdtemp(dir=destination_dir)
+
+        # Step 1: Write all files to temp dir
+        for filename, content in files_to_write:
+            temp_path = os.path.join(temp_dir, filename)
+            with open(temp_path, 'w') as f:
+                f.write(content)
+
+        # Step 2: Move each file from temp to destination
+        for filename, _ in files_to_write:
+            src = os.path.join(temp_dir, filename)
+            dst = os.path.join(destination_dir, filename)
+            shutil.move(src, dst)
+
+    except Exception as e:
+        print(f"Error occurred: {e}")
+        print("Rolling back...")
+        shutil.rmtree(temp_dir, ignore_errors=True)
+        return False
+
+    # Clean up temp dir if empty
+    shutil.rmtree(temp_dir, ignore_errors=True)
+    return True
+</span></code></div></div></pre>
+                        <hr data-start="1693" data-end="1696" class="" />
+                        <h3 data-start="1698" data-end="1726" class="">
+                          🔒 Optional Enhancements
+                        </h3>
+                        <ul data-start="1728" data-end="1898">
+                          <li data-start="1728" data-end="1784" class="">
+                            <p data-start="1730" data-end="1784" class="">
+                              <strong data-start="1730" data-end="1748"
+                                >Use file locks</strong
+                              >
+                              if there's a chance of concurrency.
+                            </p>
+                          </li>
+                          <li data-start="1785" data-end="1847" class="">
+                            <p data-start="1787" data-end="1847" class="">
+                              <strong data-start="1787" data-end="1814"
+                                >Use checksum validation</strong
+                              >
+                              before replacing existing files.
+                            </p>
+                          </li>
+                          <li data-start="1848" data-end="1898" class="">
+                            <p data-start="1850" data-end="1898" class="">
+                              <strong data-start="1850" data-end="1874"
+                                >Log rollback details</strong
+                              >
+                              for debugging or audit.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1900" data-end="1903" class="" />
+                        <p data-start="1905" data-end="1983" class="">
+                          Would you like a version of this in another language
+                          (like Rust, Go, Node.js)?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="13406f59-3517-43e1-9c2d-eef3f9b49d6e"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          implement the node js code
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="4a8d95b8-992c-40c7-b97b-65e68b2858dc"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="151" class="">
+                          Here's a clean Node.js implementation of a
+                          <strong data-start="43" data-end="80"
+                            >transactional file writing system</strong
+                          >
+                          using a temporary directory and
+                          <code data-start="113" data-end="126"
+                            >fs.promises</code
+                          >
+                          for async/await support:
+                        </p>
+                        <hr data-start="153" data-end="156" class="" />
+                        <h3 data-start="158" data-end="193" class="">
+                          📦
+                          <code data-start="165" data-end="193"
+                            >writeTransactionalFiles.js</code
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="195"
+                          data-end="1396"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>const fs = require('fs').promises;
+const path = require('path');
+const os = require('os');
+
+async function writeTransactionalFiles(destinationDir, filesToWrite) {
+  const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), 'txn-'));
+
+  try {
+    // Step 1: Write all files to the temp directory
+    for (const { filename, content } of filesToWrite) {
+      const tempFilePath = path.join(tempDir, filename);
+      await fs.mkdir(path.dirname(tempFilePath), { recursive: true });
+      await fs.writeFile(tempFilePath, content);
+    }
+
+    // Step 2: Move files from temp to destination directory
+    for (const { filename } of filesToWrite) {
+      const tempFilePath = path.join(tempDir, filename);
+      const finalPath = path.join(destinationDir, filename);
+      await fs.mkdir(path.dirname(finalPath), { recursive: true });
+      await fs.rename(tempFilePath, finalPath);
+    }
+
+    // Step 3: Remove temp directory
+    await fs.rmdir(tempDir, { recursive: true });
+    return true;
+
+  } catch (error) {
+    console.error('Transaction failed:', error);
+
+    // Rollback: Clean up the temp directory
+    await fs.rmdir(tempDir, { recursive: true }).catch(() =&gt; {});
+    return false;
+  }
+}
+</span></code></div></div></pre>
+                        <hr data-start="1398" data-end="1401" class="" />
+                        <h3 data-start="1403" data-end="1423" class="">
+                          🧪 Example Usage
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1425"
+                          data-end="1870"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>(async () =&gt; {
+  const success = await writeTransactionalFiles('./output', [
+    { filename: 'file1.txt', content: 'Hello world' },
+    { filename: 'file2.txt', content: 'Another file' },
+    // simulate error by uncommenting:
+    // { filename: null, content: 'Invalid file' },
+  ]);
+
+  if (success) {
+    console.log('Transaction committed successfully.');
+  } else {
+    console.log('Transaction failed and rolled back.');
+  }
+})();
+</span></code></div></div></pre>
+                        <hr data-start="1872" data-end="1875" class="" />
+                        <h3 data-start="1877" data-end="1889" class="">
+                          🔒 Notes
+                        </h3>
+                        <ul data-start="1891" data-end="2050">
+                          <li data-start="1891" data-end="1954" class="">
+                            <p data-start="1893" data-end="1954" class="">
+                              Uses
+                              <code data-start="1898" data-end="1911"
+                                >os.tmpdir()</code
+                              >
+                              for safe, cross-platform temp directories.
+                            </p>
+                          </li>
+                          <li data-start="1955" data-end="1999" class="">
+                            <p data-start="1957" data-end="1999" class="">
+                              Ensures
+                              <strong data-start="1965" data-end="1983"
+                                >all-or-nothing</strong
+                              >
+                              write behavior.
+                            </p>
+                          </li>
+                          <li data-start="2000" data-end="2050" class="">
+                            <p data-start="2002" data-end="2050" class="">
+                              Supports subfolders (e.g.,
+                              <code data-start="2029" data-end="2048"
+                                >'folder/file.txt'</code
+                              >).
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="2052" data-end="2170" class="">
+                          Would you like a version that also backs up and
+                          restores overwritten files (for partial rollback over
+                          existing files)?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="80317732-7ae7-44d4-8978-21234b238330"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How to read more about designing such systems
+                          specially technics used within databases
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="true"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="3f27a2c6-81e4-4d28-9aa1-0cdd6336387e"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="228" class="">
+                          Great question! Designing transactional
+                          systems—especially ones that mimic database behavior
+                          like
+                          <strong data-start="98" data-end="111"
+                            >atomicity</strong
+                          >,
+                          <strong data-start="113" data-end="128"
+                            >consistency</strong
+                          >,
+                          <strong data-start="130" data-end="143"
+                            >isolation</strong
+                          >, and
+                          <strong data-start="149" data-end="163"
+                            >durability</strong
+                          >
+                          (ACID)—is a core topic in systems design and database
+                          internals.
+                        </p>
+                        <p data-start="230" data-end="321" class="">
+                          Here’s a roadmap to
+                          <strong data-start="250" data-end="293"
+                            >learn about transactional system design</strong
+                          >
+                          with recommended resources:
+                        </p>
+                        <hr data-start="323" data-end="326" class="" />
+                        <h3 data-start="328" data-end="368" class="">
+                          🔹 1.
+                          <strong data-start="338" data-end="368"
+                            >Understand ACID Principles</strong
+                          >
+                        </h3>
+                        <p data-start="370" data-end="437" class="">
+                          Start by learning the four key properties of
+                          transactional systems:
+                        </p>
+                        <ul data-start="438" data-end="649">
+                          <li data-start="438" data-end="470" class="">
+                            <p data-start="440" data-end="470" class="">
+                              <strong data-start="440" data-end="453"
+                                >Atomicity</strong
+                              >
+                              – all or nothing
+                            </p>
+                          </li>
+                          <li data-start="471" data-end="519" class="">
+                            <p data-start="473" data-end="519" class="">
+                              <strong data-start="473" data-end="488"
+                                >Consistency</strong
+                              >
+                              – valid state transitions only
+                            </p>
+                          </li>
+                          <li data-start="520" data-end="577" class="">
+                            <p data-start="522" data-end="577" class="">
+                              <strong data-start="522" data-end="535"
+                                >Isolation</strong
+                              >
+                              – concurrent transactions don’t interfere
+                            </p>
+                          </li>
+                          <li data-start="578" data-end="649" class="">
+                            <p data-start="580" data-end="649" class="">
+                              <strong data-start="580" data-end="594"
+                                >Durability</strong
+                              >
+                              – once committed, the change persists even after
+                              crash
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="651" data-end="663" class="">
+                          📘 Resource:
+                        </p>
+                        <ul data-start="664" data-end="914">
+                          <li data-start="664" data-end="779" class="">
+                            <p data-start="666" data-end="779" class="">
+                              <a
+                                data-start="666"
+                                data-end="752"
+                                rel="noopener"
+                                target="_new"
+                                class=""
+                                ><em data-start="667" data-end="693"
+                                  >Foundations of Databases</em
+                                >
+                                by Abiteboul, Hull, Vianu</a
+                              >
+                              – formal but comprehensive
+                            </p>
+                          </li>
+                          <li data-start="780" data-end="914" class="">
+                            <p data-start="782" data-end="914" class="">
+                              <a
+                                data-start="782"
+                                data-end="886"
+                                rel="noopener"
+                                target="_new"
+                                class=""
+                                >Database System Concepts by Silberschatz,
+                                Korth, and Sudarshan</a
+                              >
+                              – practical and widely used
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="916" data-end="919" class="" />
+                        <h3 data-start="921" data-end="964" class="">
+                          🔹 2.
+                          <strong data-start="931" data-end="964"
+                            >Transaction Logs &amp; Journaling</strong
+                          >
+                        </h3>
+                        <p data-start="966" data-end="1006" class="">
+                          Learn how systems recover after failure:
+                        </p>
+                        <ul data-start="1007" data-end="1140">
+                          <li data-start="1007" data-end="1068" class="">
+                            <p data-start="1009" data-end="1068" class="">
+                              <strong data-start="1009" data-end="1038"
+                                >Write-ahead logging (WAL)</strong
+                              >
+                              – log changes before applying
+                            </p>
+                          </li>
+                          <li data-start="1069" data-end="1089" class="">
+                            <p data-start="1071" data-end="1089" class="">
+                              <strong data-start="1071" data-end="1089"
+                                >Undo/redo logs</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1090" data-end="1140" class="">
+                            <p data-start="1092" data-end="1140" class="">
+                              <strong data-start="1092" data-end="1106"
+                                >Journaling</strong
+                              >
+                              in file systems (like ext4, NTFS)
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1142" data-end="1155" class="">
+                          📘 Resources:
+                        </p>
+                        <ul data-start="1156" data-end="1425">
+                          <li data-start="1156" data-end="1251" class="">
+                            <p data-start="1158" data-end="1251" class="">
+                              PostgreSQL Internals:
+                              <a
+                                data-start="1180"
+                                data-end="1251"
+                                rel="noopener"
+                                target="_new"
+                                class=""
+                                >WAL explained</a
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1252" data-end="1425" class="">
+                            <p data-start="1254" data-end="1425" class="">
+                              <a
+                                data-start="1254"
+                                data-end="1298"
+                                rel="noopener"
+                                target="_new"
+                                class=""
+                                >LevelDB</a
+                              >
+                              and
+                              <a
+                                data-start="1303"
+                                data-end="1349"
+                                rel="noopener"
+                                target="_new"
+                                class=""
+                                >RocksDB</a
+                              >
+                              source code – learn how log-structured storage
+                              engines handle atomic writes
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1427" data-end="1430" class="" />
+                        <h3 data-start="1432" data-end="1484" class="">
+                          🔹 3.
+                          <strong data-start="1442" data-end="1484"
+                            >Two-Phase Commit &amp; Concurrency Control</strong
+                          >
+                        </h3>
+                        <p data-start="1486" data-end="1557" class="">
+                          Especially useful when coordinating across multiple
+                          systems or threads:
+                        </p>
+                        <ul data-start="1558" data-end="1673">
+                          <li data-start="1558" data-end="1586" class="">
+                            <p data-start="1560" data-end="1586" class="">
+                              <strong data-start="1560" data-end="1586"
+                                >Two-Phase Commit (2PC)</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1587" data-end="1633" class="">
+                            <p data-start="1589" data-end="1633" class="">
+                              <strong data-start="1589" data-end="1633"
+                                >MVCC (Multi-Version Concurrency
+                                Control)</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1634" data-end="1673" class="">
+                            <p data-start="1636" data-end="1673" class="">
+                              <strong data-start="1636" data-end="1673"
+                                >Pessimistic vs Optimistic Locking</strong
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1675" data-end="1688" class="">
+                          📘 Resources:
+                        </p>
+                        <ul data-start="1689" data-end="1927">
+                          <li data-start="1689" data-end="1804" class="">
+                            <p data-start="1691" data-end="1804" class="">
+                              Martin Kleppmann’s
+                              <em data-start="1710" data-end="1749"
+                                >Designing Data-Intensive Applications</em
+                              >
+                              – highly recommended! Practical, modern, and
+                              readable.
+                            </p>
+                          </li>
+                          <li data-start="1805" data-end="1927" class="">
+                            <p data-start="1807" data-end="1927" class="">
+                              <a
+                                data-start="1807"
+                                data-end="1883"
+                                rel="noopener"
+                                target="_new"
+                                class=""
+                                >Google Spanner Paper (PDF)</a
+                              >
+                              – real-world distributed transaction design
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1929" data-end="1932" class="" />
+                        <h3 data-start="1934" data-end="1979" class="">
+                          🔹 4.
+                          <strong data-start="1944" data-end="1979"
+                            >File-based Transaction Patterns</strong
+                          >
+                        </h3>
+                        <p data-start="1981" data-end="2007" class="">
+                          For systems like your CLI:
+                        </p>
+                        <ul data-start="2008" data-end="2112">
+                          <li data-start="2008" data-end="2040" class="">
+                            <p data-start="2010" data-end="2040" class="">
+                              <strong data-start="2010" data-end="2040"
+                                >Temp files + atomic rename</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="2041" data-end="2060" class="">
+                            <p data-start="2043" data-end="2060" class="">
+                              <strong data-start="2043" data-end="2060"
+                                >Shadow paging</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="2061" data-end="2112" class="">
+                            <p data-start="2063" data-end="2112" class="">
+                              <strong data-start="2063" data-end="2093"
+                                >Copy-on-write file systems</strong
+                              >
+                              (e.g., ZFS, Btrfs)
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="2114" data-end="2127" class="">
+                          📘 Resources:
+                        </p>
+                        <ul data-start="2128" data-end="2342">
+                          <li data-start="2128" data-end="2231" class="">
+                            <p data-start="2130" data-end="2231" class="">
+                              SQLite documentation:
+                              <a
+                                data-start="2152"
+                                data-end="2231"
+                                rel="noopener"
+                                target="_new"
+                                class=""
+                                >How SQLite Implements Atomic Commit</a
+                              >
+                            </p>
+                          </li>
+                          <li data-start="2232" data-end="2342" class="">
+                            <p data-start="2234" data-end="2342" class="">
+                              <a
+                                data-start="2234"
+                                data-end="2326"
+                                rel="noopener"
+                                target="_new"
+                                class=""
+                                >“Crash-Only Software” paper</a
+                              >
+                              by Candea &amp; Fox
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="2344" data-end="2347" class="" />
+                        <h3 data-start="2349" data-end="2380" class="">
+                          🔹 5.
+                          <strong data-start="2359" data-end="2380"
+                            >Hands-On Projects</strong
+                          >
+                        </h3>
+                        <p data-start="2382" data-end="2432" class="">
+                          Nothing beats learning by doing. Try implementing:
+                        </p>
+                        <ul data-start="2433" data-end="2569">
+                          <li data-start="2433" data-end="2485" class="">
+                            <p data-start="2435" data-end="2485" class="">
+                              A minimal key-value store with write-ahead logging
+                            </p>
+                          </li>
+                          <li data-start="2486" data-end="2524" class="">
+                            <p data-start="2488" data-end="2524" class="">
+                              A journaling system for file changes
+                            </p>
+                          </li>
+                          <li data-start="2525" data-end="2569" class="">
+                            <p data-start="2527" data-end="2569" class="">
+                              A transactional memory manager in your CLI
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="2571" data-end="2574" class="" />
+                        <h3 data-start="2576" data-end="2600" class="">
+                          ✅ TL;DR Starter Pack
+                        </h3>
+                        <p data-start="2602" data-end="2649" class="">
+                          If you're looking for a focused starting point:
+                        </p>
+                        <ol data-start="2651" data-end="2876">
+                          <li data-start="2651" data-end="2719" class="">
+                            <p data-start="2654" data-end="2719" class="">
+                              📘
+                              <strong data-start="2657" data-end="2698"
+                                >Designing Data-Intensive Applications</strong
+                              >
+                              – Martin Kleppmann
+                            </p>
+                          </li>
+                          <li data-start="2720" data-end="2761" class="">
+                            <p data-start="2723" data-end="2761" class="">
+                              💻
+                              <strong data-start="2726" data-end="2759"
+                                >LevelDB or SQLite source code</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="2762" data-end="2819" class="">
+                            <p data-start="2765" data-end="2819" class="">
+                              📄 Articles on WAL, MVCC, and file system
+                              journaling
+                            </p>
+                          </li>
+                          <li data-start="2820" data-end="2876" class="">
+                            <p data-start="2823" data-end="2876" class="">
+                              🔧 Implement a toy database with logging &amp;
+                              recovery
+                            </p>
+                          </li>
+                        </ol>
+                        <hr data-start="2878" data-end="2881" class="" />
+                        <p data-start="2883" data-end="2968" class="">
+                          Would you like a guided learning plan (like a 30-day
+                          track) based on these resources?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
