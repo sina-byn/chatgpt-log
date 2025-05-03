@@ -1,0 +1,1135 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Ad-hoc API Contracts in JS</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="3703fea9-8f84-49a8-bf52-ef5cacb963d4"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          What is an ad-hoc api contract in context of js and
+                          coding?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="e093a7e3-933b-4a1f-943d-d2065f4f5e71"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="258" class="">
+                          In the context of JavaScript and coding, an
+                          <strong data-start="44" data-end="67"
+                            >ad-hoc API contract</strong
+                          >
+                          refers to an
+                          <strong data-start="81" data-end="137"
+                            >informal, undocumented, or loosely defined
+                            agreement</strong
+                          >
+                          between parts of a codebase—typically between
+                          components, modules, or services—on how they
+                          communicate or exchange data.
+                        </p>
+                        <h3 data-start="260" data-end="281" class="">
+                          🔍 What it means:
+                        </h3>
+                        <p data-start="282" data-end="547" class="">
+                          Instead of having a clearly defined and enforced
+                          interface (like a TypeScript interface, OpenAPI spec,
+                          or GraphQL schema), the structure of data or the
+                          behavior of a component is
+                          <strong data-start="461" data-end="474"
+                            >"assumed"</strong
+                          >
+                          based on usage or convention. There's no formal
+                          guarantee or validation.
+                        </p>
+                        <hr data-start="549" data-end="552" class="" />
+                        <h3 data-start="554" data-end="583" class="">
+                          🧠 Example in JavaScript:
+                        </h3>
+                        <p data-start="585" data-end="644" class="">
+                          Imagine you have a component that expects a prop like
+                          this:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="646"
+                          data-end="716"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>function UserCard(props) {
+  console.log(props.user.name);
+}
+</span></code></div></div></pre>
+                        <p data-start="718" data-end="776" class="">
+                          And somewhere else in the code, you're using it like
+                          this:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="778"
+                          data-end="834"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>&lt;UserCard user={{ name: "Alice", age: 30 }} /&gt;
+</span></code></div></div></pre>
+                        <p data-start="836" data-end="1106" class="">
+                          This
+                          <code data-start="841" data-end="847">user</code>
+                          object is passed around without a clear contract. If
+                          someone later changes the
+                          <code data-start="927" data-end="933">user</code>
+                          shape to
+                          <code data-start="943" data-end="968"
+                            >{ firstName, lastName }</code
+                          >, the code breaks—but there's
+                          <strong data-start="998" data-end="1020"
+                            >no system in place</strong
+                          >
+                          to catch that mismatch. This is
+                          <strong data-start="1053" data-end="1075"
+                            >an ad-hoc contract</strong
+                          >—you’re relying on assumptions.
+                        </p>
+                        <hr data-start="1108" data-end="1111" class="" />
+                        <h3 data-start="1113" data-end="1155" class="">
+                          🔴 Problems with Ad-Hoc API Contracts:
+                        </h3>
+                        <ul data-start="1156" data-end="1331">
+                          <li data-start="1156" data-end="1186" class="">
+                            <p data-start="1158" data-end="1186" class="">
+                              ❌ Prone to breaking changes.
+                            </p>
+                          </li>
+                          <li data-start="1187" data-end="1232" class="">
+                            <p data-start="1189" data-end="1232" class="">
+                              🧪 Hard to test or validate inputs/outputs.
+                            </p>
+                          </li>
+                          <li data-start="1233" data-end="1294" class="">
+                            <p data-start="1235" data-end="1294" class="">
+                              👥 Team members may misunderstand expected data
+                              structures.
+                            </p>
+                          </li>
+                          <li data-start="1295" data-end="1331" class="">
+                            <p data-start="1297" data-end="1331" class="">
+                              📦 Poor for scalability and reuse.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1333" data-end="1336" class="" />
+                        <h3 data-start="1338" data-end="1360" class="">
+                          ✅ How to avoid it:
+                        </h3>
+                        <ul data-start="1361" data-end="1609">
+                          <li data-start="1361" data-end="1402" class="">
+                            <p data-start="1363" data-end="1402" class="">
+                              Use
+                              <strong data-start="1367" data-end="1392"
+                                >TypeScript interfaces</strong
+                              >
+                              or types.
+                            </p>
+                          </li>
+                          <li data-start="1403" data-end="1484" class="">
+                            <p data-start="1405" data-end="1484" class="">
+                              Document your APIs (e.g., with
+                              <strong data-start="1436" data-end="1445"
+                                >JSDoc</strong
+                              >,
+                              <strong data-start="1447" data-end="1458"
+                                >OpenAPI</strong
+                              >, or
+                              <strong data-start="1463" data-end="1482"
+                                >GraphQL schemas</strong
+                              >).
+                            </p>
+                          </li>
+                          <li data-start="1485" data-end="1542" class="">
+                            <p data-start="1487" data-end="1542" class="">
+                              Apply
+                              <strong data-start="1493" data-end="1506"
+                                >PropTypes</strong
+                              >
+                              in React (if not using TypeScript).
+                            </p>
+                          </li>
+                          <li data-start="1543" data-end="1609" class="">
+                            <p data-start="1545" data-end="1609" class="">
+                              Write unit/integration tests to validate
+                              input/output contracts.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1611" data-end="1614" class="" />
+                        <p data-start="1616" data-end="1732" class="">
+                          Would you like an example showing the difference
+                          between an ad-hoc contract and a formally typed one in
+                          JS or React?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="68e69bb1-d951-49a5-8dda-a43b3b1521e3"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          explain this as well React will handle sending that
+                          component’s code to the browser and hydrating it​. The
+                          connection is expressed through the module system (via
+                          import/export), not through ad-hoc API contracts.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="a96c9273-ee65-4cf1-90d6-a6693b4a2f7b"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="45" class="">
+                          Sure! Let's break this sentence down clearly:
+                        </p>
+                        <blockquote data-start="47" data-end="245">
+                          <p data-start="49" data-end="245" class="">
+                            <strong data-start="49" data-end="245"
+                              >"React will handle sending that component’s code
+                              to the browser and hydrating it. The connection is
+                              expressed through the module system (via
+                              import/export), not through ad-hoc API
+                              contracts."</strong
+                            >
+                          </p>
+                        </blockquote>
+                        <hr data-start="247" data-end="250" class="" />
+                        <h3 data-start="252" data-end="287" class="">
+                          ✅ What it means in plain terms:
+                        </h3>
+                        <p data-start="289" data-end="399" class="">
+                          When you're building a React app (especially with
+                          frameworks like
+                          <strong data-start="355" data-end="366"
+                            >Next.js</strong
+                          >
+                          or
+                          <strong data-start="370" data-end="397"
+                            >React Server Components</strong
+                          >):
+                        </p>
+                        <ol data-start="401" data-end="849">
+                          <li data-start="401" data-end="513" class="">
+                            <p data-start="404" data-end="513" class="">
+                              <strong data-start="404" data-end="444"
+                                >React will "send" the component code</strong
+                              >
+                              (e.g., your
+                              <code data-start="457" data-end="468"
+                                >Button.js</code
+                              >
+                              or
+                              <code data-start="472" data-end="486"
+                                >UserCard.jsx</code
+                              >) to the browser as needed.
+                            </p>
+                          </li>
+                          <li data-start="514" data-end="681" class="">
+                            <p data-start="517" data-end="681" class="">
+                              <strong data-start="517" data-end="530"
+                                >Hydration</strong
+                              >
+                              means React takes the HTML that was already
+                              rendered (possibly on the server), attaches event
+                              listeners, and "activates" the component in the
+                              browser.
+                            </p>
+                          </li>
+                          <li data-start="682" data-end="849" class="">
+                            <p data-start="685" data-end="849" class="">
+                              The
+                              <strong data-start="689" data-end="724"
+                                >"connection" between components</strong
+                              >—how one component uses another—is
+                              <strong data-start="759" data-end="804"
+                                >not based on loosely defined, ad-hoc
+                                APIs</strong
+                              >, but on clear
+                              <strong data-start="819" data-end="848"
+                                >JavaScript module imports</strong
+                              >.
+                            </p>
+                          </li>
+                        </ol>
+                        <hr data-start="851" data-end="854" class="" />
+                        <h3 data-start="856" data-end="871" class="">
+                          🧩 Example:
+                        </h3>
+                        <p data-start="873" data-end="893" class="">
+                          You might have this:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="895"
+                          data-end="1099"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>// Button.js
+export default function Button() {
+  return &lt;button&gt;Click me&lt;/button&gt;;
+}
+
+// App.js
+import Button from './Button';
+
+export default function App() {
+  return &lt;div&gt;&lt;Button /&gt;&lt;/div&gt;;
+}
+</span></code></div></div></pre>
+                        <p data-start="1101" data-end="1197" class="">
+                          This is a
+                          <strong data-start="1111" data-end="1156"
+                            >formal connection using the module system</strong
+                          >
+                          (<code data-start="1158" data-end="1189"
+                            >import Button from './Button'</code
+                          >). It's:
+                        </p>
+                        <ul data-start="1198" data-end="1297">
+                          <li data-start="1198" data-end="1214" class="">
+                            <p data-start="1200" data-end="1214" class="">
+                              <strong data-start="1200" data-end="1214"
+                                >Structured</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1215" data-end="1232" class="">
+                            <p data-start="1217" data-end="1232" class="">
+                              <strong data-start="1217" data-end="1232"
+                                >Predictable</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1233" data-end="1297" class="">
+                            <p data-start="1235" data-end="1297" class="">
+                              <strong data-start="1235" data-end="1257"
+                                >Trackable by tools</strong
+                              >
+                              (like bundlers, linters, type checkers)
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1299" data-end="1302" class="" />
+                        <h3 data-start="1304" data-end="1327" class="">
+                          🔄 What it’s
+                          <em data-start="1321" data-end="1326">not</em>:
+                        </h3>
+                        <p data-start="1329" data-end="1352" class="">
+                          It’s
+                          <strong data-start="1334" data-end="1341">not</strong>
+                          like this:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1354"
+                          data-end="1511"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>// app calls some external unknown function at runtime:
+const componentName = "Button";
+const component = window.getComponentByName(componentName);
+</span></code></div></div></pre>
+                        <p data-start="1513" data-end="1667" class="">
+                          This is an
+                          <strong data-start="1524" data-end="1549"
+                            >ad-hoc API connection</strong
+                          >: it's based on dynamic behavior, runtime lookups,
+                          and implicit contracts. It's more error-prone and less
+                          transparent.
+                        </p>
+                        <hr data-start="1669" data-end="1672" class="" />
+                        <h3 data-start="1674" data-end="1689" class="">
+                          💡 Summary:
+                        </h3>
+                        <ul data-start="1691" data-end="2003">
+                          <li data-start="1691" data-end="1774" class="">
+                            <p data-start="1693" data-end="1774" class="">
+                              <strong data-start="1693" data-end="1738"
+                                >React modules connect via
+                                <code data-start="1721" data-end="1736"
+                                  >import/export</code
+                                ></strong
+                              >, which are explicit and structured.
+                            </p>
+                          </li>
+                          <li data-start="1775" data-end="1894" class="">
+                            <p data-start="1777" data-end="1894" class="">
+                              This avoids the chaos of
+                              <strong data-start="1802" data-end="1826"
+                                >ad-hoc API contracts</strong
+                              >, which would otherwise make the app fragile and
+                              harder to maintain.
+                            </p>
+                          </li>
+                          <li data-start="1895" data-end="2003" class="">
+                            <p data-start="1897" data-end="2003" class="">
+                              This structure also enables features like
+                              <strong data-start="1939" data-end="1955"
+                                >tree shaking</strong
+                              >,
+                              <strong data-start="1957" data-end="1975"
+                                >code splitting</strong
+                              >, and
+                              <strong data-start="1981" data-end="2002"
+                                >server components</strong
+                              >.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="2005" data-end="2103" class="">
+                          Would you like to see how this relates specifically to
+                          React Server Components or hydration logic?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="94a8c45f-193d-4cbe-8e66-63bb0595bb40"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          Give me an example for non-ad-hoc and ad-hoc in js
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="febd1a8a-1415-4566-b319-981d03eef31f"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="119" class="">
+                          Absolutely — here's a clear side-by-side example of
+                          <strong data-start="52" data-end="62">ad-hoc</strong>
+                          vs.
+                          <strong data-start="67" data-end="90"
+                            >non-ad-hoc (formal)</strong
+                          >
+                          API contracts in JavaScript:
+                        </p>
+                        <hr data-start="121" data-end="124" class="" />
+                        <h3 data-start="126" data-end="188" class="">
+                          🔴
+                          <strong data-start="133" data-end="188"
+                            >Ad-hoc API Contract (loose, implicit,
+                            error-prone):</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="190"
+                          data-end="411"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>// utils.js
+export function greet(user) {
+  return `Hello, ${user.name}`;
+}
+
+// some other file
+const user = { firstName: "Alice", age: 25 }; // oops! no `.name`
+console.log(greet(user)); // → "Hello, undefined"
+</span></code></div></div></pre>
+                        <blockquote data-start="413" data-end="574">
+                          <p data-start="415" data-end="574" class="">
+                            💥 Here,
+                            <code data-start="424" data-end="433">greet()</code>
+                            assumes
+                            <code data-start="442" data-end="448">user</code>
+                            has a
+                            <code data-start="455" data-end="462">.name</code>
+                            property, but there's no enforcement. If you pass
+                            the wrong shape, it breaks silently or behaves
+                            unpredictably.
+                          </p>
+                        </blockquote>
+                        <hr data-start="576" data-end="579" class="" />
+                        <h3 data-start="581" data-end="647" class="">
+                          ✅
+                          <strong data-start="587" data-end="647"
+                            >Non-ad-hoc API Contract (explicit, enforced with
+                            types):</strong
+                          >
+                        </h3>
+                        <h4 data-start="649" data-end="695" class="">
+                          Option 1: Using
+                          <strong data-start="670" data-end="679">JSDoc</strong>
+                          (with plain JS)
+                        </h4>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="696"
+                          data-end="873"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>// utils.js
+/**
+ * @typedef {Object} User
+ * @property {string} name
+ */
+
+/**
+ * @param {User} user
+ */
+export function greet(user) {
+  return `Hello, ${user.name}`;
+}
+</span></code></div></div></pre>
+                        <h4 data-start="875" data-end="886" class="">Usage:</h4>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="887"
+                          data-end="1089"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>const user = { name: "Alice", age: 25 };
+console.log(greet(user)); // ✅ Works
+
+const badUser = { firstName: "Bob" };
+// greet(badUser); ❌ Type checker (like VSCode or TypeScript) will warn you
+</span></code></div></div></pre>
+                        <hr data-start="1091" data-end="1094" class="" />
+                        <h4 data-start="1096" data-end="1154" class="">
+                          Option 2: Using
+                          <strong data-start="1117" data-end="1131"
+                            >TypeScript</strong
+                          >
+                          (stronger enforcement)
+                        </h4>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1156"
+                          data-end="1282"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>// utils.ts
+type User = {
+  name: string;
+};
+
+function greet(user: User): string {
+  return `Hello, ${user.name}`;
+}
+</span></code></div></div></pre>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1284"
+                          data-end="1445"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>const user = { name: "Alice" };
+greet(user); // ✅
+
+const invalidUser = { firstName: "Bob" };
+// greet(invalidUser); ❌ Error: Property 'name' is missing
+</span></code></div></div></pre>
+                        <hr data-start="1447" data-end="1450" class="" />
+                        <h3 data-start="1452" data-end="1465" class="">
+                          🔍 TL;DR:
+                        </h3>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="1467"
+                              data-end="2037"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="1467" data-end="1562">
+                                <tr data-start="1467" data-end="1562">
+                                  <th
+                                    data-start="1467"
+                                    data-end="1497"
+                                    data-col-size="sm"
+                                  >
+                                    Feature
+                                  </th>
+                                  <th
+                                    data-start="1497"
+                                    data-end="1529"
+                                    data-col-size="sm"
+                                  >
+                                    Ad-hoc Contract
+                                  </th>
+                                  <th
+                                    data-start="1529"
+                                    data-end="1562"
+                                    data-col-size="sm"
+                                  >
+                                    Non-Ad-hoc Contract
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="1658" data-end="2037">
+                                <tr data-start="1658" data-end="1752">
+                                  <td
+                                    data-start="1658"
+                                    data-end="1687"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="1660" data-end="1673"
+                                      >Structure</strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1687"
+                                    data-end="1719"
+                                    data-col-size="sm"
+                                  >
+                                    Loose, undefined
+                                  </td>
+                                  <td
+                                    data-start="1719"
+                                    data-end="1752"
+                                    data-col-size="sm"
+                                  >
+                                    Clearly defined
+                                  </td>
+                                </tr>
+                                <tr data-start="1753" data-end="1847">
+                                  <td
+                                    data-start="1753"
+                                    data-end="1782"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="1755" data-end="1770"
+                                      >Error-prone</strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1782"
+                                    data-end="1814"
+                                    data-col-size="sm"
+                                  >
+                                    Yes
+                                  </td>
+                                  <td
+                                    data-start="1814"
+                                    data-end="1847"
+                                    data-col-size="sm"
+                                  >
+                                    Rare
+                                  </td>
+                                </tr>
+                                <tr data-start="1848" data-end="1942">
+                                  <td
+                                    data-start="1848"
+                                    data-end="1877"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="1850" data-end="1869"
+                                      >Tooling support</strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1877"
+                                    data-end="1909"
+                                    data-col-size="sm"
+                                  >
+                                    Weak
+                                  </td>
+                                  <td
+                                    data-start="1909"
+                                    data-end="1942"
+                                    data-col-size="sm"
+                                  >
+                                    Strong (via JSDoc or TS)
+                                  </td>
+                                </tr>
+                                <tr data-start="1943" data-end="2037">
+                                  <td
+                                    data-start="1943"
+                                    data-end="1972"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="1945" data-end="1957"
+                                      >Examples</strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1972"
+                                    data-end="2004"
+                                    data-col-size="sm"
+                                  >
+                                    Plain JS without checks
+                                  </td>
+                                  <td
+                                    data-start="2004"
+                                    data-end="2037"
+                                    data-col-size="sm"
+                                  >
+                                    JS + JSDoc or TypeScript
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr data-start="2039" data-end="2042" class="" />
+                        <p data-start="2044" data-end="2133" class="">
+                          Would you like me to show a React-specific version too
+                          (like ad-hoc vs non-ad-hoc props)?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="5f27ed78-9e1d-49dc-bacb-9eea5c8767b5"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          No give me examples around this sentence "Ad-hoc API
+                          contracts" refer to custom, manual, or non-standard
+                          ways of connecting different parts of an app — often
+                          built on top of your own logic or specific
+                          conventions, rather than using built-in systems like
+                          modules.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="true"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="edca9bf2-ef7d-4b21-98e8-1a9caf830bd0"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="67" class="">
+                          Great — let’s build examples
+                          <strong data-start="29" data-end="53"
+                            >around that sentence</strong
+                          >
+                          specifically.
+                        </p>
+                        <hr data-start="69" data-end="72" class="" />
+                        <h3 data-start="74" data-end="141" class="">
+                          🔴
+                          <strong data-start="81" data-end="141"
+                            >Ad-hoc API Contract Example (custom, manual
+                            connection):</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="143"
+                          data-end="515"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>// registry.js – pretending this is some shared “registry”
+const componentRegistry = {
+  'UserCard': (user) =&gt; `&lt;div&gt;${user.name}&lt;/div&gt;`,
+};
+
+// elsewhere in the app
+const componentName = 'UserCard';
+const user = { name: 'Alice' };
+
+// Ad-hoc way of connecting
+const rendered = componentRegistry[componentName](user);
+console.log(rendered); // → &lt;div&gt;Alice&lt;/div&gt;
+</span></code></div></div></pre>
+                        <blockquote data-start="517" data-end="712">
+                          <p data-start="519" data-end="712" class="">
+                            ⚠️ This is an
+                            <em data-start="533" data-end="554"
+                              >ad-hoc API contract</em
+                            >. You're manually wiring things together with
+                            string keys and a shared registry. There's no type
+                            safety, no auto-import, and no clear system-defined
+                            contract.
+                          </p>
+                        </blockquote>
+                        <hr data-start="714" data-end="717" class="" />
+                        <h3 data-start="719" data-end="775" class="">
+                          ✅
+                          <strong data-start="725" data-end="775"
+                            >Non-ad-hoc API Contract Example (via
+                            modules):</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="777"
+                          data-end="1072"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>// components/UserCard.js
+export function UserCard(user) {
+  return `&lt;div&gt;${user.name}&lt;/div&gt;`;
+}
+
+// elsewhere in the app
+import { UserCard } from './components/UserCard.js';
+
+const user = { name: 'Alice' };
+const rendered = UserCard(user);
+console.log(rendered); // → &lt;div&gt;Alice&lt;/div&gt;
+</span></code></div></div></pre>
+                        <blockquote data-start="1074" data-end="1149">
+                          <p data-start="1076" data-end="1149" class="">
+                            ✅ This uses the
+                            <strong data-start="1092" data-end="1129"
+                              >standard JavaScript module system</strong
+                            >. The connection is:
+                          </p>
+                        </blockquote>
+                        <ul data-start="1150" data-end="1259">
+                          <li data-start="1150" data-end="1175" class="">
+                            <p data-start="1152" data-end="1175" class="">
+                              Explicit (via
+                              <code data-start="1166" data-end="1174"
+                                >import</code
+                              >)
+                            </p>
+                          </li>
+                          <li data-start="1176" data-end="1187" class="">
+                            <p data-start="1178" data-end="1187" class="">
+                              Traceable
+                            </p>
+                          </li>
+                          <li data-start="1188" data-end="1219" class="">
+                            <p data-start="1190" data-end="1219" class="">
+                              Enforced by bundlers and IDEs
+                            </p>
+                          </li>
+                          <li data-start="1220" data-end="1259" class="">
+                            <p data-start="1222" data-end="1259" class="">
+                              Compatible with static analysis tools
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1261" data-end="1264" class="" />
+                        <h3 data-start="1266" data-end="1297" class="">
+                          🔁 Why Ad-hoc Can Be Risky:
+                        </h3>
+                        <ul data-start="1298" data-end="1503">
+                          <li data-start="1298" data-end="1368" class="">
+                            <p data-start="1300" data-end="1368" class="">
+                              You rely on runtime decisions like string keys or
+                              global registries.
+                            </p>
+                          </li>
+                          <li data-start="1369" data-end="1467" class="">
+                            <p data-start="1371" data-end="1467" class="">
+                              If
+                              <code data-start="1374" data-end="1405"
+                                >componentRegistry['UserCard']</code
+                              >
+                              doesn’t exist or changes shape, you won't know
+                              until runtime.
+                            </p>
+                          </li>
+                          <li data-start="1468" data-end="1503" class="">
+                            <p data-start="1470" data-end="1503" class="">
+                              It's harder to refactor or scale.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1505" data-end="1508" class="" />
+                        <h3 data-start="1510" data-end="1533" class="">
+                          Real-World Analogy:
+                        </h3>
+                        <ul data-start="1534" data-end="1771">
+                          <li data-start="1534" data-end="1658" class="">
+                            <p data-start="1536" data-end="1658" class="">
+                              <strong data-start="1536" data-end="1547"
+                                >Ad-hoc:</strong
+                              >
+                              Like sending someone a sticky note with “do the
+                              thing with X” — unclear, manual, and you hope they
+                              understand.
+                            </p>
+                          </li>
+                          <li data-start="1659" data-end="1771" class="">
+                            <p data-start="1661" data-end="1771" class="">
+                              <strong data-start="1661" data-end="1676"
+                                >Non-ad-hoc:</strong
+                              >
+                              Like handing someone a formal contract document
+                              with defined roles, expectations, and formats.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1773" data-end="1861" class="">
+                          Would you like to see how this applies to things like
+                          micro frontends or plugin systems?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
