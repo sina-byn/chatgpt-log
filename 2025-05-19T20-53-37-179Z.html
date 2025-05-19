@@ -1,0 +1,3001 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Electron with React and React-Router-DOM</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="98f2063e-0085-4244-ade6-ae7101c9fb50"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          Is it possible to make an electron to only be
+                          instantiated once?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="516a25c3-1770-4697-badb-1c55b478feca"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="290">
+                          <span class="_fadeIn_m1hgl_8">Yes, </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><strong data-start="8" data-end="23"
+                            ><span class="_fadeIn_m1hgl_8">Electron.</span
+                            ><span class="_fadeIn_m1hgl_8">js</span></strong
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><span class="_fadeIn_m1hgl_8">it's </span
+                          ><span class="_fadeIn_m1hgl_8">very </span
+                          ><span class="_fadeIn_m1hgl_8">common </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">want </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><span class="_fadeIn_m1hgl_8">application </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">only </span
+                          ><span class="_fadeIn_m1hgl_8">have </span
+                          ><strong
+                            data-start="79"
+                            data-end="95"
+                            data-is-only-node=""
+                            ><span class="_fadeIn_m1hgl_8">one </span
+                            ><span class="_fadeIn_m1hgl_8"
+                              >instance</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">running </span
+                          ><span class="_fadeIn_m1hgl_8">at </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">time (</span
+                          ><span class="_fadeIn_m1hgl_8">e.</span
+                          ><span class="_fadeIn_m1hgl_8">g. </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">avoid </span
+                          ><span class="_fadeIn_m1hgl_8">opening </span
+                          ><span class="_fadeIn_m1hgl_8">multiple </span
+                          ><span class="_fadeIn_m1hgl_8">windows </span
+                          ><span class="_fadeIn_m1hgl_8">if </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><span class="_fadeIn_m1hgl_8">user </span
+                          ><span class="_fadeIn_m1hgl_8">tries </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">launch </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><span class="_fadeIn_m1hgl_8">app </span
+                          ><span class="_fadeIn_m1hgl_8">again). </span
+                          ><span class="_fadeIn_m1hgl_8">Electron </span
+                          ><span class="_fadeIn_m1hgl_8">provides </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">built-</span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">way </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">do </span
+                          ><span class="_fadeIn_m1hgl_8">this </span
+                          ><span class="_fadeIn_m1hgl_8">using </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><code data-start="252" data-end="285"
+                            >app.requestSingleInstanceLock()</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">API.</span>
+                        </p>
+                        <h3 data-start="292" data-end="346">
+                          <span class="_fadeIn_m1hgl_8">✅ </span
+                          ><span class="_fadeIn_m1hgl_8">Example: </span
+                          ><span class="_fadeIn_m1hgl_8">Ensuring </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">Single </span
+                          ><span class="_fadeIn_m1hgl_8">Electron </span
+                          ><span class="_fadeIn_m1hgl_8">App </span
+                          ><span class="_fadeIn_m1hgl_8">Instance</span>
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="348"
+                          data-end="1250"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const { app, BrowserWindow } = require('electron');
+
+let mainWindow;
+
+// Try to get the single instance lock
+const gotTheLock = app.requestSingleInstanceLock();
+
+if (!gotTheLock) {
+  // Another instance is already running — quit this one
+  app.quit();
+} else {
+  app.on('second-instance', (event, commandLine, workingDirectory) =&gt; {
+    // Someone tried to run a second instance — focus the main window
+    if (mainWindow) {
+      if (mainWindow.isMinimized()) mainWindow.restore();
+      mainWindow.focus();
+    }
+  });
+
+  // Create the main window
+  app.whenReady().then(() =&gt; {
+    mainWindow = new BrowserWindow({
+      width: 800,
+      height: 600,
+    });
+
+    mainWindow.loadURL('https://example.com');
+
+    mainWindow.on('closed', () =&gt; {
+      mainWindow = null;
+    });
+  });
+
+  app.on('window-all-closed', () =&gt; {
+    if (process.platform !== 'darwin') app.quit();
+  });
+}
+</span></code></div></div></pre>
+                        <h3 data-start="1252" data-end="1271">
+                          <span class="_fadeIn_m1hgl_8">🔍 </span
+                          ><span class="_fadeIn_m1hgl_8">Explanation:</span>
+                        </h3>
+                        <ul data-start="1273" data-end="1635">
+                          <li data-start="1273" data-end="1419">
+                            <p data-start="1275" data-end="1419">
+                              <code data-start="1275" data-end="1308"
+                                >app.requestSingleInstanceLock()</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">returns </span
+                              ><code data-start="1317" data-end="1323"
+                                >true</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">if </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">current </span
+                              ><span class="_fadeIn_m1hgl_8">instance </span
+                              ><span class="_fadeIn_m1hgl_8">is </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">first </span
+                              ><span class="_fadeIn_m1hgl_8">one. </span
+                              ><span class="_fadeIn_m1hgl_8">If </span
+                              ><span class="_fadeIn_m1hgl_8">it's </span
+                              ><code data-start="1374" data-end="1381"
+                                >false</code
+                              ><span class="_fadeIn_m1hgl_8">, </span
+                              ><span class="_fadeIn_m1hgl_8">another </span
+                              ><span class="_fadeIn_m1hgl_8">instance </span
+                              ><span class="_fadeIn_m1hgl_8">is </span
+                              ><span class="_fadeIn_m1hgl_8">already </span
+                              ><span class="_fadeIn_m1hgl_8">running.</span>
+                            </p>
+                          </li>
+                          <li data-start="1420" data-end="1581">
+                            <p data-start="1422" data-end="1581">
+                              <span class="_fadeIn_m1hgl_8">The </span
+                              ><code data-start="1426" data-end="1443"
+                                >second-instance</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">event </span
+                              ><span class="_fadeIn_m1hgl_8">is </span
+                              ><span class="_fadeIn_m1hgl_8">emitted </span
+                              ><span class="_fadeIn_m1hgl_8">in </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><strong data-start="1468" data-end="1486"
+                                ><span class="_fadeIn_m1hgl_8">first </span
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >instance</span
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">when </span
+                              ><span class="_fadeIn_m1hgl_8">a </span
+                              ><strong data-start="1494" data-end="1513"
+                                ><span class="_fadeIn_m1hgl_8">second </span
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >instance</span
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">is </span
+                              ><span class="_fadeIn_m1hgl_8">started. </span
+                              ><span class="_fadeIn_m1hgl_8">This </span
+                              ><span class="_fadeIn_m1hgl_8">is </span
+                              ><span class="_fadeIn_m1hgl_8">where </span
+                              ><span class="_fadeIn_m1hgl_8">you </span
+                              ><span class="_fadeIn_m1hgl_8">can </span
+                              ><span class="_fadeIn_m1hgl_8">focus </span
+                              ><span class="_fadeIn_m1hgl_8">or </span
+                              ><span class="_fadeIn_m1hgl_8">restore </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">main </span
+                              ><span class="_fadeIn_m1hgl_8">window.</span>
+                            </p>
+                          </li>
+                          <li data-start="1582" data-end="1635">
+                            <p data-start="1584" data-end="1635">
+                              <span class="_fadeIn_m1hgl_8">The </span
+                              ><span class="_fadeIn_m1hgl_8">second </span
+                              ><span class="_fadeIn_m1hgl_8">instance </span
+                              ><span class="_fadeIn_m1hgl_8">simply </span
+                              ><span class="_fadeIn_m1hgl_8">exits </span
+                              ><span class="_fadeIn_m1hgl_8">with </span
+                              ><code data-start="1622" data-end="1634"
+                                >app.quit()</code
+                              ><span class="_fadeIn_m1hgl_8">.</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <h3 data-start="1637" data-end="1649">
+                          <span class="_fadeIn_m1hgl_8">🧠 </span
+                          ><span class="_fadeIn_m1hgl_8">Note:</span>
+                        </h3>
+                        <ul data-start="1651" data-end="1877">
+                          <li data-start="1651" data-end="1725">
+                            <p data-start="1653" data-end="1725">
+                              <span class="_fadeIn_m1hgl_8">This </span
+                              ><span class="_fadeIn_m1hgl_8">only </span
+                              ><span class="_fadeIn_m1hgl_8">works </span
+                              ><span class="_fadeIn_m1hgl_8">in </span
+                              ><span class="_fadeIn_m1hgl_8">packaged </span
+                              ><span class="_fadeIn_m1hgl_8">apps </span
+                              ><span class="_fadeIn_m1hgl_8">or </span
+                              ><span class="_fadeIn_m1hgl_8">when </span
+                              ><span class="_fadeIn_m1hgl_8">running </span
+                              ><span class="_fadeIn_m1hgl_8">from </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">same </span
+                              ><span class="_fadeIn_m1hgl_8">app </span
+                              ><span class="_fadeIn_m1hgl_8">path.</span>
+                            </p>
+                          </li>
+                          <li data-start="1726" data-end="1877">
+                            <p data-start="1728" data-end="1877">
+                              <span class="_fadeIn_m1hgl_8">On </span
+                              ><span class="_fadeIn_m1hgl_8">macOS, </span
+                              ><span class="_fadeIn_m1hgl_8">apps </span
+                              ><span class="_fadeIn_m1hgl_8">behave </span
+                              ><span class="_fadeIn_m1hgl_8">slightly </span
+                              ><span class="_fadeIn_m1hgl_8"
+                                >differently — </span
+                              ><span class="_fadeIn_m1hgl_8">often </span
+                              ><span class="_fadeIn_m1hgl_8">keeping </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">app </span
+                              ><span class="_fadeIn_m1hgl_8">running </span
+                              ><span class="_fadeIn_m1hgl_8">even </span
+                              ><span class="_fadeIn_m1hgl_8">when </span
+                              ><span class="_fadeIn_m1hgl_8">no </span
+                              ><span class="_fadeIn_m1hgl_8">windows </span
+                              ><span class="_fadeIn_m1hgl_8">are </span
+                              ><span class="_fadeIn_m1hgl_8">open. </span
+                              ><span class="_fadeIn_m1hgl_8">Handle </span
+                              ><span class="_fadeIn_m1hgl_8">that </span
+                              ><span class="_fadeIn_m1hgl_8">with </span
+                              ><code data-start="1851" data-end="1876"
+                                >app.on('activate', ...)</code
+                              ><span class="_fadeIn_m1hgl_8">.</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <p
+                          data-start="1879"
+                          data-end="2019"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          <span class="_fadeIn_m1hgl_8">Let </span
+                          ><span class="_fadeIn_m1hgl_8">me </span
+                          ><span class="_fadeIn_m1hgl_8">know </span
+                          ><span class="_fadeIn_m1hgl_8">if </span
+                          ><span class="_fadeIn_m1hgl_8">you're </span
+                          ><span class="_fadeIn_m1hgl_8">using </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">specific </span
+                          ><span class="_fadeIn_m1hgl_8">Electron </span
+                          ><span class="_fadeIn_m1hgl_8">version </span
+                          ><span class="_fadeIn_m1hgl_8">or </span
+                          ><span class="_fadeIn_m1hgl_8">need </span
+                          ><span class="_fadeIn_m1hgl_8">this </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">work </span
+                          ><span class="_fadeIn_m1hgl_8">with </span
+                          ><span class="_fadeIn_m1hgl_8">specific </span
+                          ><span class="_fadeIn_m1hgl_8">behaviors </span
+                          ><span class="_fadeIn_m1hgl_8">like </span
+                          ><span class="_fadeIn_m1hgl_8">protocol </span
+                          ><span class="_fadeIn_m1hgl_8">handling </span
+                          ><span class="_fadeIn_m1hgl_8">or </span
+                          ><span class="_fadeIn_m1hgl_8">deep </span
+                          ><span class="_fadeIn_m1hgl_8">linking.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="0599bc52-ad34-4678-b5a3-5f6dd5106021"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          how to use react in electron?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="b32eac95-895a-4ad5-8e2b-d15d9343dfc3"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="68">
+                          <span class="_fadeIn_m1hgl_8">To </span
+                          ><span class="_fadeIn_m1hgl_8">use </span
+                          ><strong data-start="7" data-end="16"
+                            ><span class="_fadeIn_m1hgl_8">React</span></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">an </span
+                          ><strong data-start="23" data-end="35"
+                            ><span class="_fadeIn_m1hgl_8"
+                              >Electron</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">app, </span
+                          ><span class="_fadeIn_m1hgl_8">you </span
+                          ><span class="_fadeIn_m1hgl_8">can </span
+                          ><span class="_fadeIn_m1hgl_8">combine </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><span class="_fadeIn_m1hgl_8">two </span
+                          ><span class="_fadeIn_m1hgl_8">by:</span>
+                        </p>
+                        <ul data-start="70" data-end="227">
+                          <li data-start="70" data-end="144">
+                            <p data-start="72" data-end="144">
+                              <span class="_fadeIn_m1hgl_8">Using </span
+                              ><strong data-start="78" data-end="90"
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >Electron</span
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">for </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">backend (</span
+                              ><span class="_fadeIn_m1hgl_8">main </span
+                              ><span class="_fadeIn_m1hgl_8">process </span
+                              ><span class="_fadeIn_m1hgl_8">and </span
+                              ><span class="_fadeIn_m1hgl_8">window </span
+                              ><span class="_fadeIn_m1hgl_8">management).</span>
+                            </p>
+                          </li>
+                          <li data-start="145" data-end="227">
+                            <p data-start="147" data-end="227">
+                              <span class="_fadeIn_m1hgl_8">Using </span
+                              ><strong data-start="153" data-end="162"
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >React</span
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">for </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">frontend (</span
+                              ><span class="_fadeIn_m1hgl_8">rendered </span
+                              ><span class="_fadeIn_m1hgl_8">in </span
+                              ><span class="_fadeIn_m1hgl_8">a </span
+                              ><code data-start="195" data-end="210"
+                                >BrowserWindow</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">via </span
+                              ><span class="_fadeIn_m1hgl_8">a </span
+                              ><span class="_fadeIn_m1hgl_8">web </span
+                              ><span class="_fadeIn_m1hgl_8">page).</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="229" data-end="232" />
+                        <h2 data-start="234" data-end="295">
+                          <span class="_fadeIn_m1hgl_8">🚀 </span
+                          ><span class="_fadeIn_m1hgl_8">1. </span
+                          ><span class="_fadeIn_m1hgl_8">Setup: </span
+                          ><span class="_fadeIn_m1hgl_8">Create </span
+                          ><span class="_fadeIn_m1hgl_8">an </span
+                          ><span class="_fadeIn_m1hgl_8">Electron + </span
+                          ><span class="_fadeIn_m1hgl_8">React </span
+                          ><span class="_fadeIn_m1hgl_8">App (</span
+                          ><span class="_fadeIn_m1hgl_8">Quickest </span
+                          ><span class="_fadeIn_m1hgl_8">Way)</span>
+                        </h2>
+                        <p data-start="297" data-end="467">
+                          <span class="_fadeIn_m1hgl_8">You </span
+                          ><span class="_fadeIn_m1hgl_8">can </span
+                          ><span class="_fadeIn_m1hgl_8">set </span
+                          ><span class="_fadeIn_m1hgl_8">this </span
+                          ><span class="_fadeIn_m1hgl_8">up </span
+                          ><span class="_fadeIn_m1hgl_8">manually </span
+                          ><span class="_fadeIn_m1hgl_8">or </span
+                          ><span class="_fadeIn_m1hgl_8">use </span
+                          ><span class="_fadeIn_m1hgl_8">tools </span
+                          ><span class="_fadeIn_m1hgl_8">like </span
+                          ><strong data-start="344" data-end="352"
+                            ><span class="_fadeIn_m1hgl_8">Vite</span></strong
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><strong data-start="354" data-end="365"
+                            ><span class="_fadeIn_m1hgl_8"
+                              >Webpack</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><span class="_fadeIn_m1hgl_8">or </span
+                          ><strong data-start="370" data-end="390"
+                            ><span class="_fadeIn_m1hgl_8">Create </span
+                            ><span class="_fadeIn_m1hgl_8">React </span
+                            ><span class="_fadeIn_m1hgl_8">App</span></strong
+                          ><span class="_fadeIn_m1hgl_8">. </span
+                          ><span class="_fadeIn_m1hgl_8">Below </span
+                          ><span class="_fadeIn_m1hgl_8">is </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">basic </span
+                          ><span class="_fadeIn_m1hgl_8">setup </span
+                          ><span class="_fadeIn_m1hgl_8">using </span
+                          ><strong data-start="421" data-end="440"
+                            ><span class="_fadeIn_m1hgl_8">Vite + </span
+                            ><span class="_fadeIn_m1hgl_8"
+                              >Electron</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><span class="_fadeIn_m1hgl_8">which </span
+                          ><span class="_fadeIn_m1hgl_8">is </span
+                          ><span class="_fadeIn_m1hgl_8">modern </span
+                          ><span class="_fadeIn_m1hgl_8">and </span
+                          ><span class="_fadeIn_m1hgl_8">fast.</span>
+                        </p>
+                        <hr data-start="469" data-end="472" />
+                        <h2 data-start="474" data-end="539">
+                          <span class="_fadeIn_m1hgl_8">✅ </span
+                          ><span class="_fadeIn_m1hgl_8">Option </span
+                          ><span class="_fadeIn_m1hgl_8">1: </span
+                          ><span class="_fadeIn_m1hgl_8">Vite + </span
+                          ><span class="_fadeIn_m1hgl_8">React + </span
+                          ><span class="_fadeIn_m1hgl_8">Electron (</span
+                          ><span class="_fadeIn_m1hgl_8">Recommended </span
+                          ><span class="_fadeIn_m1hgl_8">Modern </span
+                          ><span class="_fadeIn_m1hgl_8">Stack)</span>
+                        </h2>
+                        <h3 data-start="541" data-end="564">
+                          <span class="_fadeIn_m1hgl_8">📁 </span
+                          ><span class="_fadeIn_m1hgl_8">Folder </span
+                          ><span class="_fadeIn_m1hgl_8">Structure</span>
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="566"
+                          data-end="763"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]"></div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>my-electron-app/
+├─ main/              ← Electron Main process code
+│  └─ main.js
+├─ renderer/          ← React code (Vite project)
+│  ├─ index.html
+│  ├─ main.jsx
+│  └─ ...
+├─ package.json
+</span></code></div></div></pre>
+                        <hr data-start="765" data-end="768" />
+                        <h3 data-start="770" data-end="795">
+                          <span class="_fadeIn_m1hgl_8">🔧 </span
+                          ><span class="_fadeIn_m1hgl_8">Step-</span
+                          ><span class="_fadeIn_m1hgl_8">by-</span
+                          ><span class="_fadeIn_m1hgl_8">step </span
+                          ><span class="_fadeIn_m1hgl_8">Setup</span>
+                        </h3>
+                        <h4 data-start="797" data-end="828">
+                          <span class="_fadeIn_m1hgl_8">Step </span
+                          ><span class="_fadeIn_m1hgl_8">1: </span
+                          ><span class="_fadeIn_m1hgl_8">Initialize </span
+                          ><span class="_fadeIn_m1hgl_8">project</span>
+                        </h4>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="830"
+                          data-end="894"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>mkdir my-electron-app
+cd my-electron-app
+npm init -y
+</span></code></div></div></pre>
+                        <h4 data-start="896" data-end="925">
+                          <span class="_fadeIn_m1hgl_8">Step </span
+                          ><span class="_fadeIn_m1hgl_8">2: </span
+                          ><span class="_fadeIn_m1hgl_8">Add </span
+                          ><span class="_fadeIn_m1hgl_8">dependencies</span>
+                        </h4>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="927"
+                          data-end="1052"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install electron --save-dev
+npm create vite@latest renderer -- --template react
+cd renderer
+npm install
+cd ..
+</span></code></div></div></pre>
+                        <h4 data-start="1054" data-end="1106">
+                          <span class="_fadeIn_m1hgl_8">Step </span
+                          ><span class="_fadeIn_m1hgl_8">3: </span
+                          ><span class="_fadeIn_m1hgl_8">Create </span
+                          ><code data-start="1074" data-end="1083">main.js</code
+                          ><span class="_fadeIn_m1hgl_8"> (</span
+                          ><span class="_fadeIn_m1hgl_8">Electron </span
+                          ><span class="_fadeIn_m1hgl_8">entry </span
+                          ><span class="_fadeIn_m1hgl_8">point)</span>
+                        </h4>
+                        <p data-start="1108" data-end="1132">
+                          <span class="_fadeIn_m1hgl_8">Create </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><code data-start="1117" data-end="1131"
+                            >main/main.js</code
+                          ><span class="_fadeIn_m1hgl_8">:</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1134"
+                          data-end="1531"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>const { app, BrowserWindow } = require('electron');
+const path = require('path');
+
+function createWindow() {
+  const win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js'), // optional
+    },
+  });
+
+  win.loadURL('http://localhost:5173'); // Vite dev server
+}
+
+app.whenReady().then(() =&gt; {
+  createWindow();
+});
+</span></code></div></div></pre>
+                        <h4 data-start="1533" data-end="1582">
+                          <span class="_fadeIn_m1hgl_8">Step </span
+                          ><span class="_fadeIn_m1hgl_8">4: </span
+                          ><span class="_fadeIn_m1hgl_8">Add </span
+                          ><code data-start="1550" data-end="1557">start</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">script </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><code data-start="1568" data-end="1582"
+                            >package.json</code
+                          >
+                        </h4>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1584"
+                          data-end="1780"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">json</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-json"><span>"scripts": {
+  "dev": "concurrently \"npm:dev:*\"",
+  "dev:react": "cd renderer &amp;&amp; vite",
+  "dev:electron": "electron main/main.js"
+},
+"devDependencies": {
+  "concurrently": "^8.0.0"
+}
+</span></code></div></div></pre>
+                        <p data-start="1782" data-end="1803">
+                          <span class="_fadeIn_m1hgl_8">Install </span
+                          ><span class="_fadeIn_m1hgl_8">concurrently:</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1805"
+                          data-end="1852"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install concurrently --save-dev
+</span></code></div></div></pre>
+                        <hr data-start="1854" data-end="1857" />
+                        <h3 data-start="1859" data-end="1878">
+                          <span class="_fadeIn_m1hgl_8">🧪 </span
+                          ><span class="_fadeIn_m1hgl_8">Run </span
+                          ><span class="_fadeIn_m1hgl_8">Your </span
+                          ><span class="_fadeIn_m1hgl_8">App</span>
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1880"
+                          data-end="1903"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm run dev
+</span></code></div></div></pre>
+                        <p data-start="1905" data-end="1961">
+                          <span class="_fadeIn_m1hgl_8">You </span
+                          ><span class="_fadeIn_m1hgl_8">should </span
+                          ><span class="_fadeIn_m1hgl_8">see </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">window </span
+                          ><span class="_fadeIn_m1hgl_8">open </span
+                          ><span class="_fadeIn_m1hgl_8">with </span
+                          ><span class="_fadeIn_m1hgl_8">your </span
+                          ><span class="_fadeIn_m1hgl_8">React </span
+                          ><span class="_fadeIn_m1hgl_8">app </span
+                          ><span class="_fadeIn_m1hgl_8">inside.</span>
+                        </p>
+                        <hr data-start="1963" data-end="1966" />
+                        <h2 data-start="1968" data-end="2010">
+                          <span class="_fadeIn_m1hgl_8">📦 </span
+                          ><span class="_fadeIn_m1hgl_8">Packaging </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><span class="_fadeIn_m1hgl_8">App (</span
+                          ><span class="_fadeIn_m1hgl_8">React + </span
+                          ><span class="_fadeIn_m1hgl_8">Electron)</span>
+                        </h2>
+                        <p data-start="2012" data-end="2044">
+                          <span class="_fadeIn_m1hgl_8">To </span
+                          ><span class="_fadeIn_m1hgl_8">build </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><span class="_fadeIn_m1hgl_8">app </span
+                          ><span class="_fadeIn_m1hgl_8">for </span
+                          ><span class="_fadeIn_m1hgl_8">production:</span>
+                        </p>
+                        <ul data-start="2046" data-end="2060">
+                          <li data-start="2046" data-end="2060">
+                            <p data-start="2048" data-end="2060">
+                              <span class="_fadeIn_m1hgl_8">Build </span
+                              ><span class="_fadeIn_m1hgl_8">React:</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2062"
+                          data-end="2105"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>cd renderer
+npm run build
+cd ..
+</span></code></div></div></pre>
+                        <ul data-start="2107" data-end="2149">
+                          <li data-start="2107" data-end="2149">
+                            <p data-start="2109" data-end="2149">
+                              <span class="_fadeIn_m1hgl_8">Update </span
+                              ><code data-start="2116" data-end="2125"
+                                >main.js</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">to </span
+                              ><span class="_fadeIn_m1hgl_8">load </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">built </span
+                              ><span class="_fadeIn_m1hgl_8">HTML:</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2151"
+                          data-end="2227"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>win.loadFile(path.join(__dirname, '../renderer/dist/index.html'));
+</span></code></div></div></pre>
+                        <ul data-start="2229" data-end="2321">
+                          <li data-start="2229" data-end="2321">
+                            <p data-start="2231" data-end="2321">
+                              <span class="_fadeIn_m1hgl_8">Use </span
+                              ><span class="_fadeIn_m1hgl_8">tools </span
+                              ><span class="_fadeIn_m1hgl_8">like </span
+                              ><a
+                                data-start="2246"
+                                data-end="2295"
+                                rel="noopener"
+                                target="_new"
+                                class="cursor-pointer"
+                                ><code data-start="2247" data-end="2265"
+                                  >electron-builder</code
+                                ></a
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">to </span
+                              ><span class="_fadeIn_m1hgl_8">package </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">final </span
+                              ><span class="_fadeIn_m1hgl_8">app.</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="2323" data-end="2326" />
+                        <h2 data-start="2328" data-end="2341">
+                          <span class="_fadeIn_m1hgl_8">🧠 </span
+                          ><span class="_fadeIn_m1hgl_8">Summary</span>
+                        </h2>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="2343"
+                              data-end="2604"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="2343" data-end="2394">
+                                <tr data-start="2343" data-end="2394">
+                                  <th
+                                    data-start="2343"
+                                    data-end="2358"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8"
+                                      >Component</span
+                                    >
+                                  </th>
+                                  <th
+                                    data-start="2358"
+                                    data-end="2394"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Role</span>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="2447" data-end="2604">
+                                <tr data-start="2447" data-end="2498">
+                                  <td
+                                    data-start="2447"
+                                    data-end="2462"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="2449" data-end="2461"
+                                      ><span class="_fadeIn_m1hgl_8"
+                                        >Electron</span
+                                      ></strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2462"
+                                    data-end="2498"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Manages </span
+                                    ><span class="_fadeIn_m1hgl_8"
+                                      >windows </span
+                                    ><span class="_fadeIn_m1hgl_8">and </span
+                                    ><span class="_fadeIn_m1hgl_8">system </span
+                                    ><span class="_fadeIn_m1hgl_8">APIs</span>
+                                  </td>
+                                </tr>
+                                <tr data-start="2499" data-end="2552">
+                                  <td
+                                    data-start="2499"
+                                    data-end="2514"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="2501" data-end="2510"
+                                      ><span class="_fadeIn_m1hgl_8"
+                                        >React</span
+                                      ></strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2514"
+                                    data-end="2552"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Builds </span
+                                    ><span class="_fadeIn_m1hgl_8">the </span
+                                    ><span class="_fadeIn_m1hgl_8">UI (</span
+                                    ><span class="_fadeIn_m1hgl_8">in </span
+                                    ><code data-start="2534" data-end="2549"
+                                      >BrowserWindow</code
+                                    ><span class="_fadeIn_m1hgl_8">)</span>
+                                  </td>
+                                </tr>
+                                <tr data-start="2553" data-end="2604">
+                                  <td
+                                    data-start="2553"
+                                    data-end="2568"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="2555" data-end="2563"
+                                      ><span class="_fadeIn_m1hgl_8"
+                                        >Vite</span
+                                      ></strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2568"
+                                    data-end="2604"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Fast </span
+                                    ><span class="_fadeIn_m1hgl_8"
+                                      >frontend </span
+                                    ><span class="_fadeIn_m1hgl_8">dev/</span
+                                    ><span class="_fadeIn_m1hgl_8">build </span
+                                    ><span class="_fadeIn_m1hgl_8">tool</span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p
+                          data-start="2606"
+                          data-end="2759"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          <span class="_fadeIn_m1hgl_8">Let </span
+                          ><span class="_fadeIn_m1hgl_8">me </span
+                          ><span class="_fadeIn_m1hgl_8">know </span
+                          ><span class="_fadeIn_m1hgl_8">if </span
+                          ><span class="_fadeIn_m1hgl_8">you'd </span
+                          ><span class="_fadeIn_m1hgl_8">prefer </span
+                          ><span class="_fadeIn_m1hgl_8">using </span
+                          ><strong data-start="2640" data-end="2660"
+                            ><span class="_fadeIn_m1hgl_8">Create </span
+                            ><span class="_fadeIn_m1hgl_8">React </span
+                            ><span class="_fadeIn_m1hgl_8">App</span></strong
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><strong data-start="2662" data-end="2673"
+                            ><span class="_fadeIn_m1hgl_8"
+                              >Webpack</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><span class="_fadeIn_m1hgl_8">or </span
+                          ><span class="_fadeIn_m1hgl_8">want </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><strong data-start="2685" data-end="2729"
+                            ><span class="_fadeIn_m1hgl_8">fully </span
+                            ><span class="_fadeIn_m1hgl_8">packaged </span
+                            ><span class="_fadeIn_m1hgl_8">Electron + </span
+                            ><span class="_fadeIn_m1hgl_8">React </span
+                            ><span class="_fadeIn_m1hgl_8"
+                              >template</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><span class="_fadeIn_m1hgl_8">and </span
+                          ><span class="_fadeIn_m1hgl_8">I </span
+                          ><span class="_fadeIn_m1hgl_8">can </span
+                          ><span class="_fadeIn_m1hgl_8">generate </span
+                          ><span class="_fadeIn_m1hgl_8">that </span
+                          ><span class="_fadeIn_m1hgl_8">too.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="73457e68-8a36-4a4f-860e-fbf8d5ffab8f"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          how to handle routes in my app then?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="c545549d-bd1f-4075-8ff7-aedc46d82c7e"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="321">
+                          <span class="_fadeIn_m1hgl_8">To </span
+                          ><span class="_fadeIn_m1hgl_8">handle </span
+                          ><strong data-start="10" data-end="20"
+                            ><span class="_fadeIn_m1hgl_8">routes</span></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">your </span
+                          ><strong data-start="29" data-end="49"
+                            ><span class="_fadeIn_m1hgl_8">Electron + </span
+                            ><span class="_fadeIn_m1hgl_8">React</span></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">app, </span
+                          ><span class="_fadeIn_m1hgl_8">you </span
+                          ><span class="_fadeIn_m1hgl_8">use </span
+                          ><strong data-start="63" data-end="79"
+                            ><span class="_fadeIn_m1hgl_8">React </span
+                            ><span class="_fadeIn_m1hgl_8">Router</span></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">just </span
+                          ><span class="_fadeIn_m1hgl_8">like </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">any </span
+                          ><span class="_fadeIn_m1hgl_8">other </span
+                          ><span class="_fadeIn_m1hgl_8">React </span
+                          ><span class="_fadeIn_m1hgl_8">web </span
+                          ><span class="_fadeIn_m1hgl_8">app. </span
+                          ><span class="_fadeIn_m1hgl_8">However, </span
+                          ><span class="_fadeIn_m1hgl_8">since </span
+                          ><span class="_fadeIn_m1hgl_8">Electron </span
+                          ><span class="_fadeIn_m1hgl_8">apps </span
+                          ><span class="_fadeIn_m1hgl_8">are </span
+                          ><span class="_fadeIn_m1hgl_8">typically </span
+                          ><strong data-start="161" data-end="195"
+                            ><span class="_fadeIn_m1hgl_8">single-</span
+                            ><span class="_fadeIn_m1hgl_8">page </span
+                            ><span class="_fadeIn_m1hgl_8">applications (</span
+                            ><span class="_fadeIn_m1hgl_8">SPA)</span></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">running </span
+                          ><strong data-start="204" data-end="215"
+                            ><span class="_fadeIn_m1hgl_8"
+                              >locally</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><span class="_fadeIn_m1hgl_8">there </span
+                          ><span class="_fadeIn_m1hgl_8">are </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">few </span
+                          ><span class="_fadeIn_m1hgl_8">extra </span
+                          ><span class="_fadeIn_m1hgl_8">considerations </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">ensure </span
+                          ><span class="_fadeIn_m1hgl_8">routing </span
+                          ><span class="_fadeIn_m1hgl_8">works </span
+                          ><span class="_fadeIn_m1hgl_8">smoothly </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><strong data-start="290" data-end="320"
+                            ><span class="_fadeIn_m1hgl_8">development </span
+                            ><span class="_fadeIn_m1hgl_8">and </span
+                            ><span class="_fadeIn_m1hgl_8"
+                              >production</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8">.</span>
+                        </p>
+                        <hr data-start="323" data-end="326" />
+                        <h2 data-start="328" data-end="382">
+                          <span class="_fadeIn_m1hgl_8">✅ </span
+                          ><span class="_fadeIn_m1hgl_8">Step-</span
+                          ><span class="_fadeIn_m1hgl_8">by-</span
+                          ><span class="_fadeIn_m1hgl_8">Step: </span
+                          ><span class="_fadeIn_m1hgl_8">Handling </span
+                          ><span class="_fadeIn_m1hgl_8">Routes </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">Electron + </span
+                          ><span class="_fadeIn_m1hgl_8">React</span>
+                        </h2>
+                        <h3 data-start="384" data-end="414">
+                          <span class="_fadeIn_m1hgl_8">1. 📦 </span
+                          ><span class="_fadeIn_m1hgl_8">Install </span
+                          ><span class="_fadeIn_m1hgl_8">React </span
+                          ><span class="_fadeIn_m1hgl_8">Router</span>
+                        </h3>
+                        <p data-start="416" data-end="459">
+                          <span class="_fadeIn_m1hgl_8">In </span
+                          ><span class="_fadeIn_m1hgl_8">your </span
+                          ><span class="_fadeIn_m1hgl_8">React </span
+                          ><span class="_fadeIn_m1hgl_8">frontend (</span
+                          ><span class="_fadeIn_m1hgl_8">e.</span
+                          ><span class="_fadeIn_m1hgl_8">g., </span
+                          ><code data-start="446" data-end="457">renderer/</code
+                          ><span class="_fadeIn_m1hgl_8">):</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="461"
+                          data-end="501"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install react-router-dom
+</span></code></div></div></pre>
+                        <hr data-start="503" data-end="506" />
+                        <h3 data-start="508" data-end="541">
+                          <span class="_fadeIn_m1hgl_8">2. 🔁 </span
+                          ><span class="_fadeIn_m1hgl_8">Set </span
+                          ><span class="_fadeIn_m1hgl_8">Up </span
+                          ><span class="_fadeIn_m1hgl_8">Routing </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">React</span>
+                        </h3>
+                        <p data-start="543" data-end="590">
+                          <span class="_fadeIn_m1hgl_8">In </span
+                          ><span class="_fadeIn_m1hgl_8">your </span
+                          ><code data-start="551" data-end="574"
+                            >renderer/src/main.jsx</code
+                          ><span class="_fadeIn_m1hgl_8"> (</span
+                          ><span class="_fadeIn_m1hgl_8">or </span
+                          ><code data-start="579" data-end="588">App.jsx</code
+                          ><span class="_fadeIn_m1hgl_8">):</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="592"
+                          data-end="1060"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">jsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+
+import Home from './pages/Home';
+import About from './pages/About';
+
+const App = () =&gt; (
+  &lt;Router&gt;
+    &lt;Routes&gt;
+      &lt;Route path="/" element={&lt;Home /&gt;} /&gt;
+      &lt;Route path="/about" element={&lt;About /&gt;} /&gt;
+    &lt;/Routes&gt;
+  &lt;/Router&gt;
+);
+
+ReactDOM.createRoot(document.getElementById('root')).render(&lt;App /&gt;);
+</span></code></div></div></pre>
+                        <hr data-start="1062" data-end="1065" />
+                        <h3 data-start="1067" data-end="1113">
+                          <span class="_fadeIn_m1hgl_8">3. 🧪 </span
+                          ><span class="_fadeIn_m1hgl_8">During </span
+                          ><span class="_fadeIn_m1hgl_8">Development (</span
+                          ><span class="_fadeIn_m1hgl_8">Vite + </span
+                          ><span class="_fadeIn_m1hgl_8">Electron)</span>
+                        </h3>
+                        <p data-start="1115" data-end="1223">
+                          <span class="_fadeIn_m1hgl_8">Everything </span
+                          ><span class="_fadeIn_m1hgl_8">should </span
+                          ><span class="_fadeIn_m1hgl_8">work </span
+                          ><span class="_fadeIn_m1hgl_8">as </span
+                          ><span class="_fadeIn_m1hgl_8">expected — </span
+                          ><span class="_fadeIn_m1hgl_8">routing </span
+                          ><span class="_fadeIn_m1hgl_8">is </span
+                          ><span class="_fadeIn_m1hgl_8">handled </span
+                          ><span class="_fadeIn_m1hgl_8">by </span
+                          ><span class="_fadeIn_m1hgl_8">React </span
+                          ><span class="_fadeIn_m1hgl_8">Router </span
+                          ><span class="_fadeIn_m1hgl_8">using </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><strong data-start="1197" data-end="1222"
+                            ><span class="_fadeIn_m1hgl_8">browser's </span
+                            ><span class="_fadeIn_m1hgl_8">history </span
+                            ><span class="_fadeIn_m1hgl_8">API</span></strong
+                          ><span class="_fadeIn_m1hgl_8">.</span>
+                        </p>
+                        <p data-start="1225" data-end="1282">
+                          <span class="_fadeIn_m1hgl_8">When </span
+                          ><span class="_fadeIn_m1hgl_8">running </span
+                          ><code data-start="1238" data-end="1244">vite</code
+                          ><span class="_fadeIn_m1hgl_8"> (</span
+                          ><code data-start="1246" data-end="1259"
+                            >npm run dev</code
+                          ><span class="_fadeIn_m1hgl_8">), </span
+                          ><span class="_fadeIn_m1hgl_8">Electron </span
+                          ><span class="_fadeIn_m1hgl_8">loads </span
+                          ><span class="_fadeIn_m1hgl_8">from:</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1284"
+                          data-end="1331"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>win.loadURL('http://localhost:5173');
+</span></code></div></div></pre>
+                        <p data-start="1333" data-end="1375">
+                          <span class="_fadeIn_m1hgl_8">React </span
+                          ><span class="_fadeIn_m1hgl_8">Router </span
+                          ><span class="_fadeIn_m1hgl_8">works </span
+                          ><span class="_fadeIn_m1hgl_8">like </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">regular </span
+                          ><span class="_fadeIn_m1hgl_8">web </span
+                          ><span class="_fadeIn_m1hgl_8">app.</span>
+                        </p>
+                        <hr data-start="1377" data-end="1380" />
+                        <h3 data-start="1382" data-end="1427">
+                          <span class="_fadeIn_m1hgl_8">4. ⚠️ </span
+                          ><span class="_fadeIn_m1hgl_8">In </span
+                          ><span class="_fadeIn_m1hgl_8">Production (</span
+                          ><span class="_fadeIn_m1hgl_8">Load </span
+                          ><span class="_fadeIn_m1hgl_8">from </span
+                          ><code data-start="1417" data-end="1426">file://</code
+                          ><span class="_fadeIn_m1hgl_8">)</span>
+                        </h3>
+                        <p data-start="1429" data-end="1618">
+                          <span class="_fadeIn_m1hgl_8">When </span
+                          ><span class="_fadeIn_m1hgl_8">Electron </span
+                          ><span class="_fadeIn_m1hgl_8">loads </span
+                          ><span class="_fadeIn_m1hgl_8">your </span
+                          ><span class="_fadeIn_m1hgl_8">built </span
+                          ><span class="_fadeIn_m1hgl_8">app </span
+                          ><span class="_fadeIn_m1hgl_8">from </span
+                          ><code data-start="1469" data-end="1478">file://</code
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><code data-start="1480" data-end="1495"
+                            >BrowserRouter</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">can </span
+                          ><strong data-start="1500" data-end="1529"
+                            ><span class="_fadeIn_m1hgl_8">fail </span
+                            ><span class="_fadeIn_m1hgl_8">to </span
+                            ><span class="_fadeIn_m1hgl_8">handle </span
+                            ><span class="_fadeIn_m1hgl_8">deep </span
+                            ><span class="_fadeIn_m1hgl_8">links</span></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">like </span
+                          ><code data-start="1535" data-end="1543">/about</code
+                          ><span class="_fadeIn_m1hgl_8">. </span
+                          ><span class="_fadeIn_m1hgl_8">This </span
+                          ><span class="_fadeIn_m1hgl_8">is </span
+                          ><span class="_fadeIn_m1hgl_8">because </span
+                          ><span class="_fadeIn_m1hgl_8">there's </span
+                          ><span class="_fadeIn_m1hgl_8">no </span
+                          ><span class="_fadeIn_m1hgl_8">real </span
+                          ><span class="_fadeIn_m1hgl_8">server </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">respond </span
+                          ><span class="_fadeIn_m1hgl_8">with </span
+                          ><span class="_fadeIn_m1hgl_8">your </span
+                          ><code data-start="1605" data-end="1617"
+                            >index.html</code
+                          ><span class="_fadeIn_m1hgl_8">.</span>
+                        </p>
+                        <h3 data-start="1620" data-end="1660">
+                          <span class="_fadeIn_m1hgl_8">✅ </span
+                          ><span class="_fadeIn_m1hgl_8">Solution: </span
+                          ><span class="_fadeIn_m1hgl_8">Use </span
+                          ><code data-start="1640" data-end="1652"
+                            >HashRouter</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">instead</span>
+                        </h3>
+                        <p data-start="1662" data-end="1698">
+                          <span class="_fadeIn_m1hgl_8">In </span
+                          ><code data-start="1665" data-end="1674">App.jsx</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">or </span
+                          ><code data-start="1678" data-end="1688"
+                            >main.jsx</code
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><span class="_fadeIn_m1hgl_8">replace:</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1700"
+                          data-end="1760"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">jsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>import { BrowserRouter } from 'react-router-dom';
+</span></code></div></div></pre>
+                        <p data-start="1762" data-end="1767">
+                          <span class="_fadeIn_m1hgl_8">with:</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1769"
+                          data-end="1826"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">jsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>import { HashRouter } from 'react-router-dom';
+</span></code></div></div></pre>
+                        <p data-start="1828" data-end="1839">
+                          <span class="_fadeIn_m1hgl_8">And </span
+                          ><span class="_fadeIn_m1hgl_8">change:</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1841"
+                          data-end="1867"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">jsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>&lt;BrowserRouter&gt;
+</span></code></div></div></pre>
+                        <p data-start="1869" data-end="1872">
+                          <span class="_fadeIn_m1hgl_8">to:</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1874"
+                          data-end="1897"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">jsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>&lt;HashRouter&gt;
+</span></code></div></div></pre>
+                        <h4 data-start="1899" data-end="1927">
+                          <span class="_fadeIn_m1hgl_8">✅ </span
+                          ><span class="_fadeIn_m1hgl_8">Why </span
+                          ><span class="_fadeIn_m1hgl_8">use </span
+                          ><code data-start="1914" data-end="1926"
+                            >HashRouter</code
+                          ><span class="_fadeIn_m1hgl_8">?</span>
+                        </h4>
+                        <ul data-start="1929" data-end="2111">
+                          <li data-start="1929" data-end="2008">
+                            <p data-start="1931" data-end="2008">
+                              <span class="_fadeIn_m1hgl_8">URLs </span
+                              ><span class="_fadeIn_m1hgl_8">look </span
+                              ><span class="_fadeIn_m1hgl_8">like </span
+                              ><code data-start="1946" data-end="1971"
+                                >app://index.html#/about</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">instead </span
+                              ><span class="_fadeIn_m1hgl_8">of </span
+                              ><code data-start="1983" data-end="2007"
+                                >app://index.html/about</code
+                              ><span class="_fadeIn_m1hgl_8">.</span>
+                            </p>
+                          </li>
+                          <li data-start="2009" data-end="2058">
+                            <p data-start="2011" data-end="2058">
+                              <span class="_fadeIn_m1hgl_8">Works </span
+                              ><span class="_fadeIn_m1hgl_8">out </span
+                              ><span class="_fadeIn_m1hgl_8">of </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">box </span
+                              ><span class="_fadeIn_m1hgl_8">with </span
+                              ><span class="_fadeIn_m1hgl_8">local </span
+                              ><code data-start="2043" data-end="2052"
+                                >file://</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">URLs.</span>
+                            </p>
+                          </li>
+                          <li data-start="2059" data-end="2111">
+                            <p data-start="2061" data-end="2111">
+                              <span class="_fadeIn_m1hgl_8">Avoids </span
+                              ><span class="_fadeIn_m1hgl_8">404 </span
+                              ><span class="_fadeIn_m1hgl_8">errors </span
+                              ><span class="_fadeIn_m1hgl_8">on </span
+                              ><span class="_fadeIn_m1hgl_8">refresh </span
+                              ><span class="_fadeIn_m1hgl_8">or </span
+                              ><span class="_fadeIn_m1hgl_8">direct </span
+                              ><span class="_fadeIn_m1hgl_8">navigation.</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="2113" data-end="2116" />
+                        <h3 data-start="2118" data-end="2153">
+                          <span class="_fadeIn_m1hgl_8">5. ✅ </span
+                          ><span class="_fadeIn_m1hgl_8">Final </span
+                          ><span class="_fadeIn_m1hgl_8">Tip: </span
+                          ><span class="_fadeIn_m1hgl_8">Dynamic </span
+                          ><span class="_fadeIn_m1hgl_8">Routing</span>
+                        </h3>
+                        <p data-start="2155" data-end="2188">
+                          <span class="_fadeIn_m1hgl_8">You </span
+                          ><span class="_fadeIn_m1hgl_8">can </span
+                          ><span class="_fadeIn_m1hgl_8">still </span
+                          ><span class="_fadeIn_m1hgl_8">use </span
+                          ><span class="_fadeIn_m1hgl_8">dynamic </span
+                          ><span class="_fadeIn_m1hgl_8">routes:</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2190"
+                          data-end="2250"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">jsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>&lt;Route path="/user/:id" element={&lt;UserPage /&gt;} /&gt;
+</span></code></div></div></pre>
+                        <p data-start="2252" data-end="2306">
+                          <span class="_fadeIn_m1hgl_8">And </span
+                          ><span class="_fadeIn_m1hgl_8">get </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><code data-start="2264" data-end="2268">id</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">with </span
+                          ><code data-start="2274" data-end="2287"
+                            >useParams()</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">your </span
+                          ><span class="_fadeIn_m1hgl_8">component:</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2308"
+                          data-end="2392"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">jsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>import { useParams } from 'react-router-dom';
+const { id } = useParams();
+</span></code></div></div></pre>
+                        <hr data-start="2394" data-end="2397" />
+                        <h2 data-start="2399" data-end="2409">
+                          <span class="_fadeIn_m1hgl_8">Summary</span>
+                        </h2>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="2411"
+                              data-end="2746"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="2411" data-end="2494">
+                                <tr data-start="2411" data-end="2494">
+                                  <th
+                                    data-start="2411"
+                                    data-end="2427"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Mode</span>
+                                  </th>
+                                  <th
+                                    data-start="2427"
+                                    data-end="2447"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Router </span
+                                    ><span class="_fadeIn_m1hgl_8">to </span
+                                    ><span class="_fadeIn_m1hgl_8">Use</span>
+                                  </th>
+                                  <th
+                                    data-start="2447"
+                                    data-end="2494"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Notes</span>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="2579" data-end="2746">
+                                <tr data-start="2579" data-end="2662">
+                                  <td
+                                    data-start="2579"
+                                    data-end="2595"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8"
+                                      >Development</span
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2595"
+                                    data-end="2615"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="2597" data-end="2612"
+                                      >BrowserRouter</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2615"
+                                    data-end="2662"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Works </span
+                                    ><span class="_fadeIn_m1hgl_8">fine </span
+                                    ><span class="_fadeIn_m1hgl_8">with </span
+                                    ><span class="_fadeIn_m1hgl_8">Vite + </span
+                                    ><span class="_fadeIn_m1hgl_8">dev </span
+                                    ><span class="_fadeIn_m1hgl_8">server</span>
+                                  </td>
+                                </tr>
+                                <tr data-start="2663" data-end="2746">
+                                  <td
+                                    data-start="2663"
+                                    data-end="2679"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8"
+                                      >Production</span
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2679"
+                                    data-end="2699"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="2681" data-end="2693"
+                                      >HashRouter</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2699"
+                                    data-end="2746"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Safe </span
+                                    ><span class="_fadeIn_m1hgl_8">with </span
+                                    ><span class="_fadeIn_m1hgl_8"
+                                      >Electron </span
+                                    ><span class="_fadeIn_m1hgl_8"
+                                      >loading </span
+                                    ><code data-start="2728" data-end="2737"
+                                      >file://</code
+                                    ><span class="_fadeIn_m1hgl_8"> </span
+                                    ><span class="_fadeIn_m1hgl_8">HTML</span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p
+                          data-start="2748"
+                          data-end="2833"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          <span class="_fadeIn_m1hgl_8">Let </span
+                          ><span class="_fadeIn_m1hgl_8">me </span
+                          ><span class="_fadeIn_m1hgl_8">know </span
+                          ><span class="_fadeIn_m1hgl_8">if </span
+                          ><span class="_fadeIn_m1hgl_8">you </span
+                          ><span class="_fadeIn_m1hgl_8">want </span
+                          ><span class="_fadeIn_m1hgl_8">code </span
+                          ><span class="_fadeIn_m1hgl_8">examples </span
+                          ><span class="_fadeIn_m1hgl_8">for </span
+                          ><span class="_fadeIn_m1hgl_8">navigation </span
+                          ><span class="_fadeIn_m1hgl_8">menus </span
+                          ><span class="_fadeIn_m1hgl_8">or </span
+                          ><span class="_fadeIn_m1hgl_8">linking </span
+                          ><span class="_fadeIn_m1hgl_8">between </span
+                          ><span class="_fadeIn_m1hgl_8">routes!</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="21d7acd5-61b8-4303-abb2-643a3b542731"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How to have both use electron to load some pages and
+                          use react-router-dom for some others?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="40c454bd-80a8-4070-98af-5fd7588523ba"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="102">
+                          <span class="_fadeIn_m1hgl_8">Great </span
+                          ><span class="_fadeIn_m1hgl_8">question — </span
+                          ><span class="_fadeIn_m1hgl_8">you're </span
+                          ><span class="_fadeIn_m1hgl_8">looking </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">build </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><strong data-start="43" data-end="67"
+                            ><span class="_fadeIn_m1hgl_8">hybrid </span
+                            ><span class="_fadeIn_m1hgl_8">routing </span
+                            ><span class="_fadeIn_m1hgl_8">setup</span></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">an </span
+                          ><span class="_fadeIn_m1hgl_8">Electron + </span
+                          ><span class="_fadeIn_m1hgl_8">React </span
+                          ><span class="_fadeIn_m1hgl_8">app, </span
+                          ><span class="_fadeIn_m1hgl_8">where:</span>
+                        </p>
+                        <ul data-start="104" data-end="274">
+                          <li data-start="104" data-end="205">
+                            <p data-start="106" data-end="205">
+                              <strong data-start="106" data-end="152"
+                                ><span class="_fadeIn_m1hgl_8">Some </span
+                                ><span class="_fadeIn_m1hgl_8">pages </span
+                                ><span class="_fadeIn_m1hgl_8">are </span
+                                ><span class="_fadeIn_m1hgl_8">loaded </span
+                                ><span class="_fadeIn_m1hgl_8">directly </span
+                                ><span class="_fadeIn_m1hgl_8">by </span
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >Electron</span
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8"> (</span
+                              ><span class="_fadeIn_m1hgl_8">via </span
+                              ><code data-start="158" data-end="183"
+                                >BrowserWindow.loadURL()</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">or </span
+                              ><code data-start="187" data-end="199"
+                                >loadFile()</code
+                              ><span class="_fadeIn_m1hgl_8">), </span
+                              ><span class="_fadeIn_m1hgl_8">and</span>
+                            </p>
+                          </li>
+                          <li data-start="206" data-end="274">
+                            <p data-start="208" data-end="274">
+                              <strong data-start="208" data-end="248"
+                                ><span class="_fadeIn_m1hgl_8">Other </span
+                                ><span class="_fadeIn_m1hgl_8">pages </span
+                                ><span class="_fadeIn_m1hgl_8">are </span
+                                ><span class="_fadeIn_m1hgl_8">handled </span
+                                ><span class="_fadeIn_m1hgl_8">within </span
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >React</span
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">using </span
+                              ><code data-start="255" data-end="273"
+                                >react-router-dom</code
+                              ><span class="_fadeIn_m1hgl_8">.</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="276" data-end="421">
+                          <span class="_fadeIn_m1hgl_8">This </span
+                          ><span class="_fadeIn_m1hgl_8">can </span
+                          ><span class="_fadeIn_m1hgl_8">work </span
+                          ><span class="_fadeIn_m1hgl_8">well </span
+                          ><span class="_fadeIn_m1hgl_8">if </span
+                          ><span class="_fadeIn_m1hgl_8">you </span
+                          ><span class="_fadeIn_m1hgl_8">want </span
+                          ><strong data-start="307" data-end="327"
+                            ><span class="_fadeIn_m1hgl_8">separate </span
+                            ><span class="_fadeIn_m1hgl_8"
+                              >windows</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">or </span
+                          ><span class="_fadeIn_m1hgl_8">need </span
+                          ><strong data-start="336" data-end="363"
+                            ><span class="_fadeIn_m1hgl_8">native </span
+                            ><span class="_fadeIn_m1hgl_8">logic </span
+                            ><span class="_fadeIn_m1hgl_8"
+                              >separation</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8"> (</span
+                          ><span class="_fadeIn_m1hgl_8">e.</span
+                          ><span class="_fadeIn_m1hgl_8">g., </span
+                          ><span class="_fadeIn_m1hgl_8">login </span
+                          ><span class="_fadeIn_m1hgl_8">screen </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">one </span
+                          ><span class="_fadeIn_m1hgl_8">window, </span
+                          ><span class="_fadeIn_m1hgl_8">dashboard </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">another).</span>
+                        </p>
+                        <hr data-start="423" data-end="426" />
+                        <h2 data-start="428" data-end="449">
+                          <span class="_fadeIn_m1hgl_8">✅ </span
+                          ><span class="_fadeIn_m1hgl_8">Solution </span
+                          ><span class="_fadeIn_m1hgl_8">Outline</span>
+                        </h2>
+                        <p data-start="451" data-end="544">
+                          <span class="_fadeIn_m1hgl_8">You </span
+                          ><span class="_fadeIn_m1hgl_8">can </span
+                          ><strong data-start="459" data-end="502"
+                            ><span class="_fadeIn_m1hgl_8">combine </span
+                            ><span class="_fadeIn_m1hgl_8">Electron </span
+                            ><span class="_fadeIn_m1hgl_8">routing (</span
+                            ><span class="_fadeIn_m1hgl_8">main </span
+                            ><span class="_fadeIn_m1hgl_8"
+                              >process)</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">with </span
+                          ><strong data-start="508" data-end="543"
+                            ><span class="_fadeIn_m1hgl_8">React </span
+                            ><span class="_fadeIn_m1hgl_8">Router (</span
+                            ><span class="_fadeIn_m1hgl_8">renderer </span
+                            ><span class="_fadeIn_m1hgl_8"
+                              >process)</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8">:</span>
+                        </p>
+                        <h3 data-start="546" data-end="563">
+                          <span class="_fadeIn_m1hgl_8">🧠 </span
+                          ><span class="_fadeIn_m1hgl_8">Core </span
+                          ><span class="_fadeIn_m1hgl_8">Idea:</span>
+                        </h3>
+                        <ul data-start="564" data-end="687">
+                          <li data-start="564" data-end="628">
+                            <p data-start="566" data-end="628">
+                              <span class="_fadeIn_m1hgl_8">Electron </span
+                              ><span class="_fadeIn_m1hgl_8">decides </span
+                              ><span class="_fadeIn_m1hgl_8">which </span
+                              ><span class="_fadeIn_m1hgl_8">window </span
+                              ><span class="_fadeIn_m1hgl_8">to </span
+                              ><span class="_fadeIn_m1hgl_8">show (</span
+                              ><span class="_fadeIn_m1hgl_8">e.</span
+                              ><span class="_fadeIn_m1hgl_8">g. </span
+                              ><span class="_fadeIn_m1hgl_8">login, </span
+                              ><span class="_fadeIn_m1hgl_8">dashboard).</span>
+                            </p>
+                          </li>
+                          <li data-start="629" data-end="687">
+                            <p data-start="631" data-end="687">
+                              <span class="_fadeIn_m1hgl_8">React </span
+                              ><span class="_fadeIn_m1hgl_8">Router </span
+                              ><span class="_fadeIn_m1hgl_8">controls </span
+                              ><span class="_fadeIn_m1hgl_8">navigation </span
+                              ><strong data-start="664" data-end="674"
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >within</span
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">that </span
+                              ><span class="_fadeIn_m1hgl_8">window.</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="689" data-end="692" />
+                        <h2 data-start="694" data-end="719">
+                          <span class="_fadeIn_m1hgl_8">🛠️ </span
+                          ><span class="_fadeIn_m1hgl_8">Step-</span
+                          ><span class="_fadeIn_m1hgl_8">by-</span
+                          ><span class="_fadeIn_m1hgl_8">Step </span
+                          ><span class="_fadeIn_m1hgl_8">Setup</span>
+                        </h2>
+                        <h3 data-start="721" data-end="783">
+                          <span class="_fadeIn_m1hgl_8">🔹 </span
+                          ><span class="_fadeIn_m1hgl_8">1. </span
+                          ><span class="_fadeIn_m1hgl_8">Use </span
+                          ><code data-start="735" data-end="760"
+                            >BrowserWindow.loadURL()</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">Route </span
+                          ><span class="_fadeIn_m1hgl_8">from </span
+                          ><span class="_fadeIn_m1hgl_8">Electron</span>
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="785"
+                          data-end="1302"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>// main/main.js
+const { app, BrowserWindow } = require('electron');
+const path = require('path');
+
+function createLoginWindow() {
+  const win = new BrowserWindow({ width: 500, height: 400 });
+  win.loadURL('http://localhost:5173/#/login'); // use hash route
+}
+
+function createDashboardWindow() {
+  const win = new BrowserWindow({ width: 1000, height: 700 });
+  win.loadURL('http://localhost:5173/#/dashboard');
+}
+
+app.whenReady().then(() =&gt; {
+  // Example: open login screen first
+  createLoginWindow();
+});
+</span></code></div></div></pre>
+                        <blockquote data-start="1304" data-end="1383">
+                          <p data-start="1306" data-end="1383">
+                            <span class="_fadeIn_m1hgl_8">💡 </span
+                            ><span class="_fadeIn_m1hgl_8">In </span
+                            ><span class="_fadeIn_m1hgl_8">production, </span
+                            ><span class="_fadeIn_m1hgl_8">use </span
+                            ><code data-start="1328" data-end="1382"
+                              >win.loadFile('dist/index.html', { hash: '#/login'
+                              })</code
+                            ><span class="_fadeIn_m1hgl_8">.</span>
+                          </p>
+                        </blockquote>
+                        <hr data-start="1385" data-end="1388" />
+                        <h3 data-start="1390" data-end="1459">
+                          <span class="_fadeIn_m1hgl_8">🔹 </span
+                          ><span class="_fadeIn_m1hgl_8">2. </span
+                          ><span class="_fadeIn_m1hgl_8">Use </span
+                          ><code data-start="1404" data-end="1416"
+                            >HashRouter</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">React (</span
+                          ><span class="_fadeIn_m1hgl_8">so </span
+                          ><span class="_fadeIn_m1hgl_8">deep </span
+                          ><span class="_fadeIn_m1hgl_8">links </span
+                          ><span class="_fadeIn_m1hgl_8">work </span
+                          ><span class="_fadeIn_m1hgl_8">with </span
+                          ><span class="_fadeIn_m1hgl_8">file://)</span>
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1461"
+                          data-end="1827"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">jsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>import { HashRouter, Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+
+function App() {
+  return (
+    &lt;HashRouter&gt;
+      &lt;Routes&gt;
+        &lt;Route path="/login" element={&lt;Login /&gt;} /&gt;
+        &lt;Route path="/dashboard/*" element={&lt;Dashboard /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/HashRouter&gt;
+  );
+}
+</span></code></div></div></pre>
+                        <hr data-start="1829" data-end="1832" />
+                        <h3 data-start="1834" data-end="1879">
+                          <span class="_fadeIn_m1hgl_8">🔹 </span
+                          ><span class="_fadeIn_m1hgl_8">3. </span
+                          ><span class="_fadeIn_m1hgl_8">In </span
+                          ><span class="_fadeIn_m1hgl_8">React, </span
+                          ><span class="_fadeIn_m1hgl_8">Route </span
+                          ><span class="_fadeIn_m1hgl_8">Internally </span
+                          ><span class="_fadeIn_m1hgl_8">as </span
+                          ><span class="_fadeIn_m1hgl_8">Usual</span>
+                        </h3>
+                        <p data-start="1881" data-end="2018">
+                          <span class="_fadeIn_m1hgl_8">You </span
+                          ><span class="_fadeIn_m1hgl_8">can </span
+                          ><span class="_fadeIn_m1hgl_8">navigate </span
+                          ><span class="_fadeIn_m1hgl_8">between </span
+                          ><code data-start="1906" data-end="1923"
+                            >/dashboard/home</code
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><code data-start="1925" data-end="1946"
+                            >/dashboard/settings</code
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><span class="_fadeIn_m1hgl_8">etc. — </span
+                          ><span class="_fadeIn_m1hgl_8">React </span
+                          ><span class="_fadeIn_m1hgl_8">Router </span
+                          ><span class="_fadeIn_m1hgl_8">handles </span
+                          ><span class="_fadeIn_m1hgl_8">that </span
+                          ><span class="_fadeIn_m1hgl_8">normally </span
+                          ><span class="_fadeIn_m1hgl_8">inside </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><span class="_fadeIn_m1hgl_8">dashboard </span
+                          ><span class="_fadeIn_m1hgl_8">window.</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2020"
+                          data-end="2142"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">jsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>&lt;Route path="/dashboard/home" element={&lt;Home /&gt;} /&gt;
+&lt;Route path="/dashboard/settings" element={&lt;Settings /&gt;} /&gt;
+</span></code></div></div></pre>
+                        <hr data-start="2144" data-end="2147" />
+                        <h2 data-start="2149" data-end="2172">
+                          <span class="_fadeIn_m1hgl_8">🎯 </span
+                          ><span class="_fadeIn_m1hgl_8">Example </span
+                          ><span class="_fadeIn_m1hgl_8">Use </span
+                          ><span class="_fadeIn_m1hgl_8">Cases</span>
+                        </h2>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="2174"
+                              data-end="2568"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="2174" data-end="2252">
+                                <tr data-start="2174" data-end="2252">
+                                  <th
+                                    data-start="2174"
+                                    data-end="2192"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8"
+                                      >Electron </span
+                                    ><span class="_fadeIn_m1hgl_8">Window</span>
+                                  </th>
+                                  <th
+                                    data-start="2192"
+                                    data-end="2224"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Route </span
+                                    ><span class="_fadeIn_m1hgl_8">You </span
+                                    ><span class="_fadeIn_m1hgl_8">Load</span>
+                                  </th>
+                                  <th
+                                    data-start="2224"
+                                    data-end="2252"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">React </span
+                                    ><span class="_fadeIn_m1hgl_8">Pages </span
+                                    ><span class="_fadeIn_m1hgl_8">Inside</span>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="2332" data-end="2568">
+                                <tr data-start="2332" data-end="2410">
+                                  <td
+                                    data-start="2332"
+                                    data-end="2350"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Login</span>
+                                  </td>
+                                  <td
+                                    data-start="2350"
+                                    data-end="2382"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="2352" data-end="2361"
+                                      >#/login</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2382"
+                                    data-end="2410"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Only </span
+                                    ><span class="_fadeIn_m1hgl_8">login </span
+                                    ><span class="_fadeIn_m1hgl_8">screen</span>
+                                  </td>
+                                </tr>
+                                <tr data-start="2411" data-end="2489">
+                                  <td
+                                    data-start="2411"
+                                    data-end="2429"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Main </span
+                                    ><span class="_fadeIn_m1hgl_8">App</span>
+                                  </td>
+                                  <td
+                                    data-start="2429"
+                                    data-end="2461"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="2431" data-end="2444"
+                                      >#/dashboard</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2461"
+                                    data-end="2489"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8"
+                                      >Dashboard, </span
+                                    ><span class="_fadeIn_m1hgl_8"
+                                      >Settings, </span
+                                    ><span class="_fadeIn_m1hgl_8">etc</span>
+                                  </td>
+                                </tr>
+                                <tr data-start="2490" data-end="2568">
+                                  <td
+                                    data-start="2490"
+                                    data-end="2508"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Popup</span>
+                                  </td>
+                                  <td
+                                    data-start="2508"
+                                    data-end="2540"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="2510" data-end="2528"
+                                      >#/popup/settings</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2540"
+                                    data-end="2568"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Small </span
+                                    ><span class="_fadeIn_m1hgl_8"
+                                      >settings </span
+                                    ><span class="_fadeIn_m1hgl_8">view</span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr data-start="2570" data-end="2573" />
+                        <h2 data-start="2575" data-end="2586">
+                          <span class="_fadeIn_m1hgl_8">⚠️ </span
+                          ><span class="_fadeIn_m1hgl_8">Notes</span>
+                        </h2>
+                        <ul data-start="2588" data-end="2826">
+                          <li data-start="2588" data-end="2659">
+                            <p data-start="2590" data-end="2659">
+                              <strong data-start="2590" data-end="2610"
+                                ><span class="_fadeIn_m1hgl_8">Use </span
+                                ><code data-start="2596" data-end="2608"
+                                  >HashRouter</code
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">to </span
+                              ><span class="_fadeIn_m1hgl_8">avoid </span
+                              ><span class="_fadeIn_m1hgl_8">issues </span
+                              ><span class="_fadeIn_m1hgl_8">with </span
+                              ><code data-start="2632" data-end="2641"
+                                >file://</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">and </span
+                              ><span class="_fadeIn_m1hgl_8">deep </span
+                              ><span class="_fadeIn_m1hgl_8">linking.</span>
+                            </p>
+                          </li>
+                          <li data-start="2660" data-end="2749">
+                            <p data-start="2662" data-end="2749">
+                              <span class="_fadeIn_m1hgl_8">Avoid </span
+                              ><span class="_fadeIn_m1hgl_8">switching </span
+                              ><span class="_fadeIn_m1hgl_8">windows </span
+                              ><em data-start="2686" data-end="2694"
+                                ><span class="_fadeIn_m1hgl_8">within</span></em
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">React </span
+                              ><span class="_fadeIn_m1hgl_8">Router — </span
+                              ><span class="_fadeIn_m1hgl_8">Electron </span
+                              ><span class="_fadeIn_m1hgl_8">should </span
+                              ><span class="_fadeIn_m1hgl_8">create/</span
+                              ><span class="_fadeIn_m1hgl_8">destroy </span
+                              ><span class="_fadeIn_m1hgl_8">windows.</span>
+                            </p>
+                          </li>
+                          <li data-start="2750" data-end="2826">
+                            <p data-start="2752" data-end="2826">
+                              <span class="_fadeIn_m1hgl_8">You </span
+                              ><span class="_fadeIn_m1hgl_8">can </span
+                              ><span class="_fadeIn_m1hgl_8">send </span
+                              ><span class="_fadeIn_m1hgl_8">data </span
+                              ><span class="_fadeIn_m1hgl_8">between </span
+                              ><span class="_fadeIn_m1hgl_8">windows </span
+                              ><span class="_fadeIn_m1hgl_8">via </span
+                              ><code data-start="2790" data-end="2803"
+                                >ipcRenderer</code
+                              ><span class="_fadeIn_m1hgl_8"> / </span
+                              ><code data-start="2806" data-end="2815"
+                                >ipcMain</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">if </span
+                              ><span class="_fadeIn_m1hgl_8">needed.</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="2828" data-end="2831" />
+                        <h2 data-start="2833" data-end="2877">
+                          <span class="_fadeIn_m1hgl_8">Bonus: </span
+                          ><span class="_fadeIn_m1hgl_8">Dynamic </span
+                          ><span class="_fadeIn_m1hgl_8">Window </span
+                          ><span class="_fadeIn_m1hgl_8">Creation </span
+                          ><span class="_fadeIn_m1hgl_8">from </span
+                          ><span class="_fadeIn_m1hgl_8">React</span>
+                        </h2>
+                        <p data-start="2879" data-end="2946">
+                          <span class="_fadeIn_m1hgl_8">You </span
+                          ><span class="_fadeIn_m1hgl_8">can </span
+                          ><span class="_fadeIn_m1hgl_8">send </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">message </span
+                          ><span class="_fadeIn_m1hgl_8">from </span
+                          ><span class="_fadeIn_m1hgl_8">React </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">Electron </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">open </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">new </span
+                          ><span class="_fadeIn_m1hgl_8">window:</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2948"
+                          data-end="3007"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>// In renderer
+window.electronAPI.openDashboard()
+</span></code></div></div></pre>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="3009"
+                          data-end="3229"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>// In preload.js
+contextBridge.exposeInMainWorld('electronAPI', {
+  openDashboard: () =&gt; ipcRenderer.send('open-dashboard')
+});
+
+// In main.js
+ipcMain.on('open-dashboard', () =&gt; {
+  createDashboardWindow();
+});
+</span></code></div></div></pre>
+                        <hr data-start="3231" data-end="3234" />
+                        <p
+                          data-start="3236"
+                          data-end="3372"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          <span class="_fadeIn_m1hgl_8">Let </span
+                          ><span class="_fadeIn_m1hgl_8">me </span
+                          ><span class="_fadeIn_m1hgl_8">know </span
+                          ><span class="_fadeIn_m1hgl_8">if </span
+                          ><span class="_fadeIn_m1hgl_8">you </span
+                          ><span class="_fadeIn_m1hgl_8">want </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">complete </span
+                          ><span class="_fadeIn_m1hgl_8">working </span
+                          ><span class="_fadeIn_m1hgl_8">starter </span
+                          ><span class="_fadeIn_m1hgl_8">with </span
+                          ><span class="_fadeIn_m1hgl_8">Electron, </span
+                          ><span class="_fadeIn_m1hgl_8">Vite, </span
+                          ><span class="_fadeIn_m1hgl_8">React, </span
+                          ><span class="_fadeIn_m1hgl_8">and </span
+                          ><span class="_fadeIn_m1hgl_8">hybrid </span
+                          ><span class="_fadeIn_m1hgl_8">routing — </span
+                          ><span class="_fadeIn_m1hgl_8">I </span
+                          ><span class="_fadeIn_m1hgl_8">can </span
+                          ><span class="_fadeIn_m1hgl_8">generate </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><span class="_fadeIn_m1hgl_8">template </span
+                          ><span class="_fadeIn_m1hgl_8">for </span
+                          ><span class="_fadeIn_m1hgl_8">you.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-9"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="92b81979-96f6-4ed6-9dd0-b936745388b8"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          what is the hash route?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-10"
+        data-scroll-anchor="true"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="0b0572c8-abee-4b6e-800f-af50d22fe542"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="208">
+                          <span class="_fadeIn_m1hgl_8">Great </span
+                          ><span class="_fadeIn_m1hgl_8">question! </span
+                          ><span class="_fadeIn_m1hgl_8">A </span
+                          ><strong data-start="18" data-end="32"
+                            ><span class="_fadeIn_m1hgl_8">hash </span
+                            ><span class="_fadeIn_m1hgl_8">route</span></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">is </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">way </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">implement </span
+                          ><span class="_fadeIn_m1hgl_8">routing </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">web </span
+                          ><span class="_fadeIn_m1hgl_8">applications </span
+                          ><span class="_fadeIn_m1hgl_8">that </span
+                          ><span class="_fadeIn_m1hgl_8">works </span
+                          ><strong data-start="94" data-end="126"
+                            ><span class="_fadeIn_m1hgl_8">without </span
+                            ><span class="_fadeIn_m1hgl_8">server </span
+                            ><span class="_fadeIn_m1hgl_8"
+                              >configuration</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><span class="_fadeIn_m1hgl_8">which </span
+                          ><span class="_fadeIn_m1hgl_8">is </span
+                          ><span class="_fadeIn_m1hgl_8">why </span
+                          ><span class="_fadeIn_m1hgl_8">it's </span
+                          ><span class="_fadeIn_m1hgl_8">commonly </span
+                          ><span class="_fadeIn_m1hgl_8">used </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><strong data-start="163" data-end="180"
+                            ><span class="_fadeIn_m1hgl_8">Electron </span
+                            ><span class="_fadeIn_m1hgl_8">apps</span></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">and </span
+                          ><strong data-start="185" data-end="207"
+                            ><span class="_fadeIn_m1hgl_8">static </span
+                            ><span class="_fadeIn_m1hgl_8"
+                              >deployments</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8">.</span>
+                        </p>
+                        <hr data-start="210" data-end="213" />
+                        <h2 data-start="215" data-end="242">
+                          <span class="_fadeIn_m1hgl_8">🔑 </span
+                          ><span class="_fadeIn_m1hgl_8">What </span
+                          ><span class="_fadeIn_m1hgl_8">is </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">Hash </span
+                          ><span class="_fadeIn_m1hgl_8">Route?</span>
+                        </h2>
+                        <p data-start="244" data-end="315">
+                          <span class="_fadeIn_m1hgl_8">A </span
+                          ><strong data-start="246" data-end="260"
+                            ><span class="_fadeIn_m1hgl_8">hash </span
+                            ><span class="_fadeIn_m1hgl_8">route</span></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">uses </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><code data-start="270" data-end="273">#</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">symbol </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><span class="_fadeIn_m1hgl_8">URL </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">simulate </span
+                          ><span class="_fadeIn_m1hgl_8">navigation.</span>
+                        </p>
+                        <h3 data-start="317" data-end="332">
+                          <span class="_fadeIn_m1hgl_8">📌 </span
+                          ><span class="_fadeIn_m1hgl_8">Example:</span>
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="334"
+                          data-end="375"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]"></div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>http://localhost:5173/#/dashboard
+</span></code></div></div></pre>
+                        <p data-start="377" data-end="382">
+                          <span class="_fadeIn_m1hgl_8">Here:</span>
+                        </p>
+                        <ul data-start="383" data-end="593">
+                          <li data-start="383" data-end="437">
+                            <p data-start="385" data-end="437">
+                              <span class="_fadeIn_m1hgl_8">The </span
+                              ><span class="_fadeIn_m1hgl_8">browser </span
+                              ><span class="_fadeIn_m1hgl_8">loads </span
+                              ><code data-start="403" data-end="415"
+                                >index.html</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">from </span
+                              ><code data-start="421" data-end="437"
+                                >localhost:5173</code
+                              >
+                            </p>
+                          </li>
+                          <li data-start="438" data-end="510">
+                            <p data-start="440" data-end="510">
+                              <span class="_fadeIn_m1hgl_8">The </span
+                              ><span class="_fadeIn_m1hgl_8">part </span
+                              ><span class="_fadeIn_m1hgl_8">after </span
+                              ><code data-start="455" data-end="458">#</code
+                              ><span class="_fadeIn_m1hgl_8"> (</span
+                              ><span class="_fadeIn_m1hgl_8">i.</span
+                              ><span class="_fadeIn_m1hgl_8">e., </span
+                              ><code data-start="466" data-end="479"
+                                >#/dashboard</code
+                              ><span class="_fadeIn_m1hgl_8">) </span
+                              ><span class="_fadeIn_m1hgl_8">is </span
+                              ><strong data-start="484" data-end="510"
+                                ><span class="_fadeIn_m1hgl_8">not </span
+                                ><span class="_fadeIn_m1hgl_8">sent </span
+                                ><span class="_fadeIn_m1hgl_8">to </span
+                                ><span class="_fadeIn_m1hgl_8">the </span
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >server</span
+                                ></strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="511" data-end="593">
+                            <p data-start="513" data-end="593">
+                              <span class="_fadeIn_m1hgl_8">React </span
+                              ><span class="_fadeIn_m1hgl_8">Router (</span
+                              ><span class="_fadeIn_m1hgl_8">or </span
+                              ><span class="_fadeIn_m1hgl_8">your </span
+                              ><span class="_fadeIn_m1hgl_8">frontend </span
+                              ><span class="_fadeIn_m1hgl_8">router) </span
+                              ><span class="_fadeIn_m1hgl_8">reads </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">hash </span
+                              ><span class="_fadeIn_m1hgl_8">and </span
+                              ><span class="_fadeIn_m1hgl_8">decides </span
+                              ><span class="_fadeIn_m1hgl_8">what </span
+                              ><span class="_fadeIn_m1hgl_8">to </span
+                              ><span class="_fadeIn_m1hgl_8">render</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="595" data-end="598" />
+                        <h2 data-start="600" data-end="618">
+                          <span class="_fadeIn_m1hgl_8">🔄 </span
+                          ><span class="_fadeIn_m1hgl_8">How </span
+                          ><span class="_fadeIn_m1hgl_8">It </span
+                          ><span class="_fadeIn_m1hgl_8">Works</span>
+                        </h2>
+                        <p data-start="620" data-end="704">
+                          <span class="_fadeIn_m1hgl_8">Browsers </span
+                          ><span class="_fadeIn_m1hgl_8">treat </span
+                          ><span class="_fadeIn_m1hgl_8">anything </span
+                          ><span class="_fadeIn_m1hgl_8">after </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><code data-start="652" data-end="655">#</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">URL </span
+                          ><span class="_fadeIn_m1hgl_8">as </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><strong data-start="670" data-end="693"
+                            ><span class="_fadeIn_m1hgl_8">fragment </span
+                            ><span class="_fadeIn_m1hgl_8"
+                              >identifier</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><span class="_fadeIn_m1hgl_8">which </span
+                          ><span class="_fadeIn_m1hgl_8">is:</span>
+                        </p>
+                        <ul data-start="705" data-end="784">
+                          <li data-start="705" data-end="729">
+                            <p data-start="707" data-end="729">
+                              <span class="_fadeIn_m1hgl_8">Not </span
+                              ><span class="_fadeIn_m1hgl_8">sent </span
+                              ><span class="_fadeIn_m1hgl_8">to </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">server</span>
+                            </p>
+                          </li>
+                          <li data-start="730" data-end="784">
+                            <p data-start="732" data-end="784">
+                              <span class="_fadeIn_m1hgl_8">Handled </span
+                              ><span class="_fadeIn_m1hgl_8">entirely </span
+                              ><span class="_fadeIn_m1hgl_8">on </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><strong data-start="756" data-end="771"
+                                ><span class="_fadeIn_m1hgl_8">client </span
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >side</span
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8"> (</span
+                              ><span class="_fadeIn_m1hgl_8">JavaScript)</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="786" data-end="851">
+                          <span class="_fadeIn_m1hgl_8">This </span
+                          ><span class="_fadeIn_m1hgl_8">is </span
+                          ><span class="_fadeIn_m1hgl_8">ideal </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><strong data-start="803" data-end="815"
+                            ><span class="_fadeIn_m1hgl_8"
+                              >Electron</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">and </span
+                          ><strong data-start="820" data-end="843"
+                            ><span class="_fadeIn_m1hgl_8">static </span
+                            ><span class="_fadeIn_m1hgl_8">site </span
+                            ><span class="_fadeIn_m1hgl_8"
+                              >hosting</span
+                            ></strong
+                          ><span class="_fadeIn_m1hgl_8">, </span
+                          ><span class="_fadeIn_m1hgl_8">where:</span>
+                        </p>
+                        <ul data-start="852" data-end="956">
+                          <li data-start="852" data-end="911">
+                            <p data-start="854" data-end="911">
+                              <span class="_fadeIn_m1hgl_8">There’s </span
+                              ><span class="_fadeIn_m1hgl_8">no </span
+                              ><span class="_fadeIn_m1hgl_8">backend </span
+                              ><span class="_fadeIn_m1hgl_8">server </span
+                              ><span class="_fadeIn_m1hgl_8">to </span
+                              ><span class="_fadeIn_m1hgl_8">respond </span
+                              ><span class="_fadeIn_m1hgl_8">with </span
+                              ><span class="_fadeIn_m1hgl_8">different </span
+                              ><span class="_fadeIn_m1hgl_8">pages</span>
+                            </p>
+                          </li>
+                          <li data-start="912" data-end="956">
+                            <p data-start="914" data-end="956">
+                              <span class="_fadeIn_m1hgl_8">Everything </span
+                              ><span class="_fadeIn_m1hgl_8">is </span
+                              ><span class="_fadeIn_m1hgl_8">served </span
+                              ><span class="_fadeIn_m1hgl_8">from </span
+                              ><span class="_fadeIn_m1hgl_8">one </span
+                              ><code data-start="944" data-end="956"
+                                >index.html</code
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="958" data-end="961" />
+                        <h2 data-start="963" data-end="1015">
+                          <span class="_fadeIn_m1hgl_8">⚙️ </span
+                          ><code data-start="969" data-end="981"
+                            >HashRouter</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">vs </span
+                          ><code data-start="985" data-end="1000"
+                            >BrowserRouter</code
+                          ><span class="_fadeIn_m1hgl_8"> (</span
+                          ><span class="_fadeIn_m1hgl_8">React </span
+                          ><span class="_fadeIn_m1hgl_8">Router)</span>
+                        </h2>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="1017"
+                              data-end="1498"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="1017" data-end="1136">
+                                <tr data-start="1017" data-end="1136">
+                                  <th
+                                    data-start="1017"
+                                    data-end="1035"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Router</span>
+                                  </th>
+                                  <th
+                                    data-start="1035"
+                                    data-end="1069"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">URL </span
+                                    ><span class="_fadeIn_m1hgl_8">Format</span>
+                                  </th>
+                                  <th
+                                    data-start="1069"
+                                    data-end="1110"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">Works </span
+                                    ><span class="_fadeIn_m1hgl_8">with </span
+                                    ><code data-start="1082" data-end="1091"
+                                      >file://</code
+                                    ><span class="_fadeIn_m1hgl_8"> </span
+                                    ><span class="_fadeIn_m1hgl_8">or </span
+                                    ><span class="_fadeIn_m1hgl_8">static </span
+                                    ><span class="_fadeIn_m1hgl_8"
+                                      >servers</span
+                                    >
+                                  </th>
+                                  <th
+                                    data-start="1110"
+                                    data-end="1136"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8"
+                                      >Requires </span
+                                    ><span class="_fadeIn_m1hgl_8">server </span
+                                    ><span class="_fadeIn_m1hgl_8">config</span>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="1259" data-end="1498">
+                                <tr data-start="1259" data-end="1378">
+                                  <td
+                                    data-start="1259"
+                                    data-end="1277"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1261" data-end="1273"
+                                      >HashRouter</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1277"
+                                    data-end="1311"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1279" data-end="1305"
+                                      >http://localhost/#/about</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1311"
+                                    data-end="1352"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">✅ </span
+                                    ><span class="_fadeIn_m1hgl_8">Yes</span>
+                                  </td>
+                                  <td
+                                    data-start="1352"
+                                    data-end="1378"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">❌ </span
+                                    ><span class="_fadeIn_m1hgl_8">No</span>
+                                  </td>
+                                </tr>
+                                <tr data-start="1379" data-end="1498">
+                                  <td
+                                    data-start="1379"
+                                    data-end="1397"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1381" data-end="1396"
+                                      >BrowserRouter</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1397"
+                                    data-end="1431"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1399" data-end="1423"
+                                      >http://localhost/about</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1431"
+                                    data-end="1472"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">❌ </span
+                                    ><span class="_fadeIn_m1hgl_8">No (</span
+                                    ><span class="_fadeIn_m1hgl_8">breaks </span
+                                    ><span class="_fadeIn_m1hgl_8">with </span
+                                    ><span class="_fadeIn_m1hgl_8"
+                                      >file://)</span
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1472"
+                                    data-end="1498"
+                                    data-col-size="sm"
+                                  >
+                                    <span class="_fadeIn_m1hgl_8">✅ </span
+                                    ><span class="_fadeIn_m1hgl_8">Yes (</span
+                                    ><span class="_fadeIn_m1hgl_8">needs </span
+                                    ><span class="_fadeIn_m1hgl_8"
+                                      >server)</span
+                                    >
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 50px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr data-start="1500" data-end="1503" />
+                        <h2 data-start="1505" data-end="1547">
+                          <span class="_fadeIn_m1hgl_8">📦 </span
+                          ><span class="_fadeIn_m1hgl_8">Why </span
+                          ><span class="_fadeIn_m1hgl_8">Hash </span
+                          ><span class="_fadeIn_m1hgl_8">Routes </span
+                          ><span class="_fadeIn_m1hgl_8">Are </span
+                          ><span class="_fadeIn_m1hgl_8">Used </span
+                          ><span class="_fadeIn_m1hgl_8">in </span
+                          ><span class="_fadeIn_m1hgl_8">Electron</span>
+                        </h2>
+                        <p data-start="1549" data-end="1576">
+                          <span class="_fadeIn_m1hgl_8">Electron </span
+                          ><span class="_fadeIn_m1hgl_8">loads </span
+                          ><span class="_fadeIn_m1hgl_8">files </span
+                          ><span class="_fadeIn_m1hgl_8">using:</span>
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1578"
+                          data-end="1620"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>win.loadFile('dist/index.html');
+</span></code></div></div></pre>
+                        <p data-start="1622" data-end="1662">
+                          <span class="_fadeIn_m1hgl_8">This </span
+                          ><span class="_fadeIn_m1hgl_8">uses </span
+                          ><span class="_fadeIn_m1hgl_8">the </span
+                          ><code data-start="1636" data-end="1645">file://</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">protocol, </span
+                          ><span class="_fadeIn_m1hgl_8">which:</span>
+                        </p>
+                        <ul data-start="1663" data-end="1761">
+                          <li data-start="1663" data-end="1705">
+                            <p data-start="1665" data-end="1705">
+                              <span class="_fadeIn_m1hgl_8">Doesn’t </span
+                              ><span class="_fadeIn_m1hgl_8">support </span
+                              ><span class="_fadeIn_m1hgl_8">clean </span
+                              ><span class="_fadeIn_m1hgl_8">URLs </span
+                              ><span class="_fadeIn_m1hgl_8">like </span
+                              ><code data-start="1697" data-end="1705"
+                                >/about</code
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1706" data-end="1761">
+                            <p data-start="1708" data-end="1761">
+                              <span class="_fadeIn_m1hgl_8">Will </span
+                              ><strong data-start="1713" data-end="1722"
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >break</span
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">if </span
+                              ><span class="_fadeIn_m1hgl_8">you </span
+                              ><span class="_fadeIn_m1hgl_8">use </span
+                              ><code data-start="1734" data-end="1749"
+                                >BrowserRouter</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">and </span
+                              ><span class="_fadeIn_m1hgl_8">refresh</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1763" data-end="1798">
+                          <span class="_fadeIn_m1hgl_8">✅ </span
+                          ><code data-start="1765" data-end="1777"
+                            >HashRouter</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">avoids </span
+                          ><span class="_fadeIn_m1hgl_8">this </span
+                          ><span class="_fadeIn_m1hgl_8">because:</span>
+                        </p>
+                        <ul data-start="1799" data-end="1889">
+                          <li data-start="1799" data-end="1838">
+                            <p data-start="1801" data-end="1838">
+                              <span class="_fadeIn_m1hgl_8">It </span
+                              ><span class="_fadeIn_m1hgl_8">never </span
+                              ><span class="_fadeIn_m1hgl_8">touches </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">actual </span
+                              ><span class="_fadeIn_m1hgl_8">file </span
+                              ><span class="_fadeIn_m1hgl_8">path</span>
+                            </p>
+                          </li>
+                          <li data-start="1839" data-end="1889">
+                            <p data-start="1841" data-end="1889">
+                              <span class="_fadeIn_m1hgl_8">Routing </span
+                              ><span class="_fadeIn_m1hgl_8">happens </span
+                              ><span class="_fadeIn_m1hgl_8">completely </span
+                              ><span class="_fadeIn_m1hgl_8">inside </span
+                              ><span class="_fadeIn_m1hgl_8">your </span
+                              ><span class="_fadeIn_m1hgl_8">React </span
+                              ><span class="_fadeIn_m1hgl_8">app</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1891" data-end="1894" />
+                        <h2 data-start="1896" data-end="1909">
+                          <span class="_fadeIn_m1hgl_8">🔁 </span
+                          ><span class="_fadeIn_m1hgl_8">Summary</span>
+                        </h2>
+                        <ul data-start="1911" data-end="2138">
+                          <li data-start="1911" data-end="1965">
+                            <p data-start="1913" data-end="1965">
+                              <strong data-start="1913" data-end="1927"
+                                ><span class="_fadeIn_m1hgl_8">Hash </span
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >route</span
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8">: </span
+                              ><span class="_fadeIn_m1hgl_8">a </span
+                              ><span class="_fadeIn_m1hgl_8">route </span
+                              ><span class="_fadeIn_m1hgl_8">using </span
+                              ><code data-start="1943" data-end="1946">#</code
+                              ><span class="_fadeIn_m1hgl_8">, </span
+                              ><span class="_fadeIn_m1hgl_8">like </span
+                              ><code data-start="1953" data-end="1965"
+                                >#/settings</code
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1966" data-end="2001">
+                            <p data-start="1968" data-end="2001">
+                              <span class="_fadeIn_m1hgl_8">Handled </span
+                              ><span class="_fadeIn_m1hgl_8">completely </span
+                              ><span class="_fadeIn_m1hgl_8">in </span
+                              ><span class="_fadeIn_m1hgl_8">the </span
+                              ><span class="_fadeIn_m1hgl_8">browser</span>
+                            </p>
+                          </li>
+                          <li data-start="2002" data-end="2079">
+                            <p data-start="2004" data-end="2079">
+                              <span class="_fadeIn_m1hgl_8">Works </span
+                              ><span class="_fadeIn_m1hgl_8">perfectly </span
+                              ><span class="_fadeIn_m1hgl_8">in </span
+                              ><strong data-start="2023" data-end="2035"
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >Electron</span
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8">, </span
+                              ><strong data-start="2037" data-end="2053"
+                                ><span class="_fadeIn_m1hgl_8">static </span
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >sites</span
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8">, </span
+                              ><span class="_fadeIn_m1hgl_8">and </span
+                              ><strong data-start="2059" data-end="2070"
+                                ><span class="_fadeIn_m1hgl_8"
+                                  >file://</span
+                                ></strong
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">contexts</span>
+                            </p>
+                          </li>
+                          <li data-start="2080" data-end="2138">
+                            <p data-start="2082" data-end="2138">
+                              <span class="_fadeIn_m1hgl_8">Use </span
+                              ><code data-start="2086" data-end="2098"
+                                >HashRouter</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">from </span
+                              ><code data-start="2104" data-end="2122"
+                                >react-router-dom</code
+                              ><span class="_fadeIn_m1hgl_8"> </span
+                              ><span class="_fadeIn_m1hgl_8">to </span
+                              ><span class="_fadeIn_m1hgl_8">make </span
+                              ><span class="_fadeIn_m1hgl_8">it </span
+                              ><span class="_fadeIn_m1hgl_8">work</span>
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="2140" data-end="2143" />
+                        <p
+                          data-start="2145"
+                          data-end="2239"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          <span class="_fadeIn_m1hgl_8">Let </span
+                          ><span class="_fadeIn_m1hgl_8">me </span
+                          ><span class="_fadeIn_m1hgl_8">know </span
+                          ><span class="_fadeIn_m1hgl_8">if </span
+                          ><span class="_fadeIn_m1hgl_8">you'd </span
+                          ><span class="_fadeIn_m1hgl_8">like </span
+                          ><span class="_fadeIn_m1hgl_8">to </span
+                          ><span class="_fadeIn_m1hgl_8">see </span
+                          ><span class="_fadeIn_m1hgl_8">a </span
+                          ><span class="_fadeIn_m1hgl_8">working </span
+                          ><span class="_fadeIn_m1hgl_8">code </span
+                          ><span class="_fadeIn_m1hgl_8">example </span
+                          ><span class="_fadeIn_m1hgl_8">using </span
+                          ><code data-start="2207" data-end="2219"
+                            >HashRouter</code
+                          ><span class="_fadeIn_m1hgl_8"> </span
+                          ><span class="_fadeIn_m1hgl_8">vs </span
+                          ><code data-start="2223" data-end="2238"
+                            >BrowserRouter</code
+                          ><span class="_fadeIn_m1hgl_8">.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
