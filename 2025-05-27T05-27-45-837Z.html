@@ -1,0 +1,669 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Generate username-based gradient</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="2a669d5e-be92-42af-ae02-473bbc3e4e06"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          import color from "tinycolor2"; async function
+                          hash(str: string): Promise&lt;number&gt; { let sum =
+                          0; const buffer = await crypto.subtle.digest('SHA-1',
+                          new TextEncoder().encode(str)) for (const n of new
+                          Uint8Array(buffer)) { sum += n; } return sum; } async
+                          function hue(str: string): Promise&lt;number&gt; {
+                          const n = await hash(str); return n % 360; } export
+                          async function generateGradient(username: string) {
+                          const h = await hue(username); const c1 = color({ h,
+                          s: 0.95, l: 0.5 }); const second =
+                          c1.triad()[1].toHexString(); return { fromColor:
+                          c1.toHexString(), toColor: second, }; } explain this
+                          code to me
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="63790823-b209-4098-a836-b9b1664db03a"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="170">
+                          Sure! This TypeScript code defines an asynchronous
+                          function that generates a
+                          <strong data-start="77" data-end="95"
+                            >color gradient</strong
+                          >
+                          based on a
+                          <strong data-start="107" data-end="126"
+                            >username string</strong
+                          >. Here's a breakdown of what each part does:
+                        </p>
+                        <hr data-start="172" data-end="175" />
+                        <h3 data-start="177" data-end="210">
+                          1.
+                          <strong data-start="184" data-end="210"
+                            >Importing
+                            <code data-start="196" data-end="208"
+                              >tinycolor2</code
+                            ></strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="211"
+                          data-end="252"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>import color from "tinycolor2";
+</span></code></div></div></pre>
+                        <ul data-start="253" data-end="416">
+                          <li data-start="253" data-end="416">
+                            <p data-start="255" data-end="416">
+                              This imports the
+                              <code data-start="272" data-end="284"
+                                >tinycolor2</code
+                              >
+                              library, which simplifies color manipulation
+                              (e.g., changing hues, converting formats,
+                              generating color schemes like triads, etc.).
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="418" data-end="421" />
+                        <h3 data-start="423" data-end="462">
+                          2.
+                          <strong data-start="430" data-end="462"
+                            ><code data-start="432" data-end="451"
+                              >hash(str: string)</code
+                            >
+                            function</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="463"
+                          data-end="701"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>async function hash(str: string): Promise&lt;number&gt; {
+  let sum = 0;
+  const buffer = await crypto.subtle.digest('SHA-1', new TextEncoder().encode(str))
+  for (const n of new Uint8Array(buffer)) {
+    sum += n;
+  }
+  return sum;
+}
+</span></code></div></div></pre>
+                        <ul data-start="702" data-end="970">
+                          <li data-start="702" data-end="890">
+                            <p data-start="704" data-end="718">
+                              This function:
+                            </p>
+                            <ul data-start="721" data-end="890">
+                              <li data-start="721" data-end="831">
+                                <p data-start="723" data-end="831">
+                                  Uses
+                                  <code data-start="728" data-end="735"
+                                    >SHA-1</code
+                                  >
+                                  hashing to convert a string (e.g., a username)
+                                  into a cryptographic hash (a sequence of
+                                  bytes).
+                                </p>
+                              </li>
+                              <li data-start="834" data-end="890">
+                                <p data-start="836" data-end="890">
+                                  Sums all the bytes in the hash to get a single
+                                  number.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="891" data-end="970">
+                            <p data-start="893" data-end="970">
+                              This number becomes a consistent but unique
+                              "signature" for the input string.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="972" data-end="975" />
+                        <h3 data-start="977" data-end="1015">
+                          3.
+                          <strong data-start="984" data-end="1015"
+                            ><code data-start="986" data-end="1004"
+                              >hue(str: string)</code
+                            >
+                            function</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1016"
+                          data-end="1125"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>async function hue(str: string): Promise&lt;number&gt; {
+  const n = await hash(str);
+  return n % 360;
+}
+</span></code></div></div></pre>
+                        <ul data-start="1126" data-end="1317">
+                          <li data-start="1126" data-end="1246">
+                            <p data-start="1128" data-end="1246">
+                              This converts the hash value into a
+                              <strong data-start="1164" data-end="1171"
+                                >hue</strong
+                              >
+                              value (0–359), suitable for HSL (Hue, Saturation,
+                              Lightness) color models.
+                            </p>
+                          </li>
+                          <li data-start="1247" data-end="1317">
+                            <p data-start="1249" data-end="1317">
+                              It ensures that each string maps to a unique hue
+                              on the color wheel.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1319" data-end="1322" />
+                        <h3 data-start="1324" data-end="1380">
+                          4.
+                          <strong data-start="1331" data-end="1380"
+                            ><code data-start="1333" data-end="1369"
+                              >generateGradient(username: string)</code
+                            >
+                            function</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1381"
+                          data-end="1645"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>export async function generateGradient(username: string) {
+  const h = await hue(username);
+  const c1 = color({ h, s: 0.95, l: 0.5 });
+  const second = c1.triad()[1].toHexString();
+
+  return {
+    fromColor: c1.toHexString(),
+    toColor: second,
+  };
+}
+</span></code></div></div></pre>
+                        <p data-start="1647" data-end="1694">
+                          This is the main function. Here's what it does:
+                        </p>
+                        <ul data-start="1695" data-end="2194">
+                          <li data-start="1695" data-end="1762">
+                            <p data-start="1697" data-end="1762">
+                              <strong data-start="1697" data-end="1722"
+                                ><code data-start="1699" data-end="1720"
+                                  >await hue(username)</code
+                                ></strong
+                              >: Generates a hue based on the username.
+                            </p>
+                          </li>
+                          <li data-start="1763" data-end="1854">
+                            <p data-start="1765" data-end="1854">
+                              <strong data-start="1765" data-end="1800"
+                                ><code data-start="1767" data-end="1798"
+                                  >color({ h, s: 0.95, l: 0.5 })</code
+                                ></strong
+                              >: Creates a bright, colorful base color in HSL
+                              format.
+                            </p>
+                          </li>
+                          <li data-start="1855" data-end="1993">
+                            <p data-start="1857" data-end="1993">
+                              <strong data-start="1857" data-end="1873"
+                                ><code data-start="1859" data-end="1871"
+                                  >c1.triad()</code
+                                ></strong
+                              >: Generates a
+                              <strong data-start="1887" data-end="1911"
+                                >triadic color scheme</strong
+                              >
+                              based on the base color (three colors evenly
+                              spaced 120° apart on the hue wheel).
+                            </p>
+                          </li>
+                          <li data-start="1994" data-end="2069">
+                            <p data-start="1996" data-end="2069">
+                              <strong data-start="1996" data-end="2024"
+                                ><code data-start="1998" data-end="2022"
+                                  >second = c1.triad()[1]</code
+                                ></strong
+                              >: Picks the
+                              <strong data-start="2036" data-end="2046"
+                                >second</strong
+                              >
+                              color from that triad.
+                            </p>
+                          </li>
+                          <li data-start="2070" data-end="2194">
+                            <p data-start="2072" data-end="2119">
+                              <strong data-start="2072" data-end="2083"
+                                >Returns</strong
+                              >
+                              an object with two hex color codes:
+                            </p>
+                            <ul data-start="2122" data-end="2194">
+                              <li data-start="2122" data-end="2152">
+                                <p data-start="2124" data-end="2152">
+                                  <code data-start="2124" data-end="2135"
+                                    >fromColor</code
+                                  >: The base color.
+                                </p>
+                              </li>
+                              <li data-start="2155" data-end="2194">
+                                <p data-start="2157" data-end="2194">
+                                  <code data-start="2157" data-end="2166"
+                                    >toColor</code
+                                  >: The secondary triad color.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <hr data-start="2196" data-end="2199" />
+                        <h3 data-start="2201" data-end="2224">
+                          ✅
+                          <strong data-start="2207" data-end="2224"
+                            >What It's For</strong
+                          >
+                        </h3>
+                        <p data-start="2225" data-end="2245">
+                          This can be used to:
+                        </p>
+                        <ul data-start="2246" data-end="2406">
+                          <li data-start="2246" data-end="2329">
+                            <p data-start="2248" data-end="2329">
+                              Generate consistent but visually diverse color
+                              gradients for different usernames.
+                            </p>
+                          </li>
+                          <li data-start="2330" data-end="2406">
+                            <p data-start="2332" data-end="2406">
+                              Assign avatars, profile themes, or background
+                              gradients uniquely per user.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="2408" data-end="2411" />
+                        <p
+                          data-start="2413"
+                          data-end="2528"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Would you like me to show a sample usage or visual
+                          example of how this gradient would look for a specific
+                          username?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="5f394a86-1418-4c49-b6dd-64294a58aec1"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          Is the color guaranteed to be unique?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="true"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="e1b75cf3-e5ae-4bd0-9f2c-6108fe3ada09"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="150">
+                          Great question.
+                          <strong data-start="16" data-end="79"
+                            >No, the color is
+                            <em data-start="35" data-end="40">not</em>
+                            guaranteed to be unique per username</strong
+                          >, but it's
+                          <em data-start="90" data-end="103">very likely</em> to
+                          be distinct for most usernames. Here's why:
+                        </p>
+                        <hr data-start="152" data-end="155" />
+                        <h3 data-start="157" data-end="197">
+                          🔑 How Uniqueness Works in This Code
+                        </h3>
+                        <ol data-start="199" data-end="852">
+                          <li data-start="199" data-end="478">
+                            <p data-start="202" data-end="219">
+                              <strong data-start="202" data-end="219"
+                                >Hashing step:</strong
+                              >
+                            </p>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="223"
+                              data-end="320"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>const buffer = await crypto.subtle.digest('SHA-1', new TextEncoder().encode(str))
+</span></code></div></div></pre>
+                            <ul data-start="324" data-end="478">
+                              <li data-start="324" data-end="421">
+                                <p data-start="326" data-end="421">
+                                  <code data-start="326" data-end="333"
+                                    >SHA-1</code
+                                  >
+                                  produces a 160-bit (20-byte) hash — a large
+                                  space that reduces the chance of collision.
+                                </p>
+                              </li>
+                              <li data-start="425" data-end="478">
+                                <p data-start="427" data-end="478">
+                                  But the next step
+                                  <em data-start="445" data-end="454"
+                                    >reduces</em
+                                  >
+                                  this space drastically:
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="480" data-end="678">
+                            <p data-start="483" data-end="496">
+                              <strong data-start="483" data-end="496"
+                                >Hash sum:</strong
+                              >
+                            </p>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="500"
+                              data-end="593"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>let sum = 0;
+for (const n of new Uint8Array(buffer)) {
+  sum += n;
+}
+</span></code></div></div></pre>
+                            <ul data-start="597" data-end="678">
+                              <li data-start="597" data-end="678">
+                                <p data-start="599" data-end="678">
+                                  This adds up all 20 bytes, yielding a number
+                                  between
+                                  <code data-start="652" data-end="655">0</code>
+                                  and
+                                  <code data-start="660" data-end="677"
+                                    >20 * 255 = 5100</code
+                                  >.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="680" data-end="852">
+                            <p data-start="683" data-end="708">
+                              <strong data-start="683" data-end="708"
+                                >Hue range limitation:</strong
+                              >
+                            </p>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="712"
+                              data-end="743"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>return n % 360;
+</span></code></div></div></pre>
+                            <ul data-start="747" data-end="852">
+                              <li data-start="747" data-end="804">
+                                <p data-start="749" data-end="804">
+                                  This reduces the sum to a number between
+                                  <code data-start="790" data-end="793">0</code>
+                                  and
+                                  <code data-start="798" data-end="803"
+                                    >359</code
+                                  >.
+                                </p>
+                              </li>
+                              <li data-start="808" data-end="852">
+                                <p data-start="810" data-end="852">
+                                  So
+                                  <strong data-start="813" data-end="845"
+                                    >only 360 possible hue values</strong
+                                  >
+                                  exist.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ol>
+                        <hr data-start="854" data-end="857" />
+                        <h3 data-start="859" data-end="895">
+                          🎨 Color Collisions Are Possible
+                        </h3>
+                        <ul data-start="897" data-end="1153">
+                          <li data-start="897" data-end="998">
+                            <p data-start="899" data-end="998">
+                              There are
+                              <strong data-start="909" data-end="949"
+                                >far more than 360 possible usernames</strong
+                              >, so
+                              <strong data-start="954" data-end="997"
+                                >many usernames will map to the same hue</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="999" data-end="1153">
+                            <p data-start="1001" data-end="1153">
+                              Even though the hues may be spread out, collisions
+                              are inevitable when the domain of inputs is much
+                              larger than the output range (pigeonhole
+                              principle).
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1155" data-end="1158" />
+                        <h3 data-start="1160" data-end="1185">
+                          🟨 Is That a Problem?
+                        </h3>
+                        <p data-start="1187" data-end="1203">
+                          Not necessarily:
+                        </p>
+                        <ul data-start="1204" data-end="1390">
+                          <li data-start="1204" data-end="1279">
+                            <p data-start="1206" data-end="1279">
+                              The goal is to have visually
+                              <em data-start="1235" data-end="1244">diverse</em>
+                              gradients — not strict uniqueness.
+                            </p>
+                          </li>
+                          <li data-start="1280" data-end="1390">
+                            <p data-start="1282" data-end="1390">
+                              It works well for UI personalization, where it's
+                              acceptable if two users occasionally get the same
+                              gradient.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1392" data-end="1395" />
+                        <h3 data-start="1397" data-end="1440">
+                          ✅ How to Improve Uniqueness (If Needed)
+                        </h3>
+                        <p data-start="1442" data-end="1495">
+                          If you want to reduce the chance of color collisions:
+                        </p>
+                        <ul data-start="1496" data-end="1866">
+                          <li data-start="1496" data-end="1614">
+                            <p data-start="1498" data-end="1614">
+                              <strong data-start="1498" data-end="1528"
+                                >Use more of the SHA-1 hash</strong
+                              >
+                              (e.g., extract multiple properties from different
+                              bytes: hue, saturation, lightness).
+                            </p>
+                          </li>
+                          <li data-start="1615" data-end="1786">
+                            <p data-start="1617" data-end="1649">
+                              <strong data-start="1617" data-end="1648"
+                                >Use multiple HSL properties</strong
+                              >:
+                            </p>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="1652"
+                              data-end="1786"
+                            ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>const h = hash1 % 360;
+const s = 0.5 + (hash2 % 50) / 100; // 0.5–1.0
+const l = 0.4 + (hash3 % 20) / 100; // 0.4–0.6
+</span></code></div></div></pre>
+                          </li>
+                          <li data-start="1787" data-end="1866">
+                            <p data-start="1789" data-end="1866">
+                              This expands the number of distinct colors
+                              significantly (not just 360 hues).
+                            </p>
+                          </li>
+                        </ul>
+                        <p
+                          data-start="1868"
+                          data-end="1954"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Let me know if you’d like a version that increases
+                          uniqueness or minimizes collisions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
