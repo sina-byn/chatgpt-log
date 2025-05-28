@@ -1,0 +1,1805 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Efficient Redirect Management</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="86fb783a-db5c-4933-991e-5833213a60d1"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How to handle lots of redirects efficiently in my
+                          next.js app?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="ff494a01-0528-43aa-a2dc-9cc4c64bf9b9"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="190">
+                          Handling lots of redirects efficiently in a Next.js
+                          app requires a well-structured approach to maintain
+                          performance, scalability, and maintainability. Here
+                          are best practices and strategies:
+                        </p>
+                        <hr data-start="192" data-end="195" />
+                        <h3 data-start="197" data-end="252">
+                          🔁 1.
+                          <strong data-start="207" data-end="252"
+                            >Use
+                            <code data-start="213" data-end="229"
+                              >next.config.js</code
+                            >
+                            for Static Redirects</strong
+                          >
+                        </h3>
+                        <p data-start="253" data-end="337">
+                          If your redirects are static (known at build time),
+                          define them in
+                          <code data-start="320" data-end="336"
+                            >next.config.js</code
+                          >:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="339"
+                          data-end="708"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>// next.config.js
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/old-path',
+        destination: '/new-path',
+        permanent: true, // 308 redirect
+      },
+      {
+        source: '/legacy/:slug*',
+        destination: '/new/:slug*',
+        permanent: false, // 307 redirect
+      },
+      // Add more here
+    ];
+  },
+};
+</span></code></div></div></pre>
+                        <blockquote data-start="710" data-end="766">
+                          <p data-start="712" data-end="766">
+                            ✅ Best for: small to moderate number of static
+                            routes.
+                          </p>
+                        </blockquote>
+                        <hr data-start="768" data-end="771" />
+                        <h3 data-start="773" data-end="821">
+                          ⚡ 2.
+                          <strong data-start="782" data-end="821"
+                            >Generate Redirects Programmatically</strong
+                          >
+                        </h3>
+                        <p data-start="822" data-end="912">
+                          If you have many redirects from a database or CMS,
+                          consider generating them at build time:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="914"
+                          data-end="1149"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>const redirectsFromCMS = await getRedirects();
+
+return {
+  async redirects() {
+    return redirectsFromCMS.map((r) =&gt; ({
+      source: r.source,
+      destination: r.destination,
+      permanent: r.permanent,
+    }));
+  },
+};
+</span></code></div></div></pre>
+                        <blockquote data-start="1151" data-end="1231">
+                          <p data-start="1153" data-end="1231">
+                            ✅ Best for: large numbers of redirects pulled from
+                            a headless CMS or database.
+                          </p>
+                        </blockquote>
+                        <hr data-start="1233" data-end="1236" />
+                        <h3 data-start="1238" data-end="1293">
+                          🌐 3.
+                          <strong data-start="1248" data-end="1293"
+                            >Use Edge Middleware for Dynamic Redirects</strong
+                          >
+                        </h3>
+                        <p data-start="1294" data-end="1382">
+                          If redirects depend on runtime conditions (e.g., geo,
+                          headers), use
+                          <strong data-start="1362" data-end="1381"
+                            >Edge Middleware</strong
+                          >:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1384"
+                          data-end="1685"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>// middleware.ts
+import { NextResponse } from 'next/server';
+
+export function middleware(request) {
+  const url = request.nextUrl.clone();
+
+  if (url.pathname === '/old-dynamic') {
+    url.pathname = '/new-dynamic';
+    return NextResponse.redirect(url);
+  }
+
+  return NextResponse.next();
+}
+</span></code></div></div></pre>
+                        <blockquote data-start="1687" data-end="1756">
+                          <p data-start="1689" data-end="1756">
+                            ✅ Best for: real-time redirect logic,
+                            personalization, A/B testing.
+                          </p>
+                        </blockquote>
+                        <hr data-start="1758" data-end="1761" />
+                        <h3 data-start="1763" data-end="1815">
+                          🗃️ 4.
+                          <strong data-start="1774" data-end="1815"
+                            >Use a Reverse Proxy for Massive Lists</strong
+                          >
+                        </h3>
+                        <p data-start="1816" data-end="1941">
+                          For
+                          <strong data-start="1820" data-end="1834"
+                            >very large</strong
+                          >
+                          redirect lists (thousands or more), consider
+                          offloading them to a CDN (like Vercel, Cloudflare, or
+                          NGINX):
+                        </p>
+                        <ul data-start="1943" data-end="2053">
+                          <li data-start="1943" data-end="1979">
+                            <p data-start="1945" data-end="1979">
+                              Configure redirects via CDN rules.
+                            </p>
+                          </li>
+                          <li data-start="1980" data-end="2012">
+                            <p data-start="1982" data-end="2012">
+                              Your app stays clean and fast.
+                            </p>
+                          </li>
+                          <li data-start="2013" data-end="2053">
+                            <p data-start="2015" data-end="2053">
+                              CDN handles performance-heavy routing.
+                            </p>
+                          </li>
+                        </ul>
+                        <blockquote data-start="2055" data-end="2129">
+                          <p data-start="2057" data-end="2129">
+                            ✅ Best for: extremely large redirect lists or
+                            performance-critical apps.
+                          </p>
+                        </blockquote>
+                        <hr data-start="2131" data-end="2134" />
+                        <h3 data-start="2136" data-end="2180">
+                          🧹 5.
+                          <strong data-start="2146" data-end="2180"
+                            >Organize Redirect Data Clearly</strong
+                          >
+                        </h3>
+                        <p data-start="2181" data-end="2228">
+                          Use JSON or YAML files for better organization:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2230"
+                          data-end="2390"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>// redirect-rules.json
+[
+  { "source": "/a", "destination": "/b", "permanent": true },
+  { "source": "/c", "destination": "/d", "permanent": false }
+]
+</span></code></div></div></pre>
+                        <p data-start="2392" data-end="2428">
+                          And load them into
+                          <code data-start="2411" data-end="2427"
+                            >next.config.js</code
+                          >.
+                        </p>
+                        <hr data-start="2430" data-end="2433" />
+                        <h3 data-start="2435" data-end="2450">⚠️ Cautions</h3>
+                        <ul data-start="2451" data-end="2616">
+                          <li data-start="2451" data-end="2511">
+                            <p data-start="2453" data-end="2511">
+                              Avoid excessive redirects in
+                              <code data-start="2482" data-end="2494"
+                                >middleware</code
+                              >—can add latency.
+                            </p>
+                          </li>
+                          <li data-start="2512" data-end="2541">
+                            <p data-start="2514" data-end="2541">
+                              Monitor for redirect loops.
+                            </p>
+                          </li>
+                          <li data-start="2542" data-end="2616">
+                            <p data-start="2544" data-end="2616">
+                              Set proper HTTP status codes (<code
+                                data-start="2574"
+                                data-end="2579"
+                                >308</code
+                              >
+                              for permanent,
+                              <code data-start="2595" data-end="2600">307</code>
+                              for temporary).
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="2618" data-end="2621" />
+                        <p
+                          data-start="2623"
+                          data-end="2703"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Would you like a code example for a specific approach
+                          (e.g., CMS-driven or CDN)?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="c5bdaf29-78d2-49dd-963e-fa681514dc25"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How to handle thousands of redirects in the
+                          middleware?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="c4012ce2-58f5-4043-af83-9ee63becdfd0"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="240">
+                          Handling
+                          <strong data-start="9" data-end="57"
+                            >thousands of redirects in Next.js
+                            middleware</strong
+                          >
+                          is possible, but
+                          <strong data-start="75" data-end="90"
+                            >not optimal</strong
+                          >
+                          unless done
+                          <strong data-start="103" data-end="120"
+                            >strategically</strong
+                          >—otherwise, it can
+                          <strong data-start="139" data-end="172"
+                            >negatively impact performance</strong
+                          >, especially since middleware runs
+                          <strong data-start="207" data-end="239"
+                            >on every request at the edge</strong
+                          >.
+                        </p>
+                        <p data-start="242" data-end="278">
+                          Here's how to
+                          <strong data-start="256" data-end="277"
+                            >do it efficiently</strong
+                          >:
+                        </p>
+                        <hr data-start="280" data-end="283" />
+                        <h2 data-start="285" data-end="344">
+                          ✅ Recommended Approach: Use a Lookup Map with
+                          Middleware
+                        </h2>
+                        <h3 data-start="346" data-end="391">
+                          1.
+                          <strong data-start="353" data-end="391"
+                            >Store Redirects in a Key-Value Map</strong
+                          >
+                        </h3>
+                        <p data-start="393" data-end="530">
+                          Convert your redirects into an efficient in-memory
+                          lookup object (e.g.,
+                          <code data-start="465" data-end="470">Map</code> or
+                          plain object) instead of iterating through a long
+                          array.
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="532"
+                          data-end="806"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>// redirects.ts
+export const redirectMap: Record&lt;string, { destination: string; permanent: boolean }&gt; = {
+  "/old-path-1": { destination: "/new-path-1", permanent: true },
+  "/old-path-2": { destination: "/new-path-2", permanent: false },
+  // thousands more...
+};
+</span></code></div></div></pre>
+                        <hr data-start="808" data-end="811" />
+                        <h3 data-start="813" data-end="850">
+                          2.
+                          <strong data-start="820" data-end="850"
+                            >Use This Map in Middleware</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="852"
+                          data-end="1304"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>// middleware.ts
+import { NextRequest, NextResponse } from 'next/server';
+import { redirectMap } from './redirects';
+
+export function middleware(request: NextRequest) {
+  const path = request.nextUrl.pathname;
+
+  const rule = redirectMap[path];
+
+  if (rule) {
+    const url = request.nextUrl.clone();
+    url.pathname = rule.destination;
+
+    return NextResponse.redirect(url, rule.permanent ? 308 : 307);
+  }
+
+  return NextResponse.next();
+}
+</span></code></div></div></pre>
+                        <p data-start="1306" data-end="1368">
+                          This avoids expensive operations like
+                          <code data-start="1344" data-end="1353">.find()</code>
+                          over an array.
+                        </p>
+                        <hr data-start="1370" data-end="1373" />
+                        <h3 data-start="1375" data-end="1414">
+                          3.
+                          <strong data-start="1382" data-end="1414"
+                            >Optimize Middleware Location</strong
+                          >
+                        </h3>
+                        <p data-start="1416" data-end="1481">
+                          Use the
+                          <code data-start="1424" data-end="1433">matcher</code>
+                          config to limit which paths trigger middleware:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1483"
+                          data-end="1602"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>// middleware.ts
+export const config = {
+  matcher: ['/old-paths/:path*'], // only match relevant prefixes
+};
+</span></code></div></div></pre>
+                        <hr data-start="1604" data-end="1607" />
+                        <h2 data-start="1609" data-end="1641">
+                          ⚠️ Performance Considerations
+                        </h2>
+                        <ul data-start="1643" data-end="1917">
+                          <li data-start="1643" data-end="1735">
+                            <p data-start="1645" data-end="1735">
+                              Middleware runs on the
+                              <strong data-start="1668" data-end="1676"
+                                >edge</strong
+                              >, so avoid reading large files or fetching from a
+                              database.
+                            </p>
+                          </li>
+                          <li data-start="1736" data-end="1812">
+                            <p data-start="1738" data-end="1812">
+                              <strong data-start="1738" data-end="1748"
+                                >Do not</strong
+                              >
+                              fetch dynamic data inside middleware (it’s not
+                              allowed anyway).
+                            </p>
+                          </li>
+                          <li data-start="1813" data-end="1917">
+                            <p data-start="1815" data-end="1917">
+                              If your redirect list changes frequently or is
+                              huge (10K+),
+                              <strong data-start="1875" data-end="1916"
+                                >offload to CDN or serverless function</strong
+                              >.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1919" data-end="1922" />
+                        <h2 data-start="1924" data-end="1961">
+                          💡 Alternatives (Scalable Options)
+                        </h2>
+                        <h3 data-start="1963" data-end="2032">
+                          A.
+                          <strong data-start="1970" data-end="2030"
+                            >Serve Redirects from Edge Config on Vercel (Edge
+                            Config)</strong
+                          >
+                        </h3>
+                        <p data-start="2033" data-end="2148">
+                          Great for frequently updated or massive redirect
+                          lists. You can fetch the data
+                          <strong data-start="2112" data-end="2120"
+                            >once</strong
+                          >
+                          at deployment and cache it.
+                        </p>
+                        <h3 data-start="2150" data-end="2214">
+                          B.
+                          <strong data-start="2157" data-end="2212"
+                            >Handle Redirects via CDN (e.g., Vercel,
+                            Cloudflare)</strong
+                          >
+                        </h3>
+                        <p data-start="2215" data-end="2337">
+                          Use CDN rules for the heaviest traffic redirect cases.
+                          Vercel allows configuration through its dashboard or
+                          <code data-start="2323" data-end="2336"
+                            >vercel.json</code
+                          >.
+                        </p>
+                        <h3 data-start="2339" data-end="2406">
+                          C.
+                          <strong data-start="2346" data-end="2404"
+                            >Pre-generate Static Redirects (if known at build
+                            time)</strong
+                          >
+                        </h3>
+                        <p data-start="2407" data-end="2475">
+                          Generate thousands of redirects into
+                          <code data-start="2444" data-end="2460"
+                            >next.config.js</code
+                          >
+                          from a script:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2477"
+                          data-end="2698"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>const data = require('./redirects.json');
+module.exports = {
+  async redirects() {
+    return data.map(({ from, to, permanent }) =&gt; ({
+      source: from,
+      destination: to,
+      permanent,
+    }));
+  },
+};
+</span></code></div></div></pre>
+                        <hr data-start="2700" data-end="2703" />
+                        <p
+                          data-start="2705"
+                          data-end="2834"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Would you like help generating the redirect map
+                          programmatically or integrating with a specific
+                          platform like Vercel Edge Config?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="c34846a2-1fe9-462b-afb6-e8a7cd2b292b"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          I mean strategies like bloom filter
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="00a1b1ff-01ae-4849-bc9f-5c4447d91e79"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="332">
+                          Ah, great — you're thinking like a systems engineer
+                          👏. If you're trying to
+                          <strong data-start="76" data-end="175"
+                            >efficiently handle thousands (or tens/hundreds of
+                            thousands) of redirects in Next.js
+                            middleware</strong
+                          >,
+                          <strong data-start="177" data-end="229"
+                            >probabilistic data structures like Bloom
+                            filters</strong
+                          >
+                          can absolutely help — especially when latency is a
+                          concern and memory is constrained (as on the edge).
+                        </p>
+                        <hr data-start="334" data-end="337" />
+                        <h2 data-start="339" data-end="387">
+                          🚀 Strategy: Use a Bloom Filter in Middleware
+                        </h2>
+                        <p data-start="389" data-end="637">
+                          A
+                          <strong data-start="391" data-end="407"
+                            >Bloom filter</strong
+                          >
+                          is a space-efficient, probabilistic data structure
+                          that can
+                          <strong data-start="468" data-end="518"
+                            >test whether an element is
+                            <em data-start="497" data-end="507">possibly</em> in
+                            a set</strong
+                          >
+                          (with no false negatives, but possible false
+                          positives). This makes it ideal as a
+                          <strong data-start="601" data-end="622"
+                            >first-pass filter</strong
+                          >
+                          for redirects.
+                        </p>
+                        <h3 data-start="639" data-end="692">
+                          ✅ Why Bloom Filters Work Well for Edge Middleware
+                        </h3>
+                        <ul data-start="694" data-end="881">
+                          <li data-start="694" data-end="724">
+                            <p data-start="696" data-end="724">
+                              🧠
+                              <strong data-start="699" data-end="724"
+                                >Tiny memory footprint</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="725" data-end="753">
+                            <p data-start="727" data-end="753">
+                              ⚡
+                              <strong data-start="729" data-end="753"
+                                >Constant-time lookup</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="754" data-end="835">
+                            <p data-start="756" data-end="835">
+                              ⛔
+                              <strong data-start="758" data-end="780"
+                                >No false negatives</strong
+                              >
+                              (if the filter says “not in set”, it’s definitely
+                              not)
+                            </p>
+                          </li>
+                          <li data-start="836" data-end="881">
+                            <p data-start="838" data-end="881">
+                              💡
+                              <strong data-start="841" data-end="881"
+                                >Use to skip logic for 99.9% of users</strong
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="883" data-end="886" />
+                        <h2 data-start="888" data-end="913">
+                          🔧 Implementation Plan
+                        </h2>
+                        <h3 data-start="915" data-end="969">
+                          1.
+                          <strong data-start="922" data-end="969"
+                            >Generate a Bloom Filter from Redirect Paths</strong
+                          >
+                        </h3>
+                        <p data-start="971" data-end="1077">
+                          At build time, generate a Bloom filter containing all
+                          the source paths (e.g.
+                          <code data-start="1048" data-end="1061"
+                            >/old-path-1</code
+                          >,
+                          <code data-start="1063" data-end="1069">/foo</code>,
+                          etc.).
+                        </p>
+                        <p data-start="1079" data-end="1159">
+                          Use a package like
+                          <a
+                            data-start="1098"
+                            data-end="1158"
+                            rel="noopener"
+                            target="_new"
+                            class="cursor-pointer"
+                            ><code data-start="1099" data-end="1114"
+                              >bloom-filters</code
+                            ></a
+                          >:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1161"
+                          data-end="1544"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>// build/generate-bloom.ts
+import { BloomFilter } from 'bloom-filters';
+import redirects from '../redirects.json';
+
+const filter = BloomFilter.create(redirects.length, 0.01); // 1% false positive rate
+
+redirects.forEach(({ source }) =&gt; {
+  filter.add(source);
+});
+
+// Serialize and save
+require('fs').writeFileSync('bloom-filter.json', JSON.stringify(filter.saveAsJSON()));
+</span></code></div></div></pre>
+                        <hr data-start="1546" data-end="1549" />
+                        <h3 data-start="1551" data-end="1591">
+                          2.
+                          <strong data-start="1558" data-end="1591"
+                            >Load and Use It in Middleware</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1593"
+                          data-end="2447"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>// middleware.ts
+import { NextResponse } from 'next/server';
+import { BloomFilter } from 'bloom-filters';
+import redirects from './redirects.json'; // Full list, ideally precompiled map
+import bloomData from './bloom-filter.json';
+
+const bloom = BloomFilter.fromJSON(bloomData);
+
+// Optional: Convert redirects to Map for fast lookup
+const redirectMap = new Map(redirects.map(r =&gt; [r.source, r]));
+
+export function middleware(request) {
+  const path = request.nextUrl.pathname;
+
+  // Use bloom filter to skip the lookup unless maybe present
+  if (!bloom.has(path)) return NextResponse.next();
+
+  const rule = redirectMap.get(path);
+  if (!rule) return NextResponse.next(); // false positive from bloom
+
+  const url = request.nextUrl.clone();
+  url.pathname = rule.destination;
+
+  return NextResponse.redirect(url, rule.permanent ? 308 : 307);
+}
+</span></code></div></div></pre>
+                        <hr data-start="2449" data-end="2452" />
+                        <h2 data-start="2454" data-end="2469">⚖️ Tradeoffs</h2>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="2471"
+                              data-end="2787"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="2471" data-end="2511">
+                                <tr data-start="2471" data-end="2511">
+                                  <th
+                                    data-start="2471"
+                                    data-end="2480"
+                                    data-col-size="sm"
+                                  >
+                                    Factor
+                                  </th>
+                                  <th
+                                    data-start="2480"
+                                    data-end="2495"
+                                    data-col-size="sm"
+                                  >
+                                    Bloom Filter
+                                  </th>
+                                  <th
+                                    data-start="2495"
+                                    data-end="2511"
+                                    data-col-size="sm"
+                                  >
+                                    Redirect Map
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="2554" data-end="2787">
+                                <tr data-start="2554" data-end="2609">
+                                  <td
+                                    data-start="2554"
+                                    data-end="2563"
+                                    data-col-size="sm"
+                                  >
+                                    Memory
+                                  </td>
+                                  <td
+                                    data-start="2563"
+                                    data-end="2581"
+                                    data-col-size="sm"
+                                  >
+                                    Very low (~KBs)
+                                  </td>
+                                  <td
+                                    data-start="2581"
+                                    data-end="2609"
+                                    data-col-size="sm"
+                                  >
+                                    Higher (depends on size)
+                                  </td>
+                                </tr>
+                                <tr data-start="2610" data-end="2667">
+                                  <td
+                                    data-start="2610"
+                                    data-end="2619"
+                                    data-col-size="sm"
+                                  >
+                                    Speed
+                                  </td>
+                                  <td
+                                    data-start="2619"
+                                    data-end="2635"
+                                    data-col-size="sm"
+                                  >
+                                    Constant-time
+                                  </td>
+                                  <td
+                                    data-start="2635"
+                                    data-end="2667"
+                                    data-col-size="sm"
+                                  >
+                                    Constant-time if using
+                                    <code data-start="2660" data-end="2665"
+                                      >Map</code
+                                    >
+                                  </td>
+                                </tr>
+                                <tr data-start="2668" data-end="2735">
+                                  <td
+                                    data-start="2668"
+                                    data-end="2679"
+                                    data-col-size="sm"
+                                  >
+                                    Accuracy
+                                  </td>
+                                  <td
+                                    data-start="2679"
+                                    data-end="2718"
+                                    data-col-size="sm"
+                                  >
+                                    100% if not present, ~99% if present
+                                  </td>
+                                  <td
+                                    data-start="2718"
+                                    data-end="2735"
+                                    data-col-size="sm"
+                                  >
+                                    100% accurate
+                                  </td>
+                                </tr>
+                                <tr data-start="2736" data-end="2787">
+                                  <td
+                                    data-start="2736"
+                                    data-end="2755"
+                                    data-col-size="sm"
+                                  >
+                                    Edge-suitability
+                                  </td>
+                                  <td
+                                    data-start="2755"
+                                    data-end="2769"
+                                    data-col-size="sm"
+                                  >
+                                    ✅ Excellent
+                                  </td>
+                                  <td
+                                    data-start="2769"
+                                    data-end="2787"
+                                    data-col-size="sm"
+                                  >
+                                    ✅ If optimized
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr data-start="2789" data-end="2792" />
+                        <h2 data-start="2794" data-end="2868">
+                          🧠 Bonus: Use Bloom Filter for Redirect
+                          <em data-start="2837" data-end="2850">Eligibility</em
+                          >, Not
+                          <em data-start="2856" data-end="2868">Resolution</em>
+                        </h2>
+                        <p data-start="2870" data-end="2955">
+                          Use Bloom just to decide whether to
+                          <strong data-start="2906" data-end="2945"
+                            >even load or parse the redirect map</strong
+                          >. You can:
+                        </p>
+                        <ul data-start="2957" data-end="3120">
+                          <li data-start="2957" data-end="3000">
+                            <p data-start="2959" data-end="3000">
+                              Embed Bloom filter directly in middleware
+                            </p>
+                          </li>
+                          <li data-start="3001" data-end="3069">
+                            <p data-start="3003" data-end="3069">
+                              Lazy load
+                              <code data-start="3013" data-end="3026"
+                                >redirectMap</code
+                              >
+                              only when
+                              <code data-start="3037" data-end="3054"
+                                >bloom.has(path)</code
+                              >
+                              returns
+                              <code data-start="3063" data-end="3069"
+                                >true</code
+                              >
+                            </p>
+                          </li>
+                          <li data-start="3070" data-end="3120">
+                            <p data-start="3072" data-end="3120">
+                              Combine with
+                              <code data-start="3085" data-end="3095"
+                                >.matcher</code
+                              >
+                              to scope to fewer routes
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="3122" data-end="3125" />
+                        <p
+                          data-start="3127"
+                          data-end="3221"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Would you like a working setup example using this with
+                          a large redirect list and build script?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="49d7e111-064a-4289-9a0c-0c19dee88970"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          implement the bonus as well
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="0700a5fd-7c27-429a-83b9-5e7d4845628c"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="235">
+                          Perfect — let’s fully implement the
+                          <strong data-start="36" data-end="108"
+                            >optimized redirect system using a Bloom Filter in
+                            Next.js middleware</strong
+                          >, including the
+                          <strong data-start="124" data-end="133">bonus</strong
+                          >: only
+                          <strong data-start="140" data-end="173"
+                            >lazy-loading the redirect map</strong
+                          >
+                          if the Bloom filter suggests a match (i.e., likely
+                          redirect).
+                        </p>
+                        <hr data-start="237" data-end="240" />
+                        <h2 data-start="242" data-end="276">
+                          🛠️ Step-by-Step Implementation
+                        </h2>
+                        <h3 data-start="278" data-end="308">
+                          1.
+                          <strong data-start="285" data-end="308"
+                            >Directory Structure</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="309"
+                          data-end="534"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]"></div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>/lib/
+  redirects.json         // Your full redirect list
+  bloom-filter.json      // Precompiled Bloom filter
+  generate-bloom.ts      // Build script to generate filter
+/middleware.ts           // Next.js middleware
+</span></code></div></div></pre>
+                        <hr data-start="536" data-end="539" />
+                        <h3 data-start="541" data-end="602">
+                          2.
+                          <strong data-start="548" data-end="602"
+                            >🔧 Step 1: Build Script to Create the Bloom
+                            Filter</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="604"
+                          data-end="1099"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>// lib/generate-bloom.ts
+import { BloomFilter } from 'bloom-filters';
+import fs from 'fs';
+import path from 'path';
+
+const redirects = require('./redirects.json');
+
+const filter = BloomFilter.create(redirects.length, 0.01); // 1% false positives
+
+redirects.forEach(({ source }: { source: string }) =&gt; {
+  filter.add(source);
+});
+
+fs.writeFileSync(
+  path.join(__dirname, 'bloom-filter.json'),
+  JSON.stringify(filter.saveAsJSON(), null, 2)
+);
+
+console.log('✅ Bloom filter generated!');
+</span></code></div></div></pre>
+                        <p data-start="1101" data-end="1141">
+                          Run this in a prebuild step or manually:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1142"
+                          data-end="1183"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>ts-node lib/generate-bloom.ts
+</span></code></div></div></pre>
+                        <hr data-start="1185" data-end="1188" />
+                        <h3 data-start="1190" data-end="1244">
+                          3.
+                          <strong data-start="1197" data-end="1244"
+                            >📦 Step 2: Middleware with Lazy Map Loading</strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1246"
+                          data-end="2463"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>// middleware.ts
+import { NextRequest, NextResponse } from 'next/server';
+import { BloomFilter } from 'bloom-filters';
+import bloomData from './lib/bloom-filter.json';
+
+// Load bloom filter once
+const bloom = BloomFilter.fromJSON(bloomData);
+
+// Lazy-initialized redirect map
+let redirectMap: Map&lt;string, { destination: string; permanent: boolean }&gt; | null = null;
+
+// Lazy load on first match
+function getRedirectMap() {
+  if (!redirectMap) {
+    const redirects = require('./lib/redirects.json');
+    redirectMap = new Map(redirects.map((r: any) =&gt; [r.source, r]));
+  }
+  return redirectMap;
+}
+
+export function middleware(request: NextRequest) {
+  const path = request.nextUrl.pathname;
+
+  // Check bloom filter
+  if (!bloom.has(path)) return NextResponse.next(); // definitely not in redirect list
+
+  // Possibly in redirect list – load map and check
+  const map = getRedirectMap();
+  const rule = map.get(path);
+  if (!rule) return NextResponse.next(); // false positive
+
+  const url = request.nextUrl.clone();
+  url.pathname = rule.destination;
+
+  return NextResponse.redirect(url, rule.permanent ? 308 : 307);
+}
+
+export const config = {
+  matcher: ['/((?!api|_next|static).*)'], // Adjust as needed
+};
+</span></code></div></div></pre>
+                        <hr data-start="2465" data-end="2468" />
+                        <h3 data-start="2470" data-end="2508">
+                          4.
+                          <strong data-start="2477" data-end="2508"
+                            >🧪 Example
+                            <code data-start="2490" data-end="2506"
+                              >redirects.json</code
+                            ></strong
+                          >
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="2509"
+                          data-end="2682"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">json</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-json"><span>[
+  { "source": "/old-home", "destination": "/new-home", "permanent": true },
+  { "source": "/legacy-page", "destination": "/modern-page", "permanent": false }
+]
+</span></code></div></div></pre>
+                        <hr data-start="2684" data-end="2687" />
+                        <h2 data-start="2689" data-end="2719">
+                          ✅ Benefits of This Approach
+                        </h2>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="2721"
+                              data-end="3068"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="2721" data-end="2767">
+                                <tr data-start="2721" data-end="2767">
+                                  <th
+                                    data-start="2721"
+                                    data-end="2756"
+                                    data-col-size="sm"
+                                  >
+                                    Feature
+                                  </th>
+                                  <th
+                                    data-start="2756"
+                                    data-end="2767"
+                                    data-col-size="md"
+                                  >
+                                    Benefit
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="2815" data-end="3068">
+                                <tr data-start="2815" data-end="2887">
+                                  <td
+                                    data-start="2815"
+                                    data-end="2833"
+                                    data-col-size="sm"
+                                  >
+                                    🔍 Bloom Filter
+                                  </td>
+                                  <td
+                                    data-start="2833"
+                                    data-end="2887"
+                                    data-col-size="md"
+                                  >
+                                    Filters 99% of non-redirect paths in
+                                    constant time
+                                  </td>
+                                </tr>
+                                <tr data-start="2888" data-end="2954">
+                                  <td
+                                    data-start="2888"
+                                    data-end="2911"
+                                    data-col-size="sm"
+                                  >
+                                    🧠 Lazy Redirect Map
+                                  </td>
+                                  <td
+                                    data-start="2911"
+                                    data-end="2954"
+                                    data-col-size="md"
+                                  >
+                                    Loads only when needed (on first match)
+                                  </td>
+                                </tr>
+                                <tr data-start="2955" data-end="3009">
+                                  <td
+                                    data-start="2955"
+                                    data-end="2977"
+                                    data-col-size="sm"
+                                  >
+                                    🏎️ Fast Middleware
+                                  </td>
+                                  <td
+                                    data-start="2977"
+                                    data-end="3009"
+                                    data-col-size="md"
+                                  >
+                                    Light memory use at the edge
+                                  </td>
+                                </tr>
+                                <tr data-start="3010" data-end="3068">
+                                  <td
+                                    data-start="3010"
+                                    data-end="3024"
+                                    data-col-size="sm"
+                                  >
+                                    ⚙️ Flexible
+                                  </td>
+                                  <td
+                                    data-start="3024"
+                                    data-end="3068"
+                                    data-col-size="md"
+                                  >
+                                    Scales to tens of thousands of redirects
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr data-start="3070" data-end="3073" />
+                        <p
+                          data-start="3075"
+                          data-end="3157"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Would you like this packaged into a GitHub-ready
+                          template or Next.js starter repo?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-9"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="8f2441b8-d01c-4fe7-ac2d-1f8baeb3134c"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          Isn't converting the list into a map less performant
+                          than searching the array itself?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-10"
+        data-scroll-anchor="true"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="c0caf3ce-13cb-43b8-b4a7-8d52793aee65"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="54">
+                          Great question — and it’s a common point of confusion.
+                        </p>
+                        <h3 data-start="56" data-end="80">
+                          🔄
+                          <strong data-start="63" data-end="80"
+                            >Short Answer:</strong
+                          >
+                        </h3>
+                        <p data-start="81" data-end="240">
+                          <strong data-start="81" data-end="87">No</strong>,
+                          converting the list into a
+                          <code data-start="116" data-end="121">Map</code>
+                          <strong data-start="122" data-end="130">once</strong>
+                          and then doing lookups on that
+                          <code data-start="162" data-end="167">Map</code> is
+                          <strong data-start="171" data-end="204"
+                            >significantly more performant</strong
+                          >
+                          than repeatedly searching an array.
+                        </p>
+                        <hr data-start="242" data-end="245" />
+                        <h3 data-start="247" data-end="280">
+                          📊
+                          <strong data-start="254" data-end="280"
+                            >Performance Comparison</strong
+                          >
+                        </h3>
+                        <p data-start="282" data-end="308">
+                          Let’s compare lookup time:
+                        </p>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="310"
+                              data-end="676"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="310" data-end="377">
+                                <tr data-start="310" data-end="377">
+                                  <th
+                                    data-start="310"
+                                    data-end="336"
+                                    data-col-size="sm"
+                                  >
+                                    Method
+                                  </th>
+                                  <th
+                                    data-start="336"
+                                    data-end="361"
+                                    data-col-size="sm"
+                                  >
+                                    Lookup Time Complexity
+                                  </th>
+                                  <th
+                                    data-start="361"
+                                    data-end="377"
+                                    data-col-size="sm"
+                                  >
+                                    Lookup Speed
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="446" data-end="676">
+                                <tr data-start="446" data-end="518">
+                                  <td
+                                    data-start="446"
+                                    data-end="472"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="448" data-end="462"
+                                      >array.find()</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="472"
+                                    data-end="497"
+                                    data-col-size="sm"
+                                  >
+                                    O(n)
+                                  </td>
+                                  <td
+                                    data-start="497"
+                                    data-end="518"
+                                    data-col-size="sm"
+                                  >
+                                    Slow with large N
+                                  </td>
+                                </tr>
+                                <tr data-start="519" data-end="593">
+                                  <td
+                                    data-start="519"
+                                    data-end="545"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="521" data-end="535"
+                                      >Map.get(key)</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="545"
+                                    data-end="570"
+                                    data-col-size="sm"
+                                  >
+                                    O(1) (average)
+                                  </td>
+                                  <td
+                                    data-start="570"
+                                    data-end="593"
+                                    data-col-size="sm"
+                                  >
+                                    Fast, constant time
+                                  </td>
+                                </tr>
+                                <tr data-start="594" data-end="676">
+                                  <td
+                                    data-start="594"
+                                    data-end="620"
+                                    data-col-size="sm"
+                                  >
+                                    Object
+                                    <code data-start="603" data-end="619"
+                                      >{ key: value }</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="620"
+                                    data-end="645"
+                                    data-col-size="sm"
+                                  >
+                                    O(1) (average)
+                                  </td>
+                                  <td
+                                    data-start="645"
+                                    data-end="676"
+                                    data-col-size="sm"
+                                  >
+                                    Same as Map (but less safe)
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr data-start="678" data-end="681" />
+                        <h3 data-start="683" data-end="694">🧠 Why?</h3>
+                        <p data-start="696" data-end="707">If you use:</p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="708"
+                          data-end="753"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>array.find(r =&gt; r.source === path);
+</span></code></div></div></pre>
+                        <p data-start="754" data-end="887">
+                          …it loops through the
+                          <strong data-start="776" data-end="792"
+                            >entire array</strong
+                          >
+                          until it finds a match (or not). That means time grows
+                          linearly with your number of redirects.
+                        </p>
+                        <p data-start="889" data-end="904">But if you use:</p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="905"
+                          data-end="985"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>const map = new Map(redirects.map(r =&gt; [r.source, r]));
+map.get(path);
+</span></code></div></div></pre>
+                        <p data-start="986" data-end="1058">
+                          …the lookup is almost instantaneous, no matter how
+                          many items there are.
+                        </p>
+                        <hr data-start="1060" data-end="1063" />
+                        <h3 data-start="1065" data-end="1103">
+                          ⚠️ But What About Conversion Cost?
+                        </h3>
+                        <p data-start="1105" data-end="1156">
+                          Yes — converting a list to a
+                          <code data-start="1134" data-end="1139">Map</code> has
+                          a cost, but:
+                        </p>
+                        <ul data-start="1157" data-end="1317">
+                          <li data-start="1157" data-end="1193">
+                            <p data-start="1159" data-end="1193">
+                              It’s a
+                              <strong data-start="1166" data-end="1193"
+                                >one-time O(n) operation</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1194" data-end="1236">
+                            <p data-start="1196" data-end="1236">
+                              You do it
+                              <strong data-start="1206" data-end="1214"
+                                >once</strong
+                              >, not on every request
+                            </p>
+                          </li>
+                          <li data-start="1237" data-end="1317">
+                            <p data-start="1239" data-end="1317">
+                              In your case, you
+                              <strong data-start="1257" data-end="1296"
+                                >only do it after a bloom filter hit</strong
+                              >, so it’s rare anyway
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1319" data-end="1322" />
+                        <h3 data-start="1324" data-end="1348">
+                          🧪 Benchmark Example
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1350"
+                          data-end="1733"
+                        ><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>const redirects = new Array(100_000).fill(0).map((_, i) =&gt; ({
+  source: `/old-${i}`,
+  destination: `/new-${i}`,
+}));
+
+console.time('find');
+redirects.find(r =&gt; r.source === '/old-99999');
+console.timeEnd('find'); // ~milliseconds
+
+const map = new Map(redirects.map(r =&gt; [r.source, r]));
+
+console.time('map');
+map.get('/old-99999');
+console.timeEnd('map'); // ~microseconds
+</span></code></div></div></pre>
+                        <hr data-start="1735" data-end="1738" />
+                        <h3 data-start="1740" data-end="1757">
+                          ✅ Bottom Line
+                        </h3>
+                        <ul data-start="1759" data-end="1976">
+                          <li data-start="1759" data-end="1840">
+                            <p data-start="1761" data-end="1840">
+                              <strong data-start="1761" data-end="1791"
+                                >For thousands of redirects</strong
+                              >, always prefer a
+                              <code data-start="1809" data-end="1814">Map</code>
+                              or object for fast lookup
+                            </p>
+                          </li>
+                          <li data-start="1841" data-end="1892">
+                            <p data-start="1843" data-end="1892">
+                              Building the map once lazily is a negligible cost
+                            </p>
+                          </li>
+                          <li data-start="1893" data-end="1976">
+                            <p data-start="1895" data-end="1976">
+                              When combined with a Bloom filter, it makes your
+                              middleware
+                              <strong data-start="1955" data-end="1976"
+                                >highly performant</strong
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1978" data-end="1981" />
+                        <p
+                          data-start="1983"
+                          data-end="2063"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Let me know if you want a benchmark file to test this
+                          locally or on Vercel Edge.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
