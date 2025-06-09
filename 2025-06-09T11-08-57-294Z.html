@@ -1,0 +1,1540 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Hash-Based Sharding Guide</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="d8409171-a0ce-46bb-a301-4e6e47cd054c"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          In hash-based sharding how to shard databases?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="5aa1dd62-9386-4238-8e11-315f394c945c"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="204">
+                          Hash-based sharding is a technique used to distribute
+                          data across multiple databases (or database
+                          partitions) using a hash function. Here's a clear
+                          explanation of how to shard databases using this
+                          method:
+                        </p>
+                        <hr data-start="206" data-end="209" />
+                        <h3 data-start="211" data-end="246">
+                          🔹 What Is Hash-Based Sharding?
+                        </h3>
+                        <p data-start="248" data-end="476">
+                          In
+                          <strong data-start="251" data-end="274"
+                            >hash-based sharding</strong
+                          >, the
+                          <strong data-start="280" data-end="293"
+                            >shard key</strong
+                          >
+                          (a specific field in your data, like
+                          <code data-start="331" data-end="340">user_id</code>,
+                          <code data-start="342" data-end="355"
+                            >customer_id</code
+                          >, or
+                          <code data-start="360" data-end="367">email</code>) is
+                          passed through a
+                          <strong data-start="389" data-end="406"
+                            >hash function</strong
+                          >, and the output is used to determine which shard the
+                          data belongs to.
+                        </p>
+                        <hr data-start="478" data-end="481" />
+                        <h3 data-start="483" data-end="541">
+                          🔹 Steps to Shard a Database Using Hash-Based Sharding
+                        </h3>
+                        <h4 data-start="543" data-end="573">
+                          1.
+                          <strong data-start="551" data-end="573"
+                            >Choose a Shard Key</strong
+                          >
+                        </h4>
+                        <p data-start="574" data-end="592">
+                          Pick a field that:
+                        </p>
+                        <ul data-start="593" data-end="672">
+                          <li data-start="593" data-end="639">
+                            <p data-start="595" data-end="639">
+                              Has high cardinality (many distinct values).
+                            </p>
+                          </li>
+                          <li data-start="640" data-end="672">
+                            <p data-start="642" data-end="672">
+                              Is used frequently in queries.
+                            </p>
+                          </li>
+                        </ul>
+                        <blockquote data-start="674" data-end="715">
+                          <p data-start="676" data-end="715">
+                            Example:
+                            <code data-start="685" data-end="694">user_id</code>
+                            for a user database.
+                          </p>
+                        </blockquote>
+                        <hr data-start="717" data-end="720" />
+                        <h4 data-start="722" data-end="758">
+                          2.
+                          <strong data-start="730" data-end="758"
+                            >Define the Hash Function</strong
+                          >
+                        </h4>
+                        <p data-start="759" data-end="898">
+                          Use a consistent hash function (e.g., MD5, SHA-256,
+                          MurmurHash, or even a simple modulus operation) to
+                          convert the shard key into a number.
+                        </p>
+                        <blockquote data-start="900" data-end="966">
+                          <p data-start="902" data-end="966">
+                            Example:
+                            <code data-start="911" data-end="930"
+                              >hash(user_id) % N</code
+                            >, where
+                            <code data-start="938" data-end="941">N</code> is
+                            the number of shards.
+                          </p>
+                        </blockquote>
+                        <hr data-start="968" data-end="971" />
+                        <h4 data-start="973" data-end="998">
+                          3.
+                          <strong data-start="981" data-end="998"
+                            >Assign Shards</strong
+                          >
+                        </h4>
+                        <p data-start="999" data-end="1047">
+                          Map the hash output to shards. If using modulus:
+                        </p>
+                        <ul data-start="1048" data-end="1116">
+                          <li data-start="1048" data-end="1116">
+                            <p data-start="1050" data-end="1116">
+                              <code data-start="1050" data-end="1084"
+                                >shard_number = hash(user_id) % 4</code
+                              >
+                              → 4 shards (shard_0 to shard_3)
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1118" data-end="1121" />
+                        <h4 data-start="1123" data-end="1164">
+                          4.
+                          <strong data-start="1131" data-end="1164"
+                            >Route Data to the Right Shard</strong
+                          >
+                        </h4>
+                        <p data-start="1165" data-end="1252">
+                          Based on the hash result, route incoming writes or
+                          queries to the appropriate database.
+                        </p>
+                        <blockquote data-start="1254" data-end="1264">
+                          <p data-start="1256" data-end="1264">Example:</p>
+                        </blockquote>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1265"
+                          data-end="1393"
+                        ><div class="contain-inline-size rounded-2xl border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-2xl">python</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>def get_shard(user_id, num_shards):
+    shard_index = hash(user_id) % num_shards
+    return f"shard_{shard_index}"
+</span></code></div></div></pre>
+                        <hr data-start="1395" data-end="1398" />
+                        <h4 data-start="1400" data-end="1445">
+                          5.
+                          <strong data-start="1408" data-end="1445"
+                            >Store Data in Corresponding Shard</strong
+                          >
+                        </h4>
+                        <p data-start="1446" data-end="1565">
+                          Each shard is a separate database (or a table within a
+                          database), and you store or query the data only from
+                          that shard.
+                        </p>
+                        <hr data-start="1567" data-end="1570" />
+                        <h3 data-start="1572" data-end="1592">
+                          🔹 Pros and Cons
+                        </h3>
+                        <p data-start="1594" data-end="1605">
+                          <strong data-start="1594" data-end="1605"
+                            >✅ Pros:</strong
+                          >
+                        </p>
+                        <ul data-start="1606" data-end="1719">
+                          <li data-start="1606" data-end="1683">
+                            <p data-start="1608" data-end="1683">
+                              Even distribution of data (if hash function and
+                              shard key are chosen well).
+                            </p>
+                          </li>
+                          <li data-start="1684" data-end="1719">
+                            <p data-start="1686" data-end="1719">
+                              Simple and deterministic routing.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1721" data-end="1732">
+                          <strong data-start="1721" data-end="1732"
+                            >❌ Cons:</strong
+                          >
+                        </p>
+                        <ul data-start="1733" data-end="1913">
+                          <li data-start="1733" data-end="1792">
+                            <p data-start="1735" data-end="1792">
+                              Harder to perform range queries (e.g.,
+                              <code data-start="1774" data-end="1790"
+                                >user_id &gt; 1000</code
+                              >).
+                            </p>
+                          </li>
+                          <li data-start="1793" data-end="1913">
+                            <p data-start="1795" data-end="1913">
+                              Rebalancing is complex if you need to add/remove
+                              shards (you may need
+                              <strong data-start="1865" data-end="1887"
+                                >consistent hashing</strong
+                              >
+                              to reduce data movement).
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1915" data-end="1918" />
+                        <h3 data-start="1920" data-end="1934">🔹 Example</h3>
+                        <p data-start="1936" data-end="1943">Assume:</p>
+                        <ul data-start="1944" data-end="1994">
+                          <li data-start="1944" data-end="1963">
+                            <p data-start="1946" data-end="1963">
+                              <code data-start="1946" data-end="1963"
+                                >user_id = 12345</code
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1964" data-end="1994">
+                            <p data-start="1966" data-end="1994">
+                              4 shards: shard_0 to shard_3
+                            </p>
+                          </li>
+                        </ul>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1996"
+                          data-end="2054"
+                        ><div class="contain-inline-size rounded-2xl border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-2xl">python</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>shard = hash(12345) % 4  # Result might be 1
+</span></code></div></div></pre>
+                        <p data-start="2056" data-end="2094">
+                          → Store
+                          <code data-start="2064" data-end="2081"
+                            >user_id = 12345</code
+                          >
+                          in
+                          <code data-start="2085" data-end="2094">shard_1</code>
+                        </p>
+                        <hr data-start="2096" data-end="2099" />
+                        <p
+                          data-start="2101"
+                          data-end="2174"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Would you like a code snippet or architecture diagram
+                          for implementation?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="a54d633a-1e7b-418b-bdcf-7876caca59c8"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">how about md5?</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="9da6f88f-7936-46ed-a4b4-facf37f2dc86"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="177">
+                          Using
+                          <strong data-start="6" data-end="13">MD5</strong> for
+                          hash-based sharding is a common and effective approach
+                          when you need a
+                          <strong data-start="89" data-end="113"
+                            >uniform distribution</strong
+                          >
+                          of data. Here's how you can use
+                          <strong data-start="146" data-end="153">MD5</strong>
+                          in hash-based sharding:
+                        </p>
+                        <hr data-start="179" data-end="182" />
+                        <h3 data-start="184" data-end="229">
+                          🔹 How to Use MD5 for Hash-Based Sharding
+                        </h3>
+                        <h4 data-start="231" data-end="261">
+                          <strong data-start="236" data-end="261"
+                            >1. Choose a Shard Key</strong
+                          >
+                        </h4>
+                        <p data-start="262" data-end="307">
+                          Let’s say the shard key is
+                          <code data-start="289" data-end="306"
+                            >user_id = 12345</code
+                          >.
+                        </p>
+                        <h4 data-start="309" data-end="338">
+                          <strong data-start="314" data-end="338"
+                            >2. Generate MD5 Hash</strong
+                          >
+                        </h4>
+                        <p data-start="339" data-end="401">
+                          Hash the shard key using MD5 and get a
+                          <strong data-start="378" data-end="400"
+                            >hexadecimal string</strong
+                          >.
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="403"
+                          data-end="660"
+                        ><div class="contain-inline-size rounded-2xl border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-2xl">python</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>import hashlib
+
+def md5_hash_shard(key, num_shards):
+    md5_hash = hashlib.md5(str(key).encode()).hexdigest()
+    hash_int = int(md5_hash, 16)  # Convert hex to integer
+    shard_index = hash_int % num_shards
+    return f"shard_{shard_index}"
+</span></code></div></div></pre>
+                        <h4 data-start="662" data-end="693">
+                          <strong data-start="667" data-end="693"
+                            >3. Determine the Shard</strong
+                          >
+                        </h4>
+                        <p data-start="694" data-end="737">
+                          Assuming 4 shards (<code
+                            data-start="713"
+                            data-end="722"
+                            >shard_0</code
+                          >
+                          to
+                          <code data-start="726" data-end="735">shard_3</code>):
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="739"
+                          data-end="817"
+                        ><div class="contain-inline-size rounded-2xl border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-2xl">python</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>shard = md5_hash_shard(12345, 4)
+print(shard)  # e.g., "shard_2"
+</span></code></div></div></pre>
+                        <hr data-start="819" data-end="822" />
+                        <h3 data-start="824" data-end="843">🔹 Why Use MD5?</h3>
+                        <p data-start="845" data-end="862">
+                          <strong data-start="845" data-end="862"
+                            >✅ Advantages:</strong
+                          >
+                        </p>
+                        <ul data-start="863" data-end="991">
+                          <li data-start="863" data-end="924">
+                            <p data-start="865" data-end="924">
+                              Good distribution across shards (due to uniformity
+                              of MD5).
+                            </p>
+                          </li>
+                          <li data-start="925" data-end="991">
+                            <p data-start="927" data-end="991">
+                              Works well even when the key values are sequential
+                              or patterned.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="993" data-end="1015">
+                          <strong data-start="993" data-end="1015"
+                            >⚠️ Considerations:</strong
+                          >
+                        </p>
+                        <ul data-start="1016" data-end="1189">
+                          <li data-start="1016" data-end="1091">
+                            <p data-start="1018" data-end="1091">
+                              MD5 is fast, but not cryptographically secure —
+                              that’s fine for sharding.
+                            </p>
+                          </li>
+                          <li data-start="1092" data-end="1189">
+                            <p data-start="1094" data-end="1189">
+                              Adding or removing shards requires remapping most
+                              data (unless you use
+                              <strong data-start="1165" data-end="1187"
+                                >consistent hashing</strong
+                              >).
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1191" data-end="1194" />
+                        <h3 data-start="1196" data-end="1237">
+                          🔹 Optional: Use First Few Bytes Only
+                        </h3>
+                        <p data-start="1238" data-end="1315">
+                          For performance (less math), you can use the first few
+                          bytes of the MD5 hash:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1317"
+                          data-end="1571"
+                        ><div class="contain-inline-size rounded-2xl border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-2xl">python</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>def md5_prefix_shard(key, num_shards):
+    md5_hash = hashlib.md5(str(key).encode()).hexdigest()
+    short_hash = md5_hash[:8]  # Use first 4 bytes (8 hex chars)
+    hash_int = int(short_hash, 16)
+    return f"shard_{hash_int % num_shards}"
+</span></code></div></div></pre>
+                        <p data-start="1573" data-end="1631">
+                          This is still sufficiently distributed for most use
+                          cases.
+                        </p>
+                        <hr data-start="1633" data-end="1636" />
+                        <h3 data-start="1638" data-end="1651">✅ Summary</h3>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="1653"
+                              data-end="1852"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="1653" data-end="1670">
+                                <tr data-start="1653" data-end="1670">
+                                  <th
+                                    data-start="1653"
+                                    data-end="1660"
+                                    data-col-size="sm"
+                                  >
+                                    Step
+                                  </th>
+                                  <th
+                                    data-start="1660"
+                                    data-end="1670"
+                                    data-col-size="sm"
+                                  >
+                                    Action
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="1689" data-end="1852">
+                                <tr data-start="1689" data-end="1720">
+                                  <td
+                                    data-start="1689"
+                                    data-end="1693"
+                                    data-col-size="sm"
+                                  >
+                                    1
+                                  </td>
+                                  <td
+                                    data-start="1693"
+                                    data-end="1720"
+                                    data-col-size="sm"
+                                  >
+                                    Choose a good shard key
+                                  </td>
+                                </tr>
+                                <tr data-start="1721" data-end="1747">
+                                  <td
+                                    data-start="1721"
+                                    data-end="1725"
+                                    data-col-size="sm"
+                                  >
+                                    2
+                                  </td>
+                                  <td
+                                    data-start="1725"
+                                    data-end="1747"
+                                    data-col-size="sm"
+                                  >
+                                    Hash it with
+                                    <code data-start="1740" data-end="1745"
+                                      >MD5</code
+                                    >
+                                  </td>
+                                </tr>
+                                <tr data-start="1748" data-end="1779">
+                                  <td
+                                    data-start="1748"
+                                    data-end="1752"
+                                    data-col-size="sm"
+                                  >
+                                    3
+                                  </td>
+                                  <td
+                                    data-start="1752"
+                                    data-end="1779"
+                                    data-col-size="sm"
+                                  >
+                                    Convert hash to integer
+                                  </td>
+                                </tr>
+                                <tr data-start="1780" data-end="1819">
+                                  <td
+                                    data-start="1780"
+                                    data-end="1784"
+                                    data-col-size="sm"
+                                  >
+                                    4
+                                  </td>
+                                  <td
+                                    data-start="1784"
+                                    data-end="1819"
+                                    data-col-size="sm"
+                                  >
+                                    Compute
+                                    <code data-start="1794" data-end="1817"
+                                      >hash_int % num_shards</code
+                                    >
+                                  </td>
+                                </tr>
+                                <tr data-start="1820" data-end="1852">
+                                  <td
+                                    data-start="1820"
+                                    data-end="1824"
+                                    data-col-size="sm"
+                                  >
+                                    5
+                                  </td>
+                                  <td
+                                    data-start="1824"
+                                    data-end="1852"
+                                    data-col-size="sm"
+                                  >
+                                    Route data to that shard
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr data-start="1854" data-end="1857" />
+                        <p
+                          data-start="1859"
+                          data-end="1987"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Would you like help building a full sharding layer or
+                          implementing this in a database system like
+                          PostgreSQL, MongoDB, or MySQL?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="5a7e82b9-24f1-4f65-b67b-3918376e9606"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          what is uniformity of md5?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="406757cd-da1f-41c3-af18-bd49fafbcf85"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="290">
+                          Great question. When we talk about the
+                          <strong data-start="39" data-end="60"
+                            >uniformity of MD5</strong
+                          >, we're referring to how
+                          <strong data-start="85" data-end="95">evenly</strong>
+                          the hash values are distributed across the entire
+                          output space. This matters a lot for
+                          <strong data-start="183" data-end="195"
+                            >sharding</strong
+                          >, because you want each shard to receive roughly the
+                          same number of keys (i.e., balanced load).
+                        </p>
+                        <hr data-start="292" data-end="295" />
+                        <h3 data-start="297" data-end="323">
+                          🔹 What Is Uniformity?
+                        </h3>
+                        <p data-start="325" data-end="481">
+                          <strong data-start="325" data-end="339"
+                            >Uniformity</strong
+                          >
+                          means that every possible hash output is
+                          <strong data-start="381" data-end="399"
+                            >equally likely</strong
+                          >
+                          (in theory), and similar inputs produce very different
+                          and unpredictable outputs.
+                        </p>
+                        <p data-start="483" data-end="491">For MD5:</p>
+                        <ul data-start="492" data-end="742">
+                          <li data-start="492" data-end="544">
+                            <p data-start="494" data-end="544">
+                              Output: 128-bit (32-character hexadecimal string).
+                            </p>
+                          </li>
+                          <li data-start="545" data-end="589">
+                            <p data-start="547" data-end="589">
+                              Output space:
+                              <span class="katex"
+                                ><span class="katex-mathml"
+                                  ><math
+                                    xmlns="http://www.w3.org/1998/Math/MathML"
+                                    ><semantics
+                                      ><mrow
+                                        ><msup
+                                          ><mn>2</mn><mn>128</mn></msup
+                                        ></mrow
+                                      ><annotation encoding="application/x-tex"
+                                        >2^{128}</annotation
+                                      ></semantics
+                                    ></math
+                                  ></span
+                                ><span class="katex-html" aria-hidden="true"
+                                  ><span class="base"
+                                    ><span
+                                      class="strut"
+                                      style="height: 0.8141em"
+                                    ></span
+                                    ><span class="mord"
+                                      ><span class="mord">2</span
+                                      ><span class="msupsub"
+                                        ><span class="vlist-t"
+                                          ><span class="vlist-r"
+                                            ><span
+                                              class="vlist"
+                                              style="height: 0.8141em"
+                                              ><span
+                                                style="
+                                                  top: -3.063em;
+                                                  margin-right: 0.05em;
+                                                "
+                                                ><span
+                                                  class="pstrut"
+                                                  style="height: 2.7em"
+                                                ></span
+                                                ><span
+                                                  class="sizing reset-size6 size3 mtight"
+                                                  ><span class="mord mtight"
+                                                    ><span class="mord mtight"
+                                                      >128</span
+                                                    ></span
+                                                  ></span
+                                                ></span
+                                              ></span
+                                            ></span
+                                          ></span
+                                        ></span
+                                      ></span
+                                    ></span
+                                  ></span
+                                ></span
+                              >
+                              possible values.
+                            </p>
+                          </li>
+                          <li data-start="590" data-end="742">
+                            <p data-start="592" data-end="742">
+                              Uniformity: If MD5 is applied to a large, diverse
+                              set of keys (e.g.,
+                              <code data-start="661" data-end="670"
+                                >user_id</code
+                              >,
+                              <code data-start="672" data-end="679">email</code
+                              >), the outputs will be
+                              <strong data-start="702" data-end="719"
+                                >evenly spread</strong
+                              >
+                              across the hash space.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="744" data-end="747" />
+                        <h3 data-start="749" data-end="785">
+                          🔹 Why MD5 Is Considered Uniform
+                        </h3>
+                        <ul data-start="787" data-end="1118">
+                          <li data-start="787" data-end="873">
+                            <p data-start="789" data-end="873">
+                              <strong data-start="789" data-end="809"
+                                >Avalanche effect</strong
+                              >: A small change in input leads to a drastically
+                              different hash.
+                            </p>
+                          </li>
+                          <li data-start="874" data-end="1011">
+                            <p data-start="876" data-end="1011">
+                              <strong data-start="876" data-end="899"
+                                >Empirically uniform</strong
+                              >: Despite being broken cryptographically, MD5
+                              still distributes hashes evenly in most
+                              non-security applications.
+                            </p>
+                          </li>
+                          <li data-start="1012" data-end="1118">
+                            <p data-start="1014" data-end="1118">
+                              <strong data-start="1014" data-end="1037"
+                                >Statistical balance</strong
+                              >: Over a large input set, each bit of the output
+                              has ~50% chance of being 0 or 1.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1120" data-end="1123" />
+                        <h3 data-start="1125" data-end="1154">
+                          🔹 Uniformity in Sharding
+                        </h3>
+                        <p data-start="1156" data-end="1172">
+                          Suppose you use:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1174"
+                          data-end="1223"
+                        ><div class="contain-inline-size rounded-2xl border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-2xl">python</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>shard_index = int(md5(user_id)) % 4
+</span></code></div></div></pre>
+                        <p data-start="1225" data-end="1277">
+                          If MD5 is uniform, then over millions of
+                          <code data-start="1266" data-end="1275">user_id</code
+                          >s:
+                        </p>
+                        <ul data-start="1278" data-end="1347">
+                          <li data-start="1278" data-end="1309">
+                            <p data-start="1280" data-end="1309">
+                              About 25% will map to shard 0
+                            </p>
+                          </li>
+                          <li data-start="1310" data-end="1332">
+                            <p data-start="1312" data-end="1332">
+                              About 25% to shard 1
+                            </p>
+                          </li>
+                          <li data-start="1333" data-end="1347">
+                            <p data-start="1335" data-end="1347">
+                              ...and so on
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1349" data-end="1418">
+                          This avoids
+                          <strong data-start="1361" data-end="1373"
+                            >hotspots</strong
+                          >
+                          (some shards getting more data than others).
+                        </p>
+                        <hr data-start="1420" data-end="1423" />
+                        <h3 data-start="1425" data-end="1446">
+                          🔹 Visual Example
+                        </h3>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="1448"
+                              data-end="1789"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="1448" data-end="1504">
+                                <tr data-start="1448" data-end="1504">
+                                  <th
+                                    data-start="1448"
+                                    data-end="1460"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1450" data-end="1459"
+                                      >user_id</code
+                                    >
+                                  </th>
+                                  <th
+                                    data-start="1460"
+                                    data-end="1480"
+                                    data-col-size="sm"
+                                  >
+                                    MD5 hash (prefix)
+                                  </th>
+                                  <th
+                                    data-start="1480"
+                                    data-end="1495"
+                                    data-col-size="sm"
+                                  >
+                                    Hash int % 4
+                                  </th>
+                                  <th
+                                    data-start="1495"
+                                    data-end="1504"
+                                    data-col-size="sm"
+                                  >
+                                    Shard
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="1562" data-end="1789">
+                                <tr data-start="1562" data-end="1618">
+                                  <td
+                                    data-start="1562"
+                                    data-end="1574"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1564" data-end="1569"
+                                      >100</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1574"
+                                    data-end="1594"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1576" data-end="1585"
+                                      >f899...</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1594"
+                                    data-end="1609"
+                                    data-col-size="sm"
+                                  >
+                                    1
+                                  </td>
+                                  <td
+                                    data-start="1609"
+                                    data-end="1618"
+                                    data-col-size="sm"
+                                  >
+                                    1
+                                  </td>
+                                </tr>
+                                <tr data-start="1619" data-end="1675">
+                                  <td
+                                    data-start="1619"
+                                    data-end="1631"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1621" data-end="1626"
+                                      >101</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1631"
+                                    data-end="1651"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1633" data-end="1642"
+                                      >c1b4...</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1651"
+                                    data-end="1666"
+                                    data-col-size="sm"
+                                  >
+                                    0
+                                  </td>
+                                  <td
+                                    data-start="1666"
+                                    data-end="1675"
+                                    data-col-size="sm"
+                                  >
+                                    0
+                                  </td>
+                                </tr>
+                                <tr data-start="1676" data-end="1732">
+                                  <td
+                                    data-start="1676"
+                                    data-end="1688"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1678" data-end="1683"
+                                      >102</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1688"
+                                    data-end="1708"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1690" data-end="1699"
+                                      >81dc...</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1708"
+                                    data-end="1723"
+                                    data-col-size="sm"
+                                  >
+                                    2
+                                  </td>
+                                  <td
+                                    data-start="1723"
+                                    data-end="1732"
+                                    data-col-size="sm"
+                                  >
+                                    2
+                                  </td>
+                                </tr>
+                                <tr data-start="1733" data-end="1789">
+                                  <td
+                                    data-start="1733"
+                                    data-end="1745"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1735" data-end="1740"
+                                      >103</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1745"
+                                    data-end="1765"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1747" data-end="1756"
+                                      >6c0f...</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1765"
+                                    data-end="1780"
+                                    data-col-size="sm"
+                                  >
+                                    3
+                                  </td>
+                                  <td
+                                    data-start="1780"
+                                    data-end="1789"
+                                    data-col-size="sm"
+                                  >
+                                    3
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 34px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p data-start="1791" data-end="1919">
+                          Even though the
+                          <code data-start="1807" data-end="1816">user_id</code
+                          >s are close together, MD5 hashes them into
+                          <strong data-start="1859" data-end="1877"
+                            >well-separated</strong
+                          >
+                          values — that's
+                          <strong data-start="1894" data-end="1908"
+                            >uniformity</strong
+                          >
+                          in action.
+                        </p>
+                        <hr data-start="1921" data-end="1924" />
+                        <h3 data-start="1926" data-end="1939">✅ Summary</h3>
+                        <ul data-start="1941" data-end="2135">
+                          <li data-start="1941" data-end="2016">
+                            <p data-start="1943" data-end="2016">
+                              MD5 has good
+                              <strong data-start="1956" data-end="1982"
+                                >statistical uniformity</strong
+                              >, making it suitable for sharding.
+                            </p>
+                          </li>
+                          <li data-start="2017" data-end="2066">
+                            <p data-start="2019" data-end="2066">
+                              It ensures
+                              <strong data-start="2030" data-end="2051"
+                                >even distribution</strong
+                              >
+                              across shards.
+                            </p>
+                          </li>
+                          <li data-start="2067" data-end="2135">
+                            <p data-start="2069" data-end="2135">
+                              It’s deterministic, so the same key always maps to
+                              the same shard.
+                            </p>
+                          </li>
+                        </ul>
+                        <p
+                          data-start="2137"
+                          data-end="2250"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Let me know if you’d like to compare this with
+                          <strong data-start="2184" data-end="2195"
+                            >SHA-256</strong
+                          >,
+                          <strong data-start="2197" data-end="2211"
+                            >MurmurHash</strong
+                          >, or
+                          <strong data-start="2216" data-end="2238"
+                            >consistent hashing</strong
+                          >
+                          strategies!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="0476cfaf-1bb2-4c33-8e4b-77ea37a04c16"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          in md5 similar input produces a different output?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="true"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="d7679534-b8f2-4044-bba1-76462e2611d8"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="135">
+                          Yes — in
+                          <strong data-start="9" data-end="16">MD5</strong>,
+                          even
+                          <strong data-start="23" data-end="84"
+                            >very similar inputs produce drastically different
+                            outputs</strong
+                          >. This property is called the
+                          <strong data-start="114" data-end="134"
+                            >avalanche effect</strong
+                          >.
+                        </p>
+                        <hr data-start="137" data-end="140" />
+                        <h3 data-start="142" data-end="178">
+                          🔹 What Is the Avalanche Effect?
+                        </h3>
+                        <p data-start="180" data-end="359">
+                          The
+                          <strong data-start="184" data-end="204"
+                            >avalanche effect</strong
+                          >
+                          is a desired property of cryptographic hash functions
+                          like MD5, where a
+                          <strong data-start="277" data-end="293"
+                            >small change</strong
+                          >
+                          in input (even one bit) causes a
+                          <strong data-start="327" data-end="351"
+                            >completely different</strong
+                          >
+                          output.
+                        </p>
+                        <hr data-start="361" data-end="364" />
+                        <h3 data-start="366" data-end="410">
+                          🔹 Example: MD5 Hashes of Similar Inputs
+                        </h3>
+                        <p data-start="412" data-end="464">
+                          Let’s compare the MD5 hashes of two similar strings:
+                        </p>
+                        <h4 data-start="466" data-end="494">
+                          🔸 Input 1:
+                          <code data-start="483" data-end="494">"user123"</code>
+                        </h4>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="495"
+                          data-end="558"
+                        ><div class="contain-inline-size rounded-2xl border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-2xl">python</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>MD5("user123") = 6adf97f83acf6453d4a6a4b1070f3754
+</span></code></div></div></pre>
+                        <h4 data-start="560" data-end="618">
+                          🔸 Input 2:
+                          <code data-start="577" data-end="588">"user124"</code>
+                          (only last character changed)
+                        </h4>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="619"
+                          data-end="682"
+                        ><div class="contain-inline-size rounded-2xl border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-2xl">python</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span>MD5("user124") = 04d06b956c63b2cdd4c2e5b3edb3d620
+</span></code></div></div></pre>
+                        <p data-start="684" data-end="824">
+                          ✅ These two inputs differ by only
+                          <strong data-start="718" data-end="735"
+                            >one character</strong
+                          >, yet their hashes are
+                          <strong data-start="758" data-end="782"
+                            >completely different</strong
+                          >
+                          — this demonstrates the avalanche effect.
+                        </p>
+                        <hr data-start="826" data-end="829" />
+                        <h3 data-start="831" data-end="867">
+                          🔹 Why This Matters for Sharding
+                        </h3>
+                        <p data-start="869" data-end="919">
+                          This property helps
+                          <strong data-start="889" data-end="918"
+                            >distribute data uniformly</strong
+                          >:
+                        </p>
+                        <ul data-start="921" data-end="1170">
+                          <li data-start="921" data-end="1059">
+                            <p data-start="923" data-end="1059">
+                              Without avalanche: similar keys (e.g.,
+                              <code data-start="962" data-end="971"
+                                >user123</code
+                              >,
+                              <code data-start="973" data-end="982"
+                                >user124</code
+                              >,
+                              <code data-start="984" data-end="993"
+                                >user125</code
+                              >) might hash to the same or neighboring shards →
+                              <strong data-start="1042" data-end="1058"
+                                >hotspot risk</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="1060" data-end="1170">
+                            <p data-start="1062" data-end="1170">
+                              With avalanche (as in MD5): those keys hash to
+                              <strong data-start="1109" data-end="1134"
+                                >very different values</strong
+                              >, which spread evenly across shards.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1172" data-end="1175" />
+                        <h3 data-start="1177" data-end="1191">🔹 Summary</h3>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="1193"
+                              data-end="1486"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="1193" data-end="1231">
+                                <tr data-start="1193" data-end="1231">
+                                  <th
+                                    data-start="1193"
+                                    data-end="1215"
+                                    data-col-size="sm"
+                                  >
+                                    Property
+                                  </th>
+                                  <th
+                                    data-start="1215"
+                                    data-end="1231"
+                                    data-col-size="sm"
+                                  >
+                                    MD5 Supports
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="1271" data-end="1486">
+                                <tr data-start="1271" data-end="1309">
+                                  <td
+                                    data-start="1271"
+                                    data-end="1293"
+                                    data-col-size="sm"
+                                  >
+                                    Deterministic
+                                  </td>
+                                  <td
+                                    data-start="1293"
+                                    data-end="1309"
+                                    data-col-size="sm"
+                                  >
+                                    ✅ Yes
+                                  </td>
+                                </tr>
+                                <tr data-start="1310" data-end="1377">
+                                  <td
+                                    data-start="1310"
+                                    data-end="1349"
+                                    data-col-size="sm"
+                                  >
+                                    Small input change → big hash change
+                                  </td>
+                                  <td
+                                    data-start="1349"
+                                    data-end="1377"
+                                    data-col-size="sm"
+                                  >
+                                    ✅ Yes (avalanche effect)
+                                  </td>
+                                </tr>
+                                <tr data-start="1378" data-end="1426">
+                                  <td
+                                    data-start="1378"
+                                    data-end="1401"
+                                    data-col-size="sm"
+                                  >
+                                    Uniform distribution
+                                  </td>
+                                  <td
+                                    data-start="1401"
+                                    data-end="1426"
+                                    data-col-size="sm"
+                                  >
+                                    ✅ Yes (statistically)
+                                  </td>
+                                </tr>
+                                <tr data-start="1427" data-end="1486">
+                                  <td
+                                    data-start="1427"
+                                    data-end="1452"
+                                    data-col-size="sm"
+                                  >
+                                    Cryptographic security
+                                  </td>
+                                  <td
+                                    data-start="1452"
+                                    data-end="1486"
+                                    data-col-size="sm"
+                                  >
+                                    ❌ No (deprecated for security)
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p data-start="1488" data-end="1686">
+                          So yes —
+                          <strong data-start="1497" data-end="1549"
+                            >similar input does produce very different
+                            output</strong
+                          >
+                          in MD5. That’s one reason it’s still useful in
+                          <strong data-start="1597" data-end="1631"
+                            >sharding and data partitioning</strong
+                          >, even though it’s insecure for cryptographic
+                          purposes.
+                        </p>
+                        <p
+                          data-start="1688"
+                          data-end="1803"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Let me know if you want to visualize this with code or
+                          compare to another hash function like MurmurHash or
+                          SHA-256.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
