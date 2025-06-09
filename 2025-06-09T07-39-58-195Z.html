@@ -1,0 +1,2806 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>How ISPs Provide Static IPs</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="10d4f4b2-8d09-48ca-b77a-7a0e59872014"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How does isp provide static ips?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="55e33b0a-5403-417f-ae20-464a238a74c8"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="230">
+                          ISPs (Internet Service Providers) provide
+                          <strong data-start="42" data-end="65"
+                            >static IP addresses</strong
+                          >
+                          by
+                          <strong data-start="69" data-end="179"
+                            >reserving a specific IP address for a customer and
+                            configuring their network to always assign that same
+                            IP</strong
+                          >. Here's how it works technically and logistically:
+                        </p>
+                        <hr data-start="232" data-end="235" />
+                        <h3 data-start="237" data-end="272">
+                          🔧 1.
+                          <strong data-start="247" data-end="272"
+                            >IP Address Allocation</strong
+                          >
+                        </h3>
+                        <p data-start="273" data-end="473">
+                          ISPs are assigned blocks of IP addresses (IPv4 or
+                          IPv6) by regional internet registries (like ARIN,
+                          RIPE, APNIC, etc.). They manage these blocks and can
+                          subdivide them for use by individual customers.
+                        </p>
+                        <hr data-start="475" data-end="478" />
+                        <h3 data-start="480" data-end="522">
+                          📡 2.
+                          <strong data-start="490" data-end="522"
+                            >Static IP Assignment Process</strong
+                          >
+                        </h3>
+                        <p data-start="523" data-end="552">
+                          When you request a static IP:
+                        </p>
+                        <ul data-start="554" data-end="971">
+                          <li data-start="554" data-end="639">
+                            <p data-start="556" data-end="639">
+                              The ISP
+                              <strong data-start="564" data-end="591"
+                                >selects an available IP</strong
+                              >
+                              from its pool and
+                              <strong data-start="610" data-end="638"
+                                >reserves it just for you</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="640" data-end="840">
+                            <p data-start="642" data-end="840">
+                              They then configure their
+                              <strong data-start="668" data-end="683"
+                                >DHCP server</strong
+                              >
+                              (Dynamic Host Configuration Protocol) to
+                              <strong data-start="725" data-end="750"
+                                >always assign that IP</strong
+                              >
+                              to your connection (usually identified by your
+                              router's MAC address or customer account).
+                            </p>
+                          </li>
+                          <li data-start="841" data-end="971">
+                            <p data-start="843" data-end="971">
+                              Alternatively, they may configure the static IP
+                              <strong data-start="891" data-end="916"
+                                >manually on their end</strong
+                              >
+                              and require you to configure it on your
+                              device/router.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="973" data-end="976" />
+                        <h3 data-start="978" data-end="1010">
+                          🧰 3.
+                          <strong data-start="988" data-end="1010"
+                            >How It’s Delivered</strong
+                          >
+                        </h3>
+                        <ul data-start="1011" data-end="1304">
+                          <li data-start="1011" data-end="1076">
+                            <p data-start="1013" data-end="1076">
+                              <strong data-start="1013" data-end="1027"
+                                >Home users</strong
+                              >
+                              typically get dynamic IPs unless they pay extra.
+                            </p>
+                          </li>
+                          <li data-start="1077" data-end="1155">
+                            <p data-start="1079" data-end="1155">
+                              <strong data-start="1079" data-end="1093"
+                                >Static IPs</strong
+                              >
+                              are common in
+                              <strong data-start="1108" data-end="1126"
+                                >business plans</strong
+                              >
+                              or
+                              <strong data-start="1130" data-end="1154"
+                                >hosting environments</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="1156" data-end="1304">
+                            <p data-start="1158" data-end="1188">
+                              The static IP can be assigned:
+                            </p>
+                            <ul data-start="1191" data-end="1304">
+                              <li data-start="1191" data-end="1223">
+                                <p data-start="1193" data-end="1223">
+                                  <strong data-start="1193" data-end="1223"
+                                    >Directly to a router/modem</strong
+                                  >
+                                </p>
+                              </li>
+                              <li data-start="1226" data-end="1304">
+                                <p data-start="1228" data-end="1304">
+                                  Or
+                                  <strong data-start="1231" data-end="1262"
+                                    >to a specific server/device</strong
+                                  >
+                                  behind a NAT using port forwarding or DMZ
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <hr data-start="1306" data-end="1309" />
+                        <h3 data-start="1311" data-end="1350">
+                          🧪 4.
+                          <strong data-start="1321" data-end="1350"
+                            >Routing and Configuration</strong
+                          >
+                        </h3>
+                        <ul data-start="1351" data-end="1618">
+                          <li data-start="1351" data-end="1469">
+                            <p data-start="1353" data-end="1469">
+                              The ISP sets up
+                              <strong data-start="1369" data-end="1386"
+                                >routing rules</strong
+                              >
+                              in their network so that traffic destined for your
+                              static IP is directed properly.
+                            </p>
+                          </li>
+                          <li data-start="1470" data-end="1618">
+                            <p data-start="1472" data-end="1491">
+                              This might involve:
+                            </p>
+                            <ul data-start="1494" data-end="1618">
+                              <li data-start="1494" data-end="1522">
+                                <p data-start="1496" data-end="1522">
+                                  Configuring
+                                  <strong data-start="1508" data-end="1522"
+                                    >ARP tables</strong
+                                  >
+                                </p>
+                              </li>
+                              <li data-start="1525" data-end="1557">
+                                <p data-start="1527" data-end="1557">
+                                  Updating
+                                  <strong data-start="1536" data-end="1557"
+                                    >routing protocols</strong
+                                  >
+                                </p>
+                              </li>
+                              <li data-start="1560" data-end="1618">
+                                <p data-start="1562" data-end="1618">
+                                  Adjusting
+                                  <strong data-start="1572" data-end="1590"
+                                    >firewall rules</strong
+                                  >
+                                  or
+                                  <strong data-start="1594" data-end="1618"
+                                    >reverse DNS settings</strong
+                                  >
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <hr data-start="1620" data-end="1623" />
+                        <h3 data-start="1625" data-end="1640">🧍 Example:</h3>
+                        <p data-start="1641" data-end="1758">
+                          You pay your ISP for a static IP, and they assign
+                          <code data-start="1691" data-end="1705"
+                            >203.0.113.42</code
+                          >
+                          to your connection. Every time your router connects:
+                        </p>
+                        <ul data-start="1759" data-end="1939">
+                          <li data-start="1759" data-end="1814">
+                            <p data-start="1761" data-end="1814">
+                              The ISP's DHCP server recognizes your account or
+                              MAC.
+                            </p>
+                          </li>
+                          <li data-start="1815" data-end="1874">
+                            <p data-start="1817" data-end="1874">
+                              It assigns
+                              <code data-start="1828" data-end="1842"
+                                >203.0.113.42</code
+                              >
+                              instead of a random dynamic IP.
+                            </p>
+                          </li>
+                          <li data-start="1875" data-end="1939">
+                            <p data-start="1877" data-end="1939">
+                              The router (or device) is configured to expect
+                              that static IP.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1941" data-end="1944" />
+                        <h3 data-start="1946" data-end="1972">
+                          💡 Why Use Static IPs?
+                        </h3>
+                        <ul data-start="1973" data-end="2096">
+                          <li data-start="1973" data-end="2008">
+                            <p data-start="1975" data-end="2008">
+                              Hosting websites or email servers
+                            </p>
+                          </li>
+                          <li data-start="2009" data-end="2036">
+                            <p data-start="2011" data-end="2036">
+                              Remote access (VPNs, RDP)
+                            </p>
+                          </li>
+                          <li data-start="2037" data-end="2059">
+                            <p data-start="2039" data-end="2059">
+                              Reliable DNS mapping
+                            </p>
+                          </li>
+                          <li data-start="2060" data-end="2096">
+                            <p data-start="2062" data-end="2096">
+                              Security &amp; firewall configurations
+                            </p>
+                          </li>
+                        </ul>
+                        <p
+                          data-start="2098"
+                          data-end="2173"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Would you like to see how to configure one on a router
+                          or operating system?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="8b91ab86-cccc-4dd0-8239-4fc9bb254b6c"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          Who gives the ISPs the ips?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="e6715773-1f83-46fc-8e44-ce0f20490728"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="183">
+                          Great question! The IP addresses that ISPs use are
+                          <strong data-start="51" data-end="103"
+                            >allocated by regional internet registries
+                            (RIRs)</strong
+                          >, which operate under the oversight of a global
+                          authority. Here's the breakdown:
+                        </p>
+                        <hr data-start="185" data-end="188" />
+                        <h3 data-start="190" data-end="246">
+                          🌍 1.
+                          <strong data-start="200" data-end="246"
+                            >IANA (Internet Assigned Numbers Authority)</strong
+                          >
+                        </h3>
+                        <ul data-start="247" data-end="495">
+                          <li data-start="247" data-end="326">
+                            <p data-start="249" data-end="326">
+                              <strong data-start="249" data-end="272"
+                                >Top-level authority</strong
+                              >
+                              responsible for managing the global IP address
+                              space.
+                            </p>
+                          </li>
+                          <li data-start="327" data-end="405">
+                            <p data-start="329" data-end="405">
+                              Operated by
+                              <strong data-start="341" data-end="350"
+                                >ICANN</strong
+                              >
+                              (Internet Corporation for Assigned Names and
+                              Numbers).
+                            </p>
+                          </li>
+                          <li data-start="406" data-end="495">
+                            <p data-start="408" data-end="495">
+                              IANA allocates
+                              <strong data-start="423" data-end="455"
+                                >large blocks of IP addresses</strong
+                              >
+                              to Regional Internet Registries (RIRs).
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="497" data-end="500" />
+                        <h3 data-start="502" data-end="551">
+                          🌐 2.
+                          <strong data-start="512" data-end="551"
+                            >RIRs (Regional Internet Registries)</strong
+                          >
+                        </h3>
+                        <p data-start="552" data-end="629">
+                          There are
+                          <strong data-start="562" data-end="575"
+                            >five RIRs</strong
+                          >, each responsible for a specific region of the
+                          world:
+                        </p>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="631"
+                              data-end="1000"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="631" data-end="682">
+                                <tr data-start="631" data-end="682">
+                                  <th
+                                    data-start="631"
+                                    data-end="643"
+                                    data-col-size="sm"
+                                  >
+                                    RIR
+                                  </th>
+                                  <th
+                                    data-start="643"
+                                    data-end="682"
+                                    data-col-size="sm"
+                                  >
+                                    Region Covered
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="736" data-end="1000">
+                                <tr data-start="736" data-end="788">
+                                  <td
+                                    data-start="736"
+                                    data-end="748"
+                                    data-col-size="sm"
+                                  >
+                                    ARIN
+                                  </td>
+                                  <td
+                                    data-start="748"
+                                    data-end="788"
+                                    data-col-size="sm"
+                                  >
+                                    North America
+                                  </td>
+                                </tr>
+                                <tr data-start="789" data-end="841">
+                                  <td
+                                    data-start="789"
+                                    data-end="801"
+                                    data-col-size="sm"
+                                  >
+                                    RIPE NCC
+                                  </td>
+                                  <td
+                                    data-start="801"
+                                    data-end="841"
+                                    data-col-size="sm"
+                                  >
+                                    Europe, Middle East, Central Asia
+                                  </td>
+                                </tr>
+                                <tr data-start="842" data-end="894">
+                                  <td
+                                    data-start="842"
+                                    data-end="854"
+                                    data-col-size="sm"
+                                  >
+                                    APNIC
+                                  </td>
+                                  <td
+                                    data-start="854"
+                                    data-end="894"
+                                    data-col-size="sm"
+                                  >
+                                    Asia-Pacific
+                                  </td>
+                                </tr>
+                                <tr data-start="895" data-end="947">
+                                  <td
+                                    data-start="895"
+                                    data-end="907"
+                                    data-col-size="sm"
+                                  >
+                                    LACNIC
+                                  </td>
+                                  <td
+                                    data-start="907"
+                                    data-end="947"
+                                    data-col-size="sm"
+                                  >
+                                    Latin America and the Caribbean
+                                  </td>
+                                </tr>
+                                <tr data-start="948" data-end="1000">
+                                  <td
+                                    data-start="948"
+                                    data-end="960"
+                                    data-col-size="sm"
+                                  >
+                                    AFRINIC
+                                  </td>
+                                  <td
+                                    data-start="960"
+                                    data-end="1000"
+                                    data-col-size="sm"
+                                  >
+                                    Africa
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <ul data-start="1002" data-end="1207">
+                          <li data-start="1002" data-end="1128">
+                            <p data-start="1004" data-end="1128">
+                              RIRs receive large IP blocks from IANA and
+                              distribute them to ISPs, governments,
+                              corporations, and educational institutions.
+                            </p>
+                          </li>
+                          <li data-start="1129" data-end="1207">
+                            <p data-start="1131" data-end="1207">
+                              They also manage ASN (Autonomous System Numbers)
+                              and support routing policy.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1209" data-end="1212" />
+                        <h3 data-start="1214" data-end="1277">
+                          🏢 3.
+                          <strong data-start="1224" data-end="1277"
+                            >LIRs (Local Internet Registries) – Typically
+                            ISPs</strong
+                          >
+                        </h3>
+                        <ul data-start="1278" data-end="1506">
+                          <li data-start="1278" data-end="1355">
+                            <p data-start="1280" data-end="1355">
+                              ISPs apply to their respective RIR to become a
+                              <strong data-start="1327" data-end="1354"
+                                >Local Internet Registry</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="1356" data-end="1427">
+                            <p data-start="1358" data-end="1427">
+                              As LIRs, ISPs receive IP address blocks to assign
+                              to their customers.
+                            </p>
+                          </li>
+                          <li data-start="1428" data-end="1506">
+                            <p data-start="1430" data-end="1506">
+                              They must
+                              <strong data-start="1440" data-end="1462"
+                                >justify their need</strong
+                              >
+                              for more IPs (usage, network growth, etc.).
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1508" data-end="1511" />
+                        <h3 data-start="1513" data-end="1557">
+                          🛠️ 4.
+                          <strong data-start="1524" data-end="1557"
+                            >IP Address Types ISPs Receive</strong
+                          >
+                        </h3>
+                        <ul data-start="1558" data-end="1727">
+                          <li data-start="1558" data-end="1656">
+                            <p data-start="1560" data-end="1656">
+                              <strong data-start="1560" data-end="1578"
+                                >IPv4 addresses</strong
+                              >: Still widely used, but very limited (most RIRs
+                              have run out of large pools).
+                            </p>
+                          </li>
+                          <li data-start="1657" data-end="1727">
+                            <p data-start="1659" data-end="1727">
+                              <strong data-start="1659" data-end="1677"
+                                >IPv6 addresses</strong
+                              >: Much more abundant, being increasingly
+                              deployed.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1729" data-end="1732" />
+                        <h3 data-start="1734" data-end="1754">
+                          🔁 Summary Flow:
+                        </h3>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1755"
+                          data-end="1839"
+                        ><div class="contain-inline-size rounded-2xl border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-2xl"></div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>IANA → RIR (e.g., ARIN) → ISP (e.g., Comcast) → Customer (static/dynamic IP)
+</span></code></div></div></pre>
+                        <p
+                          data-start="1841"
+                          data-end="1938"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Let me know if you'd like to see how IPv6 allocation
+                          differs or what ISPs do when IPv4 is scarce.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="34e7204c-dba6-4673-823d-a63bee9b539b"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          Are ipv4 over the internet globally assigned to LIRs?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="f632cc53-56f9-4e78-8f17-c2df5a68049a"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="211">
+                          Yes —
+                          <strong data-start="6" data-end="106"
+                            >globally routable IPv4 addresses are assigned to
+                            LIRs (usually ISPs, data centers, etc.) by
+                            RIRs</strong
+                          >, and these assignments are coordinated to ensure
+                          that
+                          <strong data-start="161" data-end="210"
+                            >each address is unique on the global
+                            internet</strong
+                          >.
+                        </p>
+                        <p data-start="213" data-end="248">
+                          Here’s how it works in more detail:
+                        </p>
+                        <hr data-start="250" data-end="253" />
+                        <h3 data-start="255" data-end="295">
+                          ✅
+                          <strong data-start="261" data-end="295"
+                            >Globally Unique IPv4 Addresses</strong
+                          >
+                        </h3>
+                        <ul data-start="296" data-end="688">
+                          <li data-start="296" data-end="420">
+                            <p data-start="298" data-end="420">
+                              <strong data-start="298" data-end="351"
+                                >Every public IPv4 address must be globally
+                                unique</strong
+                              >
+                              so that data sent over the internet reaches the
+                              correct destination.
+                            </p>
+                          </li>
+                          <li data-start="421" data-end="528">
+                            <p data-start="423" data-end="528">
+                              To ensure this,
+                              <strong data-start="439" data-end="470"
+                                >IANA → RIR → LIR → End User</strong
+                              >
+                              follows a structured and hierarchical distribution
+                              model.
+                            </p>
+                          </li>
+                          <li data-start="529" data-end="688">
+                            <p data-start="531" data-end="688">
+                              Once an IP block is assigned to a LIR (ISP), that
+                              LIR
+                              <strong data-start="585" data-end="664"
+                                >owns the right to use it and advertise it via
+                                BGP (Border Gateway Protocol)</strong
+                              >
+                              on the global internet.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="690" data-end="693" />
+                        <h3 data-start="695" data-end="736">
+                          🌍
+                          <strong data-start="702" data-end="736"
+                            >What "Globally Assigned" Means</strong
+                          >
+                        </h3>
+                        <ul data-start="737" data-end="1066">
+                          <li data-start="737" data-end="843">
+                            <p data-start="739" data-end="843">
+                              The IPs are
+                              <strong data-start="751" data-end="791"
+                                >registered in public WHOIS databases</strong
+                              >
+                              managed by the RIRs (e.g., RIPE WHOIS, ARIN
+                              WHOIS).
+                            </p>
+                          </li>
+                          <li data-start="844" data-end="958">
+                            <p data-start="846" data-end="958">
+                              Anyone can look up an IP and see which
+                              organization it was allocated to, ensuring
+                              transparency and coordination.
+                            </p>
+                          </li>
+                          <li data-start="959" data-end="1066">
+                            <p data-start="961" data-end="1066">
+                              This global registry system prevents
+                              <strong data-start="998" data-end="1022"
+                                >IP address conflicts</strong
+                              >, which would break routing on the internet.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1068" data-end="1071" />
+                        <h3 data-start="1073" data-end="1119">
+                          🚫
+                          <strong data-start="1080" data-end="1119"
+                            >Private (Non-Global) IPv4 Addresses</strong
+                          >
+                        </h3>
+                        <p data-start="1120" data-end="1213">
+                          Not all IPv4 addresses are globally routable. Some are
+                          reserved for
+                          <strong data-start="1188" data-end="1212"
+                            >private/internal use</strong
+                          >:
+                        </p>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="1215"
+                              data-end="1464"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="1215" data-end="1264">
+                                <tr data-start="1215" data-end="1264">
+                                  <th
+                                    data-start="1215"
+                                    data-end="1237"
+                                    data-col-size="sm"
+                                  >
+                                    Private Range
+                                  </th>
+                                  <th
+                                    data-start="1237"
+                                    data-end="1264"
+                                    data-col-size="sm"
+                                  >
+                                    Common Use Case
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="1315" data-end="1464">
+                                <tr data-start="1315" data-end="1364">
+                                  <td
+                                    data-start="1315"
+                                    data-end="1337"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1317" data-end="1329"
+                                      >10.0.0.0/8</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1337"
+                                    data-end="1364"
+                                    data-col-size="sm"
+                                  >
+                                    Corporate networks
+                                  </td>
+                                </tr>
+                                <tr data-start="1365" data-end="1414">
+                                  <td
+                                    data-start="1365"
+                                    data-end="1387"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1367" data-end="1382"
+                                      >172.16.0.0/12</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1387"
+                                    data-end="1414"
+                                    data-col-size="sm"
+                                  >
+                                    VPNs, enterprises
+                                  </td>
+                                </tr>
+                                <tr data-start="1415" data-end="1464">
+                                  <td
+                                    data-start="1415"
+                                    data-end="1437"
+                                    data-col-size="sm"
+                                  >
+                                    <code data-start="1417" data-end="1433"
+                                      >192.168.0.0/16</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1437"
+                                    data-end="1464"
+                                    data-col-size="sm"
+                                  >
+                                    Home routers
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p data-start="1466" data-end="1608">
+                          These addresses are
+                          <strong data-start="1486" data-end="1510"
+                            >not assigned by RIRs</strong
+                          >
+                          for public routing — they’re used within local
+                          networks behind NAT (Network Address Translation).
+                        </p>
+                        <hr data-start="1610" data-end="1613" />
+                        <h3 data-start="1615" data-end="1639">
+                          📉
+                          <strong data-start="1622" data-end="1639"
+                            >IPv4 Scarcity</strong
+                          >
+                        </h3>
+                        <ul data-start="1640" data-end="1866">
+                          <li data-start="1640" data-end="1691">
+                            <p data-start="1642" data-end="1691">
+                              <strong data-start="1642" data-end="1691"
+                                >IPv4 addresses are nearly exhausted
+                                globally.</strong
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1692" data-end="1749">
+                            <p data-start="1694" data-end="1749">
+                              RIRs now issue only small allocations or reclaimed
+                              IPs.
+                            </p>
+                          </li>
+                          <li data-start="1750" data-end="1866">
+                            <p data-start="1752" data-end="1866">
+                              Organizations buy/sell IPv4 blocks on secondary
+                              markets (e.g., IPv4 brokers), with approval from
+                              the relevant RIR.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1868" data-end="1871" />
+                        <h3 data-start="1873" data-end="1888">🧭 Summary:</h3>
+                        <p data-start="1889" data-end="2089">
+                          Yes,
+                          <strong data-start="1894" data-end="1971"
+                            >globally routable IPv4 addresses are assigned to
+                            LIRs (like ISPs) by RIRs</strong
+                          >, and this allocation is managed at a global level to
+                          ensure uniqueness and proper routing across the entire
+                          internet.
+                        </p>
+                        <p
+                          data-start="2091"
+                          data-end="2192"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Would you like to see an example of how to trace an IP
+                          to its LIR or check its global routing status?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="aff74143-a16f-41bc-bfe0-bf8ccb725359"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          So it means that when assigned a static ip by my isp
+                          no other isp around the world provides the same ip
+                          address?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="1c6513c1-1139-4ff5-b2aa-26520c55b1f6"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="205">
+                          Exactly —
+                          <strong data-start="10" data-end="132"
+                            >when your ISP assigns you a static IP address, no
+                            other ISP anywhere in the world should be using that
+                            same IP address</strong
+                          >
+                          (assuming it's a
+                          <strong data-start="150" data-end="163"
+                            >public IP</strong
+                          >, not a private or CGNAT one). Here's why:
+                        </p>
+                        <hr data-start="207" data-end="210" />
+                        <h3 data-start="212" data-end="259">
+                          ✅
+                          <strong data-start="218" data-end="259"
+                            >Public Static IPs Are Globally Unique</strong
+                          >
+                        </h3>
+                        <ul data-start="260" data-end="587">
+                          <li data-start="260" data-end="349">
+                            <p data-start="262" data-end="349">
+                              Your static IP comes from a
+                              <strong data-start="290" data-end="330"
+                                >globally assigned, routable IP block</strong
+                              >
+                              owned by your ISP.
+                            </p>
+                          </li>
+                          <li data-start="350" data-end="454">
+                            <p data-start="352" data-end="454">
+                              That IP is registered in global routing databases
+                              and announced via
+                              <strong data-start="420" data-end="453"
+                                >BGP (Border Gateway Protocol)</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="455" data-end="587">
+                            <p data-start="457" data-end="587">
+                              Other ISPs and networks use this routing data to
+                              ensure traffic to that IP goes only to your ISP —
+                              and ultimately, to your device.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="589" data-end="598">So yes:</p>
+                        <blockquote data-start="599" data-end="672">
+                          <p data-start="601" data-end="672">
+                            <strong data-start="601" data-end="672"
+                              >If it’s a public static IP, it is guaranteed to
+                              be unique globally.</strong
+                            >
+                          </p>
+                        </blockquote>
+                        <hr data-start="674" data-end="677" />
+                        <h3 data-start="679" data-end="711">
+                          🚨 What About Duplicate IPs?
+                        </h3>
+                        <p data-start="712" data-end="784">
+                          There are only a few scenarios where IP address
+                          duplication might occur:
+                        </p>
+                        <ol data-start="786" data-end="1441">
+                          <li data-start="786" data-end="1033">
+                            <p data-start="789" data-end="849">
+                              <strong data-start="789" data-end="813"
+                                >Private IP addresses</strong
+                              >
+                              (e.g.,
+                              <code data-start="821" data-end="834"
+                                >192.168.x.x</code
+                              >,
+                              <code data-start="836" data-end="846"
+                                >10.x.x.x</code
+                              >)
+                            </p>
+                            <ul data-start="853" data-end="1033">
+                              <li data-start="853" data-end="895">
+                                <p data-start="855" data-end="895">
+                                  These are reused everywhere, behind NAT.
+                                </p>
+                              </li>
+                              <li data-start="899" data-end="1033">
+                                <p data-start="901" data-end="1033">
+                                  Your home and a corporate office in another
+                                  country could both use
+                                  <code data-start="968" data-end="983"
+                                    >192.168.1.100</code
+                                  >
+                                  — but they aren’t visible to the public
+                                  internet.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="1035" data-end="1224">
+                            <p data-start="1038" data-end="1091">
+                              <strong data-start="1038" data-end="1067"
+                                >Carrier-Grade NAT (CGNAT)</strong
+                              >
+                              IPs (<code data-start="1073" data-end="1088"
+                                >100.64.0.0/10</code
+                              >)
+                            </p>
+                            <ul data-start="1095" data-end="1224">
+                              <li data-start="1095" data-end="1159">
+                                <p data-start="1097" data-end="1159">
+                                  Used by ISPs to share one public IP across
+                                  multiple customers.
+                                </p>
+                              </li>
+                              <li data-start="1163" data-end="1224">
+                                <p data-start="1165" data-end="1224">
+                                  These are also reused internally and not
+                                  globally routable.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="1226" data-end="1441">
+                            <p data-start="1229" data-end="1274">
+                              <strong data-start="1229" data-end="1272"
+                                >IP Misconfiguration or Hijacking (Rare)</strong
+                              >
+                            </p>
+                            <ul data-start="1278" data-end="1441">
+                              <li data-start="1278" data-end="1360">
+                                <p data-start="1280" data-end="1360">
+                                  Misconfigured networks or malicious actors
+                                  could advertise an IP they don’t own.
+                                </p>
+                              </li>
+                              <li data-start="1364" data-end="1441">
+                                <p data-start="1366" data-end="1441">
+                                  BGP filtering and RPKI help prevent this, but
+                                  it’s still a potential issue.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ol>
+                        <hr data-start="1443" data-end="1446" />
+                        <h3 data-start="1448" data-end="1494">
+                          🧪 How to Check Your Static IP’s Ownership
+                        </h3>
+                        <p data-start="1495" data-end="1565">
+                          You can look up any public IP address using a WHOIS or
+                          IP lookup tool:
+                        </p>
+                        <ul data-start="1567" data-end="1683">
+                          <li data-start="1567" data-end="1603">
+                            <p data-start="1569" data-end="1603">
+                              <a
+                                data-start="1569"
+                                data-end="1603"
+                                rel="noopener"
+                                target="_new"
+                                class="cursor-pointer"
+                                >RIPEstat</a
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1604" data-end="1649">
+                            <p data-start="1606" data-end="1649">
+                              <a
+                                data-start="1606"
+                                data-end="1649"
+                                rel="noopener"
+                                target="_new"
+                                class="cursor-pointer"
+                                >ARIN WHOIS</a
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1650" data-end="1683">
+                            <p data-start="1652" data-end="1683">
+                              <a
+                                data-start="1652"
+                                data-end="1683"
+                                rel="noopener"
+                                target="_new"
+                                class="cursor-pointer"
+                                >ipinfo.io</a
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1685" data-end="1705">
+                          These will tell you:
+                        </p>
+                        <ul data-start="1706" data-end="1804">
+                          <li data-start="1706" data-end="1735">
+                            <p data-start="1708" data-end="1735">
+                              Which ISP owns the IP block
+                            </p>
+                          </li>
+                          <li data-start="1736" data-end="1756">
+                            <p data-start="1738" data-end="1756">
+                              The country/region
+                            </p>
+                          </li>
+                          <li data-start="1757" data-end="1804">
+                            <p data-start="1759" data-end="1804">
+                              Whether it's being advertised on the internet
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1806" data-end="1809" />
+                        <h3 data-start="1811" data-end="1831">
+                          🧭 Final Thought
+                        </h3>
+                        <p data-start="1832" data-end="2012">
+                          So yes — when your ISP assigns you a
+                          <strong data-start="1869" data-end="1889"
+                            >static public IP</strong
+                          >, it is
+                          <strong data-start="1897" data-end="1933"
+                            >guaranteed to be globally unique</strong
+                          >, and no other customer (of any ISP) should have that
+                          same IP at the same time.
+                        </p>
+                        <p
+                          data-start="2014"
+                          data-end="2095"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Want me to walk you through verifying your current
+                          IP's owner and routing status?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-9"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="022e9262-577c-4299-bbf7-38531a810cfa"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          How come that we have not ran out of ipv4 static ips
+                          yet?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-10"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="4e285c09-2a6e-45d0-8d4a-5dd07c92ea34"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="278">
+                          That's an excellent question — and actually,
+                          <strong data-start="45" data-end="100"
+                            >we
+                            <em data-start="50" data-end="56">have</em>
+                            effectively run out of new IPv4 addresses</strong
+                          >, including static ones. But the reason you can
+                          <em data-start="148" data-end="159">still get</em> a
+                          static IPv4 address from your ISP comes down to
+                          <strong data-start="210" data-end="256"
+                            >reuse, conservation, and a few workarounds</strong
+                          >. Let’s break it down:
+                        </p>
+                        <hr data-start="280" data-end="283" />
+                        <h3 data-start="285" data-end="331">
+                          🛑 1.
+                          <strong data-start="295" data-end="331"
+                            >IPv4 Exhaustion Happened Already</strong
+                          >
+                        </h3>
+                        <ul data-start="332" data-end="681">
+                          <li data-start="332" data-end="387">
+                            <p data-start="334" data-end="387">
+                              IPv4 has about
+                              <strong data-start="349" data-end="380"
+                                >4.3 billion total addresses</strong
+                              >
+                              (2³²).
+                            </p>
+                          </li>
+                          <li data-start="388" data-end="492">
+                            <p data-start="390" data-end="492">
+                              Subtract unusable/reserved blocks (e.g.,
+                              multicast, private ranges), and fewer are actually
+                              available.
+                            </p>
+                          </li>
+                          <li data-start="493" data-end="584">
+                            <p data-start="495" data-end="584">
+                              The
+                              <strong data-start="499" data-end="583"
+                                >last big free pools of IPv4 addresses were
+                                allocated by IANA to the RIRs in 2011</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="585" data-end="681">
+                            <p data-start="587" data-end="681">
+                              Since then,
+                              <strong data-start="599" data-end="643"
+                                >all five RIRs have exhausted their
+                                pools</strong
+                              >
+                              (some still give out tiny fragments).
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="683" data-end="686" />
+                        <h3 data-start="688" data-end="745">
+                          🧩 2.
+                          <strong data-start="698" data-end="745"
+                            >Why You Can Still Get a Static IPv4 Address</strong
+                          >
+                        </h3>
+                        <h4 data-start="747" data-end="786">
+                          ✅
+                          <strong data-start="754" data-end="786"
+                            >ISPs Already Own IPv4 Blocks</strong
+                          >
+                        </h4>
+                        <ul data-start="787" data-end="996">
+                          <li data-start="787" data-end="844">
+                            <p data-start="789" data-end="844">
+                              ISPs received large blocks of IPv4 addresses years
+                              ago.
+                            </p>
+                          </li>
+                          <li data-start="845" data-end="914">
+                            <p data-start="847" data-end="914">
+                              They
+                              <strong data-start="852" data-end="878"
+                                >recycle and reallocate</strong
+                              >
+                              those IPs as customers come and go.
+                            </p>
+                          </li>
+                          <li data-start="915" data-end="996">
+                            <p data-start="917" data-end="996">
+                              When you get a static IP, it’s likely one they’ve
+                              used for someone else before.
+                            </p>
+                          </li>
+                        </ul>
+                        <h4 data-start="998" data-end="1026">
+                          🔄
+                          <strong data-start="1006" data-end="1026"
+                            >IP Address Reuse</strong
+                          >
+                        </h4>
+                        <ul data-start="1027" data-end="1165">
+                          <li data-start="1027" data-end="1073">
+                            <p data-start="1029" data-end="1073">
+                              Static IPs are only assigned when requested.
+                            </p>
+                          </li>
+                          <li data-start="1074" data-end="1165">
+                            <p data-start="1076" data-end="1165">
+                              Many customers are fine with dynamic IPs or use
+                              CGNAT — freeing up static IPs for others.
+                            </p>
+                          </li>
+                        </ul>
+                        <h4 data-start="1167" data-end="1197">
+                          🛒
+                          <strong data-start="1175" data-end="1197"
+                            >IPv4 Market Exists</strong
+                          >
+                        </h4>
+                        <ul data-start="1198" data-end="1376">
+                          <li data-start="1198" data-end="1247">
+                            <p data-start="1200" data-end="1247">
+                              Organizations
+                              <strong data-start="1214" data-end="1242"
+                                >buy and sell IPv4 blocks</strong
+                              >
+                              now.
+                            </p>
+                          </li>
+                          <li data-start="1248" data-end="1305">
+                            <p data-start="1250" data-end="1305">
+                              ISPs can purchase IPs from others on secondary
+                              markets.
+                            </p>
+                          </li>
+                          <li data-start="1306" data-end="1376">
+                            <p data-start="1308" data-end="1376">
+                              Example: Microsoft once bought millions of IPs
+                              from bankrupt Nortel.
+                            </p>
+                          </li>
+                        </ul>
+                        <h4 data-start="1378" data-end="1425">
+                          📦
+                          <strong data-start="1386" data-end="1425"
+                            >Subnetting and Efficient Allocation</strong
+                          >
+                        </h4>
+                        <ul data-start="1426" data-end="1590">
+                          <li data-start="1426" data-end="1516">
+                            <p data-start="1428" data-end="1516">
+                              ISPs use subnetting (splitting large blocks into
+                              smaller chunks) to use IPs efficiently.
+                            </p>
+                          </li>
+                          <li data-start="1517" data-end="1590">
+                            <p data-start="1519" data-end="1590">
+                              Small businesses may get just a /30 (4 IPs), not a
+                              whole /24 (256 IPs).
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1592" data-end="1595" />
+                        <h3 data-start="1597" data-end="1639">
+                          💡 3.
+                          <strong data-start="1607" data-end="1639"
+                            >Other Tricks to Stretch IPv4</strong
+                          >
+                        </h3>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="1641"
+                              data-end="2059"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="1641" data-end="1676">
+                                <tr data-start="1641" data-end="1676">
+                                  <th
+                                    data-start="1641"
+                                    data-end="1661"
+                                    data-col-size="sm"
+                                  >
+                                    Technique
+                                  </th>
+                                  <th
+                                    data-start="1661"
+                                    data-end="1676"
+                                    data-col-size="md"
+                                  >
+                                    Description
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="1712" data-end="2059">
+                                <tr data-start="1712" data-end="1794">
+                                  <td
+                                    data-start="1712"
+                                    data-end="1752"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="1714" data-end="1751"
+                                      >NAT (Network Address Translation)</strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1752"
+                                    data-end="1794"
+                                    data-col-size="md"
+                                  >
+                                    Lets many devices share one public IP.
+                                  </td>
+                                </tr>
+                                <tr data-start="1795" data-end="1886">
+                                  <td
+                                    data-start="1795"
+                                    data-end="1827"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="1797" data-end="1826"
+                                      >Carrier-Grade NAT (CGNAT)</strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1827"
+                                    data-end="1886"
+                                    data-col-size="md"
+                                  >
+                                    ISPs use it to serve thousands of users from
+                                    a few IPs.
+                                  </td>
+                                </tr>
+                                <tr data-start="1887" data-end="1966">
+                                  <td
+                                    data-start="1887"
+                                    data-end="1906"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="1889" data-end="1903"
+                                      >IP leasing</strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1906"
+                                    data-end="1966"
+                                    data-col-size="md"
+                                  >
+                                    Some companies lease IPs temporarily instead
+                                    of selling.
+                                  </td>
+                                </tr>
+                                <tr data-start="1967" data-end="2059">
+                                  <td
+                                    data-start="1967"
+                                    data-end="1986"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="1969" data-end="1983"
+                                      >Using IPv6</strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1986"
+                                    data-end="2059"
+                                    data-col-size="md"
+                                  >
+                                    Slowly replacing IPv4 in many networks —
+                                    tons of addresses available.
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr data-start="2061" data-end="2064" />
+                        <h3 data-start="2066" data-end="2129">
+                          📉 4.
+                          <strong data-start="2076" data-end="2129"
+                            >Why Static IPv4 Is Getting Rarer &amp; More
+                            Expensive</strong
+                          >
+                        </h3>
+                        <ul data-start="2130" data-end="2377">
+                          <li data-start="2130" data-end="2205">
+                            <p data-start="2132" data-end="2205">
+                              Because they’re finite,
+                              <strong data-start="2156" data-end="2204"
+                                >static IPv4 addresses are a limited
+                                resource</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="2206" data-end="2281">
+                            <p data-start="2208" data-end="2281">
+                              ISPs often
+                              <strong data-start="2219" data-end="2235"
+                                >charge extra</strong
+                              >
+                              for static IPs or limit how many you can get.
+                            </p>
+                          </li>
+                          <li data-start="2282" data-end="2377">
+                            <p data-start="2284" data-end="2377">
+                              Some smaller ISPs or cloud providers might not
+                              offer them at all unless you justify the need.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="2379" data-end="2382" />
+                        <h3 data-start="2384" data-end="2404">
+                          🧭 Final Thought
+                        </h3>
+                        <p data-start="2405" data-end="2681">
+                          So while
+                          <strong data-start="2414" data-end="2445"
+                            >we have technically run out</strong
+                          >
+                          of new IPv4 addresses,
+                          <strong data-start="2469" data-end="2530"
+                            >recycling, NAT, secondary markets, and careful
+                            allocation</strong
+                          >
+                          allow ISPs to continue offering static IPv4 — for now.
+                          Long-term, the solution is
+                          <strong data-start="2613" data-end="2630"
+                            >IPv6 adoption</strong
+                          >, which has 340 undecillion (3.4 × 10³⁸) addresses.
+                        </p>
+                        <p
+                          data-start="2683"
+                          data-end="2746"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Would you like to see how IPv6 solves this problem
+                          differently?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-11"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="c199e731-78fe-4b4d-a502-52162dbcda94"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          does isp implement nat?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-12"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="fa2eb05a-d22d-439e-b2dd-d035762a99fe"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="199">
+                          Yes,
+                          <strong data-start="5" data-end="62"
+                            >ISPs
+                            <em data-start="12" data-end="16">do</em> implement
+                            NAT (Network Address Translation)</strong
+                          >
+                          — especially
+                          <strong data-start="76" data-end="105"
+                            >Carrier-Grade NAT (CGNAT)</strong
+                          >
+                          — to conserve IPv4 addresses and serve more customers
+                          than the number of public IPs they own.
+                        </p>
+                        <p data-start="201" data-end="257">
+                          Let’s break down the types of NAT and how ISPs use
+                          them:
+                        </p>
+                        <hr data-start="259" data-end="262" />
+                        <h3 data-start="264" data-end="307">
+                          🧱 1.
+                          <strong data-start="274" data-end="307"
+                            >Standard NAT (on your router)</strong
+                          >
+                        </h3>
+                        <ul data-start="308" data-end="613">
+                          <li data-start="308" data-end="613">
+                            <p data-start="310" data-end="344">
+                              This is what most home users have:
+                            </p>
+                            <ul data-start="347" data-end="613">
+                              <li data-start="347" data-end="408">
+                                <p data-start="349" data-end="408">
+                                  Your ISP gives your modem/router
+                                  <strong data-start="382" data-end="407"
+                                    >one public IP address</strong
+                                  >.
+                                </p>
+                              </li>
+                              <li data-start="411" data-end="498">
+                                <p data-start="413" data-end="498">
+                                  Your router then uses
+                                  <strong data-start="435" data-end="450"
+                                    >private IPs</strong
+                                  >
+                                  (like
+                                  <code data-start="457" data-end="470"
+                                    >192.168.x.x</code
+                                  >) for your internal devices.
+                                </p>
+                              </li>
+                              <li data-start="501" data-end="613">
+                                <p data-start="503" data-end="613">
+                                  The router uses
+                                  <strong data-start="519" data-end="526"
+                                    >NAT</strong
+                                  >
+                                  to translate internal addresses to the public
+                                  IP when communicating with the internet.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <p data-start="615" data-end="706">
+                          ✅ This type of NAT is done
+                          <strong data-start="642" data-end="663"
+                            >on your equipment</strong
+                          >, not by the ISP — but it’s the foundation.
+                        </p>
+                        <hr data-start="708" data-end="711" />
+                        <h3 data-start="713" data-end="768">
+                          🏢 2.
+                          <strong data-start="723" data-end="768"
+                            >Carrier-Grade NAT (CGNAT) – ISP-Level NAT</strong
+                          >
+                        </h3>
+                        <ul data-start="769" data-end="1004">
+                          <li data-start="769" data-end="901">
+                            <p data-start="771" data-end="901">
+                              When an ISP is short on public IPv4 addresses, it
+                              assigns customers
+                              <strong data-start="839" data-end="854"
+                                >private IPs</strong
+                              >
+                              from the special CGNAT range:
+                              <code data-start="885" data-end="900"
+                                >100.64.0.0/10</code
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="902" data-end="1004">
+                            <p data-start="904" data-end="1004">
+                              The ISP then uses
+                              <strong data-start="922" data-end="957"
+                                >NAT at its infrastructure level</strong
+                              >
+                              to map many customers onto a shared public IP.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1006" data-end="1020">💡 This means:</p>
+                        <ul data-start="1021" data-end="1240">
+                          <li data-start="1021" data-end="1079">
+                            <p data-start="1023" data-end="1079">
+                              <strong data-start="1023" data-end="1078"
+                                >Multiple customers share a single public IP
+                                address</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="1080" data-end="1131">
+                            <p data-start="1082" data-end="1131">
+                              Customers can still access the internet normally.
+                            </p>
+                          </li>
+                          <li data-start="1132" data-end="1240">
+                            <p data-start="1134" data-end="1240">
+                              However, it breaks
+                              <strong data-start="1153" data-end="1205"
+                                >port forwarding, hosting services, and some
+                                VPNs</strong
+                              >
+                              — unless the ISP uses workarounds.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1242" data-end="1245" />
+                        <h3 data-start="1247" data-end="1286">
+                          🚧 3.
+                          <strong data-start="1257" data-end="1286"
+                            >When ISPs
+                            <em data-start="1269" data-end="1276">Don't</em> Use
+                            NAT</strong
+                          >
+                        </h3>
+                        <ul data-start="1287" data-end="1506">
+                          <li data-start="1287" data-end="1394">
+                            <p data-start="1289" data-end="1394">
+                              If you're given a
+                              <strong data-start="1307" data-end="1327"
+                                >public static IP</strong
+                              >, your ISP doesn't need to use NAT — your IP is
+                              directly reachable.
+                            </p>
+                          </li>
+                          <li data-start="1395" data-end="1506">
+                            <p data-start="1397" data-end="1506">
+                              In
+                              <strong data-start="1400" data-end="1427"
+                                >business-class internet</strong
+                              >, NAT is less common; customers might get a
+                              subnet (e.g.,
+                              <code data-start="1485" data-end="1490">/29</code
+                              >) of public IPs.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="1508" data-end="1511" />
+                        <h3 data-start="1513" data-end="1560">
+                          🔍 How to Tell If Your ISP Uses NAT (CGNAT)
+                        </h3>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="1562"
+                              data-end="1933"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="1562" data-end="1589">
+                                <tr data-start="1562" data-end="1589">
+                                  <th
+                                    data-start="1562"
+                                    data-end="1569"
+                                    data-col-size="md"
+                                  >
+                                    Test
+                                  </th>
+                                  <th
+                                    data-start="1569"
+                                    data-end="1589"
+                                    data-col-size="md"
+                                  >
+                                    What to Look For
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="1618" data-end="1933">
+                                <tr data-start="1618" data-end="1741">
+                                  <td
+                                    data-start="1618"
+                                    data-end="1697"
+                                    data-col-size="md"
+                                  >
+                                    Check your IP on your device vs public IP
+                                    via
+                                    <a
+                                      data-start="1666"
+                                      data-end="1696"
+                                      rel="noopener"
+                                      target="_new"
+                                      class="cursor-pointer"
+                                      >ipinfo.io</a
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1697"
+                                    data-end="1741"
+                                    data-col-size="md"
+                                  >
+                                    If they’re different, you're behind NAT.
+                                  </td>
+                                </tr>
+                                <tr data-start="1742" data-end="1824">
+                                  <td
+                                    data-start="1742"
+                                    data-end="1797"
+                                    data-col-size="md"
+                                  >
+                                    Look for private IPs like
+                                    <code data-start="1770" data-end="1780"
+                                      >10.x.x.x</code
+                                    >
+                                    or
+                                    <code data-start="1784" data-end="1796"
+                                      >100.64.x.x</code
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="1797"
+                                    data-end="1824"
+                                    data-col-size="md"
+                                  >
+                                    That’s a sign of CGNAT.
+                                  </td>
+                                </tr>
+                                <tr data-start="1825" data-end="1933">
+                                  <td
+                                    data-start="1825"
+                                    data-end="1864"
+                                    data-col-size="md"
+                                  >
+                                    Try port forwarding or remote access
+                                  </td>
+                                  <td
+                                    data-start="1864"
+                                    data-end="1933"
+                                    data-col-size="md"
+                                  >
+                                    If it doesn’t work and the ISP won’t help,
+                                    CGNAT may be in place.
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr data-start="1935" data-end="1938" />
+                        <h3 data-start="1940" data-end="1954">🧭 Summary</h3>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="1956"
+                              data-end="2344"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="1956" data-end="2032">
+                                <tr data-start="1956" data-end="2032">
+                                  <th
+                                    data-start="1956"
+                                    data-end="1975"
+                                    data-col-size="sm"
+                                  >
+                                    NAT Type
+                                  </th>
+                                  <th
+                                    data-start="1975"
+                                    data-end="1997"
+                                    data-col-size="sm"
+                                  >
+                                    Who Uses It
+                                  </th>
+                                  <th
+                                    data-start="1997"
+                                    data-end="2032"
+                                    data-col-size="sm"
+                                  >
+                                    Purpose
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="2111" data-end="2344">
+                                <tr data-start="2111" data-end="2187">
+                                  <td
+                                    data-start="2111"
+                                    data-end="2130"
+                                    data-col-size="sm"
+                                  >
+                                    Home NAT
+                                  </td>
+                                  <td
+                                    data-start="2130"
+                                    data-end="2152"
+                                    data-col-size="sm"
+                                  >
+                                    You (your router)
+                                  </td>
+                                  <td
+                                    data-start="2152"
+                                    data-end="2187"
+                                    data-col-size="sm"
+                                  >
+                                    Share 1 IP among home devices
+                                  </td>
+                                </tr>
+                                <tr data-start="2188" data-end="2264">
+                                  <td
+                                    data-start="2188"
+                                    data-end="2207"
+                                    data-col-size="sm"
+                                  >
+                                    CGNAT
+                                  </td>
+                                  <td
+                                    data-start="2207"
+                                    data-end="2229"
+                                    data-col-size="sm"
+                                  >
+                                    ISP
+                                  </td>
+                                  <td
+                                    data-start="2229"
+                                    data-end="2264"
+                                    data-col-size="sm"
+                                  >
+                                    Share 1 IP among many customers
+                                  </td>
+                                </tr>
+                                <tr data-start="2265" data-end="2344">
+                                  <td
+                                    data-start="2265"
+                                    data-end="2286"
+                                    data-col-size="sm"
+                                  >
+                                    No NAT (Static IP)
+                                  </td>
+                                  <td
+                                    data-start="2286"
+                                    data-end="2310"
+                                    data-col-size="sm"
+                                  >
+                                    ISP assigns public IP
+                                  </td>
+                                  <td
+                                    data-start="2310"
+                                    data-end="2344"
+                                    data-col-size="sm"
+                                  >
+                                    Direct internet access
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr data-start="2346" data-end="2349" />
+                        <p data-start="2351" data-end="2533">
+                          So yes —
+                          <strong data-start="2360" data-end="2387"
+                            >many ISPs implement NAT</strong
+                          >, especially CGNAT, to deal with IPv4 shortages. If
+                          you want to avoid NAT, you typically need to request a
+                          <strong data-start="2494" data-end="2514"
+                            >public static IP</strong
+                          >
+                          (often for a fee).
+                        </p>
+                        <p
+                          data-start="2535"
+                          data-end="2607"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Would you like help detecting whether
+                          <em data-start="2573" data-end="2579">your</em>
+                          connection is behind CGNAT?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-13"
+        data-scroll-anchor="false"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="user"
+                    data-message-id="5f012aca-c71a-4841-acef-aa90ed0c207b"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                    >
+                      <div
+                        class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5"
+                      >
+                        <div class="whitespace-pre-wrap">
+                          in cgnat the user is provided with the cgnat and the
+                          public address is mapped internally by the ip address?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full"
+        dir="auto"
+        data-testid="conversation-turn-14"
+        data-scroll-anchor="true"
+      >
+        <div
+          class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+            tabindex="-1"
+          >
+            <div
+              class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn"
+            >
+              <div class="relative flex-col gap-1 md:gap-3">
+                <div class="flex max-w-full flex-col grow">
+                  <div
+                    data-message-author-role="assistant"
+                    data-message-id="9ce9b836-236e-4c86-9341-ec4f41deddb3"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o"
+                  >
+                    <div
+                      class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                    >
+                      <div
+                        class="markdown prose dark:prose-invert w-full break-words dark"
+                      >
+                        <p data-start="0" data-end="217">
+                          Yes, exactly — in
+                          <strong data-start="18" data-end="47"
+                            >Carrier-Grade NAT (CGNAT)</strong
+                          >, the ISP provides the user with a
+                          <strong data-start="82" data-end="104"
+                            >private IP address</strong
+                          >
+                          (from a special CGNAT-reserved range), and
+                          <strong data-start="148" data-end="167"
+                            >internally maps</strong
+                          >
+                          that to a shared
+                          <strong data-start="185" data-end="206"
+                            >public IP address</strong
+                          >
+                          using NAT.
+                        </p>
+                        <p data-start="219" data-end="263">
+                          Here’s a detailed breakdown of how it works:
+                        </p>
+                        <hr data-start="265" data-end="268" />
+                        <h3 data-start="270" data-end="309">
+                          📦
+                          <strong data-start="277" data-end="309"
+                            >What You Get as a CGNAT User</strong
+                          >
+                        </h3>
+                        <ul data-start="310" data-end="554">
+                          <li data-start="310" data-end="459">
+                            <p data-start="312" data-end="396">
+                              Your router or device is assigned a
+                              <strong data-start="348" data-end="370"
+                                >private IP address</strong
+                              >
+                              from this reserved range:
+                            </p>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="399"
+                              data-end="459"
+                            ><div class="contain-inline-size rounded-2xl border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-2xl"></div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>100.64.0.0/10   →   100.64.0.0 – 100.127.255.255
+</span></code></div></div></pre>
+                          </li>
+                          <li data-start="460" data-end="554">
+                            <p data-start="462" data-end="554">
+                              This range is
+                              <em data-start="476" data-end="513"
+                                >not routable on the public internet</em
+                              >, similar to
+                              <code data-start="526" data-end="539"
+                                >192.168.x.x</code
+                              >
+                              or
+                              <code data-start="543" data-end="553"
+                                >10.x.x.x</code
+                              >.
+                            </p>
+                          </li>
+                        </ul>
+                        <hr data-start="556" data-end="559" />
+                        <h3 data-start="561" data-end="600">
+                          🔁
+                          <strong data-start="568" data-end="600"
+                            >What the ISP Does Internally</strong
+                          >
+                        </h3>
+                        <ul data-start="601" data-end="897">
+                          <li data-start="601" data-end="740">
+                            <p data-start="603" data-end="670">
+                              The ISP has a
+                              <strong data-start="617" data-end="632"
+                                >NAT gateway</strong
+                              >
+                              (a large-scale NAT device) that maps:
+                            </p>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="673"
+                              data-end="740"
+                            ><div class="contain-inline-size rounded-2xl border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-2xl"></div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>Your private CGNAT IP + Port  →  ISP’s public IP + Port
+</span></code></div></div></pre>
+                          </li>
+                          <li data-start="741" data-end="796">
+                            <p data-start="743" data-end="796">
+                              This mapping is temporary and managed in a NAT
+                              table.
+                            </p>
+                          </li>
+                          <li data-start="797" data-end="897">
+                            <p data-start="799" data-end="897">
+                              The ISP can map
+                              <strong data-start="815" data-end="841"
+                                >thousands of customers</strong
+                              >
+                              to a single public IP using different
+                              <strong data-start="880" data-end="896"
+                                >port numbers</strong
+                              >.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="899" data-end="911">
+                          <strong data-start="899" data-end="911"
+                            >Example:</strong
+                          >
+                        </p>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="913"
+                              data-end="1197"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="913" data-end="1005">
+                                <tr data-start="913" data-end="1005">
+                                  <th
+                                    data-start="913"
+                                    data-end="940"
+                                    data-col-size="sm"
+                                  >
+                                    You (inside ISP)
+                                  </th>
+                                  <th
+                                    data-start="940"
+                                    data-end="977"
+                                    data-col-size="sm"
+                                  >
+                                    ISP's NAT Table
+                                  </th>
+                                  <th
+                                    data-start="977"
+                                    data-end="1005"
+                                    data-col-size="sm"
+                                  >
+                                    Internet Sees
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="1100" data-end="1197">
+                                <tr data-start="1100" data-end="1197">
+                                  <td
+                                    data-start="1100"
+                                    data-end="1128"
+                                    data-col-size="sm"
+                                  >
+                                    100.75.23.4:54321
+                                  </td>
+                                  <td
+                                    data-start="1128"
+                                    data-end="1168"
+                                    data-col-size="sm"
+                                  >
+                                    100.75.23.4:54321 → 203.0.113.7:49100
+                                  </td>
+                                  <td
+                                    data-start="1168"
+                                    data-end="1197"
+                                    data-col-size="sm"
+                                  >
+                                    203.0.113.7:49100
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p data-start="1199" data-end="1332">
+                          So from the internet’s perspective,
+                          <strong data-start="1235" data-end="1307"
+                            >all users behind that public IP look like they come
+                            from 203.0.113.7</strong
+                          >, but on different ports.
+                        </p>
+                        <hr data-start="1334" data-end="1337" />
+                        <h3 data-start="1339" data-end="1380">
+                          🚫
+                          <strong data-start="1346" data-end="1380"
+                            >What You
+                            <em data-start="1357" data-end="1364">Can’t</em> Do
+                            with CGNAT</strong
+                          >
+                        </h3>
+                        <ul data-start="1381" data-end="1598">
+                          <li data-start="1381" data-end="1466">
+                            <p data-start="1383" data-end="1466">
+                              <strong data-start="1383" data-end="1399"
+                                >Host servers</strong
+                              >
+                              (web, game, mail) — incoming connections can’t
+                              reach you directly.
+                            </p>
+                          </li>
+                          <li data-start="1467" data-end="1540">
+                            <p data-start="1469" data-end="1540">
+                              Use
+                              <strong data-start="1473" data-end="1492"
+                                >port forwarding</strong
+                              >
+                              — since the public IP is not yours exclusively.
+                            </p>
+                          </li>
+                          <li data-start="1541" data-end="1598">
+                            <p data-start="1543" data-end="1598">
+                              Run certain
+                              <strong data-start="1555" data-end="1582"
+                                >VPNs, VoIP, or P2P apps</strong
+                              >
+                              without issues.
+                            </p>
+                          </li>
+                        </ul>
+                        <p data-start="1600" data-end="1691">
+                          Some ISPs offer "port mapping" or "public IP on
+                          request" as a workaround — often for a fee.
+                        </p>
+                        <hr data-start="1693" data-end="1696" />
+                        <h3 data-start="1698" data-end="1727">
+                          ✅
+                          <strong data-start="1704" data-end="1727"
+                            >How to Detect CGNAT</strong
+                          >
+                        </h3>
+                        <ol data-start="1728" data-end="2072">
+                          <li data-start="1728" data-end="1835">
+                            <p data-start="1731" data-end="1835">
+                              <strong data-start="1731" data-end="1765"
+                                >Check your device's IP address</strong
+                              >
+                              (on your router or PC) — if it's in
+                              <code data-start="1802" data-end="1817"
+                                >100.64.0.0/10</code
+                              >, CGNAT is likely.
+                            </p>
+                          </li>
+                          <li data-start="1836" data-end="1953">
+                            <p data-start="1839" data-end="1953">
+                              <strong data-start="1839" data-end="1870"
+                                >Compare with your public IP</strong
+                              >
+                              on
+                              <a
+                                data-start="1874"
+                                data-end="1912"
+                                rel="noopener"
+                                target="_new"
+                                class="cursor-pointer"
+                                >https://ipinfo.io</a
+                              >
+                              — if they’re different, NAT is involved.
+                            </p>
+                          </li>
+                          <li data-start="1954" data-end="2072">
+                            <p data-start="1957" data-end="2072">
+                              <strong data-start="1957" data-end="1986"
+                                >Traceroute or run a WHOIS</strong
+                              >
+                              on the internal and public IPs — CGNAT addresses
+                              often don’t show external ownership.
+                            </p>
+                          </li>
+                        </ol>
+                        <hr data-start="2074" data-end="2077" />
+                        <h3 data-start="2079" data-end="2093">🧭 Summary</h3>
+                        <div class="_tableContainer_16hzy_1">
+                          <div
+                            tabindex="-1"
+                            class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"
+                          >
+                            <table
+                              data-start="2095"
+                              data-end="2547"
+                              class="w-fit min-w-(--thread-content-width)"
+                            >
+                              <thead data-start="2095" data-end="2168">
+                                <tr data-start="2095" data-end="2168">
+                                  <th
+                                    data-start="2095"
+                                    data-end="2116"
+                                    data-col-size="sm"
+                                  >
+                                    Concept
+                                  </th>
+                                  <th
+                                    data-start="2116"
+                                    data-end="2168"
+                                    data-col-size="md"
+                                  >
+                                    Description
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody data-start="2243" data-end="2547">
+                                <tr data-start="2243" data-end="2317">
+                                  <td
+                                    data-start="2243"
+                                    data-end="2265"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="2245" data-end="2264"
+                                      >Assigned to you</strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2265"
+                                    data-end="2317"
+                                    data-col-size="md"
+                                  >
+                                    Private CGNAT IP (e.g.,
+                                    <code data-start="2291" data-end="2303"
+                                      >100.75.x.x</code
+                                    >)
+                                  </td>
+                                </tr>
+                                <tr data-start="2318" data-end="2392">
+                                  <td
+                                    data-start="2318"
+                                    data-end="2341"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="2320" data-end="2340"
+                                      >Seen by internet</strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2341"
+                                    data-end="2392"
+                                    data-col-size="md"
+                                  >
+                                    Shared public IP owned by ISP
+                                  </td>
+                                </tr>
+                                <tr data-start="2393" data-end="2467">
+                                  <td
+                                    data-start="2393"
+                                    data-end="2414"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="2395" data-end="2411"
+                                      >Mapping type</strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2414"
+                                    data-end="2467"
+                                    data-col-size="md"
+                                  >
+                                    Private IP + Port → Public IP + Port (NAT)
+                                  </td>
+                                </tr>
+                                <tr data-start="2468" data-end="2547">
+                                  <td
+                                    data-start="2468"
+                                    data-end="2489"
+                                    data-col-size="sm"
+                                  >
+                                    <strong data-start="2470" data-end="2488"
+                                      >Key limitation</strong
+                                    >
+                                  </td>
+                                  <td
+                                    data-start="2489"
+                                    data-end="2547"
+                                    data-col-size="md"
+                                  >
+                                    No inbound connections (no hosting or port
+                                    forwarding)
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div
+                              class="sticky end-(--thread-content-margin) h-0 self-end select-none"
+                            >
+                              <div
+                                class="absolute end-0 flex items-end"
+                                style="height: 33px"
+                              >
+                                <span class="" data-state="closed"
+                                  ><button
+                                    class="bg-token-bg-primary hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                                  ></button
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr data-start="2549" data-end="2552" />
+                        <p
+                          data-start="2554"
+                          data-end="2675"
+                          data-is-last-node=""
+                          data-is-only-node=""
+                        >
+                          Would you like a quick guide to check if you're behind
+                          CGNAT right now using command line tools or your
+                          router interface?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
