@@ -1,0 +1,1675 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Canvas RTL support</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="6f8c405e-372a-4eda-9324-cf9c36f84643"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-3 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="6f8c405e-372a-4eda-9324-cf9c36f84643"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative max-w-[var(--user-chat-width,70%)] rounded-[18px] px-4 py-1.5 data-[multiline]:py-3"
+                  >
+                    <div class="whitespace-pre-wrap">
+                      Canvas set x and y from top right instead of top left
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="6e12735c-8690-4b25-a28b-fcd9d625934d"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="efacdb34-8129-467d-9374-0e0611ccb06c"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="69">
+                      In HTML
+                      <code data-start="8" data-end="18">&lt;canvas&gt;</code>,
+                      the coordinate system is
+                      <strong data-start="45" data-end="55">always</strong> by
+                      default:
+                    </p>
+                    <ul data-start="71" data-end="167">
+                      <li data-start="71" data-end="109">
+                        <p data-start="73" data-end="109">
+                          <strong data-start="73" data-end="82">(0,0)</strong>
+                          at the
+                          <strong data-start="90" data-end="109"
+                            >top-left corner</strong
+                          >
+                        </p>
+                      </li>
+                      <li data-start="110" data-end="140">
+                        <p data-start="112" data-end="140">
+                          <code data-start="112" data-end="115">x</code>
+                          increases to the right
+                        </p>
+                      </li>
+                      <li data-start="141" data-end="167">
+                        <p data-start="143" data-end="167">
+                          <code data-start="143" data-end="146">y</code>
+                          increases downward
+                        </p>
+                      </li>
+                    </ul>
+                    <p data-start="169" data-end="324">
+                      If you want
+                      <strong data-start="181" data-end="190">(0,0)</strong> to
+                      be the
+                      <strong data-start="201" data-end="221"
+                        >top-right corner</strong
+                      >
+                      instead, you need to transform the coordinate system with
+                      the canvas context’s transformation methods.
+                    </p>
+                    <p data-start="326" data-end="351">
+                      Here’s how you can do it:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="353"
+                      data-end="739"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+// Move origin to top-right
+ctx.translate(canvas.width, 0);
+
+// Flip X-axis so it goes left instead of right
+ctx.scale(-1, 1);
+
+// Now (0,0) is top-right and X increases to the left
+ctx.fillStyle = "red";
+ctx.fillRect(0, 0, 100, 50); // Draws a rectangle starting from top-right
+</span></code></div></div></pre>
+                    <h3 data-start="741" data-end="757">How it works</h3>
+                    <ol data-start="758" data-end="929">
+                      <li data-start="758" data-end="850">
+                        <p data-start="761" data-end="850">
+                          <strong data-start="761" data-end="793"
+                            ><code data-start="763" data-end="791"
+                              >translate(canvas.width, 0)</code
+                            ></strong
+                          >
+                          — Moves the origin from the left edge to the right
+                          edge.
+                        </p>
+                      </li>
+                      <li data-start="851" data-end="929">
+                        <p data-start="854" data-end="929">
+                          <strong data-start="854" data-end="872"
+                            ><code data-start="856" data-end="870"
+                              >scale(-1, 1)</code
+                            ></strong
+                          >
+                          — Flips the X-axis horizontally so positive X goes
+                          left.
+                        </p>
+                      </li>
+                    </ol>
+                    <p data-start="931" data-end="1031">
+                      You can still draw normally, but you’ll think of your X
+                      values as distances from the right edge now.
+                    </p>
+                    <p data-start="1033" data-end="1136">
+                      If you also wanted
+                      <strong data-start="1052" data-end="1057">Y</strong> to
+                      increase upward (origin in bottom-right), you’d add
+                      another transformation:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="1138"
+                      data-end="1218"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span>ctx.translate(canvas.width, canvas.height);
+ctx.scale(-1, -1);
+</span></code></div></div></pre>
+                    <p
+                      data-start="1220"
+                      data-end="1405"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      Do you want this transformation applied
+                      <strong data-start="1260" data-end="1280"
+                        >only temporarily</strong
+                      >
+                      for certain drawings, or should I show you a way to
+                      <strong data-start="1333" data-end="1358"
+                        >switch back and forth</strong
+                      >
+                      between top-left and top-right origins easily?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="274dabae-907f-4d9a-bfda-e9047fd03ae0"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-12 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="274dabae-907f-4d9a-bfda-e9047fd03ae0"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative max-w-[var(--user-chat-width,70%)] rounded-[18px] px-4 py-1.5 data-[multiline]:py-3"
+                    data-multiline=""
+                  >
+                    <div class="whitespace-pre-wrap">
+                      When drawing some persian text on canvas even though
+                      textAlign is set to right the position of the beginning
+                      character is not the same why is that?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="2c1d8ca7-f992-4f8a-a9d6-0e59e5889e4e"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="2c1d8ca7-f992-4f8a-a9d6-0e59e5889e4e"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="119">
+                      Ah, yes — this is a common “gotcha” when drawing Persian
+                      (or Arabic) text on a
+                      <code data-start="79" data-end="89">&lt;canvas&gt;</code>
+                      with
+                      <code data-start="95" data-end="116"
+                        >textAlign = 'right'</code
+                      >.
+                    </p>
+                    <p data-start="121" data-end="297">
+                      Even though Persian is
+                      <strong data-start="144" data-end="161"
+                        >right-to-left</strong
+                      >, canvas text rendering still bases its alignment on the
+                      <strong data-start="218" data-end="245"
+                        >entire text block width</strong
+                      >, not the actual glyph starting point.<br
+                        data-start="283"
+                        data-end="286"
+                      />
+                      This means:
+                    </p>
+                    <ul data-start="299" data-end="718">
+                      <li data-start="299" data-end="394">
+                        <p data-start="301" data-end="394">
+                          <code data-start="301" data-end="326"
+                            >ctx.textAlign = 'right'</code
+                          >
+                          makes the
+                          <em data-start="337" data-end="342">end</em> of the
+                          text line up with your given
+                          <code data-start="379" data-end="382">x</code>
+                          coordinate.
+                        </p>
+                      </li>
+                      <li data-start="395" data-end="718">
+                        <p data-start="397" data-end="475">
+                          The
+                          <em data-start="401" data-end="408">first</em> visible
+                          character (on the right in Persian) may appear shifted
+                          if:
+                        </p>
+                        <ul data-start="478" data-end="718">
+                          <li data-start="478" data-end="533">
+                            <p data-start="480" data-end="533">
+                              The font has extra padding/kerning on the right
+                              side.
+                            </p>
+                          </li>
+                          <li data-start="536" data-end="640">
+                            <p data-start="538" data-end="640">
+                              The renderer includes invisible Unicode characters
+                              (like the RTL mark
+                              <code data-start="608" data-end="616"
+                                >\u200F</code
+                              >
+                              or zero-width joiners).
+                            </p>
+                          </li>
+                          <li data-start="643" data-end="718">
+                            <p data-start="645" data-end="718">
+                              Certain characters have contextual shapes that
+                              start with a small offset.
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <h3 data-start="720" data-end="740">Why this happens</h3>
+                    <p data-start="741" data-end="765">
+                      In Persian (and Arabic):
+                    </p>
+                    <ul data-start="766" data-end="1087">
+                      <li data-start="766" data-end="830">
+                        <p data-start="768" data-end="830">
+                          Characters
+                          <strong data-start="779" data-end="795"
+                            >change shape</strong
+                          >
+                          depending on position in the word.
+                        </p>
+                      </li>
+                      <li data-start="831" data-end="935">
+                        <p data-start="833" data-end="935">
+                          Some characters (like "ا" or "ب") have
+                          <strong data-start="872" data-end="885"
+                            >overhangs</strong
+                          >
+                          — parts that extend beyond the main bounding box.
+                        </p>
+                      </li>
+                      <li data-start="936" data-end="1087">
+                        <p data-start="938" data-end="1087">
+                          Canvas measures and aligns based on font metrics, not
+                          glyph pixels, so the actual painted rightmost pixel
+                          may not exactly be at your alignment point.
+                        </p>
+                      </li>
+                    </ul>
+                    <h3 data-start="1089" data-end="1106">How to fix it</h3>
+                    <ol data-start="1107" data-end="1870">
+                      <li data-start="1107" data-end="1295">
+                        <p data-start="1110" data-end="1219">
+                          <strong data-start="1110" data-end="1142"
+                            >Trim invisible Unicode marks</strong
+                          ><br data-start="1142" data-end="1145" />
+                          Make sure the string doesn’t contain
+                          <code data-start="1185" data-end="1193">\u200F</code>,
+                          <code data-start="1195" data-end="1203">\u200E</code>,
+                          <code data-start="1205" data-end="1213">\u202A</code>,
+                          etc.
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1223"
+                          data-end="1295"
+                        ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>text = text.replace(/[\u200E\u200F\u202A-\u202E]/g, '');
+</span></code></div></div></pre>
+                      </li>
+                      <li data-start="1297" data-end="1487">
+                        <p data-start="1300" data-end="1344">
+                          <strong data-start="1300" data-end="1342"
+                            >Use
+                            <code data-start="1306" data-end="1325"
+                              >direction = 'rtl'</code
+                            >
+                            in the context</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1348"
+                          data-end="1414"
+                        ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>ctx.direction = 'rtl';
+ctx.textAlign = 'right';
+</span></code></div></div></pre>
+                        <p data-start="1418" data-end="1487">
+                          This ensures the layout engine treats the text as RTL
+                          from the start.
+                        </p>
+                      </li>
+                      <li data-start="1489" data-end="1724">
+                        <p data-start="1492" data-end="1525">
+                          <strong data-start="1492" data-end="1523"
+                            >Measure and adjust manually</strong
+                          >
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1529"
+                          data-end="1645"
+                        ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>const metrics = ctx.measureText(text);
+ctx.fillText(text, x + metrics.actualBoundingBoxRight, y);
+</span></code></div></div></pre>
+                        <p data-start="1649" data-end="1724">
+                          This aligns using the
+                          <em data-start="1671" data-end="1687"
+                            >actual painted</em
+                          >
+                          right side, not the theoretical one.
+                        </p>
+                      </li>
+                      <li data-start="1726" data-end="1870">
+                        <p data-start="1729" data-end="1870">
+                          <strong data-start="1729" data-end="1760"
+                            >Use a Persian-friendly font</strong
+                          ><br data-start="1760" data-end="1763" />
+                          Some fonts have better bounding boxes for RTL scripts;
+                          web-safe Persian fonts or custom
+                          <code data-start="1854" data-end="1860">.ttf</code>
+                          can help.
+                        </p>
+                      </li>
+                    </ol>
+                    <hr data-start="1872" data-end="1875" />
+                    <p
+                      data-start="1877"
+                      data-end="2125"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      If you want, I can give you a
+                      <strong data-start="1907" data-end="1932"
+                        >small helper function</strong
+                      >
+                      that draws Persian text pixel-perfect aligned from the
+                      right edge — which will completely bypass the bounding box
+                      mismatch problem. That would make it look identical
+                      regardless of font quirks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="76f38272-e5ef-45a3-9c2c-acaa6747a693"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-12 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="76f38272-e5ef-45a3-9c2c-acaa6747a693"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative max-w-[var(--user-chat-width,70%)] rounded-[18px] px-4 py-1.5 data-[multiline]:py-3"
+                    data-multiline=""
+                  >
+                    <div class="whitespace-pre-wrap">
+                      Is direction different than transforming the origin to top
+                      right?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="b4d516a9-8229-41cc-a104-bef5d26afacf"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="b4d516a9-8229-41cc-a104-bef5d26afacf"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="122">
+                      Yes —
+                      <code data-start="6" data-end="17">direction</code> and
+                      transforming the origin to the top-right are
+                      <strong data-start="67" data-end="97"
+                        >totally different concepts</strong
+                      >
+                      in
+                      <code data-start="101" data-end="111"
+                        >&lt;canvas&gt;</code
+                      >
+                      drawing.
+                    </p>
+                    <p data-start="124" data-end="147">
+                      Here’s the distinction:
+                    </p>
+                    <hr data-start="149" data-end="152" />
+                    <h3 data-start="154" data-end="180">
+                      <strong data-start="158" data-end="180"
+                        >1.
+                        <code data-start="163" data-end="178"
+                          >ctx.direction</code
+                        ></strong
+                      >
+                    </h3>
+                    <ul data-start="181" data-end="654">
+                      <li data-start="181" data-end="322">
+                        <p data-start="183" data-end="322">
+                          A
+                          <strong data-start="185" data-end="209"
+                            >text layout property</strong
+                          >
+                          that only affects how
+                          <code data-start="232" data-end="242">fillText</code>
+                          /
+                          <code data-start="245" data-end="257"
+                            >strokeText</code
+                          >
+                          handle
+                          <strong data-start="265" data-end="290"
+                            >bidirectional scripts</strong
+                          >
+                          (like Persian, Arabic, Hebrew).
+                        </p>
+                      </li>
+                      <li data-start="323" data-end="494">
+                        <p data-start="325" data-end="341">Possible values:</p>
+                        <ul data-start="344" data-end="494">
+                          <li data-start="344" data-end="385">
+                            <p data-start="346" data-end="385">
+                              <code data-start="346" data-end="353">"ltr"</code>
+                              → Treats text as left-to-right.
+                            </p>
+                          </li>
+                          <li data-start="388" data-end="429">
+                            <p data-start="390" data-end="429">
+                              <code data-start="390" data-end="397">"rtl"</code>
+                              → Treats text as right-to-left.
+                            </p>
+                          </li>
+                          <li data-start="432" data-end="494">
+                            <p data-start="434" data-end="494">
+                              <code data-start="434" data-end="445"
+                                >"inherit"</code
+                              >
+                              → Uses the
+                              <code data-start="457" data-end="467"
+                                >&lt;canvas&gt;</code
+                              >
+                              element’s CSS
+                              <code data-start="482" data-end="493"
+                                >direction</code
+                              >.
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li data-start="495" data-end="552">
+                        <p data-start="497" data-end="552">
+                          <strong data-start="497" data-end="505">Only</strong>
+                          influences the
+                          <em data-start="521" data-end="541"
+                            >flow and alignment</em
+                          >
+                          of text.
+                        </p>
+                      </li>
+                      <li data-start="553" data-end="654">
+                        <p data-start="555" data-end="654">
+                          Doesn’t move or flip the entire coordinate system — X
+                          still grows to the right, Y still grows down.
+                        </p>
+                      </li>
+                    </ul>
+                    <p data-start="656" data-end="664">Example:</p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="665"
+                      data-end="795"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>ctx.direction = 'rtl';
+ctx.textAlign = 'right';
+ctx.fillText('سلام', 200, 50); // Aligns from the right as an RTL string
+</span></code></div></div></pre>
+                    <hr data-start="797" data-end="800" />
+                    <h3 data-start="802" data-end="853">
+                      <strong data-start="806" data-end="853"
+                        >2. Transforming the origin to the top-right</strong
+                      >
+                    </h3>
+                    <ul data-start="854" data-end="1167">
+                      <li data-start="854" data-end="942">
+                        <p data-start="856" data-end="942">
+                          A
+                          <strong data-start="858" data-end="894"
+                            >coordinate system transformation</strong
+                          >
+                          that changes where
+                          <code data-start="914" data-end="921">(0,0)</code> is
+                          and how X/Y grow.
+                        </p>
+                      </li>
+                      <li data-start="943" data-end="1104">
+                        <p data-start="945" data-end="953">Example:</p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="956"
+                          data-end="1021"
+                        ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>ctx.translate(canvas.width, 0);
+ctx.scale(-1, 1);
+</span></code></div></div></pre>
+                        <p data-start="1024" data-end="1028">Now:</p>
+                        <ul data-start="1031" data-end="1104">
+                          <li data-start="1031" data-end="1054">
+                            <p data-start="1033" data-end="1054">
+                              <code data-start="1033" data-end="1040"
+                                >(0,0)</code
+                              >
+                              is top-right.
+                            </p>
+                          </li>
+                          <li data-start="1057" data-end="1104">
+                            <p data-start="1059" data-end="1104">
+                              X grows to the
+                              <strong data-start="1074" data-end="1082"
+                                >left</strong
+                              >
+                              instead of the right.
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li data-start="1105" data-end="1167">
+                        <p data-start="1107" data-end="1167">
+                          Affects
+                          <strong data-start="1115" data-end="1129"
+                            >everything</strong
+                          >
+                          you draw — shapes, images, text, etc.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1169" data-end="1172" />
+                    <p data-start="1174" data-end="1197">
+                      ✅
+                      <strong data-start="1176" data-end="1195"
+                        >Key difference:</strong
+                      >
+                    </p>
+                    <ul data-start="1198" data-end="1390">
+                      <li data-start="1198" data-end="1286">
+                        <p data-start="1200" data-end="1286">
+                          <code data-start="1200" data-end="1211"
+                            >direction</code
+                          >
+                          → tells the
+                          <strong data-start="1224" data-end="1239"
+                            >text engine</strong
+                          >
+                          how to arrange characters in a given string.
+                        </p>
+                      </li>
+                      <li data-start="1287" data-end="1390">
+                        <p data-start="1289" data-end="1390">
+                          Transforming the origin → changes the
+                          <strong data-start="1327" data-end="1362"
+                            >entire canvas coordinate system</strong
+                          >
+                          for all drawing operations.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1392" data-end="1395" />
+                    <p data-start="1397" data-end="1601">
+                      If your issue is that Persian text doesn’t start
+                      <em data-start="1446" data-end="1455">exactly</em> where
+                      you expect, changing the origin won’t fix it — you’d want
+                      to tweak
+                      <code data-start="1529" data-end="1540">direction</code>,
+                      clean invisible marks, or measure with
+                      <code data-start="1581" data-end="1598"
+                        >ctx.measureText</code
+                      >.
+                    </p>
+                    <p
+                      data-start="1603"
+                      data-end="1774"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      If you want, I can show you how to combine
+                      <code data-start="1646" data-end="1664"
+                        >direction: 'rtl'</code
+                      >
+                      <strong data-start="1665" data-end="1673">with</strong> a
+                      manual bounding-box alignment so your Persian text
+                      pixel-perfectly starts at a fixed X coordinate.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="f1da6e93-db88-4315-931a-e45028a4c7bf"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-12 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="f1da6e93-db88-4315-931a-e45028a4c7bf"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative max-w-[var(--user-chat-width,70%)] rounded-[18px] px-4 py-1.5 data-[multiline]:py-3"
+                  >
+                    <div class="whitespace-pre-wrap">
+                      When direction is set to rtl the first character is my x?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="069c7981-571a-4785-bac4-97c2bf2684d0"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="false"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="069c7981-571a-4785-bac4-97c2bf2684d0"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="56">
+                      Not exactly — and this is where the subtlety comes in.
+                    </p>
+                    <p data-start="58" data-end="73">When you set:</p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="74"
+                      data-end="131"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>ctx.direction = 'rtl';
+ctx.textAlign = 'right';
+</span></code></div></div></pre>
+                    <p data-start="132" data-end="146">and then do:</p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="147"
+                      data-end="184"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>ctx.fillText("سلام", x, y);
+</span></code></div></div></pre>
+                    <p data-start="185" data-end="358">
+                      the
+                      <strong data-start="189" data-end="228"
+                        >rightmost painted pixel of the text</strong
+                      >
+                      <em data-start="229" data-end="237">should</em> be very
+                      close to your
+                      <code data-start="260" data-end="263">x</code>
+                      coordinate.<br data-start="275" data-end="278" />
+                      But it’s
+                      <strong data-start="287" data-end="305"
+                        >not guaranteed</strong
+                      >
+                      to be <em data-start="312" data-end="321">exactly</em> the
+                      first visible character because:
+                    </p>
+                    <ol data-start="360" data-end="844">
+                      <li data-start="360" data-end="529">
+                        <p data-start="363" data-end="529">
+                          <strong data-start="363" data-end="397"
+                            >Font metrics vs. actual pixels</strong
+                          >
+                          —<br data-start="399" data-end="402" />
+                          Canvas aligns based on the
+                          <em data-start="432" data-end="462"
+                            >font’s reported bounding box</em
+                          >, which can include padding or overhang beyond the
+                          visible letters.
+                        </p>
+                      </li>
+                      <li data-start="531" data-end="673">
+                        <p data-start="534" data-end="673">
+                          <strong data-start="534" data-end="558"
+                            >Invisible characters</strong
+                          >
+                          —<br data-start="560" data-end="563" />
+                          If your string starts/ends with a zero-width mark,
+                          non-breaking space, etc., the alignment point may
+                          shift.
+                        </p>
+                      </li>
+                      <li data-start="675" data-end="844">
+                        <p data-start="678" data-end="844">
+                          <strong data-start="678" data-end="700"
+                            >Contextual shaping</strong
+                          >
+                          —<br data-start="702" data-end="705" />
+                          Persian letters change shape depending on position, so
+                          the “first character” visually might extend past the
+                          theoretical alignment point.
+                        </p>
+                      </li>
+                    </ol>
+                    <hr data-start="846" data-end="849" />
+                    <h3 data-start="851" data-end="886">
+                      A visual way to think about it:
+                    </h3>
+                    <p data-start="887" data-end="936">
+                      If
+                      <code data-start="890" data-end="911"
+                        >textAlign = 'right'</code
+                      >
+                      and
+                      <code data-start="916" data-end="935"
+                        >direction = 'rtl'</code
+                      >:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="937"
+                      data-end="971"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>|   ← x coordinate
+س ل ا م
+</span></code></div></div></pre>
+                    <p data-start="972" data-end="1215">
+                      Your
+                      <code data-start="977" data-end="980">x</code> coordinate
+                      is the
+                      <em data-start="999" data-end="1009">intended</em> right
+                      edge of the whole string.<br
+                        data-start="1041"
+                        data-end="1044"
+                      />
+                      In a perfect world, that means the start of
+                      <code data-start="1088" data-end="1091">س</code> is at
+                      <code data-start="1098" data-end="1101">x</code>.<br
+                        data-start="1102"
+                        data-end="1105"
+                      />
+                      In reality,
+                      <code data-start="1117" data-end="1120">س</code> might
+                      overhang to the right by a few pixels or have spacing that
+                      makes it not perfectly flush.
+                    </p>
+                    <hr data-start="1217" data-end="1220" />
+                    <h3 data-start="1222" data-end="1267">
+                      How to ensure
+                      <strong data-start="1240" data-end="1267"
+                        >first visible pixel = x</strong
+                      >
+                    </h3>
+                    <p data-start="1268" data-end="1308">
+                      You can measure the text and compensate:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="1309"
+                      data-end="1543"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>function drawPersianText(ctx, text, x, y) {
+  ctx.direction = 'rtl';
+  ctx.textAlign = 'right';
+  const metrics = ctx.measureText(text);
+  const offset = metrics.actualBoundingBoxRight;
+  ctx.fillText(text, x + offset, y);
+}
+</span></code></div></div></pre>
+                    <p data-start="1544" data-end="1667">
+                      Here,
+                      <code data-start="1550" data-end="1582"
+                        >metrics.actualBoundingBoxRight</code
+                      >
+                      accounts for overhang so that your given
+                      <code data-start="1624" data-end="1627">x</code> really
+                      matches the first painted pixel.
+                    </p>
+                    <hr data-start="1669" data-end="1672" />
+                    <p
+                      data-start="1674"
+                      data-end="1855"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      If you like, I can show you a
+                      <strong data-start="1704" data-end="1721"
+                        >debug snippet</strong
+                      >
+                      that draws a guide line at
+                      <code data-start="1749" data-end="1752">x</code> so you
+                      can see how far off your first Persian character is.<br
+                        data-start="1812"
+                        data-end="1815"
+                      />
+                      That makes this behavior really obvious.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="23ebabf8-97b5-409a-bba3-faaa80b0f890"
+        data-testid="conversation-turn-9"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-12 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="23ebabf8-97b5-409a-bba3-faaa80b0f890"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative max-w-[var(--user-chat-width,70%)] rounded-[18px] px-4 py-1.5 data-[multiline]:py-3"
+                  >
+                    <div class="whitespace-pre-wrap">
+                      What is actualBoungdingBoxRight
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="b17556dc-07b3-445a-902e-e714bb898e72"
+        data-testid="conversation-turn-10"
+        data-scroll-anchor="false"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="b17556dc-07b3-445a-902e-e714bb898e72"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="112">
+                      <code data-start="0" data-end="24"
+                        >actualBoundingBoxRight</code
+                      >
+                      is one of the extra measurements you get from
+                      <code data-start="71" data-end="94"
+                        >ctx.measureText(text)</code
+                      >
+                      in HTML canvas.
+                    </p>
+                    <p data-start="114" data-end="130">It represents:</p>
+                    <blockquote data-start="131" data-end="243">
+                      <p data-start="133" data-end="243">
+                        The distance
+                        <strong data-start="146" data-end="159"
+                          >in pixels</strong
+                        >
+                        from the text’s
+                        <em data-start="176" data-end="193">alignment point</em>
+                        to the
+                        <strong data-start="201" data-end="228"
+                          >rightmost painted pixel</strong
+                        >
+                        of the glyphs.
+                      </p>
+                    </blockquote>
+                    <hr data-start="245" data-end="248" />
+                    <h3 data-start="250" data-end="268">How it fits in</h3>
+                    <p data-start="269" data-end="282">When you run:</p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="283"
+                      data-end="355"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>const metrics = ctx.measureText("سلام");
+console.log(metrics);
+</span></code></div></div></pre>
+                    <p data-start="356" data-end="395">
+                      you get an object with properties like:
+                    </p>
+                    <ul data-start="396" data-end="780">
+                      <li data-start="396" data-end="485">
+                        <p data-start="398" data-end="485">
+                          <code data-start="398" data-end="405">width</code> →
+                          the advance width of the text (how far the cursor
+                          would move if you typed it)
+                        </p>
+                      </li>
+                      <li data-start="486" data-end="579">
+                        <p data-start="488" data-end="579">
+                          <code data-start="488" data-end="511"
+                            >actualBoundingBoxLeft</code
+                          >
+                          → pixels from the alignment point to the
+                          <strong data-start="553" data-end="579"
+                            >leftmost painted pixel</strong
+                          >
+                        </p>
+                      </li>
+                      <li data-start="580" data-end="675">
+                        <p data-start="582" data-end="675">
+                          <code data-start="582" data-end="606"
+                            >actualBoundingBoxRight</code
+                          >
+                          → pixels from the alignment point to the
+                          <strong data-start="648" data-end="675"
+                            >rightmost painted pixel</strong
+                          >
+                        </p>
+                      </li>
+                      <li data-start="676" data-end="727">
+                        <p data-start="678" data-end="727">
+                          <code data-start="678" data-end="703"
+                            >actualBoundingBoxAscent</code
+                          >
+                          → height above baseline
+                        </p>
+                      </li>
+                      <li data-start="728" data-end="780">
+                        <p data-start="730" data-end="780">
+                          <code data-start="730" data-end="756"
+                            >actualBoundingBoxDescent</code
+                          >
+                          → height below baseline
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="782" data-end="785" />
+                    <h3 data-start="787" data-end="802">In RTL text</h3>
+                    <p data-start="803" data-end="852">
+                      If
+                      <code data-start="806" data-end="825"
+                        >direction = 'rtl'</code
+                      >
+                      and
+                      <code data-start="830" data-end="851"
+                        >textAlign = 'right'</code
+                      >:
+                    </p>
+                    <ul data-start="853" data-end="1049">
+                      <li data-start="853" data-end="908">
+                        <p data-start="855" data-end="908">
+                          Your <code data-start="860" data-end="863">x</code> is
+                          considered the
+                          <strong data-start="882" data-end="907"
+                            >right alignment point</strong
+                          >.
+                        </p>
+                      </li>
+                      <li data-start="909" data-end="1049">
+                        <p data-start="911" data-end="1049">
+                          <code data-start="911" data-end="935"
+                            >actualBoundingBoxRight</code
+                          >
+                          will usually be a small positive number if letters
+                          <strong data-start="987" data-end="999"
+                            >overhang</strong
+                          >
+                          to the right of that point, or
+                          <code data-start="1031" data-end="1034">0</code> if
+                          they don’t.
+                        </p>
+                      </li>
+                    </ul>
+                    <p data-start="1051" data-end="1059">Example:</p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="1060"
+                      data-end="1372"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>ctx.direction = 'rtl';
+ctx.textAlign = 'right';
+ctx.font = "48px sans-serif";
+
+const metrics = ctx.measureText("سلام");
+console.log(metrics.actualBoundingBoxRight); // e.g. 2.5 pixels
+
+// If you want the first visible pixel exactly at x:
+ctx.fillText("سلام", 200 + metrics.actualBoundingBoxRight, 100);
+</span></code></div></div></pre>
+                    <hr data-start="1374" data-end="1377" />
+                    <h3 data-start="1379" data-end="1409">
+                      Why it matters for Persian
+                    </h3>
+                    <p data-start="1410" data-end="1675">
+                      Some Persian letters (like "س") have curves that extend to
+                      the right of the baseline point the browser thinks is the
+                      “end” of the text block.<br
+                        data-start="1551"
+                        data-end="1554"
+                      />
+                      <code data-start="1554" data-end="1578"
+                        >actualBoundingBoxRight</code
+                      >
+                      lets you measure and compensate for that so your
+                      <code data-start="1628" data-end="1631">x</code> really
+                      matches the
+                      <strong data-start="1651" data-end="1674"
+                        >first visible pixel</strong
+                      >.
+                    </p>
+                    <hr data-start="1677" data-end="1680" />
+                    <p
+                      data-start="1682"
+                      data-end="1849"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      If you want, I can make you a
+                      <strong data-start="1712" data-end="1733"
+                        >small visual demo</strong
+                      >
+                      where we draw a vertical line at
+                      <code data-start="1767" data-end="1770">x</code> so you
+                      can see the difference before and after using
+                      <code data-start="1824" data-end="1848"
+                        >actualBoundingBoxRight</code
+                      >.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="3c2be827-3b21-46e4-b331-ab3668f30b5d"
+        data-testid="conversation-turn-11"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-12 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="3c2be827-3b21-46e4-b331-ab3668f30b5d"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative max-w-[var(--user-chat-width,70%)] rounded-[18px] px-4 py-1.5 data-[multiline]:py-3"
+                  >
+                    <div class="whitespace-pre-wrap">
+                      How to load a font to use on canvas?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="9996e725-bbe7-44dc-a0e6-f85ab6f20804"
+        data-testid="conversation-turn-12"
+        data-scroll-anchor="false"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="9996e725-bbe7-44dc-a0e6-f85ab6f20804"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="141">
+                      You can load a custom font for
+                      <code data-start="31" data-end="41">&lt;canvas&gt;</code>
+                      text in two main ways — just like you would for normal
+                      HTML text — and then use it in
+                      <code data-start="128" data-end="138">ctx.font</code>.
+                    </p>
+                    <hr data-start="143" data-end="146" />
+                    <h2 data-start="148" data-end="195">
+                      <strong data-start="151" data-end="195"
+                        >1️⃣ Using CSS
+                        <code data-start="167" data-end="179">@font-face</code>
+                        (Recommended)</strong
+                      >
+                    </h2>
+                    <ol data-start="196" data-end="689">
+                      <li data-start="196" data-end="358">
+                        <p data-start="199" data-end="224">
+                          Add the font in your CSS:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="228"
+                          data-end="358"
+                        ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">css</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-css"><span>@font-face {
+  font-family: 'MyPersianFont';
+  src: url('/fonts/MyPersianFont.woff2') format('woff2');
+}
+</span></code></div></div></pre>
+                      </li>
+                      <li data-start="359" data-end="689">
+                        <p data-start="362" data-end="432">
+                          In your JavaScript,
+                          <strong data-start="382" data-end="416"
+                            >wait until the font has loaded</strong
+                          >
+                          before drawing:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="436"
+                          data-end="689"
+                        ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+document.fonts.load('48px MyPersianFont').then(() =&gt; {
+  ctx.font = "48px MyPersianFont";
+  ctx.fillText("سلام دنیا", 150, 100);
+});
+</span></code></div></div></pre>
+                      </li>
+                    </ol>
+                    <hr data-start="691" data-end="694" />
+                    <h2 data-start="696" data-end="741">
+                      <strong data-start="699" data-end="741"
+                        >2️⃣ Using the
+                        <code data-start="715" data-end="725">FontFace</code>
+                        API (JS-only)</strong
+                      >
+                    </h2>
+                    <p data-start="742" data-end="809">
+                      Useful if you want to load a font dynamically without
+                      touching CSS.
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="811"
+                      data-end="1142"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>const font = new FontFace('MyPersianFont', 'url(/fonts/MyPersianFont.woff2)');
+
+font.load().then((loadedFont) =&gt; {
+  document.fonts.add(loadedFont);
+
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+
+  ctx.font = "48px MyPersianFont";
+  ctx.fillText("سلام دنیا", 150, 100);
+});
+</span></code></div></div></pre>
+                    <hr data-start="1144" data-end="1147" />
+                    <h2 data-start="1149" data-end="1182">
+                      <strong data-start="1152" data-end="1182"
+                        >Important Notes for Canvas</strong
+                      >
+                    </h2>
+                    <ul data-start="1183" data-end="1617">
+                      <li data-start="1183" data-end="1350">
+                        <p data-start="1185" data-end="1350">
+                          <strong data-start="1185" data-end="1221"
+                            >Always wait for the font to load</strong
+                          >
+                          before drawing. If you don’t, canvas will render with
+                          a fallback font and
+                          <strong data-start="1296" data-end="1326"
+                            >won’t automatically update</strong
+                          >
+                          when the font is ready.
+                        </p>
+                      </li>
+                      <li data-start="1351" data-end="1480">
+                        <p data-start="1353" data-end="1480">
+                          For Persian/Arabic, choose a font that supports all
+                          the characters — otherwise letters may render broken
+                          or in a fallback font.
+                        </p>
+                      </li>
+                      <li data-start="1481" data-end="1617">
+                        <p data-start="1483" data-end="1617">
+                          You can use
+                          <a
+                            data-start="1495"
+                            data-end="1536"
+                            rel="noopener"
+                            target="_new"
+                            class="cursor-pointer"
+                            >Google Fonts</a
+                          >
+                          (many Persian fonts are available) with either CSS
+                          <code data-start="1588" data-end="1596"
+                            >&lt;link&gt;</code
+                          >
+                          or the FontFace API.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1619" data-end="1622" />
+                    <p
+                      data-start="1624"
+                      data-end="1793"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      If you want, I can give you an
+                      <strong data-start="1655" data-end="1693"
+                        >HTML + Canvas Persian text example</strong
+                      >
+                      using a Google Fonts Persian typeface like
+                      <strong data-start="1737" data-end="1750"
+                        >Vazirmatn</strong
+                      >, so you can copy-paste and test instantly.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="75701adb-2a20-4dd9-96b3-8f0108297bb9"
+        data-testid="conversation-turn-13"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-12 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="75701adb-2a20-4dd9-96b3-8f0108297bb9"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative max-w-[var(--user-chat-width,70%)] rounded-[18px] px-4 py-1.5 data-[multiline]:py-3"
+                  >
+                    <div class="whitespace-pre-wrap">
+                      How to then make it bold?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="bc38960c-742f-4553-b6bc-389b7d71c6ee"
+        data-testid="conversation-turn-14"
+        data-scroll-anchor="true"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto pb-10 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="bc38960c-742f-4553-b6bc-389b7d71c6ee"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="145">
+                      Once the font is loaded, you make text bold in canvas the
+                      same way you would in CSS — by setting the
+                      <strong data-start="101" data-end="115"
+                        ><code data-start="103" data-end="113"
+                          >ctx.font</code
+                        ></strong
+                      >
+                      string to include a weight.
+                    </p>
+                    <p data-start="147" data-end="163">The format is:</p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="164"
+                      data-end="239"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>[font-style] [font-variant] [font-weight] [font-size] [font-family]
+</span></code></div></div></pre>
+                    <p data-start="240" data-end="261">At minimum, you want:</p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="262"
+                      data-end="307"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl"></div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span>ctx.font = "bold 48px MyPersianFont";
+</span></code></div></div></pre>
+                    <hr data-start="309" data-end="312" />
+                    <h3 data-start="314" data-end="344">
+                      Example with a loaded font
+                    </h3>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="345"
+                      data-end="792"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">html</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-html"><span>&lt;canvas id="myCanvas" width="400" height="200"&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+// Load the font
+const font = new FontFace('MyPersianFont', 'url(/fonts/MyPersianFont.woff2)');
+
+font.load().then((loadedFont) =&gt; {
+  document.fonts.add(loadedFont);
+
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+
+  // Bold text
+  ctx.font = "bold 48px MyPersianFont";
+  ctx.fillText("سلام دنیا", 200, 100);
+});
+&lt;/script&gt;
+</span></code></div></div></pre>
+                    <hr data-start="794" data-end="797" />
+                    <h3 data-start="799" data-end="822">Important for bold:</h3>
+                    <ul data-start="823" data-end="1410">
+                      <li data-start="823" data-end="1033">
+                        <p data-start="825" data-end="1033">
+                          If the
+                          <strong data-start="832" data-end="845"
+                            >font file</strong
+                          >
+                          does not include a bold weight, the browser will
+                          <strong data-start="895" data-end="907"
+                            >simulate</strong
+                          >
+                          bold by thickening strokes. This can look okay, but
+                          for Persian text you’ll get better results with an
+                          actual bold font file.
+                        </p>
+                      </li>
+                      <li data-start="1034" data-end="1410">
+                        <p data-start="1036" data-end="1179">
+                          If your font family has multiple weights (e.g.,
+                          Regular, Bold), you can load each with
+                          <code data-start="1123" data-end="1135"
+                            >@font-face</code
+                          >
+                          or
+                          <code data-start="1139" data-end="1149"
+                            >FontFace</code
+                          >
+                          and give them distinct names:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1182"
+                          data-end="1339"
+                        ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">css</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-css"><span>@font-face {
+  font-family: 'MyPersianFontBold';
+  font-weight: bold;
+  src: url('/fonts/MyPersianFont-Bold.woff2') format('woff2');
+}
+</span></code></div></div></pre>
+                        <p data-start="1342" data-end="1357">Then in canvas:</p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1360"
+                          data-end="1410"
+                        ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>ctx.font = "48px MyPersianFontBold";
+</span></code></div></div></pre>
+                      </li>
+                    </ul>
+                    <hr data-start="1412" data-end="1415" />
+                    <p
+                      data-start="1417"
+                      data-end="1600"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      If you’d like, I can show you
+                      <strong data-start="1447" data-end="1498"
+                        >how to load both regular and bold Persian fonts</strong
+                      >
+                      and switch between them in the same canvas drawing, so you
+                      get true bold rather than fake thickening.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
