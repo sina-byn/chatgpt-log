@@ -1,0 +1,3502 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>API client generation tools</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="a597d55e-46b8-406a-9249-ba582a67124f"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-3 [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="a597d55e-46b8-406a-9249-ba582a67124f"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative rounded-[18px] px-4 py-1.5 data-[multiline]:py-3 max-w-[var(--user-chat-width,70%)]"
+                    data-multiline=""
+                  >
+                    <div class="whitespace-pre-wrap">
+                      I once worked on a project as a frontend developer where
+                      the backend developer gave me a file and told me to run it
+                      againts a cli and then it generated all the functions to
+                      call and invoke apis with full typescript support what
+                      could it be?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="d01913e2-373e-4986-877b-822e1c5d2635"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="false"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="d01913e2-373e-4986-877b-822e1c5d2635"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5-mini"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="239">
+                      Ah! From your description, it sounds like the backend
+                      developer gave you a
+                      <strong data-start="75" data-end="108"
+                        >OpenAPI/Swagger specification</strong
+                      >
+                      (or something similar like a
+                      <strong data-start="138" data-end="156"
+                        >GraphQL schema</strong
+                      >) and asked you to generate TypeScript client code from
+                      it. Let me break it down:
+                    </p>
+                    <ol data-start="241" data-end="1443">
+                      <li data-start="241" data-end="833">
+                        <p data-start="244" data-end="275">
+                          <strong data-start="244" data-end="273"
+                            >OpenAPI / Swagger Codegen</strong
+                          >
+                        </p>
+                        <ul data-start="279" data-end="833">
+                          <li data-start="279" data-end="491">
+                            <p data-start="281" data-end="427">
+                              If the file was a
+                              <code data-start="299" data-end="306">.json</code>
+                              or
+                              <code data-start="310" data-end="317">.yaml</code>
+                              describing all the API endpoints, request/response
+                              schemas, and types, you could run it through a CLI
+                              like:
+                            </p>
+                            <ul data-start="433" data-end="491">
+                              <li data-start="433" data-end="460">
+                                <p data-start="435" data-end="460">
+                                  <code data-start="435" data-end="458"
+                                    >openapi-generator-cli</code
+                                  >
+                                </p>
+                              </li>
+                              <li data-start="466" data-end="491">
+                                <p data-start="468" data-end="491">
+                                  <code data-start="468" data-end="489"
+                                    >swagger-codegen-cli</code
+                                  >
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                          <li data-start="495" data-end="599">
+                            <p data-start="497" data-end="599">
+                              This would generate a full
+                              <strong data-start="524" data-end="545"
+                                >TypeScript client</strong
+                              >
+                              with all API functions typed according to the
+                              spec.
+                            </p>
+                          </li>
+                          <li data-start="603" data-end="729">
+                            <p data-start="605" data-end="615">Example:</p>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="621"
+                              data-end="729"
+                            ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>openapi-generator-cli generate -i api-spec.yaml -g typescript-axios -o ./generated-api
+</span></code></div></div></pre>
+                          </li>
+                          <li data-start="733" data-end="833">
+                            <p data-start="735" data-end="833">
+                              After running this, you’d get functions like
+                              <code data-start="780" data-end="791"
+                                >getUser()</code
+                              >,
+                              <code data-start="793" data-end="807"
+                                >createPost()</code
+                              >, etc., all fully typed.
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li data-start="835" data-end="1201">
+                        <p data-start="838" data-end="859">
+                          <strong data-start="838" data-end="857"
+                            >GraphQL Codegen</strong
+                          >
+                        </p>
+                        <ul data-start="863" data-end="1201">
+                          <li data-start="863" data-end="1050">
+                            <p data-start="865" data-end="1050">
+                              If your backend was GraphQL-based, the file could
+                              have been a GraphQL schema. Using a CLI like
+                              <code data-start="960" data-end="977"
+                                >graphql-codegen</code
+                              >
+                              would generate TypeScript types and functions to
+                              call the GraphQL API.
+                            </p>
+                          </li>
+                          <li data-start="1054" data-end="1130">
+                            <p data-start="1056" data-end="1066">Example:</p>
+                            <pre
+                              class="overflow-visible!"
+                              data-start="1072"
+                              data-end="1130"
+                            ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>graphql-codegen --config codegen.yml
+</span></code></div></div></pre>
+                          </li>
+                          <li data-start="1134" data-end="1201">
+                            <p data-start="1136" data-end="1201">
+                              You’d get typed hooks or functions to call queries
+                              and mutations.
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li data-start="1203" data-end="1443">
+                        <p data-start="1206" data-end="1231">
+                          <strong data-start="1206" data-end="1229"
+                            >Other possibilities</strong
+                          >
+                        </p>
+                        <ul data-start="1235" data-end="1443">
+                          <li data-start="1235" data-end="1363">
+                            <p data-start="1237" data-end="1363">
+                              <strong data-start="1237" data-end="1245"
+                                >tRPC</strong
+                              >: If you used tRPC, the backend could expose
+                              procedures and the CLI would generate
+                              TypeScript-safe client functions.
+                            </p>
+                          </li>
+                          <li data-start="1367" data-end="1443">
+                            <p data-start="1369" data-end="1443">
+                              <strong data-start="1369" data-end="1414"
+                                >Swagger/OpenAPI + Axios / Fetch
+                                templates</strong
+                              >
+                              is more common in REST APIs.
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ol>
+                    <p data-start="1445" data-end="1528">
+                      ✅
+                      <strong data-start="1447" data-end="1463"
+                        >Most likely:</strong
+                      >
+                      it was
+                      <strong data-start="1471" data-end="1525"
+                        >OpenAPI/Swagger-based TypeScript client
+                        generation</strong
+                      >.
+                    </p>
+                    <p
+                      data-start="1530"
+                      data-end="1689"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      If you want, I can give a
+                      <strong data-start="1556" data-end="1588"
+                        >step-by-step minimal example</strong
+                      >
+                      of how that workflow usually looks, including the
+                      generated TS functions. Do you want me to do that?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="dc720990-3e1f-42da-b4ce-0f0880810056"
+        data-testid="conversation-turn-3"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-12 [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="dc720990-3e1f-42da-b4ce-0f0880810056"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative rounded-[18px] px-4 py-1.5 data-[multiline]:py-3 max-w-[var(--user-chat-width,70%)]"
+                  >
+                    <div class="whitespace-pre-wrap">
+                      What other options do I have?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="20fa2fec-1e71-4897-80e6-c63abea99a79"
+        data-testid="conversation-turn-4"
+        data-scroll-anchor="false"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="20fa2fec-1e71-4897-80e6-c63abea99a79"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5-mini"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="253">
+                      Got it—you’re asking about alternatives to generating
+                      TypeScript API clients from a backend spec. There are
+                      several approaches depending on whether your API is
+                      <strong data-start="160" data-end="168">REST</strong> or
+                      <strong data-start="172" data-end="183">GraphQL</strong>,
+                      or if you want
+                      <strong data-start="200" data-end="220"
+                        >full type safety</strong
+                      >. Here’s a structured overview:
+                    </p>
+                    <hr data-start="255" data-end="258" />
+                    <h2 data-start="260" data-end="311">
+                      <strong data-start="263" data-end="311"
+                        >1. OpenAPI / Swagger-based generation (REST)</strong
+                      >
+                    </h2>
+                    <ul data-start="313" data-end="727">
+                      <li data-start="313" data-end="416">
+                        <p data-start="315" data-end="416">
+                          <strong data-start="315" data-end="332"
+                            >How it works:</strong
+                          >
+                          Backend provides an OpenAPI spec (YAML/JSON). CLI
+                          generates TS functions and types.
+                        </p>
+                      </li>
+                      <li data-start="417" data-end="494">
+                        <p data-start="419" data-end="494">
+                          <strong data-start="419" data-end="428">Pros:</strong>
+                          Full types, auto-updates if spec changes, works with
+                          Axios/Fetch.
+                        </p>
+                      </li>
+                      <li data-start="495" data-end="655">
+                        <p data-start="497" data-end="517">
+                          <strong data-start="497" data-end="515"
+                            >Popular tools:</strong
+                          >
+                        </p>
+                        <ul data-start="520" data-end="655">
+                          <li data-start="520" data-end="547">
+                            <p data-start="522" data-end="547">
+                              <code data-start="522" data-end="545"
+                                >openapi-generator-cli</code
+                              >
+                            </p>
+                          </li>
+                          <li data-start="550" data-end="571">
+                            <p data-start="552" data-end="571">
+                              <code data-start="552" data-end="569"
+                                >swagger-codegen</code
+                              >
+                            </p>
+                          </li>
+                          <li data-start="574" data-end="655">
+                            <p data-start="576" data-end="655">
+                              <code data-start="576" data-end="596"
+                                >openapi-typescript</code
+                              >
+                              (just generates types, you write the API calls
+                              yourself)
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li data-start="656" data-end="727">
+                        <p data-start="658" data-end="727">
+                          <strong data-start="658" data-end="674"
+                            >When to use:</strong
+                          >
+                          REST API, want strict typing, auto-generated client.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="729" data-end="732" />
+                    <h2 data-start="734" data-end="767">
+                      <strong data-start="737" data-end="767"
+                        >2. GraphQL code generation</strong
+                      >
+                    </h2>
+                    <ul data-start="769" data-end="1117">
+                      <li data-start="769" data-end="907">
+                        <p data-start="771" data-end="907">
+                          <strong data-start="771" data-end="788"
+                            >How it works:</strong
+                          >
+                          Backend exposes GraphQL schema. CLI reads schema +
+                          queries/mutations and generates TypeScript types +
+                          hooks/functions.
+                        </p>
+                      </li>
+                      <li data-start="908" data-end="1017">
+                        <p data-start="910" data-end="1017">
+                          <strong data-start="910" data-end="919">Pros:</strong>
+                          Strong type safety, integrates well with React
+                          (Apollo, URQL, React Query), auto-updates types.
+                        </p>
+                      </li>
+                      <li data-start="1018" data-end="1085">
+                        <p data-start="1020" data-end="1040">
+                          <strong data-start="1020" data-end="1038"
+                            >Popular tools:</strong
+                          >
+                        </p>
+                        <ul data-start="1043" data-end="1085">
+                          <li data-start="1043" data-end="1064">
+                            <p data-start="1045" data-end="1064">
+                              <code data-start="1045" data-end="1062"
+                                >graphql-codegen</code
+                              >
+                            </p>
+                          </li>
+                          <li data-start="1067" data-end="1085">
+                            <p data-start="1069" data-end="1085">
+                              Apollo Codegen
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li data-start="1086" data-end="1117">
+                        <p data-start="1088" data-end="1117">
+                          <strong data-start="1088" data-end="1104"
+                            >When to use:</strong
+                          >
+                          GraphQL API.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1119" data-end="1122" />
+                    <h2 data-start="1124" data-end="1138">
+                      <strong data-start="1127" data-end="1138">3. tRPC</strong>
+                    </h2>
+                    <ul data-start="1140" data-end="1536">
+                      <li data-start="1140" data-end="1315">
+                        <p data-start="1142" data-end="1315">
+                          <strong data-start="1142" data-end="1159"
+                            >How it works:</strong
+                          >
+                          Backend exposes typed procedures (functions). Frontend
+                          imports a generated client with full type inference.
+                          No spec file needed—types flow automatically.
+                        </p>
+                      </li>
+                      <li data-start="1316" data-end="1389">
+                        <p data-start="1318" data-end="1389">
+                          <strong data-start="1318" data-end="1327"
+                            >Pros:</strong
+                          >
+                          End-to-end type safety without manual generation, very
+                          DRY.
+                        </p>
+                      </li>
+                      <li data-start="1390" data-end="1463">
+                        <p data-start="1392" data-end="1463">
+                          <strong data-start="1392" data-end="1401"
+                            >Cons:</strong
+                          >
+                          Tightly couples frontend and backend, backend must be
+                          tRPC.
+                        </p>
+                      </li>
+                      <li data-start="1464" data-end="1536">
+                        <p data-start="1466" data-end="1536">
+                          <strong data-start="1466" data-end="1482"
+                            >When to use:</strong
+                          >
+                          TypeScript full-stack apps where you control backend.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1538" data-end="1541" />
+                    <h2 data-start="1543" data-end="1609">
+                      <strong data-start="1546" data-end="1609"
+                        >4. Manual wrapper with
+                        <code data-start="1571" data-end="1578">axios</code> /
+                        <code data-start="1581" data-end="1588">fetch</code> +
+                        TypeScript types</strong
+                      >
+                    </h2>
+                    <ul data-start="1611" data-end="1911">
+                      <li data-start="1611" data-end="1741">
+                        <p data-start="1613" data-end="1741">
+                          <strong data-start="1613" data-end="1630"
+                            >How it works:</strong
+                          >
+                          You write functions yourself calling the API
+                          endpoints, and define TypeScript interfaces for
+                          request/response.
+                        </p>
+                      </li>
+                      <li data-start="1742" data-end="1789">
+                        <p data-start="1744" data-end="1789">
+                          <strong data-start="1744" data-end="1753"
+                            >Pros:</strong
+                          >
+                          Simple, flexible, no CLI/tooling.
+                        </p>
+                      </li>
+                      <li data-start="1790" data-end="1841">
+                        <p data-start="1792" data-end="1841">
+                          <strong data-start="1792" data-end="1801"
+                            >Cons:</strong
+                          >
+                          Manual maintenance, more error-prone.
+                        </p>
+                      </li>
+                      <li data-start="1842" data-end="1911">
+                        <p data-start="1844" data-end="1911">
+                          <strong data-start="1844" data-end="1860"
+                            >When to use:</strong
+                          >
+                          Small project, no formal spec, or prototype stage.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1913" data-end="1916" />
+                    <h2 data-start="1918" data-end="1985">
+                      <strong data-start="1921" data-end="1985"
+                        >5. RESTful client generators from RAML / Postman
+                        collections</strong
+                      >
+                    </h2>
+                    <ul data-start="1987" data-end="2267">
+                      <li data-start="1987" data-end="2091">
+                        <p data-start="1989" data-end="2091">
+                          <strong data-start="1989" data-end="2006"
+                            >How it works:</strong
+                          >
+                          If backend exposes RAML or Postman collection, some
+                          tools can generate TS clients.
+                        </p>
+                      </li>
+                      <li data-start="2092" data-end="2208">
+                        <p data-start="2094" data-end="2106">
+                          <strong data-start="2094" data-end="2104"
+                            >Tools:</strong
+                          >
+                        </p>
+                        <ul data-start="2109" data-end="2208">
+                          <li data-start="2109" data-end="2181">
+                            <p data-start="2111" data-end="2181">
+                              Postman CLI +
+                              <code data-start="2125" data-end="2145"
+                                >postman-to-openapi</code
+                              >
+                              → then generate TypeScript client
+                            </p>
+                          </li>
+                          <li data-start="2184" data-end="2208">
+                            <p data-start="2186" data-end="2208">
+                              <code data-start="2186" data-end="2206"
+                                >raml-to-typescript</code
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li data-start="2209" data-end="2267">
+                        <p data-start="2211" data-end="2267">
+                          <strong data-start="2211" data-end="2227"
+                            >When to use:</strong
+                          >
+                          API already documented in Postman/RAML.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="2269" data-end="2272" />
+                    <h3 data-start="2274" data-end="2304">
+                      <strong data-start="2278" data-end="2304"
+                        >Summary Recommendation</strong
+                      >
+                    </h3>
+                    <div class="_tableContainer_1rjym_1">
+                      <div
+                        tabindex="-1"
+                        class="group _tableWrapper_1rjym_13 flex w-fit flex-col-reverse"
+                      >
+                        <table
+                          data-start="2306"
+                          data-end="3020"
+                          class="w-fit min-w-(--thread-content-width)"
+                        >
+                          <thead data-start="2306" data-end="2409">
+                            <tr data-start="2306" data-end="2409">
+                              <th
+                                data-start="2306"
+                                data-end="2336"
+                                data-col-size="sm"
+                              >
+                                Approach
+                              </th>
+                              <th
+                                data-start="2336"
+                                data-end="2350"
+                                data-col-size="sm"
+                              >
+                                Type Safety
+                              </th>
+                              <th
+                                data-start="2350"
+                                data-end="2369"
+                                data-col-size="sm"
+                              >
+                                Setup Complexity
+                              </th>
+                              <th
+                                data-start="2369"
+                                data-end="2409"
+                                data-col-size="sm"
+                              >
+                                Best Use Case
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody data-start="2511" data-end="3020">
+                            <tr data-start="2511" data-end="2612">
+                              <td
+                                data-start="2511"
+                                data-end="2542"
+                                data-col-size="sm"
+                              >
+                                OpenAPI/Swagger
+                              </td>
+                              <td
+                                data-start="2542"
+                                data-end="2555"
+                                data-col-size="sm"
+                              >
+                                High
+                              </td>
+                              <td
+                                data-start="2555"
+                                data-end="2572"
+                                data-col-size="sm"
+                              >
+                                Medium
+                              </td>
+                              <td
+                                data-start="2572"
+                                data-end="2612"
+                                data-col-size="sm"
+                              >
+                                REST API with spec
+                              </td>
+                            </tr>
+                            <tr data-start="2613" data-end="2714">
+                              <td
+                                data-start="2613"
+                                data-end="2644"
+                                data-col-size="sm"
+                              >
+                                GraphQL Codegen
+                              </td>
+                              <td
+                                data-start="2644"
+                                data-end="2657"
+                                data-col-size="sm"
+                              >
+                                High
+                              </td>
+                              <td
+                                data-start="2657"
+                                data-end="2674"
+                                data-col-size="sm"
+                              >
+                                Medium
+                              </td>
+                              <td
+                                data-start="2674"
+                                data-end="2714"
+                                data-col-size="sm"
+                              >
+                                GraphQL APIs
+                              </td>
+                            </tr>
+                            <tr data-start="2715" data-end="2816">
+                              <td
+                                data-start="2715"
+                                data-end="2746"
+                                data-col-size="sm"
+                              >
+                                tRPC
+                              </td>
+                              <td
+                                data-start="2746"
+                                data-end="2759"
+                                data-col-size="sm"
+                              >
+                                Very High
+                              </td>
+                              <td
+                                data-start="2759"
+                                data-end="2776"
+                                data-col-size="sm"
+                              >
+                                Medium
+                              </td>
+                              <td
+                                data-start="2776"
+                                data-end="2816"
+                                data-col-size="sm"
+                              >
+                                Full-stack TS apps
+                              </td>
+                            </tr>
+                            <tr data-start="2817" data-end="2918">
+                              <td
+                                data-start="2817"
+                                data-end="2848"
+                                data-col-size="sm"
+                              >
+                                Manual
+                                <code data-start="2826" data-end="2833"
+                                  >fetch</code
+                                >/<code data-start="2834" data-end="2841"
+                                  >axios</code
+                                >
+                              </td>
+                              <td
+                                data-start="2848"
+                                data-end="2861"
+                                data-col-size="sm"
+                              >
+                                Medium
+                              </td>
+                              <td
+                                data-start="2861"
+                                data-end="2878"
+                                data-col-size="sm"
+                              >
+                                Low
+                              </td>
+                              <td
+                                data-start="2878"
+                                data-end="2918"
+                                data-col-size="sm"
+                              >
+                                Small projects
+                              </td>
+                            </tr>
+                            <tr data-start="2919" data-end="3020">
+                              <td
+                                data-start="2919"
+                                data-end="2951"
+                                data-col-size="sm"
+                              >
+                                RAML/Postman → TS client
+                              </td>
+                              <td
+                                data-start="2951"
+                                data-end="2964"
+                                data-col-size="sm"
+                              >
+                                High
+                              </td>
+                              <td
+                                data-start="2964"
+                                data-end="2981"
+                                data-col-size="sm"
+                              >
+                                Medium
+                              </td>
+                              <td
+                                data-start="2981"
+                                data-end="3020"
+                                data-col-size="sm"
+                              >
+                                Existing Postman/RAML documentation
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div
+                          class="sticky h-0 select-none end-(--thread-content-margin) self-end"
+                        >
+                          <div
+                            class="absolute end-0 flex items-end"
+                            style="height: 33px"
+                          >
+                            <span class="" data-state="closed"
+                              ><button
+                                aria-label="Copy table"
+                                class="hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                              ></button
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr data-start="3022" data-end="3025" />
+                    <p data-start="3027" data-end="3180">
+                      If you want, I can make a
+                      <strong data-start="3053" data-end="3136"
+                        >flowchart showing which option to pick based on your
+                        API type and project needs</strong
+                      >—it’s a great visual for deciding quickly.
+                    </p>
+                    <p
+                      data-start="3182"
+                      data-end="3208"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      Do you want me to do that?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="3d9e0f13-6eaf-4521-8b2c-b363fc08c7f7"
+        data-testid="conversation-turn-5"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-12 [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="3d9e0f13-6eaf-4521-8b2c-b363fc08c7f7"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative rounded-[18px] px-4 py-1.5 data-[multiline]:py-3 max-w-[var(--user-chat-width,70%)]"
+                  >
+                    <div class="whitespace-pre-wrap">What about orval</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="da071e66-7c38-4189-ba20-82c6fc6cd6a6"
+        data-testid="conversation-turn-6"
+        data-scroll-anchor="false"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="da071e66-7c38-4189-ba20-82c6fc6cd6a6"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5-mini"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="177">
+                      Ah yes!
+                      <strong data-start="8" data-end="17">Orval</strong> is
+                      another excellent option, and it’s very much in the same
+                      ecosystem as OpenAPI client generation—but with some
+                      modern twists. Let me break it down clearly:
+                    </p>
+                    <hr data-start="179" data-end="182" />
+                    <h2 data-start="184" data-end="204">
+                      <strong data-start="187" data-end="204"
+                        >What Orval is</strong
+                      >
+                    </h2>
+                    <ul data-start="206" data-end="729">
+                      <li data-start="206" data-end="279">
+                        <p data-start="208" data-end="279">
+                          <strong data-start="208" data-end="217">Type:</strong>
+                          OpenAPI (Swagger) client generator for
+                          TypeScript/React/Node.
+                        </p>
+                      </li>
+                      <li data-start="280" data-end="377">
+                        <p data-start="282" data-end="377">
+                          <strong data-start="282" data-end="295"
+                            >Function:</strong
+                          >
+                          Takes an OpenAPI spec (<code
+                            data-start="319"
+                            data-end="326"
+                            >.yaml</code
+                          >
+                          or <code data-start="330" data-end="337">.json</code>)
+                          and generates fully-typed API clients.
+                        </p>
+                      </li>
+                      <li data-start="378" data-end="729">
+                        <p data-start="380" data-end="438">
+                          <strong data-start="380" data-end="436"
+                            >Key difference from classic
+                            <code data-start="410" data-end="433"
+                              >openapi-generator-cli</code
+                            >:</strong
+                          >
+                        </p>
+                        <ul data-start="441" data-end="729">
+                          <li data-start="441" data-end="560">
+                            <p data-start="443" data-end="560">
+                              Orval is
+                              <strong data-start="452" data-end="472"
+                                >TypeScript-first</strong
+                              >: generated code is idiomatic TS, often easier to
+                              work with in modern React/Node apps.
+                            </p>
+                          </li>
+                          <li data-start="563" data-end="658">
+                            <p data-start="565" data-end="658">
+                              Supports
+                              <strong data-start="574" data-end="589"
+                                >React Query</strong
+                              >
+                              out of the box: you can generate hooks directly
+                              from the API spec.
+                            </p>
+                          </li>
+                          <li data-start="661" data-end="729">
+                            <p data-start="663" data-end="729">
+                              Generates
+                              <strong data-start="673" data-end="701"
+                                >strongly-typed functions</strong
+                              >
+                              for requests and responses.
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <hr data-start="731" data-end="734" />
+                    <h2 data-start="736" data-end="755">
+                      <strong data-start="739" data-end="755"
+                        >How it works</strong
+                      >
+                    </h2>
+                    <ol data-start="757" data-end="1405">
+                      <li data-start="757" data-end="812">
+                        <p data-start="760" data-end="812">
+                          You get a backend OpenAPI spec (e.g.,
+                          <code data-start="798" data-end="808">api.yaml</code
+                          >).
+                        </p>
+                      </li>
+                      <li data-start="813" data-end="925">
+                        <p data-start="816" data-end="869">
+                          Install Orval CLI or add it to your
+                          <code data-start="852" data-end="866"
+                            >package.json</code
+                          >:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="873"
+                          data-end="925"
+                        ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install @orval/core --save-dev
+</span></code></div></div></pre>
+                      </li>
+                      <li data-start="926" data-end="1237">
+                        <p data-start="929" data-end="991">
+                          Create a config file
+                          <code data-start="950" data-end="967"
+                            >orval.config.js</code
+                          >
+                          (or <code data-start="972" data-end="977">.ts</code>)
+                          like this:
+                        </p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="995"
+                          data-end="1237"
+                        ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>module.exports = {
+  petstore: {
+    input: './api.yaml',
+    output: {
+      target: './src/api/petstore.ts',
+      client: 'axios', // or 'fetch'
+      mode: 'split'    // split by tags
+    }
+  }
+}
+</span></code></div></div></pre>
+                      </li>
+                      <li data-start="1238" data-end="1278">
+                        <p data-start="1241" data-end="1247">Run:</p>
+                        <pre
+                          class="overflow-visible!"
+                          data-start="1251"
+                          data-end="1278"
+                        ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npx orval
+</span></code></div></div></pre>
+                      </li>
+                      <li data-start="1279" data-end="1405">
+                        <p data-start="1282" data-end="1405">
+                          You get
+                          <strong data-start="1290" data-end="1309"
+                            >typed functions</strong
+                          >
+                          (e.g.,
+                          <code data-start="1317" data-end="1331"
+                            >getPetById()</code
+                          >,
+                          <code data-start="1333" data-end="1343">addPet()</code
+                          >) and optionally
+                          <strong data-start="1360" data-end="1381"
+                            >React Query hooks</strong
+                          >
+                          like
+                          <code data-start="1387" data-end="1404"
+                            >useGetPetById()</code
+                          >.
+                        </p>
+                      </li>
+                    </ol>
+                    <hr data-start="1407" data-end="1410" />
+                    <h2 data-start="1412" data-end="1423">
+                      <strong data-start="1415" data-end="1423">Pros</strong>
+                    </h2>
+                    <ul data-start="1425" data-end="1640">
+                      <li data-start="1425" data-end="1469">
+                        <p data-start="1427" data-end="1469">
+                          Generates clean, modern TypeScript code.
+                        </p>
+                      </li>
+                      <li data-start="1470" data-end="1542">
+                        <p data-start="1472" data-end="1542">
+                          Built-in support for React Query (or you can use plain
+                          axios/fetch).
+                        </p>
+                      </li>
+                      <li data-start="1543" data-end="1595">
+                        <p data-start="1545" data-end="1595">
+                          Automatically updates types if API spec changes.
+                        </p>
+                      </li>
+                      <li data-start="1596" data-end="1640">
+                        <p data-start="1598" data-end="1640">
+                          Splits APIs by tags for modular imports.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1642" data-end="1645" />
+                    <h2 data-start="1647" data-end="1658">
+                      <strong data-start="1650" data-end="1658">Cons</strong>
+                    </h2>
+                    <ul data-start="1660" data-end="1819">
+                      <li data-start="1660" data-end="1705">
+                        <p data-start="1662" data-end="1705">
+                          Backend must provide an
+                          <strong data-start="1686" data-end="1702"
+                            >OpenAPI spec</strong
+                          >.
+                        </p>
+                      </li>
+                      <li data-start="1706" data-end="1819">
+                        <p data-start="1708" data-end="1819">
+                          Smaller ecosystem compared to classic
+                          <code data-start="1746" data-end="1769"
+                            >openapi-generator-cli</code
+                          >—less tooling if you need very custom templates.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1821" data-end="1824" />
+                    <p data-start="1826" data-end="2000">
+                      ✅
+                      <strong data-start="1828" data-end="1838">TL;DR:</strong>
+                      Orval is basically a “TypeScript-first OpenAPI client
+                      generator,” perfect if you want
+                      <strong data-start="1925" data-end="1946"
+                        >modern TS clients</strong
+                      >
+                      or
+                      <strong data-start="1950" data-end="1971"
+                        >React Query hooks</strong
+                      >
+                      without extra boilerplate.
+                    </p>
+                    <hr data-start="2002" data-end="2005" />
+                    <p data-start="2007" data-end="2209">
+                      If you want, I can make a
+                      <strong data-start="2033" data-end="2102"
+                        >comparison table of Orval vs OpenAPI Generator vs
+                        Swagger Codegen</strong
+                      >
+                      to show which is better in which situation. It’s really
+                      useful when deciding which to use for a project.
+                    </p>
+                    <p
+                      data-start="2211"
+                      data-end="2237"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      Do you want me to do that?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="62a91892-8d8d-4b9c-b13b-0e3a01555ddd"
+        data-testid="conversation-turn-7"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-12 [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="62a91892-8d8d-4b9c-b13b-0e3a01555ddd"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative rounded-[18px] px-4 py-1.5 data-[multiline]:py-3 max-w-[var(--user-chat-width,70%)]"
+                    data-multiline=""
+                  >
+                    <div class="whitespace-pre-wrap">
+                      how to generate openapi file with express backend to later
+                      use with orval or openapi generator
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="52adeb8c-9d28-44c2-985c-820d51d1e740"
+        data-testid="conversation-turn-8"
+        data-scroll-anchor="false"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="52adeb8c-9d28-44c2-985c-820d51d1e740"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5-mini"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="256">
+                      Got it! You want to
+                      <strong data-start="20" data-end="81"
+                        >generate an OpenAPI spec from an existing Express
+                        backend</strong
+                      >
+                      so you can feed it into Orval or OpenAPI Generator. There
+                      are several approaches depending on how much manual work
+                      you want vs. automation. I’ll break it down step by step.
+                    </p>
+                    <hr data-start="258" data-end="261" />
+                    <h2 data-start="263" data-end="314">
+                      <strong data-start="266" data-end="314"
+                        >1. Using
+                        <code data-start="277" data-end="292"
+                          >swagger-jsdoc</code
+                        >
+                        (manual annotation)</strong
+                      >
+                    </h2>
+                    <p data-start="316" data-end="366">
+                      This is the most common approach for Express apps.
+                    </p>
+                    <h3 data-start="368" data-end="396">
+                      <strong data-start="372" data-end="396"
+                        >Install dependencies</strong
+                      >
+                    </h3>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="397"
+                      data-end="460"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install swagger-jsdoc swagger-ui-express --save
+</span></code></div></div></pre>
+                    <h3 data-start="462" data-end="491">
+                      <strong data-start="466" data-end="491"
+                        >Setup
+                        <code data-start="474" data-end="489"
+                          >swagger-jsdoc</code
+                        ></strong
+                      >
+                    </h3>
+                    <p data-start="492" data-end="537">
+                      Create a
+                      <code data-start="501" data-end="513">swagger.js</code>
+                      (or
+                      <code data-start="518" data-end="530">swagger.ts</code>)
+                      file:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="539"
+                      data-end="1096"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>const swaggerJSDoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
+
+const options = {
+  definition: {
+    openapi: '3.0.3',
+    info: {
+      title: 'My API',
+      version: '1.0.0',
+    },
+  },
+  // Path to the API docs (your route files)
+  apis: ['./routes/*.js'], 
+};
+
+const swaggerSpec = swaggerJSDoc(options);
+
+module.exports = (app) =&gt; {
+  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+  // Optional: expose raw JSON spec
+  app.get('/swagger.json', (req, res) =&gt; res.json(swaggerSpec));
+};
+</span></code></div></div></pre>
+                    <h3 data-start="1098" data-end="1126">
+                      <strong data-start="1102" data-end="1126"
+                        >Annotate your routes</strong
+                      >
+                    </h3>
+                    <p data-start="1127" data-end="1167">
+                      In your route files, add JSDoc comments:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="1169"
+                      data-end="1710"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>/**
+ * @swagger
+ * /pets:
+ *   get:
+ *     summary: Get all pets
+ *     responses:
+ *       200:
+ *         description: List of pets
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *                   name:
+ *                     type: string
+ */
+router.get('/pets', (req, res) =&gt; {
+  res.json([{ id: 1, name: 'Fido' }]);
+});
+</span></code></div></div></pre>
+                    <h3 data-start="1712" data-end="1726">
+                      <strong data-start="1716" data-end="1726">Result</strong>
+                    </h3>
+                    <ul data-start="1727" data-end="1876">
+                      <li data-start="1727" data-end="1876">
+                        <p data-start="1729" data-end="1759">
+                          Running your server exposes:
+                        </p>
+                        <ul data-start="1762" data-end="1876">
+                          <li data-start="1762" data-end="1790">
+                            <p data-start="1764" data-end="1790">
+                              <code data-start="1764" data-end="1775"
+                                >/api-docs</code
+                              >
+                              → Swagger UI
+                            </p>
+                          </li>
+                          <li data-start="1793" data-end="1876">
+                            <p data-start="1795" data-end="1876">
+                              <code data-start="1795" data-end="1810"
+                                >/swagger.json</code
+                              >
+                              → raw OpenAPI spec JSON (feed this to Orval or
+                              OpenAPI Generator)
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <hr data-start="1878" data-end="1881" />
+                    <h2 data-start="1883" data-end="1933">
+                      <strong data-start="1886" data-end="1933"
+                        >2. Using
+                        <code data-start="1897" data-end="1903">tsoa</code>
+                        (TypeScript-first approach)</strong
+                      >
+                    </h2>
+                    <p data-start="1935" data-end="2045">
+                      If your Express backend is in
+                      <strong data-start="1965" data-end="1979"
+                        >TypeScript</strong
+                      >, <code data-start="1981" data-end="1987">tsoa</code> can
+                      automatically generate OpenAPI specs from decorators.
+                    </p>
+                    <h3 data-start="2047" data-end="2075">
+                      <strong data-start="2051" data-end="2075"
+                        >Install dependencies</strong
+                      >
+                    </h3>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="2076"
+                      data-end="2115"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install tsoa --save-dev
+</span></code></div></div></pre>
+                    <h3 data-start="2117" data-end="2159">
+                      <strong data-start="2121" data-end="2159"
+                        >Add decorators in your controllers</strong
+                      >
+                    </h3>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="2160"
+                      data-end="2426"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>import { Controller, Get, Route } from 'tsoa';
+
+interface Pet {
+  id: number;
+  name: string;
+}
+
+@Route('pets')
+export class PetsController extends Controller {
+  @Get()
+  public async getPets(): Promise&lt;Pet[]&gt; {
+    return [{ id: 1, name: 'Fido' }];
+  }
+}
+</span></code></div></div></pre>
+                    <h3 data-start="2428" data-end="2461">
+                      <strong data-start="2432" data-end="2461"
+                        >tsoa config (<code data-start="2447" data-end="2458"
+                          >tsoa.json</code
+                        >)</strong
+                      >
+                    </h3>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="2462"
+                      data-end="2754"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">json</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-json"><span>{
+  "entryFile": "src/server.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "controllerPathGlobs": ["src/controllers/*.ts"],
+  "spec": {
+    "outputDirectory": "dist",
+    "specVersion": 3
+  },
+  "routes": {
+    "basePath": "/",
+    "routesDir": "dist/routes"
+  }
+}
+</span></code></div></div></pre>
+                    <h3 data-start="2756" data-end="2780">
+                      <strong data-start="2760" data-end="2780"
+                        >Generate OpenAPI</strong
+                      >
+                    </h3>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="2781"
+                      data-end="2806"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npx tsoa spec
+</span></code></div></div></pre>
+                    <ul data-start="2807" data-end="2973">
+                      <li data-start="2807" data-end="2890">
+                        <p data-start="2809" data-end="2890">
+                          This creates
+                          <code data-start="2822" data-end="2841"
+                            >dist/openapi.json</code
+                          >
+                          → can be used with Orval or OpenAPI Generator.
+                        </p>
+                      </li>
+                      <li data-start="2891" data-end="2973">
+                        <p data-start="2893" data-end="2973">
+                          Optionally,
+                          <code data-start="2905" data-end="2922"
+                            >npx tsoa routes</code
+                          >
+                          generates Express route handlers with type safety.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="2975" data-end="2978" />
+                    <h2 data-start="2980" data-end="3040">
+                      <strong data-start="2983" data-end="3040"
+                        >3. Using
+                        <code data-start="2994" data-end="3017"
+                          >express-oas-generator</code
+                        >
+                        (runtime generation)</strong
+                      >
+                    </h2>
+                    <ul data-start="3042" data-end="3194">
+                      <li data-start="3042" data-end="3112">
+                        <p data-start="3044" data-end="3112">
+                          Auto-generates OpenAPI spec at runtime based on
+                          incoming requests.
+                        </p>
+                      </li>
+                      <li data-start="3113" data-end="3194">
+                        <p data-start="3115" data-end="3194">
+                          Less manual work, but only generates endpoints you
+                          actually hit during testing.
+                        </p>
+                      </li>
+                    </ul>
+                    <h3 data-start="3196" data-end="3211">
+                      <strong data-start="3200" data-end="3211">Install</strong>
+                    </h3>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="3212"
+                      data-end="3264"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install express-oas-generator --save
+</span></code></div></div></pre>
+                    <h3 data-start="3266" data-end="3279">
+                      <strong data-start="3270" data-end="3279">Setup</strong>
+                    </h3>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="3280"
+                      data-end="3576"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">js</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-js"><span>const express = require('express');
+const expressOasGenerator = require('express-oas-generator');
+
+const app = express();
+expressOasGenerator.init(app, {}); // optional config
+
+// your routes
+app.get('/pets', (req, res) =&gt; {
+  res.json([{ id: 1, name: 'Fido' }]);
+});
+
+app.listen(3000);
+</span></code></div></div></pre>
+                    <ul data-start="3578" data-end="3657">
+                      <li data-start="3578" data-end="3657">
+                        <p data-start="3580" data-end="3657">
+                          After hitting your endpoints, a JSON OpenAPI spec is
+                          generated automatically.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="3659" data-end="3662" />
+                    <h3 data-start="3664" data-end="3699">
+                      ✅
+                      <strong data-start="3670" data-end="3699"
+                        >Summary / Recommendations</strong
+                      >
+                    </h3>
+                    <div class="_tableContainer_1rjym_1">
+                      <div
+                        tabindex="-1"
+                        class="group _tableWrapper_1rjym_13 flex w-fit flex-col-reverse"
+                      >
+                        <table
+                          data-start="3701"
+                          data-end="4080"
+                          class="w-fit min-w-(--thread-content-width)"
+                        >
+                          <thead data-start="3701" data-end="3734">
+                            <tr data-start="3701" data-end="3734">
+                              <th
+                                data-start="3701"
+                                data-end="3708"
+                                data-col-size="sm"
+                              >
+                                Tool
+                              </th>
+                              <th
+                                data-start="3708"
+                                data-end="3719"
+                                data-col-size="sm"
+                              >
+                                Best For
+                              </th>
+                              <th
+                                data-start="3719"
+                                data-end="3726"
+                                data-col-size="sm"
+                              >
+                                Pros
+                              </th>
+                              <th
+                                data-start="3726"
+                                data-end="3734"
+                                data-col-size="md"
+                              >
+                                Cons
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody data-start="3769" data-end="4080">
+                            <tr data-start="3769" data-end="3865">
+                              <td
+                                data-start="3769"
+                                data-end="3787"
+                                data-col-size="sm"
+                              >
+                                <code data-start="3771" data-end="3786"
+                                  >swagger-jsdoc</code
+                                >
+                              </td>
+                              <td
+                                data-start="3787"
+                                data-end="3815"
+                                data-col-size="sm"
+                              >
+                                JS or TS, existing routes
+                              </td>
+                              <td
+                                data-start="3815"
+                                data-end="3837"
+                                data-col-size="sm"
+                              >
+                                Simple, widely used
+                              </td>
+                              <td
+                                data-start="3837"
+                                data-end="3865"
+                                data-col-size="md"
+                              >
+                                Manual JSDoc annotations
+                              </td>
+                            </tr>
+                            <tr data-start="3866" data-end="3964">
+                              <td
+                                data-start="3866"
+                                data-end="3875"
+                                data-col-size="sm"
+                              >
+                                <code data-start="3868" data-end="3874"
+                                  >tsoa</code
+                                >
+                              </td>
+                              <td
+                                data-start="3875"
+                                data-end="3896"
+                                data-col-size="sm"
+                              >
+                                TypeScript backend
+                              </td>
+                              <td
+                                data-start="3896"
+                                data-end="3934"
+                                data-col-size="sm"
+                              >
+                                Auto-types, spec + route generation
+                              </td>
+                              <td
+                                data-start="3934"
+                                data-end="3964"
+                                data-col-size="md"
+                              >
+                                Requires TS and decorators
+                              </td>
+                            </tr>
+                            <tr data-start="3965" data-end="4080">
+                              <td
+                                data-start="3965"
+                                data-end="3991"
+                                data-col-size="sm"
+                              >
+                                <code data-start="3967" data-end="3990"
+                                  >express-oas-generator</code
+                                >
+                              </td>
+                              <td
+                                data-start="3991"
+                                data-end="4018"
+                                data-col-size="sm"
+                              >
+                                Quick runtime generation
+                              </td>
+                              <td
+                                data-start="4018"
+                                data-end="4034"
+                                data-col-size="sm"
+                              >
+                                Minimal setup
+                              </td>
+                              <td
+                                data-start="4034"
+                                data-end="4080"
+                                data-col-size="md"
+                              >
+                                Only generates what you call; less control
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div
+                          class="sticky h-0 select-none end-(--thread-content-margin) self-end"
+                        >
+                          <div
+                            class="absolute end-0 flex items-end"
+                            style="height: 33px"
+                          >
+                            <span class="" data-state="closed"
+                              ><button
+                                aria-label="Copy table"
+                                class="hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                              ></button
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr data-start="4082" data-end="4085" />
+                    <p data-start="4087" data-end="4228">
+                      After generating the
+                      <strong data-start="4108" data-end="4129"
+                        >OpenAPI JSON/YAML</strong
+                      >, you can feed it directly into
+                      <strong data-start="4161" data-end="4170">Orval</strong>
+                      or
+                      <strong data-start="4174" data-end="4195"
+                        >OpenAPI Generator</strong
+                      >
+                      to generate a TypeScript client.
+                    </p>
+                    <hr data-start="4230" data-end="4233" />
+                    <p data-start="4235" data-end="4405">
+                      If you want, I can make a
+                      <strong data-start="4261" data-end="4302"
+                        >ready-to-use Express + Orval workflow</strong
+                      >
+                      example, where the OpenAPI file is generated and Orval
+                      produces fully-typed API hooks automatically.
+                    </p>
+                    <p
+                      data-start="4407"
+                      data-end="4433"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      Do you want me to do that?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="f34017bf-e148-4fff-be46-35925d9a337d"
+        data-testid="conversation-turn-9"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-12 [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="f34017bf-e148-4fff-be46-35925d9a337d"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative rounded-[18px] px-4 py-1.5 data-[multiline]:py-3 max-w-[var(--user-chat-width,70%)]"
+                  >
+                    <div class="whitespace-pre-wrap">
+                      Can I use tsoa with other backend frameworks?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="acf9789f-208a-4a1d-ba8a-dde6709f52c5"
+        data-testid="conversation-turn-10"
+        data-scroll-anchor="false"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="acf9789f-208a-4a1d-ba8a-dde6709f52c5"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5-mini"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="231">
+                      Yes, but with some caveats.
+                      <code data-start="28" data-end="34">tsoa</code> is
+                      <strong data-start="38" data-end="84"
+                        >primarily designed for TypeScript backends</strong
+                      >, and while it’s most commonly used with
+                      <strong data-start="125" data-end="136">Express</strong>,
+                      it can be used with other frameworks, though it may
+                      require extra work. Let me break it down:
+                    </p>
+                    <hr data-start="233" data-end="236" />
+                    <h2 data-start="238" data-end="277">
+                      <strong data-start="241" data-end="277"
+                        >1. Supported / Common Frameworks</strong
+                      >
+                    </h2>
+                    <h3 data-start="279" data-end="294">
+                      <strong data-start="283" data-end="294">Express</strong>
+                    </h3>
+                    <ul data-start="295" data-end="438">
+                      <li data-start="295" data-end="315">
+                        <p data-start="297" data-end="315">Fully supported.</p>
+                      </li>
+                      <li data-start="316" data-end="407">
+                        <p data-start="318" data-end="407">
+                          <code data-start="318" data-end="324">tsoa</code> can
+                          generate
+                          <strong data-start="338" data-end="359"
+                            >both OpenAPI spec</strong
+                          >
+                          and
+                          <strong data-start="364" data-end="390"
+                            >Express route handlers</strong
+                          >
+                          automatically.
+                        </p>
+                      </li>
+                      <li data-start="408" data-end="438">
+                        <p data-start="410" data-end="438">
+                          Easiest and most documented.
+                        </p>
+                      </li>
+                    </ul>
+                    <h3 data-start="440" data-end="451">
+                      <strong data-start="444" data-end="451">Koa</strong>
+                    </h3>
+                    <ul data-start="452" data-end="689">
+                      <li data-start="452" data-end="496">
+                        <p data-start="454" data-end="496">
+                          Not officially supported out-of-the-box.
+                        </p>
+                      </li>
+                      <li data-start="497" data-end="563">
+                        <p data-start="499" data-end="563">
+                          You can still
+                          <strong data-start="513" data-end="542"
+                            >generate the OpenAPI spec</strong
+                          >
+                          using
+                          <code data-start="549" data-end="560">tsoa spec</code
+                          >.
+                        </p>
+                      </li>
+                      <li data-start="564" data-end="689">
+                        <p data-start="566" data-end="689">
+                          But you cannot generate Koa-compatible route handlers
+                          automatically. You’d have to manually wire the
+                          generated controllers.
+                        </p>
+                      </li>
+                    </ul>
+                    <h3 data-start="691" data-end="706">
+                      <strong data-start="695" data-end="706">Fastify</strong>
+                    </h3>
+                    <ul data-start="707" data-end="862">
+                      <li data-start="707" data-end="726">
+                        <p data-start="709" data-end="726">Similar to Koa.</p>
+                      </li>
+                      <li data-start="727" data-end="766">
+                        <p data-start="729" data-end="766">
+                          OpenAPI spec generation works fine.
+                        </p>
+                      </li>
+                      <li data-start="767" data-end="862">
+                        <p data-start="769" data-end="862">
+                          Route generation is manual, but you can use
+                          <code data-start="813" data-end="819">tsoa</code>
+                          controllers with Fastify’s routing system.
+                        </p>
+                      </li>
+                    </ul>
+                    <h3 data-start="864" data-end="878">
+                      <strong data-start="868" data-end="878">NestJS</strong>
+                    </h3>
+                    <ul data-start="879" data-end="1093">
+                      <li data-start="879" data-end="991">
+                        <p data-start="881" data-end="991">
+                          <code data-start="881" data-end="887">tsoa</code> can
+                          generate the OpenAPI spec, but NestJS already has its
+                          <strong data-start="946" data-end="988"
+                            >own Swagger module (<code
+                              data-start="968"
+                              data-end="985"
+                              >@nestjs/swagger</code
+                            >)</strong
+                          >.
+                        </p>
+                      </li>
+                      <li data-start="992" data-end="1093">
+                        <p data-start="994" data-end="1093">
+                          Using
+                          <code data-start="1000" data-end="1006">tsoa</code> is
+                          redundant in NestJS because NestJS decorators can
+                          already produce OpenAPI 3.0 JSON.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1095" data-end="1098" />
+                    <h2 data-start="1100" data-end="1131">
+                      <strong data-start="1103" data-end="1131"
+                        >2. What Works Everywhere</strong
+                      >
+                    </h2>
+                    <p data-start="1133" data-end="1235">
+                      Even if your framework is not Express, you can still use
+                      <code data-start="1190" data-end="1196">tsoa</code>
+                      <strong data-start="1197" data-end="1234"
+                        >just to generate the OpenAPI spec</strong
+                      >:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="1237"
+                      data-end="1262"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npx tsoa spec
+</span></code></div></div></pre>
+                    <ul data-start="1264" data-end="1549">
+                      <li data-start="1264" data-end="1353">
+                        <p data-start="1266" data-end="1353">
+                          This reads your
+                          <strong data-start="1282" data-end="1323"
+                            >TypeScript controllers and decorators</strong
+                          >
+                          and outputs
+                          <code data-start="1336" data-end="1350"
+                            >openapi.json</code
+                          >.
+                        </p>
+                      </li>
+                      <li data-start="1354" data-end="1456">
+                        <p data-start="1356" data-end="1456">
+                          You can then feed this file into Orval, OpenAPI
+                          Generator, or Swagger Codegen to produce a client.
+                        </p>
+                      </li>
+                      <li data-start="1457" data-end="1549">
+                        <p data-start="1459" data-end="1549">
+                          You just lose the automatic route generation (<code
+                            data-start="1505"
+                            data-end="1522"
+                            >npx tsoa routes</code
+                          >) that is Express-specific.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1551" data-end="1554" />
+                    <h2 data-start="1556" data-end="1588">
+                      <strong data-start="1559" data-end="1588"
+                        >3. TL;DR / Recommendation</strong
+                      >
+                    </h2>
+                    <div class="_tableContainer_1rjym_1">
+                      <div
+                        tabindex="-1"
+                        class="group _tableWrapper_1rjym_13 flex w-fit flex-col-reverse"
+                      >
+                        <table
+                          data-start="1590"
+                          data-end="1904"
+                          class="w-fit min-w-(--thread-content-width)"
+                        >
+                          <thead data-start="1590" data-end="1641">
+                            <tr data-start="1590" data-end="1641">
+                              <th
+                                data-start="1590"
+                                data-end="1606"
+                                data-col-size="sm"
+                              >
+                                Framework
+                              </th>
+                              <th
+                                data-start="1606"
+                                data-end="1621"
+                                data-col-size="sm"
+                              >
+                                OpenAPI Spec
+                              </th>
+                              <th
+                                data-start="1621"
+                                data-end="1641"
+                                data-col-size="sm"
+                              >
+                                Route Generation
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody data-start="1691" data-end="1904">
+                            <tr data-start="1691" data-end="1737">
+                              <td
+                                data-start="1691"
+                                data-end="1707"
+                                data-col-size="sm"
+                              >
+                                Express
+                              </td>
+                              <td
+                                data-start="1707"
+                                data-end="1720"
+                                data-col-size="sm"
+                              >
+                                ✅ Yes
+                              </td>
+                              <td
+                                data-start="1720"
+                                data-end="1737"
+                                data-col-size="sm"
+                              >
+                                ✅ Yes
+                              </td>
+                            </tr>
+                            <tr data-start="1738" data-end="1784">
+                              <td
+                                data-start="1738"
+                                data-end="1754"
+                                data-col-size="sm"
+                              >
+                                Koa
+                              </td>
+                              <td
+                                data-start="1754"
+                                data-end="1767"
+                                data-col-size="sm"
+                              >
+                                ✅ Yes
+                              </td>
+                              <td
+                                data-start="1767"
+                                data-end="1784"
+                                data-col-size="sm"
+                              >
+                                ❌ No
+                              </td>
+                            </tr>
+                            <tr data-start="1785" data-end="1831">
+                              <td
+                                data-start="1785"
+                                data-end="1801"
+                                data-col-size="sm"
+                              >
+                                Fastify
+                              </td>
+                              <td
+                                data-start="1801"
+                                data-end="1814"
+                                data-col-size="sm"
+                              >
+                                ✅ Yes
+                              </td>
+                              <td
+                                data-start="1814"
+                                data-end="1831"
+                                data-col-size="sm"
+                              >
+                                ❌ No
+                              </td>
+                            </tr>
+                            <tr data-start="1832" data-end="1904">
+                              <td
+                                data-start="1832"
+                                data-end="1848"
+                                data-col-size="sm"
+                              >
+                                NestJS
+                              </td>
+                              <td
+                                data-start="1848"
+                                data-end="1861"
+                                data-col-size="sm"
+                              >
+                                ✅ Yes
+                              </td>
+                              <td
+                                data-start="1861"
+                                data-end="1904"
+                                data-col-size="sm"
+                              >
+                                ❌ Usually use
+                                <code data-start="1877" data-end="1894"
+                                  >@nestjs/swagger</code
+                                >
+                                instead
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div
+                          class="sticky h-0 select-none end-(--thread-content-margin) self-end"
+                        >
+                          <div
+                            class="absolute end-0 flex items-end"
+                            style="height: 33px"
+                          >
+                            <span class="" data-state="closed"
+                              ><button
+                                aria-label="Copy table"
+                                class="hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                              ></button
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p data-start="1906" data-end="2097">
+                      ✅
+                      <strong data-start="1908" data-end="1922"
+                        >Key point:</strong
+                      >
+                      <code data-start="1923" data-end="1929">tsoa</code> is
+                      great as a
+                      <strong data-start="1944" data-end="1982"
+                        >TypeScript-first OpenAPI generator</strong
+                      >, even if your backend framework isn’t Express. You just
+                      have to handle routing manually in non-Express frameworks.
+                    </p>
+                    <hr data-start="2099" data-end="2102" />
+                    <p data-start="2104" data-end="2279">
+                      If you want, I can show a
+                      <strong data-start="2130" data-end="2158"
+                        >small Koa + tsoa example</strong
+                      >
+                      where you generate an OpenAPI spec from decorators without
+                      using Express at all. This can then go straight into
+                      Orval.
+                    </p>
+                    <p
+                      data-start="2281"
+                      data-end="2307"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      Do you want me to do that?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="34cf4c7c-21af-4d40-bb84-d7a309722115"
+        data-testid="conversation-turn-11"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-12 [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="34cf4c7c-21af-4d40-bb84-d7a309722115"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative rounded-[18px] px-4 py-1.5 data-[multiline]:py-3 max-w-[var(--user-chat-width,70%)]"
+                  >
+                    <div class="whitespace-pre-wrap">
+                      What do you mean by route generation?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="db23cf4c-a26d-47d6-ad6d-b302dc920784"
+        data-testid="conversation-turn-12"
+        data-scroll-anchor="false"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="db23cf4c-a26d-47d6-ad6d-b302dc920784"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5-mini"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="229">
+                      Ah! Let me clarify carefully—this is an important
+                      distinction. In
+                      <code data-start="66" data-end="72">tsoa</code>, “<strong
+                        data-start="75"
+                        data-end="95"
+                        >route generation</strong
+                      >” refers to
+                      <strong data-start="107" data-end="198"
+                        >automatically generating the backend code that wires
+                        your controllers to HTTP endpoints</strong
+                      >, not the frontend API calls.
+                    </p>
+                    <hr data-start="231" data-end="234" />
+                    <h2 data-start="236" data-end="272">
+                      <strong data-start="239" data-end="272"
+                        >1. Route Generation in
+                        <code data-start="264" data-end="270"
+                          >tsoa</code
+                        ></strong
+                      >
+                    </h2>
+                    <p data-start="274" data-end="339">
+                      When you define a controller with methods in
+                      <code data-start="319" data-end="325">tsoa</code>, for
+                      example:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="341"
+                      data-end="542"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>import { Controller, Get, Route } from 'tsoa';
+
+@Route('pets')
+export class PetsController extends Controller {
+  @Get()
+  public async getPets() {
+    return [{ id: 1, name: 'Fido' }];
+  }
+}
+</span></code></div></div></pre>
+                    <p data-start="544" data-end="573">
+                      <code data-start="544" data-end="550">tsoa</code> can do
+                      <strong data-start="558" data-end="572">two things</strong
+                      >:
+                    </p>
+                    <ol data-start="575" data-end="900">
+                      <li data-start="575" data-end="792">
+                        <p data-start="578" data-end="605">
+                          <strong data-start="578" data-end="603"
+                            >Generate OpenAPI Spec</strong
+                          >
+                        </p>
+                        <ul data-start="609" data-end="792">
+                          <li data-start="609" data-end="659">
+                            <p data-start="611" data-end="659">
+                              Reads your decorators (<code
+                                data-start="634"
+                                data-end="642"
+                                >@Route</code
+                              >,
+                              <code data-start="644" data-end="650">@Get</code>,
+                              etc.)
+                            </p>
+                          </li>
+                          <li data-start="663" data-end="751">
+                            <p data-start="665" data-end="751">
+                              Outputs a JSON or YAML OpenAPI file describing all
+                              endpoints, request/response types
+                            </p>
+                          </li>
+                          <li data-start="755" data-end="792">
+                            <p data-start="757" data-end="792">
+                              This is
+                              <strong data-start="765" data-end="790"
+                                >framework-independent</strong
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li data-start="794" data-end="900">
+                        <p data-start="797" data-end="854">
+                          <strong data-start="797" data-end="833"
+                            >Generate Routes / Route Handlers</strong
+                          >
+                          (Express-specific)
+                        </p>
+                        <ul data-start="858" data-end="900">
+                          <li data-start="858" data-end="900">
+                            <p data-start="860" data-end="900">
+                              Creates code like this under the hood:
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ol>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="902"
+                      data-end="1241"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>import express from 'express';
+import { PetsController } from '../controllers/petsController';
+
+const router = express.Router();
+
+router.get('/pets', async (req, res, next) =&gt; {
+  try {
+    const result = await new PetsController().getPets();
+    res.json(result);
+  } catch (err) {
+    next(err);
+  }
+});
+
+export default router;
+</span></code></div></div></pre>
+                    <ul data-start="1243" data-end="1429">
+                      <li data-start="1243" data-end="1360">
+                        <p data-start="1245" data-end="1360">
+                          This is called
+                          <strong data-start="1260" data-end="1280"
+                            >route generation</strong
+                          >
+                          because it automatically wires your TypeScript
+                          controllers to Express routes.
+                        </p>
+                      </li>
+                      <li data-start="1361" data-end="1429">
+                        <p data-start="1363" data-end="1429">
+                          You don’t have to manually write
+                          <code data-start="1396" data-end="1417"
+                            >app.get('/pets', …)</code
+                          >
+                          everywhere.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1431" data-end="1434" />
+                    <h2 data-start="1436" data-end="1462">
+                      <strong data-start="1439" data-end="1462"
+                        >2. Why this matters</strong
+                      >
+                    </h2>
+                    <ul data-start="1464" data-end="1499">
+                      <li data-start="1464" data-end="1499">
+                        <p data-start="1466" data-end="1499">
+                          In
+                          <strong data-start="1469" data-end="1480"
+                            >Express</strong
+                          >, you can just run:
+                        </p>
+                      </li>
+                    </ul>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="1501"
+                      data-end="1528"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npx tsoa routes
+</span></code></div></div></pre>
+                    <ul data-start="1530" data-end="1716">
+                      <li data-start="1530" data-end="1573">
+                        <p data-start="1532" data-end="1573">
+                          And you get a ready-to-use router file.
+                        </p>
+                      </li>
+                      <li data-start="1574" data-end="1716">
+                        <p data-start="1576" data-end="1716">
+                          In other frameworks (Fastify, Koa), this
+                          <strong data-start="1617" data-end="1650"
+                            >auto-generation doesn’t exist</strong
+                          >. You’d still need to manually connect your
+                          controllers to routes:
+                        </p>
+                      </li>
+                    </ul>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="1718"
+                      data-end="1834"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>// Koa example
+router.get('/pets', async (ctx) =&gt; {
+  ctx.body = await new PetsController().getPets();
+});
+</span></code></div></div></pre>
+                    <ul data-start="1836" data-end="1936">
+                      <li data-start="1836" data-end="1936">
+                        <p data-start="1838" data-end="1936">
+                          But the
+                          <strong data-start="1846" data-end="1885"
+                            >OpenAPI spec generation still works</strong
+                          >, so you can feed it to Orval or OpenAPI Generator.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1938" data-end="1941" />
+                    <p data-start="1943" data-end="1957">
+                      ✅
+                      <strong data-start="1945" data-end="1955">TL;DR:</strong>
+                    </p>
+                    <ul data-start="1959" data-end="2187">
+                      <li data-start="1959" data-end="2060">
+                        <p data-start="1961" data-end="2060">
+                          <strong data-start="1961" data-end="1988"
+                            >OpenAPI spec generation</strong
+                          >
+                          → generates the JSON/YAML describing your API
+                          (framework-independent)
+                        </p>
+                      </li>
+                      <li data-start="2061" data-end="2187">
+                        <p data-start="2063" data-end="2187">
+                          <strong data-start="2063" data-end="2083"
+                            >Route generation</strong
+                          >
+                          → generates backend code that hooks your controllers
+                          into HTTP endpoints automatically (Express-only)
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="2189" data-end="2192" />
+                    <p data-start="2194" data-end="2373">
+                      If you want, I can draw a
+                      <strong data-start="2220" data-end="2300"
+                        >diagram showing controllers → route generation →
+                        OpenAPI spec → Orval client</strong
+                      >
+                      to make this whole flow crystal clear. It’s very helpful
+                      to visualize.
+                    </p>
+                    <p
+                      data-start="2375"
+                      data-end="2401"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      Do you want me to do that?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="762130f2-27c6-44da-b0bc-9feeed7d4c10"
+        data-testid="conversation-turn-13"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-12 [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="762130f2-27c6-44da-b0bc-9feeed7d4c10"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative rounded-[18px] px-4 py-1.5 data-[multiline]:py-3 max-w-[var(--user-chat-width,70%)]"
+                  >
+                    <div class="whitespace-pre-wrap">
+                      give me nestjs as well with its own nest swagger
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="a5e57245-9944-42ba-81e1-7f68a412c502"
+        data-testid="conversation-turn-14"
+        data-scroll-anchor="false"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="a5e57245-9944-42ba-81e1-7f68a412c502"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5-mini"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="230">
+                      Absolutely! NestJS has its
+                      <strong data-start="27" data-end="63"
+                        >own built-in Swagger integration</strong
+                      >
+                      that’s slightly different from
+                      <code data-start="95" data-end="101">tsoa</code> but
+                      serves a similar purpose: generating an OpenAPI spec
+                      directly from your controllers and decorators. Here’s a
+                      full breakdown:
+                    </p>
+                    <hr data-start="232" data-end="235" />
+                    <h2 data-start="237" data-end="282">
+                      <strong data-start="240" data-end="282"
+                        >1. Install NestJS Swagger dependencies</strong
+                      >
+                    </h2>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="284"
+                      data-end="342"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span>npm install @nestjs/swagger swagger-ui-express
+</span></code></div></div></pre>
+                    <ul data-start="344" data-end="443">
+                      <li data-start="344" data-end="399">
+                        <p data-start="346" data-end="399">
+                          <code data-start="346" data-end="363"
+                            >@nestjs/swagger</code
+                          >
+                          → decorators and helpers for NestJS
+                        </p>
+                      </li>
+                      <li data-start="400" data-end="443">
+                        <p data-start="402" data-end="443">
+                          <code data-start="402" data-end="422"
+                            >swagger-ui-express</code
+                          >
+                          → exposes Swagger UI
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="445" data-end="448" />
+                    <h2 data-start="450" data-end="493">
+                      <strong data-start="453" data-end="493"
+                        >2. Add Swagger setup in your main.ts</strong
+                      >
+                    </h2>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="495"
+                      data-end="1052"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>import { NestFactory } from '@nestjs/core';
+import { AppModule } from './app.module';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  const config = new DocumentBuilder()
+    .setTitle('My API')
+    .setDescription('API documentation for my NestJS app')
+    .setVersion('1.0')
+    .build();
+
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api-docs', app, document);
+
+  await app.listen(3000);
+}
+bootstrap();
+</span></code></div></div></pre>
+                    <ul data-start="1054" data-end="1216">
+                      <li data-start="1054" data-end="1111">
+                        <p data-start="1056" data-end="1111">
+                          Access Swagger UI at
+                          <code data-start="1077" data-end="1109"
+                            >http://localhost:3000/api-docs</code
+                          >
+                        </p>
+                      </li>
+                      <li data-start="1112" data-end="1216">
+                        <p data-start="1114" data-end="1216">
+                          Raw OpenAPI spec JSON available via
+                          <code data-start="1150" data-end="1182"
+                            >SwaggerModule.createDocument()</code
+                          >
+                          if you want to save it to a file.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1218" data-end="1221" />
+                    <h2 data-start="1223" data-end="1267">
+                      <strong data-start="1226" data-end="1267"
+                        >3. Annotate your controllers and DTOs</strong
+                      >
+                    </h2>
+                    <p data-start="1269" data-end="1409">
+                      NestJS uses decorators (<code
+                        data-start="1293"
+                        data-end="1306"
+                        >@Controller</code
+                      >, <code data-start="1308" data-end="1314">@Get</code>,
+                      <code data-start="1316" data-end="1323">@Post</code>,
+                      etc.)
+                      <strong data-start="1331" data-end="1358"
+                        >plus Swagger decorators</strong
+                      >
+                      (<code data-start="1360" data-end="1370">@ApiTags</code>,
+                      <code data-start="1372" data-end="1386">@ApiProperty</code
+                      >) for OpenAPI metadata.
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="1411"
+                      data-end="1748"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>import { Controller, Get } from '@nestjs/common';
+import { ApiTags, ApiProperty } from '@nestjs/swagger';
+
+class Pet {
+  @ApiProperty()
+  id: number;
+
+  @ApiProperty()
+  name: string;
+}
+
+@ApiTags('pets')
+@Controller('pets')
+export class PetsController {
+  @Get()
+  getPets(): Pet[] {
+    return [{ id: 1, name: 'Fido' }];
+  }
+}
+</span></code></div></div></pre>
+                    <ul data-start="1750" data-end="1872">
+                      <li data-start="1750" data-end="1805">
+                        <p data-start="1752" data-end="1805">
+                          <code data-start="1752" data-end="1770"
+                            >@ApiTags('pets')</code
+                          >
+                          → groups endpoints in Swagger UI
+                        </p>
+                      </li>
+                      <li data-start="1806" data-end="1872">
+                        <p data-start="1808" data-end="1872">
+                          <code data-start="1808" data-end="1824"
+                            >@ApiProperty()</code
+                          >
+                          → annotates DTO properties for the OpenAPI spec
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="1874" data-end="1877" />
+                    <h2 data-start="1879" data-end="1932">
+                      <strong data-start="1882" data-end="1932"
+                        >4. Generate a raw OpenAPI JSON file (optional)</strong
+                      >
+                    </h2>
+                    <p data-start="1934" data-end="1986">
+                      If you want the spec for Orval or OpenAPI Generator:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="1988"
+                      data-end="2161"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">ts</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-ts"><span>import { writeFileSync } from 'fs';
+const document = SwaggerModule.createDocument(app, config);
+writeFileSync('./openapi.json', JSON.stringify(document, null, 2));
+</span></code></div></div></pre>
+                    <ul data-start="2163" data-end="2269">
+                      <li data-start="2163" data-end="2269">
+                        <p data-start="2165" data-end="2269">
+                          This JSON/YAML file can now be fed into
+                          <strong data-start="2205" data-end="2214"
+                            >Orval</strong
+                          >,
+                          <strong data-start="2216" data-end="2237"
+                            >OpenAPI Generator</strong
+                          >, or any other client generator.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="2271" data-end="2274" />
+                    <h2 data-start="2276" data-end="2306">
+                      <strong data-start="2279" data-end="2306"
+                        >5. Comparison with tsoa</strong
+                      >
+                    </h2>
+                    <div class="_tableContainer_1rjym_1">
+                      <div
+                        tabindex="-1"
+                        class="group _tableWrapper_1rjym_13 flex w-fit flex-col-reverse"
+                      >
+                        <table
+                          data-start="2308"
+                          data-end="2936"
+                          class="w-fit min-w-(--thread-content-width)"
+                        >
+                          <thead data-start="2308" data-end="2395">
+                            <tr data-start="2308" data-end="2395">
+                              <th
+                                data-start="2308"
+                                data-end="2335"
+                                data-col-size="sm"
+                              >
+                                Feature
+                              </th>
+                              <th
+                                data-start="2335"
+                                data-end="2362"
+                                data-col-size="sm"
+                              >
+                                tsoa
+                              </th>
+                              <th
+                                data-start="2362"
+                                data-end="2395"
+                                data-col-size="sm"
+                              >
+                                NestJS Swagger
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody data-start="2485" data-end="2936">
+                            <tr data-start="2485" data-end="2574">
+                              <td
+                                data-start="2485"
+                                data-end="2516"
+                                data-col-size="sm"
+                              >
+                                Framework-specific route gen
+                              </td>
+                              <td
+                                data-start="2516"
+                                data-end="2542"
+                                data-col-size="sm"
+                              >
+                                Express only
+                              </td>
+                              <td
+                                data-start="2542"
+                                data-end="2574"
+                                data-col-size="sm"
+                              >
+                                Built-in NestJS routing
+                              </td>
+                            </tr>
+                            <tr data-start="2575" data-end="2666">
+                              <td
+                                data-start="2575"
+                                data-end="2605"
+                                data-col-size="sm"
+                              >
+                                Decorators for controllers
+                              </td>
+                              <td
+                                data-start="2605"
+                                data-end="2631"
+                                data-col-size="sm"
+                              >
+                                <code data-start="2607" data-end="2615"
+                                  >@Route</code
+                                >,
+                                <code data-start="2617" data-end="2623"
+                                  >@Get</code
+                                >
+                                etc.
+                              </td>
+                              <td
+                                data-start="2631"
+                                data-end="2666"
+                                data-col-size="sm"
+                              >
+                                <code data-start="2633" data-end="2646"
+                                  >@Controller</code
+                                >,
+                                <code data-start="2648" data-end="2654"
+                                  >@Get</code
+                                >
+                                +
+                                <code data-start="2657" data-end="2664"
+                                  >@Api*</code
+                                >
+                              </td>
+                            </tr>
+                            <tr data-start="2667" data-end="2755">
+                              <td
+                                data-start="2667"
+                                data-end="2698"
+                                data-col-size="sm"
+                              >
+                                OpenAPI Spec generation
+                              </td>
+                              <td
+                                data-start="2698"
+                                data-end="2723"
+                                data-col-size="sm"
+                              >
+                                ✅
+                              </td>
+                              <td
+                                data-start="2723"
+                                data-end="2755"
+                                data-col-size="sm"
+                              >
+                                ✅
+                              </td>
+                            </tr>
+                            <tr data-start="2756" data-end="2844">
+                              <td
+                                data-start="2756"
+                                data-end="2787"
+                                data-col-size="sm"
+                              >
+                                TypeScript-first
+                              </td>
+                              <td
+                                data-start="2787"
+                                data-end="2812"
+                                data-col-size="sm"
+                              >
+                                ✅
+                              </td>
+                              <td
+                                data-start="2812"
+                                data-end="2844"
+                                data-col-size="sm"
+                              >
+                                ✅
+                              </td>
+                            </tr>
+                            <tr data-start="2845" data-end="2936">
+                              <td
+                                data-start="2845"
+                                data-end="2876"
+                                data-col-size="sm"
+                              >
+                                Frontend client integration
+                              </td>
+                              <td
+                                data-start="2876"
+                                data-end="2904"
+                                data-col-size="sm"
+                              >
+                                Orval / OpenAPI Generator
+                              </td>
+                              <td
+                                data-start="2904"
+                                data-end="2936"
+                                data-col-size="sm"
+                              >
+                                Orval / OpenAPI Generator
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div
+                          class="sticky h-0 select-none end-(--thread-content-margin) self-end"
+                        >
+                          <div
+                            class="absolute end-0 flex items-end"
+                            style="height: 33px"
+                          >
+                            <span class="" data-state="closed"
+                              ><button
+                                aria-label="Copy table"
+                                class="hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                              ></button
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr data-start="2938" data-end="2941" />
+                    <p data-start="2943" data-end="2957">
+                      ✅
+                      <strong data-start="2945" data-end="2955">TL;DR:</strong>
+                    </p>
+                    <ul data-start="2959" data-end="3276">
+                      <li data-start="2959" data-end="3058">
+                        <p data-start="2961" data-end="3058">
+                          NestJS has
+                          <strong data-start="2972" data-end="2998"
+                            >native Swagger support</strong
+                          >, generating OpenAPI specs directly from
+                          controllers/DTOs.
+                        </p>
+                      </li>
+                      <li data-start="3059" data-end="3168">
+                        <p data-start="3061" data-end="3168">
+                          You can export that spec to JSON/YAML and feed it to
+                          <strong data-start="3114" data-end="3123"
+                            >Orval</strong
+                          >
+                          to generate a fully-typed frontend client.
+                        </p>
+                      </li>
+                      <li data-start="3169" data-end="3276">
+                        <p data-start="3171" data-end="3276">
+                          Unlike
+                          <code data-start="3178" data-end="3184">tsoa</code>,
+                          NestJS already handles
+                          <strong data-start="3209" data-end="3240"
+                            >route generation internally</strong
+                          >, so you don’t need an extra step.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="3278" data-end="3281" />
+                    <p data-start="3283" data-end="3448">
+                      If you want, I can make a
+                      <strong data-start="3309" data-end="3387"
+                        >diagram showing how Express + tsoa vs NestJS + Nest
+                        Swagger → Orval client</strong
+                      >
+                      works side by side. This helps compare workflows visually.
+                    </p>
+                    <p
+                      data-start="3450"
+                      data-end="3476"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      Do you want me to do that?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="46d247b3-640c-4ba1-b585-b840d6e79f8f"
+        data-testid="conversation-turn-15"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-12 [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="46d247b3-640c-4ba1-b585-b840d6e79f8f"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative rounded-[18px] px-4 py-1.5 data-[multiline]:py-3 max-w-[var(--user-chat-width,70%)]"
+                    data-multiline=""
+                  >
+                    <div class="whitespace-pre-wrap">
+                      how long does it take to learn nest for an experienced
+                      express dev?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="ade9fb76-2765-4911-9053-cf5ee113803b"
+        data-testid="conversation-turn-16"
+        data-scroll-anchor="true"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto pb-10 [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="ade9fb76-2765-4911-9053-cf5ee113803b"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5-mini"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="209">
+                      If you’re already an
+                      <strong data-start="21" data-end="54"
+                        >experienced Express developer</strong
+                      >, learning NestJS is mostly about
+                      <strong data-start="88" data-end="145"
+                        >learning the framework’s conventions and
+                        architecture</strong
+                      >, rather than the basics of Node.js or HTTP. Here’s a
+                      breakdown:
+                    </p>
+                    <hr data-start="211" data-end="214" />
+                    <h2 data-start="216" data-end="245">
+                      <strong data-start="219" data-end="245"
+                        >1. Core Learning Areas</strong
+                      >
+                    </h2>
+                    <ol data-start="247" data-end="1323">
+                      <li data-start="247" data-end="472">
+                        <p data-start="250" data-end="281">
+                          <strong data-start="250" data-end="279"
+                            >Module-based architecture</strong
+                          >
+                        </p>
+                        <ul data-start="285" data-end="472">
+                          <li data-start="285" data-end="364">
+                            <p data-start="287" data-end="364">
+                              NestJS organizes code into
+                              <strong data-start="314" data-end="325"
+                                >Modules</strong
+                              >,
+                              <strong data-start="327" data-end="342"
+                                >Controllers</strong
+                              >, and
+                              <strong data-start="348" data-end="361"
+                                >Providers</strong
+                              >.
+                            </p>
+                          </li>
+                          <li data-start="368" data-end="472">
+                            <p data-start="370" data-end="472">
+                              Express developers are used to flat
+                              routes/middleware; Nest encourages a structured,
+                              modular approach.
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li data-start="474" data-end="663">
+                        <p data-start="477" data-end="515">
+                          <strong data-start="477" data-end="513"
+                            >Decorators &amp; TypeScript features</strong
+                          >
+                        </p>
+                        <ul data-start="519" data-end="663">
+                          <li data-start="519" data-end="587">
+                            <p data-start="521" data-end="587">
+                              <code data-start="521" data-end="534"
+                                >@Controller</code
+                              >,
+                              <code data-start="536" data-end="542">@Get</code>,
+                              <code data-start="544" data-end="557"
+                                >@Injectable</code
+                              >,
+                              <code data-start="559" data-end="568"
+                                >@Module</code
+                              >,
+                              <code data-start="570" data-end="579"
+                                >@Body()</code
+                              >, etc.
+                            </p>
+                          </li>
+                          <li data-start="591" data-end="663">
+                            <p data-start="593" data-end="663">
+                              If you’re comfortable with TypeScript, decorators
+                              are easy to grasp.
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li data-start="665" data-end="869">
+                        <p data-start="668" data-end="706">
+                          <strong data-start="668" data-end="704"
+                            >Dependency Injection (DI) system</strong
+                          >
+                        </p>
+                        <ul data-start="710" data-end="869">
+                          <li data-start="710" data-end="772">
+                            <p data-start="712" data-end="772">
+                              NestJS has a built-in DI container for
+                              services/providers.
+                            </p>
+                          </li>
+                          <li data-start="776" data-end="869">
+                            <p data-start="778" data-end="869">
+                              Express devs usually manage dependencies manually,
+                              so DI is the biggest conceptual shift.
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li data-start="871" data-end="1081">
+                        <p data-start="874" data-end="919">
+                          <strong data-start="874" data-end="917"
+                            >Pipes, Guards, Interceptors, Middleware</strong
+                          >
+                        </p>
+                        <ul data-start="923" data-end="1081">
+                          <li data-start="923" data-end="1023">
+                            <p data-start="925" data-end="1023">
+                              These are Nest’s equivalents of validation,
+                              authorization, and custom request/response
+                              handling.
+                            </p>
+                          </li>
+                          <li data-start="1027" data-end="1081">
+                            <p data-start="1029" data-end="1081">
+                              Similar to Express middleware, just more
+                              structured.
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li data-start="1083" data-end="1191">
+                        <p data-start="1086" data-end="1119">
+                          <strong data-start="1086" data-end="1117"
+                            >Swagger/OpenAPI integration</strong
+                          >
+                        </p>
+                        <ul data-start="1123" data-end="1191">
+                          <li data-start="1123" data-end="1191">
+                            <p data-start="1125" data-end="1191">
+                              Optional, but straightforward once controllers and
+                              DTOs are typed.
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li data-start="1193" data-end="1323">
+                        <p data-start="1196" data-end="1221">
+                          <strong data-start="1196" data-end="1219"
+                            >Testing &amp; CLI tools</strong
+                          >
+                        </p>
+                        <ul data-start="1225" data-end="1323">
+                          <li data-start="1225" data-end="1266">
+                            <p data-start="1227" data-end="1266">
+                              <code data-start="1227" data-end="1244"
+                                >@nestjs/testing</code
+                              >
+                              for unit/e2e tests.
+                            </p>
+                          </li>
+                          <li data-start="1270" data-end="1323">
+                            <p data-start="1272" data-end="1323">
+                              <code data-start="1272" data-end="1306"
+                                >nest g module/controller/service</code
+                              >
+                              for scaffolding.
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ol>
+                    <hr data-start="1325" data-end="1328" />
+                    <h2 data-start="1330" data-end="1367">
+                      <strong data-start="1333" data-end="1367"
+                        >2. Estimated Learning Timeline</strong
+                      >
+                    </h2>
+                    <p data-start="1369" data-end="1437">
+                      Assuming you’re
+                      <strong data-start="1385" data-end="1436"
+                        >already comfortable with Express and TypeScript</strong
+                      >:
+                    </p>
+                    <div class="_tableContainer_1rjym_1">
+                      <div
+                        tabindex="-1"
+                        class="group _tableWrapper_1rjym_13 flex w-fit flex-col-reverse"
+                      >
+                        <table
+                          data-start="1439"
+                          data-end="1953"
+                          class="w-fit min-w-(--thread-content-width)"
+                        >
+                          <thead data-start="1439" data-end="1484">
+                            <tr data-start="1439" data-end="1484">
+                              <th
+                                data-start="1439"
+                                data-end="1447"
+                                data-col-size="sm"
+                              >
+                                Stage
+                              </th>
+                              <th
+                                data-start="1447"
+                                data-end="1463"
+                                data-col-size="sm"
+                              >
+                                Time Estimate
+                              </th>
+                              <th
+                                data-start="1463"
+                                data-end="1484"
+                                data-col-size="md"
+                              >
+                                What You’ll Learn
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody data-start="1529" data-end="1953">
+                            <tr data-start="1529" data-end="1594">
+                              <td
+                                data-start="1529"
+                                data-end="1550"
+                                data-col-size="sm"
+                              >
+                                <strong data-start="1531" data-end="1549"
+                                  >Basic Nest app</strong
+                                >
+                              </td>
+                              <td
+                                data-start="1550"
+                                data-end="1561"
+                                data-col-size="sm"
+                              >
+                                1–2 days
+                              </td>
+                              <td
+                                data-start="1561"
+                                data-end="1594"
+                                data-col-size="md"
+                              >
+                                Controllers, modules, routing
+                              </td>
+                            </tr>
+                            <tr data-start="1595" data-end="1688">
+                              <td
+                                data-start="1595"
+                                data-end="1615"
+                                data-col-size="sm"
+                              >
+                                <strong data-start="1597" data-end="1614"
+                                  >DI &amp; Services</strong
+                                >
+                              </td>
+                              <td
+                                data-start="1615"
+                                data-end="1626"
+                                data-col-size="sm"
+                              >
+                                2–3 days
+                              </td>
+                              <td
+                                data-start="1626"
+                                data-end="1688"
+                                data-col-size="md"
+                              >
+                                Providers, dependency injection,
+                                singleton/scoped services
+                              </td>
+                            </tr>
+                            <tr data-start="1689" data-end="1791">
+                              <td
+                                data-start="1689"
+                                data-end="1735"
+                                data-col-size="sm"
+                              >
+                                <strong data-start="1691" data-end="1734"
+                                  >Middleware, Pipes, Guards,
+                                  Interceptors</strong
+                                >
+                              </td>
+                              <td
+                                data-start="1735"
+                                data-end="1746"
+                                data-col-size="sm"
+                              >
+                                2–3 days
+                              </td>
+                              <td
+                                data-start="1746"
+                                data-end="1791"
+                                data-col-size="md"
+                              >
+                                Validation, auth, logging, error handling
+                              </td>
+                            </tr>
+                            <tr data-start="1792" data-end="1864">
+                              <td
+                                data-start="1792"
+                                data-end="1828"
+                                data-col-size="sm"
+                              >
+                                <strong data-start="1794" data-end="1827"
+                                  >Swagger / OpenAPI integration</strong
+                                >
+                              </td>
+                              <td
+                                data-start="1828"
+                                data-end="1836"
+                                data-col-size="sm"
+                              >
+                                1 day
+                              </td>
+                              <td
+                                data-start="1836"
+                                data-end="1864"
+                                data-col-size="md"
+                              >
+                                Auto-generating API docs
+                              </td>
+                            </tr>
+                            <tr data-start="1865" data-end="1953">
+                              <td
+                                data-start="1865"
+                                data-end="1891"
+                                data-col-size="sm"
+                              >
+                                <strong data-start="1867" data-end="1890"
+                                  >Testing &amp; CLI tools</strong
+                                >
+                              </td>
+                              <td
+                                data-start="1891"
+                                data-end="1902"
+                                data-col-size="sm"
+                              >
+                                1–2 days
+                              </td>
+                              <td
+                                data-start="1902"
+                                data-end="1953"
+                                data-col-size="md"
+                              >
+                                Unit/e2e tests, scaffolding modules/controllers
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div
+                          class="sticky h-0 select-none end-(--thread-content-margin) self-end"
+                        >
+                          <div
+                            class="absolute end-0 flex items-end"
+                            style="height: 33px"
+                          >
+                            <span class="" data-state="closed"
+                              ><button
+                                aria-label="Copy table"
+                                class="hover:bg-token-bg-tertiary text-token-text-secondary my-1 rounded-sm p-1 transition-opacity group-[:not(:hover):not(:focus-within)]:pointer-events-none group-[:not(:hover):not(:focus-within)]:opacity-0"
+                              ></button
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p data-start="1955" data-end="2029">
+                      <strong data-start="1955" data-end="1965">Total:</strong>
+                      ~1–2 weeks to become productive for standard API
+                      development.
+                    </p>
+                    <blockquote data-start="2031" data-end="2227">
+                      <p data-start="2033" data-end="2227">
+                        Most Express devs find the
+                        <strong data-start="2060" data-end="2092"
+                          >initial learning curve steep</strong
+                        >
+                        because of the structured patterns and decorators, but
+                        once you “think in modules,” development speeds up
+                        compared to vanilla Express.
+                      </p>
+                    </blockquote>
+                    <hr data-start="2229" data-end="2232" />
+                    <h2 data-start="2234" data-end="2271">
+                      <strong data-start="2237" data-end="2271"
+                        >3. Tips to Accelerate Learning</strong
+                      >
+                    </h2>
+                    <ul data-start="2273" data-end="2664">
+                      <li data-start="2273" data-end="2391">
+                        <p data-start="2275" data-end="2391">
+                          Start by
+                          <strong data-start="2284" data-end="2321"
+                            >migrating a small Express project</strong
+                          >
+                          to Nest. Seeing the differences firsthand is faster
+                          than tutorials.
+                        </p>
+                      </li>
+                      <li data-start="2392" data-end="2495">
+                        <p data-start="2394" data-end="2495">
+                          Focus on
+                          <strong data-start="2403" data-end="2435"
+                            >controllers + services first</strong
+                          >, then gradually add middleware, guards, and
+                          interceptors.
+                        </p>
+                      </li>
+                      <li data-start="2496" data-end="2580">
+                        <p data-start="2498" data-end="2580">
+                          Use the
+                          <strong data-start="2506" data-end="2518"
+                            >Nest CLI</strong
+                          >; it saves a lot of boilerplate and enforces best
+                          practices.
+                        </p>
+                      </li>
+                      <li data-start="2581" data-end="2664">
+                        <p data-start="2583" data-end="2664">
+                          Leverage the
+                          <strong data-start="2596" data-end="2620"
+                            >official NestJS docs</strong
+                          >—they’re well-structured for Express devs.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="2666" data-end="2669" />
+                    <p data-start="2671" data-end="2865">
+                      If you want, I can make a
+                      <strong data-start="2697" data-end="2759"
+                        >direct mapping cheat sheet: “Express → NestJS
+                        equivalents”</strong
+                      >
+                      showing middleware, routes, DI, etc. That usually cuts the
+                      learning curve in half for experienced devs.
+                    </p>
+                    <p
+                      data-start="2867"
+                      data-end="2907"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      Do you want me to make that cheat sheet?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
