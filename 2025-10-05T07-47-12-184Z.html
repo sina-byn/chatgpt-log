@@ -1,0 +1,371 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="markdown-body">
+    <header class="container">
+      <!-- * title * -->
+      <h1>Radix UI asChild prop</h1>
+    </header>
+
+    <div class="content container">
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-(--header-height)"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="cf751d4d-6ee8-42c1-aff7-9f1855ac7ebb"
+        data-testid="conversation-turn-1"
+        data-scroll-anchor="false"
+        data-turn="user"
+      >
+        <div
+          class="text-base my-auto mx-auto pt-3 [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden mb-10 relative flex w-full min-w-0 flex-col"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="user"
+                data-message-id="cf751d4d-6ee8-42c1-aff7-9f1855ac7ebb"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start"
+                >
+                  <div
+                    class="user-message-bubble-color relative rounded-[18px] px-4 py-1.5 data-[multiline]:py-3 max-w-[var(--user-chat-width,70%)]"
+                  >
+                    <div class="whitespace-pre-wrap">
+                      How does radix-ui implement the asChild prop?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+        tabindex="-1"
+        dir="auto"
+        data-turn-id="cc08077e-1748-47eb-bab5-657655e1d2d5"
+        data-testid="conversation-turn-2"
+        data-scroll-anchor="true"
+        data-turn="assistant"
+      >
+        <div
+          class="text-base my-auto mx-auto pb-10 [--thread-content-margin:--spacing(4)] thread-sm:[--thread-content-margin:--spacing(6)] thread-lg:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"
+        >
+          <div
+            class="[--thread-content-max-width:40rem] thread-lg:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+            tabindex="-1"
+          >
+            <div class="flex max-w-full flex-col grow">
+              <div
+                data-message-author-role="assistant"
+                data-message-id="463050b2-938c-4606-90c1-1312e3b5b7a6"
+                dir="auto"
+                class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                data-message-model-slug="gpt-5"
+              >
+                <div
+                  class="flex w-full flex-col gap-1 empty:hidden first:pt-[1px]"
+                >
+                  <div
+                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"
+                  >
+                    <p data-start="0" data-end="282">
+                      Great question — the
+                      <code data-start="21" data-end="30">asChild</code> prop in
+                      <strong data-start="39" data-end="51">Radix UI</strong> is
+                      a clever design pattern that allows components to
+                      <strong data-start="105" data-end="138"
+                        >render as a different element</strong
+                      >
+                      (like a custom component or a native HTML tag)
+                      <strong data-start="186" data-end="247"
+                        >while preserving all the behavior and accessibility
+                        logic</strong
+                      >
+                      of the original Radix component.
+                    </p>
+                    <p data-start="284" data-end="359">
+                      Let’s break it down and then look at how it’s implemented
+                      under the hood.
+                    </p>
+                    <hr data-start="361" data-end="364" />
+                    <h3 data-start="366" data-end="380">🧠 Concept</h3>
+                    <p data-start="382" data-end="494">
+                      Normally, a Radix component (like
+                      <code data-start="416" data-end="426">&lt;Button&gt;</code
+                      >,
+                      <code data-start="428" data-end="445"
+                        >&lt;DialogTrigger&gt;</code
+                      >, etc.) renders a specific element — for example:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="496"
+                      data-end="532"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">jsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>&lt;Button&gt;Click me&lt;/Button&gt;
+</span></code></div></div></pre>
+                    <p data-start="534" data-end="557">
+                      renders something like:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="559"
+                      data-end="608"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">html</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-html"><span>&lt;button class="..."&gt;Click me&lt;/button&gt;
+</span></code></div></div></pre>
+                    <p data-start="610" data-end="704">
+                      But if you use
+                      <code data-start="625" data-end="634">asChild</code>, you
+                      can
+                      <strong data-start="644" data-end="655">replace</strong>
+                      that underlying DOM node with another component:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="706"
+                      data-end="773"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">jsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>&lt;Button asChild&gt;
+  &lt;a href="/home"&gt;Go home&lt;/a&gt;
+&lt;/Button&gt;
+</span></code></div></div></pre>
+                    <p data-start="775" data-end="923">
+                      Now the
+                      <code data-start="783" data-end="788">&lt;a&gt;</code> tag
+                      renders instead of a
+                      <code data-start="814" data-end="824">&lt;button&gt;</code
+                      >, but it
+                      <strong data-start="833" data-end="908"
+                        >inherits all the behavior, accessibility attributes,
+                        and event handling</strong
+                      >
+                      from <code data-start="914" data-end="922">Button</code>.
+                    </p>
+                    <hr data-start="925" data-end="928" />
+                    <h3 data-start="930" data-end="957">
+                      ⚙️ How It’s Implemented
+                    </h3>
+                    <p data-start="959" data-end="1087">
+                      The
+                      <code data-start="963" data-end="972">asChild</code> prop
+                      in Radix UI works using a special helper component called
+                      <strong data-start="1036" data-end="1046"
+                        ><code data-start="1038" data-end="1044"
+                          >Slot</code
+                        ></strong
+                      >
+                      from the package
+                      <code data-start="1064" data-end="1086"
+                        >@radix-ui/react-slot</code
+                      >.
+                    </p>
+                    <p data-start="1089" data-end="1131">
+                      Here’s the simplified core idea of
+                      <code data-start="1124" data-end="1130">Slot</code>:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="1133"
+                      data-end="1755"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">tsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-tsx"><span>// Pseudocode version of @radix-ui/react-slot
+import * as React from 'react'
+
+const Slot = React.forwardRef(({ children, ...props }, forwardedRef) =&gt; {
+  if (React.isValidElement(children)) {
+    // Clone the child and merge props + ref
+    return React.cloneElement(children, {
+      ...props,
+      ref: forwardedRef ? mergeRefs(forwardedRef, children.ref) : children.ref,
+      // Merge className or style if needed
+      className: [props.className, children.props.className]
+        .filter(Boolean)
+        .join(' ')
+    })
+  }
+
+  // If no valid React element, render nothing or fallback
+  return null
+})
+</span></code></div></div></pre>
+                    <p data-start="1757" data-end="1966">
+                      The key trick is using
+                      <strong data-start="1780" data-end="1806"
+                        ><code data-start="1782" data-end="1804"
+                          >React.cloneElement()</code
+                        ></strong
+                      >
+                      to take the child you passed in (<code
+                        data-start="1840"
+                        data-end="1869"
+                        >&lt;a href="/home"&gt;Go home&lt;/a&gt;</code
+                      >) and
+                      <strong data-start="1875" data-end="1908"
+                        >inject Radix’s behavior/props</strong
+                      >
+                      (like event handlers,
+                      <code data-start="1931" data-end="1939">aria-*</code>
+                      attributes, etc.) into it.
+                    </p>
+                    <hr data-start="1968" data-end="1971" />
+                    <h3 data-start="1973" data-end="2004">
+                      🧩 Inside a Radix Component
+                    </h3>
+                    <p data-start="2006" data-end="2065">
+                      In a Radix component, you’ll often see something like
+                      this:
+                    </p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="2067"
+                      data-end="2368"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">tsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-tsx"><span>import { Slot } from '@radix-ui/react-slot'
+
+const Button = React.forwardRef(
+  ({ asChild, ...props }, forwardedRef) =&gt; {
+    const Comp = asChild ? Slot : 'button'
+    return (
+      &lt;Comp
+        {...props}
+        ref={forwardedRef}
+        className="radix-button"
+      /&gt;
+    )
+  }
+)
+</span></code></div></div></pre>
+                    <p data-start="2370" data-end="2385">So when you do:</p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="2387"
+                      data-end="2451"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">jsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>&lt;Button asChild&gt;
+  &lt;a href="/home"&gt;Home&lt;/a&gt;
+&lt;/Button&gt;
+</span></code></div></div></pre>
+                    <p data-start="2453" data-end="2464">it becomes:</p>
+                    <pre
+                      class="overflow-visible!"
+                      data-start="2466"
+                      data-end="2518"
+                    ><div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">jsx</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-jsx"><span>&lt;Slot&gt;
+  &lt;a href="/home"&gt;Home&lt;/a&gt;
+&lt;/Slot&gt;
+</span></code></div></div></pre>
+                    <p data-start="2520" data-end="2581">
+                      And
+                      <code data-start="2524" data-end="2530">Slot</code> merges
+                      all the button’s logic into that
+                      <code data-start="2571" data-end="2576">&lt;a&gt;</code>
+                      tag.
+                    </p>
+                    <hr data-start="2583" data-end="2586" />
+                    <h3 data-start="2588" data-end="2611">
+                      🔍 Why This Matters
+                    </h3>
+                    <p data-start="2613" data-end="2633">
+                      This pattern allows:
+                    </p>
+                    <ul data-start="2634" data-end="2938">
+                      <li data-start="2634" data-end="2710">
+                        <p data-start="2636" data-end="2710">
+                          <strong data-start="2636" data-end="2663"
+                            >Composition flexibility</strong
+                          >
+                          — use your own HTML tags or custom components.
+                        </p>
+                      </li>
+                      <li data-start="2711" data-end="2826">
+                        <p data-start="2713" data-end="2826">
+                          <strong data-start="2713" data-end="2752"
+                            >Single source of truth for behavior</strong
+                          >
+                          — Radix components don’t care what they render as,
+                          they just apply logic.
+                        </p>
+                      </li>
+                      <li data-start="2827" data-end="2938">
+                        <p data-start="2829" data-end="2938">
+                          <strong data-start="2829" data-end="2844"
+                            >Type safety</strong
+                          >
+                          — thanks to TypeScript and the
+                          <code data-start="2876" data-end="2882">Slot</code>
+                          API, you still get autocomplete and correct prop
+                          types.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="2940" data-end="2943" />
+                    <h3 data-start="2945" data-end="2964">✅ TL;DR Summary</h3>
+                    <ul data-start="2966" data-end="3369">
+                      <li data-start="2966" data-end="3109">
+                        <p data-start="2968" data-end="3109">
+                          <code data-start="2968" data-end="2977">asChild</code>
+                          toggles whether the component renders its own element
+                          (like
+                          <code data-start="3038" data-end="3046">button</code>)
+                          or delegates rendering to the child via the
+                          <code data-start="3092" data-end="3098">Slot</code>
+                          component.
+                        </p>
+                      </li>
+                      <li data-start="3110" data-end="3235">
+                        <p data-start="3112" data-end="3235">
+                          The
+                          <code data-start="3116" data-end="3122">Slot</code>
+                          component uses
+                          <code data-start="3138" data-end="3160"
+                            >React.cloneElement()</code
+                          >
+                          to pass down behavior, accessibility attributes, event
+                          handlers, and refs.
+                        </p>
+                      </li>
+                      <li data-start="3236" data-end="3369">
+                        <p data-start="3238" data-end="3369">
+                          This pattern gives developers
+                          <strong data-start="3268" data-end="3291"
+                            >maximum flexibility</strong
+                          >
+                          to integrate Radix components with their own UI
+                          primitives or design systems.
+                        </p>
+                      </li>
+                    </ul>
+                    <hr data-start="3371" data-end="3374" />
+                    <p
+                      data-start="3376"
+                      data-end="3539"
+                      data-is-last-node=""
+                      data-is-only-node=""
+                    >
+                      Would you like me to show a
+                      <strong data-start="3404" data-end="3436"
+                        >fully working custom example</strong
+                      >
+                      (i.e., implementing your own mini
+                      <code data-start="3471" data-end="3480">asChild</code>
+                      system like Radix’s) so you can see it in action in React?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
